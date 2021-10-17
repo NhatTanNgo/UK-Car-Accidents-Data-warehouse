@@ -1,0 +1,984 @@
+<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="10/17/2021 3:21:58 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="ASUS-DUCHUY"
+  DTS:CreatorName="ASUS-DUCHUY\ASUS-DUCHUY"
+  DTS:DTSID="{E539D0B1-A8CC-48A1-8E17-467984A9EE03}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="15.0.2000.170"
+  DTS:LocaleID="1033"
+  DTS:ObjectName="Package1"
+  DTS:PackageType="5"
+  DTS:VersionBuild="6"
+  DTS:VersionGUID="{CD8EA41F-EEEC-49B1-9A4F-667171892171}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Excel Connection Manager]"
+      DTS:CreationName="EXCEL"
+      DTS:DTSID="{FBBCB99A-5319-4A4B-BFE8-22ED3E6C4392}"
+      DTS:ObjectName="Excel Connection Manager">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="0"
+          DTS:ConnectRetryInterval="0"
+          DTS:ConnectionString="Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\ASUS-DUCHUY\Desktop\BI\UK-Car-Accidents-Dataware-house\Dataset\UK Accidents Data 2011-2014\Vehicles1114.xls;Extended Properties=&quot;EXCEL 8.0;HDR=YES&quot;;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[LocalHost.Vehicles1114]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{5307151B-E736-4C14-A096-9692999AEF9C}"
+      DTS:ObjectName="LocalHost.Vehicles1114">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=.;Initial Catalog=Vehicles1114;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[LocalHost.Vehicles1114 1]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{2A6F83AB-F373-4981-A1DA-BF6F5D93D79F}"
+      DTS:ObjectName="LocalHost.Vehicles1114 1">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=.;Initial Catalog=Vehicles1114;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Vehicles1114"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{D08752F7-866F-4067-B4D1-2595BF919BE7}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Vehicles1114"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Vehicles1114\Source Vehicles1114"
+              componentClassID="Microsoft.ExcelSource"
+              contactInfo="Excel Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Excel Source"
+              name="Source Vehicles1114"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">Vehicles1114$</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="The mapping from parameters in the SQL command to variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Vehicles1114\Source Vehicles1114.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Excel Connection Manager]"
+                  connectionManagerRefId="Package.ConnectionManagers[Excel Connection Manager]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Vehicles1114\Source Vehicles1114.Outputs[Excel Source Output]"
+                  name="Excel Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Vehicles1114\Source Vehicles1114.Outputs[Excel Source Output].Columns[Accident_Index]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Vehicles1114\Source Vehicles1114.Outputs[Excel Source Output].ExternalColumns[Accident_Index]"
+                      length="255"
+                      lineageId="Package\Vehicles1114\Source Vehicles1114.Outputs[Excel Source Output].Columns[Accident_Index]"
+                      name="Accident_Index"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Vehicles1114\Source Vehicles1114.Outputs[Excel Source Output].Columns[Vehicle_Reference]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Vehicles1114\Source Vehicles1114.Outputs[Excel Source Output].ExternalColumns[Vehicle_Reference]"
+                      lineageId="Package\Vehicles1114\Source Vehicles1114.Outputs[Excel Source Output].Columns[Vehicle_Reference]"
+                      name="Vehicle_Reference"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Vehicles1114\Source Vehicles1114.Outputs[Excel Source Output].Columns[Vehicle_Type]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Vehicles1114\Source Vehicles1114.Outputs[Excel Source Output].ExternalColumns[Vehicle_Type]"
+                      lineageId="Package\Vehicles1114\Source Vehicles1114.Outputs[Excel Source Output].Columns[Vehicle_Type]"
+                      name="Vehicle_Type"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Vehicles1114\Source Vehicles1114.Outputs[Excel Source Output].Columns[Towing_and_Articulation]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Vehicles1114\Source Vehicles1114.Outputs[Excel Source Output].ExternalColumns[Towing_and_Articulation]"
+                      lineageId="Package\Vehicles1114\Source Vehicles1114.Outputs[Excel Source Output].Columns[Towing_and_Articulation]"
+                      name="Towing_and_Articulation"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Vehicles1114\Source Vehicles1114.Outputs[Excel Source Output].Columns[Vehicle_Manoeuvre]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Vehicles1114\Source Vehicles1114.Outputs[Excel Source Output].ExternalColumns[Vehicle_Manoeuvre]"
+                      lineageId="Package\Vehicles1114\Source Vehicles1114.Outputs[Excel Source Output].Columns[Vehicle_Manoeuvre]"
+                      name="Vehicle_Manoeuvre"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Vehicles1114\Source Vehicles1114.Outputs[Excel Source Output].Columns[Vehicle_Location-Restricted_Lane]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Vehicles1114\Source Vehicles1114.Outputs[Excel Source Output].ExternalColumns[Vehicle_Location-Restricted_Lane]"
+                      lineageId="Package\Vehicles1114\Source Vehicles1114.Outputs[Excel Source Output].Columns[Vehicle_Location-Restricted_Lane]"
+                      name="Vehicle_Location-Restricted_Lane"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Vehicles1114\Source Vehicles1114.Outputs[Excel Source Output].Columns[Junction_Location]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Vehicles1114\Source Vehicles1114.Outputs[Excel Source Output].ExternalColumns[Junction_Location]"
+                      lineageId="Package\Vehicles1114\Source Vehicles1114.Outputs[Excel Source Output].Columns[Junction_Location]"
+                      name="Junction_Location"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Vehicles1114\Source Vehicles1114.Outputs[Excel Source Output].Columns[Skidding_and_Overturning]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Vehicles1114\Source Vehicles1114.Outputs[Excel Source Output].ExternalColumns[Skidding_and_Overturning]"
+                      lineageId="Package\Vehicles1114\Source Vehicles1114.Outputs[Excel Source Output].Columns[Skidding_and_Overturning]"
+                      name="Skidding_and_Overturning"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Vehicles1114\Source Vehicles1114.Outputs[Excel Source Output].Columns[Hit_Object_in_Carriageway]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Vehicles1114\Source Vehicles1114.Outputs[Excel Source Output].ExternalColumns[Hit_Object_in_Carriageway]"
+                      lineageId="Package\Vehicles1114\Source Vehicles1114.Outputs[Excel Source Output].Columns[Hit_Object_in_Carriageway]"
+                      name="Hit_Object_in_Carriageway"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Vehicles1114\Source Vehicles1114.Outputs[Excel Source Output].Columns[Vehicle_Leaving_Carriageway]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Vehicles1114\Source Vehicles1114.Outputs[Excel Source Output].ExternalColumns[Vehicle_Leaving_Carriageway]"
+                      lineageId="Package\Vehicles1114\Source Vehicles1114.Outputs[Excel Source Output].Columns[Vehicle_Leaving_Carriageway]"
+                      name="Vehicle_Leaving_Carriageway"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Vehicles1114\Source Vehicles1114.Outputs[Excel Source Output].Columns[Hit_Object_off_Carriageway]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Vehicles1114\Source Vehicles1114.Outputs[Excel Source Output].ExternalColumns[Hit_Object_off_Carriageway]"
+                      lineageId="Package\Vehicles1114\Source Vehicles1114.Outputs[Excel Source Output].Columns[Hit_Object_off_Carriageway]"
+                      name="Hit_Object_off_Carriageway"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Vehicles1114\Source Vehicles1114.Outputs[Excel Source Output].Columns[1st_Point_of_Impact]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Vehicles1114\Source Vehicles1114.Outputs[Excel Source Output].ExternalColumns[1st_Point_of_Impact]"
+                      lineageId="Package\Vehicles1114\Source Vehicles1114.Outputs[Excel Source Output].Columns[1st_Point_of_Impact]"
+                      name="1st_Point_of_Impact"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Vehicles1114\Source Vehicles1114.Outputs[Excel Source Output].Columns[Was_Vehicle_Left_Hand_Drive?]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Vehicles1114\Source Vehicles1114.Outputs[Excel Source Output].ExternalColumns[Was_Vehicle_Left_Hand_Drive?]"
+                      lineageId="Package\Vehicles1114\Source Vehicles1114.Outputs[Excel Source Output].Columns[Was_Vehicle_Left_Hand_Drive?]"
+                      name="Was_Vehicle_Left_Hand_Drive?"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Vehicles1114\Source Vehicles1114.Outputs[Excel Source Output].Columns[Journey_Purpose_of_Driver]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Vehicles1114\Source Vehicles1114.Outputs[Excel Source Output].ExternalColumns[Journey_Purpose_of_Driver]"
+                      lineageId="Package\Vehicles1114\Source Vehicles1114.Outputs[Excel Source Output].Columns[Journey_Purpose_of_Driver]"
+                      name="Journey_Purpose_of_Driver"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Vehicles1114\Source Vehicles1114.Outputs[Excel Source Output].Columns[Sex_of_Driver]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Vehicles1114\Source Vehicles1114.Outputs[Excel Source Output].ExternalColumns[Sex_of_Driver]"
+                      lineageId="Package\Vehicles1114\Source Vehicles1114.Outputs[Excel Source Output].Columns[Sex_of_Driver]"
+                      name="Sex_of_Driver"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Vehicles1114\Source Vehicles1114.Outputs[Excel Source Output].Columns[Age_of_Driver]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Vehicles1114\Source Vehicles1114.Outputs[Excel Source Output].ExternalColumns[Age_of_Driver]"
+                      lineageId="Package\Vehicles1114\Source Vehicles1114.Outputs[Excel Source Output].Columns[Age_of_Driver]"
+                      name="Age_of_Driver"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Vehicles1114\Source Vehicles1114.Outputs[Excel Source Output].Columns[Age_Band_of_Driver]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Vehicles1114\Source Vehicles1114.Outputs[Excel Source Output].ExternalColumns[Age_Band_of_Driver]"
+                      lineageId="Package\Vehicles1114\Source Vehicles1114.Outputs[Excel Source Output].Columns[Age_Band_of_Driver]"
+                      name="Age_Band_of_Driver"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Vehicles1114\Source Vehicles1114.Outputs[Excel Source Output].Columns[Engine_Capacity_(CC)]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Vehicles1114\Source Vehicles1114.Outputs[Excel Source Output].ExternalColumns[Engine_Capacity_(CC)]"
+                      lineageId="Package\Vehicles1114\Source Vehicles1114.Outputs[Excel Source Output].Columns[Engine_Capacity_(CC)]"
+                      name="Engine_Capacity_(CC)"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Vehicles1114\Source Vehicles1114.Outputs[Excel Source Output].Columns[Propulsion_Code]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Vehicles1114\Source Vehicles1114.Outputs[Excel Source Output].ExternalColumns[Propulsion_Code]"
+                      lineageId="Package\Vehicles1114\Source Vehicles1114.Outputs[Excel Source Output].Columns[Propulsion_Code]"
+                      name="Propulsion_Code"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Vehicles1114\Source Vehicles1114.Outputs[Excel Source Output].Columns[Age_of_Vehicle]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Vehicles1114\Source Vehicles1114.Outputs[Excel Source Output].ExternalColumns[Age_of_Vehicle]"
+                      lineageId="Package\Vehicles1114\Source Vehicles1114.Outputs[Excel Source Output].Columns[Age_of_Vehicle]"
+                      name="Age_of_Vehicle"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Vehicles1114\Source Vehicles1114.Outputs[Excel Source Output].Columns[Driver_IMD_Decile]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Vehicles1114\Source Vehicles1114.Outputs[Excel Source Output].ExternalColumns[Driver_IMD_Decile]"
+                      lineageId="Package\Vehicles1114\Source Vehicles1114.Outputs[Excel Source Output].Columns[Driver_IMD_Decile]"
+                      name="Driver_IMD_Decile"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Vehicles1114\Source Vehicles1114.Outputs[Excel Source Output].Columns[Driver_Home_Area_Type]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Vehicles1114\Source Vehicles1114.Outputs[Excel Source Output].ExternalColumns[Driver_Home_Area_Type]"
+                      lineageId="Package\Vehicles1114\Source Vehicles1114.Outputs[Excel Source Output].Columns[Driver_Home_Area_Type]"
+                      name="Driver_Home_Area_Type"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Vehicles1114\Source Vehicles1114.Outputs[Excel Source Output].ExternalColumns[Accident_Index]"
+                      dataType="wstr"
+                      length="255"
+                      name="Accident_Index" />
+                    <externalMetadataColumn
+                      refId="Package\Vehicles1114\Source Vehicles1114.Outputs[Excel Source Output].ExternalColumns[Vehicle_Reference]"
+                      dataType="r8"
+                      name="Vehicle_Reference" />
+                    <externalMetadataColumn
+                      refId="Package\Vehicles1114\Source Vehicles1114.Outputs[Excel Source Output].ExternalColumns[Vehicle_Type]"
+                      dataType="r8"
+                      name="Vehicle_Type" />
+                    <externalMetadataColumn
+                      refId="Package\Vehicles1114\Source Vehicles1114.Outputs[Excel Source Output].ExternalColumns[Towing_and_Articulation]"
+                      dataType="r8"
+                      name="Towing_and_Articulation" />
+                    <externalMetadataColumn
+                      refId="Package\Vehicles1114\Source Vehicles1114.Outputs[Excel Source Output].ExternalColumns[Vehicle_Manoeuvre]"
+                      dataType="r8"
+                      name="Vehicle_Manoeuvre" />
+                    <externalMetadataColumn
+                      refId="Package\Vehicles1114\Source Vehicles1114.Outputs[Excel Source Output].ExternalColumns[Vehicle_Location-Restricted_Lane]"
+                      dataType="r8"
+                      name="Vehicle_Location-Restricted_Lane" />
+                    <externalMetadataColumn
+                      refId="Package\Vehicles1114\Source Vehicles1114.Outputs[Excel Source Output].ExternalColumns[Junction_Location]"
+                      dataType="r8"
+                      name="Junction_Location" />
+                    <externalMetadataColumn
+                      refId="Package\Vehicles1114\Source Vehicles1114.Outputs[Excel Source Output].ExternalColumns[Skidding_and_Overturning]"
+                      dataType="r8"
+                      name="Skidding_and_Overturning" />
+                    <externalMetadataColumn
+                      refId="Package\Vehicles1114\Source Vehicles1114.Outputs[Excel Source Output].ExternalColumns[Hit_Object_in_Carriageway]"
+                      dataType="r8"
+                      name="Hit_Object_in_Carriageway" />
+                    <externalMetadataColumn
+                      refId="Package\Vehicles1114\Source Vehicles1114.Outputs[Excel Source Output].ExternalColumns[Vehicle_Leaving_Carriageway]"
+                      dataType="r8"
+                      name="Vehicle_Leaving_Carriageway" />
+                    <externalMetadataColumn
+                      refId="Package\Vehicles1114\Source Vehicles1114.Outputs[Excel Source Output].ExternalColumns[Hit_Object_off_Carriageway]"
+                      dataType="r8"
+                      name="Hit_Object_off_Carriageway" />
+                    <externalMetadataColumn
+                      refId="Package\Vehicles1114\Source Vehicles1114.Outputs[Excel Source Output].ExternalColumns[1st_Point_of_Impact]"
+                      dataType="r8"
+                      name="1st_Point_of_Impact" />
+                    <externalMetadataColumn
+                      refId="Package\Vehicles1114\Source Vehicles1114.Outputs[Excel Source Output].ExternalColumns[Was_Vehicle_Left_Hand_Drive?]"
+                      dataType="r8"
+                      name="Was_Vehicle_Left_Hand_Drive?" />
+                    <externalMetadataColumn
+                      refId="Package\Vehicles1114\Source Vehicles1114.Outputs[Excel Source Output].ExternalColumns[Journey_Purpose_of_Driver]"
+                      dataType="r8"
+                      name="Journey_Purpose_of_Driver" />
+                    <externalMetadataColumn
+                      refId="Package\Vehicles1114\Source Vehicles1114.Outputs[Excel Source Output].ExternalColumns[Sex_of_Driver]"
+                      dataType="r8"
+                      name="Sex_of_Driver" />
+                    <externalMetadataColumn
+                      refId="Package\Vehicles1114\Source Vehicles1114.Outputs[Excel Source Output].ExternalColumns[Age_of_Driver]"
+                      dataType="r8"
+                      name="Age_of_Driver" />
+                    <externalMetadataColumn
+                      refId="Package\Vehicles1114\Source Vehicles1114.Outputs[Excel Source Output].ExternalColumns[Age_Band_of_Driver]"
+                      dataType="r8"
+                      name="Age_Band_of_Driver" />
+                    <externalMetadataColumn
+                      refId="Package\Vehicles1114\Source Vehicles1114.Outputs[Excel Source Output].ExternalColumns[Engine_Capacity_(CC)]"
+                      dataType="r8"
+                      name="Engine_Capacity_(CC)" />
+                    <externalMetadataColumn
+                      refId="Package\Vehicles1114\Source Vehicles1114.Outputs[Excel Source Output].ExternalColumns[Propulsion_Code]"
+                      dataType="r8"
+                      name="Propulsion_Code" />
+                    <externalMetadataColumn
+                      refId="Package\Vehicles1114\Source Vehicles1114.Outputs[Excel Source Output].ExternalColumns[Age_of_Vehicle]"
+                      dataType="r8"
+                      name="Age_of_Vehicle" />
+                    <externalMetadataColumn
+                      refId="Package\Vehicles1114\Source Vehicles1114.Outputs[Excel Source Output].ExternalColumns[Driver_IMD_Decile]"
+                      dataType="r8"
+                      name="Driver_IMD_Decile" />
+                    <externalMetadataColumn
+                      refId="Package\Vehicles1114\Source Vehicles1114.Outputs[Excel Source Output].ExternalColumns[Driver_Home_Area_Type]"
+                      dataType="r8"
+                      name="Driver_Home_Area_Type" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Vehicles1114\Source Vehicles1114.Outputs[Excel Source Error Output]"
+                  isErrorOut="true"
+                  name="Excel Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Vehicles1114\Source Vehicles1114.Outputs[Excel Source Error Output].Columns[Accident_Index]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Vehicles1114\Source Vehicles1114.Outputs[Excel Source Error Output].Columns[Accident_Index]"
+                      name="Accident_Index" />
+                    <outputColumn
+                      refId="Package\Vehicles1114\Source Vehicles1114.Outputs[Excel Source Error Output].Columns[Vehicle_Reference]"
+                      dataType="r8"
+                      lineageId="Package\Vehicles1114\Source Vehicles1114.Outputs[Excel Source Error Output].Columns[Vehicle_Reference]"
+                      name="Vehicle_Reference" />
+                    <outputColumn
+                      refId="Package\Vehicles1114\Source Vehicles1114.Outputs[Excel Source Error Output].Columns[Vehicle_Type]"
+                      dataType="r8"
+                      lineageId="Package\Vehicles1114\Source Vehicles1114.Outputs[Excel Source Error Output].Columns[Vehicle_Type]"
+                      name="Vehicle_Type" />
+                    <outputColumn
+                      refId="Package\Vehicles1114\Source Vehicles1114.Outputs[Excel Source Error Output].Columns[Towing_and_Articulation]"
+                      dataType="r8"
+                      lineageId="Package\Vehicles1114\Source Vehicles1114.Outputs[Excel Source Error Output].Columns[Towing_and_Articulation]"
+                      name="Towing_and_Articulation" />
+                    <outputColumn
+                      refId="Package\Vehicles1114\Source Vehicles1114.Outputs[Excel Source Error Output].Columns[Vehicle_Manoeuvre]"
+                      dataType="r8"
+                      lineageId="Package\Vehicles1114\Source Vehicles1114.Outputs[Excel Source Error Output].Columns[Vehicle_Manoeuvre]"
+                      name="Vehicle_Manoeuvre" />
+                    <outputColumn
+                      refId="Package\Vehicles1114\Source Vehicles1114.Outputs[Excel Source Error Output].Columns[Vehicle_Location-Restricted_Lane]"
+                      dataType="r8"
+                      lineageId="Package\Vehicles1114\Source Vehicles1114.Outputs[Excel Source Error Output].Columns[Vehicle_Location-Restricted_Lane]"
+                      name="Vehicle_Location-Restricted_Lane" />
+                    <outputColumn
+                      refId="Package\Vehicles1114\Source Vehicles1114.Outputs[Excel Source Error Output].Columns[Junction_Location]"
+                      dataType="r8"
+                      lineageId="Package\Vehicles1114\Source Vehicles1114.Outputs[Excel Source Error Output].Columns[Junction_Location]"
+                      name="Junction_Location" />
+                    <outputColumn
+                      refId="Package\Vehicles1114\Source Vehicles1114.Outputs[Excel Source Error Output].Columns[Skidding_and_Overturning]"
+                      dataType="r8"
+                      lineageId="Package\Vehicles1114\Source Vehicles1114.Outputs[Excel Source Error Output].Columns[Skidding_and_Overturning]"
+                      name="Skidding_and_Overturning" />
+                    <outputColumn
+                      refId="Package\Vehicles1114\Source Vehicles1114.Outputs[Excel Source Error Output].Columns[Hit_Object_in_Carriageway]"
+                      dataType="r8"
+                      lineageId="Package\Vehicles1114\Source Vehicles1114.Outputs[Excel Source Error Output].Columns[Hit_Object_in_Carriageway]"
+                      name="Hit_Object_in_Carriageway" />
+                    <outputColumn
+                      refId="Package\Vehicles1114\Source Vehicles1114.Outputs[Excel Source Error Output].Columns[Vehicle_Leaving_Carriageway]"
+                      dataType="r8"
+                      lineageId="Package\Vehicles1114\Source Vehicles1114.Outputs[Excel Source Error Output].Columns[Vehicle_Leaving_Carriageway]"
+                      name="Vehicle_Leaving_Carriageway" />
+                    <outputColumn
+                      refId="Package\Vehicles1114\Source Vehicles1114.Outputs[Excel Source Error Output].Columns[Hit_Object_off_Carriageway]"
+                      dataType="r8"
+                      lineageId="Package\Vehicles1114\Source Vehicles1114.Outputs[Excel Source Error Output].Columns[Hit_Object_off_Carriageway]"
+                      name="Hit_Object_off_Carriageway" />
+                    <outputColumn
+                      refId="Package\Vehicles1114\Source Vehicles1114.Outputs[Excel Source Error Output].Columns[1st_Point_of_Impact]"
+                      dataType="r8"
+                      lineageId="Package\Vehicles1114\Source Vehicles1114.Outputs[Excel Source Error Output].Columns[1st_Point_of_Impact]"
+                      name="1st_Point_of_Impact" />
+                    <outputColumn
+                      refId="Package\Vehicles1114\Source Vehicles1114.Outputs[Excel Source Error Output].Columns[Was_Vehicle_Left_Hand_Drive?]"
+                      dataType="r8"
+                      lineageId="Package\Vehicles1114\Source Vehicles1114.Outputs[Excel Source Error Output].Columns[Was_Vehicle_Left_Hand_Drive?]"
+                      name="Was_Vehicle_Left_Hand_Drive?" />
+                    <outputColumn
+                      refId="Package\Vehicles1114\Source Vehicles1114.Outputs[Excel Source Error Output].Columns[Journey_Purpose_of_Driver]"
+                      dataType="r8"
+                      lineageId="Package\Vehicles1114\Source Vehicles1114.Outputs[Excel Source Error Output].Columns[Journey_Purpose_of_Driver]"
+                      name="Journey_Purpose_of_Driver" />
+                    <outputColumn
+                      refId="Package\Vehicles1114\Source Vehicles1114.Outputs[Excel Source Error Output].Columns[Sex_of_Driver]"
+                      dataType="r8"
+                      lineageId="Package\Vehicles1114\Source Vehicles1114.Outputs[Excel Source Error Output].Columns[Sex_of_Driver]"
+                      name="Sex_of_Driver" />
+                    <outputColumn
+                      refId="Package\Vehicles1114\Source Vehicles1114.Outputs[Excel Source Error Output].Columns[Age_of_Driver]"
+                      dataType="r8"
+                      lineageId="Package\Vehicles1114\Source Vehicles1114.Outputs[Excel Source Error Output].Columns[Age_of_Driver]"
+                      name="Age_of_Driver" />
+                    <outputColumn
+                      refId="Package\Vehicles1114\Source Vehicles1114.Outputs[Excel Source Error Output].Columns[Age_Band_of_Driver]"
+                      dataType="r8"
+                      lineageId="Package\Vehicles1114\Source Vehicles1114.Outputs[Excel Source Error Output].Columns[Age_Band_of_Driver]"
+                      name="Age_Band_of_Driver" />
+                    <outputColumn
+                      refId="Package\Vehicles1114\Source Vehicles1114.Outputs[Excel Source Error Output].Columns[Engine_Capacity_(CC)]"
+                      dataType="r8"
+                      lineageId="Package\Vehicles1114\Source Vehicles1114.Outputs[Excel Source Error Output].Columns[Engine_Capacity_(CC)]"
+                      name="Engine_Capacity_(CC)" />
+                    <outputColumn
+                      refId="Package\Vehicles1114\Source Vehicles1114.Outputs[Excel Source Error Output].Columns[Propulsion_Code]"
+                      dataType="r8"
+                      lineageId="Package\Vehicles1114\Source Vehicles1114.Outputs[Excel Source Error Output].Columns[Propulsion_Code]"
+                      name="Propulsion_Code" />
+                    <outputColumn
+                      refId="Package\Vehicles1114\Source Vehicles1114.Outputs[Excel Source Error Output].Columns[Age_of_Vehicle]"
+                      dataType="r8"
+                      lineageId="Package\Vehicles1114\Source Vehicles1114.Outputs[Excel Source Error Output].Columns[Age_of_Vehicle]"
+                      name="Age_of_Vehicle" />
+                    <outputColumn
+                      refId="Package\Vehicles1114\Source Vehicles1114.Outputs[Excel Source Error Output].Columns[Driver_IMD_Decile]"
+                      dataType="r8"
+                      lineageId="Package\Vehicles1114\Source Vehicles1114.Outputs[Excel Source Error Output].Columns[Driver_IMD_Decile]"
+                      name="Driver_IMD_Decile" />
+                    <outputColumn
+                      refId="Package\Vehicles1114\Source Vehicles1114.Outputs[Excel Source Error Output].Columns[Driver_Home_Area_Type]"
+                      dataType="r8"
+                      lineageId="Package\Vehicles1114\Source Vehicles1114.Outputs[Excel Source Error Output].Columns[Driver_Home_Area_Type]"
+                      name="Driver_Home_Area_Type" />
+                    <outputColumn
+                      refId="Package\Vehicles1114\Source Vehicles1114.Outputs[Excel Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Vehicles1114\Source Vehicles1114.Outputs[Excel Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Vehicles1114\Source Vehicles1114.Outputs[Excel Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Vehicles1114\Source Vehicles1114.Outputs[Excel Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Vehicles1114\Vehicles1114"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="Vehicles1114"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[Vehicles1114]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Vehicles1114\Vehicles1114.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[LocalHost.Vehicles1114 1]"
+                  connectionManagerRefId="Package.ConnectionManagers[LocalHost.Vehicles1114 1]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Vehicles1114\Vehicles1114.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Vehicles1114\Vehicles1114.Inputs[OLE DB Destination Input].Columns[Accident_Index]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Accident_Index"
+                      externalMetadataColumnId="Package\Vehicles1114\Vehicles1114.Inputs[OLE DB Destination Input].ExternalColumns[Accident_Index]"
+                      lineageId="Package\Vehicles1114\Source Vehicles1114.Outputs[Excel Source Output].Columns[Accident_Index]" />
+                    <inputColumn
+                      refId="Package\Vehicles1114\Vehicles1114.Inputs[OLE DB Destination Input].Columns[Vehicle_Reference]"
+                      cachedDataType="r8"
+                      cachedName="Vehicle_Reference"
+                      externalMetadataColumnId="Package\Vehicles1114\Vehicles1114.Inputs[OLE DB Destination Input].ExternalColumns[Vehicle_Reference]"
+                      lineageId="Package\Vehicles1114\Source Vehicles1114.Outputs[Excel Source Output].Columns[Vehicle_Reference]" />
+                    <inputColumn
+                      refId="Package\Vehicles1114\Vehicles1114.Inputs[OLE DB Destination Input].Columns[Vehicle_Type]"
+                      cachedDataType="r8"
+                      cachedName="Vehicle_Type"
+                      externalMetadataColumnId="Package\Vehicles1114\Vehicles1114.Inputs[OLE DB Destination Input].ExternalColumns[Vehicle_Type]"
+                      lineageId="Package\Vehicles1114\Source Vehicles1114.Outputs[Excel Source Output].Columns[Vehicle_Type]" />
+                    <inputColumn
+                      refId="Package\Vehicles1114\Vehicles1114.Inputs[OLE DB Destination Input].Columns[Towing_and_Articulation]"
+                      cachedDataType="r8"
+                      cachedName="Towing_and_Articulation"
+                      externalMetadataColumnId="Package\Vehicles1114\Vehicles1114.Inputs[OLE DB Destination Input].ExternalColumns[Towing_and_Articulation]"
+                      lineageId="Package\Vehicles1114\Source Vehicles1114.Outputs[Excel Source Output].Columns[Towing_and_Articulation]" />
+                    <inputColumn
+                      refId="Package\Vehicles1114\Vehicles1114.Inputs[OLE DB Destination Input].Columns[Vehicle_Manoeuvre]"
+                      cachedDataType="r8"
+                      cachedName="Vehicle_Manoeuvre"
+                      externalMetadataColumnId="Package\Vehicles1114\Vehicles1114.Inputs[OLE DB Destination Input].ExternalColumns[Vehicle_Manoeuvre]"
+                      lineageId="Package\Vehicles1114\Source Vehicles1114.Outputs[Excel Source Output].Columns[Vehicle_Manoeuvre]" />
+                    <inputColumn
+                      refId="Package\Vehicles1114\Vehicles1114.Inputs[OLE DB Destination Input].Columns[Vehicle_Location-Restricted_Lane]"
+                      cachedDataType="r8"
+                      cachedName="Vehicle_Location-Restricted_Lane"
+                      externalMetadataColumnId="Package\Vehicles1114\Vehicles1114.Inputs[OLE DB Destination Input].ExternalColumns[Vehicle_Location-Restricted_Lane]"
+                      lineageId="Package\Vehicles1114\Source Vehicles1114.Outputs[Excel Source Output].Columns[Vehicle_Location-Restricted_Lane]" />
+                    <inputColumn
+                      refId="Package\Vehicles1114\Vehicles1114.Inputs[OLE DB Destination Input].Columns[Junction_Location]"
+                      cachedDataType="r8"
+                      cachedName="Junction_Location"
+                      externalMetadataColumnId="Package\Vehicles1114\Vehicles1114.Inputs[OLE DB Destination Input].ExternalColumns[Junction_Location]"
+                      lineageId="Package\Vehicles1114\Source Vehicles1114.Outputs[Excel Source Output].Columns[Junction_Location]" />
+                    <inputColumn
+                      refId="Package\Vehicles1114\Vehicles1114.Inputs[OLE DB Destination Input].Columns[Skidding_and_Overturning]"
+                      cachedDataType="r8"
+                      cachedName="Skidding_and_Overturning"
+                      externalMetadataColumnId="Package\Vehicles1114\Vehicles1114.Inputs[OLE DB Destination Input].ExternalColumns[Skidding_and_Overturning]"
+                      lineageId="Package\Vehicles1114\Source Vehicles1114.Outputs[Excel Source Output].Columns[Skidding_and_Overturning]" />
+                    <inputColumn
+                      refId="Package\Vehicles1114\Vehicles1114.Inputs[OLE DB Destination Input].Columns[Hit_Object_in_Carriageway]"
+                      cachedDataType="r8"
+                      cachedName="Hit_Object_in_Carriageway"
+                      externalMetadataColumnId="Package\Vehicles1114\Vehicles1114.Inputs[OLE DB Destination Input].ExternalColumns[Hit_Object_in_Carriageway]"
+                      lineageId="Package\Vehicles1114\Source Vehicles1114.Outputs[Excel Source Output].Columns[Hit_Object_in_Carriageway]" />
+                    <inputColumn
+                      refId="Package\Vehicles1114\Vehicles1114.Inputs[OLE DB Destination Input].Columns[Vehicle_Leaving_Carriageway]"
+                      cachedDataType="r8"
+                      cachedName="Vehicle_Leaving_Carriageway"
+                      externalMetadataColumnId="Package\Vehicles1114\Vehicles1114.Inputs[OLE DB Destination Input].ExternalColumns[Vehicle_Leaving_Carriageway]"
+                      lineageId="Package\Vehicles1114\Source Vehicles1114.Outputs[Excel Source Output].Columns[Vehicle_Leaving_Carriageway]" />
+                    <inputColumn
+                      refId="Package\Vehicles1114\Vehicles1114.Inputs[OLE DB Destination Input].Columns[Hit_Object_off_Carriageway]"
+                      cachedDataType="r8"
+                      cachedName="Hit_Object_off_Carriageway"
+                      externalMetadataColumnId="Package\Vehicles1114\Vehicles1114.Inputs[OLE DB Destination Input].ExternalColumns[Hit_Object_off_Carriageway]"
+                      lineageId="Package\Vehicles1114\Source Vehicles1114.Outputs[Excel Source Output].Columns[Hit_Object_off_Carriageway]" />
+                    <inputColumn
+                      refId="Package\Vehicles1114\Vehicles1114.Inputs[OLE DB Destination Input].Columns[1st_Point_of_Impact]"
+                      cachedDataType="r8"
+                      cachedName="1st_Point_of_Impact"
+                      externalMetadataColumnId="Package\Vehicles1114\Vehicles1114.Inputs[OLE DB Destination Input].ExternalColumns[1st_Point_of_Impact]"
+                      lineageId="Package\Vehicles1114\Source Vehicles1114.Outputs[Excel Source Output].Columns[1st_Point_of_Impact]" />
+                    <inputColumn
+                      refId="Package\Vehicles1114\Vehicles1114.Inputs[OLE DB Destination Input].Columns[Was_Vehicle_Left_Hand_Drive?]"
+                      cachedDataType="r8"
+                      cachedName="Was_Vehicle_Left_Hand_Drive?"
+                      externalMetadataColumnId="Package\Vehicles1114\Vehicles1114.Inputs[OLE DB Destination Input].ExternalColumns[Was_Vehicle_Left_Hand_Drive?]"
+                      lineageId="Package\Vehicles1114\Source Vehicles1114.Outputs[Excel Source Output].Columns[Was_Vehicle_Left_Hand_Drive?]" />
+                    <inputColumn
+                      refId="Package\Vehicles1114\Vehicles1114.Inputs[OLE DB Destination Input].Columns[Journey_Purpose_of_Driver]"
+                      cachedDataType="r8"
+                      cachedName="Journey_Purpose_of_Driver"
+                      externalMetadataColumnId="Package\Vehicles1114\Vehicles1114.Inputs[OLE DB Destination Input].ExternalColumns[Journey_Purpose_of_Driver]"
+                      lineageId="Package\Vehicles1114\Source Vehicles1114.Outputs[Excel Source Output].Columns[Journey_Purpose_of_Driver]" />
+                    <inputColumn
+                      refId="Package\Vehicles1114\Vehicles1114.Inputs[OLE DB Destination Input].Columns[Sex_of_Driver]"
+                      cachedDataType="r8"
+                      cachedName="Sex_of_Driver"
+                      externalMetadataColumnId="Package\Vehicles1114\Vehicles1114.Inputs[OLE DB Destination Input].ExternalColumns[Sex_of_Driver]"
+                      lineageId="Package\Vehicles1114\Source Vehicles1114.Outputs[Excel Source Output].Columns[Sex_of_Driver]" />
+                    <inputColumn
+                      refId="Package\Vehicles1114\Vehicles1114.Inputs[OLE DB Destination Input].Columns[Age_of_Driver]"
+                      cachedDataType="r8"
+                      cachedName="Age_of_Driver"
+                      externalMetadataColumnId="Package\Vehicles1114\Vehicles1114.Inputs[OLE DB Destination Input].ExternalColumns[Age_of_Driver]"
+                      lineageId="Package\Vehicles1114\Source Vehicles1114.Outputs[Excel Source Output].Columns[Age_of_Driver]" />
+                    <inputColumn
+                      refId="Package\Vehicles1114\Vehicles1114.Inputs[OLE DB Destination Input].Columns[Age_Band_of_Driver]"
+                      cachedDataType="r8"
+                      cachedName="Age_Band_of_Driver"
+                      externalMetadataColumnId="Package\Vehicles1114\Vehicles1114.Inputs[OLE DB Destination Input].ExternalColumns[Age_Band_of_Driver]"
+                      lineageId="Package\Vehicles1114\Source Vehicles1114.Outputs[Excel Source Output].Columns[Age_Band_of_Driver]" />
+                    <inputColumn
+                      refId="Package\Vehicles1114\Vehicles1114.Inputs[OLE DB Destination Input].Columns[Engine_Capacity_(CC)]"
+                      cachedDataType="r8"
+                      cachedName="Engine_Capacity_(CC)"
+                      externalMetadataColumnId="Package\Vehicles1114\Vehicles1114.Inputs[OLE DB Destination Input].ExternalColumns[Engine_Capacity_(CC)]"
+                      lineageId="Package\Vehicles1114\Source Vehicles1114.Outputs[Excel Source Output].Columns[Engine_Capacity_(CC)]" />
+                    <inputColumn
+                      refId="Package\Vehicles1114\Vehicles1114.Inputs[OLE DB Destination Input].Columns[Propulsion_Code]"
+                      cachedDataType="r8"
+                      cachedName="Propulsion_Code"
+                      externalMetadataColumnId="Package\Vehicles1114\Vehicles1114.Inputs[OLE DB Destination Input].ExternalColumns[Propulsion_Code]"
+                      lineageId="Package\Vehicles1114\Source Vehicles1114.Outputs[Excel Source Output].Columns[Propulsion_Code]" />
+                    <inputColumn
+                      refId="Package\Vehicles1114\Vehicles1114.Inputs[OLE DB Destination Input].Columns[Age_of_Vehicle]"
+                      cachedDataType="r8"
+                      cachedName="Age_of_Vehicle"
+                      externalMetadataColumnId="Package\Vehicles1114\Vehicles1114.Inputs[OLE DB Destination Input].ExternalColumns[Age_of_Vehicle]"
+                      lineageId="Package\Vehicles1114\Source Vehicles1114.Outputs[Excel Source Output].Columns[Age_of_Vehicle]" />
+                    <inputColumn
+                      refId="Package\Vehicles1114\Vehicles1114.Inputs[OLE DB Destination Input].Columns[Driver_IMD_Decile]"
+                      cachedDataType="r8"
+                      cachedName="Driver_IMD_Decile"
+                      externalMetadataColumnId="Package\Vehicles1114\Vehicles1114.Inputs[OLE DB Destination Input].ExternalColumns[Driver_IMD_Decile]"
+                      lineageId="Package\Vehicles1114\Source Vehicles1114.Outputs[Excel Source Output].Columns[Driver_IMD_Decile]" />
+                    <inputColumn
+                      refId="Package\Vehicles1114\Vehicles1114.Inputs[OLE DB Destination Input].Columns[Driver_Home_Area_Type]"
+                      cachedDataType="r8"
+                      cachedName="Driver_Home_Area_Type"
+                      externalMetadataColumnId="Package\Vehicles1114\Vehicles1114.Inputs[OLE DB Destination Input].ExternalColumns[Driver_Home_Area_Type]"
+                      lineageId="Package\Vehicles1114\Source Vehicles1114.Outputs[Excel Source Output].Columns[Driver_Home_Area_Type]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Vehicles1114\Vehicles1114.Inputs[OLE DB Destination Input].ExternalColumns[Accident_Index]"
+                      dataType="wstr"
+                      length="255"
+                      name="Accident_Index" />
+                    <externalMetadataColumn
+                      refId="Package\Vehicles1114\Vehicles1114.Inputs[OLE DB Destination Input].ExternalColumns[Vehicle_Reference]"
+                      dataType="r8"
+                      name="Vehicle_Reference" />
+                    <externalMetadataColumn
+                      refId="Package\Vehicles1114\Vehicles1114.Inputs[OLE DB Destination Input].ExternalColumns[Vehicle_Type]"
+                      dataType="r8"
+                      name="Vehicle_Type" />
+                    <externalMetadataColumn
+                      refId="Package\Vehicles1114\Vehicles1114.Inputs[OLE DB Destination Input].ExternalColumns[Towing_and_Articulation]"
+                      dataType="r8"
+                      name="Towing_and_Articulation" />
+                    <externalMetadataColumn
+                      refId="Package\Vehicles1114\Vehicles1114.Inputs[OLE DB Destination Input].ExternalColumns[Vehicle_Manoeuvre]"
+                      dataType="r8"
+                      name="Vehicle_Manoeuvre" />
+                    <externalMetadataColumn
+                      refId="Package\Vehicles1114\Vehicles1114.Inputs[OLE DB Destination Input].ExternalColumns[Vehicle_Location-Restricted_Lane]"
+                      dataType="r8"
+                      name="Vehicle_Location-Restricted_Lane" />
+                    <externalMetadataColumn
+                      refId="Package\Vehicles1114\Vehicles1114.Inputs[OLE DB Destination Input].ExternalColumns[Junction_Location]"
+                      dataType="r8"
+                      name="Junction_Location" />
+                    <externalMetadataColumn
+                      refId="Package\Vehicles1114\Vehicles1114.Inputs[OLE DB Destination Input].ExternalColumns[Skidding_and_Overturning]"
+                      dataType="r8"
+                      name="Skidding_and_Overturning" />
+                    <externalMetadataColumn
+                      refId="Package\Vehicles1114\Vehicles1114.Inputs[OLE DB Destination Input].ExternalColumns[Hit_Object_in_Carriageway]"
+                      dataType="r8"
+                      name="Hit_Object_in_Carriageway" />
+                    <externalMetadataColumn
+                      refId="Package\Vehicles1114\Vehicles1114.Inputs[OLE DB Destination Input].ExternalColumns[Vehicle_Leaving_Carriageway]"
+                      dataType="r8"
+                      name="Vehicle_Leaving_Carriageway" />
+                    <externalMetadataColumn
+                      refId="Package\Vehicles1114\Vehicles1114.Inputs[OLE DB Destination Input].ExternalColumns[Hit_Object_off_Carriageway]"
+                      dataType="r8"
+                      name="Hit_Object_off_Carriageway" />
+                    <externalMetadataColumn
+                      refId="Package\Vehicles1114\Vehicles1114.Inputs[OLE DB Destination Input].ExternalColumns[1st_Point_of_Impact]"
+                      dataType="r8"
+                      name="1st_Point_of_Impact" />
+                    <externalMetadataColumn
+                      refId="Package\Vehicles1114\Vehicles1114.Inputs[OLE DB Destination Input].ExternalColumns[Was_Vehicle_Left_Hand_Drive?]"
+                      dataType="r8"
+                      name="Was_Vehicle_Left_Hand_Drive?" />
+                    <externalMetadataColumn
+                      refId="Package\Vehicles1114\Vehicles1114.Inputs[OLE DB Destination Input].ExternalColumns[Journey_Purpose_of_Driver]"
+                      dataType="r8"
+                      name="Journey_Purpose_of_Driver" />
+                    <externalMetadataColumn
+                      refId="Package\Vehicles1114\Vehicles1114.Inputs[OLE DB Destination Input].ExternalColumns[Sex_of_Driver]"
+                      dataType="r8"
+                      name="Sex_of_Driver" />
+                    <externalMetadataColumn
+                      refId="Package\Vehicles1114\Vehicles1114.Inputs[OLE DB Destination Input].ExternalColumns[Age_of_Driver]"
+                      dataType="r8"
+                      name="Age_of_Driver" />
+                    <externalMetadataColumn
+                      refId="Package\Vehicles1114\Vehicles1114.Inputs[OLE DB Destination Input].ExternalColumns[Age_Band_of_Driver]"
+                      dataType="r8"
+                      name="Age_Band_of_Driver" />
+                    <externalMetadataColumn
+                      refId="Package\Vehicles1114\Vehicles1114.Inputs[OLE DB Destination Input].ExternalColumns[Engine_Capacity_(CC)]"
+                      dataType="r8"
+                      name="Engine_Capacity_(CC)" />
+                    <externalMetadataColumn
+                      refId="Package\Vehicles1114\Vehicles1114.Inputs[OLE DB Destination Input].ExternalColumns[Propulsion_Code]"
+                      dataType="r8"
+                      name="Propulsion_Code" />
+                    <externalMetadataColumn
+                      refId="Package\Vehicles1114\Vehicles1114.Inputs[OLE DB Destination Input].ExternalColumns[Age_of_Vehicle]"
+                      dataType="r8"
+                      name="Age_of_Vehicle" />
+                    <externalMetadataColumn
+                      refId="Package\Vehicles1114\Vehicles1114.Inputs[OLE DB Destination Input].ExternalColumns[Driver_IMD_Decile]"
+                      dataType="r8"
+                      name="Driver_IMD_Decile" />
+                    <externalMetadataColumn
+                      refId="Package\Vehicles1114\Vehicles1114.Inputs[OLE DB Destination Input].ExternalColumns[Driver_Home_Area_Type]"
+                      dataType="r8"
+                      name="Driver_Home_Area_Type" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Vehicles1114\Vehicles1114.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Vehicles1114\Vehicles1114.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Vehicles1114\Vehicles1114.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Vehicles1114\Vehicles1114.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Vehicles1114\Vehicles1114.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Vehicles1114\Vehicles1114.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Vehicles1114.Paths[Excel Source Output]"
+              endId="Package\Vehicles1114\Vehicles1114.Inputs[OLE DB Destination Input]"
+              name="Excel Source Output"
+              startId="Package\Vehicles1114\Source Vehicles1114.Outputs[Excel Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="140,41.6"
+          Id="Package\Vehicles1114"
+          TopLeft="302.857148014769,103.235295565483" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Vehicles1114">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="140,41.6"
+          Id="Package\Vehicles1114\Vehicles1114"
+          TopLeft="320.000005449568,204.176473451733" />
+        <NodeLayout
+          Size="175.2,41.6"
+          Id="Package\Vehicles1114\Source Vehicles1114"
+          TopLeft="310.500005194119,62.9352946538826" />
+        <EdgeLayout
+          Id="Package\Vehicles1114.Paths[Excel Source Output]"
+          TopLeft="398.100005194119,104.535294653883">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-8.09999974455138,99.6411787978507"
+              Start="0,0"
+              End="-8.09999974455138,92.1411787978507">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,45.8205893989253" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,45.8205893989253"
+                    Point2="0,49.8205893989253"
+                    Point3="-4,49.8205893989253" />
+                  <mssgle:LineSegment
+                    End="-4.09999974455138,49.8205893989253" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-4.09999974455138,49.8205893989253"
+                    Point2="-8.09999974455138,49.8205893989253"
+                    Point3="-8.09999974455138,53.8205893989253" />
+                  <mssgle:LineSegment
+                    End="-8.09999974455138,92.1411787978507" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Vehicles1114\Source Vehicles1114">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Vehicles1114\Vehicles1114">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>

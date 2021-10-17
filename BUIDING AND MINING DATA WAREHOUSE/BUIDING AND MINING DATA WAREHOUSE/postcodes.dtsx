@@ -1,0 +1,727 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="10/17/2021 3:21:42 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="ASUS-DUCHUY"
+  DTS:CreatorName="ASUS-DUCHUY\ASUS-DUCHUY"
+  DTS:DTSID="{57950428-7E41-4216-8653-25E353D896DA}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="15.0.2000.170"
+  DTS:LocaleID="1033"
+  DTS:ObjectName="Package1"
+  DTS:PackageType="5"
+  DTS:VersionBuild="3"
+  DTS:VersionGUID="{A497BE11-801D-4044-B534-828B96001202}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Excel Connection Manager]"
+      DTS:CreationName="EXCEL"
+      DTS:DTSID="{D01A133C-91EB-4347-8E9C-5E2E5BB33B05}"
+      DTS:ObjectName="Excel Connection Manager">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="0"
+          DTS:ConnectRetryInterval="0"
+          DTS:ConnectionString="Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\ASUS-DUCHUY\Desktop\BI\UK-Car-Accidents-Dataware-house\Dataset\UK Accidents Data 2011-2014\postcodes.xls;Extended Properties=&quot;EXCEL 8.0;HDR=YES&quot;;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[LocalHost.postcodes]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{F25BE36F-38EB-47CA-9CA3-D6389DE23F38}"
+      DTS:ObjectName="LocalHost.postcodes">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=.;Initial Catalog=postcodes;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\postcodes"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{265C3A0B-BB68-425C-BAF2-227106B1889D}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="postcodes"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\postcodes\postcodes"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="postcodes"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[postcodes]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\postcodes\postcodes.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[LocalHost.postcodes]"
+                  connectionManagerRefId="Package.ConnectionManagers[LocalHost.postcodes]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\postcodes\postcodes.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\postcodes\postcodes.Inputs[OLE DB Destination Input].Columns[postcode]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="postcode"
+                      externalMetadataColumnId="Package\postcodes\postcodes.Inputs[OLE DB Destination Input].ExternalColumns[postcode]"
+                      lineageId="Package\postcodes\Source postcodes.Outputs[Excel Source Output].Columns[postcode]" />
+                    <inputColumn
+                      refId="Package\postcodes\postcodes.Inputs[OLE DB Destination Input].Columns[easting]"
+                      cachedDataType="r8"
+                      cachedName="easting"
+                      externalMetadataColumnId="Package\postcodes\postcodes.Inputs[OLE DB Destination Input].ExternalColumns[easting]"
+                      lineageId="Package\postcodes\Source postcodes.Outputs[Excel Source Output].Columns[easting]" />
+                    <inputColumn
+                      refId="Package\postcodes\postcodes.Inputs[OLE DB Destination Input].Columns[northing]"
+                      cachedDataType="r8"
+                      cachedName="northing"
+                      externalMetadataColumnId="Package\postcodes\postcodes.Inputs[OLE DB Destination Input].ExternalColumns[northing]"
+                      lineageId="Package\postcodes\Source postcodes.Outputs[Excel Source Output].Columns[northing]" />
+                    <inputColumn
+                      refId="Package\postcodes\postcodes.Inputs[OLE DB Destination Input].Columns[latitude]"
+                      cachedDataType="r8"
+                      cachedName="latitude"
+                      externalMetadataColumnId="Package\postcodes\postcodes.Inputs[OLE DB Destination Input].ExternalColumns[latitude]"
+                      lineageId="Package\postcodes\Source postcodes.Outputs[Excel Source Output].Columns[latitude]" />
+                    <inputColumn
+                      refId="Package\postcodes\postcodes.Inputs[OLE DB Destination Input].Columns[longitude]"
+                      cachedDataType="r8"
+                      cachedName="longitude"
+                      externalMetadataColumnId="Package\postcodes\postcodes.Inputs[OLE DB Destination Input].ExternalColumns[longitude]"
+                      lineageId="Package\postcodes\Source postcodes.Outputs[Excel Source Output].Columns[longitude]" />
+                    <inputColumn
+                      refId="Package\postcodes\postcodes.Inputs[OLE DB Destination Input].Columns[city]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="city"
+                      externalMetadataColumnId="Package\postcodes\postcodes.Inputs[OLE DB Destination Input].ExternalColumns[city]"
+                      lineageId="Package\postcodes\Source postcodes.Outputs[Excel Source Output].Columns[city]" />
+                    <inputColumn
+                      refId="Package\postcodes\postcodes.Inputs[OLE DB Destination Input].Columns[county]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="county"
+                      externalMetadataColumnId="Package\postcodes\postcodes.Inputs[OLE DB Destination Input].ExternalColumns[county]"
+                      lineageId="Package\postcodes\Source postcodes.Outputs[Excel Source Output].Columns[county]" />
+                    <inputColumn
+                      refId="Package\postcodes\postcodes.Inputs[OLE DB Destination Input].Columns[country_code]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="country_code"
+                      externalMetadataColumnId="Package\postcodes\postcodes.Inputs[OLE DB Destination Input].ExternalColumns[country_code]"
+                      lineageId="Package\postcodes\Source postcodes.Outputs[Excel Source Output].Columns[country_code]" />
+                    <inputColumn
+                      refId="Package\postcodes\postcodes.Inputs[OLE DB Destination Input].Columns[country_name]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="country_name"
+                      externalMetadataColumnId="Package\postcodes\postcodes.Inputs[OLE DB Destination Input].ExternalColumns[country_name]"
+                      lineageId="Package\postcodes\Source postcodes.Outputs[Excel Source Output].Columns[country_name]" />
+                    <inputColumn
+                      refId="Package\postcodes\postcodes.Inputs[OLE DB Destination Input].Columns[iso3166-2]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="iso3166-2"
+                      externalMetadataColumnId="Package\postcodes\postcodes.Inputs[OLE DB Destination Input].ExternalColumns[iso3166-2]"
+                      lineageId="Package\postcodes\Source postcodes.Outputs[Excel Source Output].Columns[iso3166-2]" />
+                    <inputColumn
+                      refId="Package\postcodes\postcodes.Inputs[OLE DB Destination Input].Columns[region_code]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="region_code"
+                      externalMetadataColumnId="Package\postcodes\postcodes.Inputs[OLE DB Destination Input].ExternalColumns[region_code]"
+                      lineageId="Package\postcodes\Source postcodes.Outputs[Excel Source Output].Columns[region_code]" />
+                    <inputColumn
+                      refId="Package\postcodes\postcodes.Inputs[OLE DB Destination Input].Columns[region_name]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="region_name"
+                      externalMetadataColumnId="Package\postcodes\postcodes.Inputs[OLE DB Destination Input].ExternalColumns[region_name]"
+                      lineageId="Package\postcodes\Source postcodes.Outputs[Excel Source Output].Columns[region_name]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\postcodes\postcodes.Inputs[OLE DB Destination Input].ExternalColumns[postcode]"
+                      dataType="wstr"
+                      length="255"
+                      name="postcode" />
+                    <externalMetadataColumn
+                      refId="Package\postcodes\postcodes.Inputs[OLE DB Destination Input].ExternalColumns[easting]"
+                      dataType="r8"
+                      name="easting" />
+                    <externalMetadataColumn
+                      refId="Package\postcodes\postcodes.Inputs[OLE DB Destination Input].ExternalColumns[northing]"
+                      dataType="r8"
+                      name="northing" />
+                    <externalMetadataColumn
+                      refId="Package\postcodes\postcodes.Inputs[OLE DB Destination Input].ExternalColumns[latitude]"
+                      dataType="r8"
+                      name="latitude" />
+                    <externalMetadataColumn
+                      refId="Package\postcodes\postcodes.Inputs[OLE DB Destination Input].ExternalColumns[longitude]"
+                      dataType="r8"
+                      name="longitude" />
+                    <externalMetadataColumn
+                      refId="Package\postcodes\postcodes.Inputs[OLE DB Destination Input].ExternalColumns[city]"
+                      dataType="wstr"
+                      length="255"
+                      name="city" />
+                    <externalMetadataColumn
+                      refId="Package\postcodes\postcodes.Inputs[OLE DB Destination Input].ExternalColumns[county]"
+                      dataType="wstr"
+                      length="255"
+                      name="county" />
+                    <externalMetadataColumn
+                      refId="Package\postcodes\postcodes.Inputs[OLE DB Destination Input].ExternalColumns[country_code]"
+                      dataType="wstr"
+                      length="255"
+                      name="country_code" />
+                    <externalMetadataColumn
+                      refId="Package\postcodes\postcodes.Inputs[OLE DB Destination Input].ExternalColumns[country_name]"
+                      dataType="wstr"
+                      length="255"
+                      name="country_name" />
+                    <externalMetadataColumn
+                      refId="Package\postcodes\postcodes.Inputs[OLE DB Destination Input].ExternalColumns[iso3166-2]"
+                      dataType="wstr"
+                      length="255"
+                      name="iso3166-2" />
+                    <externalMetadataColumn
+                      refId="Package\postcodes\postcodes.Inputs[OLE DB Destination Input].ExternalColumns[region_code]"
+                      dataType="wstr"
+                      length="255"
+                      name="region_code" />
+                    <externalMetadataColumn
+                      refId="Package\postcodes\postcodes.Inputs[OLE DB Destination Input].ExternalColumns[region_name]"
+                      dataType="wstr"
+                      length="255"
+                      name="region_name" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\postcodes\postcodes.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\postcodes\postcodes.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\postcodes\postcodes.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\postcodes\postcodes.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\postcodes\postcodes.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\postcodes\postcodes.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\postcodes\Source postcodes"
+              componentClassID="Microsoft.ExcelSource"
+              contactInfo="Excel Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Excel Source"
+              name="Source postcodes"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">postcodes$</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="The mapping from parameters in the SQL command to variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\postcodes\Source postcodes.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Excel Connection Manager]"
+                  connectionManagerRefId="Package.ConnectionManagers[Excel Connection Manager]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\postcodes\Source postcodes.Outputs[Excel Source Output]"
+                  name="Excel Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\postcodes\Source postcodes.Outputs[Excel Source Output].Columns[postcode]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\postcodes\Source postcodes.Outputs[Excel Source Output].ExternalColumns[postcode]"
+                      length="255"
+                      lineageId="Package\postcodes\Source postcodes.Outputs[Excel Source Output].Columns[postcode]"
+                      name="postcode"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\postcodes\Source postcodes.Outputs[Excel Source Output].Columns[easting]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\postcodes\Source postcodes.Outputs[Excel Source Output].ExternalColumns[easting]"
+                      lineageId="Package\postcodes\Source postcodes.Outputs[Excel Source Output].Columns[easting]"
+                      name="easting"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\postcodes\Source postcodes.Outputs[Excel Source Output].Columns[northing]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\postcodes\Source postcodes.Outputs[Excel Source Output].ExternalColumns[northing]"
+                      lineageId="Package\postcodes\Source postcodes.Outputs[Excel Source Output].Columns[northing]"
+                      name="northing"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\postcodes\Source postcodes.Outputs[Excel Source Output].Columns[latitude]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\postcodes\Source postcodes.Outputs[Excel Source Output].ExternalColumns[latitude]"
+                      lineageId="Package\postcodes\Source postcodes.Outputs[Excel Source Output].Columns[latitude]"
+                      name="latitude"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\postcodes\Source postcodes.Outputs[Excel Source Output].Columns[longitude]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\postcodes\Source postcodes.Outputs[Excel Source Output].ExternalColumns[longitude]"
+                      lineageId="Package\postcodes\Source postcodes.Outputs[Excel Source Output].Columns[longitude]"
+                      name="longitude"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\postcodes\Source postcodes.Outputs[Excel Source Output].Columns[city]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\postcodes\Source postcodes.Outputs[Excel Source Output].ExternalColumns[city]"
+                      length="255"
+                      lineageId="Package\postcodes\Source postcodes.Outputs[Excel Source Output].Columns[city]"
+                      name="city"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\postcodes\Source postcodes.Outputs[Excel Source Output].Columns[county]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\postcodes\Source postcodes.Outputs[Excel Source Output].ExternalColumns[county]"
+                      length="255"
+                      lineageId="Package\postcodes\Source postcodes.Outputs[Excel Source Output].Columns[county]"
+                      name="county"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\postcodes\Source postcodes.Outputs[Excel Source Output].Columns[country_code]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\postcodes\Source postcodes.Outputs[Excel Source Output].ExternalColumns[country_code]"
+                      length="255"
+                      lineageId="Package\postcodes\Source postcodes.Outputs[Excel Source Output].Columns[country_code]"
+                      name="country_code"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\postcodes\Source postcodes.Outputs[Excel Source Output].Columns[country_name]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\postcodes\Source postcodes.Outputs[Excel Source Output].ExternalColumns[country_name]"
+                      length="255"
+                      lineageId="Package\postcodes\Source postcodes.Outputs[Excel Source Output].Columns[country_name]"
+                      name="country_name"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\postcodes\Source postcodes.Outputs[Excel Source Output].Columns[iso3166-2]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\postcodes\Source postcodes.Outputs[Excel Source Output].ExternalColumns[iso3166-2]"
+                      length="255"
+                      lineageId="Package\postcodes\Source postcodes.Outputs[Excel Source Output].Columns[iso3166-2]"
+                      name="iso3166-2"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\postcodes\Source postcodes.Outputs[Excel Source Output].Columns[region_code]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\postcodes\Source postcodes.Outputs[Excel Source Output].ExternalColumns[region_code]"
+                      length="255"
+                      lineageId="Package\postcodes\Source postcodes.Outputs[Excel Source Output].Columns[region_code]"
+                      name="region_code"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\postcodes\Source postcodes.Outputs[Excel Source Output].Columns[region_name]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\postcodes\Source postcodes.Outputs[Excel Source Output].ExternalColumns[region_name]"
+                      length="255"
+                      lineageId="Package\postcodes\Source postcodes.Outputs[Excel Source Output].Columns[region_name]"
+                      name="region_name"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\postcodes\Source postcodes.Outputs[Excel Source Output].ExternalColumns[postcode]"
+                      dataType="wstr"
+                      length="255"
+                      name="postcode" />
+                    <externalMetadataColumn
+                      refId="Package\postcodes\Source postcodes.Outputs[Excel Source Output].ExternalColumns[easting]"
+                      dataType="r8"
+                      name="easting" />
+                    <externalMetadataColumn
+                      refId="Package\postcodes\Source postcodes.Outputs[Excel Source Output].ExternalColumns[northing]"
+                      dataType="r8"
+                      name="northing" />
+                    <externalMetadataColumn
+                      refId="Package\postcodes\Source postcodes.Outputs[Excel Source Output].ExternalColumns[latitude]"
+                      dataType="r8"
+                      name="latitude" />
+                    <externalMetadataColumn
+                      refId="Package\postcodes\Source postcodes.Outputs[Excel Source Output].ExternalColumns[longitude]"
+                      dataType="r8"
+                      name="longitude" />
+                    <externalMetadataColumn
+                      refId="Package\postcodes\Source postcodes.Outputs[Excel Source Output].ExternalColumns[city]"
+                      dataType="wstr"
+                      length="255"
+                      name="city" />
+                    <externalMetadataColumn
+                      refId="Package\postcodes\Source postcodes.Outputs[Excel Source Output].ExternalColumns[county]"
+                      dataType="wstr"
+                      length="255"
+                      name="county" />
+                    <externalMetadataColumn
+                      refId="Package\postcodes\Source postcodes.Outputs[Excel Source Output].ExternalColumns[country_code]"
+                      dataType="wstr"
+                      length="255"
+                      name="country_code" />
+                    <externalMetadataColumn
+                      refId="Package\postcodes\Source postcodes.Outputs[Excel Source Output].ExternalColumns[country_name]"
+                      dataType="wstr"
+                      length="255"
+                      name="country_name" />
+                    <externalMetadataColumn
+                      refId="Package\postcodes\Source postcodes.Outputs[Excel Source Output].ExternalColumns[iso3166-2]"
+                      dataType="wstr"
+                      length="255"
+                      name="iso3166-2" />
+                    <externalMetadataColumn
+                      refId="Package\postcodes\Source postcodes.Outputs[Excel Source Output].ExternalColumns[region_code]"
+                      dataType="wstr"
+                      length="255"
+                      name="region_code" />
+                    <externalMetadataColumn
+                      refId="Package\postcodes\Source postcodes.Outputs[Excel Source Output].ExternalColumns[region_name]"
+                      dataType="wstr"
+                      length="255"
+                      name="region_name" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\postcodes\Source postcodes.Outputs[Excel Source Error Output]"
+                  isErrorOut="true"
+                  name="Excel Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\postcodes\Source postcodes.Outputs[Excel Source Error Output].Columns[postcode]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\postcodes\Source postcodes.Outputs[Excel Source Error Output].Columns[postcode]"
+                      name="postcode" />
+                    <outputColumn
+                      refId="Package\postcodes\Source postcodes.Outputs[Excel Source Error Output].Columns[easting]"
+                      dataType="r8"
+                      lineageId="Package\postcodes\Source postcodes.Outputs[Excel Source Error Output].Columns[easting]"
+                      name="easting" />
+                    <outputColumn
+                      refId="Package\postcodes\Source postcodes.Outputs[Excel Source Error Output].Columns[northing]"
+                      dataType="r8"
+                      lineageId="Package\postcodes\Source postcodes.Outputs[Excel Source Error Output].Columns[northing]"
+                      name="northing" />
+                    <outputColumn
+                      refId="Package\postcodes\Source postcodes.Outputs[Excel Source Error Output].Columns[latitude]"
+                      dataType="r8"
+                      lineageId="Package\postcodes\Source postcodes.Outputs[Excel Source Error Output].Columns[latitude]"
+                      name="latitude" />
+                    <outputColumn
+                      refId="Package\postcodes\Source postcodes.Outputs[Excel Source Error Output].Columns[longitude]"
+                      dataType="r8"
+                      lineageId="Package\postcodes\Source postcodes.Outputs[Excel Source Error Output].Columns[longitude]"
+                      name="longitude" />
+                    <outputColumn
+                      refId="Package\postcodes\Source postcodes.Outputs[Excel Source Error Output].Columns[city]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\postcodes\Source postcodes.Outputs[Excel Source Error Output].Columns[city]"
+                      name="city" />
+                    <outputColumn
+                      refId="Package\postcodes\Source postcodes.Outputs[Excel Source Error Output].Columns[county]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\postcodes\Source postcodes.Outputs[Excel Source Error Output].Columns[county]"
+                      name="county" />
+                    <outputColumn
+                      refId="Package\postcodes\Source postcodes.Outputs[Excel Source Error Output].Columns[country_code]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\postcodes\Source postcodes.Outputs[Excel Source Error Output].Columns[country_code]"
+                      name="country_code" />
+                    <outputColumn
+                      refId="Package\postcodes\Source postcodes.Outputs[Excel Source Error Output].Columns[country_name]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\postcodes\Source postcodes.Outputs[Excel Source Error Output].Columns[country_name]"
+                      name="country_name" />
+                    <outputColumn
+                      refId="Package\postcodes\Source postcodes.Outputs[Excel Source Error Output].Columns[iso3166-2]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\postcodes\Source postcodes.Outputs[Excel Source Error Output].Columns[iso3166-2]"
+                      name="iso3166-2" />
+                    <outputColumn
+                      refId="Package\postcodes\Source postcodes.Outputs[Excel Source Error Output].Columns[region_code]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\postcodes\Source postcodes.Outputs[Excel Source Error Output].Columns[region_code]"
+                      name="region_code" />
+                    <outputColumn
+                      refId="Package\postcodes\Source postcodes.Outputs[Excel Source Error Output].Columns[region_name]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\postcodes\Source postcodes.Outputs[Excel Source Error Output].Columns[region_name]"
+                      name="region_name" />
+                    <outputColumn
+                      refId="Package\postcodes\Source postcodes.Outputs[Excel Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\postcodes\Source postcodes.Outputs[Excel Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\postcodes\Source postcodes.Outputs[Excel Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\postcodes\Source postcodes.Outputs[Excel Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\postcodes.Paths[Excel Source Output]"
+              endId="Package\postcodes\postcodes.Inputs[OLE DB Destination Input]"
+              name="Excel Source Output"
+              startId="Package\postcodes\Source postcodes.Outputs[Excel Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="125.6,41.6"
+          Id="Package\postcodes"
+          TopLeft="5.5,5.5" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\postcodes">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="125.6,41.6"
+          Id="Package\postcodes\postcodes"
+          TopLeft="241.214289217579,170.088237181667" />
+        <NodeLayout
+          Size="160.8,41.6"
+          Id="Package\postcodes\Source postcodes"
+          TopLeft="5.5,5.5" />
+        <EdgeLayout
+          Id="Package\postcodes.Paths[Excel Source Output]"
+          TopLeft="85.9,47.1">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="218.114289217579,122.988237181667"
+              Start="0,0"
+              End="218.114289217579,115.488237181667">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,57.4941185908334" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,57.4941185908334"
+                    Point2="0,61.4941185908334"
+                    Point3="4,61.4941185908334" />
+                  <mssgle:LineSegment
+                    End="214.114289217579,61.4941185908334" />
+                  <mssgle:CubicBezierSegment
+                    Point1="214.114289217579,61.4941185908334"
+                    Point2="218.114289217579,61.4941185908334"
+                    Point3="218.114289217579,65.4941185908334" />
+                  <mssgle:LineSegment
+                    End="218.114289217579,115.488237181667" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\postcodes\postcodes">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\postcodes\Source postcodes">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
