@@ -126,3 +126,10 @@ CREATE TABLE [postcodes] (
 	[Create_time] datetime,
 	[Update_time] datetime
 )
+
+CREATE TABLE [dbo].[Cookbook]
+( 
+	_Code Nvarchar(150),
+	_Label nvarchar(150),
+	_Sheet nvarchar (100)
+)
