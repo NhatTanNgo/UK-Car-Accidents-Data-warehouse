@@ -5,14 +5,14 @@
   DTS:CreationName="Microsoft.Package"
   DTS:CreatorComputerName="ASUS-DUCHUY"
   DTS:CreatorName="ASUS-DUCHUY\ASUS-DUCHUY"
-  DTS:DTSID="{60B81FC2-0236-41AF-A54D-793B3337DBE1}"
+  DTS:DTSID="{7CFACD1B-BA1D-414E-A9D0-74B1546D87C8}"
   DTS:ExecutableType="Microsoft.Package"
   DTS:LastModifiedProductVersion="15.0.2000.170"
   DTS:LocaleID="1033"
-  DTS:ObjectName="Package1"
+  DTS:ObjectName="Staging_LSOA"
   DTS:PackageType="5"
-  DTS:VersionBuild="13"
-  DTS:VersionGUID="{F88F8B9A-EA48-4F94-B6D4-314EDA8E9139}">
+  DTS:VersionBuild="14"
+  DTS:VersionGUID="{ACFC4C2B-78A5-4D60-85F8-DF80312EF164}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -1867,9 +1867,25 @@ WHERE UPDATE_TIME &gt; ?</property>
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
+          Size="132,42.6666666666667"
+          Id="Package\Clear stage"
+          TopLeft="398.124994067476,82.549998523891" />
+        <NodeLayout
+          Size="168,42"
+          Id="Package\Data Profiling Task"
+          TopLeft="268.749995995313,243.099995653033" />
+        <NodeLayout
+          Size="120,42.6666666666667"
+          Id="Package\GetLSET"
+          TopLeft="240.624996414408,81.2499985471368" />
+        <NodeLayout
           Size="164,42.6666666666667"
           Id="Package\Load data into DB"
           TopLeft="36.7499995343387,83.4999986052513" />
+        <NodeLayout
+          Size="114.666666666667,42.6666666666667"
+          Id="Package\Staging"
+          TopLeft="399.999994039536,162.499997094274" />
         <NodeLayout
           Size="170.666666666667,42.6666666666667"
           Id="Package\Update Create time"
@@ -1900,10 +1916,6 @@ WHERE UPDATE_TIME &gt; ?</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="120,42.6666666666667"
-          Id="Package\GetLSET"
-          TopLeft="240.624996414408,81.2499985471368" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 1]"
           TopLeft="145.569443950843,181.349996757209">
@@ -1938,10 +1950,6 @@ WHERE UPDATE_TIME &gt; ?</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="132,42.6666666666667"
-          Id="Package\Clear stage"
-          TopLeft="398.124994067476,82.549998523891" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 2]"
           TopLeft="360.624996414408,103.233331868847">
@@ -1964,10 +1972,6 @@ WHERE UPDATE_TIME &gt; ?</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="114.666666666667,42.6666666666667"
-          Id="Package\Staging"
-          TopLeft="399.999994039536,162.499997094274" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 3]"
           TopLeft="460.729160720172,125.216665190558">
@@ -2024,10 +2028,6 @@ WHERE UPDATE_TIME &gt; ?</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="168,42"
-          Id="Package\Data Profiling Task"
-          TopLeft="268.749995995313,243.099995653033" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 5]"
           TopLeft="439.555549595091,205.16666376094">
@@ -2157,14 +2157,6 @@ WHERE UPDATE_TIME &gt; ?</property>
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\Staging\OLE DB Source">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
     design-time-name="Package\Staging\OLE DB Destination">
     <Properties>
       <Property>
@@ -2174,6 +2166,14 @@ WHERE UPDATE_TIME &gt; ?</property>
         <Name>TableInfoObjectType</Name>
         <Value
           type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Staging\OLE DB Source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
       </Property>
     </Properties>
   </PipelineComponentMetadata>

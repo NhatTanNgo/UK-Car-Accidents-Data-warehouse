@@ -5,19 +5,14 @@
   DTS:CreationName="Microsoft.Package"
   DTS:CreatorComputerName="ASUS-DUCHUY"
   DTS:CreatorName="ASUS-DUCHUY\ASUS-DUCHUY"
-  DTS:DTSID="{E5EBCDCB-D656-473C-AC5C-428013A07BB6}"
+  DTS:DTSID="{9D746DAA-4489-4482-A845-E37B40FBDAC1}"
   DTS:ExecutableType="Microsoft.Package"
   DTS:LastModifiedProductVersion="15.0.2000.170"
   DTS:LocaleID="1033"
-  DTS:ObjectName="Package"
+  DTS:ObjectName="Staging_Accidents"
   DTS:PackageType="5"
-<<<<<<< Updated upstream:BUIDING AND MINING DATA WAREHOUSE/BUIDING AND MINING DATA WAREHOUSE/RnS_Accidents1114.dtsx
-  DTS:VersionBuild="32"
-  DTS:VersionGUID="{4C4ECEB6-4800-4D53-BF67-2CDBCD29E2C2}">
-=======
   DTS:VersionBuild="34"
-  DTS:VersionGUID="{843B6EC4-53AB-462A-A574-03A69FD68090}">
->>>>>>> Stashed changes:BUIDING AND MINING DATA WAREHOUSE/BUIDING AND MINING DATA WAREHOUSE/Staging_Accidents.dtsx
+  DTS:VersionGUID="{408A4361-8891-4966-979E-2C1EAE338142}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -446,11 +441,7 @@
       DTS:LocaleID="-1"
       DTS:ObjectName="Data Profiling Task"
       DTS:TaskContact="Data Profiling Task; Microsoft Corporation; SQL Server 2019; (c) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-<<<<<<< Updated upstream:BUIDING AND MINING DATA WAREHOUSE/BUIDING AND MINING DATA WAREHOUSE/RnS_Accidents1114.dtsx
-      DTS:ThreadHint="1">
-=======
       DTS:ThreadHint="0">
->>>>>>> Stashed changes:BUIDING AND MINING DATA WAREHOUSE/BUIDING AND MINING DATA WAREHOUSE/Staging_Accidents.dtsx
       <DTS:Variables />
       <DTS:ObjectData>
         <DataProfilingTaskData
@@ -509,14 +500,13 @@
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
-<<<<<<< Updated upstream:BUIDING AND MINING DATA WAREHOUSE/BUIDING AND MINING DATA WAREHOUSE/RnS_Accidents1114.dtsx
-      DTS:refId="Package\Get LSET"
+      DTS:refId="Package\Get CET, LSET"
       DTS:CreationName="Microsoft.ExecuteSQLTask"
       DTS:Description="Execute SQL Task"
       DTS:DTSID="{d2b69341-16c8-4766-9404-1081b0105197}"
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
-      DTS:ObjectName="Get LSET"
+      DTS:ObjectName="Get CET, LSET"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
       DTS:ThreadHint="0">
       <DTS:Variables />
@@ -529,1580 +519,6 @@
             SQLTask:ResultName="LSET"
             SQLTask:DtsVariableName="User::LSETResult" />
         </SQLTask:SqlTaskData>
-      </DTS:ObjectData>
-    </DTS:Executable>
-    <DTS:Executable
-      DTS:refId="Package\Insert create_time"
-      DTS:CreationName="Microsoft.ExecuteSQLTask"
-      DTS:Description="Execute SQL Task"
-      DTS:DTSID="{06CB282E-F8D3-46AD-8A21-BB8EE46D26E1}"
-      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
-      DTS:LocaleID="-1"
-      DTS:ObjectName="Insert create_time"
-=======
-      DTS:refId="Package\GET CET and LSET"
-      DTS:CreationName="Microsoft.ExecuteSQLTask"
-      DTS:Description="Execute SQL Task"
-      DTS:DTSID="{6EF48D62-5796-4090-9392-444AD1BBC186}"
-      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
-      DTS:LocaleID="-1"
-      DTS:ObjectName="GET CET and LSET"
->>>>>>> Stashed changes:BUIDING AND MINING DATA WAREHOUSE/BUIDING AND MINING DATA WAREHOUSE/Staging_Accidents.dtsx
-      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="0">
-      <DTS:Variables />
-      <DTS:ObjectData>
-<<<<<<< Updated upstream:BUIDING AND MINING DATA WAREHOUSE/BUIDING AND MINING DATA WAREHOUSE/RnS_Accidents1114.dtsx
-        <SQLTask:SqlTaskData
-          SQLTask:Connection="{F4FE3DB8-DC87-4F9F-82CC-A2A75B4C044A}"
-          SQLTask:SqlStatementSource="UPDATE Accidents1114&#xA;SET       Create_time = GETDATE(), Update_time = GETDATE()&#xA;WHERE (Create_time IS NULL)" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
-      </DTS:ObjectData>
-    </DTS:Executable>
-    <DTS:Executable
-      DTS:refId="Package\Load data into DB"
-      DTS:CreationName="Microsoft.Pipeline"
-      DTS:Description="Data Flow Task"
-      DTS:DTSID="{0D17DC60-0D74-4F5A-839D-23CD7B88D8BC}"
-      DTS:ExecutableType="Microsoft.Pipeline"
-      DTS:LocaleID="-1"
-      DTS:ObjectName="Load data into DB">
-      <DTS:Variables />
-      <DTS:ObjectData>
-        <pipeline
-          version="1">
-          <components>
-            <component
-              refId="Package\Load data into DB\Accidents1114"
-              componentClassID="Microsoft.OLEDBDestination"
-              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
-              description="OLE DB Destination"
-              name="Accidents1114"
-              usesDispositions="true"
-              version="4">
-              <properties>
-                <property
-                  dataType="System.Int32"
-                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
-                  name="CommandTimeout">0</property>
-                <property
-                  dataType="System.String"
-                  description="Specifies the name of the database object used to open a rowset."
-                  name="OpenRowset">[dbo].[Accidents1114]</property>
-                <property
-                  dataType="System.String"
-                  description="Specifies the variable that contains the name of the database object used to open a rowset."
-                  name="OpenRowsetVariable"></property>
-                <property
-                  dataType="System.String"
-                  description="The SQL command to be executed."
-                  name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies the column code page to use when code page information is unavailable from the data source."
-                  name="DefaultCodePage">1252</property>
-                <property
-                  dataType="System.Boolean"
-                  description="Forces the use of the DefaultCodePage property value when describing character data."
-                  name="AlwaysUseDefaultCodePage">false</property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies the mode used to access the database."
-                  name="AccessMode"
-                  typeConverter="AccessMode">3</property>
-                <property
-                  dataType="System.Boolean"
-                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
-                  name="FastLoadKeepIdentity">true</property>
-                <property
-                  dataType="System.Boolean"
-                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
-                  name="FastLoadKeepNulls">false</property>
-                <property
-                  dataType="System.String"
-                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
-                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS,FIRE_TRIGGERS</property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
-                  name="FastLoadMaxInsertCommitSize">2147483647</property>
-              </properties>
-              <connections>
-                <connection
-                  refId="Package\Load data into DB\Accidents1114.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[DESKTOP-0IA21OI.RawSource]"
-                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-0IA21OI.RawSource]"
-                  description="The OLE DB runtime connection used to access the database."
-                  name="OleDbConnection" />
-              </connections>
-              <inputs>
-                <input
-                  refId="Package\Load data into DB\Accidents1114.Inputs[OLE DB Destination Input]"
-                  errorOrTruncationOperation="Insert"
-                  errorRowDisposition="FailComponent"
-                  hasSideEffects="true"
-                  name="OLE DB Destination Input">
-                  <inputColumns>
-                    <inputColumn
-                      refId="Package\Load data into DB\Accidents1114.Inputs[OLE DB Destination Input].Columns[Accident_Index]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="Accident_Index"
-                      externalMetadataColumnId="Package\Load data into DB\Accidents1114.Inputs[OLE DB Destination Input].ExternalColumns[Accident_Index]"
-                      lineageId="Package\Load data into DB\Flat File Source.Outputs[Flat File Source Output].Columns[Accident_Index]" />
-                    <inputColumn
-                      refId="Package\Load data into DB\Accidents1114.Inputs[OLE DB Destination Input].Columns[Location_Easting_OSGR]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="Location_Easting_OSGR"
-                      externalMetadataColumnId="Package\Load data into DB\Accidents1114.Inputs[OLE DB Destination Input].ExternalColumns[Location_Easting_OSGR]"
-                      lineageId="Package\Load data into DB\Flat File Source.Outputs[Flat File Source Output].Columns[Location_Easting_OSGR]" />
-                    <inputColumn
-                      refId="Package\Load data into DB\Accidents1114.Inputs[OLE DB Destination Input].Columns[Location_Northing_OSGR]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="Location_Northing_OSGR"
-                      externalMetadataColumnId="Package\Load data into DB\Accidents1114.Inputs[OLE DB Destination Input].ExternalColumns[Location_Northing_OSGR]"
-                      lineageId="Package\Load data into DB\Flat File Source.Outputs[Flat File Source Output].Columns[Location_Northing_OSGR]" />
-                    <inputColumn
-                      refId="Package\Load data into DB\Accidents1114.Inputs[OLE DB Destination Input].Columns[Longitude]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="Longitude"
-                      externalMetadataColumnId="Package\Load data into DB\Accidents1114.Inputs[OLE DB Destination Input].ExternalColumns[Longitude]"
-                      lineageId="Package\Load data into DB\Flat File Source.Outputs[Flat File Source Output].Columns[Longitude]" />
-                    <inputColumn
-                      refId="Package\Load data into DB\Accidents1114.Inputs[OLE DB Destination Input].Columns[Latitude]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="Latitude"
-                      externalMetadataColumnId="Package\Load data into DB\Accidents1114.Inputs[OLE DB Destination Input].ExternalColumns[Latitude]"
-                      lineageId="Package\Load data into DB\Flat File Source.Outputs[Flat File Source Output].Columns[Latitude]" />
-                    <inputColumn
-                      refId="Package\Load data into DB\Accidents1114.Inputs[OLE DB Destination Input].Columns[Police_Force]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="Police_Force"
-                      externalMetadataColumnId="Package\Load data into DB\Accidents1114.Inputs[OLE DB Destination Input].ExternalColumns[Police_Force]"
-                      lineageId="Package\Load data into DB\Flat File Source.Outputs[Flat File Source Output].Columns[Police_Force]" />
-                    <inputColumn
-                      refId="Package\Load data into DB\Accidents1114.Inputs[OLE DB Destination Input].Columns[Accident_Severity]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="Accident_Severity"
-                      externalMetadataColumnId="Package\Load data into DB\Accidents1114.Inputs[OLE DB Destination Input].ExternalColumns[Accident_Severity]"
-                      lineageId="Package\Load data into DB\Flat File Source.Outputs[Flat File Source Output].Columns[Accident_Severity]" />
-                    <inputColumn
-                      refId="Package\Load data into DB\Accidents1114.Inputs[OLE DB Destination Input].Columns[Number_of_Vehicles]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="Number_of_Vehicles"
-                      externalMetadataColumnId="Package\Load data into DB\Accidents1114.Inputs[OLE DB Destination Input].ExternalColumns[Number_of_Vehicles]"
-                      lineageId="Package\Load data into DB\Flat File Source.Outputs[Flat File Source Output].Columns[Number_of_Vehicles]" />
-                    <inputColumn
-                      refId="Package\Load data into DB\Accidents1114.Inputs[OLE DB Destination Input].Columns[Number_of_Casualties]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="Number_of_Casualties"
-                      externalMetadataColumnId="Package\Load data into DB\Accidents1114.Inputs[OLE DB Destination Input].ExternalColumns[Number_of_Casualties]"
-                      lineageId="Package\Load data into DB\Flat File Source.Outputs[Flat File Source Output].Columns[Number_of_Casualties]" />
-                    <inputColumn
-                      refId="Package\Load data into DB\Accidents1114.Inputs[OLE DB Destination Input].Columns[Date]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="Date"
-                      externalMetadataColumnId="Package\Load data into DB\Accidents1114.Inputs[OLE DB Destination Input].ExternalColumns[Date]"
-                      lineageId="Package\Load data into DB\Flat File Source.Outputs[Flat File Source Output].Columns[Date]" />
-                    <inputColumn
-                      refId="Package\Load data into DB\Accidents1114.Inputs[OLE DB Destination Input].Columns[Day_of_Week]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="Day_of_Week"
-                      externalMetadataColumnId="Package\Load data into DB\Accidents1114.Inputs[OLE DB Destination Input].ExternalColumns[Day_of_Week]"
-                      lineageId="Package\Load data into DB\Flat File Source.Outputs[Flat File Source Output].Columns[Day_of_Week]" />
-                    <inputColumn
-                      refId="Package\Load data into DB\Accidents1114.Inputs[OLE DB Destination Input].Columns[Time]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="Time"
-                      externalMetadataColumnId="Package\Load data into DB\Accidents1114.Inputs[OLE DB Destination Input].ExternalColumns[Time]"
-                      lineageId="Package\Load data into DB\Flat File Source.Outputs[Flat File Source Output].Columns[Time]" />
-                    <inputColumn
-                      refId="Package\Load data into DB\Accidents1114.Inputs[OLE DB Destination Input].Columns[Local_Authority_(District)]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="Local_Authority_(District)"
-                      externalMetadataColumnId="Package\Load data into DB\Accidents1114.Inputs[OLE DB Destination Input].ExternalColumns[Local_Authority_(District)]"
-                      lineageId="Package\Load data into DB\Flat File Source.Outputs[Flat File Source Output].Columns[Local_Authority_(District)]" />
-                    <inputColumn
-                      refId="Package\Load data into DB\Accidents1114.Inputs[OLE DB Destination Input].Columns[Local_Authority_(Highway)]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="Local_Authority_(Highway)"
-                      externalMetadataColumnId="Package\Load data into DB\Accidents1114.Inputs[OLE DB Destination Input].ExternalColumns[Local_Authority_(Highway)]"
-                      lineageId="Package\Load data into DB\Flat File Source.Outputs[Flat File Source Output].Columns[Local_Authority_(Highway)]" />
-                    <inputColumn
-                      refId="Package\Load data into DB\Accidents1114.Inputs[OLE DB Destination Input].Columns[1st_Road_Class]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="1st_Road_Class"
-                      externalMetadataColumnId="Package\Load data into DB\Accidents1114.Inputs[OLE DB Destination Input].ExternalColumns[1st_Road_Class]"
-                      lineageId="Package\Load data into DB\Flat File Source.Outputs[Flat File Source Output].Columns[1st_Road_Class]" />
-                    <inputColumn
-                      refId="Package\Load data into DB\Accidents1114.Inputs[OLE DB Destination Input].Columns[1st_Road_Number]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="1st_Road_Number"
-                      externalMetadataColumnId="Package\Load data into DB\Accidents1114.Inputs[OLE DB Destination Input].ExternalColumns[1st_Road_Number]"
-                      lineageId="Package\Load data into DB\Flat File Source.Outputs[Flat File Source Output].Columns[1st_Road_Number]" />
-                    <inputColumn
-                      refId="Package\Load data into DB\Accidents1114.Inputs[OLE DB Destination Input].Columns[Road_Type]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="Road_Type"
-                      externalMetadataColumnId="Package\Load data into DB\Accidents1114.Inputs[OLE DB Destination Input].ExternalColumns[Road_Type]"
-                      lineageId="Package\Load data into DB\Flat File Source.Outputs[Flat File Source Output].Columns[Road_Type]" />
-                    <inputColumn
-                      refId="Package\Load data into DB\Accidents1114.Inputs[OLE DB Destination Input].Columns[Speed_limit]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="Speed_limit"
-                      externalMetadataColumnId="Package\Load data into DB\Accidents1114.Inputs[OLE DB Destination Input].ExternalColumns[Speed_limit]"
-                      lineageId="Package\Load data into DB\Flat File Source.Outputs[Flat File Source Output].Columns[Speed_limit]" />
-                    <inputColumn
-                      refId="Package\Load data into DB\Accidents1114.Inputs[OLE DB Destination Input].Columns[Junction_Detail]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="Junction_Detail"
-                      externalMetadataColumnId="Package\Load data into DB\Accidents1114.Inputs[OLE DB Destination Input].ExternalColumns[Junction_Detail]"
-                      lineageId="Package\Load data into DB\Flat File Source.Outputs[Flat File Source Output].Columns[Junction_Detail]" />
-                    <inputColumn
-                      refId="Package\Load data into DB\Accidents1114.Inputs[OLE DB Destination Input].Columns[Junction_Control]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="Junction_Control"
-                      externalMetadataColumnId="Package\Load data into DB\Accidents1114.Inputs[OLE DB Destination Input].ExternalColumns[Junction_Control]"
-                      lineageId="Package\Load data into DB\Flat File Source.Outputs[Flat File Source Output].Columns[Junction_Control]" />
-                    <inputColumn
-                      refId="Package\Load data into DB\Accidents1114.Inputs[OLE DB Destination Input].Columns[2nd_Road_Class]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="2nd_Road_Class"
-                      externalMetadataColumnId="Package\Load data into DB\Accidents1114.Inputs[OLE DB Destination Input].ExternalColumns[2nd_Road_Class]"
-                      lineageId="Package\Load data into DB\Flat File Source.Outputs[Flat File Source Output].Columns[2nd_Road_Class]" />
-                    <inputColumn
-                      refId="Package\Load data into DB\Accidents1114.Inputs[OLE DB Destination Input].Columns[2nd_Road_Number]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="2nd_Road_Number"
-                      externalMetadataColumnId="Package\Load data into DB\Accidents1114.Inputs[OLE DB Destination Input].ExternalColumns[2nd_Road_Number]"
-                      lineageId="Package\Load data into DB\Flat File Source.Outputs[Flat File Source Output].Columns[2nd_Road_Number]" />
-                    <inputColumn
-                      refId="Package\Load data into DB\Accidents1114.Inputs[OLE DB Destination Input].Columns[Pedestrian_Crossing-Human_Control]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="Pedestrian_Crossing-Human_Control"
-                      externalMetadataColumnId="Package\Load data into DB\Accidents1114.Inputs[OLE DB Destination Input].ExternalColumns[Pedestrian_Crossing-Human_Control]"
-                      lineageId="Package\Load data into DB\Flat File Source.Outputs[Flat File Source Output].Columns[Pedestrian_Crossing-Human_Control]" />
-                    <inputColumn
-                      refId="Package\Load data into DB\Accidents1114.Inputs[OLE DB Destination Input].Columns[Pedestrian_Crossing-Physical_Facilities]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="Pedestrian_Crossing-Physical_Facilities"
-                      externalMetadataColumnId="Package\Load data into DB\Accidents1114.Inputs[OLE DB Destination Input].ExternalColumns[Pedestrian_Crossing-Physical_Facilities]"
-                      lineageId="Package\Load data into DB\Flat File Source.Outputs[Flat File Source Output].Columns[Pedestrian_Crossing-Physical_Facilities]" />
-                    <inputColumn
-                      refId="Package\Load data into DB\Accidents1114.Inputs[OLE DB Destination Input].Columns[Light_Conditions]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="Light_Conditions"
-                      externalMetadataColumnId="Package\Load data into DB\Accidents1114.Inputs[OLE DB Destination Input].ExternalColumns[Light_Conditions]"
-                      lineageId="Package\Load data into DB\Flat File Source.Outputs[Flat File Source Output].Columns[Light_Conditions]" />
-                    <inputColumn
-                      refId="Package\Load data into DB\Accidents1114.Inputs[OLE DB Destination Input].Columns[Weather_Conditions]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="Weather_Conditions"
-                      externalMetadataColumnId="Package\Load data into DB\Accidents1114.Inputs[OLE DB Destination Input].ExternalColumns[Weather_Conditions]"
-                      lineageId="Package\Load data into DB\Flat File Source.Outputs[Flat File Source Output].Columns[Weather_Conditions]" />
-                    <inputColumn
-                      refId="Package\Load data into DB\Accidents1114.Inputs[OLE DB Destination Input].Columns[Road_Surface_Conditions]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="Road_Surface_Conditions"
-                      externalMetadataColumnId="Package\Load data into DB\Accidents1114.Inputs[OLE DB Destination Input].ExternalColumns[Road_Surface_Conditions]"
-                      lineageId="Package\Load data into DB\Flat File Source.Outputs[Flat File Source Output].Columns[Road_Surface_Conditions]" />
-                    <inputColumn
-                      refId="Package\Load data into DB\Accidents1114.Inputs[OLE DB Destination Input].Columns[Special_Conditions_at_Site]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="Special_Conditions_at_Site"
-                      externalMetadataColumnId="Package\Load data into DB\Accidents1114.Inputs[OLE DB Destination Input].ExternalColumns[Special_Conditions_at_Site]"
-                      lineageId="Package\Load data into DB\Flat File Source.Outputs[Flat File Source Output].Columns[Special_Conditions_at_Site]" />
-                    <inputColumn
-                      refId="Package\Load data into DB\Accidents1114.Inputs[OLE DB Destination Input].Columns[Carriageway_Hazards]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="Carriageway_Hazards"
-                      externalMetadataColumnId="Package\Load data into DB\Accidents1114.Inputs[OLE DB Destination Input].ExternalColumns[Carriageway_Hazards]"
-                      lineageId="Package\Load data into DB\Flat File Source.Outputs[Flat File Source Output].Columns[Carriageway_Hazards]" />
-                    <inputColumn
-                      refId="Package\Load data into DB\Accidents1114.Inputs[OLE DB Destination Input].Columns[Urban_or_Rural_Area]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="Urban_or_Rural_Area"
-                      externalMetadataColumnId="Package\Load data into DB\Accidents1114.Inputs[OLE DB Destination Input].ExternalColumns[Urban_or_Rural_Area]"
-                      lineageId="Package\Load data into DB\Flat File Source.Outputs[Flat File Source Output].Columns[Urban_or_Rural_Area]" />
-                    <inputColumn
-                      refId="Package\Load data into DB\Accidents1114.Inputs[OLE DB Destination Input].Columns[Did_Police_Officer_Attend_Scene_of_Accident]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="Did_Police_Officer_Attend_Scene_of_Accident"
-                      externalMetadataColumnId="Package\Load data into DB\Accidents1114.Inputs[OLE DB Destination Input].ExternalColumns[Did_Police_Officer_Attend_Scene_of_Accident]"
-                      lineageId="Package\Load data into DB\Flat File Source.Outputs[Flat File Source Output].Columns[Did_Police_Officer_Attend_Scene_of_Accident]" />
-                    <inputColumn
-                      refId="Package\Load data into DB\Accidents1114.Inputs[OLE DB Destination Input].Columns[LSOA_of_Accident_Location]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="LSOA_of_Accident_Location"
-                      externalMetadataColumnId="Package\Load data into DB\Accidents1114.Inputs[OLE DB Destination Input].ExternalColumns[LSOA_of_Accident_Location]"
-                      lineageId="Package\Load data into DB\Flat File Source.Outputs[Flat File Source Output].Columns[LSOA_of_Accident_Location]" />
-                  </inputColumns>
-                  <externalMetadataColumns
-                    isUsed="True">
-                    <externalMetadataColumn
-                      refId="Package\Load data into DB\Accidents1114.Inputs[OLE DB Destination Input].ExternalColumns[Accident_Index]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="Accident_Index" />
-                    <externalMetadataColumn
-                      refId="Package\Load data into DB\Accidents1114.Inputs[OLE DB Destination Input].ExternalColumns[Location_Easting_OSGR]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="Location_Easting_OSGR" />
-                    <externalMetadataColumn
-                      refId="Package\Load data into DB\Accidents1114.Inputs[OLE DB Destination Input].ExternalColumns[Location_Northing_OSGR]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="Location_Northing_OSGR" />
-                    <externalMetadataColumn
-                      refId="Package\Load data into DB\Accidents1114.Inputs[OLE DB Destination Input].ExternalColumns[Longitude]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="Longitude" />
-                    <externalMetadataColumn
-                      refId="Package\Load data into DB\Accidents1114.Inputs[OLE DB Destination Input].ExternalColumns[Latitude]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="Latitude" />
-                    <externalMetadataColumn
-                      refId="Package\Load data into DB\Accidents1114.Inputs[OLE DB Destination Input].ExternalColumns[Police_Force]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="Police_Force" />
-                    <externalMetadataColumn
-                      refId="Package\Load data into DB\Accidents1114.Inputs[OLE DB Destination Input].ExternalColumns[Accident_Severity]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="Accident_Severity" />
-                    <externalMetadataColumn
-                      refId="Package\Load data into DB\Accidents1114.Inputs[OLE DB Destination Input].ExternalColumns[Number_of_Vehicles]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="Number_of_Vehicles" />
-                    <externalMetadataColumn
-                      refId="Package\Load data into DB\Accidents1114.Inputs[OLE DB Destination Input].ExternalColumns[Number_of_Casualties]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="Number_of_Casualties" />
-                    <externalMetadataColumn
-                      refId="Package\Load data into DB\Accidents1114.Inputs[OLE DB Destination Input].ExternalColumns[Date]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="Date" />
-                    <externalMetadataColumn
-                      refId="Package\Load data into DB\Accidents1114.Inputs[OLE DB Destination Input].ExternalColumns[Day_of_Week]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="Day_of_Week" />
-                    <externalMetadataColumn
-                      refId="Package\Load data into DB\Accidents1114.Inputs[OLE DB Destination Input].ExternalColumns[Time]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="Time" />
-                    <externalMetadataColumn
-                      refId="Package\Load data into DB\Accidents1114.Inputs[OLE DB Destination Input].ExternalColumns[Local_Authority_(District)]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="Local_Authority_(District)" />
-                    <externalMetadataColumn
-                      refId="Package\Load data into DB\Accidents1114.Inputs[OLE DB Destination Input].ExternalColumns[Local_Authority_(Highway)]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="Local_Authority_(Highway)" />
-                    <externalMetadataColumn
-                      refId="Package\Load data into DB\Accidents1114.Inputs[OLE DB Destination Input].ExternalColumns[1st_Road_Class]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="1st_Road_Class" />
-                    <externalMetadataColumn
-                      refId="Package\Load data into DB\Accidents1114.Inputs[OLE DB Destination Input].ExternalColumns[1st_Road_Number]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="1st_Road_Number" />
-                    <externalMetadataColumn
-                      refId="Package\Load data into DB\Accidents1114.Inputs[OLE DB Destination Input].ExternalColumns[Road_Type]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="Road_Type" />
-                    <externalMetadataColumn
-                      refId="Package\Load data into DB\Accidents1114.Inputs[OLE DB Destination Input].ExternalColumns[Speed_limit]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="Speed_limit" />
-                    <externalMetadataColumn
-                      refId="Package\Load data into DB\Accidents1114.Inputs[OLE DB Destination Input].ExternalColumns[Junction_Detail]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="Junction_Detail" />
-                    <externalMetadataColumn
-                      refId="Package\Load data into DB\Accidents1114.Inputs[OLE DB Destination Input].ExternalColumns[Junction_Control]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="Junction_Control" />
-                    <externalMetadataColumn
-                      refId="Package\Load data into DB\Accidents1114.Inputs[OLE DB Destination Input].ExternalColumns[2nd_Road_Class]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="2nd_Road_Class" />
-                    <externalMetadataColumn
-                      refId="Package\Load data into DB\Accidents1114.Inputs[OLE DB Destination Input].ExternalColumns[2nd_Road_Number]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="2nd_Road_Number" />
-                    <externalMetadataColumn
-                      refId="Package\Load data into DB\Accidents1114.Inputs[OLE DB Destination Input].ExternalColumns[Pedestrian_Crossing-Human_Control]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="Pedestrian_Crossing-Human_Control" />
-                    <externalMetadataColumn
-                      refId="Package\Load data into DB\Accidents1114.Inputs[OLE DB Destination Input].ExternalColumns[Pedestrian_Crossing-Physical_Facilities]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="Pedestrian_Crossing-Physical_Facilities" />
-                    <externalMetadataColumn
-                      refId="Package\Load data into DB\Accidents1114.Inputs[OLE DB Destination Input].ExternalColumns[Light_Conditions]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="Light_Conditions" />
-                    <externalMetadataColumn
-                      refId="Package\Load data into DB\Accidents1114.Inputs[OLE DB Destination Input].ExternalColumns[Weather_Conditions]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="Weather_Conditions" />
-                    <externalMetadataColumn
-                      refId="Package\Load data into DB\Accidents1114.Inputs[OLE DB Destination Input].ExternalColumns[Road_Surface_Conditions]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="Road_Surface_Conditions" />
-                    <externalMetadataColumn
-                      refId="Package\Load data into DB\Accidents1114.Inputs[OLE DB Destination Input].ExternalColumns[Special_Conditions_at_Site]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="Special_Conditions_at_Site" />
-                    <externalMetadataColumn
-                      refId="Package\Load data into DB\Accidents1114.Inputs[OLE DB Destination Input].ExternalColumns[Carriageway_Hazards]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="Carriageway_Hazards" />
-                    <externalMetadataColumn
-                      refId="Package\Load data into DB\Accidents1114.Inputs[OLE DB Destination Input].ExternalColumns[Urban_or_Rural_Area]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="Urban_or_Rural_Area" />
-                    <externalMetadataColumn
-                      refId="Package\Load data into DB\Accidents1114.Inputs[OLE DB Destination Input].ExternalColumns[Did_Police_Officer_Attend_Scene_of_Accident]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="Did_Police_Officer_Attend_Scene_of_Accident" />
-                    <externalMetadataColumn
-                      refId="Package\Load data into DB\Accidents1114.Inputs[OLE DB Destination Input].ExternalColumns[LSOA_of_Accident_Location]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="LSOA_of_Accident_Location" />
-                    <externalMetadataColumn
-                      refId="Package\Load data into DB\Accidents1114.Inputs[OLE DB Destination Input].ExternalColumns[Create_time]"
-                      dataType="dbTimeStamp"
-                      name="Create_time" />
-                    <externalMetadataColumn
-                      refId="Package\Load data into DB\Accidents1114.Inputs[OLE DB Destination Input].ExternalColumns[Update_time]"
-                      dataType="dbTimeStamp"
-                      name="Update_time" />
-                  </externalMetadataColumns>
-                </input>
-              </inputs>
-              <outputs>
-                <output
-                  refId="Package\Load data into DB\Accidents1114.Outputs[OLE DB Destination Error Output]"
-                  exclusionGroup="1"
-                  isErrorOut="true"
-                  name="OLE DB Destination Error Output"
-                  synchronousInputId="Package\Load data into DB\Accidents1114.Inputs[OLE DB Destination Input]">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\Load data into DB\Accidents1114.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
-                      dataType="i4"
-                      lineageId="Package\Load data into DB\Accidents1114.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
-                      name="ErrorCode"
-                      specialFlags="1" />
-                    <outputColumn
-                      refId="Package\Load data into DB\Accidents1114.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
-                      dataType="i4"
-                      lineageId="Package\Load data into DB\Accidents1114.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
-                      name="ErrorColumn"
-                      specialFlags="2" />
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-              </outputs>
-            </component>
-            <component
-              refId="Package\Load data into DB\Flat File Source"
-              componentClassID="Microsoft.FlatFileSource"
-              contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
-              description="Flat File Source"
-              localeId="1033"
-              name="Flat File Source"
-              usesDispositions="true"
-              version="1">
-              <properties>
-                <property
-                  dataType="System.Boolean"
-                  description="Specifies whether zero-length columns are treated as null."
-                  name="RetainNulls">false</property>
-                <property
-                  dataType="System.String"
-                  description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
-                  name="FileNameColumnName"></property>
-              </properties>
-              <connections>
-                <connection
-                  refId="Package\Load data into DB\Flat File Source.Connections[FlatFileConnection]"
-                  connectionManagerID="Package.ConnectionManagers[Accidents]"
-                  connectionManagerRefId="Package.ConnectionManagers[Accidents]"
-                  name="FlatFileConnection" />
-              </connections>
-              <outputs>
-                <output
-                  refId="Package\Load data into DB\Flat File Source.Outputs[Flat File Source Output]"
-                  name="Flat File Source Output">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\Load data into DB\Flat File Source.Outputs[Flat File Source Output].Columns[Accident_Index]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Load data into DB\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Accident_Index]"
-                      length="50"
-                      lineageId="Package\Load data into DB\Flat File Source.Outputs[Flat File Source Output].Columns[Accident_Index]"
-                      name="Accident_Index"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the data is in binary format."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Load data into DB\Flat File Source.Outputs[Flat File Source Output].Columns[Location_Easting_OSGR]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Load data into DB\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Location_Easting_OSGR]"
-                      length="50"
-                      lineageId="Package\Load data into DB\Flat File Source.Outputs[Flat File Source Output].Columns[Location_Easting_OSGR]"
-                      name="Location_Easting_OSGR"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the data is in binary format."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Load data into DB\Flat File Source.Outputs[Flat File Source Output].Columns[Location_Northing_OSGR]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Load data into DB\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Location_Northing_OSGR]"
-                      length="50"
-                      lineageId="Package\Load data into DB\Flat File Source.Outputs[Flat File Source Output].Columns[Location_Northing_OSGR]"
-                      name="Location_Northing_OSGR"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the data is in binary format."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Load data into DB\Flat File Source.Outputs[Flat File Source Output].Columns[Longitude]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Load data into DB\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Longitude]"
-                      length="50"
-                      lineageId="Package\Load data into DB\Flat File Source.Outputs[Flat File Source Output].Columns[Longitude]"
-                      name="Longitude"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the data is in binary format."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Load data into DB\Flat File Source.Outputs[Flat File Source Output].Columns[Latitude]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Load data into DB\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Latitude]"
-                      length="50"
-                      lineageId="Package\Load data into DB\Flat File Source.Outputs[Flat File Source Output].Columns[Latitude]"
-                      name="Latitude"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the data is in binary format."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Load data into DB\Flat File Source.Outputs[Flat File Source Output].Columns[Police_Force]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Load data into DB\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Police_Force]"
-                      length="50"
-                      lineageId="Package\Load data into DB\Flat File Source.Outputs[Flat File Source Output].Columns[Police_Force]"
-                      name="Police_Force"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the data is in binary format."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Load data into DB\Flat File Source.Outputs[Flat File Source Output].Columns[Accident_Severity]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Load data into DB\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Accident_Severity]"
-                      length="50"
-                      lineageId="Package\Load data into DB\Flat File Source.Outputs[Flat File Source Output].Columns[Accident_Severity]"
-                      name="Accident_Severity"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the data is in binary format."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Load data into DB\Flat File Source.Outputs[Flat File Source Output].Columns[Number_of_Vehicles]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Load data into DB\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Number_of_Vehicles]"
-                      length="50"
-                      lineageId="Package\Load data into DB\Flat File Source.Outputs[Flat File Source Output].Columns[Number_of_Vehicles]"
-                      name="Number_of_Vehicles"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the data is in binary format."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Load data into DB\Flat File Source.Outputs[Flat File Source Output].Columns[Number_of_Casualties]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Load data into DB\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Number_of_Casualties]"
-                      length="50"
-                      lineageId="Package\Load data into DB\Flat File Source.Outputs[Flat File Source Output].Columns[Number_of_Casualties]"
-                      name="Number_of_Casualties"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the data is in binary format."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Load data into DB\Flat File Source.Outputs[Flat File Source Output].Columns[Date]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Load data into DB\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Date]"
-                      length="50"
-                      lineageId="Package\Load data into DB\Flat File Source.Outputs[Flat File Source Output].Columns[Date]"
-                      name="Date"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the data is in binary format."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Load data into DB\Flat File Source.Outputs[Flat File Source Output].Columns[Day_of_Week]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Load data into DB\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Day_of_Week]"
-                      length="50"
-                      lineageId="Package\Load data into DB\Flat File Source.Outputs[Flat File Source Output].Columns[Day_of_Week]"
-                      name="Day_of_Week"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the data is in binary format."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Load data into DB\Flat File Source.Outputs[Flat File Source Output].Columns[Time]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Load data into DB\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Time]"
-                      length="50"
-                      lineageId="Package\Load data into DB\Flat File Source.Outputs[Flat File Source Output].Columns[Time]"
-                      name="Time"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the data is in binary format."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Load data into DB\Flat File Source.Outputs[Flat File Source Output].Columns[Local_Authority_(District)]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Load data into DB\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Local_Authority_(District)]"
-                      length="50"
-                      lineageId="Package\Load data into DB\Flat File Source.Outputs[Flat File Source Output].Columns[Local_Authority_(District)]"
-                      name="Local_Authority_(District)"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the data is in binary format."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Load data into DB\Flat File Source.Outputs[Flat File Source Output].Columns[Local_Authority_(Highway)]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Load data into DB\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Local_Authority_(Highway)]"
-                      length="50"
-                      lineageId="Package\Load data into DB\Flat File Source.Outputs[Flat File Source Output].Columns[Local_Authority_(Highway)]"
-                      name="Local_Authority_(Highway)"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the data is in binary format."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Load data into DB\Flat File Source.Outputs[Flat File Source Output].Columns[1st_Road_Class]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Load data into DB\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[1st_Road_Class]"
-                      length="50"
-                      lineageId="Package\Load data into DB\Flat File Source.Outputs[Flat File Source Output].Columns[1st_Road_Class]"
-                      name="1st_Road_Class"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the data is in binary format."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Load data into DB\Flat File Source.Outputs[Flat File Source Output].Columns[1st_Road_Number]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Load data into DB\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[1st_Road_Number]"
-                      length="50"
-                      lineageId="Package\Load data into DB\Flat File Source.Outputs[Flat File Source Output].Columns[1st_Road_Number]"
-                      name="1st_Road_Number"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the data is in binary format."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Load data into DB\Flat File Source.Outputs[Flat File Source Output].Columns[Road_Type]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Load data into DB\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Road_Type]"
-                      length="50"
-                      lineageId="Package\Load data into DB\Flat File Source.Outputs[Flat File Source Output].Columns[Road_Type]"
-                      name="Road_Type"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the data is in binary format."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Load data into DB\Flat File Source.Outputs[Flat File Source Output].Columns[Speed_limit]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Load data into DB\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Speed_limit]"
-                      length="50"
-                      lineageId="Package\Load data into DB\Flat File Source.Outputs[Flat File Source Output].Columns[Speed_limit]"
-                      name="Speed_limit"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the data is in binary format."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Load data into DB\Flat File Source.Outputs[Flat File Source Output].Columns[Junction_Detail]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Load data into DB\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Junction_Detail]"
-                      length="50"
-                      lineageId="Package\Load data into DB\Flat File Source.Outputs[Flat File Source Output].Columns[Junction_Detail]"
-                      name="Junction_Detail"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the data is in binary format."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Load data into DB\Flat File Source.Outputs[Flat File Source Output].Columns[Junction_Control]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Load data into DB\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Junction_Control]"
-                      length="50"
-                      lineageId="Package\Load data into DB\Flat File Source.Outputs[Flat File Source Output].Columns[Junction_Control]"
-                      name="Junction_Control"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the data is in binary format."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Load data into DB\Flat File Source.Outputs[Flat File Source Output].Columns[2nd_Road_Class]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Load data into DB\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[2nd_Road_Class]"
-                      length="50"
-                      lineageId="Package\Load data into DB\Flat File Source.Outputs[Flat File Source Output].Columns[2nd_Road_Class]"
-                      name="2nd_Road_Class"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the data is in binary format."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Load data into DB\Flat File Source.Outputs[Flat File Source Output].Columns[2nd_Road_Number]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Load data into DB\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[2nd_Road_Number]"
-                      length="50"
-                      lineageId="Package\Load data into DB\Flat File Source.Outputs[Flat File Source Output].Columns[2nd_Road_Number]"
-                      name="2nd_Road_Number"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the data is in binary format."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Load data into DB\Flat File Source.Outputs[Flat File Source Output].Columns[Pedestrian_Crossing-Human_Control]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Load data into DB\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Pedestrian_Crossing-Human_Control]"
-                      length="50"
-                      lineageId="Package\Load data into DB\Flat File Source.Outputs[Flat File Source Output].Columns[Pedestrian_Crossing-Human_Control]"
-                      name="Pedestrian_Crossing-Human_Control"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the data is in binary format."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Load data into DB\Flat File Source.Outputs[Flat File Source Output].Columns[Pedestrian_Crossing-Physical_Facilities]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Load data into DB\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Pedestrian_Crossing-Physical_Facilities]"
-                      length="50"
-                      lineageId="Package\Load data into DB\Flat File Source.Outputs[Flat File Source Output].Columns[Pedestrian_Crossing-Physical_Facilities]"
-                      name="Pedestrian_Crossing-Physical_Facilities"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the data is in binary format."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Load data into DB\Flat File Source.Outputs[Flat File Source Output].Columns[Light_Conditions]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Load data into DB\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Light_Conditions]"
-                      length="50"
-                      lineageId="Package\Load data into DB\Flat File Source.Outputs[Flat File Source Output].Columns[Light_Conditions]"
-                      name="Light_Conditions"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the data is in binary format."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Load data into DB\Flat File Source.Outputs[Flat File Source Output].Columns[Weather_Conditions]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Load data into DB\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Weather_Conditions]"
-                      length="50"
-                      lineageId="Package\Load data into DB\Flat File Source.Outputs[Flat File Source Output].Columns[Weather_Conditions]"
-                      name="Weather_Conditions"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the data is in binary format."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Load data into DB\Flat File Source.Outputs[Flat File Source Output].Columns[Road_Surface_Conditions]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Load data into DB\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Road_Surface_Conditions]"
-                      length="50"
-                      lineageId="Package\Load data into DB\Flat File Source.Outputs[Flat File Source Output].Columns[Road_Surface_Conditions]"
-                      name="Road_Surface_Conditions"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the data is in binary format."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Load data into DB\Flat File Source.Outputs[Flat File Source Output].Columns[Special_Conditions_at_Site]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Load data into DB\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Special_Conditions_at_Site]"
-                      length="50"
-                      lineageId="Package\Load data into DB\Flat File Source.Outputs[Flat File Source Output].Columns[Special_Conditions_at_Site]"
-                      name="Special_Conditions_at_Site"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the data is in binary format."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Load data into DB\Flat File Source.Outputs[Flat File Source Output].Columns[Carriageway_Hazards]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Load data into DB\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Carriageway_Hazards]"
-                      length="50"
-                      lineageId="Package\Load data into DB\Flat File Source.Outputs[Flat File Source Output].Columns[Carriageway_Hazards]"
-                      name="Carriageway_Hazards"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the data is in binary format."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Load data into DB\Flat File Source.Outputs[Flat File Source Output].Columns[Urban_or_Rural_Area]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Load data into DB\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Urban_or_Rural_Area]"
-                      length="50"
-                      lineageId="Package\Load data into DB\Flat File Source.Outputs[Flat File Source Output].Columns[Urban_or_Rural_Area]"
-                      name="Urban_or_Rural_Area"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the data is in binary format."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Load data into DB\Flat File Source.Outputs[Flat File Source Output].Columns[Did_Police_Officer_Attend_Scene_of_Accident]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Load data into DB\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Did_Police_Officer_Attend_Scene_of_Accident]"
-                      length="50"
-                      lineageId="Package\Load data into DB\Flat File Source.Outputs[Flat File Source Output].Columns[Did_Police_Officer_Attend_Scene_of_Accident]"
-                      name="Did_Police_Officer_Attend_Scene_of_Accident"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the data is in binary format."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Load data into DB\Flat File Source.Outputs[Flat File Source Output].Columns[LSOA_of_Accident_Location]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Load data into DB\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[LSOA_of_Accident_Location]"
-                      length="50"
-                      lineageId="Package\Load data into DB\Flat File Source.Outputs[Flat File Source Output].Columns[LSOA_of_Accident_Location]"
-                      name="LSOA_of_Accident_Location"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the data is in binary format."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                  </outputColumns>
-                  <externalMetadataColumns
-                    isUsed="True">
-                    <externalMetadataColumn
-                      refId="Package\Load data into DB\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Accident_Index]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="Accident_Index" />
-                    <externalMetadataColumn
-                      refId="Package\Load data into DB\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Location_Easting_OSGR]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="Location_Easting_OSGR" />
-                    <externalMetadataColumn
-                      refId="Package\Load data into DB\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Location_Northing_OSGR]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="Location_Northing_OSGR" />
-                    <externalMetadataColumn
-                      refId="Package\Load data into DB\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Longitude]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="Longitude" />
-                    <externalMetadataColumn
-                      refId="Package\Load data into DB\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Latitude]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="Latitude" />
-                    <externalMetadataColumn
-                      refId="Package\Load data into DB\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Police_Force]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="Police_Force" />
-                    <externalMetadataColumn
-                      refId="Package\Load data into DB\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Accident_Severity]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="Accident_Severity" />
-                    <externalMetadataColumn
-                      refId="Package\Load data into DB\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Number_of_Vehicles]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="Number_of_Vehicles" />
-                    <externalMetadataColumn
-                      refId="Package\Load data into DB\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Number_of_Casualties]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="Number_of_Casualties" />
-                    <externalMetadataColumn
-                      refId="Package\Load data into DB\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Date]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="Date" />
-                    <externalMetadataColumn
-                      refId="Package\Load data into DB\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Day_of_Week]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="Day_of_Week" />
-                    <externalMetadataColumn
-                      refId="Package\Load data into DB\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Time]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="Time" />
-                    <externalMetadataColumn
-                      refId="Package\Load data into DB\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Local_Authority_(District)]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="Local_Authority_(District)" />
-                    <externalMetadataColumn
-                      refId="Package\Load data into DB\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Local_Authority_(Highway)]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="Local_Authority_(Highway)" />
-                    <externalMetadataColumn
-                      refId="Package\Load data into DB\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[1st_Road_Class]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="1st_Road_Class" />
-                    <externalMetadataColumn
-                      refId="Package\Load data into DB\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[1st_Road_Number]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="1st_Road_Number" />
-                    <externalMetadataColumn
-                      refId="Package\Load data into DB\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Road_Type]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="Road_Type" />
-                    <externalMetadataColumn
-                      refId="Package\Load data into DB\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Speed_limit]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="Speed_limit" />
-                    <externalMetadataColumn
-                      refId="Package\Load data into DB\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Junction_Detail]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="Junction_Detail" />
-                    <externalMetadataColumn
-                      refId="Package\Load data into DB\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Junction_Control]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="Junction_Control" />
-                    <externalMetadataColumn
-                      refId="Package\Load data into DB\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[2nd_Road_Class]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="2nd_Road_Class" />
-                    <externalMetadataColumn
-                      refId="Package\Load data into DB\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[2nd_Road_Number]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="2nd_Road_Number" />
-                    <externalMetadataColumn
-                      refId="Package\Load data into DB\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Pedestrian_Crossing-Human_Control]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="Pedestrian_Crossing-Human_Control" />
-                    <externalMetadataColumn
-                      refId="Package\Load data into DB\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Pedestrian_Crossing-Physical_Facilities]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="Pedestrian_Crossing-Physical_Facilities" />
-                    <externalMetadataColumn
-                      refId="Package\Load data into DB\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Light_Conditions]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="Light_Conditions" />
-                    <externalMetadataColumn
-                      refId="Package\Load data into DB\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Weather_Conditions]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="Weather_Conditions" />
-                    <externalMetadataColumn
-                      refId="Package\Load data into DB\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Road_Surface_Conditions]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="Road_Surface_Conditions" />
-                    <externalMetadataColumn
-                      refId="Package\Load data into DB\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Special_Conditions_at_Site]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="Special_Conditions_at_Site" />
-                    <externalMetadataColumn
-                      refId="Package\Load data into DB\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Carriageway_Hazards]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="Carriageway_Hazards" />
-                    <externalMetadataColumn
-                      refId="Package\Load data into DB\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Urban_or_Rural_Area]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="Urban_or_Rural_Area" />
-                    <externalMetadataColumn
-                      refId="Package\Load data into DB\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Did_Police_Officer_Attend_Scene_of_Accident]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="Did_Police_Officer_Attend_Scene_of_Accident" />
-                    <externalMetadataColumn
-                      refId="Package\Load data into DB\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[LSOA_of_Accident_Location]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="LSOA_of_Accident_Location" />
-                  </externalMetadataColumns>
-                </output>
-                <output
-                  refId="Package\Load data into DB\Flat File Source.Outputs[Flat File Source Error Output]"
-                  isErrorOut="true"
-                  name="Flat File Source Error Output">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\Load data into DB\Flat File Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
-                      codePage="1252"
-                      dataType="text"
-                      description="Flat File Source Error Output Column"
-                      lineageId="Package\Load data into DB\Flat File Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
-                      name="Flat File Source Error Output Column" />
-                    <outputColumn
-                      refId="Package\Load data into DB\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
-                      dataType="i4"
-                      lineageId="Package\Load data into DB\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
-                      name="ErrorCode"
-                      specialFlags="1" />
-                    <outputColumn
-                      refId="Package\Load data into DB\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
-                      dataType="i4"
-                      lineageId="Package\Load data into DB\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
-                      name="ErrorColumn"
-                      specialFlags="2" />
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-              </outputs>
-            </component>
-          </components>
-          <paths>
-            <path
-              refId="Package\Load data into DB.Paths[Flat File Source Output]"
-              endId="Package\Load data into DB\Accidents1114.Inputs[OLE DB Destination Input]"
-              name="Flat File Source Output"
-              startId="Package\Load data into DB\Flat File Source.Outputs[Flat File Source Output]" />
-          </paths>
-        </pipeline>
-=======
-        <SQLTask:SqlTaskData xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
->>>>>>> Stashed changes:BUIDING AND MINING DATA WAREHOUSE/BUIDING AND MINING DATA WAREHOUSE/Staging_Accidents.dtsx
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
@@ -3595,12 +2011,12 @@ WHERE UPDATE_TIME &gt; ?</property>
   </DTS:Executables>
   <DTS:PrecedenceConstraints>
     <DTS:PrecedenceConstraint
-      DTS:refId="Package.PrecedenceConstraints[Constraint]"
+      DTS:refId="Package.PrecedenceConstraints[Constraint 2]"
       DTS:CreationName=""
-      DTS:DTSID="{2522B982-6688-4036-A855-3DA887A3588B}"
-      DTS:From="Package\GET CET and LSET"
+      DTS:DTSID="{0A903687-8129-4256-A9BC-51477FE225A3}"
+      DTS:From="Package\Get CET, LSET"
       DTS:LogicalAnd="True"
-      DTS:ObjectName="Constraint"
+      DTS:ObjectName="Constraint 2"
       DTS:To="Package\Clear stage" />
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Constraint 3]"
@@ -3640,27 +2056,34 @@ WHERE UPDATE_TIME &gt; ?</property>
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-<<<<<<< Updated upstream:BUIDING AND MINING DATA WAREHOUSE/BUIDING AND MINING DATA WAREHOUSE/RnS_Accidents1114.dtsx
-          Size="166.666666666667,42.6666666666667"
-          Id="Package\Insert create_time"
-          TopLeft="203.749996963889,90.9999983727932" />
+          Size="132,42.6666666666667"
+          Id="Package\Clear stage"
+          TopLeft="568.178570593421,98.0666662482421" />
         <NodeLayout
-          Size="164,42.6666666666667"
-          Id="Package\Load data into DB"
-          TopLeft="30.0535786121095,89.350000159758" />
+          Size="168,42.6666666666667"
+          Id="Package\Data Profiling Task"
+          TopLeft="293.124995632097,262.599995304346" />
+        <NodeLayout
+          Size="148,42.6666666666667"
+          Id="Package\Get CET, LSET"
+          TopLeft="402.553573061427,93.5666668293874" />
+        <NodeLayout
+          Size="176,42.6666666666667"
+          Id="Package\Load data into stage"
+          TopLeft="550.053570863506,221.56666403989" />
         <NodeLayout
           Size="140,42.6666666666667"
           Id="Package\Update LSET"
           TopLeft="298.124995557592,174.199996885061" />
         <EdgeLayout
-          Id="Package.PrecedenceConstraints[Constraint]"
-          TopLeft="112.053578612109,89.350000159758">
+          Id="Package.PrecedenceConstraints[Constraint 2]"
+          TopLeft="476.553573061427,93.5666668293874">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="175.029751685112,1.64999821303525"
+              EndConnector="157.624997531994,4.4999994188547"
               Start="0,0"
-              End="175.029751685112,-5.85000178696475">
+              End="157.624997531994,-3.0000005811453">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
@@ -3671,13 +2094,13 @@ WHERE UPDATE_TIME &gt; ?</property>
                     Point2="0,-22.5"
                     Point3="4,-22.5" />
                   <mssgle:LineSegment
-                    End="171.029751685112,-22.5" />
+                    End="153.624997531994,-22.5" />
                   <mssgle:CubicBezierSegment
-                    Point1="171.029751685112,-22.5"
-                    Point2="175.029751685112,-22.5"
-                    Point3="175.029751685112,-18.5" />
+                    Point1="153.624997531994,-22.5"
+                    Point2="157.624997531994,-22.5"
+                    Point3="157.624997531994,-18.5" />
                   <mssgle:LineSegment
-                    End="175.029751685112,-5.85000178696475" />
+                    End="157.624997531994,-3.0000005811453" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -3686,93 +2109,20 @@ WHERE UPDATE_TIME &gt; ?</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="122.666666666667,42.6666666666667"
-          Id="Package\Get LSET"
-          TopLeft="402.553573061427,93.5666668293874" />
-        <NodeLayout
-          Size="132,42.6666666666667"
-          Id="Package\Clear stage"
-          TopLeft="568.178570593421,98.0666662482421" />
-        <NodeLayout
-          Size="176,42.6666666666667"
-          Id="Package\Load data into stage"
-          TopLeft="550.053570863506,221.56666403989" />
-        <EdgeLayout
-          Id="Package.PrecedenceConstraints[Constraint 1]"
-          TopLeft="370.416663630556,113.616665934424">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="32.1369094308712,0"
-              Start="0,0"
-              End="24.6369094308712,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="24.6369094308712,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package.PrecedenceConstraints[Constraint 2]"
-          TopLeft="525.220239728094,117.149999872148">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="42.9583308653273,0"
-              Start="0,0"
-              End="35.4583308653273,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="35.4583308653273,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-=======
-          Size="132,42.6666666666667"
-          Id="Package\Clear stage"
-          TopLeft="558.803570733119,83.766666503946" />
-        <NodeLayout
-          Size="168,42.6666666666667"
-          Id="Package\Data Profiling Task"
-          TopLeft="278.124995855614,262.599995304346" />
-        <NodeLayout
-          Size="176,42.6666666666667"
-          Id="Package\Load data into stage"
-          TopLeft="533.178571114963,221.56666403989" />
-        <NodeLayout
-          Size="140,42.6666666666667"
-          Id="Package\Update LSET"
-          TopLeft="294.374995613471,177.449996826947" />
->>>>>>> Stashed changes:BUIDING AND MINING DATA WAREHOUSE/BUIDING AND MINING DATA WAREHOUSE/Staging_Accidents.dtsx
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 3]"
-          TopLeft="622.991070924041,126.433333170613">
+          TopLeft="636.116070728464,140.733332914909">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,95.1333308692773"
+              EndConnector="0,80.8333311249813"
               Start="0,0"
-              End="0,87.6333308692773">
+              End="0,73.3333311249813">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,87.6333308692773" />
+                    End="0,73.3333311249813" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -3783,30 +2133,30 @@ WHERE UPDATE_TIME &gt; ?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 4]"
-          TopLeft="533.178571114963,237.122219595446">
+          TopLeft="550.053570863506,237.122219595446">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-98.8035755014918,-38.3388894351657"
+              EndConnector="-111.928575305914,-41.588889377051"
               Start="0,0"
-              End="-91.3035755014918,-38.3388894351657">
+              End="-104.428575305914,-41.588889377051">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="-37.6641583440025,0" />
+                    End="-43.198796815747,0" />
                   <mssgle:CubicBezierSegment
-                    Point1="-37.6641583440025,0"
-                    Point2="-41.6641583440025,0"
-                    Point3="-41.6641583440025,-4" />
+                    Point1="-43.198796815747,0"
+                    Point2="-47.198796815747,0"
+                    Point3="-47.198796815747,-4" />
                   <mssgle:LineSegment
-                    End="-41.6641583440025,-34.3388894351657" />
+                    End="-47.198796815747,-37.588889377051" />
                   <mssgle:CubicBezierSegment
-                    Point1="-41.6641583440025,-34.3388894351657"
-                    Point2="-41.6641583440025,-38.3388894351657"
-                    Point3="-45.6641583440025,-38.3388894351657" />
+                    Point1="-47.198796815747,-37.588889377051"
+                    Point2="-47.198796815747,-41.588889377051"
+                    Point3="-51.198796815747,-41.588889377051" />
                   <mssgle:LineSegment
-                    End="-91.3035755014918,-38.3388894351657" />
+                    End="-104.428575305914,-41.588889377051" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -3815,89 +2165,38 @@ WHERE UPDATE_TIME &gt; ?</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="168,42.6666666666667"
-          Id="Package\Data Profiling Task"
-          TopLeft="293.124995632097,262.599995304346" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 5]"
-          TopLeft="533.178571114963,248.677775151001">
+          TopLeft="550.053570863506,248.677775151001">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-87.0535752593487,35.2555534866782"
+              EndConnector="-88.928575231409,35.2555534866783"
               Start="0,0"
-              End="-79.5535752593487,35.2555534866782">
+              End="-81.428575231409,35.2555534866783">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="-32.7093389647856,0" />
+                    End="-33.5000016036062,0" />
                   <mssgle:CubicBezierSegment
-                    Point1="-32.7093389647856,0"
-                    Point2="-36.7093389647856,0"
-                    Point3="-36.7093389647856,4" />
+                    Point1="-33.5000016036062,0"
+                    Point2="-37.5000016036062,0"
+                    Point3="-37.5000016036062,4" />
                   <mssgle:LineSegment
-                    End="-36.7093389647856,31.2555534866782" />
+                    End="-37.5000016036062,31.2555534866783" />
                   <mssgle:CubicBezierSegment
-                    Point1="-36.7093389647856,31.2555534866782"
-                    Point2="-36.7093389647856,35.2555534866782"
-                    Point3="-40.7093389647856,35.2555534866782" />
+                    Point1="-37.5000016036062,31.2555534866783"
+                    Point2="-37.5000016036062,35.2555534866783"
+                    Point3="-41.5000016036062,35.2555534866783" />
                   <mssgle:LineSegment
-                    End="-79.5535752593487,35.2555534866782" />
+                    End="-81.428575231409,35.2555534866783" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-<<<<<<< Updated upstream:BUIDING AND MINING DATA WAREHOUSE/BUIDING AND MINING DATA WAREHOUSE/RnS_Accidents1114.dtsx
-      </GraphLayout>
-    </LayoutInfo>
-  </Package>
-  <TaskHost
-    design-time-name="Package\Load data into DB">
-    <LayoutInfo>
-      <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
-        <NodeLayout
-          Size="148,42.6666666666667"
-          Id="Package\Load data into DB\Accidents1114"
-          TopLeft="287.053573902279,27.8970632027645" />
-        <NodeLayout
-          Size="152,42.6666666666667"
-          Id="Package\Load data into DB\Flat File Source"
-          TopLeft="79.9999988079071,27.2999995118379" />
-=======
-        <NodeLayout
-          Size="168,42.6666666666667"
-          Id="Package\GET CET and LSET"
-          TopLeft="133.124998016283,79.3333324035009" />
->>>>>>> Stashed changes:BUIDING AND MINING DATA WAREHOUSE/BUIDING AND MINING DATA WAREHOUSE/Staging_Accidents.dtsx
-        <EdgeLayout
-          Id="Package.PrecedenceConstraints[Constraint]"
-          TopLeft="301.124998016283,102.883332787057">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="257.678572716836,0"
-              Start="0,0"
-              End="250.178572716836,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="250.178572716836,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -3942,14 +2241,6 @@ WHERE UPDATE_TIME &gt; ?</property>
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\Load data into stage\OLE DB Source">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
     design-time-name="Package\Load data into stage\OLE DB Destination">
     <Properties>
       <Property>
@@ -3959,6 +2250,14 @@ WHERE UPDATE_TIME &gt; ?</property>
         <Name>TableInfoObjectType</Name>
         <Value
           type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Load data into stage\OLE DB Source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
       </Property>
     </Properties>
   </PipelineComponentMetadata>

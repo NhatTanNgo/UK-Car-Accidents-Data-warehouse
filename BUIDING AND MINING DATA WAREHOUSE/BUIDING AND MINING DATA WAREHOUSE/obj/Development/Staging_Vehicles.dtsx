@@ -5,14 +5,14 @@
   DTS:CreationName="Microsoft.Package"
   DTS:CreatorComputerName="ASUS-DUCHUY"
   DTS:CreatorName="ASUS-DUCHUY\ASUS-DUCHUY"
-  DTS:DTSID="{E539D0B1-A8CC-48A1-8E17-467984A9EE03}"
+  DTS:DTSID="{516F6008-2DC3-487A-AA03-CEDC75BF1D2B}"
   DTS:ExecutableType="Microsoft.Package"
   DTS:LastModifiedProductVersion="15.0.2000.170"
   DTS:LocaleID="1033"
-  DTS:ObjectName="Package1"
+  DTS:ObjectName="Staging_Vehicles"
   DTS:PackageType="5"
-  DTS:VersionBuild="27"
-  DTS:VersionGUID="{38A27C12-4C1A-4FF1-830A-F33CF4AD5DE2}">
+  DTS:VersionBuild="28"
+  DTS:VersionGUID="{CFDAA99C-8997-49AB-BEA4-B3DD91DC589F}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -353,7 +353,7 @@
       DTS:LocaleID="-1"
       DTS:ObjectName="Data Profiling Task"
       DTS:TaskContact="Data Profiling Task; Microsoft Corporation; SQL Server 2019; (c) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="0">
+      DTS:ThreadHint="1">
       <DTS:Variables />
       <DTS:ObjectData>
         <DataProfilingTaskData
@@ -2645,7 +2645,7 @@ WHERE (Update_time &gt; ?)</property>
       DTS:LocaleID="-1"
       DTS:ObjectName="Upate LSET"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="1">
+      DTS:ThreadHint="0">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -2742,6 +2742,10 @@ WHERE (Update_time &gt; ?)</property>
           Id="Package\Data Profiling Task"
           TopLeft="289.999995678664,245.699995606541" />
         <NodeLayout
+          Size="120,42.6666666666667"
+          Id="Package\GetLSET"
+          TopLeft="216.874996768311,78.3333321710428" />
+        <NodeLayout
           Size="165.333333333334,42.6666666666667"
           Id="Package\Load Data into DB"
           TopLeft="9.73215238267184,80.4852959722847" />
@@ -2771,6 +2775,40 @@ WHERE (Update_time &gt; ?)</property>
                   Capacity="5">
                   <mssgle:LineSegment
                     End="0,35.7480343855848" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 1]"
+          TopLeft="142.083332904926,166.399997024536">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="134.791663863385,-45.3999981868265"
+              Start="0,0"
+              End="134.791663863385,-37.8999981868265">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,-14.411059172538" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,-14.411059172538"
+                    Point2="0,-18.411059172538"
+                    Point3="4,-18.411059172538" />
+                  <mssgle:LineSegment
+                    End="130.791663863385,-18.411059172538" />
+                  <mssgle:CubicBezierSegment
+                    Point1="130.791663863385,-18.411059172538"
+                    Point2="134.791663863385,-18.411059172538"
+                    Point3="134.791663863385,-22.411059172538" />
+                  <mssgle:LineSegment
+                    End="134.791663863385,-37.8999981868265" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -2861,44 +2899,6 @@ WHERE (Update_time &gt; ?)</property>
                   Capacity="5">
                   <mssgle:LineSegment
                     End="0,38.2333317526181" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="120,42.6666666666667"
-          Id="Package\GetLSET"
-          TopLeft="216.874996768311,78.3333321710428" />
-        <EdgeLayout
-          Id="Package.PrecedenceConstraints[Constraint 1]"
-          TopLeft="142.083332904926,166.399997024536">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="134.791663863385,-45.3999981868265"
-              Start="0,0"
-              End="134.791663863385,-37.8999981868265">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,-14.411059172538" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,-14.411059172538"
-                    Point2="0,-18.411059172538"
-                    Point3="4,-18.411059172538" />
-                  <mssgle:LineSegment
-                    End="130.791663863385,-18.411059172538" />
-                  <mssgle:CubicBezierSegment
-                    Point1="130.791663863385,-18.411059172538"
-                    Point2="134.791663863385,-18.411059172538"
-                    Point3="134.791663863385,-22.411059172538" />
-                  <mssgle:LineSegment
-                    End="134.791663863385,-37.8999981868265" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>

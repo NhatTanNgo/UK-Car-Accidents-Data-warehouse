@@ -5,19 +5,14 @@
   DTS:CreationName="Microsoft.Package"
   DTS:CreatorComputerName="ASUS-DUCHUY"
   DTS:CreatorName="ASUS-DUCHUY\ASUS-DUCHUY"
-  DTS:DTSID="{7EB62704-66FC-465A-BDA3-DE2998AC929F}"
+  DTS:DTSID="{8E12EC05-6AE5-4165-A954-5ADC2D4ABB3B}"
   DTS:ExecutableType="Microsoft.Package"
   DTS:LastModifiedProductVersion="15.0.2000.170"
   DTS:LocaleID="1033"
-  DTS:ObjectName="Staging_Casualties"
+  DTS:ObjectName="Package1"
   DTS:PackageType="5"
-<<<<<<< Updated upstream:BUIDING AND MINING DATA WAREHOUSE/BUIDING AND MINING DATA WAREHOUSE/RnS_Casualties1114.dtsx
   DTS:VersionBuild="13"
   DTS:VersionGUID="{E54D9583-1FCF-47A2-8033-E576B75D4BA2}">
-=======
-  DTS:VersionBuild="19"
-  DTS:VersionGUID="{B0366947-897B-40EC-B899-F102F6C40ADC}">
->>>>>>> Stashed changes:BUIDING AND MINING DATA WAREHOUSE/BUIDING AND MINING DATA WAREHOUSE/Staging_Casualties.dtsx
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -287,10 +282,7 @@
       <DTS:Variables />
       <DTS:ObjectData>
         <DataProfilingTaskData
-<<<<<<< Updated upstream:BUIDING AND MINING DATA WAREHOUSE/BUIDING AND MINING DATA WAREHOUSE/RnS_Casualties1114.dtsx
           Destination="Casualties.txt"
-=======
->>>>>>> Stashed changes:BUIDING AND MINING DATA WAREHOUSE/BUIDING AND MINING DATA WAREHOUSE/Staging_Casualties.dtsx
           OverwriteDestination="True">
           <ProfileInput><![CDATA[<?xml version="1.0" encoding="utf-16"?>
 <DataProfile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.microsoft.com/sqlserver/2008/DataDebugger/">
@@ -439,13 +431,8 @@
               <connections>
                 <connection
                   refId="Package\Load data into DB\Casualties1114.Connections[OleDbConnection]"
-<<<<<<< Updated upstream:BUIDING AND MINING DATA WAREHOUSE/BUIDING AND MINING DATA WAREHOUSE/RnS_Casualties1114.dtsx
                   connectionManagerID="Package.ConnectionManagers[DESKTOP-0IA21OI.RawSource]"
                   connectionManagerRefId="Package.ConnectionManagers[DESKTOP-0IA21OI.RawSource]"
-=======
-                  connectionManagerID="{1CFCE224-7018-4921-819E-8B1FB34DB6BD}:invalid"
-                  connectionManagerRefId="{1CFCE224-7018-4921-819E-8B1FB34DB6BD}:invalid"
->>>>>>> Stashed changes:BUIDING AND MINING DATA WAREHOUSE/BUIDING AND MINING DATA WAREHOUSE/Staging_Casualties.dtsx
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -728,13 +715,8 @@
               <connections>
                 <connection
                   refId="Package\Load data into DB\Flat File Source.Connections[FlatFileConnection]"
-<<<<<<< Updated upstream:BUIDING AND MINING DATA WAREHOUSE/BUIDING AND MINING DATA WAREHOUSE/RnS_Casualties1114.dtsx
                   connectionManagerID="Package.ConnectionManagers[Casualties]"
                   connectionManagerRefId="Package.ConnectionManagers[Casualties]"
-=======
-                  connectionManagerID="{3B2AB941-5A72-408E-99E1-6DBD6A7F4F04}:invalid"
-                  connectionManagerRefId="{3B2AB941-5A72-408E-99E1-6DBD6A7F4F04}:invalid"
->>>>>>> Stashed changes:BUIDING AND MINING DATA WAREHOUSE/BUIDING AND MINING DATA WAREHOUSE/Staging_Casualties.dtsx
                   name="FlatFileConnection" />
               </connections>
               <outputs>
@@ -1280,13 +1262,8 @@
               <connections>
                 <connection
                   refId="Package\Staging\OLE DB Destination.Connections[OleDbConnection]"
-<<<<<<< Updated upstream:BUIDING AND MINING DATA WAREHOUSE/BUIDING AND MINING DATA WAREHOUSE/RnS_Casualties1114.dtsx
                   connectionManagerID="Package.ConnectionManagers[DESKTOP-0IA21OI.Stage]"
                   connectionManagerRefId="Package.ConnectionManagers[DESKTOP-0IA21OI.Stage]"
-=======
-                  connectionManagerID="{D0433A59-873E-40E4-866B-A08B63E54AEA}:invalid"
-                  connectionManagerRefId="{D0433A59-873E-40E4-866B-A08B63E54AEA}:invalid"
->>>>>>> Stashed changes:BUIDING AND MINING DATA WAREHOUSE/BUIDING AND MINING DATA WAREHOUSE/Staging_Casualties.dtsx
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -1592,13 +1569,8 @@ WHERE UPDATE_TIME &gt; ?</property>
               <connections>
                 <connection
                   refId="Package\Staging\OLE DB Source.Connections[OleDbConnection]"
-<<<<<<< Updated upstream:BUIDING AND MINING DATA WAREHOUSE/BUIDING AND MINING DATA WAREHOUSE/RnS_Casualties1114.dtsx
                   connectionManagerID="Package.ConnectionManagers[DESKTOP-0IA21OI.RawSource]"
                   connectionManagerRefId="Package.ConnectionManagers[DESKTOP-0IA21OI.RawSource]"
-=======
-                  connectionManagerID="{1CFCE224-7018-4921-819E-8B1FB34DB6BD}:invalid"
-                  connectionManagerRefId="{1CFCE224-7018-4921-819E-8B1FB34DB6BD}:invalid"
->>>>>>> Stashed changes:BUIDING AND MINING DATA WAREHOUSE/BUIDING AND MINING DATA WAREHOUSE/Staging_Casualties.dtsx
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -2139,41 +2111,15 @@ WHERE UPDATE_TIME &gt; ?</property>
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-<<<<<<< Updated upstream:BUIDING AND MINING DATA WAREHOUSE/BUIDING AND MINING DATA WAREHOUSE/RnS_Casualties1114.dtsx
-=======
-          Size="132,42.6666666666667"
-          Id="Package\Clear stage"
-          TopLeft="272.499995939434,57.1666674802702" />
-        <NodeLayout
-          Size="168,42.6666666666667"
-          Id="Package\Data Profiling Task"
-          TopLeft="365.624994551763,184.599996699095" />
-        <NodeLayout
-          Size="116,42.6666666666667"
-          Id="Package\GetLSet"
-          TopLeft="232.49999653548,126.099997745156" />
-        <NodeLayout
->>>>>>> Stashed changes:BUIDING AND MINING DATA WAREHOUSE/BUIDING AND MINING DATA WAREHOUSE/Staging_Casualties.dtsx
           Size="164,42.6666666666667"
           Id="Package\Load data into DB"
           TopLeft="67.4107209218631,76.8911774867412" />
         <NodeLayout
-<<<<<<< Updated upstream:BUIDING AND MINING DATA WAREHOUSE/BUIDING AND MINING DATA WAREHOUSE/RnS_Casualties1114.dtsx
-=======
-          Size="114.666666666667,42.6666666666667"
-          Id="Package\Staging"
-          TopLeft="480.62499283813,59.1499989423155" />
-        <NodeLayout
->>>>>>> Stashed changes:BUIDING AND MINING DATA WAREHOUSE/BUIDING AND MINING DATA WAREHOUSE/Staging_Casualties.dtsx
           Size="173.333333333334,42.6666666666667"
           Id="Package\Update Create_time"
           TopLeft="59.9999991059304,174.199996885061" />
         <NodeLayout
-<<<<<<< Updated upstream:BUIDING AND MINING DATA WAREHOUSE/BUIDING AND MINING DATA WAREHOUSE/RnS_Casualties1114.dtsx
           Size="140,42.6666666666667"
-=======
-          Size="138.666666666667,42"
->>>>>>> Stashed changes:BUIDING AND MINING DATA WAREHOUSE/BUIDING AND MINING DATA WAREHOUSE/Staging_Casualties.dtsx
           Id="Package\Update LSET"
           TopLeft="566.249991562218,188.499996629358" />
         <EdgeLayout

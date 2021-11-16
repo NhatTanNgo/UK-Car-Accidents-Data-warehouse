@@ -2,26 +2,20 @@
 <DataProfile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.microsoft.com/sqlserver/2008/DataDebugger/">
   <ProfileVersion>1.0</ProfileVersion>
   <DataSources>
-    <DtsDataSource ID="{1CFCE224-7018-4921-819E-8B1FB34DB6BD}" Name="DESKTOP-0IA21OI.RawSource">
-      <DtsConnectionManagerID>DESKTOP-0IA21OI.RawSource</DtsConnectionManagerID>
-    </DtsDataSource>
-    <DtsDataSource ID="{D0433A59-873E-40E4-866B-A08B63E54AEA}" Name="DESKTOP-0IA21OI.Stage">
-      <DtsConnectionManagerID>DESKTOP-0IA21OI.Stage</DtsConnectionManagerID>
-    </DtsDataSource>
-    <DtsDataSource ID="{006DD8C4-4F8C-466D-B219-98861DA8DCE7}" Name="DESKTOP-0IA21OI.Stage 1">
-      <DtsConnectionManagerID>DESKTOP-0IA21OI.Stage 1</DtsConnectionManagerID>
-    </DtsDataSource>
-    <DtsDataSource ID="{D01A133C-91EB-4347-8E9C-5E2E5BB33B05}" Name="Excel Connection Manager">
-      <DtsConnectionManagerID>Excel Connection Manager</DtsConnectionManagerID>
-    </DtsDataSource>
-    <DtsDataSource ID="{F25BE36F-38EB-47CA-9CA3-D6389DE23F38}" Name="LocalHost.postcodes">
-      <DtsConnectionManagerID>LocalHost.postcodes</DtsConnectionManagerID>
-    </DtsDataSource>
-    <DtsDataSource ID="{75607D82-3C67-4098-AB51-868AEBF489E8}" Name="Postcodes">
-      <DtsConnectionManagerID>Postcodes</DtsConnectionManagerID>
-    </DtsDataSource>
-    <DtsDataSource ID="{26D05755-ACDA-43AF-92B4-0C977CDBB409}" Name="Postcodes.txt">
+    <DtsDataSource ID="{52060651-B2AF-4B15-B459-8F04EB16EED0}" Name="Postcodes.txt">
       <DtsConnectionManagerID>Postcodes.txt</DtsConnectionManagerID>
+    </DtsDataSource>
+    <DtsDataSource ID="{DFF81239-B2A8-4950-83F9-2BB12A3D2296}" Name="LocalHost Stage_DATH">
+      <DtsConnectionManagerID>LocalHost Stage_DATH</DtsConnectionManagerID>
+    </DtsDataSource>
+    <DtsDataSource ID="{DE3C34A7-7A0C-4B26-A05E-3060463C0629}" Name="LocalHost.MetaData_DATH">
+      <DtsConnectionManagerID>LocalHost.MetaData_DATH</DtsConnectionManagerID>
+    </DtsDataSource>
+    <DtsDataSource ID="{F4A3871F-4AD8-419A-8C9E-BAEC8E731B5E}" Name="LocalHost.Source_DATH">
+      <DtsConnectionManagerID>LocalHost.Source_DATH</DtsConnectionManagerID>
+    </DtsDataSource>
+    <DtsDataSource ID="{68B744B6-BFA4-417D-AA11-2C26D08D51D7}" Name="LocalHost.Stage_DATH 1">
+      <DtsConnectionManagerID>LocalHost.Stage_DATH 1</DtsConnectionManagerID>
     </DtsDataSource>
   </DataSources>
   <DataProfileInput>
@@ -29,31 +23,42 @@
     <Timeout>0</Timeout>
     <Requests>
       <ColumnNullRatioProfileRequest ID="NullRatioReq">
-        <DataSourceID>{006DD8C4-4F8C-466D-B219-98861DA8DCE7}</DataSourceID>
+        <DataSourceID>{68B744B6-BFA4-417D-AA11-2C26D08D51D7}</DataSourceID>
         <Table Schema="dbo" Table="PostCodes" />
         <Column IsWildCard="true" />
       </ColumnNullRatioProfileRequest>
       <ColumnStatisticsProfileRequest ID="StatisticsReq">
-        <DataSourceID>{006DD8C4-4F8C-466D-B219-98861DA8DCE7}</DataSourceID>
+        <DataSourceID>{68B744B6-BFA4-417D-AA11-2C26D08D51D7}</DataSourceID>
         <Table Schema="dbo" Table="PostCodes" />
         <Column IsWildCard="true" />
       </ColumnStatisticsProfileRequest>
       <ColumnLengthDistributionProfileRequest ID="LengthDistReq">
-        <DataSourceID>{006DD8C4-4F8C-466D-B219-98861DA8DCE7}</DataSourceID>
+        <DataSourceID>{68B744B6-BFA4-417D-AA11-2C26D08D51D7}</DataSourceID>
         <Table Schema="dbo" Table="PostCodes" />
         <Column IsWildCard="true" />
         <IgnoreLeadingSpace>false</IgnoreLeadingSpace>
         <IgnoreTrailingSpace>true</IgnoreTrailingSpace>
       </ColumnLengthDistributionProfileRequest>
       <ColumnValueDistributionProfileRequest ID="ValueDistReq">
-        <DataSourceID>{006DD8C4-4F8C-466D-B219-98861DA8DCE7}</DataSourceID>
+        <DataSourceID>{68B744B6-BFA4-417D-AA11-2C26D08D51D7}</DataSourceID>
         <Table Schema="dbo" Table="PostCodes" />
         <Column IsWildCard="true" />
         <Option>FrequentValues</Option>
         <FrequentValueThreshold>0.001</FrequentValueThreshold>
       </ColumnValueDistributionProfileRequest>
+      <ColumnPatternProfileRequest ID="PatternReq">
+        <DataSourceID>{68B744B6-BFA4-417D-AA11-2C26D08D51D7}</DataSourceID>
+        <Table Schema="dbo" Table="PostCodes" />
+        <Column IsWildCard="true" />
+        <MaxNumberOfPatterns>10</MaxNumberOfPatterns>
+        <PercentageDataCoverageDesired>95</PercentageDataCoverageDesired>
+        <CaseSensitive>false</CaseSensitive>
+        <Delimiters> \t\r\n</Delimiters>
+        <Symbols>,.;:-"'`~=&amp;/\\@!?()&lt;&gt;[]{}|#*^%</Symbols>
+        <TagTableName />
+      </ColumnPatternProfileRequest>
       <CandidateKeyProfileRequest ID="KeyReq">
-        <DataSourceID>{006DD8C4-4F8C-466D-B219-98861DA8DCE7}</DataSourceID>
+        <DataSourceID>{68B744B6-BFA4-417D-AA11-2C26D08D51D7}</DataSourceID>
         <Table Schema="dbo" Table="PostCodes" />
         <KeyColumns>
           <Column IsWildCard="true" />
@@ -68,80 +73,80 @@
   <DataProfileOutput>
     <Profiles>
       <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
-        <DataSourceID>{006DD8C4-4F8C-466D-B219-98861DA8DCE7}</DataSourceID>
-        <Table DataSource="DESKTOP-0IA21OI" Database="Stage" Schema="dbo" Table="PostCodes" RowCount="2848" />
+        <DataSourceID>{68B744B6-BFA4-417D-AA11-2C26D08D51D7}</DataSourceID>
+        <Table DataSource="." Database="Stage_DATH" Schema="dbo" Table="PostCodes" RowCount="2848" />
         <Column Name="postcode" SqlDbType="VarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
         <NullCount>0</NullCount>
       </ColumnNullRatioProfile>
       <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
-        <DataSourceID>{006DD8C4-4F8C-466D-B219-98861DA8DCE7}</DataSourceID>
-        <Table DataSource="DESKTOP-0IA21OI" Database="Stage" Schema="dbo" Table="PostCodes" RowCount="2848" />
+        <DataSourceID>{68B744B6-BFA4-417D-AA11-2C26D08D51D7}</DataSourceID>
+        <Table DataSource="." Database="Stage_DATH" Schema="dbo" Table="PostCodes" RowCount="2848" />
         <Column Name="easting" SqlDbType="VarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
         <NullCount>0</NullCount>
       </ColumnNullRatioProfile>
       <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
-        <DataSourceID>{006DD8C4-4F8C-466D-B219-98861DA8DCE7}</DataSourceID>
-        <Table DataSource="DESKTOP-0IA21OI" Database="Stage" Schema="dbo" Table="PostCodes" RowCount="2848" />
+        <DataSourceID>{68B744B6-BFA4-417D-AA11-2C26D08D51D7}</DataSourceID>
+        <Table DataSource="." Database="Stage_DATH" Schema="dbo" Table="PostCodes" RowCount="2848" />
         <Column Name="northing" SqlDbType="VarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
         <NullCount>0</NullCount>
       </ColumnNullRatioProfile>
       <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
-        <DataSourceID>{006DD8C4-4F8C-466D-B219-98861DA8DCE7}</DataSourceID>
-        <Table DataSource="DESKTOP-0IA21OI" Database="Stage" Schema="dbo" Table="PostCodes" RowCount="2848" />
+        <DataSourceID>{68B744B6-BFA4-417D-AA11-2C26D08D51D7}</DataSourceID>
+        <Table DataSource="." Database="Stage_DATH" Schema="dbo" Table="PostCodes" RowCount="2848" />
         <Column Name="latitude" SqlDbType="VarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
         <NullCount>0</NullCount>
       </ColumnNullRatioProfile>
       <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
-        <DataSourceID>{006DD8C4-4F8C-466D-B219-98861DA8DCE7}</DataSourceID>
-        <Table DataSource="DESKTOP-0IA21OI" Database="Stage" Schema="dbo" Table="PostCodes" RowCount="2848" />
+        <DataSourceID>{68B744B6-BFA4-417D-AA11-2C26D08D51D7}</DataSourceID>
+        <Table DataSource="." Database="Stage_DATH" Schema="dbo" Table="PostCodes" RowCount="2848" />
         <Column Name="longitude" SqlDbType="VarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
         <NullCount>0</NullCount>
       </ColumnNullRatioProfile>
       <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
-        <DataSourceID>{006DD8C4-4F8C-466D-B219-98861DA8DCE7}</DataSourceID>
-        <Table DataSource="DESKTOP-0IA21OI" Database="Stage" Schema="dbo" Table="PostCodes" RowCount="2848" />
+        <DataSourceID>{68B744B6-BFA4-417D-AA11-2C26D08D51D7}</DataSourceID>
+        <Table DataSource="." Database="Stage_DATH" Schema="dbo" Table="PostCodes" RowCount="2848" />
         <Column Name="city" SqlDbType="VarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
         <NullCount>0</NullCount>
       </ColumnNullRatioProfile>
       <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
-        <DataSourceID>{006DD8C4-4F8C-466D-B219-98861DA8DCE7}</DataSourceID>
-        <Table DataSource="DESKTOP-0IA21OI" Database="Stage" Schema="dbo" Table="PostCodes" RowCount="2848" />
+        <DataSourceID>{68B744B6-BFA4-417D-AA11-2C26D08D51D7}</DataSourceID>
+        <Table DataSource="." Database="Stage_DATH" Schema="dbo" Table="PostCodes" RowCount="2848" />
         <Column Name="county" SqlDbType="VarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
         <NullCount>0</NullCount>
       </ColumnNullRatioProfile>
       <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
-        <DataSourceID>{006DD8C4-4F8C-466D-B219-98861DA8DCE7}</DataSourceID>
-        <Table DataSource="DESKTOP-0IA21OI" Database="Stage" Schema="dbo" Table="PostCodes" RowCount="2848" />
+        <DataSourceID>{68B744B6-BFA4-417D-AA11-2C26D08D51D7}</DataSourceID>
+        <Table DataSource="." Database="Stage_DATH" Schema="dbo" Table="PostCodes" RowCount="2848" />
         <Column Name="country_code" SqlDbType="VarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
         <NullCount>0</NullCount>
       </ColumnNullRatioProfile>
       <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
-        <DataSourceID>{006DD8C4-4F8C-466D-B219-98861DA8DCE7}</DataSourceID>
-        <Table DataSource="DESKTOP-0IA21OI" Database="Stage" Schema="dbo" Table="PostCodes" RowCount="2848" />
+        <DataSourceID>{68B744B6-BFA4-417D-AA11-2C26D08D51D7}</DataSourceID>
+        <Table DataSource="." Database="Stage_DATH" Schema="dbo" Table="PostCodes" RowCount="2848" />
         <Column Name="country_name" SqlDbType="VarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
         <NullCount>0</NullCount>
       </ColumnNullRatioProfile>
       <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
-        <DataSourceID>{006DD8C4-4F8C-466D-B219-98861DA8DCE7}</DataSourceID>
-        <Table DataSource="DESKTOP-0IA21OI" Database="Stage" Schema="dbo" Table="PostCodes" RowCount="2848" />
+        <DataSourceID>{68B744B6-BFA4-417D-AA11-2C26D08D51D7}</DataSourceID>
+        <Table DataSource="." Database="Stage_DATH" Schema="dbo" Table="PostCodes" RowCount="2848" />
         <Column Name="iso3166-2" SqlDbType="VarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
         <NullCount>0</NullCount>
       </ColumnNullRatioProfile>
       <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
-        <DataSourceID>{006DD8C4-4F8C-466D-B219-98861DA8DCE7}</DataSourceID>
-        <Table DataSource="DESKTOP-0IA21OI" Database="Stage" Schema="dbo" Table="PostCodes" RowCount="2848" />
+        <DataSourceID>{68B744B6-BFA4-417D-AA11-2C26D08D51D7}</DataSourceID>
+        <Table DataSource="." Database="Stage_DATH" Schema="dbo" Table="PostCodes" RowCount="2848" />
         <Column Name="region_code" SqlDbType="VarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
         <NullCount>0</NullCount>
       </ColumnNullRatioProfile>
       <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
-        <DataSourceID>{006DD8C4-4F8C-466D-B219-98861DA8DCE7}</DataSourceID>
-        <Table DataSource="DESKTOP-0IA21OI" Database="Stage" Schema="dbo" Table="PostCodes" RowCount="2848" />
+        <DataSourceID>{68B744B6-BFA4-417D-AA11-2C26D08D51D7}</DataSourceID>
+        <Table DataSource="." Database="Stage_DATH" Schema="dbo" Table="PostCodes" RowCount="2848" />
         <Column Name="region_name" SqlDbType="VarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
         <NullCount>0</NullCount>
       </ColumnNullRatioProfile>
       <ColumnLengthDistributionProfile ProfileRequestID="LengthDistReq" IsExact="true">
-        <DataSourceID>{006DD8C4-4F8C-466D-B219-98861DA8DCE7}</DataSourceID>
-        <Table DataSource="DESKTOP-0IA21OI" Database="Stage" Schema="dbo" Table="PostCodes" RowCount="2848" />
+        <DataSourceID>{68B744B6-BFA4-417D-AA11-2C26D08D51D7}</DataSourceID>
+        <Table DataSource="." Database="Stage_DATH" Schema="dbo" Table="PostCodes" RowCount="2848" />
         <Column Name="postcode" SqlDbType="VarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
         <IgnoreLeadingSpace>false</IgnoreLeadingSpace>
         <IgnoreTrailingSpace>true</IgnoreTrailingSpace>
@@ -163,8 +168,8 @@
         </LengthDistribution>
       </ColumnLengthDistributionProfile>
       <ColumnLengthDistributionProfile ProfileRequestID="LengthDistReq" IsExact="true">
-        <DataSourceID>{006DD8C4-4F8C-466D-B219-98861DA8DCE7}</DataSourceID>
-        <Table DataSource="DESKTOP-0IA21OI" Database="Stage" Schema="dbo" Table="PostCodes" RowCount="2848" />
+        <DataSourceID>{68B744B6-BFA4-417D-AA11-2C26D08D51D7}</DataSourceID>
+        <Table DataSource="." Database="Stage_DATH" Schema="dbo" Table="PostCodes" RowCount="2848" />
         <Column Name="easting" SqlDbType="VarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
         <IgnoreLeadingSpace>false</IgnoreLeadingSpace>
         <IgnoreTrailingSpace>true</IgnoreTrailingSpace>
@@ -182,8 +187,8 @@
         </LengthDistribution>
       </ColumnLengthDistributionProfile>
       <ColumnLengthDistributionProfile ProfileRequestID="LengthDistReq" IsExact="true">
-        <DataSourceID>{006DD8C4-4F8C-466D-B219-98861DA8DCE7}</DataSourceID>
-        <Table DataSource="DESKTOP-0IA21OI" Database="Stage" Schema="dbo" Table="PostCodes" RowCount="2848" />
+        <DataSourceID>{68B744B6-BFA4-417D-AA11-2C26D08D51D7}</DataSourceID>
+        <Table DataSource="." Database="Stage_DATH" Schema="dbo" Table="PostCodes" RowCount="2848" />
         <Column Name="northing" SqlDbType="VarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
         <IgnoreLeadingSpace>false</IgnoreLeadingSpace>
         <IgnoreTrailingSpace>true</IgnoreTrailingSpace>
@@ -209,8 +214,8 @@
         </LengthDistribution>
       </ColumnLengthDistributionProfile>
       <ColumnLengthDistributionProfile ProfileRequestID="LengthDistReq" IsExact="true">
-        <DataSourceID>{006DD8C4-4F8C-466D-B219-98861DA8DCE7}</DataSourceID>
-        <Table DataSource="DESKTOP-0IA21OI" Database="Stage" Schema="dbo" Table="PostCodes" RowCount="2848" />
+        <DataSourceID>{68B744B6-BFA4-417D-AA11-2C26D08D51D7}</DataSourceID>
+        <Table DataSource="." Database="Stage_DATH" Schema="dbo" Table="PostCodes" RowCount="2848" />
         <Column Name="latitude" SqlDbType="VarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
         <IgnoreLeadingSpace>false</IgnoreLeadingSpace>
         <IgnoreTrailingSpace>true</IgnoreTrailingSpace>
@@ -236,8 +241,8 @@
         </LengthDistribution>
       </ColumnLengthDistributionProfile>
       <ColumnLengthDistributionProfile ProfileRequestID="LengthDistReq" IsExact="true">
-        <DataSourceID>{006DD8C4-4F8C-466D-B219-98861DA8DCE7}</DataSourceID>
-        <Table DataSource="DESKTOP-0IA21OI" Database="Stage" Schema="dbo" Table="PostCodes" RowCount="2848" />
+        <DataSourceID>{68B744B6-BFA4-417D-AA11-2C26D08D51D7}</DataSourceID>
+        <Table DataSource="." Database="Stage_DATH" Schema="dbo" Table="PostCodes" RowCount="2848" />
         <Column Name="longitude" SqlDbType="VarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
         <IgnoreLeadingSpace>false</IgnoreLeadingSpace>
         <IgnoreTrailingSpace>true</IgnoreTrailingSpace>
@@ -271,8 +276,8 @@
         </LengthDistribution>
       </ColumnLengthDistributionProfile>
       <ColumnLengthDistributionProfile ProfileRequestID="LengthDistReq" IsExact="true">
-        <DataSourceID>{006DD8C4-4F8C-466D-B219-98861DA8DCE7}</DataSourceID>
-        <Table DataSource="DESKTOP-0IA21OI" Database="Stage" Schema="dbo" Table="PostCodes" RowCount="2848" />
+        <DataSourceID>{68B744B6-BFA4-417D-AA11-2C26D08D51D7}</DataSourceID>
+        <Table DataSource="." Database="Stage_DATH" Schema="dbo" Table="PostCodes" RowCount="2848" />
         <Column Name="city" SqlDbType="VarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
         <IgnoreLeadingSpace>false</IgnoreLeadingSpace>
         <IgnoreTrailingSpace>true</IgnoreTrailingSpace>
@@ -390,8 +395,8 @@
         </LengthDistribution>
       </ColumnLengthDistributionProfile>
       <ColumnLengthDistributionProfile ProfileRequestID="LengthDistReq" IsExact="true">
-        <DataSourceID>{006DD8C4-4F8C-466D-B219-98861DA8DCE7}</DataSourceID>
-        <Table DataSource="DESKTOP-0IA21OI" Database="Stage" Schema="dbo" Table="PostCodes" RowCount="2848" />
+        <DataSourceID>{68B744B6-BFA4-417D-AA11-2C26D08D51D7}</DataSourceID>
+        <Table DataSource="." Database="Stage_DATH" Schema="dbo" Table="PostCodes" RowCount="2848" />
         <Column Name="county" SqlDbType="VarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
         <IgnoreLeadingSpace>false</IgnoreLeadingSpace>
         <IgnoreTrailingSpace>true</IgnoreTrailingSpace>
@@ -501,8 +506,8 @@
         </LengthDistribution>
       </ColumnLengthDistributionProfile>
       <ColumnLengthDistributionProfile ProfileRequestID="LengthDistReq" IsExact="true">
-        <DataSourceID>{006DD8C4-4F8C-466D-B219-98861DA8DCE7}</DataSourceID>
-        <Table DataSource="DESKTOP-0IA21OI" Database="Stage" Schema="dbo" Table="PostCodes" RowCount="2848" />
+        <DataSourceID>{68B744B6-BFA4-417D-AA11-2C26D08D51D7}</DataSourceID>
+        <Table DataSource="." Database="Stage_DATH" Schema="dbo" Table="PostCodes" RowCount="2848" />
         <Column Name="country_code" SqlDbType="VarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
         <IgnoreLeadingSpace>false</IgnoreLeadingSpace>
         <IgnoreTrailingSpace>true</IgnoreTrailingSpace>
@@ -516,8 +521,8 @@
         </LengthDistribution>
       </ColumnLengthDistributionProfile>
       <ColumnLengthDistributionProfile ProfileRequestID="LengthDistReq" IsExact="true">
-        <DataSourceID>{006DD8C4-4F8C-466D-B219-98861DA8DCE7}</DataSourceID>
-        <Table DataSource="DESKTOP-0IA21OI" Database="Stage" Schema="dbo" Table="PostCodes" RowCount="2848" />
+        <DataSourceID>{68B744B6-BFA4-417D-AA11-2C26D08D51D7}</DataSourceID>
+        <Table DataSource="." Database="Stage_DATH" Schema="dbo" Table="PostCodes" RowCount="2848" />
         <Column Name="country_name" SqlDbType="VarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
         <IgnoreLeadingSpace>false</IgnoreLeadingSpace>
         <IgnoreTrailingSpace>true</IgnoreTrailingSpace>
@@ -555,8 +560,8 @@
         </LengthDistribution>
       </ColumnLengthDistributionProfile>
       <ColumnLengthDistributionProfile ProfileRequestID="LengthDistReq" IsExact="true">
-        <DataSourceID>{006DD8C4-4F8C-466D-B219-98861DA8DCE7}</DataSourceID>
-        <Table DataSource="DESKTOP-0IA21OI" Database="Stage" Schema="dbo" Table="PostCodes" RowCount="2848" />
+        <DataSourceID>{68B744B6-BFA4-417D-AA11-2C26D08D51D7}</DataSourceID>
+        <Table DataSource="." Database="Stage_DATH" Schema="dbo" Table="PostCodes" RowCount="2848" />
         <Column Name="iso3166-2" SqlDbType="VarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
         <IgnoreLeadingSpace>false</IgnoreLeadingSpace>
         <IgnoreTrailingSpace>true</IgnoreTrailingSpace>
@@ -578,8 +583,8 @@
         </LengthDistribution>
       </ColumnLengthDistributionProfile>
       <ColumnLengthDistributionProfile ProfileRequestID="LengthDistReq" IsExact="true">
-        <DataSourceID>{006DD8C4-4F8C-466D-B219-98861DA8DCE7}</DataSourceID>
-        <Table DataSource="DESKTOP-0IA21OI" Database="Stage" Schema="dbo" Table="PostCodes" RowCount="2848" />
+        <DataSourceID>{68B744B6-BFA4-417D-AA11-2C26D08D51D7}</DataSourceID>
+        <Table DataSource="." Database="Stage_DATH" Schema="dbo" Table="PostCodes" RowCount="2848" />
         <Column Name="region_code" SqlDbType="VarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
         <IgnoreLeadingSpace>false</IgnoreLeadingSpace>
         <IgnoreTrailingSpace>true</IgnoreTrailingSpace>
@@ -621,8 +626,8 @@
         </LengthDistribution>
       </ColumnLengthDistributionProfile>
       <ColumnLengthDistributionProfile ProfileRequestID="LengthDistReq" IsExact="true">
-        <DataSourceID>{006DD8C4-4F8C-466D-B219-98861DA8DCE7}</DataSourceID>
-        <Table DataSource="DESKTOP-0IA21OI" Database="Stage" Schema="dbo" Table="PostCodes" RowCount="2848" />
+        <DataSourceID>{68B744B6-BFA4-417D-AA11-2C26D08D51D7}</DataSourceID>
+        <Table DataSource="." Database="Stage_DATH" Schema="dbo" Table="PostCodes" RowCount="2848" />
         <Column Name="region_name" SqlDbType="VarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
         <IgnoreLeadingSpace>false</IgnoreLeadingSpace>
         <IgnoreTrailingSpace>true</IgnoreTrailingSpace>
@@ -672,22 +677,22 @@
         </LengthDistribution>
       </ColumnLengthDistributionProfile>
       <CandidateKeyProfile IsExact="true" ProfileRequestID="KeyReq">
-        <DataSourceID>{006DD8C4-4F8C-466D-B219-98861DA8DCE7}</DataSourceID>
-        <Table DataSource="DESKTOP-0IA21OI" Database="Stage" Schema="dbo" Table="PostCodes" RowCount="2848" />
+        <DataSourceID>{68B744B6-BFA4-417D-AA11-2C26D08D51D7}</DataSourceID>
+        <Table DataSource="." Database="Stage_DATH" Schema="dbo" Table="PostCodes" RowCount="2848" />
         <KeyColumns>
           <Column Name="postcode" SqlDbType="VarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
         </KeyColumns>
         <IsExactKey>true</IsExactKey>
       </CandidateKeyProfile>
       <ColumnValueDistributionProfile IsExact="true" ProfileRequestID="ValueDistReq">
-        <DataSourceID>{006DD8C4-4F8C-466D-B219-98861DA8DCE7}</DataSourceID>
-        <Table DataSource="DESKTOP-0IA21OI" Database="Stage" Schema="dbo" Table="PostCodes" RowCount="2848" />
+        <DataSourceID>{68B744B6-BFA4-417D-AA11-2C26D08D51D7}</DataSourceID>
+        <Table DataSource="." Database="Stage_DATH" Schema="dbo" Table="PostCodes" RowCount="2848" />
         <Column Name="postcode" SqlDbType="VarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
         <NumberOfDistinctValues>2848</NumberOfDistinctValues>
       </ColumnValueDistributionProfile>
       <ColumnValueDistributionProfile IsExact="true" ProfileRequestID="ValueDistReq">
-        <DataSourceID>{006DD8C4-4F8C-466D-B219-98861DA8DCE7}</DataSourceID>
-        <Table DataSource="DESKTOP-0IA21OI" Database="Stage" Schema="dbo" Table="PostCodes" RowCount="2848" />
+        <DataSourceID>{68B744B6-BFA4-417D-AA11-2C26D08D51D7}</DataSourceID>
+        <Table DataSource="." Database="Stage_DATH" Schema="dbo" Table="PostCodes" RowCount="2848" />
         <Column Name="easting" SqlDbType="VarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
         <NumberOfDistinctValues>2107</NumberOfDistinctValues>
         <ValueDistribution>
@@ -1210,8 +1215,8 @@
         </ValueDistribution>
       </ColumnValueDistributionProfile>
       <ColumnValueDistributionProfile IsExact="true" ProfileRequestID="ValueDistReq">
-        <DataSourceID>{006DD8C4-4F8C-466D-B219-98861DA8DCE7}</DataSourceID>
-        <Table DataSource="DESKTOP-0IA21OI" Database="Stage" Schema="dbo" Table="PostCodes" RowCount="2848" />
+        <DataSourceID>{68B744B6-BFA4-417D-AA11-2C26D08D51D7}</DataSourceID>
+        <Table DataSource="." Database="Stage_DATH" Schema="dbo" Table="PostCodes" RowCount="2848" />
         <Column Name="northing" SqlDbType="VarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
         <NumberOfDistinctValues>2209</NumberOfDistinctValues>
         <ValueDistribution>
@@ -1650,8 +1655,8 @@
         </ValueDistribution>
       </ColumnValueDistributionProfile>
       <CandidateKeyProfile IsExact="true" ProfileRequestID="KeyReq">
-        <DataSourceID>{006DD8C4-4F8C-466D-B219-98861DA8DCE7}</DataSourceID>
-        <Table DataSource="DESKTOP-0IA21OI" Database="Stage" Schema="dbo" Table="PostCodes" RowCount="2848" />
+        <DataSourceID>{68B744B6-BFA4-417D-AA11-2C26D08D51D7}</DataSourceID>
+        <Table DataSource="." Database="Stage_DATH" Schema="dbo" Table="PostCodes" RowCount="2848" />
         <KeyColumns>
           <Column Name="latitude" SqlDbType="VarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
         </KeyColumns>
@@ -1745,8 +1750,8 @@
         </KeyViolations>
       </CandidateKeyProfile>
       <ColumnValueDistributionProfile IsExact="true" ProfileRequestID="ValueDistReq">
-        <DataSourceID>{006DD8C4-4F8C-466D-B219-98861DA8DCE7}</DataSourceID>
-        <Table DataSource="DESKTOP-0IA21OI" Database="Stage" Schema="dbo" Table="PostCodes" RowCount="2848" />
+        <DataSourceID>{68B744B6-BFA4-417D-AA11-2C26D08D51D7}</DataSourceID>
+        <Table DataSource="." Database="Stage_DATH" Schema="dbo" Table="PostCodes" RowCount="2848" />
         <Column Name="latitude" SqlDbType="VarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
         <NumberOfDistinctValues>2831</NumberOfDistinctValues>
         <ValueDistribution>
@@ -1757,8 +1762,8 @@
         </ValueDistribution>
       </ColumnValueDistributionProfile>
       <CandidateKeyProfile IsExact="true" ProfileRequestID="KeyReq">
-        <DataSourceID>{006DD8C4-4F8C-466D-B219-98861DA8DCE7}</DataSourceID>
-        <Table DataSource="DESKTOP-0IA21OI" Database="Stage" Schema="dbo" Table="PostCodes" RowCount="2848" />
+        <DataSourceID>{68B744B6-BFA4-417D-AA11-2C26D08D51D7}</DataSourceID>
+        <Table DataSource="." Database="Stage_DATH" Schema="dbo" Table="PostCodes" RowCount="2848" />
         <KeyColumns>
           <Column Name="longitude" SqlDbType="VarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
         </KeyColumns>
@@ -1816,8 +1821,8 @@
         </KeyViolations>
       </CandidateKeyProfile>
       <ColumnValueDistributionProfile IsExact="true" ProfileRequestID="ValueDistReq">
-        <DataSourceID>{006DD8C4-4F8C-466D-B219-98861DA8DCE7}</DataSourceID>
-        <Table DataSource="DESKTOP-0IA21OI" Database="Stage" Schema="dbo" Table="PostCodes" RowCount="2848" />
+        <DataSourceID>{68B744B6-BFA4-417D-AA11-2C26D08D51D7}</DataSourceID>
+        <Table DataSource="." Database="Stage_DATH" Schema="dbo" Table="PostCodes" RowCount="2848" />
         <Column Name="longitude" SqlDbType="VarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
         <NumberOfDistinctValues>2837</NumberOfDistinctValues>
         <ValueDistribution>
@@ -1828,8 +1833,8 @@
         </ValueDistribution>
       </ColumnValueDistributionProfile>
       <ColumnValueDistributionProfile IsExact="true" ProfileRequestID="ValueDistReq">
-        <DataSourceID>{006DD8C4-4F8C-466D-B219-98861DA8DCE7}</DataSourceID>
-        <Table DataSource="DESKTOP-0IA21OI" Database="Stage" Schema="dbo" Table="PostCodes" RowCount="2848" />
+        <DataSourceID>{68B744B6-BFA4-417D-AA11-2C26D08D51D7}</DataSourceID>
+        <Table DataSource="." Database="Stage_DATH" Schema="dbo" Table="PostCodes" RowCount="2848" />
         <Column Name="city" SqlDbType="VarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
         <NumberOfDistinctValues>1607</NumberOfDistinctValues>
         <ValueDistribution>
@@ -2340,8 +2345,8 @@
         </ValueDistribution>
       </ColumnValueDistributionProfile>
       <ColumnValueDistributionProfile IsExact="true" ProfileRequestID="ValueDistReq">
-        <DataSourceID>{006DD8C4-4F8C-466D-B219-98861DA8DCE7}</DataSourceID>
-        <Table DataSource="DESKTOP-0IA21OI" Database="Stage" Schema="dbo" Table="PostCodes" RowCount="2848" />
+        <DataSourceID>{68B744B6-BFA4-417D-AA11-2C26D08D51D7}</DataSourceID>
+        <Table DataSource="." Database="Stage_DATH" Schema="dbo" Table="PostCodes" RowCount="2848" />
         <Column Name="county" SqlDbType="VarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
         <NumberOfDistinctValues>213</NumberOfDistinctValues>
         <ValueDistribution>
@@ -3104,8 +3109,8 @@
         </ValueDistribution>
       </ColumnValueDistributionProfile>
       <ColumnValueDistributionProfile IsExact="true" ProfileRequestID="ValueDistReq">
-        <DataSourceID>{006DD8C4-4F8C-466D-B219-98861DA8DCE7}</DataSourceID>
-        <Table DataSource="DESKTOP-0IA21OI" Database="Stage" Schema="dbo" Table="PostCodes" RowCount="2848" />
+        <DataSourceID>{68B744B6-BFA4-417D-AA11-2C26D08D51D7}</DataSourceID>
+        <Table DataSource="." Database="Stage_DATH" Schema="dbo" Table="PostCodes" RowCount="2848" />
         <Column Name="country_code" SqlDbType="VarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
         <NumberOfDistinctValues>8</NumberOfDistinctValues>
         <ValueDistribution>
@@ -3144,8 +3149,8 @@
         </ValueDistribution>
       </ColumnValueDistributionProfile>
       <ColumnValueDistributionProfile IsExact="true" ProfileRequestID="ValueDistReq">
-        <DataSourceID>{006DD8C4-4F8C-466D-B219-98861DA8DCE7}</DataSourceID>
-        <Table DataSource="DESKTOP-0IA21OI" Database="Stage" Schema="dbo" Table="PostCodes" RowCount="2848" />
+        <DataSourceID>{68B744B6-BFA4-417D-AA11-2C26D08D51D7}</DataSourceID>
+        <Table DataSource="." Database="Stage_DATH" Schema="dbo" Table="PostCodes" RowCount="2848" />
         <Column Name="country_name" SqlDbType="VarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
         <NumberOfDistinctValues>8</NumberOfDistinctValues>
         <ValueDistribution>
@@ -3184,8 +3189,8 @@
         </ValueDistribution>
       </ColumnValueDistributionProfile>
       <ColumnValueDistributionProfile IsExact="true" ProfileRequestID="ValueDistReq">
-        <DataSourceID>{006DD8C4-4F8C-466D-B219-98861DA8DCE7}</DataSourceID>
-        <Table DataSource="DESKTOP-0IA21OI" Database="Stage" Schema="dbo" Table="PostCodes" RowCount="2848" />
+        <DataSourceID>{68B744B6-BFA4-417D-AA11-2C26D08D51D7}</DataSourceID>
+        <Table DataSource="." Database="Stage_DATH" Schema="dbo" Table="PostCodes" RowCount="2848" />
         <Column Name="iso3166-2" SqlDbType="VarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
         <NumberOfDistinctValues>8</NumberOfDistinctValues>
         <ValueDistribution>
@@ -3224,8 +3229,8 @@
         </ValueDistribution>
       </ColumnValueDistributionProfile>
       <ColumnValueDistributionProfile IsExact="true" ProfileRequestID="ValueDistReq">
-        <DataSourceID>{006DD8C4-4F8C-466D-B219-98861DA8DCE7}</DataSourceID>
-        <Table DataSource="DESKTOP-0IA21OI" Database="Stage" Schema="dbo" Table="PostCodes" RowCount="2848" />
+        <DataSourceID>{68B744B6-BFA4-417D-AA11-2C26D08D51D7}</DataSourceID>
+        <Table DataSource="." Database="Stage_DATH" Schema="dbo" Table="PostCodes" RowCount="2848" />
         <Column Name="region_code" SqlDbType="VarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
         <NumberOfDistinctValues>16</NumberOfDistinctValues>
         <ValueDistribution>
@@ -3296,8 +3301,8 @@
         </ValueDistribution>
       </ColumnValueDistributionProfile>
       <ColumnValueDistributionProfile IsExact="true" ProfileRequestID="ValueDistReq">
-        <DataSourceID>{006DD8C4-4F8C-466D-B219-98861DA8DCE7}</DataSourceID>
-        <Table DataSource="DESKTOP-0IA21OI" Database="Stage" Schema="dbo" Table="PostCodes" RowCount="2848" />
+        <DataSourceID>{68B744B6-BFA4-417D-AA11-2C26D08D51D7}</DataSourceID>
+        <Table DataSource="." Database="Stage_DATH" Schema="dbo" Table="PostCodes" RowCount="2848" />
         <Column Name="region_name" SqlDbType="VarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
         <NumberOfDistinctValues>17</NumberOfDistinctValues>
         <ValueDistribution>
@@ -3371,6 +3376,274 @@
           </ValueDistributionItem>
         </ValueDistribution>
       </ColumnValueDistributionProfile>
+      <ColumnPatternProfile ProfileRequestID="PatternReq" IsExact="true">
+        <DataSourceID>{68B744B6-BFA4-417D-AA11-2C26D08D51D7}</DataSourceID>
+        <Table DataSource="." Database="Stage_DATH" Schema="dbo" Table="PostCodes" RowCount="2848" />
+        <Column Name="postcode" SqlDbType="VarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <TopRegexPatterns>
+          <PatternDistributionItem>
+            <RegexText>\p{L}\p{L}\d\d</RegexText>
+            <Frequency>53</Frequency>
+          </PatternDistributionItem>
+          <PatternDistributionItem>
+            <RegexText>\p{L}+\d</RegexText>
+            <Frequency>36</Frequency>
+          </PatternDistributionItem>
+          <PatternDistributionItem>
+            <RegexText>\p{L}\d\d</RegexText>
+            <Frequency>8</Frequency>
+          </PatternDistributionItem>
+        </TopRegexPatterns>
+      </ColumnPatternProfile>
+      <ColumnPatternProfile ProfileRequestID="PatternReq" IsExact="true">
+        <DataSourceID>{68B744B6-BFA4-417D-AA11-2C26D08D51D7}</DataSourceID>
+        <Table DataSource="." Database="Stage_DATH" Schema="dbo" Table="PostCodes" RowCount="2848" />
+        <Column Name="easting" SqlDbType="VarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <TopRegexPatterns>
+          <PatternDistributionItem>
+            <RegexText>\d\d\d\d00</RegexText>
+            <Frequency>98</Frequency>
+          </PatternDistributionItem>
+        </TopRegexPatterns>
+      </ColumnPatternProfile>
+      <ColumnPatternProfile ProfileRequestID="PatternReq" IsExact="true">
+        <DataSourceID>{68B744B6-BFA4-417D-AA11-2C26D08D51D7}</DataSourceID>
+        <Table DataSource="." Database="Stage_DATH" Schema="dbo" Table="PostCodes" RowCount="2848" />
+        <Column Name="northing" SqlDbType="VarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <TopRegexPatterns>
+          <PatternDistributionItem>
+            <RegexText>\d\d\d\d0+</RegexText>
+            <Frequency>99</Frequency>
+          </PatternDistributionItem>
+        </TopRegexPatterns>
+      </ColumnPatternProfile>
+      <ColumnPatternProfile ProfileRequestID="PatternReq" IsExact="true">
+        <DataSourceID>{68B744B6-BFA4-417D-AA11-2C26D08D51D7}</DataSourceID>
+        <Table DataSource="." Database="Stage_DATH" Schema="dbo" Table="PostCodes" RowCount="2848" />
+        <Column Name="latitude" SqlDbType="VarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <TopRegexPatterns>
+          <PatternDistributionItem>
+            <RegexText>5\d\.\d\d\d\d\d</RegexText>
+            <Frequency>89</Frequency>
+          </PatternDistributionItem>
+          <PatternDistributionItem>
+            <RegexText>5\d\.\d\d\d\d</RegexText>
+            <Frequency>10</Frequency>
+          </PatternDistributionItem>
+        </TopRegexPatterns>
+      </ColumnPatternProfile>
+      <ColumnPatternProfile ProfileRequestID="PatternReq" IsExact="true">
+        <DataSourceID>{68B744B6-BFA4-417D-AA11-2C26D08D51D7}</DataSourceID>
+        <Table DataSource="." Database="Stage_DATH" Schema="dbo" Table="PostCodes" RowCount="2848" />
+        <Column Name="longitude" SqlDbType="VarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <TopRegexPatterns>
+          <PatternDistributionItem>
+            <RegexText>-\d\.\d\d\d\d\d</RegexText>
+            <Frequency>80</Frequency>
+          </PatternDistributionItem>
+          <PatternDistributionItem>
+            <RegexText>\d\.\d\d\d\d\d</RegexText>
+            <Frequency>10</Frequency>
+          </PatternDistributionItem>
+          <PatternDistributionItem>
+            <RegexText>-\d\.\d\d\d\d</RegexText>
+            <Frequency>7</Frequency>
+          </PatternDistributionItem>
+        </TopRegexPatterns>
+      </ColumnPatternProfile>
+      <ColumnPatternProfile ProfileRequestID="PatternReq" IsExact="true">
+        <DataSourceID>{68B744B6-BFA4-417D-AA11-2C26D08D51D7}</DataSourceID>
+        <Table DataSource="." Database="Stage_DATH" Schema="dbo" Table="PostCodes" RowCount="2848" />
+        <Column Name="city" SqlDbType="VarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <TopRegexPatterns>
+          <PatternDistributionItem>
+            <RegexText>\p{L}+</RegexText>
+            <Frequency>82</Frequency>
+          </PatternDistributionItem>
+          <PatternDistributionItem>
+            <RegexText>\p{L}+ \p{L}+</RegexText>
+            <Frequency>12</Frequency>
+          </PatternDistributionItem>
+          <PatternDistributionItem>
+            <RegexText>(\p{L}+ )+</RegexText>
+            <Frequency>4</Frequency>
+          </PatternDistributionItem>
+        </TopRegexPatterns>
+      </ColumnPatternProfile>
+      <ColumnPatternProfile ProfileRequestID="PatternReq" IsExact="true">
+        <DataSourceID>{68B744B6-BFA4-417D-AA11-2C26D08D51D7}</DataSourceID>
+        <Table DataSource="." Database="Stage_DATH" Schema="dbo" Table="PostCodes" RowCount="2848" />
+        <Column Name="county" SqlDbType="VarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <TopRegexPatterns>
+          <PatternDistributionItem>
+            <RegexText>GREATER LONDON</RegexText>
+            <Frequency>8</Frequency>
+          </PatternDistributionItem>
+          <PatternDistributionItem>
+            <RegexText>\p{L}+</RegexText>
+            <Frequency>67</Frequency>
+          </PatternDistributionItem>
+          <PatternDistributionItem>
+            <RegexText>\p{L}+ \p{L}+</RegexText>
+            <Frequency>14</Frequency>
+          </PatternDistributionItem>
+          <PatternDistributionItem>
+            <RegexText>\p{L}+ \p{L}+ \p{L}+</RegexText>
+            <Frequency>9</Frequency>
+          </PatternDistributionItem>
+        </TopRegexPatterns>
+      </ColumnPatternProfile>
+      <ColumnPatternProfile ProfileRequestID="PatternReq" IsExact="true">
+        <DataSourceID>{68B744B6-BFA4-417D-AA11-2C26D08D51D7}</DataSourceID>
+        <Table DataSource="." Database="Stage_DATH" Schema="dbo" Table="PostCodes" RowCount="2848" />
+        <Column Name="country_code" SqlDbType="VarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <TopRegexPatterns>
+          <PatternDistributionItem>
+            <RegexText>ENG</RegexText>
+            <Frequency>74</Frequency>
+          </PatternDistributionItem>
+          <PatternDistributionItem>
+            <RegexText>SCT</RegexText>
+            <Frequency>15</Frequency>
+          </PatternDistributionItem>
+          <PatternDistributionItem>
+            <RegexText>WLS</RegexText>
+            <Frequency>7</Frequency>
+          </PatternDistributionItem>
+        </TopRegexPatterns>
+      </ColumnPatternProfile>
+      <ColumnPatternProfile ProfileRequestID="PatternReq" IsExact="true">
+        <DataSourceID>{68B744B6-BFA4-417D-AA11-2C26D08D51D7}</DataSourceID>
+        <Table DataSource="." Database="Stage_DATH" Schema="dbo" Table="PostCodes" RowCount="2848" />
+        <Column Name="country_name" SqlDbType="VarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <TopRegexPatterns>
+          <PatternDistributionItem>
+            <RegexText>ENGLAND</RegexText>
+            <Frequency>74</Frequency>
+          </PatternDistributionItem>
+          <PatternDistributionItem>
+            <RegexText>SCOTLAND</RegexText>
+            <Frequency>15</Frequency>
+          </PatternDistributionItem>
+          <PatternDistributionItem>
+            <RegexText>WALES</RegexText>
+            <Frequency>7</Frequency>
+          </PatternDistributionItem>
+        </TopRegexPatterns>
+      </ColumnPatternProfile>
+      <ColumnPatternProfile ProfileRequestID="PatternReq" IsExact="true">
+        <DataSourceID>{68B744B6-BFA4-417D-AA11-2C26D08D51D7}</DataSourceID>
+        <Table DataSource="." Database="Stage_DATH" Schema="dbo" Table="PostCodes" RowCount="2848" />
+        <Column Name="iso3166-2" SqlDbType="VarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <TopRegexPatterns>
+          <PatternDistributionItem>
+            <RegexText>GB-ENG</RegexText>
+            <Frequency>74</Frequency>
+          </PatternDistributionItem>
+          <PatternDistributionItem>
+            <RegexText>GB-SCT</RegexText>
+            <Frequency>15</Frequency>
+          </PatternDistributionItem>
+          <PatternDistributionItem>
+            <RegexText>GB-WLS</RegexText>
+            <Frequency>7</Frequency>
+          </PatternDistributionItem>
+        </TopRegexPatterns>
+      </ColumnPatternProfile>
+      <ColumnPatternProfile ProfileRequestID="PatternReq" IsExact="true">
+        <DataSourceID>{68B744B6-BFA4-417D-AA11-2C26D08D51D7}</DataSourceID>
+        <Table DataSource="." Database="Stage_DATH" Schema="dbo" Table="PostCodes" RowCount="2848" />
+        <Column Name="region_code" SqlDbType="VarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <TopRegexPatterns>
+          <PatternDistributionItem>
+            <RegexText>SOUTHEAST</RegexText>
+            <Frequency>13</Frequency>
+          </PatternDistributionItem>
+          <PatternDistributionItem>
+            <RegexText>SOUTHWEST</RegexText>
+            <Frequency>10</Frequency>
+          </PatternDistributionItem>
+          <PatternDistributionItem>
+            <RegexText>NORTHWEST</RegexText>
+            <Frequency>10</Frequency>
+          </PatternDistributionItem>
+          <PatternDistributionItem>
+            <RegexText>SCOT</RegexText>
+            <Frequency>15</Frequency>
+          </PatternDistributionItem>
+          <PatternDistributionItem>
+            <RegexText>LONDON</RegexText>
+            <Frequency>10</Frequency>
+          </PatternDistributionItem>
+          <PatternDistributionItem>
+            <RegexText>YORKHUMB</RegexText>
+            <Frequency>7</Frequency>
+          </PatternDistributionItem>
+          <PatternDistributionItem>
+            <RegexText>WESTMID</RegexText>
+            <Frequency>7</Frequency>
+          </PatternDistributionItem>
+          <PatternDistributionItem>
+            <RegexText>EAST</RegexText>
+            <Frequency>9</Frequency>
+          </PatternDistributionItem>
+          <PatternDistributionItem>
+            <RegexText>EASTMID</RegexText>
+            <Frequency>5</Frequency>
+          </PatternDistributionItem>
+          <PatternDistributionItem>
+            <RegexText>.*</RegexText>
+            <Frequency>14</Frequency>
+          </PatternDistributionItem>
+        </TopRegexPatterns>
+      </ColumnPatternProfile>
+      <ColumnPatternProfile ProfileRequestID="PatternReq" IsExact="true">
+        <DataSourceID>{68B744B6-BFA4-417D-AA11-2C26D08D51D7}</DataSourceID>
+        <Table DataSource="." Database="Stage_DATH" Schema="dbo" Table="PostCodes" RowCount="2848" />
+        <Column Name="region_name" SqlDbType="VarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <TopRegexPatterns>
+          <PatternDistributionItem>
+            <RegexText>SCOTLAND</RegexText>
+            <Frequency>15</Frequency>
+          </PatternDistributionItem>
+          <PatternDistributionItem>
+            <RegexText>SOUTH EAST</RegexText>
+            <Frequency>13</Frequency>
+          </PatternDistributionItem>
+          <PatternDistributionItem>
+            <RegexText>\p{L}+ MIDLANDS</RegexText>
+            <Frequency>12</Frequency>
+          </PatternDistributionItem>
+          <PatternDistributionItem>
+            <RegexText>SOUTH WEST</RegexText>
+            <Frequency>10</Frequency>
+          </PatternDistributionItem>
+          <PatternDistributionItem>
+            <RegexText>YORKSHIRE AND THE HUMBER</RegexText>
+            <Frequency>7</Frequency>
+          </PatternDistributionItem>
+          <PatternDistributionItem>
+            <RegexText>EAST OF ENGLAND</RegexText>
+            <Frequency>8</Frequency>
+          </PatternDistributionItem>
+          <PatternDistributionItem>
+            <RegexText>NORTH WEST</RegexText>
+            <Frequency>10</Frequency>
+          </PatternDistributionItem>
+          <PatternDistributionItem>
+            <RegexText>LONDON</RegexText>
+            <Frequency>10</Frequency>
+          </PatternDistributionItem>
+          <PatternDistributionItem>
+            <RegexText>WALES</RegexText>
+            <Frequency>7</Frequency>
+          </PatternDistributionItem>
+          <PatternDistributionItem>
+            <RegexText>NORTH \p{L}+</RegexText>
+            <Frequency>4</Frequency>
+          </PatternDistributionItem>
+        </TopRegexPatterns>
+      </ColumnPatternProfile>
     </Profiles>
   </DataProfileOutput>
 </DataProfile>
