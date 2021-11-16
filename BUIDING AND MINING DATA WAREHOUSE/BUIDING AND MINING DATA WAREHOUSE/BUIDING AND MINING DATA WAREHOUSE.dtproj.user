@@ -8,6 +8,10 @@
         <UseWinAuth>false</UseWinAuth>
         <WinAuthUserName />
         <WinAuthDomain />
+<<<<<<< Updated upstream
+=======
+        <StartObjectID>Staging_Casualties.dtsx</StartObjectID>
+>>>>>>> Stashed changes
         <Run64BitRuntime>false</Run64BitRuntime>
         <UserIDs />
         <UserPasswords />

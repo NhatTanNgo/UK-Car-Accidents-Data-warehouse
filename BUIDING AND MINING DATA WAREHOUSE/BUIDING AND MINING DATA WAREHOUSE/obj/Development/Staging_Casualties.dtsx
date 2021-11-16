@@ -1,18 +1,18 @@
-﻿<?xml version="1.0"?>
+<?xml version="1.0"?>
 <DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
   DTS:refId="Package"
   DTS:CreationDate="10/17/2021 3:21:16 PM"
   DTS:CreationName="Microsoft.Package"
   DTS:CreatorComputerName="ASUS-DUCHUY"
   DTS:CreatorName="ASUS-DUCHUY\ASUS-DUCHUY"
-  DTS:DTSID="{8E12EC05-6AE5-4165-A954-5ADC2D4ABB3B}"
+  DTS:DTSID="{7EB62704-66FC-465A-BDA3-DE2998AC929F}"
   DTS:ExecutableType="Microsoft.Package"
   DTS:LastModifiedProductVersion="15.0.2000.170"
   DTS:LocaleID="1033"
-  DTS:ObjectName="Package1"
+  DTS:ObjectName="Staging_Casualties"
   DTS:PackageType="5"
-  DTS:VersionBuild="13"
-  DTS:VersionGUID="{E54D9583-1FCF-47A2-8033-E576B75D4BA2}">
+  DTS:VersionBuild="19"
+  DTS:VersionGUID="{B0366947-897B-40EC-B899-F102F6C40ADC}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -265,7 +265,7 @@
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
-          SQLTask:Connection="{3BF77565-A6B8-4CEE-9FB5-51E9914078AA}"
+          SQLTask:Connection="{D0433A59-873E-40E4-866B-A08B63E54AEA}"
           SQLTask:SqlStatementSource="truncate table Casualties" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
@@ -278,11 +278,10 @@
       DTS:LocaleID="-1"
       DTS:ObjectName="Data Profiling Task"
       DTS:TaskContact="Data Profiling Task; Microsoft Corporation; SQL Server 2019; (c) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="1">
+      DTS:ThreadHint="0">
       <DTS:Variables />
       <DTS:ObjectData>
         <DataProfilingTaskData
-          Destination="Casualties.txt"
           OverwriteDestination="True">
           <ProfileInput><![CDATA[<?xml version="1.0" encoding="utf-16"?>
 <DataProfile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.microsoft.com/sqlserver/2008/DataDebugger/">
@@ -293,31 +292,31 @@
     <Timeout>0</Timeout>
     <Requests>
       <ColumnNullRatioProfileRequest ID="NullRatioReq">
-        <DataSourceID>{BB0DBB17-1414-4394-BE40-47423C3871E6}</DataSourceID>
+        <DataSourceID>{8785A2B5-446A-4064-9DFE-0298165FE83F}</DataSourceID>
         <Table Schema="dbo" Table="Casualties" />
         <Column IsWildCard="true" />
       </ColumnNullRatioProfileRequest>
       <ColumnStatisticsProfileRequest ID="StatisticsReq">
-        <DataSourceID>{BB0DBB17-1414-4394-BE40-47423C3871E6}</DataSourceID>
+        <DataSourceID>{8785A2B5-446A-4064-9DFE-0298165FE83F}</DataSourceID>
         <Table Schema="dbo" Table="Casualties" />
         <Column IsWildCard="true" />
       </ColumnStatisticsProfileRequest>
       <ColumnLengthDistributionProfileRequest ID="LengthDistReq">
-        <DataSourceID>{BB0DBB17-1414-4394-BE40-47423C3871E6}</DataSourceID>
+        <DataSourceID>{8785A2B5-446A-4064-9DFE-0298165FE83F}</DataSourceID>
         <Table Schema="dbo" Table="Casualties" />
         <Column IsWildCard="true" />
         <IgnoreLeadingSpace>false</IgnoreLeadingSpace>
         <IgnoreTrailingSpace>true</IgnoreTrailingSpace>
       </ColumnLengthDistributionProfileRequest>
       <ColumnValueDistributionProfileRequest ID="ValueDistReq">
-        <DataSourceID>{BB0DBB17-1414-4394-BE40-47423C3871E6}</DataSourceID>
+        <DataSourceID>{8785A2B5-446A-4064-9DFE-0298165FE83F}</DataSourceID>
         <Table Schema="dbo" Table="Casualties" />
         <Column IsWildCard="true" />
         <Option>FrequentValues</Option>
         <FrequentValueThreshold>0.001</FrequentValueThreshold>
       </ColumnValueDistributionProfileRequest>
       <CandidateKeyProfileRequest ID="KeyReq">
-        <DataSourceID>{BB0DBB17-1414-4394-BE40-47423C3871E6}</DataSourceID>
+        <DataSourceID>{8785A2B5-446A-4064-9DFE-0298165FE83F}</DataSourceID>
         <Table Schema="dbo" Table="Casualties" />
         <KeyColumns>
           <Column IsWildCard="true" />
@@ -349,7 +348,7 @@
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
-          SQLTask:Connection="{3BF77565-A6B8-4CEE-9FB5-51E9914078AA}"
+          SQLTask:Connection="{D0433A59-873E-40E4-866B-A08B63E54AEA}"
           SQLTask:SqlStatementSource="SELECT LSET&#xA;FROM METADATA&#xA;WHERE TABLE_NAME = 'Casualties'"
           SQLTask:ResultType="ResultSetType_SingleRow" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
           <SQLTask:ResultBinding
@@ -388,7 +387,7 @@
                 <property
                   dataType="System.String"
                   description="Specifies the name of the database object used to open a rowset."
-                  name="OpenRowset">[Casualties1114]</property>
+                  name="OpenRowset">[dbo].[Casualties1114]</property>
                 <property
                   dataType="System.String"
                   description="Specifies the variable that contains the name of the database object used to open a rowset."
@@ -431,8 +430,8 @@
               <connections>
                 <connection
                   refId="Package\Load data into DB\Casualties1114.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[DESKTOP-0IA21OI.RawSource]"
-                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-0IA21OI.RawSource]"
+                  connectionManagerID="{1CFCE224-7018-4921-819E-8B1FB34DB6BD}:invalid"
+                  connectionManagerRefId="{1CFCE224-7018-4921-819E-8B1FB34DB6BD}:invalid"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -715,8 +714,8 @@
               <connections>
                 <connection
                   refId="Package\Load data into DB\Flat File Source.Connections[FlatFileConnection]"
-                  connectionManagerID="Package.ConnectionManagers[Casualties]"
-                  connectionManagerRefId="Package.ConnectionManagers[Casualties]"
+                  connectionManagerID="{3B2AB941-5A72-408E-99E1-6DBD6A7F4F04}:invalid"
+                  connectionManagerRefId="{3B2AB941-5A72-408E-99E1-6DBD6A7F4F04}:invalid"
                   name="FlatFileConnection" />
               </connections>
               <outputs>
@@ -1219,7 +1218,7 @@
                 <property
                   dataType="System.String"
                   description="Specifies the name of the database object used to open a rowset."
-                  name="OpenRowset">[Casualties]</property>
+                  name="OpenRowset">[dbo].[Casualties]</property>
                 <property
                   dataType="System.String"
                   description="Specifies the variable that contains the name of the database object used to open a rowset."
@@ -1262,8 +1261,8 @@
               <connections>
                 <connection
                   refId="Package\Staging\OLE DB Destination.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[DESKTOP-0IA21OI.Stage]"
-                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-0IA21OI.Stage]"
+                  connectionManagerID="{D0433A59-873E-40E4-866B-A08B63E54AEA}:invalid"
+                  connectionManagerRefId="{D0433A59-873E-40E4-866B-A08B63E54AEA}:invalid"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -1569,8 +1568,8 @@ WHERE UPDATE_TIME &gt; ?</property>
               <connections>
                 <connection
                   refId="Package\Staging\OLE DB Source.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[DESKTOP-0IA21OI.RawSource]"
-                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-0IA21OI.RawSource]"
+                  connectionManagerID="{1CFCE224-7018-4921-819E-8B1FB34DB6BD}:invalid"
+                  connectionManagerRefId="{1CFCE224-7018-4921-819E-8B1FB34DB6BD}:invalid"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -2026,7 +2025,7 @@ WHERE UPDATE_TIME &gt; ?</property>
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
-          SQLTask:Connection="{7D5B67F7-1911-4534-BA63-D69B56353C34}"
+          SQLTask:Connection="{1CFCE224-7018-4921-819E-8B1FB34DB6BD}"
           SQLTask:SqlStatementSource="UPDATE Casualties1114&#xA;SET       Create_time = GETDATE(), Update_time = GETDATE()&#xA;WHERE (Create_time IS NULL)" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
@@ -2039,11 +2038,11 @@ WHERE UPDATE_TIME &gt; ?</property>
       DTS:LocaleID="-1"
       DTS:ObjectName="Update LSET"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="0">
+      DTS:ThreadHint="1">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
-          SQLTask:Connection="{3BF77565-A6B8-4CEE-9FB5-51E9914078AA}"
+          SQLTask:Connection="{D0433A59-873E-40E4-866B-A08B63E54AEA}"
           SQLTask:SqlStatementSource="UPDATE METADATA&#xA;SET       LSET = GETDATE()&#xA;WHERE (TABLE_NAME = 'Casualties')" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
@@ -2111,15 +2110,31 @@ WHERE UPDATE_TIME &gt; ?</property>
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
+          Size="132,42.6666666666667"
+          Id="Package\Clear stage"
+          TopLeft="272.499995939434,57.1666674802702" />
+        <NodeLayout
+          Size="168,42.6666666666667"
+          Id="Package\Data Profiling Task"
+          TopLeft="365.624994551763,184.599996699095" />
+        <NodeLayout
+          Size="116,42.6666666666667"
+          Id="Package\GetLSet"
+          TopLeft="232.49999653548,126.099997745156" />
+        <NodeLayout
           Size="164,42.6666666666667"
           Id="Package\Load data into DB"
           TopLeft="67.4107209218631,76.8911774867412" />
+        <NodeLayout
+          Size="114.666666666667,42.6666666666667"
+          Id="Package\Staging"
+          TopLeft="480.62499283813,59.1499989423155" />
         <NodeLayout
           Size="173.333333333334,42.6666666666667"
           Id="Package\Update Create_time"
           TopLeft="59.9999991059304,174.199996885061" />
         <NodeLayout
-          Size="140,42.6666666666667"
+          Size="138.666666666667,42"
           Id="Package\Update LSET"
           TopLeft="566.249991562218,188.499996629358" />
         <EdgeLayout
@@ -2144,10 +2159,6 @@ WHERE UPDATE_TIME &gt; ?</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="116,42.6666666666667"
-          Id="Package\GetLSet"
-          TopLeft="232.49999653548,126.099997745156" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 1]"
           TopLeft="174.222221328153,174.199996885061">
@@ -2176,10 +2187,6 @@ WHERE UPDATE_TIME &gt; ?</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="132,42.6666666666667"
-          Id="Package\Clear stage"
-          TopLeft="272.499995939434,57.1666674802702" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 2]"
           TopLeft="290.49999653548,126.099997745156">
@@ -2214,10 +2221,6 @@ WHERE UPDATE_TIME &gt; ?</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="114.666666666667,42.6666666666667"
-          Id="Package\Staging"
-          TopLeft="480.62499283813,59.1499989423155" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 3]"
           TopLeft="404.499995939434,79.4916665446262">
@@ -2240,36 +2243,32 @@ WHERE UPDATE_TIME &gt; ?</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="168,42.6666666666667"
-          Id="Package\Data Profiling Task"
-          TopLeft="365.624994551763,184.599996699095" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 4]"
-          TopLeft="555.736103949241,101.816665608982">
+          TopLeft="555.958326171463,102.149998942316">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="80.513887612977,86.6833310203754"
+              EndConnector="79.7916653907546,86.3499976870425"
               Start="0,0"
-              End="80.513887612977,79.1833310203754">
+              End="79.7916653907546,78.8499976870425">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,31.3890663340064" />
+                    End="0,31.2509424520002" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,31.3890663340064"
-                    Point2="0,35.3890663340064"
-                    Point3="4,35.3890663340064" />
+                    Point1="0,31.2509424520002"
+                    Point2="0,35.2509424520002"
+                    Point3="4,35.2509424520002" />
                   <mssgle:LineSegment
-                    End="76.513887612977,35.3890663340064" />
+                    End="75.7916653907546,35.2509424520002" />
                   <mssgle:CubicBezierSegment
-                    Point1="76.513887612977,35.3890663340064"
-                    Point2="80.513887612977,35.3890663340064"
-                    Point3="80.513887612977,39.3890663340064" />
+                    Point1="75.7916653907546,35.2509424520002"
+                    Point2="79.7916653907546,35.2509424520002"
+                    Point3="79.7916653907546,39.2509424520002" />
                   <mssgle:LineSegment
-                    End="80.513887612977,79.1833310203754" />
+                    End="79.7916653907546,78.8499976870425" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -2321,27 +2320,27 @@ WHERE UPDATE_TIME &gt; ?</property>
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="185.333333333334,41.3333333333334"
-          Id="Package\Load data into DB\Casualties1114"
-          TopLeft="286.339287058241,92.5294159658437" />
-        <NodeLayout
-          Size="152,42.6666666666667"
+          Size="152,43"
           Id="Package\Load data into DB\Flat File Source"
           TopLeft="103.749998454005,92.2999983495474" />
+        <NodeLayout
+          Size="149,42"
+          Id="Package\Load data into DB\Casualties1114"
+          TopLeft="286.339287058241,92.5294159658437" />
         <EdgeLayout
           Id="Package\Load data into DB.Paths[Flat File Source Output]"
-          TopLeft="255.749998454005,113.414707157696">
+          TopLeft="255.749998454005,113.664707157696">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="30.5892886042365,0"
+              EndConnector="30.589288604236,0"
               Start="0,0"
-              End="23.0892886042365,0">
+              End="23.089288604236,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="23.0892886042365,0" />
+                    End="23.089288604236,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -2372,13 +2371,13 @@ WHERE UPDATE_TIME &gt; ?</property>
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="150.666666666667,42.6666666666667"
-          Id="Package\Staging\OLE DB Source"
-          TopLeft="85.6249987240881,109.199998047352" />
-        <NodeLayout
-          Size="172,42.6666666666667"
+          Size="172,43"
           Id="Package\Staging\OLE DB Destination"
           TopLeft="327.49999511987,108.549998058975" />
+        <NodeLayout
+          Size="151,43"
+          Id="Package\Staging\OLE DB Source"
+          TopLeft="85.6249987240881,109.199998047352" />
         <EdgeLayout
           Id="Package\Staging.Paths[OLE DB Source Output]"
           TopLeft="236.291665390755,130.208331386497">
@@ -2405,7 +2404,7 @@ WHERE UPDATE_TIME &gt; ?</property>
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\Staging\OLE DB Source">
+    design-time-name="Package\Staging\OLE DB Destination">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -2418,7 +2417,7 @@ WHERE UPDATE_TIME &gt; ?</property>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Staging\OLE DB Destination">
+    design-time-name="Package\Staging\OLE DB Source">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>

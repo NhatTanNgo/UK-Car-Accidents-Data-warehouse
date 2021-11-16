@@ -1,16 +1,10 @@
 use master
-if DB_ID ('Stage') is not null
-	drop database Stage
+if DB_ID ('Stage_DATH') is not null
+	drop database Stage_DATH
 
-create database Stage
+create database Stage_DATH
 go
-use Stage
-
-CREATE TABLE METADATA
-(
-	TABLE_NAME VARCHAR(100),
-	LSET DATETIME
-)
+use Stage_DATH
 
 CREATE TABLE [Vehicles] (
     [Accident_Index] varchar(50),
@@ -36,20 +30,6 @@ CREATE TABLE [Vehicles] (
     [Driver_Home_Area_Type] varchar(50)
 )
 
-INSERT METADATA
-VALUES
-('Accidents',NULL),
-('Casualties', NULL),
-('Vehicles', NULL),
-('PCD', NULL),
-('Postcodes', NULL)
-
-CREATE TABLE [dbo].[Cookbook]
-( 
-	_Code Nvarchar(150),
-	_Label nvarchar(150),
-	_Table nvarchar (100)
-)
 
 CREATE TABLE [Accidents] (
     [Accident_Index] varchar(50),
@@ -119,7 +99,10 @@ CREATE TABLE [PostCodes] (
     [region_name] varchar(50)
 )
 
-CREATE TABLE [PCD] (
+CREATE TABLE [PCD_LSOA] (
+	[pcd7] varchar(50),
+    [pcd8] varchar(50),
+    [pcds] varchar(50),
     [oa11cd] varchar(50),
     [lsoa11cd] varchar(50),
     [msoa11cd] varchar(50),

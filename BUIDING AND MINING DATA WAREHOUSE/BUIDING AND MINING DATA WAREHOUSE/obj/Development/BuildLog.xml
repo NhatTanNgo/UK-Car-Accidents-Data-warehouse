@@ -2,11 +2,16 @@
 <BuildLog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <ProjectInfo>
     <Name>BUIDING AND MINING DATA WAREHOUSE</Name>
+<<<<<<< Updated upstream
     <LastWriteTime>2021-10-20T05:30:10.9713472Z</LastWriteTime>
+=======
+    <LastWriteTime>2021-11-16T14:35:37.7394932Z</LastWriteTime>
+>>>>>>> Stashed changes
     <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
   </ProjectInfo>
   <LastBuildInfos>
     <ProjectBuildItemInfo>
+<<<<<<< Updated upstream
       <Name>RnS_Cookbook.dtsx</Name>
       <LastWriteTime>2021-10-20T04:04:59.579327Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
@@ -39,6 +44,35 @@
     <ProjectBuildItemInfo>
       <Name>RnS_Vehicles1114.dtsx</Name>
       <LastWriteTime>2021-10-20T05:08:38.8623768Z</LastWriteTime>
+=======
+      <Name>Staging_Accidents.dtsx</Name>
+      <LastWriteTime>2021-11-16T14:30:32.4898651Z</LastWriteTime>
+      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
+    </ProjectBuildItemInfo>
+    <ProjectBuildItemInfo>
+      <Name>Staging_Casualties.dtsx</Name>
+      <LastWriteTime>2021-11-16T14:30:38.8647604Z</LastWriteTime>
+      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
+    </ProjectBuildItemInfo>
+    <ProjectBuildItemInfo>
+      <Name>Staging_LSOA.dtsx</Name>
+      <LastWriteTime>2021-10-20T05:32:01.631528Z</LastWriteTime>
+      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
+    </ProjectBuildItemInfo>
+    <ProjectBuildItemInfo>
+      <Name>Staging_postcodes.dtsx</Name>
+      <LastWriteTime>2021-11-16T14:30:46.8262869Z</LastWriteTime>
+      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
+    </ProjectBuildItemInfo>
+    <ProjectBuildItemInfo>
+      <Name>Staging_Vehicles.dtsx</Name>
+      <LastWriteTime>2021-10-20T05:08:38.8623768Z</LastWriteTime>
+      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
+    </ProjectBuildItemInfo>
+    <ProjectBuildItemInfo>
+      <Name>Main_Source.dtsx</Name>
+      <LastWriteTime>2021-11-16T14:36:15.5000364Z</LastWriteTime>
+>>>>>>> Stashed changes
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
   </LastBuildInfos>

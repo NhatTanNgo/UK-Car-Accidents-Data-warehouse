@@ -1,10 +1,10 @@
 use master
-if DB_ID ('RawSource') is not null
-	drop database RawSource
+if DB_ID ('Source_DATH') is not null
+	drop database Source_DATH
 
-create database RawSource
+create database Source_DATH
 go
-use RawSource
+use Source_DATH
 
 CREATE TABLE [Accidents1114] (
     [Accident_Index] varchar(50),
@@ -127,9 +127,4 @@ CREATE TABLE [postcodes] (
 	[Update_time] datetime
 )
 
-CREATE TABLE [dbo].[Cookbook]
-( 
-	_Code Nvarchar(150),
-	_Label nvarchar(150),
-	_Sheet nvarchar (100)
-)
+

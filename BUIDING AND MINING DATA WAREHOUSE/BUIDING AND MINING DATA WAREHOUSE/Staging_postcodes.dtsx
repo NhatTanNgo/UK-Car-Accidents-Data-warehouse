@@ -5,14 +5,19 @@
   DTS:CreationName="Microsoft.Package"
   DTS:CreatorComputerName="ASUS-DUCHUY"
   DTS:CreatorName="ASUS-DUCHUY\ASUS-DUCHUY"
-  DTS:DTSID="{57950428-7E41-4216-8653-25E353D896DA}"
+  DTS:DTSID="{9E9FA53F-920B-4055-A6F1-30AE07006B7C}"
   DTS:ExecutableType="Microsoft.Package"
   DTS:LastModifiedProductVersion="15.0.2000.170"
   DTS:LocaleID="1033"
-  DTS:ObjectName="Package1"
+  DTS:ObjectName="Staging_postcodes"
   DTS:PackageType="5"
+<<<<<<< Updated upstream:BUIDING AND MINING DATA WAREHOUSE/BUIDING AND MINING DATA WAREHOUSE/RnS_postcodes.dtsx
   DTS:VersionBuild="12"
   DTS:VersionGUID="{F0E05D6D-D497-432A-BCEC-456D107FF471}">
+=======
+  DTS:VersionBuild="34"
+  DTS:VersionGUID="{62D973C1-A4DC-45E1-B85F-C33C296F4C68}">
+>>>>>>> Stashed changes:BUIDING AND MINING DATA WAREHOUSE/BUIDING AND MINING DATA WAREHOUSE/Staging_postcodes.dtsx
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -255,7 +260,10 @@
       <DTS:Variables />
       <DTS:ObjectData>
         <DataProfilingTaskData
+<<<<<<< Updated upstream:BUIDING AND MINING DATA WAREHOUSE/BUIDING AND MINING DATA WAREHOUSE/RnS_postcodes.dtsx
           Destination="Postcodes.txt"
+=======
+>>>>>>> Stashed changes:BUIDING AND MINING DATA WAREHOUSE/BUIDING AND MINING DATA WAREHOUSE/Staging_postcodes.dtsx
           OverwriteDestination="True">
           <ProfileInput><![CDATA[<?xml version="1.0" encoding="utf-16"?>
 <DataProfile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.microsoft.com/sqlserver/2008/DataDebugger/">
@@ -367,8 +375,13 @@
               <connections>
                 <connection
                   refId="Package\Load data into DB\Flat File Source.Connections[FlatFileConnection]"
+<<<<<<< Updated upstream:BUIDING AND MINING DATA WAREHOUSE/BUIDING AND MINING DATA WAREHOUSE/RnS_postcodes.dtsx
                   connectionManagerID="Package.ConnectionManagers[Postcodes]"
                   connectionManagerRefId="Package.ConnectionManagers[Postcodes]"
+=======
+                  connectionManagerID="{B96CAF4C-E02C-4A16-AC1D-45D399E0D4D3}:invalid"
+                  connectionManagerRefId="{B96CAF4C-E02C-4A16-AC1D-45D399E0D4D3}:invalid"
+>>>>>>> Stashed changes:BUIDING AND MINING DATA WAREHOUSE/BUIDING AND MINING DATA WAREHOUSE/Staging_postcodes.dtsx
                   name="FlatFileConnection" />
               </connections>
               <outputs>
@@ -805,8 +818,13 @@
               <connections>
                 <connection
                   refId="Package\Load data into DB\postcodes.Connections[OleDbConnection]"
+<<<<<<< Updated upstream:BUIDING AND MINING DATA WAREHOUSE/BUIDING AND MINING DATA WAREHOUSE/RnS_postcodes.dtsx
                   connectionManagerID="Package.ConnectionManagers[DESKTOP-0IA21OI.RawSource]"
                   connectionManagerRefId="Package.ConnectionManagers[DESKTOP-0IA21OI.RawSource]"
+=======
+                  connectionManagerID="{1CFCE224-7018-4921-819E-8B1FB34DB6BD}:invalid"
+                  connectionManagerRefId="{1CFCE224-7018-4921-819E-8B1FB34DB6BD}:invalid"
+>>>>>>> Stashed changes:BUIDING AND MINING DATA WAREHOUSE/BUIDING AND MINING DATA WAREHOUSE/Staging_postcodes.dtsx
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -1109,8 +1127,13 @@
               <connections>
                 <connection
                   refId="Package\Load data into stage\OLE DB Destination.Connections[OleDbConnection]"
+<<<<<<< Updated upstream:BUIDING AND MINING DATA WAREHOUSE/BUIDING AND MINING DATA WAREHOUSE/RnS_postcodes.dtsx
                   connectionManagerID="Package.ConnectionManagers[DESKTOP-0IA21OI.Stage]"
                   connectionManagerRefId="Package.ConnectionManagers[DESKTOP-0IA21OI.Stage]"
+=======
+                  connectionManagerID="{D0433A59-873E-40E4-866B-A08B63E54AEA}:invalid"
+                  connectionManagerRefId="{D0433A59-873E-40E4-866B-A08B63E54AEA}:invalid"
+>>>>>>> Stashed changes:BUIDING AND MINING DATA WAREHOUSE/BUIDING AND MINING DATA WAREHOUSE/Staging_postcodes.dtsx
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -1374,8 +1397,13 @@ WHERE (Update_time &gt; ?)</property>
               <connections>
                 <connection
                   refId="Package\Load data into stage\OLE DB Source.Connections[OleDbConnection]"
+<<<<<<< Updated upstream:BUIDING AND MINING DATA WAREHOUSE/BUIDING AND MINING DATA WAREHOUSE/RnS_postcodes.dtsx
                   connectionManagerID="Package.ConnectionManagers[DESKTOP-0IA21OI.RawSource]"
                   connectionManagerRefId="Package.ConnectionManagers[DESKTOP-0IA21OI.RawSource]"
+=======
+                  connectionManagerID="{1CFCE224-7018-4921-819E-8B1FB34DB6BD}:invalid"
+                  connectionManagerRefId="{1CFCE224-7018-4921-819E-8B1FB34DB6BD}:invalid"
+>>>>>>> Stashed changes:BUIDING AND MINING DATA WAREHOUSE/BUIDING AND MINING DATA WAREHOUSE/Staging_postcodes.dtsx
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -1844,10 +1872,32 @@ WHERE (Update_time &gt; ?)</property>
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
+<<<<<<< Updated upstream:BUIDING AND MINING DATA WAREHOUSE/BUIDING AND MINING DATA WAREHOUSE/RnS_postcodes.dtsx
+=======
+          Size="132,42.6666666666667"
+          Id="Package\Clear stage"
+          TopLeft="517.374992372467,104.566666132013" />
+        <NodeLayout
+          Size="168,42"
+          Id="Package\Data Profiling Task"
+          TopLeft="206,286" />
+        <NodeLayout
+          Size="120,42.6666666666667"
+          Id="Package\GetLSET"
+          TopLeft="321.249995213002,105.983331926962" />
+        <NodeLayout
+>>>>>>> Stashed changes:BUIDING AND MINING DATA WAREHOUSE/BUIDING AND MINING DATA WAREHOUSE/Staging_postcodes.dtsx
           Size="164,42.6666666666667"
           Id="Package\Load data into DB"
           TopLeft="136.124998053535,30.1999995583296" />
         <NodeLayout
+<<<<<<< Updated upstream:BUIDING AND MINING DATA WAREHOUSE/BUIDING AND MINING DATA WAREHOUSE/RnS_postcodes.dtsx
+=======
+          Size="176,42.6666666666667"
+          Id="Package\Load data into stage"
+          TopLeft="494.874992707744,226.766663946907" />
+        <NodeLayout
+>>>>>>> Stashed changes:BUIDING AND MINING DATA WAREHOUSE/BUIDING AND MINING DATA WAREHOUSE/Staging_postcodes.dtsx
           Size="173.333333333334,42.6666666666667"
           Id="Package\Update Create_time"
           TopLeft="129.374998072162,109.849998035729" />
