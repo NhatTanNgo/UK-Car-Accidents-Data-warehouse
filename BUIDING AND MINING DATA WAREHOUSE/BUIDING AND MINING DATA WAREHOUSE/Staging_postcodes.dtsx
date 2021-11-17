@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Staging_postcodes"
   DTS:PackageType="5"
-  DTS:VersionBuild="23"
-  DTS:VersionGUID="{361120F0-9407-4DF3-8F9F-7E2721575397}">
+  DTS:VersionBuild="25"
+  DTS:VersionGUID="{ACC0C09E-9498-45D8-A424-623D317EE66E}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -74,7 +74,7 @@
       DTS:LocaleID="-1"
       DTS:ObjectName="Data Profiling Task"
       DTS:TaskContact="Data Profiling Task; Microsoft Corporation; SQL Server 2019; (c) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="1">
+      DTS:ThreadHint="0">
       <DTS:Variables />
       <DTS:ObjectData>
         <DataProfilingTaskData
@@ -887,7 +887,7 @@ Where (Create_time &gt;=? and Create_time &lt;=?) or (Update_time &gt;=? and Upd
       DTS:LocaleID="-1"
       DTS:ObjectName="Update LSET"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="0">
+      DTS:ThreadHint="1">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -943,23 +943,23 @@ Where (Create_time &gt;=? and Create_time &lt;=?) or (Update_time &gt;=? and Upd
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="132,42.6666666666667"
+          Size="132,43"
           Id="Package\Clear stage"
           TopLeft="301.74999558553,103.916666143636" />
         <NodeLayout
-          Size="168,42.6666666666667"
+          Size="168,43"
           Id="Package\Data Profiling Task"
           TopLeft="201.874996991828,272.99999511838" />
         <NodeLayout
-          Size="154.666666666667,42.6666666666667"
+          Size="155,43"
           Id="Package\Get CET &amp; LSET"
           TopLeft="88.7499986775219,105.333331938585" />
         <NodeLayout
-          Size="176,42.6666666666667"
+          Size="175,42"
           Id="Package\Load data into stage"
-          TopLeft="494.874992707744,226.766663946907" />
+          TopLeft="492.874992707744,225.766663946907" />
         <NodeLayout
-          Size="140,42.6666666666667"
+          Size="140,43"
           Id="Package\Update LSET"
           TopLeft="212.499996833503,198.899996443391" />
         <EdgeLayout
@@ -986,30 +986,30 @@ Where (Create_time &gt;=? and Create_time &lt;=?) or (Update_time &gt;=? and Upd
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 3]"
-          TopLeft="367.74999558553,146.583332810303">
+          TopLeft="367.74999558553,146.916666143636">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="215.124997122214,80.1833311366044"
+              EndConnector="212.624997122214,78.849997803271"
               Start="0,0"
-              End="215.124997122214,72.6833311366044">
+              End="212.624997122214,71.349997803271">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,36.0916655683022" />
+                    End="0,35.4249989016355" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,36.0916655683022"
-                    Point2="0,40.0916655683022"
-                    Point3="4,40.0916655683022" />
+                    Point1="0,35.4249989016355"
+                    Point2="0,39.4249989016355"
+                    Point3="4,39.4249989016355" />
                   <mssgle:LineSegment
-                    End="211.124997122214,40.0916655683022" />
+                    End="208.624997122214,39.4249989016355" />
                   <mssgle:CubicBezierSegment
-                    Point1="211.124997122214,40.0916655683022"
-                    Point2="215.124997122214,40.0916655683022"
-                    Point3="215.124997122214,44.0916655683022" />
+                    Point1="208.624997122214,39.4249989016355"
+                    Point2="212.624997122214,39.4249989016355"
+                    Point3="212.624997122214,43.4249989016355" />
                   <mssgle:LineSegment
-                    End="215.124997122214,72.6833311366044" />
+                    End="212.624997122214,71.349997803271" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1020,30 +1020,30 @@ Where (Create_time &gt;=? and Create_time &lt;=?) or (Update_time &gt;=? and Upd
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 4]"
-          TopLeft="494.874992707744,242.322219502463">
+          TopLeft="492.874992707744,241.09999728024">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-142.374995874241,-22.0888897257382"
+              EndConnector="-140.374995874241,-20.7000008368493"
               Start="0,0"
-              End="-134.874995874241,-22.0888897257382">
+              End="-132.874995874241,-20.7000008368493">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="-56.0376488626317,0" />
+                    End="-55.2408239469274,0" />
                   <mssgle:CubicBezierSegment
-                    Point1="-56.0376488626317,0"
-                    Point2="-60.0376488626317,0"
-                    Point3="-60.0376488626317,-4" />
+                    Point1="-55.2408239469274,0"
+                    Point2="-59.2408239469274,0"
+                    Point3="-59.2408239469274,-4" />
                   <mssgle:LineSegment
-                    End="-60.0376488626317,-18.0888897257382" />
+                    End="-59.2408239469274,-16.7000008368493" />
                   <mssgle:CubicBezierSegment
-                    Point1="-60.0376488626317,-18.0888897257382"
-                    Point2="-60.0376488626317,-22.0888897257382"
-                    Point3="-64.0376488626317,-22.0888897257382" />
+                    Point1="-59.2408239469274,-16.7000008368493"
+                    Point2="-59.2408239469274,-20.7000008368493"
+                    Point3="-63.2408239469274,-20.7000008368493" />
                   <mssgle:LineSegment
-                    End="-134.874995874241,-22.0888897257382" />
+                    End="-132.874995874241,-20.7000008368493" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1054,30 +1054,30 @@ Where (Create_time &gt;=? and Create_time &lt;=?) or (Update_time &gt;=? and Upd
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 5]"
-          TopLeft="494.874992707744,253.877775058018">
+          TopLeft="492.874992707744,252.433330613574">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-124.999995715916,40.4555533936952"
+              EndConnector="-122.999995715916,42.0666645048064"
               Start="0,0"
-              End="-117.499995715916,40.4555533936952">
+              End="-115.499995715916,42.0666645048064">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="-48.7108415669526,0" />
+                    End="-47.9082550727719,0" />
                   <mssgle:CubicBezierSegment
-                    Point1="-48.7108415669526,0"
-                    Point2="-52.7108415669526,0"
-                    Point3="-52.7108415669526,4" />
+                    Point1="-47.9082550727719,0"
+                    Point2="-51.9082550727719,0"
+                    Point3="-51.9082550727719,4" />
                   <mssgle:LineSegment
-                    End="-52.7108415669526,36.4555533936952" />
+                    End="-51.9082550727719,38.0666645048064" />
                   <mssgle:CubicBezierSegment
-                    Point1="-52.7108415669526,36.4555533936952"
-                    Point2="-52.7108415669526,40.4555533936952"
-                    Point3="-56.7108415669526,40.4555533936952" />
+                    Point1="-51.9082550727719,38.0666645048064"
+                    Point2="-51.9082550727719,42.0666645048064"
+                    Point3="-55.9082550727719,42.0666645048064" />
                   <mssgle:LineSegment
-                    End="-117.499995715916,40.4555533936952" />
+                    End="-115.499995715916,42.0666645048064" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1095,11 +1095,11 @@ Where (Create_time &gt;=? and Create_time &lt;=?) or (Update_time &gt;=? and Upd
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="172,42.6666666666667"
+          Size="172,43"
           Id="Package\Load data into stage\OLE DB Destination"
           TopLeft="312.249995734543,45.2499992445112" />
         <NodeLayout
-          Size="150.666666666667,42.6666666666667"
+          Size="151,43"
           Id="Package\Load data into stage\OLE DB Source"
           TopLeft="83.124998761341,48.7499991282821" />
         <EdgeLayout
