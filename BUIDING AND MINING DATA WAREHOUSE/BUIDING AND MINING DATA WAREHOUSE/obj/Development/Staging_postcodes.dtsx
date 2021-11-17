@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Staging_postcodes"
   DTS:PackageType="5"
-  DTS:VersionBuild="23"
-  DTS:VersionGUID="{361120F0-9407-4DF3-8F9F-7E2721575397}">
+  DTS:VersionBuild="24"
+  DTS:VersionGUID="{D4BE87D3-7EA0-4D9C-9D40-712D01591777}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -74,7 +74,7 @@
       DTS:LocaleID="-1"
       DTS:ObjectName="Data Profiling Task"
       DTS:TaskContact="Data Profiling Task; Microsoft Corporation; SQL Server 2019; (c) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="0">
+      DTS:ThreadHint="1">
       <DTS:Variables />
       <DTS:ObjectData>
         <DataProfilingTaskData
@@ -887,7 +887,7 @@ Where (Create_time &gt;=? and Create_time &lt;=?) or (Update_time &gt;=? and Upd
       DTS:LocaleID="-1"
       DTS:ObjectName="Update LSET"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="1">
+      DTS:ThreadHint="0">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -943,23 +943,23 @@ Where (Create_time &gt;=? and Create_time &lt;=?) or (Update_time &gt;=? and Upd
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="132,42.6666666666667"
+          Size="132,42.4"
           Id="Package\Clear stage"
           TopLeft="301.74999558553,103.916666143636" />
         <NodeLayout
-          Size="168,42.6666666666667"
+          Size="168,42.4"
           Id="Package\Data Profiling Task"
           TopLeft="201.874996991828,272.99999511838" />
         <NodeLayout
-          Size="154.666666666667,42.6666666666667"
+          Size="154.4,42.4"
           Id="Package\Get CET &amp; LSET"
           TopLeft="88.7499986775219,105.333331938585" />
         <NodeLayout
-          Size="176,42.6666666666667"
+          Size="176,42.4"
           Id="Package\Load data into stage"
           TopLeft="494.874992707744,226.766663946907" />
         <NodeLayout
-          Size="140,42.6666666666667"
+          Size="140,42.4"
           Id="Package\Update LSET"
           TopLeft="212.499996833503,198.899996443391" />
         <EdgeLayout

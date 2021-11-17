@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="7"
-  DTS:VersionGUID="{2ED41990-069F-444C-BBE7-FDFC0E73E5E6}">
+  DTS:VersionBuild="13"
+  DTS:VersionGUID="{1AFDF343-4C72-4AE2-8528-0C34CE3C7757}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -767,7 +767,7 @@
           DTS:RowDelimiter=""
           DTS:TextQualifier="_x003C_none_x003E_"
           DTS:CodePage="1252"
-          DTS:ConnectionString="D:\Downloads\BI\BI_Project\UK-Car-Accidents-Data-warehouse\Dataset\Vehicles1114.csv">
+          DTS:ConnectionString="C:\Users\phamd\Desktop\UK-Car-Accidents-Data-warehouse\Dataset\Vehicles1114.csv">
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -776,7 +776,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Accident_Index"
-              DTS:DTSID="{0341877F-5FBF-4D6D-884D-4C04FE8ACCA7}"
+              DTS:DTSID="{8DFA9AB3-071F-43B4-9357-A744E733EEE8}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -785,7 +785,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Vehicle_Reference"
-              DTS:DTSID="{7AF6E8CE-C119-4C8B-A5A2-A1A699D79FE8}"
+              DTS:DTSID="{117898BF-9756-428E-B273-F0F91CCE78FC}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -794,7 +794,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Vehicle_Type"
-              DTS:DTSID="{A5FBBB01-8134-4E30-B0B3-176F39CCE480}"
+              DTS:DTSID="{9A84C638-D0F6-44EE-8AA6-F82C93380674}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -803,7 +803,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Towing_and_Articulation"
-              DTS:DTSID="{3ECD15BC-735C-4DFB-86D5-D4A80932CCD9}"
+              DTS:DTSID="{55A1E4A3-6414-434C-92CE-CB57BBE4E8C2}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -812,7 +812,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Vehicle_Manoeuvre"
-              DTS:DTSID="{3EBC38E1-9DDF-40FE-9634-831B25FFD8B7}"
+              DTS:DTSID="{C49F5818-235F-4F14-8B3C-F8213C91EC38}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -821,7 +821,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Vehicle_Location-Restricted_Lane"
-              DTS:DTSID="{1B831E7B-B6C5-4A41-9D00-82C77E90CDC8}"
+              DTS:DTSID="{B474FAFC-ADD5-4180-A480-4138C7BA7906}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -830,7 +830,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Junction_Location"
-              DTS:DTSID="{65A60BCE-1BA6-46BC-819F-C3A69C400444}"
+              DTS:DTSID="{06895545-5B59-4852-923B-A882DF4EFE65}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -839,7 +839,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Skidding_and_Overturning"
-              DTS:DTSID="{A7A8D852-2974-4D86-BDEE-BE624A73FDE5}"
+              DTS:DTSID="{2FC054C0-E85D-4AE9-AD66-F3B90CC9CBF7}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -848,7 +848,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Hit_Object_in_Carriageway"
-              DTS:DTSID="{3293EB05-A7E2-4BE5-A38D-430184DF7EF8}"
+              DTS:DTSID="{B0D0A0DA-2957-4C23-AE9A-16464A6E5747}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -857,7 +857,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Vehicle_Leaving_Carriageway"
-              DTS:DTSID="{3171D339-C17E-422A-888F-497DBEED1844}"
+              DTS:DTSID="{8F73A06F-5FFE-4428-8649-8E768F907310}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -866,7 +866,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Hit_Object_off_Carriageway"
-              DTS:DTSID="{386773A6-72E5-4D20-A7C4-791223739B08}"
+              DTS:DTSID="{F2615B4D-445F-4B00-A5C8-81338EB78C18}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -875,7 +875,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="1st_Point_of_Impact"
-              DTS:DTSID="{A398C553-A07A-4421-A174-6690A4DD8B7F}"
+              DTS:DTSID="{5933C1DF-775B-4BC7-94D5-6A716DB65C00}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -884,7 +884,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Was_Vehicle_Left_Hand_Drive?"
-              DTS:DTSID="{6175014D-EDD3-432D-A0D3-609349937C1C}"
+              DTS:DTSID="{4F5E7564-E2B9-4EC7-B330-1EA537095496}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -893,7 +893,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Journey_Purpose_of_Driver"
-              DTS:DTSID="{072B4E31-E92C-46ED-B351-251C2BF16366}"
+              DTS:DTSID="{E2FCC883-A8B4-48FA-9ECB-CC056BB35AEE}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -902,7 +902,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Sex_of_Driver"
-              DTS:DTSID="{CC4FC876-C18A-4811-817B-F5633D1B271E}"
+              DTS:DTSID="{F1B0A9FB-029C-4C3B-9376-450AB5CD3422}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -911,7 +911,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Age_of_Driver"
-              DTS:DTSID="{FBE81020-4000-4653-B44C-AA4BC0D8E480}"
+              DTS:DTSID="{7FA18A9C-710D-472A-BEAF-268BA54527A9}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -920,7 +920,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Age_Band_of_Driver"
-              DTS:DTSID="{2397847F-2789-4B33-91F3-11F308185D3E}"
+              DTS:DTSID="{927117DE-A0F2-498C-959B-9893B4897C3B}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -929,7 +929,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Engine_Capacity_(CC)"
-              DTS:DTSID="{0BD0341D-7895-4D49-8802-D578F7DFAF96}"
+              DTS:DTSID="{3CEB7F67-6459-4CA0-BEE3-D024AA829F40}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -938,7 +938,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Propulsion_Code"
-              DTS:DTSID="{6E49C798-C544-4C69-893F-CA70C2543368}"
+              DTS:DTSID="{B4474B34-083A-4875-B714-54EC4A4FE3AE}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -947,7 +947,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Age_of_Vehicle"
-              DTS:DTSID="{EA93E632-CDC7-4AC0-A4F6-0CD7DBAE0831}"
+              DTS:DTSID="{3C00C6C6-57A9-4578-8407-6F57D3A46504}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -956,7 +956,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Driver_IMD_Decile"
-              DTS:DTSID="{9A734939-767D-4287-BC5E-9D84972B0915}"
+              DTS:DTSID="{7526E273-3960-4388-BC5E-264D0EF81239}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -965,7 +965,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Driver_Home_Area_Type"
-              DTS:DTSID="{AD7A5A5A-3A5A-4425-9667-51C7010A3809}"
+              DTS:DTSID="{C236CE54-EB68-40E2-9675-9A2BC327652D}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
@@ -5387,8 +5387,8 @@
               <connections>
                 <connection
                   refId="Package\Vehicle\Flat File Source.Connections[FlatFileConnection]"
-                  connectionManagerID="Package.ConnectionManagers[Vehicle]"
-                  connectionManagerRefId="Package.ConnectionManagers[Vehicle]"
+                  connectionManagerID="{00D4B144-FC2F-4E26-A343-028F40671D32}:invalid"
+                  connectionManagerRefId="{00D4B144-FC2F-4E26-A343-028F40671D32}:invalid"
                   name="FlatFileConnection" />
               </connections>
               <outputs>
@@ -6541,23 +6541,23 @@
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="124,42.6666666666667"
+          Size="124,42.4"
           Id="Package\Accidents"
           TopLeft="44.374999338761,94.2499983146787" />
         <NodeLayout
-          Size="126.666666666667,42.6666666666667"
+          Size="126.4,42.4"
           Id="Package\Casualties"
           TopLeft="211.24999685213,92.9499983379245" />
         <NodeLayout
-          Size="104.666666666667,42.6666666666667"
+          Size="104.8,42.4"
           Id="Package\LSOA"
           TopLeft="162.499997578561,240.499995699525" />
         <NodeLayout
-          Size="124,42.6666666666667"
+          Size="124,42.4"
           Id="Package\PostCode"
           TopLeft="343.749994877726,150.799997303486" />
         <NodeLayout
-          Size="113.333333333334,42.6666666666667"
+          Size="113.6,42.4"
           Id="Package\Vehicle"
           TopLeft="354.374994719401,246.349995594919" />
         <EdgeLayout
@@ -6661,7 +6661,7 @@
     design-time-name="Package\Accidents">
     <LayoutInfo>
       <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="172,42.6666666666667"
           Id="Package\Accidents\OLE DB Destination"
@@ -6705,7 +6705,9 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -6739,7 +6741,9 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -6762,7 +6766,7 @@
     design-time-name="Package\Casualties">
     <LayoutInfo>
       <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="172,42.6666666666667"
           Id="Package\Casualties\OLE DB Destination"
@@ -6806,7 +6810,9 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -6840,7 +6846,9 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -6863,7 +6871,7 @@
     design-time-name="Package\LSOA">
     <LayoutInfo>
       <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="172,42.6666666666667"
           Id="Package\LSOA\OLE DB Destination"
@@ -6907,7 +6915,9 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -6941,27 +6951,42 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\LSOA\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
   <TaskHost
     design-time-name="Package\PostCode">
     <LayoutInfo>
       <GraphLayout
         Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="172,42.6666666666667"
-          Id="Package\PostCode\OLE DB Destination"
-          TopLeft="400,60" />
-        <NodeLayout
-          Size="154.666666666667,42.6666666666667"
+          Size="154.4,42.4"
           Id="Package\PostCode\Derived Column"
           TopLeft="219,146" />
         <NodeLayout
-          Size="152,42.6666666666667"
+          Size="172,42.4"
+          Id="Package\PostCode\OLE DB Destination"
+          TopLeft="400,60" />
+        <NodeLayout
+          Size="152,42.4"
           Id="Package\PostCode\Flat File Source"
           TopLeft="60,61" />
         <EdgeLayout
@@ -7035,49 +7060,62 @@
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\PostCode\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
   <TaskHost
     design-time-name="Package\Vehicle">
     <LayoutInfo>
       <GraphLayout
         Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="172,42.6666666666667"
+          Size="172,42.4"
           Id="Package\Vehicle\OLE DB Destination"
           TopLeft="400,60" />
         <NodeLayout
-          Size="154.666666666667,42.6666666666667"
+          Size="154.4,42.4"
           Id="Package\Vehicle\Derived Column"
           TopLeft="219,146" />
         <NodeLayout
-          Size="152,42.6666666666667"
+          Size="152,42.4"
           Id="Package\Vehicle\Flat File Source"
-          TopLeft="60,61" />
+          TopLeft="15.7142849601045,51.8235292830682" />
         <EdgeLayout
           Id="Package\Vehicle.Paths[Flat File Source Output]"
-          TopLeft="136,103.666666666667">
+          TopLeft="91.7142849601045,94.2235292830682">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="160.333333333333,42.3333333333333"
+              EndConnector="180.085715039896,51.7764707169318"
               Start="0,0"
-              End="160.333333333333,34.8333333333333">
+              End="180.085715039896,44.2764707169318">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,17.1666666666667" />
+                    End="0,26.747257994978" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,17.1666666666667"
-                    Point2="0,21.1666666666667"
-                    Point3="4,21.1666666666667" />
+                    Point1="0,26.747257994978"
+                    Point2="0,30.747257994978"
+                    Point3="4,30.747257994978" />
                   <mssgle:LineSegment
-                    End="156.333333333333,21.1666666666667" />
+                    End="176.085715039896,30.747257994978" />
                   <mssgle:CubicBezierSegment
-                    Point1="156.333333333333,21.1666666666667"
-                    Point2="160.333333333333,21.1666666666667"
-                    Point3="160.333333333333,25.1666666666667" />
+                    Point1="176.085715039896,30.747257994978"
+                    Point2="180.085715039896,30.747257994978"
+                    Point3="180.085715039896,34.747257994978" />
                   <mssgle:LineSegment
-                    End="160.333333333333,34.8333333333333" />
+                    End="180.085715039896,44.2764707169318" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -7124,33 +7162,7 @@
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\PostCode\OLE DB Destination">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
     design-time-name="Package\Vehicle\OLE DB Destination">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\LSOA\OLE DB Destination">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
