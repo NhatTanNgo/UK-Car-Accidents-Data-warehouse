@@ -11,12 +11,29 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="1"
-  DTS:VersionGUID="{B72076AE-A30F-4976-9770-CED22642AE91}">
+  DTS:VersionBuild="2"
+  DTS:VersionGUID="{EE8979EC-2DDC-41A5-A296-5DFBA7BD249F}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables />
   <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Codebook"
+      DTS:CreationName="Microsoft.ExecutePackageTask"
+      DTS:Description="Execute Package Task"
+      DTS:DTSID="{FC356D14-E4CE-40AF-A458-3D68EF93D13E}"
+      DTS:ExecutableType="Microsoft.ExecutePackageTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Codebook"
+      DTS:TaskContact="Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <ExecutePackageTask>
+          <UseProjectReference>True</UseProjectReference>
+          <PackageName>NDS_CodeBook.dtsx</PackageName>
+        </ExecutePackageTask>
+      </DTS:ObjectData>
+    </DTS:Executable>
     <DTS:Executable
       DTS:refId="Package\Country_Region"
       DTS:CreationName="Microsoft.ExecutePackageTask"
@@ -31,6 +48,40 @@
         <ExecutePackageTask>
           <UseProjectReference>True</UseProjectReference>
           <PackageName>NDS_Country_Region.dtsx</PackageName>
+        </ExecutePackageTask>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Location"
+      DTS:CreationName="Microsoft.ExecutePackageTask"
+      DTS:Description="Execute Package Task"
+      DTS:DTSID="{94FC1913-7061-4C3C-9153-E2873527200E}"
+      DTS:ExecutableType="Microsoft.ExecutePackageTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Location"
+      DTS:TaskContact="Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <ExecutePackageTask>
+          <UseProjectReference>True</UseProjectReference>
+          <PackageName>NDS_Location.dtsx</PackageName>
+        </ExecutePackageTask>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Postcode"
+      DTS:CreationName="Microsoft.ExecutePackageTask"
+      DTS:Description="Execute Package Task"
+      DTS:DTSID="{CD8495F4-FE17-4878-9D19-30FC3F94583B}"
+      DTS:ExecutableType="Microsoft.ExecutePackageTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Postcode"
+      DTS:TaskContact="Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <ExecutePackageTask>
+          <UseProjectReference>True</UseProjectReference>
+          <PackageName>NDS_Postcode.dtsx</PackageName>
         </ExecutePackageTask>
       </DTS:ObjectData>
     </DTS:Executable>
@@ -51,6 +102,18 @@
           Size="154.666666666667,42.6666666666667"
           Id="Package\Country_Region"
           TopLeft="47.4999992921949,100.099998210073" />
+        <NodeLayout
+          Size="126.666666666667,42.6666666666667"
+          Id="Package\Codebook"
+          TopLeft="54.9999991804361,163.799997071028" />
+        <NodeLayout
+          Size="118.666666666667,42.6666666666667"
+          Id="Package\Location"
+          TopLeft="227.499996609986,165.749997036159" />
+        <NodeLayout
+          Size="121.333333333334,42.6666666666667"
+          Id="Package\Postcode"
+          TopLeft="226.874996619299,104.649998128712" />
       </GraphLayout>
     </LayoutInfo>
   </Package>

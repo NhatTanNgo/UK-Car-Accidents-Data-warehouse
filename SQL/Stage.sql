@@ -2,8 +2,11 @@ use master
 
 if DB_ID ('Stage_DATH') is not null
 	drop database Stage_DATH
+GO
+
 create database Stage_DATH
 GO
+
 
 ALTER DATABASE Stage_DATH SET SINGLE_USER
 ALTER DATABASE Stage_DATH SET COMPATIBILITY_LEVEL = 130
@@ -123,8 +126,6 @@ CREATE TABLE [Wiki_Postcodes] (
     [Post town] varchar(50),
     [status] int
 )
-
-SELECT * FROM dbo.Wiki_Postcodes
 GO
 
 CREATE PROC Wiki_Split_SingleRow
@@ -167,4 +168,4 @@ BEGIN
 END
 GO
 
-SELECT * FROM dbo.PCD_LSOA
+

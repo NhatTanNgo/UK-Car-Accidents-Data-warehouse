@@ -4,6 +4,8 @@ if DB_ID ('NDS_DATH') is not null
 GO
 
 CREATE DATABASE NDS_DATH 
+GO
+
 USE NDS_DATH
 GO
 
@@ -75,9 +77,17 @@ CREATE TABLE CasualtyType
 
 CREATE TABLE JourneyPurpose
 (
-	JourneyPurpose_ID INT IDENTITY PRIMARY KEY,
+	JourneyPurpose_ID INT IDENTITY(1,1) PRIMARY KEY,
 	Code_NK VARCHAR(50),
 	Label VARCHAR(50),
+	Source_ID INT FOREIGN KEY REFERENCES dbo.Source_NDS
+)
+
+CREATE TABLE PoliceForce
+( 
+	PoliceForce_ID INT IDENTITY(1,1) PRIMARY KEY,
+	Code_NK NVARCHAR(50),
+	Label NVARCHAR(150),
 	Source_ID INT FOREIGN KEY REFERENCES dbo.Source_NDS
 )
 
@@ -136,6 +146,7 @@ CREATE TABLE Accidents
 	SpeedLimit INT,
 	Build_Up_Road VARCHAR(50),
 	Location_ID INT FOREIGN KEY REFERENCES dbo.Location,
+	Police_ID INT FOREIGN KEY REFERENCES dbo.PoliceForce,
 	Source_ID INT FOREIGN KEY REFERENCES dbo.Source_NDS
 )
 
@@ -164,3 +175,6 @@ CREATE TABLE Vehicle
 	VehicleAge INT,
 	Source_ID INT FOREIGN KEY REFERENCES dbo.Source_NDS
 )
+
+
+

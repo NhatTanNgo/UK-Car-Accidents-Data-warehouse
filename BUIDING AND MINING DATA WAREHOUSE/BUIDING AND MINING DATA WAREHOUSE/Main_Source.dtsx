@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="9"
-  DTS:VersionGUID="{30FCBB1F-4624-4593-AA04-B8360DFC2544}">
+  DTS:VersionBuild="10"
+  DTS:VersionGUID="{A6D2C827-9B39-4B4B-B095-EB778BCC0308}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -488,7 +488,7 @@
         <DTS:ConnectionManager
           DTS:ConnectRetryCount="0"
           DTS:ConnectRetryInterval="0"
-          DTS:ConnectionString="Provider=Microsoft.ACE.OLEDB.12.0;Data Source=D:\Downloads\BI\BI_Project\UK-Car-Accidents-Data-warehouse\Dataset\wikipostcodes.xlsx;Extended Properties=&quot;Excel 12.0 XML;HDR=YES&quot;;" />
+          DTS:ConnectionString="Provider=Microsoft.ACE.OLEDB.12.0;Data Source=D:\Downloads\BI\BI_Project\UK-Car-Accidents-Data-warehouse\Dataset\wikipostcodes.xlsx;Extended Properties=&quot;EXCEL 12.0 XML;HDR=YES&quot;;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
@@ -505,7 +505,7 @@
           DTS:RowDelimiter=""
           DTS:TextQualifier="_x003C_none_x003E_"
           DTS:CodePage="1252"
-          DTS:ConnectionString="D:\Downloads\BI\BI_Project\UK-Car-Accidents-Data-warehouse\Dataset\PCD_OA_LSOA_MSOA_LAD_AUG21_UK_LU.csv">
+          DTS:ConnectionString="C:\Users\khoaf\Documents\Academic\Senior 1st\BI\Về nhà\TH\Đồ án\UK Accidents Data\PCD_OA_LSOA_MSOA_LAD_AUG21_UK_LU.csv">
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -514,7 +514,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="pcd7"
-              DTS:DTSID="{E14E56D9-3CB6-4BC3-BE2D-A55028B8C1BE}"
+              DTS:DTSID="{924E8C9C-4FE5-466D-B388-8190A0A38ECB}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -523,7 +523,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="pcd8"
-              DTS:DTSID="{00EE0812-E021-460A-BBF9-2EBCBBE0F5B7}"
+              DTS:DTSID="{1572548E-68C3-4438-ABAC-BEE0EE93BAC4}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -532,7 +532,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="pcds"
-              DTS:DTSID="{52BB9219-4ED8-4966-B32C-4AA8F8C809CA}"
+              DTS:DTSID="{667591E4-0D84-4BD5-B6E2-78A31FCA63DD}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -541,7 +541,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="dointr"
-              DTS:DTSID="{9A31FF7A-3925-40E6-83F2-FF4E31F9AD55}"
+              DTS:DTSID="{89AC9AF9-FD8C-40AB-8604-37BB3F360592}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -550,7 +550,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="doterm"
-              DTS:DTSID="{7F91325A-EDEA-48BC-97BF-B86F57C13B12}"
+              DTS:DTSID="{3A0240A8-E0E8-4B2B-8492-CDC84907D6AC}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -559,7 +559,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="usertype"
-              DTS:DTSID="{566A9FB0-F131-46F9-A52E-28B7B73A22E8}"
+              DTS:DTSID="{7BA82CEC-C1A4-46F4-BDB9-7247631B3F78}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -568,7 +568,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="oa11cd"
-              DTS:DTSID="{D4036815-8155-4720-91B1-7C21D3125CC1}"
+              DTS:DTSID="{BCB571C1-A117-4343-A022-BB5B9A1EF8A4}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -577,7 +577,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="lsoa11cd"
-              DTS:DTSID="{15C68F09-113D-4FA1-8C09-21861845B9C5}"
+              DTS:DTSID="{3649D89E-6ADE-4173-9882-20CDE48725AE}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -586,7 +586,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="msoa11cd"
-              DTS:DTSID="{6BE1F120-652E-41C2-BD63-38B380C910E9}"
+              DTS:DTSID="{3C34F3A8-BC90-4841-AA1D-30DBBC3EDAD5}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -595,7 +595,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="ladcd"
-              DTS:DTSID="{385FD3C6-5C0B-44F9-A244-24697F3A2AC9}"
+              DTS:DTSID="{5E70CE4C-EA7E-4AA0-BAB4-C253CFB3F432}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -604,7 +604,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="lsoa11nm"
-              DTS:DTSID="{A2D4DBFB-8E4F-4375-AE32-14926512BA30}"
+              DTS:DTSID="{FD27499F-14BA-43C6-88B6-D82F218C9218}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -613,7 +613,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="msoa11nm"
-              DTS:DTSID="{ACF3ACB9-5928-4CEA-AA56-5E1560312F7F}"
+              DTS:DTSID="{D9D2038D-1E6B-443E-B2A8-55EE2D8BD2C8}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -622,7 +622,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="ladnm"
-              DTS:DTSID="{7D089BA3-B115-4321-B7D0-AADDD030428B}"
+              DTS:DTSID="{E8B0B0B2-8933-4CC3-8810-0C6B8DEA16E5}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -631,7 +631,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="ladnmw"
-              DTS:DTSID="{1F20B9EA-6967-4007-BBEA-05BB7939DCD6}"
+              DTS:DTSID="{09F71644-3BD3-400B-A642-12BE0AF3D1F1}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
@@ -7198,25 +7198,29 @@
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="124,42.6666666666667"
+          Size="124,43"
           Id="Package\Accidents"
           TopLeft="44.374999338761,94.2499983146787" />
         <NodeLayout
-          Size="126.666666666667,42.6666666666667"
+          Size="127,43"
           Id="Package\Casualties"
           TopLeft="211.24999685213,92.9499983379245" />
         <NodeLayout
-          Size="104.666666666667,42.6666666666667"
+          Size="105,43"
           Id="Package\LSOA"
           TopLeft="219.374996731058,169.649996966422" />
         <NodeLayout
-          Size="124,42.6666666666667"
+          Size="124,43"
           Id="Package\PostCode"
           TopLeft="365.624994551763,95.549998291433" />
         <NodeLayout
-          Size="113.333333333334,42.6666666666667"
+          Size="113,43"
           Id="Package\Vehicle"
           TopLeft="366.874994533137,174.849996873439" />
+        <NodeLayout
+          Size="100,43"
+          Id="Package\Wiki"
+          TopLeft="61.8749990779907,164.449997059405" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
           TopLeft="168.374999338761,114.933331659635">
@@ -7305,10 +7309,6 @@
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="100,42.6666666666667"
-          Id="Package\Wiki"
-          TopLeft="61.8749990779907,164.449997059405" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 4]"
           TopLeft="219.374996731058,188.383330346247">
@@ -7548,17 +7548,17 @@
     design-time-name="Package\LSOA">
     <LayoutInfo>
       <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="172,42.6666666666667"
+          Size="172,43"
           Id="Package\LSOA\OLE DB Destination"
           TopLeft="400,60" />
         <NodeLayout
-          Size="154.666666666667,42.6666666666667"
+          Size="155,43"
           Id="Package\LSOA\Derived Column"
           TopLeft="219,146" />
         <NodeLayout
-          Size="152,42.6666666666667"
+          Size="152,43"
           Id="Package\LSOA\Flat File Source"
           TopLeft="60,61" />
         <EdgeLayout
@@ -7592,9 +7592,7 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -7628,9 +7626,7 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -7863,7 +7859,11 @@
     design-time-name="Package\Wiki">
     <LayoutInfo>
       <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="139.333333333334,42.6666666666667"
+          Id="Package\Wiki\Excel Source"
+          TopLeft="105.624998426065,51.3499990817904" />
         <NodeLayout
           Size="132,42.6666666666667"
           Id="Package\Wiki\Timestamp"
@@ -7873,9 +7873,9 @@
           Id="Package\Wiki\OLE DB Destination"
           TopLeft="292.49999564141,48.749999128282" />
         <NodeLayout
-          Size="139.333333333334,42.6666666666667"
-          Id="Package\Wiki\Excel Source"
-          TopLeft="105.624998426065,51.3499990817904" />
+          Size="157.333333333334,42.6666666666667"
+          Id="Package\Wiki\Data Conversion"
+          TopLeft="297.499995566905,145.599997396469" />
         <EdgeLayout
           Id="Package\Wiki.Paths[Excel Source Output]"
           TopLeft="175.020831736115,94.0166657484571">
@@ -7895,13 +7895,11 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="157.333333333334,42.6666666666667"
-          Id="Package\Wiki\Data Conversion"
-          TopLeft="297.499995566905,145.599997396469" />
         <EdgeLayout
           Id="Package\Wiki.Paths[Derived Column Output]"
           TopLeft="240.749998379499,164.333330776294">
@@ -7921,7 +7919,9 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -7943,14 +7943,16 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\Wiki\OLE DB Destination">
+    design-time-name="Package\Wiki\Excel Source">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -7963,7 +7965,7 @@
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Wiki\Excel Source">
+    design-time-name="Package\Wiki\OLE DB Destination">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
