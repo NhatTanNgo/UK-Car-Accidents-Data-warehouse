@@ -2,6 +2,8 @@ use master
 
 if DB_ID ('Stage_DATH') is not null
 	drop database Stage_DATH
+GO
+
 create database Stage_DATH
 GO
 
@@ -124,7 +126,7 @@ CREATE TABLE [Wiki_Postcodes] (
     [Post town] varchar(50),
     [status] int
 )
-
+GO
 
 CREATE PROC Wiki_Split_SingleRow
 AS

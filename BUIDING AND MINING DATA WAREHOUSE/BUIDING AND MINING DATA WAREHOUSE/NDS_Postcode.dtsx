@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="6"
-  DTS:VersionGUID="{D55E286A-F473-47F5-9FD2-2D06CA34CED5}">
+  DTS:VersionBuild="7"
+  DTS:VersionGUID="{9963A13B-F7EE-4E95-BF3D-6C2B0775970A}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables />
@@ -6314,14 +6314,14 @@ WHERE Postcode = ? AND LSOA11CD = ?</property>
               startId="Package\NDS_Postcode\Get Region_ID.Outputs[Merge Join Output]" />
             <path
               refId="Package\NDS_Postcode.Paths[OLE DB Source Output4]"
-              endId="Package\NDS_Postcode\Sort_wiki.Inputs[Sort Input]"
+              endId="Package\NDS_Postcode\Trim pcd7.Inputs[Derived Column Input]"
               name="OLE DB Source Output"
-              startId="Package\NDS_Postcode\Wiki.Outputs[OLE DB Source Output]" />
+              startId="Package\NDS_Postcode\LSOA.Outputs[OLE DB Source Output]" />
             <path
               refId="Package\NDS_Postcode.Paths[OLE DB Source Output3]"
-              endId="Package\NDS_Postcode\Sort_NDS_Region.Inputs[Sort Input]"
+              endId="Package\NDS_Postcode\Sort_Postcode.Inputs[Sort Input]"
               name="OLE DB Source Output"
-              startId="Package\NDS_Postcode\NDS_Region.Outputs[OLE DB Source Output]" />
+              startId="Package\NDS_Postcode\Postcode.Outputs[OLE DB Source Output]" />
             <path
               refId="Package\NDS_Postcode.Paths[OLE DB Source Output2]"
               endId="Package\NDS_Postcode\Sort_Country_NDS.Inputs[Sort Input]"
@@ -6329,14 +6329,14 @@ WHERE Postcode = ? AND LSOA11CD = ?</property>
               startId="Package\NDS_Postcode\NDS_Country.Outputs[OLE DB Source Output]" />
             <path
               refId="Package\NDS_Postcode.Paths[OLE DB Source Output1]"
-              endId="Package\NDS_Postcode\Sort_Postcode.Inputs[Sort Input]"
+              endId="Package\NDS_Postcode\Sort_NDS_Region.Inputs[Sort Input]"
               name="OLE DB Source Output"
-              startId="Package\NDS_Postcode\Postcode.Outputs[OLE DB Source Output]" />
+              startId="Package\NDS_Postcode\NDS_Region.Outputs[OLE DB Source Output]" />
             <path
               refId="Package\NDS_Postcode.Paths[OLE DB Source Output]"
-              endId="Package\NDS_Postcode\Trim pcd7.Inputs[Derived Column Input]"
+              endId="Package\NDS_Postcode\Sort_wiki.Inputs[Sort Input]"
               name="OLE DB Source Output"
-              startId="Package\NDS_Postcode\LSOA.Outputs[OLE DB Source Output]" />
+              startId="Package\NDS_Postcode\Wiki.Outputs[OLE DB Source Output]" />
             <path
               refId="Package\NDS_Postcode.Paths[Sort Output]"
               endId="Package\NDS_Postcode\Fill_city.Inputs[Merge Join Left Input]"
@@ -6432,11 +6432,11 @@ WHERE Postcode = ? AND LSOA11CD = ?</property>
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="148,42.6666666666667"
+          Size="148,43"
           Id="Package\NDS_Postcode"
           TopLeft="66.2499990127981,189.149996617734" />
         <NodeLayout
-          Size="156,42.6666666666667"
+          Size="156,43"
           Id="Package\Split Stage_Wiki"
           TopLeft="61.2499990873039,103.999998140335" />
         <EdgeLayout
@@ -6470,119 +6470,119 @@ WHERE Postcode = ? AND LSOA11CD = ?</property>
       <GraphLayout
         Capacity="64" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="146.666666666667,42.6666666666667"
+          Size="147,43"
           Id="Package\NDS_Postcode\Sort_Postcode"
           TopLeft="272.374996470288,138.849998151958" />
         <NodeLayout
-          Size="124,42.6666666666667"
+          Size="124,43"
           Id="Package\NDS_Postcode\Get LSOA"
           TopLeft="429.999993592501,213.849996176064" />
         <NodeLayout
-          Size="166.666666666667,42.6666666666667"
+          Size="167,43"
           Id="Package\NDS_Postcode\OLE DB Command"
           TopLeft="172.49999742955,497.899991096855" />
         <NodeLayout
-          Size="113.333333333334,42.6666666666667"
+          Size="113,43"
           Id="Package\NDS_Postcode\Lookup"
           TopLeft="458.749993164092,501.799991027117" />
         <NodeLayout
-          Size="121.333333333334,42.6666666666667"
+          Size="121,43"
           Id="Package\NDS_Postcode\Postcode"
           TopLeft="281.40624580672,45.1285706216096" />
         <NodeLayout
-          Size="148,42.6666666666667"
+          Size="148,43"
           Id="Package\NDS_Postcode\Get Region_ID"
           TopLeft="633.437490561046,292.662494766787" />
         <NodeLayout
-          Size="137.333333333334,42.6666666666667"
+          Size="137,43"
           Id="Package\NDS_Postcode\Sort_Region"
           TopLeft="830.31248762738,292.662494766787" />
         <NodeLayout
-          Size="100,42.6666666666667"
+          Size="100,43"
           Id="Package\NDS_Postcode\Wiki"
           TopLeft="1087.6785552209,67.5999987912177" />
         <NodeLayout
-          Size="168,42.6666666666667"
+          Size="168,43"
           Id="Package\NDS_Postcode\Sort_Country_NDS"
           TopLeft="817.552071150858,134.785182788284" />
         <NodeLayout
-          Size="104.666666666667,42.6666666666667"
+          Size="105,43"
           Id="Package\NDS_Postcode\LSOA"
           TopLeft="437.812493476086,47.4499991515279" />
         <NodeLayout
-          Size="142.666666666667,42.6666666666667"
+          Size="143,43"
           Id="Package\NDS_Postcode\NDS_Country"
           TopLeft="825.798598805753,48.6601843283187" />
         <NodeLayout
-          Size="141.333333333334,42.6666666666667"
+          Size="141,43"
           Id="Package\NDS_Postcode\Sort_Country"
           TopLeft="607.569435390955,217.749996106327" />
         <NodeLayout
-          Size="121.333333333334,42.6666666666667"
+          Size="121,43"
           Id="Package\NDS_Postcode\Union All"
           TopLeft="845.714273112161,498.076181961582" />
         <NodeLayout
-          Size="150.666666666667,42.6666666666667"
+          Size="151,43"
           Id="Package\NDS_Postcode\Get Country ID"
           TopLeft="824.496515491823,219.266662745873" />
         <NodeLayout
-          Size="105.333333333334,42.6666666666667"
+          Size="105,43"
           Id="Package\NDS_Postcode\SrcID"
           TopLeft="655.535704517471,501.719040980708" />
         <NodeLayout
-          Size="114.666666666667,42.6666666666667"
+          Size="115,43"
           Id="Package\NDS_Postcode\Fill_city"
           TopLeft="1081.42855531403,371.242850504517" />
         <NodeLayout
-          Size="122.666666666667,42.6666666666667"
+          Size="123,43"
           Id="Package\NDS_Postcode\Sort_wiki"
           TopLeft="1078.74998392537,209.099996516449" />
         <NodeLayout
-          Size="121.333333333334,42.6666666666667"
+          Size="121,43"
           Id="Package\NDS_Postcode\Sort_pcd"
           TopLeft="901.071415144419,373.099993328452" />
         <NodeLayout
-          Size="129.333333333334,42.6666666666667"
+          Size="129,43"
           Id="Package\NDS_Postcode\Sort_LSOA"
           TopLeft="623.906240703073,142.024997460395" />
         <NodeLayout
-          Size="162.666666666667,42.6666666666667"
+          Size="163,43"
           Id="Package\NDS_Postcode\Remove duplicate"
           TopLeft="529.687492107041,588.24998948127" />
         <NodeLayout
-          Size="138,42.6666666666667"
+          Size="138,43"
           Id="Package\NDS_Postcode\NDS_Region"
           TopLeft="258.437496148981,295.099994723201" />
         <NodeLayout
-          Size="126.666666666667,42.6666666666667"
+          Size="127,43"
           Id="Package\NDS_Postcode\Trim pcd7"
           TopLeft="627.187490654178,45.8249991805851" />
         <NodeLayout
-          Size="148,42.6666666666667"
+          Size="148,43"
           Id="Package\NDS_Postcode\NDS_Postcode"
           TopLeft="434.821422092084,375.176185385358" />
         <NodeLayout
-          Size="162.666666666667,42.6666666666667"
+          Size="163,43"
           Id="Package\NDS_Postcode\Sort_NDS_Region"
           TopLeft="434.218743529636,293.474994752258" />
         <NodeLayout
-          Size="156,42.6666666666667"
+          Size="156,43"
           Id="Package\NDS_Postcode\Conditional Split"
           TopLeft="634.999990537763,380.52856462419" />
         <EdgeLayout
           Id="Package\NDS_Postcode.Paths[OLE DB Source Output3]"
-          TopLeft="396.437496148981,315.620828071063">
+          TopLeft="343.890621138504,87.7952372882763">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="37.7812473806552,0"
+              EndConnector="0,51.0547608636817"
               Start="0,0"
-              End="30.2812473806552,0">
+              End="0,43.5547608636817">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="30.2812473806552,0" />
+                    End="0,43.5547608636817" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -6615,18 +6615,18 @@ WHERE Postcode = ? AND LSOA11CD = ?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\NDS_Postcode.Paths[OLE DB Source Output1]"
-          TopLeft="343.890621138504,87.7952372882763">
+          TopLeft="396.437496148981,315.620828071063">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,51.0547608636817"
+              EndConnector="37.7812473806552,0"
               Start="0,0"
-              End="0,43.5547608636817">
+              End="30.2812473806552,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,43.5547608636817" />
+                    End="30.2812473806552,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -6637,18 +6637,18 @@ WHERE Postcode = ? AND LSOA11CD = ?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\NDS_Postcode.Paths[OLE DB Source Output]"
-          TopLeft="542.479160142752,67.9708324993898">
+          TopLeft="1138.8809362398,110.266665457884">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="84.7083305114257,0"
+              EndConnector="0,98.8333310585647"
               Start="0,0"
-              End="77.2083305114257,0">
+              End="0,91.3333310585647">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="77.2083305114257,0" />
+                    End="0,91.3333310585647" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -7179,18 +7179,18 @@ WHERE Postcode = ? AND LSOA11CD = ?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\NDS_Postcode.Paths[OLE DB Source Output4]"
-          TopLeft="1138.8809362398,110.266665457884">
+          TopLeft="542.479160142752,67.9708324993898">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,98.8333310585647"
+              EndConnector="84.7083305114257,0"
               Start="0,0"
-              End="0,91.3333310585647">
+              End="77.2083305114257,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,91.3333310585647" />
+                    End="77.2083305114257,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>

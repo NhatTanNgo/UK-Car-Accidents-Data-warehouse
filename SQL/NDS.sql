@@ -4,6 +4,8 @@ if DB_ID ('NDS_DATH') is not null
 GO
 
 CREATE DATABASE NDS_DATH 
+GO
+
 USE NDS_DATH
 GO
 
