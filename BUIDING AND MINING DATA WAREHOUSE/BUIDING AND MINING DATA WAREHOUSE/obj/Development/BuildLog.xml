@@ -3,10 +3,14 @@
   <ProjectInfo>
     <Name>BUIDING AND MINING DATA WAREHOUSE</Name>
 <<<<<<< HEAD
+<<<<<<< HEAD
     <LastWriteTime>2021-11-18T06:52:26.7816265Z</LastWriteTime>
 =======
     <LastWriteTime>2021-11-17T08:21:48.2009311Z</LastWriteTime>
 >>>>>>> main
+=======
+    <LastWriteTime>2021-11-18T02:09:18.6670308Z</LastWriteTime>
+>>>>>>> parent of 08600d0 (staging_Wiki)
     <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
   </ProjectInfo>
   <LastBuildInfos>
@@ -23,19 +27,27 @@
     <ProjectBuildItemInfo>
       <Name>Staging_LSOA.dtsx</Name>
 <<<<<<< HEAD
+<<<<<<< HEAD
       <LastWriteTime>2021-11-18T05:59:22.6654696Z</LastWriteTime>
 =======
       <LastWriteTime>2021-11-17T08:39:05.0799269Z</LastWriteTime>
 >>>>>>> main
+=======
+      <LastWriteTime>2021-11-16T16:31:36.6028286Z</LastWriteTime>
+>>>>>>> parent of 08600d0 (staging_Wiki)
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>Staging_postcodes.dtsx</Name>
 <<<<<<< HEAD
+<<<<<<< HEAD
       <LastWriteTime>2021-11-18T05:59:22.6654696Z</LastWriteTime>
 =======
       <LastWriteTime>2021-11-17T08:12:56.2387125Z</LastWriteTime>
 >>>>>>> main
+=======
+      <LastWriteTime>2021-11-16T17:13:09.7114757Z</LastWriteTime>
+>>>>>>> parent of 08600d0 (staging_Wiki)
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
@@ -46,21 +58,26 @@
     <ProjectBuildItemInfo>
       <Name>Main_Source.dtsx</Name>
 <<<<<<< HEAD
+<<<<<<< HEAD
       <LastWriteTime>2021-11-18T06:24:35.0787187Z</LastWriteTime>
+=======
+      <LastWriteTime>2021-11-16T16:55:00.2624095Z</LastWriteTime>
+>>>>>>> parent of 08600d0 (staging_Wiki)
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>CodeBook.dtsx</Name>
-      <LastWriteTime>2021-11-18T05:59:22.6094699Z</LastWriteTime>
+      <LastWriteTime>2021-11-18T02:01:04.6059166Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>NDS_Country_Region.dtsx</Name>
-      <LastWriteTime>2021-11-18T05:59:22.6494783Z</LastWriteTime>
+      <LastWriteTime>2021-11-18T02:18:22.6349689Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>Main_NDS.dtsx</Name>
+<<<<<<< HEAD
       <LastWriteTime>2021-11-18T05:59:22.625534Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
@@ -75,6 +92,9 @@
 =======
       <LastWriteTime>2021-11-17T07:51:10.3184742Z</LastWriteTime>
 >>>>>>> main
+=======
+      <LastWriteTime>2021-11-18T02:03:38.2788743Z</LastWriteTime>
+>>>>>>> parent of 08600d0 (staging_Wiki)
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
   </LastBuildInfos>

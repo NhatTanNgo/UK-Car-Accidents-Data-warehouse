@@ -1,15 +1,9 @@
 use master
-
 if DB_ID ('Stage_DATH') is not null
 	drop database Stage_DATH
+
 create database Stage_DATH
-GO
-
-ALTER DATABASE Stage_DATH SET SINGLE_USER
-ALTER DATABASE Stage_DATH SET COMPATIBILITY_LEVEL = 130
-ALTER DATABASE Stage_DATH SET MULTI_USER 
-GO
-
+go
 use Stage_DATH
 
 CREATE TABLE [Vehicles] (
@@ -117,54 +111,3 @@ CREATE TABLE [PCD_LSOA] (
     [msoa11nm] varchar(50),
     [ladnm] varchar(50)
 )
-------
-CREATE TABLE [Wiki_Postcodes] (
-    [Postcode districts] nvarchar(150),
-    [Post town] varchar(50),
-    [status] int
-)
-
-SELECT * FROM dbo.Wiki_Postcodes
-GO
-
-CREATE PROC Wiki_Split_SingleRow
-AS
-DECLARE 
- @pcd VARCHAR(150),
- @split_pcd VARCHAR(50),
- @ptown VARCHAR(50),
- @status INT
-BEGIN
-	DECLARE R_pcd CURSOR FOR 
-	SELECT * FROM dbo.Wiki_Postcodes
-	WHERE [Postcode districts] LIKE '%,%'
-
-	OPEN R_pcd
-	FETCH NEXT FROM R_pcd INTO @pcd, @ptown, @status
-	WHILE @@FETCH_STATUS = 0
-	BEGIN
-		DECLARE S_CURSOR CURSOR FOR
-		SELECT * FROM STRING_SPLIT(@pcd,',')
-		OPEN S_CURSOR
-		FETCH NEXT FROM S_CURSOR INTO @split_pcd
-		WHILE @@FETCH_STATUS = 0 
-		BEGIN
-			SELECT @split_pcd = TRIM(' ' FROM @split_pcd) --Remove space at begin of char
-			INSERT INTO dbo.Wiki_Postcodes
-			VALUES
-			(@split_pcd,@ptown, @status)
-			FETCH NEXT FROM S_CURSOR INTO @split_pcd
-		END
-		CLOSE S_CURSOR
-		DEALLOCATE S_CURSOR
-
-		DELETE FROM dbo.Wiki_Postcodes
-		WHERE [Postcode districts] = @pcd
-		FETCH NEXT FROM R_pcd INTO @pcd, @ptown, @status
-	END
-	CLOSE R_pcd
-	DEALLOCATE R_pcd
-END
-GO
-
-SELECT * FROM dbo.PCD_LSOA
