@@ -127,4 +127,13 @@ CREATE TABLE [postcodes] (
 	[Update_time] datetime
 )
 
+CREATE TABLE [Wiki_Postcodes] (
+    [Postcode area] varchar(50),
+    [Postcode districts] nvarchar(150),
+    [Post town] varchar(50),
+    [Former postal county] varchar(50),
+    [create_time] datetime,
+    [update_time] datetime,
+    [status] int
+)
 
