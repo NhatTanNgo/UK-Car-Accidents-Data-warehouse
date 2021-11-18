@@ -1,18 +1,18 @@
 ﻿<?xml version="1.0"?>
 <DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
   DTS:refId="Package"
-  DTS:CreationDate="11/18/2021 3:20:14 PM"
+  DTS:CreationDate="11/18/2021 3:45:52 PM"
   DTS:CreationName="Microsoft.Package"
   DTS:CreatorComputerName="DESKTOP-0IA21OI"
   DTS:CreatorName="DESKTOP-0IA21OI\NhatTan"
-  DTS:DTSID="{AB90E4B7-EB20-443D-A90B-7F8661CAFB8B}"
+  DTS:DTSID="{EA4539D3-0691-411A-B0F8-8A945C709EA7}"
   DTS:ExecutableType="Microsoft.Package"
   DTS:LastModifiedProductVersion="15.0.2000.170"
   DTS:LocaleID="1033"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="3"
-  DTS:VersionGUID="{EBD54891-9564-4308-A930-6D2B2EBC8BD9}">
+  DTS:VersionBuild="2"
+  DTS:VersionGUID="{5F801276-97C1-47C0-8E64-DC0E6EBC39B6}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables />
@@ -21,7 +21,7 @@
       DTS:refId="Package\Accidents"
       DTS:CreationName="Microsoft.ExecutePackageTask"
       DTS:Description="Execute Package Task"
-      DTS:DTSID="{E5D7B8C6-397C-4164-9EC9-AC25F603FDCB}"
+      DTS:DTSID="{F4445E07-06E7-40B1-BF11-A33957ADE044}"
       DTS:ExecutableType="Microsoft.ExecutePackageTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="Accidents"
@@ -38,7 +38,7 @@
       DTS:refId="Package\Casualties"
       DTS:CreationName="Microsoft.ExecutePackageTask"
       DTS:Description="Execute Package Task"
-      DTS:DTSID="{739550D9-F75B-4400-BED3-F4C065D6BC83}"
+      DTS:DTSID="{E01086BF-44CA-4917-9EF0-0A8A56B3ED41}"
       DTS:ExecutableType="Microsoft.ExecutePackageTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="Casualties"
@@ -55,7 +55,7 @@
       DTS:refId="Package\LSOA"
       DTS:CreationName="Microsoft.ExecutePackageTask"
       DTS:Description="Execute Package Task"
-      DTS:DTSID="{28E90B89-883F-4370-BBBF-BF077C4559F5}"
+      DTS:DTSID="{9BBD5B91-E0CD-4971-899D-0C7168FEA201}"
       DTS:ExecutableType="Microsoft.ExecutePackageTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="LSOA"
@@ -72,7 +72,7 @@
       DTS:refId="Package\Postcode"
       DTS:CreationName="Microsoft.ExecutePackageTask"
       DTS:Description="Execute Package Task"
-      DTS:DTSID="{8BA55E63-98E5-47C9-ADC3-01E4ADE61929}"
+      DTS:DTSID="{2D5F5AD1-027B-414D-B6AC-B05CFAE2C03B}"
       DTS:ExecutableType="Microsoft.ExecutePackageTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="Postcode"
@@ -86,13 +86,13 @@
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
-      DTS:refId="Package\Vehicles"
+      DTS:refId="Package\Vehicle"
       DTS:CreationName="Microsoft.ExecutePackageTask"
       DTS:Description="Execute Package Task"
-      DTS:DTSID="{825E4483-92C6-4BEB-9312-DCDA86E9CC04}"
+      DTS:DTSID="{66D12D43-99AC-43A7-9162-E934C7C46EB1}"
       DTS:ExecutableType="Microsoft.ExecutePackageTask"
       DTS:LocaleID="-1"
-      DTS:ObjectName="Vehicles"
+      DTS:ObjectName="Vehicle"
       DTS:TaskContact="Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
       <DTS:Variables />
       <DTS:ObjectData>
@@ -106,7 +106,7 @@
       DTS:refId="Package\Wiki"
       DTS:CreationName="Microsoft.ExecutePackageTask"
       DTS:Description="Execute Package Task"
-      DTS:DTSID="{710B6A19-CFE4-477D-8136-F35246BA3057}"
+      DTS:DTSID="{7C74E9B8-2BB3-469D-9D8B-22CAD5E0490F}"
       DTS:ExecutableType="Microsoft.ExecutePackageTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="Wiki"
@@ -135,27 +135,27 @@
         <NodeLayout
           Size="124,42.6666666666667"
           Id="Package\Accidents"
-          TopLeft="43.1249993573875,113.749997965992" />
+          TopLeft="38.74999942258,111.149998012483" />
         <NodeLayout
           Size="126.666666666667,42.6666666666667"
           Id="Package\Casualties"
-          TopLeft="46.2499993108214,184.599996699095" />
+          TopLeft="40.6249993946404,175.499996861816" />
         <NodeLayout
           Size="104.666666666667,42.6666666666667"
           Id="Package\LSOA"
-          TopLeft="204.999996945262,114.399997954368" />
+          TopLeft="193.7499971129,109.199998047352" />
         <NodeLayout
           Size="121.333333333334,42.6666666666667"
           Id="Package\Postcode"
-          TopLeft="210.624996861443,183.949996710718" />
+          TopLeft="196.874997066334,172.24999691993" />
         <NodeLayout
-          Size="117.333333333334,42.6666666666667"
-          Id="Package\Vehicles"
-          TopLeft="358.749994654209,116.3499979195" />
+          Size="113.333333333334,42.6666666666667"
+          Id="Package\Vehicle"
+          TopLeft="339.999994933605,111.149998012483" />
         <NodeLayout
           Size="100,42.6666666666667"
           Id="Package\Wiki"
-          TopLeft="363.749994579703,181.999996745586" />
+          TopLeft="345.624994849786,166.399997024536" />
       </GraphLayout>
     </LayoutInfo>
   </Package>
