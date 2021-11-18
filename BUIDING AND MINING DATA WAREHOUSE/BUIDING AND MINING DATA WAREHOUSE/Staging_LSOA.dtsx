@@ -11,12 +11,18 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Staging_LSOA"
   DTS:PackageType="5"
+<<<<<<< Updated upstream
   DTS:VersionBuild="20"
   DTS:VersionGUID="{71299732-6D93-4CB4-9FB1-B29C09A59807}">
+=======
+  DTS:VersionBuild="16"
+  DTS:VersionGUID="{E707D680-B7CF-4B6B-8642-4A04EB12B7D4}">
+>>>>>>> Stashed changes
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
     <DTS:ConnectionManager
+<<<<<<< Updated upstream
       DTS:refId="Package.ConnectionManagers[DESKTOP-0IA21OI.RawSource]"
       DTS:CreationName="OLEDB"
       DTS:DTSID="{ED10F487-510F-46D2-9173-286A8D1C4513}"
@@ -232,6 +238,8 @@
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
+=======
+>>>>>>> Stashed changes
       DTS:refId="Package.ConnectionManagers[PCD.txt]"
       DTS:CreationName="FILE"
       DTS:DTSID="{29C7122F-548A-4069-AEB0-3BAB35F0FBCC}"
@@ -246,12 +254,21 @@
   <DTS:Variables>
     <DTS:Variable
       DTS:CreationName=""
+<<<<<<< Updated upstream
       DTS:DTSID="{7B07F695-2627-4521-867F-8D4EBB0D4645}"
       DTS:IncludeInDebugDump="6789"
       DTS:Namespace="User"
       DTS:ObjectName="CETResult">
       <DTS:VariableValue
         DTS:DataType="7">1/1/1900</DTS:VariableValue>
+=======
+      DTS:DTSID="{45764843-4BDC-4857-9AA4-73CF122881E9}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="CETResult">
+      <DTS:VariableValue
+        DTS:DataType="8">1/1/1900</DTS:VariableValue>
+>>>>>>> Stashed changes
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
@@ -268,7 +285,11 @@
       DTS:refId="Package\Clear stage"
       DTS:CreationName="Microsoft.ExecuteSQLTask"
       DTS:Description="Execute SQL Task"
+<<<<<<< Updated upstream
       DTS:DTSID="{75017ad8-3465-4279-8411-5afd61fcdd0e}"
+=======
+      DTS:DTSID="{7a78a040-c102-4dce-980b-7e08d9956d22}"
+>>>>>>> Stashed changes
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="Clear stage"
@@ -282,6 +303,7 @@
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
+<<<<<<< Updated upstream
       DTS:refId="Package\Get CET &amp; LSET of LSOA"
       DTS:CreationName="Microsoft.ExecuteSQLTask"
       DTS:Description="Execute SQL Task"
@@ -289,6 +311,93 @@
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="Get CET &amp; LSET of LSOA"
+=======
+      DTS:refId="Package\Data Profiling Task"
+      DTS:CreationName="Microsoft.DataProfilingTask"
+      DTS:Description="Data Profiling Task"
+      DTS:DTSID="{d0e4abc9-d5f7-4fec-8476-a3b17a537204}"
+      DTS:ExecutableType="Microsoft.DataProfilingTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Data Profiling Task"
+      DTS:TaskContact="Data Profiling Task; Microsoft Corporation; SQL Server 2019; (c) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <DataProfilingTaskData
+          Destination="PCD.txt"
+          OverwriteDestination="True">
+          <ProfileInput><![CDATA[<?xml version="1.0" encoding="utf-16"?>
+<DataProfile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.microsoft.com/sqlserver/2008/DataDebugger/">
+  <ProfileVersion>1.0</ProfileVersion>
+  <DataSources />
+  <DataProfileInput>
+    <ProfileMode>Exact</ProfileMode>
+    <Timeout>0</Timeout>
+    <Requests>
+      <ColumnNullRatioProfileRequest ID="NullRatioReq">
+        <DataSourceID>{68B744B6-BFA4-417D-AA11-2C26D08D51D7}</DataSourceID>
+        <Table Schema="dbo" Table="PCD_LSOA" />
+        <Column IsWildCard="true" />
+      </ColumnNullRatioProfileRequest>
+      <ColumnStatisticsProfileRequest ID="StatisticsReq">
+        <DataSourceID>{68B744B6-BFA4-417D-AA11-2C26D08D51D7}</DataSourceID>
+        <Table Schema="dbo" Table="PCD_LSOA" />
+        <Column IsWildCard="true" />
+      </ColumnStatisticsProfileRequest>
+      <ColumnLengthDistributionProfileRequest ID="LengthDistReq">
+        <DataSourceID>{68B744B6-BFA4-417D-AA11-2C26D08D51D7}</DataSourceID>
+        <Table Schema="dbo" Table="PCD_LSOA" />
+        <Column IsWildCard="true" />
+        <IgnoreLeadingSpace>false</IgnoreLeadingSpace>
+        <IgnoreTrailingSpace>true</IgnoreTrailingSpace>
+      </ColumnLengthDistributionProfileRequest>
+      <ColumnValueDistributionProfileRequest ID="ValueDistReq">
+        <DataSourceID>{68B744B6-BFA4-417D-AA11-2C26D08D51D7}</DataSourceID>
+        <Table Schema="dbo" Table="PCD_LSOA" />
+        <Column IsWildCard="true" />
+        <Option>FrequentValues</Option>
+        <FrequentValueThreshold>0.001</FrequentValueThreshold>
+      </ColumnValueDistributionProfileRequest>
+      <ColumnPatternProfileRequest ID="PatternReq">
+        <DataSourceID>{68B744B6-BFA4-417D-AA11-2C26D08D51D7}</DataSourceID>
+        <Table Schema="dbo" Table="PCD_LSOA" />
+        <Column IsWildCard="true" />
+        <MaxNumberOfPatterns>10</MaxNumberOfPatterns>
+        <PercentageDataCoverageDesired>95</PercentageDataCoverageDesired>
+        <CaseSensitive>false</CaseSensitive>
+        <Delimiters> \t\r\n</Delimiters>
+        <Symbols>,.;:-"'`~=&amp;/\\@!?()&lt;&gt;[]{}|#*^%</Symbols>
+        <TagTableName />
+      </ColumnPatternProfileRequest>
+      <CandidateKeyProfileRequest ID="KeyReq">
+        <DataSourceID>{68B744B6-BFA4-417D-AA11-2C26D08D51D7}</DataSourceID>
+        <Table Schema="dbo" Table="PCD_LSOA" />
+        <KeyColumns>
+          <Column IsWildCard="true" />
+        </KeyColumns>
+        <ThresholdSetting>Specified</ThresholdSetting>
+        <KeyStrengthThreshold>0.95</KeyStrengthThreshold>
+        <VerifyOutputInFastMode>false</VerifyOutputInFastMode>
+        <MaxNumberOfViolations>100</MaxNumberOfViolations>
+      </CandidateKeyProfileRequest>
+    </Requests>
+  </DataProfileInput>
+  <DataProfileOutput>
+    <Profiles />
+  </DataProfileOutput>
+</DataProfile>]]></ProfileInput>
+        </DataProfilingTaskData>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Get CET &amp; LSET"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{0b280d21-d1ed-4810-ae2b-7fd33df73063}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Get CET &amp; LSET"
+>>>>>>> Stashed changes
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
       DTS:ThreadHint="0">
       <DTS:Variables />
@@ -307,6 +416,7 @@
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
+<<<<<<< Updated upstream
       DTS:refId="Package\Load LSOA into stage"
       DTS:CreationName="Microsoft.Pipeline"
       DTS:Description="Data Flow Task"
@@ -314,6 +424,15 @@
       DTS:ExecutableType="Microsoft.Pipeline"
       DTS:LocaleID="-1"
       DTS:ObjectName="Load LSOA into stage"
+=======
+      DTS:refId="Package\Load data into stage"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{31c14984-0f97-497b-a576-23d057ade7a1}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Load data into stage"
+>>>>>>> Stashed changes
       DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
       <DTS:Variables />
       <DTS:ObjectData>
@@ -321,7 +440,11 @@
           version="1">
           <components>
             <component
+<<<<<<< Updated upstream
               refId="Package\Load LSOA into stage\PCD_LSOA Stage"
+=======
+              refId="Package\Load data into stage\OLE DB Destination"
+>>>>>>> Stashed changes
               componentClassID="Microsoft.OLEDBDestination"
               contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
               description="OLE DB Destination"
@@ -378,7 +501,11 @@
               </properties>
               <connections>
                 <connection
+<<<<<<< Updated upstream
                   refId="Package\Load LSOA into stage\PCD_LSOA Stage.Connections[OleDbConnection]"
+=======
+                  refId="Package\Load data into stage\OLE DB Destination.Connections[OleDbConnection]"
+>>>>>>> Stashed changes
                   connectionManagerID="{DFF81239-B2A8-4950-83F9-2BB12A3D2296}:external"
                   connectionManagerRefId="Project.ConnectionManagers[LocalHost Stage_DATH]"
                   description="The OLE DB runtime connection used to access the database."
@@ -386,151 +513,267 @@
               </connections>
               <inputs>
                 <input
+<<<<<<< Updated upstream
                   refId="Package\Load LSOA into stage\PCD_LSOA Stage.Inputs[OLE DB Destination Input]"
+=======
+                  refId="Package\Load data into stage\OLE DB Destination.Inputs[OLE DB Destination Input]"
+>>>>>>> Stashed changes
                   errorOrTruncationOperation="Insert"
                   errorRowDisposition="FailComponent"
                   hasSideEffects="true"
                   name="OLE DB Destination Input">
                   <inputColumns>
                     <inputColumn
+<<<<<<< Updated upstream
                       refId="Package\Load LSOA into stage\PCD_LSOA Stage.Inputs[OLE DB Destination Input].Columns[pcd7]"
+=======
+                      refId="Package\Load data into stage\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[pcd7]"
+>>>>>>> Stashed changes
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="pcd7"
+<<<<<<< Updated upstream
                       externalMetadataColumnId="Package\Load LSOA into stage\PCD_LSOA Stage.Inputs[OLE DB Destination Input].ExternalColumns[pcd7]"
                       lineageId="Package\Load LSOA into stage\PCD_OA_LSOA_MSOA_LAD_AUG21_UK_LU Source.Outputs[OLE DB Source Output].Columns[pcd7]" />
                     <inputColumn
                       refId="Package\Load LSOA into stage\PCD_LSOA Stage.Inputs[OLE DB Destination Input].Columns[pcd8]"
+=======
+                      externalMetadataColumnId="Package\Load data into stage\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[pcd7]"
+                      lineageId="Package\Load data into stage\OLE DB Source.Outputs[OLE DB Source Output].Columns[pcd7]" />
+                    <inputColumn
+                      refId="Package\Load data into stage\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[pcd8]"
+>>>>>>> Stashed changes
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="pcd8"
+<<<<<<< Updated upstream
                       externalMetadataColumnId="Package\Load LSOA into stage\PCD_LSOA Stage.Inputs[OLE DB Destination Input].ExternalColumns[pcd8]"
                       lineageId="Package\Load LSOA into stage\PCD_OA_LSOA_MSOA_LAD_AUG21_UK_LU Source.Outputs[OLE DB Source Output].Columns[pcd8]" />
                     <inputColumn
                       refId="Package\Load LSOA into stage\PCD_LSOA Stage.Inputs[OLE DB Destination Input].Columns[pcds]"
+=======
+                      externalMetadataColumnId="Package\Load data into stage\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[pcd8]"
+                      lineageId="Package\Load data into stage\OLE DB Source.Outputs[OLE DB Source Output].Columns[pcd8]" />
+                    <inputColumn
+                      refId="Package\Load data into stage\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[pcds]"
+>>>>>>> Stashed changes
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="pcds"
+<<<<<<< Updated upstream
                       externalMetadataColumnId="Package\Load LSOA into stage\PCD_LSOA Stage.Inputs[OLE DB Destination Input].ExternalColumns[pcds]"
                       lineageId="Package\Load LSOA into stage\PCD_OA_LSOA_MSOA_LAD_AUG21_UK_LU Source.Outputs[OLE DB Source Output].Columns[pcds]" />
                     <inputColumn
                       refId="Package\Load LSOA into stage\PCD_LSOA Stage.Inputs[OLE DB Destination Input].Columns[oa11cd]"
+=======
+                      externalMetadataColumnId="Package\Load data into stage\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[pcds]"
+                      lineageId="Package\Load data into stage\OLE DB Source.Outputs[OLE DB Source Output].Columns[pcds]" />
+                    <inputColumn
+                      refId="Package\Load data into stage\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[oa11cd]"
+>>>>>>> Stashed changes
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="oa11cd"
+<<<<<<< Updated upstream
                       externalMetadataColumnId="Package\Load LSOA into stage\PCD_LSOA Stage.Inputs[OLE DB Destination Input].ExternalColumns[oa11cd]"
                       lineageId="Package\Load LSOA into stage\PCD_OA_LSOA_MSOA_LAD_AUG21_UK_LU Source.Outputs[OLE DB Source Output].Columns[oa11cd]" />
                     <inputColumn
                       refId="Package\Load LSOA into stage\PCD_LSOA Stage.Inputs[OLE DB Destination Input].Columns[lsoa11cd]"
+=======
+                      externalMetadataColumnId="Package\Load data into stage\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[oa11cd]"
+                      lineageId="Package\Load data into stage\OLE DB Source.Outputs[OLE DB Source Output].Columns[oa11cd]" />
+                    <inputColumn
+                      refId="Package\Load data into stage\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[lsoa11cd]"
+>>>>>>> Stashed changes
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="lsoa11cd"
+<<<<<<< Updated upstream
                       externalMetadataColumnId="Package\Load LSOA into stage\PCD_LSOA Stage.Inputs[OLE DB Destination Input].ExternalColumns[lsoa11cd]"
                       lineageId="Package\Load LSOA into stage\PCD_OA_LSOA_MSOA_LAD_AUG21_UK_LU Source.Outputs[OLE DB Source Output].Columns[lsoa11cd]" />
                     <inputColumn
                       refId="Package\Load LSOA into stage\PCD_LSOA Stage.Inputs[OLE DB Destination Input].Columns[msoa11cd]"
+=======
+                      externalMetadataColumnId="Package\Load data into stage\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[lsoa11cd]"
+                      lineageId="Package\Load data into stage\OLE DB Source.Outputs[OLE DB Source Output].Columns[lsoa11cd]" />
+                    <inputColumn
+                      refId="Package\Load data into stage\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[msoa11cd]"
+>>>>>>> Stashed changes
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="msoa11cd"
+<<<<<<< Updated upstream
                       externalMetadataColumnId="Package\Load LSOA into stage\PCD_LSOA Stage.Inputs[OLE DB Destination Input].ExternalColumns[msoa11cd]"
                       lineageId="Package\Load LSOA into stage\PCD_OA_LSOA_MSOA_LAD_AUG21_UK_LU Source.Outputs[OLE DB Source Output].Columns[msoa11cd]" />
                     <inputColumn
                       refId="Package\Load LSOA into stage\PCD_LSOA Stage.Inputs[OLE DB Destination Input].Columns[ladcd]"
+=======
+                      externalMetadataColumnId="Package\Load data into stage\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[msoa11cd]"
+                      lineageId="Package\Load data into stage\OLE DB Source.Outputs[OLE DB Source Output].Columns[msoa11cd]" />
+                    <inputColumn
+                      refId="Package\Load data into stage\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[ladcd]"
+>>>>>>> Stashed changes
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="ladcd"
+<<<<<<< Updated upstream
                       externalMetadataColumnId="Package\Load LSOA into stage\PCD_LSOA Stage.Inputs[OLE DB Destination Input].ExternalColumns[ladcd]"
                       lineageId="Package\Load LSOA into stage\PCD_OA_LSOA_MSOA_LAD_AUG21_UK_LU Source.Outputs[OLE DB Source Output].Columns[ladcd]" />
                     <inputColumn
                       refId="Package\Load LSOA into stage\PCD_LSOA Stage.Inputs[OLE DB Destination Input].Columns[lsoa11nm]"
+=======
+                      externalMetadataColumnId="Package\Load data into stage\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ladcd]"
+                      lineageId="Package\Load data into stage\OLE DB Source.Outputs[OLE DB Source Output].Columns[ladcd]" />
+                    <inputColumn
+                      refId="Package\Load data into stage\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[lsoa11nm]"
+>>>>>>> Stashed changes
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="lsoa11nm"
+<<<<<<< Updated upstream
                       externalMetadataColumnId="Package\Load LSOA into stage\PCD_LSOA Stage.Inputs[OLE DB Destination Input].ExternalColumns[lsoa11nm]"
                       lineageId="Package\Load LSOA into stage\PCD_OA_LSOA_MSOA_LAD_AUG21_UK_LU Source.Outputs[OLE DB Source Output].Columns[lsoa11nm]" />
                     <inputColumn
                       refId="Package\Load LSOA into stage\PCD_LSOA Stage.Inputs[OLE DB Destination Input].Columns[msoa11nm]"
+=======
+                      externalMetadataColumnId="Package\Load data into stage\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[lsoa11nm]"
+                      lineageId="Package\Load data into stage\OLE DB Source.Outputs[OLE DB Source Output].Columns[lsoa11nm]" />
+                    <inputColumn
+                      refId="Package\Load data into stage\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[msoa11nm]"
+>>>>>>> Stashed changes
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="msoa11nm"
+<<<<<<< Updated upstream
                       externalMetadataColumnId="Package\Load LSOA into stage\PCD_LSOA Stage.Inputs[OLE DB Destination Input].ExternalColumns[msoa11nm]"
                       lineageId="Package\Load LSOA into stage\PCD_OA_LSOA_MSOA_LAD_AUG21_UK_LU Source.Outputs[OLE DB Source Output].Columns[msoa11nm]" />
                     <inputColumn
                       refId="Package\Load LSOA into stage\PCD_LSOA Stage.Inputs[OLE DB Destination Input].Columns[ladnm]"
+=======
+                      externalMetadataColumnId="Package\Load data into stage\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[msoa11nm]"
+                      lineageId="Package\Load data into stage\OLE DB Source.Outputs[OLE DB Source Output].Columns[msoa11nm]" />
+                    <inputColumn
+                      refId="Package\Load data into stage\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[ladnm]"
+>>>>>>> Stashed changes
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="ladnm"
+<<<<<<< Updated upstream
                       externalMetadataColumnId="Package\Load LSOA into stage\PCD_LSOA Stage.Inputs[OLE DB Destination Input].ExternalColumns[ladnm]"
                       lineageId="Package\Load LSOA into stage\PCD_OA_LSOA_MSOA_LAD_AUG21_UK_LU Source.Outputs[OLE DB Source Output].Columns[ladnm]" />
+=======
+                      externalMetadataColumnId="Package\Load data into stage\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ladnm]"
+                      lineageId="Package\Load data into stage\OLE DB Source.Outputs[OLE DB Source Output].Columns[ladnm]" />
+>>>>>>> Stashed changes
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
+<<<<<<< Updated upstream
                       refId="Package\Load LSOA into stage\PCD_LSOA Stage.Inputs[OLE DB Destination Input].ExternalColumns[pcd7]"
+=======
+                      refId="Package\Load data into stage\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[pcd7]"
+>>>>>>> Stashed changes
                       codePage="1252"
                       dataType="str"
                       length="50"
                       name="pcd7" />
                     <externalMetadataColumn
+<<<<<<< Updated upstream
                       refId="Package\Load LSOA into stage\PCD_LSOA Stage.Inputs[OLE DB Destination Input].ExternalColumns[pcd8]"
+=======
+                      refId="Package\Load data into stage\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[pcd8]"
+>>>>>>> Stashed changes
                       codePage="1252"
                       dataType="str"
                       length="50"
                       name="pcd8" />
                     <externalMetadataColumn
+<<<<<<< Updated upstream
                       refId="Package\Load LSOA into stage\PCD_LSOA Stage.Inputs[OLE DB Destination Input].ExternalColumns[pcds]"
+=======
+                      refId="Package\Load data into stage\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[pcds]"
+>>>>>>> Stashed changes
                       codePage="1252"
                       dataType="str"
                       length="50"
                       name="pcds" />
                     <externalMetadataColumn
+<<<<<<< Updated upstream
                       refId="Package\Load LSOA into stage\PCD_LSOA Stage.Inputs[OLE DB Destination Input].ExternalColumns[oa11cd]"
+=======
+                      refId="Package\Load data into stage\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[oa11cd]"
+>>>>>>> Stashed changes
                       codePage="1252"
                       dataType="str"
                       length="50"
                       name="oa11cd" />
                     <externalMetadataColumn
+<<<<<<< Updated upstream
                       refId="Package\Load LSOA into stage\PCD_LSOA Stage.Inputs[OLE DB Destination Input].ExternalColumns[lsoa11cd]"
+=======
+                      refId="Package\Load data into stage\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[lsoa11cd]"
+>>>>>>> Stashed changes
                       codePage="1252"
                       dataType="str"
                       length="50"
                       name="lsoa11cd" />
                     <externalMetadataColumn
+<<<<<<< Updated upstream
                       refId="Package\Load LSOA into stage\PCD_LSOA Stage.Inputs[OLE DB Destination Input].ExternalColumns[msoa11cd]"
+=======
+                      refId="Package\Load data into stage\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[msoa11cd]"
+>>>>>>> Stashed changes
                       codePage="1252"
                       dataType="str"
                       length="50"
                       name="msoa11cd" />
                     <externalMetadataColumn
+<<<<<<< Updated upstream
                       refId="Package\Load LSOA into stage\PCD_LSOA Stage.Inputs[OLE DB Destination Input].ExternalColumns[ladcd]"
+=======
+                      refId="Package\Load data into stage\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ladcd]"
+>>>>>>> Stashed changes
                       codePage="1252"
                       dataType="str"
                       length="50"
                       name="ladcd" />
                     <externalMetadataColumn
+<<<<<<< Updated upstream
                       refId="Package\Load LSOA into stage\PCD_LSOA Stage.Inputs[OLE DB Destination Input].ExternalColumns[lsoa11nm]"
+=======
+                      refId="Package\Load data into stage\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[lsoa11nm]"
+>>>>>>> Stashed changes
                       codePage="1252"
                       dataType="str"
                       length="50"
                       name="lsoa11nm" />
                     <externalMetadataColumn
+<<<<<<< Updated upstream
                       refId="Package\Load LSOA into stage\PCD_LSOA Stage.Inputs[OLE DB Destination Input].ExternalColumns[msoa11nm]"
+=======
+                      refId="Package\Load data into stage\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[msoa11nm]"
+>>>>>>> Stashed changes
                       codePage="1252"
                       dataType="str"
                       length="50"
                       name="msoa11nm" />
                     <externalMetadataColumn
+<<<<<<< Updated upstream
                       refId="Package\Load LSOA into stage\PCD_LSOA Stage.Inputs[OLE DB Destination Input].ExternalColumns[ladnm]"
+=======
+                      refId="Package\Load data into stage\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ladnm]"
+>>>>>>> Stashed changes
                       codePage="1252"
                       dataType="str"
                       length="50"
@@ -540,6 +783,7 @@
               </inputs>
               <outputs>
                 <output
+<<<<<<< Updated upstream
                   refId="Package\Load LSOA into stage\PCD_LSOA Stage.Outputs[OLE DB Destination Error Output]"
                   exclusionGroup="1"
                   isErrorOut="true"
@@ -556,6 +800,24 @@
                       refId="Package\Load LSOA into stage\PCD_LSOA Stage.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
                       dataType="i4"
                       lineageId="Package\Load LSOA into stage\PCD_LSOA Stage.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+=======
+                  refId="Package\Load data into stage\OLE DB Destination.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Load data into stage\OLE DB Destination.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Load data into stage\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Load data into stage\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Load data into stage\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Load data into stage\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+>>>>>>> Stashed changes
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -564,7 +826,11 @@
               </outputs>
             </component>
             <component
+<<<<<<< Updated upstream
               refId="Package\Load LSOA into stage\PCD_OA_LSOA_MSOA_LAD_AUG21_UK_LU Source"
+=======
+              refId="Package\Load data into stage\OLE DB Source"
+>>>>>>> Stashed changes
               componentClassID="Microsoft.OLEDBSource"
               contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
               description="OLE DB Source"
@@ -589,7 +855,11 @@
                   description="The SQL command to be executed."
                   name="SqlCommand"
                   UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT *
+<<<<<<< Updated upstream
 FROM  PCD_OA_LSOA_MSOA_LAD_AUG21_UK_LU
+=======
+FROM   PCD_OA_LSOA_MSOA_LAD_AUG21_UK_LU
+>>>>>>> Stashed changes
 Where (Create_time &gt;=? and Create_time &lt;=?) or (Update_time &gt;=? and Update_time &lt;=?)</property>
                 <property
                   dataType="System.String"
@@ -611,11 +881,19 @@ Where (Create_time &gt;=? and Create_time &lt;=?) or (Update_time &gt;=? and Upd
                 <property
                   dataType="System.String"
                   description="The mappings between the parameters in the SQL command and variables."
+<<<<<<< Updated upstream
                   name="ParameterMapping">"Parameter0:Input",{320C3CAA-6E49-4B95-9869-64D6DCF1C0A2};"Parameter1:Input",{7B07F695-2627-4521-867F-8D4EBB0D4645};"Parameter2:Input",{320C3CAA-6E49-4B95-9869-64D6DCF1C0A2};"Parameter3:Input",{7B07F695-2627-4521-867F-8D4EBB0D4645};</property>
               </properties>
               <connections>
                 <connection
                   refId="Package\Load LSOA into stage\PCD_OA_LSOA_MSOA_LAD_AUG21_UK_LU Source.Connections[OleDbConnection]"
+=======
+                  name="ParameterMapping">"Parameter0:Input",{320C3CAA-6E49-4B95-9869-64D6DCF1C0A2};"Parameter1:Input",{45764843-4BDC-4857-9AA4-73CF122881E9};"Parameter2:Input",{320C3CAA-6E49-4B95-9869-64D6DCF1C0A2};"Parameter3:Input",{45764843-4BDC-4857-9AA4-73CF122881E9};</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Load data into stage\OLE DB Source.Connections[OleDbConnection]"
+>>>>>>> Stashed changes
                   connectionManagerID="{F4A3871F-4AD8-419A-8C9E-BAEC8E731B5E}:external"
                   connectionManagerRefId="Project.ConnectionManagers[LocalHost.Source_DATH]"
                   description="The OLE DB runtime connection used to access the database."
@@ -623,6 +901,7 @@ Where (Create_time &gt;=? and Create_time &lt;=?) or (Update_time &gt;=? and Upd
               </connections>
               <outputs>
                 <output
+<<<<<<< Updated upstream
                   refId="Package\Load LSOA into stage\PCD_OA_LSOA_MSOA_LAD_AUG21_UK_LU Source.Outputs[OLE DB Source Output]"
                   name="OLE DB Source Output">
                   <outputColumns>
@@ -646,10 +925,36 @@ Where (Create_time &gt;=? and Create_time &lt;=?) or (Update_time &gt;=? and Upd
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
                       refId="Package\Load LSOA into stage\PCD_OA_LSOA_MSOA_LAD_AUG21_UK_LU Source.Outputs[OLE DB Source Output].Columns[pcd7]"
+=======
+                  refId="Package\Load data into stage\OLE DB Source.Outputs[OLE DB Source Output]"
+                  name="OLE DB Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Load data into stage\OLE DB Source.Outputs[OLE DB Source Output].Columns[Create_time]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load data into stage\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Create_time]"
+                      lineageId="Package\Load data into stage\OLE DB Source.Outputs[OLE DB Source Output].Columns[Create_time]"
+                      name="Create_time"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Load data into stage\OLE DB Source.Outputs[OLE DB Source Output].Columns[Update_time]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load data into stage\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Update_time]"
+                      lineageId="Package\Load data into stage\OLE DB Source.Outputs[OLE DB Source Output].Columns[Update_time]"
+                      name="Update_time"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Load data into stage\OLE DB Source.Outputs[OLE DB Source Output].Columns[pcd7]"
+>>>>>>> Stashed changes
                       codePage="1252"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
+<<<<<<< Updated upstream
                       externalMetadataColumnId="Package\Load LSOA into stage\PCD_OA_LSOA_MSOA_LAD_AUG21_UK_LU Source.Outputs[OLE DB Source Output].ExternalColumns[pcd7]"
                       length="50"
                       lineageId="Package\Load LSOA into stage\PCD_OA_LSOA_MSOA_LAD_AUG21_UK_LU Source.Outputs[OLE DB Source Output].Columns[pcd7]"
@@ -657,10 +962,20 @@ Where (Create_time &gt;=? and Create_time &lt;=?) or (Update_time &gt;=? and Upd
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
                       refId="Package\Load LSOA into stage\PCD_OA_LSOA_MSOA_LAD_AUG21_UK_LU Source.Outputs[OLE DB Source Output].Columns[pcd8]"
+=======
+                      externalMetadataColumnId="Package\Load data into stage\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[pcd7]"
+                      length="50"
+                      lineageId="Package\Load data into stage\OLE DB Source.Outputs[OLE DB Source Output].Columns[pcd7]"
+                      name="pcd7"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Load data into stage\OLE DB Source.Outputs[OLE DB Source Output].Columns[pcd8]"
+>>>>>>> Stashed changes
                       codePage="1252"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
+<<<<<<< Updated upstream
                       externalMetadataColumnId="Package\Load LSOA into stage\PCD_OA_LSOA_MSOA_LAD_AUG21_UK_LU Source.Outputs[OLE DB Source Output].ExternalColumns[pcd8]"
                       length="50"
                       lineageId="Package\Load LSOA into stage\PCD_OA_LSOA_MSOA_LAD_AUG21_UK_LU Source.Outputs[OLE DB Source Output].Columns[pcd8]"
@@ -668,10 +983,20 @@ Where (Create_time &gt;=? and Create_time &lt;=?) or (Update_time &gt;=? and Upd
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
                       refId="Package\Load LSOA into stage\PCD_OA_LSOA_MSOA_LAD_AUG21_UK_LU Source.Outputs[OLE DB Source Output].Columns[pcds]"
+=======
+                      externalMetadataColumnId="Package\Load data into stage\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[pcd8]"
+                      length="50"
+                      lineageId="Package\Load data into stage\OLE DB Source.Outputs[OLE DB Source Output].Columns[pcd8]"
+                      name="pcd8"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Load data into stage\OLE DB Source.Outputs[OLE DB Source Output].Columns[pcds]"
+>>>>>>> Stashed changes
                       codePage="1252"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
+<<<<<<< Updated upstream
                       externalMetadataColumnId="Package\Load LSOA into stage\PCD_OA_LSOA_MSOA_LAD_AUG21_UK_LU Source.Outputs[OLE DB Source Output].ExternalColumns[pcds]"
                       length="50"
                       lineageId="Package\Load LSOA into stage\PCD_OA_LSOA_MSOA_LAD_AUG21_UK_LU Source.Outputs[OLE DB Source Output].Columns[pcds]"
@@ -679,10 +1004,20 @@ Where (Create_time &gt;=? and Create_time &lt;=?) or (Update_time &gt;=? and Upd
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
                       refId="Package\Load LSOA into stage\PCD_OA_LSOA_MSOA_LAD_AUG21_UK_LU Source.Outputs[OLE DB Source Output].Columns[dointr]"
+=======
+                      externalMetadataColumnId="Package\Load data into stage\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[pcds]"
+                      length="50"
+                      lineageId="Package\Load data into stage\OLE DB Source.Outputs[OLE DB Source Output].Columns[pcds]"
+                      name="pcds"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Load data into stage\OLE DB Source.Outputs[OLE DB Source Output].Columns[dointr]"
+>>>>>>> Stashed changes
                       codePage="1252"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
+<<<<<<< Updated upstream
                       externalMetadataColumnId="Package\Load LSOA into stage\PCD_OA_LSOA_MSOA_LAD_AUG21_UK_LU Source.Outputs[OLE DB Source Output].ExternalColumns[dointr]"
                       length="50"
                       lineageId="Package\Load LSOA into stage\PCD_OA_LSOA_MSOA_LAD_AUG21_UK_LU Source.Outputs[OLE DB Source Output].Columns[dointr]"
@@ -690,10 +1025,20 @@ Where (Create_time &gt;=? and Create_time &lt;=?) or (Update_time &gt;=? and Upd
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
                       refId="Package\Load LSOA into stage\PCD_OA_LSOA_MSOA_LAD_AUG21_UK_LU Source.Outputs[OLE DB Source Output].Columns[doterm]"
+=======
+                      externalMetadataColumnId="Package\Load data into stage\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[dointr]"
+                      length="50"
+                      lineageId="Package\Load data into stage\OLE DB Source.Outputs[OLE DB Source Output].Columns[dointr]"
+                      name="dointr"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Load data into stage\OLE DB Source.Outputs[OLE DB Source Output].Columns[doterm]"
+>>>>>>> Stashed changes
                       codePage="1252"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
+<<<<<<< Updated upstream
                       externalMetadataColumnId="Package\Load LSOA into stage\PCD_OA_LSOA_MSOA_LAD_AUG21_UK_LU Source.Outputs[OLE DB Source Output].ExternalColumns[doterm]"
                       length="50"
                       lineageId="Package\Load LSOA into stage\PCD_OA_LSOA_MSOA_LAD_AUG21_UK_LU Source.Outputs[OLE DB Source Output].Columns[doterm]"
@@ -701,10 +1046,20 @@ Where (Create_time &gt;=? and Create_time &lt;=?) or (Update_time &gt;=? and Upd
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
                       refId="Package\Load LSOA into stage\PCD_OA_LSOA_MSOA_LAD_AUG21_UK_LU Source.Outputs[OLE DB Source Output].Columns[usertype]"
+=======
+                      externalMetadataColumnId="Package\Load data into stage\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[doterm]"
+                      length="50"
+                      lineageId="Package\Load data into stage\OLE DB Source.Outputs[OLE DB Source Output].Columns[doterm]"
+                      name="doterm"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Load data into stage\OLE DB Source.Outputs[OLE DB Source Output].Columns[usertype]"
+>>>>>>> Stashed changes
                       codePage="1252"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
+<<<<<<< Updated upstream
                       externalMetadataColumnId="Package\Load LSOA into stage\PCD_OA_LSOA_MSOA_LAD_AUG21_UK_LU Source.Outputs[OLE DB Source Output].ExternalColumns[usertype]"
                       length="50"
                       lineageId="Package\Load LSOA into stage\PCD_OA_LSOA_MSOA_LAD_AUG21_UK_LU Source.Outputs[OLE DB Source Output].Columns[usertype]"
@@ -712,10 +1067,20 @@ Where (Create_time &gt;=? and Create_time &lt;=?) or (Update_time &gt;=? and Upd
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
                       refId="Package\Load LSOA into stage\PCD_OA_LSOA_MSOA_LAD_AUG21_UK_LU Source.Outputs[OLE DB Source Output].Columns[oa11cd]"
+=======
+                      externalMetadataColumnId="Package\Load data into stage\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[usertype]"
+                      length="50"
+                      lineageId="Package\Load data into stage\OLE DB Source.Outputs[OLE DB Source Output].Columns[usertype]"
+                      name="usertype"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Load data into stage\OLE DB Source.Outputs[OLE DB Source Output].Columns[oa11cd]"
+>>>>>>> Stashed changes
                       codePage="1252"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
+<<<<<<< Updated upstream
                       externalMetadataColumnId="Package\Load LSOA into stage\PCD_OA_LSOA_MSOA_LAD_AUG21_UK_LU Source.Outputs[OLE DB Source Output].ExternalColumns[oa11cd]"
                       length="50"
                       lineageId="Package\Load LSOA into stage\PCD_OA_LSOA_MSOA_LAD_AUG21_UK_LU Source.Outputs[OLE DB Source Output].Columns[oa11cd]"
@@ -723,10 +1088,20 @@ Where (Create_time &gt;=? and Create_time &lt;=?) or (Update_time &gt;=? and Upd
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
                       refId="Package\Load LSOA into stage\PCD_OA_LSOA_MSOA_LAD_AUG21_UK_LU Source.Outputs[OLE DB Source Output].Columns[lsoa11cd]"
+=======
+                      externalMetadataColumnId="Package\Load data into stage\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[oa11cd]"
+                      length="50"
+                      lineageId="Package\Load data into stage\OLE DB Source.Outputs[OLE DB Source Output].Columns[oa11cd]"
+                      name="oa11cd"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Load data into stage\OLE DB Source.Outputs[OLE DB Source Output].Columns[lsoa11cd]"
+>>>>>>> Stashed changes
                       codePage="1252"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
+<<<<<<< Updated upstream
                       externalMetadataColumnId="Package\Load LSOA into stage\PCD_OA_LSOA_MSOA_LAD_AUG21_UK_LU Source.Outputs[OLE DB Source Output].ExternalColumns[lsoa11cd]"
                       length="50"
                       lineageId="Package\Load LSOA into stage\PCD_OA_LSOA_MSOA_LAD_AUG21_UK_LU Source.Outputs[OLE DB Source Output].Columns[lsoa11cd]"
@@ -734,10 +1109,20 @@ Where (Create_time &gt;=? and Create_time &lt;=?) or (Update_time &gt;=? and Upd
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
                       refId="Package\Load LSOA into stage\PCD_OA_LSOA_MSOA_LAD_AUG21_UK_LU Source.Outputs[OLE DB Source Output].Columns[msoa11cd]"
+=======
+                      externalMetadataColumnId="Package\Load data into stage\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[lsoa11cd]"
+                      length="50"
+                      lineageId="Package\Load data into stage\OLE DB Source.Outputs[OLE DB Source Output].Columns[lsoa11cd]"
+                      name="lsoa11cd"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Load data into stage\OLE DB Source.Outputs[OLE DB Source Output].Columns[msoa11cd]"
+>>>>>>> Stashed changes
                       codePage="1252"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
+<<<<<<< Updated upstream
                       externalMetadataColumnId="Package\Load LSOA into stage\PCD_OA_LSOA_MSOA_LAD_AUG21_UK_LU Source.Outputs[OLE DB Source Output].ExternalColumns[msoa11cd]"
                       length="50"
                       lineageId="Package\Load LSOA into stage\PCD_OA_LSOA_MSOA_LAD_AUG21_UK_LU Source.Outputs[OLE DB Source Output].Columns[msoa11cd]"
@@ -745,10 +1130,20 @@ Where (Create_time &gt;=? and Create_time &lt;=?) or (Update_time &gt;=? and Upd
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
                       refId="Package\Load LSOA into stage\PCD_OA_LSOA_MSOA_LAD_AUG21_UK_LU Source.Outputs[OLE DB Source Output].Columns[ladcd]"
+=======
+                      externalMetadataColumnId="Package\Load data into stage\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[msoa11cd]"
+                      length="50"
+                      lineageId="Package\Load data into stage\OLE DB Source.Outputs[OLE DB Source Output].Columns[msoa11cd]"
+                      name="msoa11cd"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Load data into stage\OLE DB Source.Outputs[OLE DB Source Output].Columns[ladcd]"
+>>>>>>> Stashed changes
                       codePage="1252"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
+<<<<<<< Updated upstream
                       externalMetadataColumnId="Package\Load LSOA into stage\PCD_OA_LSOA_MSOA_LAD_AUG21_UK_LU Source.Outputs[OLE DB Source Output].ExternalColumns[ladcd]"
                       length="50"
                       lineageId="Package\Load LSOA into stage\PCD_OA_LSOA_MSOA_LAD_AUG21_UK_LU Source.Outputs[OLE DB Source Output].Columns[ladcd]"
@@ -756,10 +1151,20 @@ Where (Create_time &gt;=? and Create_time &lt;=?) or (Update_time &gt;=? and Upd
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
                       refId="Package\Load LSOA into stage\PCD_OA_LSOA_MSOA_LAD_AUG21_UK_LU Source.Outputs[OLE DB Source Output].Columns[lsoa11nm]"
+=======
+                      externalMetadataColumnId="Package\Load data into stage\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[ladcd]"
+                      length="50"
+                      lineageId="Package\Load data into stage\OLE DB Source.Outputs[OLE DB Source Output].Columns[ladcd]"
+                      name="ladcd"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Load data into stage\OLE DB Source.Outputs[OLE DB Source Output].Columns[lsoa11nm]"
+>>>>>>> Stashed changes
                       codePage="1252"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
+<<<<<<< Updated upstream
                       externalMetadataColumnId="Package\Load LSOA into stage\PCD_OA_LSOA_MSOA_LAD_AUG21_UK_LU Source.Outputs[OLE DB Source Output].ExternalColumns[lsoa11nm]"
                       length="50"
                       lineageId="Package\Load LSOA into stage\PCD_OA_LSOA_MSOA_LAD_AUG21_UK_LU Source.Outputs[OLE DB Source Output].Columns[lsoa11nm]"
@@ -767,10 +1172,20 @@ Where (Create_time &gt;=? and Create_time &lt;=?) or (Update_time &gt;=? and Upd
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
                       refId="Package\Load LSOA into stage\PCD_OA_LSOA_MSOA_LAD_AUG21_UK_LU Source.Outputs[OLE DB Source Output].Columns[msoa11nm]"
+=======
+                      externalMetadataColumnId="Package\Load data into stage\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[lsoa11nm]"
+                      length="50"
+                      lineageId="Package\Load data into stage\OLE DB Source.Outputs[OLE DB Source Output].Columns[lsoa11nm]"
+                      name="lsoa11nm"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Load data into stage\OLE DB Source.Outputs[OLE DB Source Output].Columns[msoa11nm]"
+>>>>>>> Stashed changes
                       codePage="1252"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
+<<<<<<< Updated upstream
                       externalMetadataColumnId="Package\Load LSOA into stage\PCD_OA_LSOA_MSOA_LAD_AUG21_UK_LU Source.Outputs[OLE DB Source Output].ExternalColumns[msoa11nm]"
                       length="50"
                       lineageId="Package\Load LSOA into stage\PCD_OA_LSOA_MSOA_LAD_AUG21_UK_LU Source.Outputs[OLE DB Source Output].Columns[msoa11nm]"
@@ -778,19 +1193,35 @@ Where (Create_time &gt;=? and Create_time &lt;=?) or (Update_time &gt;=? and Upd
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
                       refId="Package\Load LSOA into stage\PCD_OA_LSOA_MSOA_LAD_AUG21_UK_LU Source.Outputs[OLE DB Source Output].Columns[ladnm]"
+=======
+                      externalMetadataColumnId="Package\Load data into stage\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[msoa11nm]"
+                      length="50"
+                      lineageId="Package\Load data into stage\OLE DB Source.Outputs[OLE DB Source Output].Columns[msoa11nm]"
+                      name="msoa11nm"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Load data into stage\OLE DB Source.Outputs[OLE DB Source Output].Columns[ladnm]"
+>>>>>>> Stashed changes
                       codePage="1252"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
+<<<<<<< Updated upstream
                       externalMetadataColumnId="Package\Load LSOA into stage\PCD_OA_LSOA_MSOA_LAD_AUG21_UK_LU Source.Outputs[OLE DB Source Output].ExternalColumns[ladnm]"
                       length="50"
                       lineageId="Package\Load LSOA into stage\PCD_OA_LSOA_MSOA_LAD_AUG21_UK_LU Source.Outputs[OLE DB Source Output].Columns[ladnm]"
+=======
+                      externalMetadataColumnId="Package\Load data into stage\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[ladnm]"
+                      length="50"
+                      lineageId="Package\Load data into stage\OLE DB Source.Outputs[OLE DB Source Output].Columns[ladnm]"
+>>>>>>> Stashed changes
                       name="ladnm"
                       truncationRowDisposition="FailComponent" />
                   </outputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
+<<<<<<< Updated upstream
                       refId="Package\Load LSOA into stage\PCD_OA_LSOA_MSOA_LAD_AUG21_UK_LU Source.Outputs[OLE DB Source Output].ExternalColumns[Create_time]"
                       dataType="dbTimeStamp"
                       name="Create_time" />
@@ -800,78 +1231,137 @@ Where (Create_time &gt;=? and Create_time &lt;=?) or (Update_time &gt;=? and Upd
                       name="Update_time" />
                     <externalMetadataColumn
                       refId="Package\Load LSOA into stage\PCD_OA_LSOA_MSOA_LAD_AUG21_UK_LU Source.Outputs[OLE DB Source Output].ExternalColumns[pcd7]"
+=======
+                      refId="Package\Load data into stage\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Create_time]"
+                      dataType="dbTimeStamp"
+                      name="Create_time" />
+                    <externalMetadataColumn
+                      refId="Package\Load data into stage\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Update_time]"
+                      dataType="dbTimeStamp"
+                      name="Update_time" />
+                    <externalMetadataColumn
+                      refId="Package\Load data into stage\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[pcd7]"
+>>>>>>> Stashed changes
                       codePage="1252"
                       dataType="str"
                       length="50"
                       name="pcd7" />
                     <externalMetadataColumn
+<<<<<<< Updated upstream
                       refId="Package\Load LSOA into stage\PCD_OA_LSOA_MSOA_LAD_AUG21_UK_LU Source.Outputs[OLE DB Source Output].ExternalColumns[pcd8]"
+=======
+                      refId="Package\Load data into stage\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[pcd8]"
+>>>>>>> Stashed changes
                       codePage="1252"
                       dataType="str"
                       length="50"
                       name="pcd8" />
                     <externalMetadataColumn
+<<<<<<< Updated upstream
                       refId="Package\Load LSOA into stage\PCD_OA_LSOA_MSOA_LAD_AUG21_UK_LU Source.Outputs[OLE DB Source Output].ExternalColumns[pcds]"
+=======
+                      refId="Package\Load data into stage\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[pcds]"
+>>>>>>> Stashed changes
                       codePage="1252"
                       dataType="str"
                       length="50"
                       name="pcds" />
                     <externalMetadataColumn
+<<<<<<< Updated upstream
                       refId="Package\Load LSOA into stage\PCD_OA_LSOA_MSOA_LAD_AUG21_UK_LU Source.Outputs[OLE DB Source Output].ExternalColumns[dointr]"
+=======
+                      refId="Package\Load data into stage\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[dointr]"
+>>>>>>> Stashed changes
                       codePage="1252"
                       dataType="str"
                       length="50"
                       name="dointr" />
                     <externalMetadataColumn
+<<<<<<< Updated upstream
                       refId="Package\Load LSOA into stage\PCD_OA_LSOA_MSOA_LAD_AUG21_UK_LU Source.Outputs[OLE DB Source Output].ExternalColumns[doterm]"
+=======
+                      refId="Package\Load data into stage\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[doterm]"
+>>>>>>> Stashed changes
                       codePage="1252"
                       dataType="str"
                       length="50"
                       name="doterm" />
                     <externalMetadataColumn
+<<<<<<< Updated upstream
                       refId="Package\Load LSOA into stage\PCD_OA_LSOA_MSOA_LAD_AUG21_UK_LU Source.Outputs[OLE DB Source Output].ExternalColumns[usertype]"
+=======
+                      refId="Package\Load data into stage\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[usertype]"
+>>>>>>> Stashed changes
                       codePage="1252"
                       dataType="str"
                       length="50"
                       name="usertype" />
                     <externalMetadataColumn
+<<<<<<< Updated upstream
                       refId="Package\Load LSOA into stage\PCD_OA_LSOA_MSOA_LAD_AUG21_UK_LU Source.Outputs[OLE DB Source Output].ExternalColumns[oa11cd]"
+=======
+                      refId="Package\Load data into stage\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[oa11cd]"
+>>>>>>> Stashed changes
                       codePage="1252"
                       dataType="str"
                       length="50"
                       name="oa11cd" />
                     <externalMetadataColumn
+<<<<<<< Updated upstream
                       refId="Package\Load LSOA into stage\PCD_OA_LSOA_MSOA_LAD_AUG21_UK_LU Source.Outputs[OLE DB Source Output].ExternalColumns[lsoa11cd]"
+=======
+                      refId="Package\Load data into stage\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[lsoa11cd]"
+>>>>>>> Stashed changes
                       codePage="1252"
                       dataType="str"
                       length="50"
                       name="lsoa11cd" />
                     <externalMetadataColumn
+<<<<<<< Updated upstream
                       refId="Package\Load LSOA into stage\PCD_OA_LSOA_MSOA_LAD_AUG21_UK_LU Source.Outputs[OLE DB Source Output].ExternalColumns[msoa11cd]"
+=======
+                      refId="Package\Load data into stage\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[msoa11cd]"
+>>>>>>> Stashed changes
                       codePage="1252"
                       dataType="str"
                       length="50"
                       name="msoa11cd" />
                     <externalMetadataColumn
+<<<<<<< Updated upstream
                       refId="Package\Load LSOA into stage\PCD_OA_LSOA_MSOA_LAD_AUG21_UK_LU Source.Outputs[OLE DB Source Output].ExternalColumns[ladcd]"
+=======
+                      refId="Package\Load data into stage\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[ladcd]"
+>>>>>>> Stashed changes
                       codePage="1252"
                       dataType="str"
                       length="50"
                       name="ladcd" />
                     <externalMetadataColumn
+<<<<<<< Updated upstream
                       refId="Package\Load LSOA into stage\PCD_OA_LSOA_MSOA_LAD_AUG21_UK_LU Source.Outputs[OLE DB Source Output].ExternalColumns[lsoa11nm]"
+=======
+                      refId="Package\Load data into stage\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[lsoa11nm]"
+>>>>>>> Stashed changes
                       codePage="1252"
                       dataType="str"
                       length="50"
                       name="lsoa11nm" />
                     <externalMetadataColumn
+<<<<<<< Updated upstream
                       refId="Package\Load LSOA into stage\PCD_OA_LSOA_MSOA_LAD_AUG21_UK_LU Source.Outputs[OLE DB Source Output].ExternalColumns[msoa11nm]"
+=======
+                      refId="Package\Load data into stage\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[msoa11nm]"
+>>>>>>> Stashed changes
                       codePage="1252"
                       dataType="str"
                       length="50"
                       name="msoa11nm" />
                     <externalMetadataColumn
+<<<<<<< Updated upstream
                       refId="Package\Load LSOA into stage\PCD_OA_LSOA_MSOA_LAD_AUG21_UK_LU Source.Outputs[OLE DB Source Output].ExternalColumns[ladnm]"
+=======
+                      refId="Package\Load data into stage\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[ladnm]"
+>>>>>>> Stashed changes
                       codePage="1252"
                       dataType="str"
                       length="50"
@@ -879,11 +1369,16 @@ Where (Create_time &gt;=? and Create_time &lt;=?) or (Update_time &gt;=? and Upd
                   </externalMetadataColumns>
                 </output>
                 <output
+<<<<<<< Updated upstream
                   refId="Package\Load LSOA into stage\PCD_OA_LSOA_MSOA_LAD_AUG21_UK_LU Source.Outputs[OLE DB Source Error Output]"
+=======
+                  refId="Package\Load data into stage\OLE DB Source.Outputs[OLE DB Source Error Output]"
+>>>>>>> Stashed changes
                   isErrorOut="true"
                   name="OLE DB Source Error Output">
                   <outputColumns>
                     <outputColumn
+<<<<<<< Updated upstream
                       refId="Package\Load LSOA into stage\PCD_OA_LSOA_MSOA_LAD_AUG21_UK_LU Source.Outputs[OLE DB Source Error Output].Columns[pcd7]"
                       codePage="1252"
                       dataType="str"
@@ -994,6 +1489,118 @@ Where (Create_time &gt;=? and Create_time &lt;=?) or (Update_time &gt;=? and Upd
                       refId="Package\Load LSOA into stage\PCD_OA_LSOA_MSOA_LAD_AUG21_UK_LU Source.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
                       dataType="i4"
                       lineageId="Package\Load LSOA into stage\PCD_OA_LSOA_MSOA_LAD_AUG21_UK_LU Source.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+=======
+                      refId="Package\Load data into stage\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[pcd7]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Load data into stage\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[pcd7]"
+                      name="pcd7" />
+                    <outputColumn
+                      refId="Package\Load data into stage\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[pcd8]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Load data into stage\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[pcd8]"
+                      name="pcd8" />
+                    <outputColumn
+                      refId="Package\Load data into stage\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[pcds]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Load data into stage\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[pcds]"
+                      name="pcds" />
+                    <outputColumn
+                      refId="Package\Load data into stage\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[dointr]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Load data into stage\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[dointr]"
+                      name="dointr" />
+                    <outputColumn
+                      refId="Package\Load data into stage\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[doterm]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Load data into stage\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[doterm]"
+                      name="doterm" />
+                    <outputColumn
+                      refId="Package\Load data into stage\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[usertype]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Load data into stage\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[usertype]"
+                      name="usertype" />
+                    <outputColumn
+                      refId="Package\Load data into stage\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[oa11cd]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Load data into stage\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[oa11cd]"
+                      name="oa11cd" />
+                    <outputColumn
+                      refId="Package\Load data into stage\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[lsoa11cd]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Load data into stage\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[lsoa11cd]"
+                      name="lsoa11cd" />
+                    <outputColumn
+                      refId="Package\Load data into stage\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[msoa11cd]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Load data into stage\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[msoa11cd]"
+                      name="msoa11cd" />
+                    <outputColumn
+                      refId="Package\Load data into stage\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ladcd]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Load data into stage\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ladcd]"
+                      name="ladcd" />
+                    <outputColumn
+                      refId="Package\Load data into stage\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[lsoa11nm]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Load data into stage\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[lsoa11nm]"
+                      name="lsoa11nm" />
+                    <outputColumn
+                      refId="Package\Load data into stage\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[msoa11nm]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Load data into stage\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[msoa11nm]"
+                      name="msoa11nm" />
+                    <outputColumn
+                      refId="Package\Load data into stage\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ladnm]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Load data into stage\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ladnm]"
+                      name="ladnm" />
+                    <outputColumn
+                      refId="Package\Load data into stage\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Create_time]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Load data into stage\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Create_time]"
+                      name="Create_time" />
+                    <outputColumn
+                      refId="Package\Load data into stage\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Update_time]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Load data into stage\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Update_time]"
+                      name="Update_time" />
+                    <outputColumn
+                      refId="Package\Load data into stage\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Load data into stage\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Load data into stage\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Load data into stage\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+>>>>>>> Stashed changes
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -1004,15 +1611,23 @@ Where (Create_time &gt;=? and Create_time &lt;=?) or (Update_time &gt;=? and Upd
           </components>
           <paths>
             <path
+<<<<<<< Updated upstream
               refId="Package\Load LSOA into stage.Paths[OLE DB Source Output]"
               endId="Package\Load LSOA into stage\PCD_LSOA Stage.Inputs[OLE DB Destination Input]"
               name="OLE DB Source Output"
               startId="Package\Load LSOA into stage\PCD_OA_LSOA_MSOA_LAD_AUG21_UK_LU Source.Outputs[OLE DB Source Output]" />
+=======
+              refId="Package\Load data into stage.Paths[OLE DB Source Output]"
+              endId="Package\Load data into stage\OLE DB Destination.Inputs[OLE DB Destination Input]"
+              name="OLE DB Source Output"
+              startId="Package\Load data into stage\OLE DB Source.Outputs[OLE DB Source Output]" />
+>>>>>>> Stashed changes
           </paths>
         </pipeline>
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
+<<<<<<< Updated upstream
       DTS:refId="Package\Profile PCD_LSOA Stage"
       DTS:CreationName="Microsoft.DataProfilingTask"
       DTS:Description="Data Profiling Task"
@@ -1095,6 +1710,12 @@ Where (Create_time &gt;=? and Create_time &lt;=?) or (Update_time &gt;=? and Upd
       DTS:CreationName="Microsoft.ExecuteSQLTask"
       DTS:Description="Execute SQL Task"
       DTS:DTSID="{7116bbe0-d7d4-4725-94b7-23a326621eb7}"
+=======
+      DTS:refId="Package\Update LSET"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{c90e7f9a-3be8-48ed-96fb-a177a1be3721}"
+>>>>>>> Stashed changes
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="Update LSET"
@@ -1104,12 +1725,17 @@ Where (Create_time &gt;=? and Create_time &lt;=?) or (Update_time &gt;=? and Upd
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
           SQLTask:Connection="{DE3C34A7-7A0C-4B26-A05E-3060463C0629}"
+<<<<<<< Updated upstream
           SQLTask:SqlStatementSource="UPDATE dbo.Data_Flow&#xA;SET LSET = CET&#xA;WHERE Name='LSOA_Stage'" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+=======
+          SQLTask:SqlStatementSource="UPDATE dbo.Data_Flow&#xA;SET LSET = CET&#xA;WHERE Name='Postcode_Stage'" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+>>>>>>> Stashed changes
       </DTS:ObjectData>
     </DTS:Executable>
   </DTS:Executables>
   <DTS:PrecedenceConstraints>
     <DTS:PrecedenceConstraint
+<<<<<<< Updated upstream
       DTS:refId="Package.PrecedenceConstraints[Constraint]"
       DTS:CreationName=""
       DTS:DTSID="{74690F9A-17D5-4C10-92E2-AA3C0F831D33}"
@@ -1122,12 +1748,19 @@ Where (Create_time &gt;=? and Create_time &lt;=?) or (Update_time &gt;=? and Upd
       DTS:CreationName=""
       DTS:DTSID="{7e4b4814-aa52-4c5e-9ec2-6f2dc6acadef}"
       DTS:From="Package\Get CET &amp; LSET of LSOA"
+=======
+      DTS:refId="Package.PrecedenceConstraints[Constraint 2]"
+      DTS:CreationName=""
+      DTS:DTSID="{37ebdcdf-5e02-4c84-ae47-9715d864db2f}"
+      DTS:From="Package\Get CET &amp; LSET"
+>>>>>>> Stashed changes
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint 2"
       DTS:To="Package\Clear stage" />
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Constraint 3]"
       DTS:CreationName=""
+<<<<<<< Updated upstream
       DTS:DTSID="{85fb97dd-379e-4ae1-9d36-3d803aececc6}"
       DTS:From="Package\Clear stage"
       DTS:LogicalAnd="True"
@@ -1141,6 +1774,29 @@ Where (Create_time &gt;=? and Create_time &lt;=?) or (Update_time &gt;=? and Upd
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint 4"
       DTS:To="Package\Update LSET" />
+=======
+      DTS:DTSID="{9458cbea-b715-4347-8281-a8792f3af2fd}"
+      DTS:From="Package\Clear stage"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 3"
+      DTS:To="Package\Load data into stage" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 4]"
+      DTS:CreationName=""
+      DTS:DTSID="{17721bb2-1b5d-4f99-88b2-cba5ee4611fb}"
+      DTS:From="Package\Load data into stage"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 4"
+      DTS:To="Package\Update LSET" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 5]"
+      DTS:CreationName=""
+      DTS:DTSID="{de094002-847c-4c62-bfc9-f744e8167798}"
+      DTS:From="Package\Load data into stage"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 5"
+      DTS:To="Package\Data Profiling Task" />
+>>>>>>> Stashed changes
   </DTS:PrecedenceConstraints>
   <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
 <!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
@@ -1158,6 +1814,7 @@ Where (Create_time &gt;=? and Create_time &lt;=?) or (Update_time &gt;=? and Upd
           Size="132,43"
           Id="Package\Clear stage"
           TopLeft="272.999996908008,60" />
+<<<<<<< Updated upstream
         <NodeLayout
           Size="180,42"
           Id="Package\Load LSOA into stage"
@@ -1175,10 +1832,60 @@ Where (Create_time &gt;=? and Create_time &lt;=?) or (Update_time &gt;=? and Upd
               EndConnector="194.458330455547,78.849997803271"
               Start="0,0"
               End="194.458330455547,71.349997803271">
+=======
+        <NodeLayout
+          Size="168,42.6666666666667"
+          Id="Package\Data Profiling Task"
+          TopLeft="173.124998314306,229.083328974744" />
+        <NodeLayout
+          Size="154.666666666667,42.6666666666667"
+          Id="Package\Get CET &amp; LSET"
+          TopLeft="60,61.416665794949" />
+        <NodeLayout
+          Size="176,42.6666666666667"
+          Id="Package\Load data into stage"
+          TopLeft="466.124994030222,182.849997803271" />
+        <NodeLayout
+          Size="140,42.6666666666667"
+          Id="Package\Update LSET"
+          TopLeft="183.749998155981,154.983330299755" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 2]"
+          TopLeft="214.666666666667,82.041666230808">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="58.3333302413411,0"
+              Start="0,0"
+              End="50.8333302413411,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
+                    End="50.8333302413411,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 3]"
+          TopLeft="338.999996908008,102.666666666667">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="215.124997122214,80.1833311366044"
+              Start="0,0"
+              End="215.124997122214,72.6833311366044">
+>>>>>>> Stashed changes
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+<<<<<<< Updated upstream
                     End="0,28.1065859318708" />
                   <mssgle:CubicBezierSegment
                     Point1="0,28.1065859318708"
@@ -1226,6 +1933,21 @@ Where (Create_time &gt;=? and Create_time &lt;=?) or (Update_time &gt;=? and Upd
                     Point3="-74.1874979371205,-26.366667503516" />
                   <mssgle:LineSegment
                     End="-132.874995874241,-26.366667503516" />
+=======
+                    End="0,36.0916655683022" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,36.0916655683022"
+                    Point2="0,40.0916655683022"
+                    Point3="4,40.0916655683022" />
+                  <mssgle:LineSegment
+                    End="211.124997122214,40.0916655683022" />
+                  <mssgle:CubicBezierSegment
+                    Point1="211.124997122214,40.0916655683022"
+                    Point2="215.124997122214,40.0916655683022"
+                    Point3="215.124997122214,44.0916655683022" />
+                  <mssgle:LineSegment
+                    End="215.124997122214,72.6833311366044" />
+>>>>>>> Stashed changes
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1239,6 +1961,7 @@ Where (Create_time &gt;=? and Create_time &lt;=?) or (Update_time &gt;=? and Upd
           Id="Package\Profile PCD_LSOA Stage"
           TopLeft="185,254" />
         <EdgeLayout
+<<<<<<< Updated upstream
           Id="Package.PrecedenceConstraints[Constraint]"
           TopLeft="554.124994030222,223.849997803271">
           <EdgeLayout.Curve>
@@ -1247,10 +1970,21 @@ Where (Create_time &gt;=? and Create_time &lt;=?) or (Update_time &gt;=? and Upd
               EndConnector="-273.124994030222,30.150002196729"
               Start="0,0"
               End="-273.124994030222,22.650002196729">
+=======
+          Id="Package.PrecedenceConstraints[Constraint 4]"
+          TopLeft="466.124994030222,198.405553358827">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-142.374995874241,-22.0888897257382"
+              Start="0,0"
+              End="-134.874995874241,-22.0888897257382">
+>>>>>>> Stashed changes
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
+<<<<<<< Updated upstream
                     End="0,11.0750010983645" />
                   <mssgle:CubicBezierSegment
                     Point1="0,11.0750010983645"
@@ -1264,6 +1998,21 @@ Where (Create_time &gt;=? and Create_time &lt;=?) or (Update_time &gt;=? and Upd
                     Point3="-273.124994030222,19.0750010983645" />
                   <mssgle:LineSegment
                     End="-273.124994030222,22.650002196729" />
+=======
+                    End="-56.0376488626317,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-56.0376488626317,0"
+                    Point2="-60.0376488626317,0"
+                    Point3="-60.0376488626317,-4" />
+                  <mssgle:LineSegment
+                    End="-60.0376488626317,-18.0888897257382" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-60.0376488626317,-18.0888897257382"
+                    Point2="-60.0376488626317,-22.0888897257382"
+                    Point3="-64.0376488626317,-22.0888897257382" />
+                  <mssgle:LineSegment
+                    End="-134.874995874241,-22.0888897257382" />
+>>>>>>> Stashed changes
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1277,6 +2026,7 @@ Where (Create_time &gt;=? and Create_time &lt;=?) or (Update_time &gt;=? and Upd
           Id="Package\Get CET &amp; LSET of LSOA"
           TopLeft="60,61.416665794949" />
         <EdgeLayout
+<<<<<<< Updated upstream
           Id="Package.PrecedenceConstraints[Constraint 2]"
           TopLeft="158,103.416665794949">
           <EdgeLayout.Curve>
@@ -1285,10 +2035,21 @@ Where (Create_time &gt;=? and Create_time &lt;=?) or (Update_time &gt;=? and Upd
               EndConnector="160.333330241341,-0.416665794949012"
               Start="0,0"
               End="160.333330241341,7.08333420505099">
+=======
+          Id="Package.PrecedenceConstraints[Constraint 5]"
+          TopLeft="466.124994030222,209.961108914382">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-124.999995715916,40.4555533936952"
+              Start="0,0"
+              End="-117.499995715916,40.4555533936952">
+>>>>>>> Stashed changes
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
+<<<<<<< Updated upstream
                     End="0,18.5" />
                   <mssgle:CubicBezierSegment
                     Point1="0,18.5"
@@ -1302,6 +2063,21 @@ Where (Create_time &gt;=? and Create_time &lt;=?) or (Update_time &gt;=? and Upd
                     Point3="160.333330241341,18.5" />
                   <mssgle:LineSegment
                     End="160.333330241341,7.08333420505099" />
+=======
+                    End="-48.7108415669526,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-48.7108415669526,0"
+                    Point2="-52.7108415669526,0"
+                    Point3="-52.7108415669526,4" />
+                  <mssgle:LineSegment
+                    End="-52.7108415669526,36.4555533936952" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-52.7108415669526,36.4555533936952"
+                    Point2="-52.7108415669526,40.4555533936952"
+                    Point3="-56.7108415669526,40.4555533936952" />
+                  <mssgle:LineSegment
+                    End="-117.499995715916,40.4555533936952" />
+>>>>>>> Stashed changes
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1314,11 +2090,16 @@ Where (Create_time &gt;=? and Create_time &lt;=?) or (Update_time &gt;=? and Upd
     </LayoutInfo>
   </Package>
   <TaskHost
+<<<<<<< Updated upstream
     design-time-name="Package\Load LSOA into stage">
+=======
+    design-time-name="Package\Load data into stage">
+>>>>>>> Stashed changes
     <LayoutInfo>
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
+<<<<<<< Updated upstream
           Size="159,42"
           Id="Package\Load LSOA into stage\PCD_LSOA Stage"
           TopLeft="355.249995734543,198.249999244511" />
@@ -1335,10 +2116,29 @@ Where (Create_time &gt;=? and Create_time &lt;=?) or (Update_time &gt;=? and Upd
               EndConnector="192.124996973202,107.500000116229"
               Start="0,0"
               End="192.124996973202,100.000000116229">
+=======
+          Size="172,42.6666666666667"
+          Id="Package\Load data into stage\OLE DB Destination"
+          TopLeft="312.249995734543,45.2499992445112" />
+        <NodeLayout
+          Size="150.666666666667,42.6666666666667"
+          Id="Package\Load data into stage\OLE DB Source"
+          TopLeft="83.124998761341,48.7499991282821" />
+        <EdgeLayout
+          Id="Package\Load data into stage.Paths[OLE DB Source Output]"
+          TopLeft="233.791665428008,68.33333251973">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="78.4583303065353,0"
+              Start="0,0"
+              End="70.9583303065353,0">
+>>>>>>> Stashed changes
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
+<<<<<<< Updated upstream
                     End="0,49.7500000581146" />
                   <mssgle:CubicBezierSegment
                     Point1="0,49.7500000581146"
@@ -1352,6 +2152,9 @@ Where (Create_time &gt;=? and Create_time &lt;=?) or (Update_time &gt;=? and Upd
                     Point3="192.124996973202,57.7500000581146" />
                   <mssgle:LineSegment
                     End="192.124996973202,100.000000116229" />
+=======
+                    End="70.9583303065353,0" />
+>>>>>>> Stashed changes
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1364,7 +2167,11 @@ Where (Create_time &gt;=? and Create_time &lt;=?) or (Update_time &gt;=? and Upd
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
+<<<<<<< Updated upstream
     design-time-name="Package\Load LSOA into stage\PCD_LSOA Stage">
+=======
+    design-time-name="Package\Load data into stage\OLE DB Destination">
+>>>>>>> Stashed changes
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -1377,7 +2184,11 @@ Where (Create_time &gt;=? and Create_time &lt;=?) or (Update_time &gt;=? and Upd
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
+<<<<<<< Updated upstream
     design-time-name="Package\Load LSOA into stage\PCD_OA_LSOA_MSOA_LAD_AUG21_UK_LU Source">
+=======
+    design-time-name="Package\Load data into stage\OLE DB Source">
+>>>>>>> Stashed changes
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>

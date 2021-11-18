@@ -11,8 +11,13 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Staging_Casualties"
   DTS:PackageType="5"
+<<<<<<< Updated upstream
   DTS:VersionBuild="19"
   DTS:VersionGUID="{B0366947-897B-40EC-B899-F102F6C40ADC}">
+=======
+  DTS:VersionBuild="16"
+  DTS:VersionGUID="{4740D82B-C546-4292-8A02-059A836559E9}">
+>>>>>>> Stashed changes
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -179,6 +184,7 @@
       <DTS:ObjectData>
         <DTS:ConnectionManager
           DTS:ConnectionString="D:\Downloads\BI\BI_Project\UK-Car-Accidents-Data-warehouse\Profiling\Casualties.txt" />
+<<<<<<< Updated upstream
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
@@ -213,6 +219,8 @@
       <DTS:ObjectData>
         <DTS:ConnectionManager
           DTS:ConnectionString="Data Source=DESKTOP-0IA21OI;Initial Catalog=Stage;Integrated Security=True;" />
+=======
+>>>>>>> Stashed changes
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
@@ -2122,6 +2130,7 @@ WHERE UPDATE_TIME &gt; ?</property>
           Id="Package\GetLSet"
           TopLeft="232.49999653548,126.099997745156" />
         <NodeLayout
+<<<<<<< Updated upstream
           Size="164,42.6666666666667"
           Id="Package\Load data into DB"
           TopLeft="67.4107209218631,76.8911774867412" />
@@ -2135,6 +2144,17 @@ WHERE UPDATE_TIME &gt; ?</property>
           TopLeft="59.9999991059304,174.199996885061" />
         <NodeLayout
           Size="138.666666666667,42"
+=======
+          Size="154.666666666667,42.6666666666667"
+          Id="Package\Get CET &amp; LSET"
+          TopLeft="60,61.416665794949" />
+        <NodeLayout
+          Size="176,42.6666666666667"
+          Id="Package\Load data into stage"
+          TopLeft="466.124994030221,182.849997803271" />
+        <NodeLayout
+          Size="140,42.6666666666667"
+>>>>>>> Stashed changes
           Id="Package\Update LSET"
           TopLeft="566.249991562218,188.499996629358" />
         <EdgeLayout
@@ -2371,6 +2391,7 @@ WHERE UPDATE_TIME &gt; ?</property>
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
+<<<<<<< Updated upstream
           Size="172,43"
           Id="Package\Staging\OLE DB Destination"
           TopLeft="327.49999511987,108.549998058975" />
@@ -2378,6 +2399,15 @@ WHERE UPDATE_TIME &gt; ?</property>
           Size="151,43"
           Id="Package\Staging\OLE DB Source"
           TopLeft="85.6249987240881,109.199998047352" />
+=======
+          Size="172,42.6666666666667"
+          Id="Package\Load data into stage\OLE DB Destination"
+          TopLeft="312.249995734543,45.2499992445112" />
+        <NodeLayout
+          Size="150.666666666667,42.6666666666667"
+          Id="Package\Load data into stage\OLE DB Source"
+          TopLeft="83.124998761341,48.7499991282821" />
+>>>>>>> Stashed changes
         <EdgeLayout
           Id="Package\Staging.Paths[OLE DB Source Output]"
           TopLeft="236.291665390755,130.208331386497">

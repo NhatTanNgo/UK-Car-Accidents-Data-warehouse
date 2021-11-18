@@ -2,6 +2,7 @@
 <BuildLog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <ProjectInfo>
     <Name>BUIDING AND MINING DATA WAREHOUSE</Name>
+<<<<<<< Updated upstream
 <<<<<<< HEAD
 <<<<<<< HEAD
     <LastWriteTime>2021-11-18T06:52:26.7816265Z</LastWriteTime>
@@ -11,21 +12,33 @@
 =======
     <LastWriteTime>2021-11-18T02:09:18.6670308Z</LastWriteTime>
 >>>>>>> parent of 08600d0 (staging_Wiki)
+=======
+    <LastWriteTime>2021-11-18T08:33:28.6039515Z</LastWriteTime>
+>>>>>>> Stashed changes
     <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
   </ProjectInfo>
   <LastBuildInfos>
     <ProjectBuildItemInfo>
       <Name>Staging_Accidents.dtsx</Name>
+<<<<<<< Updated upstream
       <LastWriteTime>2021-11-17T07:10:29.5381011Z</LastWriteTime>
+=======
+      <LastWriteTime>2021-11-18T08:19:14.982454Z</LastWriteTime>
+>>>>>>> Stashed changes
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>Staging_Casualties.dtsx</Name>
+<<<<<<< Updated upstream
       <LastWriteTime>2021-11-17T07:10:29.5390984Z</LastWriteTime>
+=======
+      <LastWriteTime>2021-11-18T08:24:35.2823971Z</LastWriteTime>
+>>>>>>> Stashed changes
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>Staging_LSOA.dtsx</Name>
+<<<<<<< Updated upstream
 <<<<<<< HEAD
 <<<<<<< HEAD
       <LastWriteTime>2021-11-18T05:59:22.6654696Z</LastWriteTime>
@@ -35,10 +48,14 @@
 =======
       <LastWriteTime>2021-11-16T16:31:36.6028286Z</LastWriteTime>
 >>>>>>> parent of 08600d0 (staging_Wiki)
+=======
+      <LastWriteTime>2021-11-18T08:34:24.7711515Z</LastWriteTime>
+>>>>>>> Stashed changes
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>Staging_postcodes.dtsx</Name>
+<<<<<<< Updated upstream
 <<<<<<< HEAD
 <<<<<<< HEAD
       <LastWriteTime>2021-11-18T05:59:22.6654696Z</LastWriteTime>
@@ -48,46 +65,70 @@
 =======
       <LastWriteTime>2021-11-16T17:13:09.7114757Z</LastWriteTime>
 >>>>>>> parent of 08600d0 (staging_Wiki)
+=======
+      <LastWriteTime>2021-11-18T07:56:35.4690767Z</LastWriteTime>
+>>>>>>> Stashed changes
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>Staging_Vehicles.dtsx</Name>
+<<<<<<< Updated upstream
       <LastWriteTime>2021-11-17T07:10:29.5410945Z</LastWriteTime>
+=======
+      <LastWriteTime>2021-11-18T08:28:04.7750607Z</LastWriteTime>
+>>>>>>> Stashed changes
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>Main_Source.dtsx</Name>
+<<<<<<< Updated upstream
 <<<<<<< HEAD
 <<<<<<< HEAD
       <LastWriteTime>2021-11-18T06:24:35.0787187Z</LastWriteTime>
 =======
       <LastWriteTime>2021-11-16T16:55:00.2624095Z</LastWriteTime>
 >>>>>>> parent of 08600d0 (staging_Wiki)
+=======
+      <LastWriteTime>2021-11-18T07:55:41.8115511Z</LastWriteTime>
+>>>>>>> Stashed changes
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>CodeBook.dtsx</Name>
+<<<<<<< Updated upstream
       <LastWriteTime>2021-11-18T02:01:04.6059166Z</LastWriteTime>
+=======
+      <LastWriteTime>2021-11-18T07:55:41.8035687Z</LastWriteTime>
+>>>>>>> Stashed changes
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>NDS_Country_Region.dtsx</Name>
+<<<<<<< Updated upstream
       <LastWriteTime>2021-11-18T02:18:22.6349689Z</LastWriteTime>
+=======
+      <LastWriteTime>2021-11-18T07:55:41.8125833Z</LastWriteTime>
+>>>>>>> Stashed changes
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>Main_NDS.dtsx</Name>
+<<<<<<< Updated upstream
 <<<<<<< HEAD
       <LastWriteTime>2021-11-18T05:59:22.625534Z</LastWriteTime>
+=======
+      <LastWriteTime>2021-11-18T07:55:41.8075511Z</LastWriteTime>
+>>>>>>> Stashed changes
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>Staging_Wiki.dtsx</Name>
-      <LastWriteTime>2021-11-18T06:37:37.831481Z</LastWriteTime>
+      <LastWriteTime>2021-11-18T07:55:41.820551Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>NDS_Postcode.dtsx</Name>
+<<<<<<< Updated upstream
       <LastWriteTime>2021-11-18T06:52:26.7098002Z</LastWriteTime>
 =======
       <LastWriteTime>2021-11-17T07:51:10.3184742Z</LastWriteTime>
@@ -95,6 +136,14 @@
 =======
       <LastWriteTime>2021-11-18T02:03:38.2788743Z</LastWriteTime>
 >>>>>>> parent of 08600d0 (staging_Wiki)
+=======
+      <LastWriteTime>2021-11-18T07:55:41.8125833Z</LastWriteTime>
+      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
+    </ProjectBuildItemInfo>
+    <ProjectBuildItemInfo>
+      <Name>Main_Staging.dtsx</Name>
+      <LastWriteTime>2021-11-18T08:34:24.6719831Z</LastWriteTime>
+>>>>>>> Stashed changes
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
   </LastBuildInfos>

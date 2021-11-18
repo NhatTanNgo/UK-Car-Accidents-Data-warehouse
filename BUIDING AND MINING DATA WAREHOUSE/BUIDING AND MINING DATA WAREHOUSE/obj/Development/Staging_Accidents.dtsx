@@ -11,8 +11,13 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Staging_Accidents"
   DTS:PackageType="5"
+<<<<<<< Updated upstream
   DTS:VersionBuild="34"
   DTS:VersionGUID="{408A4361-8891-4966-979E-2C1EAE338142}">
+=======
+  DTS:VersionBuild="46"
+  DTS:VersionGUID="{EEBDFF84-1821-4BF2-A5E2-A973F54AB4A2}">
+>>>>>>> Stashed changes
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -332,6 +337,7 @@
       <DTS:ObjectData>
         <DTS:ConnectionManager
           DTS:ConnectionString="D:\Downloads\BI\BI_Project\UK-Car-Accidents-Data-warehouse\Profiling\Accidents.txt" />
+<<<<<<< Updated upstream
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
@@ -357,6 +363,21 @@
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
+=======
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Accidents.txt 1]"
+      DTS:CreationName="FILE"
+      DTS:DTSID="{5103E4C6-1AD8-4B1C-ABA3-4C793741EF41}"
+      DTS:ObjectName="Accidents.txt 1">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="C:\Users\WinXs\OneDrive - VNU-HCMUS\Uni\Nam 4 - HKI\BI\Do an\UK-Car-Accidents-Data-warehouse\Profiling\Accidents.txt" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+>>>>>>> Stashed changes
       DTS:refId="Package.ConnectionManagers[DESKTOP-0IA21OI.Stage]"
       DTS:CreationName="OLEDB"
       DTS:DTSID="{8D9AC144-91C9-4A56-AE3B-E0B9F2996CC1}"
@@ -2064,9 +2085,15 @@ WHERE UPDATE_TIME &gt; ?</property>
           Id="Package\Data Profiling Task"
           TopLeft="293.124995632097,262.599995304346" />
         <NodeLayout
+<<<<<<< Updated upstream
           Size="148,42.6666666666667"
           Id="Package\Get CET, LSET"
           TopLeft="402.553573061427,93.5666668293874" />
+=======
+          Size="154.666666666667,42.6666666666667"
+          Id="Package\Get CET &amp; LSET"
+          TopLeft="145.000002469335,156.651962089713" />
+>>>>>>> Stashed changes
         <NodeLayout
           Size="176,42.6666666666667"
           Id="Package\Load data into stage"
@@ -2210,11 +2237,19 @@ WHERE UPDATE_TIME &gt; ?</property>
         <NodeLayout
           Size="150.666666666667,42.6666666666667"
           Id="Package\Load data into stage\OLE DB Source"
+<<<<<<< Updated upstream
           TopLeft="61.2499990873039,101.399998186827" />
         <NodeLayout
           Size="172,42.6666666666667"
           Id="Package\Load data into stage\OLE DB Destination"
           TopLeft="300.624995520338,102.699998163581" />
+=======
+          TopLeft="83.124998761341,48.7499991282821" />
+        <NodeLayout
+          Size="172,42.6666666666667"
+          Id="Package\Load data into stage\OLE DB Destination"
+          TopLeft="312.249995734543,45.2499992445112" />
+>>>>>>> Stashed changes
         <EdgeLayout
           Id="Package\Load data into stage.Paths[OLE DB Source Output]"
           TopLeft="211.916665753971,123.383331508537">
