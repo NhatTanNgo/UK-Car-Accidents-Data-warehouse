@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="13"
-  DTS:VersionGUID="{1AFDF343-4C72-4AE2-8528-0C34CE3C7757}">
+  DTS:VersionBuild="9"
+  DTS:VersionGUID="{30FCBB1F-4624-4593-AA04-B8360DFC2544}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -480,6 +480,18 @@
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Excel Connection Manager 1]"
+      DTS:CreationName="EXCEL"
+      DTS:DTSID="{9FBD8B96-E82B-48E7-AD30-E3195FD90BD0}"
+      DTS:ObjectName="Excel Connection Manager 1">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="0"
+          DTS:ConnectRetryInterval="0"
+          DTS:ConnectionString="Provider=Microsoft.ACE.OLEDB.12.0;Data Source=D:\Downloads\BI\BI_Project\UK-Car-Accidents-Data-warehouse\Dataset\wikipostcodes.xlsx;Extended Properties=&quot;EXCEL 12.0 XML;HDR=YES&quot;;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
       DTS:refId="Package.ConnectionManagers[LSOA]"
       DTS:CreationName="FLATFILE"
       DTS:DTSID="{762AAD17-985C-4C26-A26C-C1E7494C75D3}"
@@ -767,7 +779,7 @@
           DTS:RowDelimiter=""
           DTS:TextQualifier="_x003C_none_x003E_"
           DTS:CodePage="1252"
-          DTS:ConnectionString="C:\Users\phamd\Desktop\UK-Car-Accidents-Data-warehouse\Dataset\Vehicles1114.csv">
+          DTS:ConnectionString="D:\Downloads\BI\BI_Project\UK-Car-Accidents-Data-warehouse\Dataset\Vehicles1114.csv">
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -776,7 +788,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Accident_Index"
-              DTS:DTSID="{8DFA9AB3-071F-43B4-9357-A744E733EEE8}"
+              DTS:DTSID="{0341877F-5FBF-4D6D-884D-4C04FE8ACCA7}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -785,7 +797,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Vehicle_Reference"
-              DTS:DTSID="{117898BF-9756-428E-B273-F0F91CCE78FC}"
+              DTS:DTSID="{7AF6E8CE-C119-4C8B-A5A2-A1A699D79FE8}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -794,7 +806,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Vehicle_Type"
-              DTS:DTSID="{9A84C638-D0F6-44EE-8AA6-F82C93380674}"
+              DTS:DTSID="{A5FBBB01-8134-4E30-B0B3-176F39CCE480}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -803,7 +815,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Towing_and_Articulation"
-              DTS:DTSID="{55A1E4A3-6414-434C-92CE-CB57BBE4E8C2}"
+              DTS:DTSID="{3ECD15BC-735C-4DFB-86D5-D4A80932CCD9}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -812,7 +824,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Vehicle_Manoeuvre"
-              DTS:DTSID="{C49F5818-235F-4F14-8B3C-F8213C91EC38}"
+              DTS:DTSID="{3EBC38E1-9DDF-40FE-9634-831B25FFD8B7}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -821,7 +833,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Vehicle_Location-Restricted_Lane"
-              DTS:DTSID="{B474FAFC-ADD5-4180-A480-4138C7BA7906}"
+              DTS:DTSID="{1B831E7B-B6C5-4A41-9D00-82C77E90CDC8}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -830,7 +842,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Junction_Location"
-              DTS:DTSID="{06895545-5B59-4852-923B-A882DF4EFE65}"
+              DTS:DTSID="{65A60BCE-1BA6-46BC-819F-C3A69C400444}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -839,7 +851,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Skidding_and_Overturning"
-              DTS:DTSID="{2FC054C0-E85D-4AE9-AD66-F3B90CC9CBF7}"
+              DTS:DTSID="{A7A8D852-2974-4D86-BDEE-BE624A73FDE5}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -848,7 +860,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Hit_Object_in_Carriageway"
-              DTS:DTSID="{B0D0A0DA-2957-4C23-AE9A-16464A6E5747}"
+              DTS:DTSID="{3293EB05-A7E2-4BE5-A38D-430184DF7EF8}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -857,7 +869,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Vehicle_Leaving_Carriageway"
-              DTS:DTSID="{8F73A06F-5FFE-4428-8649-8E768F907310}"
+              DTS:DTSID="{3171D339-C17E-422A-888F-497DBEED1844}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -866,7 +878,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Hit_Object_off_Carriageway"
-              DTS:DTSID="{F2615B4D-445F-4B00-A5C8-81338EB78C18}"
+              DTS:DTSID="{386773A6-72E5-4D20-A7C4-791223739B08}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -875,7 +887,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="1st_Point_of_Impact"
-              DTS:DTSID="{5933C1DF-775B-4BC7-94D5-6A716DB65C00}"
+              DTS:DTSID="{A398C553-A07A-4421-A174-6690A4DD8B7F}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -884,7 +896,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Was_Vehicle_Left_Hand_Drive?"
-              DTS:DTSID="{4F5E7564-E2B9-4EC7-B330-1EA537095496}"
+              DTS:DTSID="{6175014D-EDD3-432D-A0D3-609349937C1C}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -893,7 +905,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Journey_Purpose_of_Driver"
-              DTS:DTSID="{E2FCC883-A8B4-48FA-9ECB-CC056BB35AEE}"
+              DTS:DTSID="{072B4E31-E92C-46ED-B351-251C2BF16366}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -902,7 +914,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Sex_of_Driver"
-              DTS:DTSID="{F1B0A9FB-029C-4C3B-9376-450AB5CD3422}"
+              DTS:DTSID="{CC4FC876-C18A-4811-817B-F5633D1B271E}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -911,7 +923,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Age_of_Driver"
-              DTS:DTSID="{7FA18A9C-710D-472A-BEAF-268BA54527A9}"
+              DTS:DTSID="{FBE81020-4000-4653-B44C-AA4BC0D8E480}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -920,7 +932,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Age_Band_of_Driver"
-              DTS:DTSID="{927117DE-A0F2-498C-959B-9893B4897C3B}"
+              DTS:DTSID="{2397847F-2789-4B33-91F3-11F308185D3E}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -929,7 +941,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Engine_Capacity_(CC)"
-              DTS:DTSID="{3CEB7F67-6459-4CA0-BEE3-D024AA829F40}"
+              DTS:DTSID="{0BD0341D-7895-4D49-8802-D578F7DFAF96}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -938,7 +950,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Propulsion_Code"
-              DTS:DTSID="{B4474B34-083A-4875-B714-54EC4A4FE3AE}"
+              DTS:DTSID="{6E49C798-C544-4C69-893F-CA70C2543368}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -947,7 +959,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Age_of_Vehicle"
-              DTS:DTSID="{3C00C6C6-57A9-4578-8407-6F57D3A46504}"
+              DTS:DTSID="{EA93E632-CDC7-4AC0-A4F6-0CD7DBAE0831}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -956,7 +968,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Driver_IMD_Decile"
-              DTS:DTSID="{7526E273-3960-4388-BC5E-264D0EF81239}"
+              DTS:DTSID="{9A734939-767D-4287-BC5E-9D84972B0915}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -965,7 +977,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Driver_Home_Area_Type"
-              DTS:DTSID="{C236CE54-EB68-40E2-9675-9A2BC327652D}"
+              DTS:DTSID="{AD7A5A5A-3A5A-4425-9667-51C7010A3809}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
@@ -5387,8 +5399,8 @@
               <connections>
                 <connection
                   refId="Package\Vehicle\Flat File Source.Connections[FlatFileConnection]"
-                  connectionManagerID="{00D4B144-FC2F-4E26-A343-028F40671D32}:invalid"
-                  connectionManagerRefId="{00D4B144-FC2F-4E26-A343-028F40671D32}:invalid"
+                  connectionManagerID="Package.ConnectionManagers[Vehicle]"
+                  connectionManagerRefId="Package.ConnectionManagers[Vehicle]"
                   name="FlatFileConnection" />
               </connections>
               <outputs>
@@ -6493,6 +6505,643 @@
         </pipeline>
       </DTS:ObjectData>
     </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Wiki"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{85F7C612-09CC-466A-AC07-C3EEE26E6366}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Wiki"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Wiki\Data Conversion"
+              componentClassID="Microsoft.DataConvert"
+              contactInfo="Data Conversion;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Data Conversion"
+              name="Data Conversion"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Wiki\Data Conversion.Inputs[Data Conversion Input]"
+                  name="Data Conversion Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Wiki\Data Conversion.Inputs[Data Conversion Input].Columns[Postcode area]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Postcode area"
+                      lineageId="Package\Wiki\Excel Source.Outputs[Excel Source Output].Columns[Postcode area]" />
+                    <inputColumn
+                      refId="Package\Wiki\Data Conversion.Inputs[Data Conversion Input].Columns[Post town]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Post town"
+                      lineageId="Package\Wiki\Excel Source.Outputs[Excel Source Output].Columns[Post town]" />
+                    <inputColumn
+                      refId="Package\Wiki\Data Conversion.Inputs[Data Conversion Input].Columns[Former postal county]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Former postal county"
+                      lineageId="Package\Wiki\Excel Source.Outputs[Excel Source Output].Columns[Former postal county]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Wiki\Data Conversion.Outputs[Data Conversion Output]"
+                  exclusionGroup="1"
+                  name="Data Conversion Output"
+                  synchronousInputId="Package\Wiki\Data Conversion.Inputs[Data Conversion Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Wiki\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Postcode area]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="255"
+                      lineageId="Package\Wiki\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Postcode area]"
+                      name="Copy of Postcode area"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Wiki\Excel Source.Outputs[Excel Source Output].Columns[Postcode area]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Wiki\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Post town]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="255"
+                      lineageId="Package\Wiki\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Post town]"
+                      name="Copy of Post town"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Wiki\Excel Source.Outputs[Excel Source Output].Columns[Post town]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Wiki\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Former postal county]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="255"
+                      lineageId="Package\Wiki\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Former postal county]"
+                      name="Copy of Former postal county"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Wiki\Excel Source.Outputs[Excel Source Output].Columns[Former postal county]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Wiki\Data Conversion.Outputs[Data Conversion Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Data Conversion Error Output"
+                  synchronousInputId="Package\Wiki\Data Conversion.Inputs[Data Conversion Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Wiki\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Wiki\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Wiki\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Wiki\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Wiki\Excel Source"
+              componentClassID="Microsoft.ExcelSource"
+              contactInfo="Excel Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Excel Source"
+              name="Excel Source"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">wikipostcodes$</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="The mapping from parameters in the SQL command to variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Wiki\Excel Source.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Excel Connection Manager 1]"
+                  connectionManagerRefId="Package.ConnectionManagers[Excel Connection Manager 1]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Wiki\Excel Source.Outputs[Excel Source Output]"
+                  name="Excel Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Wiki\Excel Source.Outputs[Excel Source Output].Columns[Postcode districts]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Wiki\Excel Source.Outputs[Excel Source Output].ExternalColumns[Postcode districts]"
+                      length="255"
+                      lineageId="Package\Wiki\Excel Source.Outputs[Excel Source Output].Columns[Postcode districts]"
+                      name="Postcode districts"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Wiki\Excel Source.Outputs[Excel Source Output].Columns[Post town]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Wiki\Excel Source.Outputs[Excel Source Output].ExternalColumns[Post town]"
+                      length="255"
+                      lineageId="Package\Wiki\Excel Source.Outputs[Excel Source Output].Columns[Post town]"
+                      name="Post town"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Wiki\Excel Source.Outputs[Excel Source Output].Columns[Former postal county]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Wiki\Excel Source.Outputs[Excel Source Output].ExternalColumns[Former postal county]"
+                      length="255"
+                      lineageId="Package\Wiki\Excel Source.Outputs[Excel Source Output].Columns[Former postal county]"
+                      name="Former postal county"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Wiki\Excel Source.Outputs[Excel Source Output].Columns[Postcode area]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Wiki\Excel Source.Outputs[Excel Source Output].ExternalColumns[Postcode area]"
+                      length="255"
+                      lineageId="Package\Wiki\Excel Source.Outputs[Excel Source Output].Columns[Postcode area]"
+                      name="Postcode area"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Wiki\Excel Source.Outputs[Excel Source Output].ExternalColumns[Postcode area]"
+                      dataType="wstr"
+                      length="255"
+                      name="Postcode area" />
+                    <externalMetadataColumn
+                      refId="Package\Wiki\Excel Source.Outputs[Excel Source Output].ExternalColumns[Postcode districts]"
+                      dataType="wstr"
+                      length="255"
+                      name="Postcode districts" />
+                    <externalMetadataColumn
+                      refId="Package\Wiki\Excel Source.Outputs[Excel Source Output].ExternalColumns[Post town]"
+                      dataType="wstr"
+                      length="255"
+                      name="Post town" />
+                    <externalMetadataColumn
+                      refId="Package\Wiki\Excel Source.Outputs[Excel Source Output].ExternalColumns[Former postal county]"
+                      dataType="wstr"
+                      length="255"
+                      name="Former postal county" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Wiki\Excel Source.Outputs[Excel Source Error Output]"
+                  isErrorOut="true"
+                  name="Excel Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Wiki\Excel Source.Outputs[Excel Source Error Output].Columns[Postcode districts]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Wiki\Excel Source.Outputs[Excel Source Error Output].Columns[Postcode districts]"
+                      name="Postcode districts" />
+                    <outputColumn
+                      refId="Package\Wiki\Excel Source.Outputs[Excel Source Error Output].Columns[Post town]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Wiki\Excel Source.Outputs[Excel Source Error Output].Columns[Post town]"
+                      name="Post town" />
+                    <outputColumn
+                      refId="Package\Wiki\Excel Source.Outputs[Excel Source Error Output].Columns[Former postal county]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Wiki\Excel Source.Outputs[Excel Source Error Output].Columns[Former postal county]"
+                      name="Former postal county" />
+                    <outputColumn
+                      refId="Package\Wiki\Excel Source.Outputs[Excel Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Wiki\Excel Source.Outputs[Excel Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Wiki\Excel Source.Outputs[Excel Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Wiki\Excel Source.Outputs[Excel Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                    <outputColumn
+                      refId="Package\Wiki\Excel Source.Outputs[Excel Source Error Output].Columns[Postcode area]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Wiki\Excel Source.Outputs[Excel Source Error Output].Columns[Postcode area]"
+                      name="Postcode area" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Wiki\OLE DB Destination"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="OLE DB Destination"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[Wiki_Postcodes]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Wiki\OLE DB Destination.Connections[OleDbConnection]"
+                  connectionManagerID="{F4A3871F-4AD8-419A-8C9E-BAEC8E731B5E}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[LocalHost.Source_DATH]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Wiki\OLE DB Destination.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Wiki\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Postcode districts]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Postcode districts"
+                      externalMetadataColumnId="Package\Wiki\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Postcode districts]"
+                      lineageId="Package\Wiki\Excel Source.Outputs[Excel Source Output].Columns[Postcode districts]" />
+                    <inputColumn
+                      refId="Package\Wiki\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[create_time]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="create_time"
+                      externalMetadataColumnId="Package\Wiki\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[create_time]"
+                      lineageId="Package\Wiki\Timestamp.Outputs[Derived Column Output].Columns[create_time]" />
+                    <inputColumn
+                      refId="Package\Wiki\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[update_time]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="update_time"
+                      externalMetadataColumnId="Package\Wiki\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[update_time]"
+                      lineageId="Package\Wiki\Timestamp.Outputs[Derived Column Output].Columns[update_time]" />
+                    <inputColumn
+                      refId="Package\Wiki\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[status]"
+                      cachedDataType="i4"
+                      cachedName="status"
+                      externalMetadataColumnId="Package\Wiki\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[status]"
+                      lineageId="Package\Wiki\Timestamp.Outputs[Derived Column Output].Columns[status]" />
+                    <inputColumn
+                      refId="Package\Wiki\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Copy of Postcode area]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="Copy of Postcode area"
+                      externalMetadataColumnId="Package\Wiki\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Postcode area]"
+                      lineageId="Package\Wiki\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Postcode area]" />
+                    <inputColumn
+                      refId="Package\Wiki\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Copy of Post town]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="Copy of Post town"
+                      externalMetadataColumnId="Package\Wiki\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Post town]"
+                      lineageId="Package\Wiki\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Post town]" />
+                    <inputColumn
+                      refId="Package\Wiki\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Copy of Former postal county]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="Copy of Former postal county"
+                      externalMetadataColumnId="Package\Wiki\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Former postal county]"
+                      lineageId="Package\Wiki\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Former postal county]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Wiki\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Postcode area]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Postcode area" />
+                    <externalMetadataColumn
+                      refId="Package\Wiki\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Postcode districts]"
+                      dataType="wstr"
+                      length="150"
+                      name="Postcode districts" />
+                    <externalMetadataColumn
+                      refId="Package\Wiki\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Post town]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Post town" />
+                    <externalMetadataColumn
+                      refId="Package\Wiki\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Former postal county]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Former postal county" />
+                    <externalMetadataColumn
+                      refId="Package\Wiki\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[create_time]"
+                      dataType="dbTimeStamp"
+                      name="create_time" />
+                    <externalMetadataColumn
+                      refId="Package\Wiki\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[update_time]"
+                      dataType="dbTimeStamp"
+                      name="update_time" />
+                    <externalMetadataColumn
+                      refId="Package\Wiki\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[status]"
+                      dataType="i4"
+                      name="status" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Wiki\OLE DB Destination.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Wiki\OLE DB Destination.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Wiki\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Wiki\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Wiki\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Wiki\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Wiki\Timestamp"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+              name="Timestamp"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Wiki\Timestamp.Inputs[Derived Column Input]"
+                  description="Input to the Derived Column Transformation"
+                  name="Derived Column Input">
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Wiki\Timestamp.Outputs[Derived Column Output]"
+                  description="Default Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  name="Derived Column Output"
+                  synchronousInputId="Package\Wiki\Timestamp.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Wiki\Timestamp.Outputs[Derived Column Output].Columns[create_time]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Wiki\Timestamp.Outputs[Derived Column Output].Columns[create_time]"
+                      name="create_time"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">[GETDATE]()</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">GETDATE()</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Wiki\Timestamp.Outputs[Derived Column Output].Columns[update_time]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Wiki\Timestamp.Outputs[Derived Column Output].Columns[update_time]"
+                      name="update_time"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">[GETDATE]()</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">GETDATE()</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Wiki\Timestamp.Outputs[Derived Column Output].Columns[status]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Wiki\Timestamp.Outputs[Derived Column Output].Columns[status]"
+                      name="status"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">1</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">1</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Wiki\Timestamp.Outputs[Derived Column Error Output]"
+                  description="Error Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Derived Column Error Output"
+                  synchronousInputId="Package\Wiki\Timestamp.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Wiki\Timestamp.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Wiki\Timestamp.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Wiki\Timestamp.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Wiki\Timestamp.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Wiki.Paths[Data Conversion Output]"
+              endId="Package\Wiki\OLE DB Destination.Inputs[OLE DB Destination Input]"
+              name="Data Conversion Output"
+              startId="Package\Wiki\Data Conversion.Outputs[Data Conversion Output]" />
+            <path
+              refId="Package\Wiki.Paths[Derived Column Output]"
+              endId="Package\Wiki\Data Conversion.Inputs[Data Conversion Input]"
+              name="Derived Column Output"
+              startId="Package\Wiki\Timestamp.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\Wiki.Paths[Excel Source Output]"
+              endId="Package\Wiki\Timestamp.Inputs[Derived Column Input]"
+              name="Excel Source Output"
+              startId="Package\Wiki\Excel Source.Outputs[Excel Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
   </DTS:Executables>
   <DTS:PrecedenceConstraints>
     <DTS:PrecedenceConstraint
@@ -6527,6 +7176,14 @@
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint 3"
       DTS:To="Package\LSOA" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 4]"
+      DTS:CreationName=""
+      DTS:DTSID="{7F18C358-FF4D-465A-AEB6-7F1DC3F95EEB}"
+      DTS:From="Package\LSOA"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 4"
+      DTS:To="Package\Wiki" />
   </DTS:PrecedenceConstraints>
   <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
 <!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
@@ -6541,25 +7198,25 @@
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="124,42.4"
+          Size="124,42.6666666666667"
           Id="Package\Accidents"
           TopLeft="44.374999338761,94.2499983146787" />
         <NodeLayout
-          Size="126.4,42.4"
+          Size="126.666666666667,42.6666666666667"
           Id="Package\Casualties"
           TopLeft="211.24999685213,92.9499983379245" />
         <NodeLayout
-          Size="104.8,42.4"
+          Size="104.666666666667,42.6666666666667"
           Id="Package\LSOA"
-          TopLeft="162.499997578561,240.499995699525" />
+          TopLeft="219.374996731058,169.649996966422" />
         <NodeLayout
-          Size="124,42.4"
+          Size="124,42.6666666666667"
           Id="Package\PostCode"
-          TopLeft="343.749994877726,150.799997303486" />
+          TopLeft="365.624994551763,95.549998291433" />
         <NodeLayout
-          Size="113.6,42.4"
+          Size="113.333333333334,42.6666666666667"
           Id="Package\Vehicle"
-          TopLeft="354.374994719401,246.349995594919" />
+          TopLeft="366.874994533137,174.849996873439" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
           TopLeft="168.374999338761,114.933331659635">
@@ -6584,24 +7241,18 @@
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 1]"
-          TopLeft="337.916663518797,114.283331671258">
+          TopLeft="337.916663518797,115.583331648012">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="67.8333313589294,36.5166656322281"
+              EndConnector="27.7083310329663,0"
               Start="0,0"
-              End="67.8333313589294,29.0166656322281">
+              End="20.2083310329663,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="63.8333313589294,0" />
-                  <mssgle:CubicBezierSegment
-                    Point1="63.8333313589294,0"
-                    Point2="67.8333313589294,0"
-                    Point3="67.8333313589294,4" />
-                  <mssgle:LineSegment
-                    End="67.8333313589294,29.0166656322281" />
+                    End="20.2083310329663,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -6612,18 +7263,18 @@
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 2]"
-          TopLeft="408.395828131897,193.466663970153">
+          TopLeft="425.583327875783,138.2166649581">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,52.8833316247662"
+              EndConnector="0,36.6333319153389"
               Start="0,0"
-              End="0,45.3833316247662">
+              End="0,29.1333319153389">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,45.3833316247662" />
+                    End="0,29.1333319153389" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -6634,18 +7285,44 @@
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 3]"
-          TopLeft="354.374994719401,264.758328980555">
+          TopLeft="366.874994533137,193.583330253264">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-87.2083304741731,0"
+              EndConnector="-42.8333311354124,0"
               Start="0,0"
-              End="-79.7083304741731,0">
+              End="-35.3333311354124,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="-79.7083304741731,0" />
+                    End="-35.3333311354124,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="100,42.6666666666667"
+          Id="Package\Wiki"
+          TopLeft="61.8749990779907,164.449997059405" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 4]"
+          TopLeft="219.374996731058,188.383330346247">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-57.4999976530669,0"
+              Start="0,0"
+              End="-49.9999976530669,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="-49.9999976530669,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -6976,17 +7653,17 @@
     design-time-name="Package\PostCode">
     <LayoutInfo>
       <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="154.4,42.4"
+          Size="154.666666666667,42.6666666666667"
           Id="Package\PostCode\Derived Column"
           TopLeft="219,146" />
         <NodeLayout
-          Size="172,42.4"
+          Size="172,42.6666666666667"
           Id="Package\PostCode\OLE DB Destination"
           TopLeft="400,60" />
         <NodeLayout
-          Size="152,42.4"
+          Size="152,42.6666666666667"
           Id="Package\PostCode\Flat File Source"
           TopLeft="60,61" />
         <EdgeLayout
@@ -7020,7 +7697,9 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -7054,7 +7733,9 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -7077,51 +7758,53 @@
     design-time-name="Package\Vehicle">
     <LayoutInfo>
       <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="172,42.4"
+          Size="172,42.6666666666667"
           Id="Package\Vehicle\OLE DB Destination"
           TopLeft="400,60" />
         <NodeLayout
-          Size="154.4,42.4"
+          Size="154.666666666667,42.6666666666667"
           Id="Package\Vehicle\Derived Column"
           TopLeft="219,146" />
         <NodeLayout
-          Size="152,42.4"
+          Size="152,42.6666666666667"
           Id="Package\Vehicle\Flat File Source"
-          TopLeft="15.7142849601045,51.8235292830682" />
+          TopLeft="60,61" />
         <EdgeLayout
           Id="Package\Vehicle.Paths[Flat File Source Output]"
-          TopLeft="91.7142849601045,94.2235292830682">
+          TopLeft="136,103.666666666667">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="180.085715039896,51.7764707169318"
+              EndConnector="160.333333333333,42.3333333333333"
               Start="0,0"
-              End="180.085715039896,44.2764707169318">
+              End="160.333333333333,34.8333333333333">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,26.747257994978" />
+                    End="0,17.1666666666667" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,26.747257994978"
-                    Point2="0,30.747257994978"
-                    Point3="4,30.747257994978" />
+                    Point1="0,17.1666666666667"
+                    Point2="0,21.1666666666667"
+                    Point3="4,21.1666666666667" />
                   <mssgle:LineSegment
-                    End="176.085715039896,30.747257994978" />
+                    End="156.333333333333,21.1666666666667" />
                   <mssgle:CubicBezierSegment
-                    Point1="176.085715039896,30.747257994978"
-                    Point2="180.085715039896,30.747257994978"
-                    Point3="180.085715039896,34.747257994978" />
+                    Point1="156.333333333333,21.1666666666667"
+                    Point2="160.333333333333,21.1666666666667"
+                    Point3="160.333333333333,25.1666666666667" />
                   <mssgle:LineSegment
-                    End="180.085715039896,44.2764707169318" />
+                    End="160.333333333333,34.8333333333333" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -7155,7 +7838,9 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -7163,6 +7848,122 @@
   </TaskHost>
   <PipelineComponentMetadata
     design-time-name="Package\Vehicle\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\Wiki">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="132,42.6666666666667"
+          Id="Package\Wiki\Timestamp"
+          TopLeft="108.749998379499,140.399997489452" />
+        <NodeLayout
+          Size="172,42.6666666666667"
+          Id="Package\Wiki\OLE DB Destination"
+          TopLeft="292.49999564141,48.749999128282" />
+        <NodeLayout
+          Size="139.333333333334,42.6666666666667"
+          Id="Package\Wiki\Excel Source"
+          TopLeft="105.624998426065,51.3499990817904" />
+        <EdgeLayout
+          Id="Package\Wiki.Paths[Excel Source Output]"
+          TopLeft="175.020831736115,94.0166657484571">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,46.3833317409952"
+              Start="0,0"
+              End="0,38.8833317409952">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,38.8833317409952" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="157.333333333334,42.6666666666667"
+          Id="Package\Wiki\Data Conversion"
+          TopLeft="297.499995566905,145.599997396469" />
+        <EdgeLayout
+          Id="Package\Wiki.Paths[Derived Column Output]"
+          TopLeft="240.749998379499,164.333330776294">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="56.749997187406,0"
+              Start="0,0"
+              End="49.249997187406,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="49.249997187406,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Wiki.Paths[Data Conversion Output]"
+          TopLeft="377.333328937491,145.599997396469">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,-54.1833316015204"
+              Start="0,0"
+              End="0,-46.6833316015204">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,-46.6833316015204" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Wiki\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Wiki\Excel Source">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
