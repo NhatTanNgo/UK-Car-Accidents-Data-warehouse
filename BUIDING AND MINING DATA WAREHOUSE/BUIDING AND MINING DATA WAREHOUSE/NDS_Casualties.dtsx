@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="7"
-  DTS:VersionGUID="{8C2ACC45-7494-4371-8DD4-B308FD163AF8}">
+  DTS:VersionBuild="12"
+  DTS:VersionGUID="{5A5B75A7-97F7-49EF-AD49-66E79098DABF}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables />
@@ -1892,7 +1892,7 @@ where [Accident_ID] = ? and [Casualty_Class] = ? and [CasualtyType] = ?</propert
         <NodeLayout
           Size="141.6,41.6"
           Id="Package\Stage to NDS"
-          TopLeft="209.285717849829,121.588236999347" />
+          TopLeft="22.1428575199479,70.3529421631443" />
       </GraphLayout>
     </LayoutInfo>
   </Package>
@@ -1902,17 +1902,41 @@ where [Accident_ID] = ? and [Casualty_Class] = ? and [CasualtyType] = ?</propert
       <GraphLayout
         Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
+          Size="181.6,41.6"
+          Id="Package\Stage to NDS\Lookup Casualty Type"
+          TopLeft="302.142862288319,34.4117651884944" />
+        <NodeLayout
+          Size="229.6,41.6"
+          Id="Package\Stage to NDS\Map Stage Sex Male to NDS Sex"
+          TopLeft="43.5714293134458,208.352943257065" />
+        <NodeLayout
           Size="155.2,41.6"
           Id="Package\Stage to NDS\Stage Casualties"
           TopLeft="70.0000011920929,30.5882357231061" />
         <NodeLayout
+          Size="156.8,41.6"
+          Id="Package\Stage to NDS\Insert Casualties"
+          TopLeft="630.000010728837,439.70588851965" />
+        <NodeLayout
+          Size="160,41.6"
+          Id="Package\Stage to NDS\Lookup Accidents"
+          TopLeft="313.571433911518,116.235295747803" />
+        <NodeLayout
+          Size="182.4,41.6"
+          Id="Package\Stage to NDS\Lookup Casualty Class"
+          TopLeft="613.571439020488,123.88235467858" />
+        <NodeLayout
+          Size="176,41.6"
+          Id="Package\Stage to NDS\Lookup existing data"
+          TopLeft="45.7142864927952,338.7647106334" />
+        <NodeLayout
+          Size="162.4,41.6"
+          Id="Package\Stage to NDS\Update Casualties"
+          TopLeft="632.142867908186,338.7647106334" />
+        <NodeLayout
           Size="143.2,41.6"
           Id="Package\Stage to NDS\Add SourceID"
           TopLeft="562.857152442543,207.235297024044" />
-        <NodeLayout
-          Size="181.6,41.6"
-          Id="Package\Stage to NDS\Lookup Casualty Type"
-          TopLeft="302.142862288319,34.4117651884944" />
         <NodeLayout
           Size="160.8,41.6"
           Id="Package\Stage to NDS\Lookup Age Band"
@@ -1941,138 +1965,40 @@ where [Accident_ID] = ? and [Casualty_Class] = ? and [CasualtyType] = ?</propert
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="182.4,41.6"
-          Id="Package\Stage to NDS\Lookup Casualty Class"
-          TopLeft="613.571439020488,123.88235467858" />
         <EdgeLayout
-          Id="Package\Stage to NDS.Paths[Lookup Match Output1]"
-          TopLeft="706.157153421762,71.4235298300285">
+          Id="Package\Stage to NDS.Paths[Derived Column Output]"
+          TopLeft="634.457152442543,248.835297024044">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,52.4588248485514"
+              EndConnector="-500.742865949748,89.9294136093563"
               Start="0,0"
-              End="0,44.9588248485514">
+              End="-500.742865949748,82.4294136093563">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,44.9588248485514" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-48.19138671875,16.6747249242757,96.3827734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="160,41.6"
-          Id="Package\Stage to NDS\Lookup Accidents"
-          TopLeft="313.571433911518,116.235295747803" />
-        <EdgeLayout
-          Id="Package\Stage to NDS.Paths[Lookup Match Output2]"
-          TopLeft="613.571439020488,140.858825213191">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-140.00000510897,0"
-              Start="0,0"
-              End="-132.50000510897,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="-132.50000510897,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-114.441389273235,5,96.3827734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="176,41.6"
-          Id="Package\Stage to NDS\Lookup existing data"
-          TopLeft="46.4285722192451,337.235298847245" />
-        <NodeLayout
-          Size="162.4,41.6"
-          Id="Package\Stage to NDS\Update Casualties"
-          TopLeft="632.142867908186,338.7647106334" />
-        <EdgeLayout
-          Id="Package\Stage to NDS.Paths[Lookup Match Output3]"
-          TopLeft="222.428572219245,358.800004740322">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="409.714295688941,0"
-              Start="0,0"
-              End="402.214295688941,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="402.214295688941,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="152.91576112572,5,96.3827734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="156.8,41.6"
-          Id="Package\Stage to NDS\Insert Casualties"
-          TopLeft="630.000010728837,439.70588851965" />
-        <EdgeLayout
-          Id="Package\Stage to NDS.Paths[Lookup No Match Output]"
-          TopLeft="134.428572219245,378.835298847245">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="573.971438509592,60.8705896724057"
-              Start="0,0"
-              End="573.971438509592,53.3705896724057">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,26.4352948362028" />
+                    End="0,40.9647068046781" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,26.4352948362028"
-                    Point2="0,30.4352948362028"
-                    Point3="4,30.4352948362028" />
+                    Point1="0,40.9647068046781"
+                    Point2="0,44.9647068046781"
+                    Point3="-4,44.9647068046781" />
                   <mssgle:LineSegment
-                    End="569.971438509592,30.4352948362028" />
+                    End="-496.742865949748,44.9647068046781" />
                   <mssgle:CubicBezierSegment
-                    Point1="569.971438509592,30.4352948362028"
-                    Point2="573.971438509592,30.4352948362028"
-                    Point3="573.971438509592,34.4352948362028" />
+                    Point1="-496.742865949748,44.9647068046781"
+                    Point2="-500.742865949748,44.9647068046781"
+                    Point3="-500.742865949748,48.9647068046781" />
                   <mssgle:LineSegment
-                    End="573.971438509592,53.3705896724057" />
+                    End="-500.742865949748,82.4294136093563" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="231.179332536046,35.4352948362028,111.6127734375,11.609375"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="229.6,41.6"
-          Id="Package\Stage to NDS\Map Stage Sex Male to NDS Sex"
-          TopLeft="43.5714293134458,208.352943257065" />
         <EdgeLayout
           Id="Package\Stage to NDS.Paths[OLE DB Source Output]"
           TopLeft="225.200001192093,53.3000004558002">
@@ -2093,6 +2019,64 @@ where [Accident_ID] = ? and [Casualty_Class] = ? and [CasualtyType] = ?</propert
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Stage to NDS.Paths[OLE DB Command Output]"
+          TopLeft="273.171429313446,228.594120140554">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="289.685723129097,0"
+              Start="0,0"
+              End="282.185723129097,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="282.185723129097,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Stage to NDS.Paths[Lookup No Match Output]"
+          TopLeft="133.714286492795,380.3647106334">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="574.685724236042,59.3411778862497"
+              Start="0,0"
+              End="574.685724236042,51.8411778862497">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,25.6705889431248" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,25.6705889431248"
+                    Point2="0,29.6705889431248"
+                    Point3="4,29.6705889431248" />
+                  <mssgle:LineSegment
+                    End="570.685724236042,29.6705889431248" />
+                  <mssgle:CubicBezierSegment
+                    Point1="570.685724236042,29.6705889431248"
+                    Point2="574.685724236042,29.6705889431248"
+                    Point3="574.685724236042,33.6705889431248" />
+                  <mssgle:LineSegment
+                    End="574.685724236042,51.8411778862497" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="231.536475399271,34.6705889431248,111.6127734375,11.609375"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -2132,64 +2116,103 @@ where [Accident_ID] = ? and [Casualty_Class] = ? and [CasualtyType] = ?</propert
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Stage to NDS.Paths[OLE DB Command Output]"
-          TopLeft="273.171429313446,228.594120140554">
+          Id="Package\Stage to NDS.Paths[Lookup Match Output3]"
+          TopLeft="221.714286492795,359.5647106334">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="289.685723129097,0"
+              EndConnector="410.428581415391,0"
               Start="0,0"
-              End="282.185723129097,0">
+              End="402.928581415391,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="282.185723129097,0" />
+                    End="402.928581415391,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="153.272903988945,5,96.3827734375,11.609375"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Stage to NDS.Paths[Derived Column Output]"
-          TopLeft="634.457152442543,248.835297024044">
+          Id="Package\Stage to NDS.Paths[Lookup Match Output2]"
+          TopLeft="613.571439020488,140.858825213191">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-500.028580223298,88.4000018232007"
+              EndConnector="-140.00000510897,0"
               Start="0,0"
-              End="-500.028580223298,80.9000018232007">
+              End="-132.50000510897,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,40.2000009116004" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,40.2000009116004"
-                    Point2="0,44.2000009116004"
-                    Point3="-4,44.2000009116004" />
-                  <mssgle:LineSegment
-                    End="-496.028580223298,44.2000009116004" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-496.028580223298,44.2000009116004"
-                    Point2="-500.028580223298,44.2000009116004"
-                    Point3="-500.028580223298,48.2000009116004" />
-                  <mssgle:LineSegment
-                    End="-500.028580223298,80.9000018232007" />
+                    End="-132.50000510897,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="-114.441389273235,5,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Stage to NDS.Paths[Lookup Match Output1]"
+          TopLeft="706.157153421762,71.4235298300285">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,52.4588248485514"
+              Start="0,0"
+              End="0,44.9588248485514">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,44.9588248485514" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-48.19138671875,16.6747249242757,96.3827734375,11.609375"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Stage to NDS\Lookup Casualty Type">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[CasualtyType]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
   <PipelineComponentMetadata
     design-time-name="Package\Stage to NDS\Stage Casualties">
     <Properties>
@@ -2204,45 +2227,35 @@ where [Accident_ID] = ? and [Casualty_Class] = ? and [CasualtyType] = ?</propert
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Stage to NDS\Lookup Casualty Type">
+    design-time-name="Package\Stage to NDS\Insert Casualties">
     <Properties>
       <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:boolean">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string">[dbo].[CasualtyType]</Value>
+        <Name>DataSourceViewID</Name>
       </Property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:int">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
+          type="q2:string">Table</Value>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Stage to NDS\Lookup Age Band">
+    design-time-name="Package\Stage to NDS\Lookup Accidents">
     <Properties>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:boolean">false</Value>
+          type="q2:string">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
         <Value
-          type="q3:string">[dbo].[AgeBand]</Value>
+          type="q3:string">[dbo].[Accidents]</Value>
       </Property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:int">0</Value>
+          type="q4:string">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -2255,7 +2268,7 @@ where [Accident_ID] = ? and [Casualty_Class] = ? and [CasualtyType] = ?</propert
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:boolean">false</Value>
+          type="q2:string">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -2265,30 +2278,7 @@ where [Accident_ID] = ? and [Casualty_Class] = ? and [CasualtyType] = ?</propert
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:int">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Stage to NDS\Lookup Accidents">
-    <Properties>
-      <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:boolean">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string">[dbo].[Accidents]</Value>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q4:int">0</Value>
+          type="q4:string">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -2301,7 +2291,7 @@ where [Accident_ID] = ? and [Casualty_Class] = ? and [CasualtyType] = ?</propert
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:boolean">false</Value>
+          type="q2:string">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -2311,7 +2301,7 @@ where [Accident_ID] = ? and [Casualty_Class] = ? and [CasualtyType] = ?</propert
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:int">0</Value>
+          type="q4:string">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -2319,15 +2309,25 @@ where [Accident_ID] = ? and [Casualty_Class] = ? and [CasualtyType] = ?</propert
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Stage to NDS\Insert Casualties">
+    design-time-name="Package\Stage to NDS\Lookup Age Band">
     <Properties>
       <Property>
-        <Name>DataSourceViewID</Name>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[AgeBand]</Value>
       </Property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q2:string">Table</Value>
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
