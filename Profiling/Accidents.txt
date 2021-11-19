@@ -17,11 +17,17 @@
     <DtsDataSource ID="{8D9AC144-91C9-4A56-AE3B-E0B9F2996CC1}" Name="DESKTOP-0IA21OI.Stage">
       <DtsConnectionManagerID>DESKTOP-0IA21OI.Stage</DtsConnectionManagerID>
     </DtsDataSource>
+    <DtsDataSource ID="{B6511C9D-92EE-4BF6-A11A-1ADF3E3CCEC1}" Name="Excel Connection Manager">
+      <DtsConnectionManagerID>Excel Connection Manager</DtsConnectionManagerID>
+    </DtsDataSource>
     <DtsDataSource ID="{DFF81239-B2A8-4950-83F9-2BB12A3D2296}" Name="LocalHost Stage_DATH">
       <DtsConnectionManagerID>LocalHost Stage_DATH</DtsConnectionManagerID>
     </DtsDataSource>
     <DtsDataSource ID="{DE3C34A7-7A0C-4B26-A05E-3060463C0629}" Name="LocalHost.MetaData_DATH">
       <DtsConnectionManagerID>LocalHost.MetaData_DATH</DtsConnectionManagerID>
+    </DtsDataSource>
+    <DtsDataSource ID="{AE006570-A2B7-40E0-9892-4B549EA30919}" Name="LocalHost.NDS_DATH">
+      <DtsConnectionManagerID>LocalHost.NDS_DATH</DtsConnectionManagerID>
     </DtsDataSource>
     <DtsDataSource ID="{F4A3871F-4AD8-419A-8C9E-BAEC8E731B5E}" Name="LocalHost.Source_DATH">
       <DtsConnectionManagerID>LocalHost.Source_DATH</DtsConnectionManagerID>
