@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="26"
-  DTS:VersionGUID="{C4A9EE9B-FB6F-4771-BC02-DA3D33547031}">
+  DTS:VersionBuild="27"
+  DTS:VersionGUID="{CCC8B7F1-C213-4F3F-B56A-83FDA4C549C8}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables />
@@ -4010,39 +4010,39 @@
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
         <NodeLayout
-          Size="121.333333333334,42.6666666666667"
+          Size="121,43"
           Id="Package\AgeBand"
           TopLeft="248.749996293336,141.699997466207" />
         <NodeLayout
-          Size="156,42.6666666666667"
+          Size="156,43"
           Id="Package\Casualties_Class"
           TopLeft="52.4999992176891,202.149996385276" />
         <NodeLayout
-          Size="142.666666666667,42.6666666666667"
+          Size="143,43"
           Id="Package\CasualtyType"
           TopLeft="248.124996302649,77.9999986052513" />
         <NodeLayout
-          Size="154.666666666667,42.6666666666667"
+          Size="155,43"
           Id="Package\JourneyPurpose"
           TopLeft="430.624993583188,139.749997501075" />
         <NodeLayout
-          Size="152,42.6666666666667"
+          Size="152,43"
           Id="Package\Local_Authority"
           TopLeft="56.2499991618098,140.399997489452" />
         <NodeLayout
-          Size="132,42.6666666666667"
+          Size="132,43"
           Id="Package\PoliceForce"
           TopLeft="431.874993564561,205.399996327162" />
         <NodeLayout
-          Size="126.666666666667,42.6666666666667"
+          Size="127,43"
           Id="Package\RoadType"
           TopLeft="429.374993601814,79.2999985820055" />
         <NodeLayout
-          Size="117.333333333334,42.6666666666667"
+          Size="117,43"
           Id="Package\Severity"
           TopLeft="55.6249991711229,75.399998651743" />
         <NodeLayout
-          Size="136,42.6666666666667"
+          Size="136,43"
           Id="Package\VehicleType"
           TopLeft="249.374996284023,202.149996385276" />
       </GraphLayout>
@@ -4910,21 +4910,21 @@
     design-time-name="Package\Severity">
     <LayoutInfo>
       <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="105.333333333334,42.6666666666667"
+          Size="105,43"
           Id="Package\Severity\SrcID"
           TopLeft="298.624996079132,118.699998512268" />
         <NodeLayout
-          Size="139.333333333334,42.6666666666667"
+          Size="139,43"
           Id="Package\Severity\Excel Source"
           TopLeft="93.1249986123294,46.1499991747737" />
         <NodeLayout
-          Size="172,42.6666666666667"
+          Size="172,43"
           Id="Package\Severity\OLE DB Destination"
           TopLeft="265.624996041879,44.1999992096424" />
         <NodeLayout
-          Size="157.333333333334,42.6666666666667"
+          Size="157,43"
           Id="Package\Severity\Data Conversion"
           TopLeft="79.3749988172203,118.299997884631" />
         <EdgeLayout
@@ -4946,9 +4946,7 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -4970,9 +4968,7 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -4994,9 +4990,7 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>

@@ -5,23 +5,46 @@
   DTS:CreationName="Microsoft.Package"
   DTS:CreatorComputerName="DESKTOP-JAAIQ4K"
   DTS:CreatorName="DESKTOP-JAAIQ4K\khoaf"
-  DTS:DTSID="{2D28B014-8F1B-4522-9386-FB278654D625}"
+  DTS:DTSID="{8A616A75-022A-4AE4-AB30-ED20F65E4781}"
   DTS:ExecutableType="Microsoft.Package"
   DTS:LastModifiedProductVersion="15.0.2000.170"
   DTS:LocaleID="1033"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="2"
-  DTS:VersionGUID="{22925E72-2476-4D2F-B9B9-2AA1A43B3415}">
+  DTS:VersionBuild="7"
+  DTS:VersionGUID="{2DD18D0C-D34F-4C87-912B-186BD60469E0}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Accidents_NDS_Profiling]"
+      DTS:CreationName="FILE"
+      DTS:DTSID="{92BAEE8F-6BE1-4AB2-A670-E634DFD124F1}"
+      DTS:ObjectName="Accidents_NDS_Profiling">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:FileUsageType="1"
+          DTS:ConnectionString="C:\Accidents_NDS_Profiling" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[LocalHost.NDS_DATH ADO.NET]"
+      DTS:CreationName="ADO.NET:System.Data.SqlClient.SqlConnection, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"
+      DTS:DTSID="{C54B8DE8-7CA8-4423-B9EA-54AF1E6EB9DD}"
+      DTS:ObjectName="LocalHost.NDS_DATH ADO.NET">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=.;Initial Catalog=NDS_DATH;Integrated Security=True;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
   <DTS:Variables />
   <DTS:Executables>
     <DTS:Executable
       DTS:refId="Package\Accidents Stage to NDS"
       DTS:CreationName="Microsoft.Pipeline"
       DTS:Description="Data Flow Task"
-      DTS:DTSID="{75C043F6-E136-4DB1-9CA9-F7295BDA59FA}"
+      DTS:DTSID="{F67AB931-C0A0-4636-AEB1-0B018AB179D4}"
       DTS:ExecutableType="Microsoft.Pipeline"
       DTS:LocaleID="-1"
       DTS:ObjectName="Accidents Stage to NDS"
@@ -159,6 +182,18 @@
                       cachedName="Severity_ID"
                       externalMetadataColumnId="Package\Accidents Stage to NDS\Accidents NDS.Inputs[OLE DB Destination Input].ExternalColumns[Accident_Severity]"
                       lineageId="Package\Accidents Stage to NDS\Lookup Severity.Outputs[Lookup Match Output].Columns[Severity_ID]" />
+                    <inputColumn
+                      refId="Package\Accidents Stage to NDS\Accidents NDS.Inputs[OLE DB Destination Input].Columns[Location_ID]"
+                      cachedDataType="i4"
+                      cachedName="Location_ID"
+                      externalMetadataColumnId="Package\Accidents Stage to NDS\Accidents NDS.Inputs[OLE DB Destination Input].ExternalColumns[Location_ID]"
+                      lineageId="Package\Accidents Stage to NDS\Lookup Location ID.Outputs[Lookup Match Output].Columns[Location_ID]" />
+                    <inputColumn
+                      refId="Package\Accidents Stage to NDS\Accidents NDS.Inputs[OLE DB Destination Input].Columns[PoliceForce_ID]"
+                      cachedDataType="i4"
+                      cachedName="PoliceForce_ID"
+                      externalMetadataColumnId="Package\Accidents Stage to NDS\Accidents NDS.Inputs[OLE DB Destination Input].ExternalColumns[Police_ID]"
+                      lineageId="Package\Accidents Stage to NDS\Lookup Police Force.Outputs[Lookup Match Output].Columns[PoliceForce_ID]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -211,6 +246,10 @@
                       refId="Package\Accidents Stage to NDS\Accidents NDS.Inputs[OLE DB Destination Input].ExternalColumns[Source_ID]"
                       dataType="i4"
                       name="Source_ID" />
+                    <externalMetadataColumn
+                      refId="Package\Accidents Stage to NDS\Accidents NDS.Inputs[OLE DB Destination Input].ExternalColumns[Police_ID]"
+                      dataType="i4"
+                      name="Police_ID" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
@@ -387,6 +426,61 @@
                       length="50"
                       lineageId="Package\Accidents Stage to NDS\Accidents Stage.Outputs[OLE DB Source Output].Columns[LSOA_of_Accident_Location]"
                       name="LSOA_of_Accident_Location"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Accidents Stage to NDS\Accidents Stage.Outputs[OLE DB Source Output].Columns[Location_Easting_OSGR]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Accidents Stage to NDS\Accidents Stage.Outputs[OLE DB Source Output].ExternalColumns[Location_Easting_OSGR]"
+                      length="50"
+                      lineageId="Package\Accidents Stage to NDS\Accidents Stage.Outputs[OLE DB Source Output].Columns[Location_Easting_OSGR]"
+                      name="Location_Easting_OSGR"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Accidents Stage to NDS\Accidents Stage.Outputs[OLE DB Source Output].Columns[Location_Northing_OSGR]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Accidents Stage to NDS\Accidents Stage.Outputs[OLE DB Source Output].ExternalColumns[Location_Northing_OSGR]"
+                      length="50"
+                      lineageId="Package\Accidents Stage to NDS\Accidents Stage.Outputs[OLE DB Source Output].Columns[Location_Northing_OSGR]"
+                      name="Location_Northing_OSGR"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Accidents Stage to NDS\Accidents Stage.Outputs[OLE DB Source Output].Columns[Longitude]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Accidents Stage to NDS\Accidents Stage.Outputs[OLE DB Source Output].ExternalColumns[Longitude]"
+                      length="50"
+                      lineageId="Package\Accidents Stage to NDS\Accidents Stage.Outputs[OLE DB Source Output].Columns[Longitude]"
+                      name="Longitude"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Accidents Stage to NDS\Accidents Stage.Outputs[OLE DB Source Output].Columns[Latitude]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Accidents Stage to NDS\Accidents Stage.Outputs[OLE DB Source Output].ExternalColumns[Latitude]"
+                      length="50"
+                      lineageId="Package\Accidents Stage to NDS\Accidents Stage.Outputs[OLE DB Source Output].Columns[Latitude]"
+                      name="Latitude"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Accidents Stage to NDS\Accidents Stage.Outputs[OLE DB Source Output].Columns[Police_Force]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Accidents Stage to NDS\Accidents Stage.Outputs[OLE DB Source Output].ExternalColumns[Police_Force]"
+                      length="50"
+                      lineageId="Package\Accidents Stage to NDS\Accidents Stage.Outputs[OLE DB Source Output].Columns[Police_Force]"
+                      name="Police_Force"
                       truncationRowDisposition="FailComponent" />
                   </outputColumns>
                   <externalMetadataColumns
@@ -658,6 +752,41 @@
                       length="50"
                       lineageId="Package\Accidents Stage to NDS\Accidents Stage.Outputs[OLE DB Source Error Output].Columns[LSOA_of_Accident_Location]"
                       name="LSOA_of_Accident_Location" />
+                    <outputColumn
+                      refId="Package\Accidents Stage to NDS\Accidents Stage.Outputs[OLE DB Source Error Output].Columns[Location_Easting_OSGR]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Accidents Stage to NDS\Accidents Stage.Outputs[OLE DB Source Error Output].Columns[Location_Easting_OSGR]"
+                      name="Location_Easting_OSGR" />
+                    <outputColumn
+                      refId="Package\Accidents Stage to NDS\Accidents Stage.Outputs[OLE DB Source Error Output].Columns[Location_Northing_OSGR]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Accidents Stage to NDS\Accidents Stage.Outputs[OLE DB Source Error Output].Columns[Location_Northing_OSGR]"
+                      name="Location_Northing_OSGR" />
+                    <outputColumn
+                      refId="Package\Accidents Stage to NDS\Accidents Stage.Outputs[OLE DB Source Error Output].Columns[Longitude]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Accidents Stage to NDS\Accidents Stage.Outputs[OLE DB Source Error Output].Columns[Longitude]"
+                      name="Longitude" />
+                    <outputColumn
+                      refId="Package\Accidents Stage to NDS\Accidents Stage.Outputs[OLE DB Source Error Output].Columns[Latitude]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Accidents Stage to NDS\Accidents Stage.Outputs[OLE DB Source Error Output].Columns[Latitude]"
+                      name="Latitude" />
+                    <outputColumn
+                      refId="Package\Accidents Stage to NDS\Accidents Stage.Outputs[OLE DB Source Error Output].Columns[Police_Force]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Accidents Stage to NDS\Accidents Stage.Outputs[OLE DB Source Error Output].Columns[Police_Force]"
+                      name="Police_Force" />
                   </outputColumns>
                   <externalMetadataColumns />
                 </output>
@@ -737,6 +866,84 @@
               </outputs>
             </component>
             <component
+              refId="Package\Accidents Stage to NDS\Convert Police_Force Code to nvarchar"
+              componentClassID="Microsoft.DataConvert"
+              contactInfo="Data Conversion;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Data Conversion"
+              name="Convert Police_Force Code to nvarchar"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Accidents Stage to NDS\Convert Police_Force Code to nvarchar.Inputs[Data Conversion Input]"
+                  name="Data Conversion Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Accidents Stage to NDS\Convert Police_Force Code to nvarchar.Inputs[Data Conversion Input].Columns[Police_Force]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Police_Force"
+                      lineageId="Package\Accidents Stage to NDS\Accidents Stage.Outputs[OLE DB Source Output].Columns[Police_Force]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Accidents Stage to NDS\Convert Police_Force Code to nvarchar.Outputs[Data Conversion Output]"
+                  exclusionGroup="1"
+                  name="Data Conversion Output"
+                  synchronousInputId="Package\Accidents Stage to NDS\Convert Police_Force Code to nvarchar.Inputs[Data Conversion Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Accidents Stage to NDS\Convert Police_Force Code to nvarchar.Outputs[Data Conversion Output].Columns[Copy of Police_Force]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="50"
+                      lineageId="Package\Accidents Stage to NDS\Convert Police_Force Code to nvarchar.Outputs[Data Conversion Output].Columns[Copy of Police_Force]"
+                      name="Copy of Police_Force"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Accidents Stage to NDS\Accidents Stage.Outputs[OLE DB Source Output].Columns[Police_Force]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Accidents Stage to NDS\Convert Police_Force Code to nvarchar.Outputs[Data Conversion Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Data Conversion Error Output"
+                  synchronousInputId="Package\Accidents Stage to NDS\Convert Police_Force Code to nvarchar.Inputs[Data Conversion Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Accidents Stage to NDS\Convert Police_Force Code to nvarchar.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Accidents Stage to NDS\Convert Police_Force Code to nvarchar.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Accidents Stage to NDS\Convert Police_Force Code to nvarchar.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Accidents Stage to NDS\Convert Police_Force Code to nvarchar.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
               refId="Package\Accidents Stage to NDS\Lookup existing Accidents"
               componentClassID="Microsoft.Lookup"
               contactInfo="Lookup;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;6"
@@ -772,7 +979,7 @@ where [refTable].[Accident_NK] = ?</property>
                   dataType="System.Int32"
                   description="Specifies how the Lookup transformation handles rows without matching entries in the reference data set."
                   name="NoMatchBehavior"
-                  typeConverter="LookupNoMatchBehavior">0</property>
+                  typeConverter="LookupNoMatchBehavior">1</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the percentage of the cache that is allocated for rows with no matching entries in the reference dataset."
@@ -788,7 +995,7 @@ where [refTable].[Accident_NK] = ?</property>
                 <property
                   dataType="System.String"
                   description="Indicates whether to reference metadata in an XML format."
-                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="Accident_ID" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Accident_NK" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="Accident_Severity" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Date" dataType="DT_DBDATE" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Time" dataType="DT_DBTIME2" length="0" precision="0" scale="7" codePage="0"/&gt;&lt;referenceColumn name="Local_Authority" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="RoadType" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="SpeedLimit" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Build_Up_Road" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="Location_ID" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Source_ID" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="Accident_ID" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Accident_NK" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="Accident_Severity" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Date" dataType="DT_DBDATE" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Time" dataType="DT_DBTIME2" length="0" precision="0" scale="7" codePage="0"/&gt;&lt;referenceColumn name="Local_Authority" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="RoadType" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="SpeedLimit" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Build_Up_Road" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="Location_ID" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Police_ID" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Source_ID" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
                 <property
                   containsID="true"
                   dataType="System.String"
@@ -842,7 +1049,6 @@ where [refTable].[Accident_NK] = ?</property>
                 <output
                   refId="Package\Accidents Stage to NDS\Lookup existing Accidents.Outputs[Lookup Match Output]"
                   errorOrTruncationOperation="Lookup"
-                  errorRowDisposition="FailComponent"
                   exclusionGroup="1"
                   name="Lookup Match Output"
                   synchronousInputId="Package\Accidents Stage to NDS\Lookup existing Accidents.Inputs[Lookup Input]">
@@ -916,7 +1122,7 @@ where [refTable].[Code_NK] = ?</property>
                   dataType="System.Int32"
                   description="Specifies how the Lookup transformation handles rows without matching entries in the reference data set."
                   name="NoMatchBehavior"
-                  typeConverter="LookupNoMatchBehavior">1</property>
+                  typeConverter="LookupNoMatchBehavior">0</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the percentage of the cache that is allocated for rows with no matching entries in the reference dataset."
@@ -986,6 +1192,7 @@ where [refTable].[Code_NK] = ?</property>
                 <output
                   refId="Package\Accidents Stage to NDS\Lookup Local_Authority.Outputs[Lookup Match Output]"
                   errorOrTruncationOperation="Lookup"
+                  errorRowDisposition="IgnoreFailure"
                   exclusionGroup="1"
                   name="Lookup Match Output"
                   synchronousInputId="Package\Accidents Stage to NDS\Lookup Local_Authority.Inputs[Lookup Input]">
@@ -1040,6 +1247,379 @@ where [refTable].[Code_NK] = ?</property>
               </outputs>
             </component>
             <component
+              refId="Package\Accidents Stage to NDS\Lookup Location ID"
+              componentClassID="Microsoft.Lookup"
+              contactInfo="Lookup;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;6"
+              description="Joins additional columns to the data flow by looking up values in a table. For example, join to the 'employee id' column the employees table to get 'hire date' and 'employee name'. We recommend this transformation when the lookup table can fit into memory."
+              name="Lookup Location ID"
+              usesDispositions="true"
+              version="6">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Specifies the SQL statement that generates the lookup table."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from [dbo].[Location]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies a SQL statement that uses parameters to generate the lookup table."
+                  expressionType="Notify"
+                  name="SqlCommandParam"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from (select * from [dbo].[Location]) [refTable]
+where [refTable].[Location_Easting] = ? and [refTable].[Location_Northing] = ? and [refTable].[Location_Longtitude] = ? and [refTable].[Location_Latitude] = ?</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the type of connection used to access the reference dataset."
+                  name="ConnectionType"
+                  typeConverter="LookupConnectionType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the cache type of the lookup table."
+                  name="CacheType"
+                  typeConverter="CacheType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies how the Lookup transformation handles rows without matching entries in the reference data set."
+                  name="NoMatchBehavior"
+                  typeConverter="LookupNoMatchBehavior">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the percentage of the cache that is allocated for rows with no matching entries in the reference dataset."
+                  name="NoMatchCachePercentage">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Maximum Memory Usage for Reference Cache on a 32 bit platform."
+                  name="MaxMemoryUsage">25</property>
+                <property
+                  dataType="System.Int64"
+                  description="Maximum Memory Usage for Reference Cache on a 64 bit platform."
+                  name="MaxMemoryUsage64">25</property>
+                <property
+                  dataType="System.String"
+                  description="Indicates whether to reference metadata in an XML format."
+                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="Location_ID" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Location_Easting" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="Location_Northing" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="Location_Longtitude" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="Location_Latitude" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="Postcode_ID" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Source_ID" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                <property
+                  containsID="true"
+                  dataType="System.String"
+                  description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
+                  name="ParameterMap">#{Package\Accidents Stage to NDS\Accidents Stage.Outputs[OLE DB Source Output].Columns[Location_Easting_OSGR]};#{Package\Accidents Stage to NDS\Accidents Stage.Outputs[OLE DB Source Output].Columns[Location_Northing_OSGR]};#{Package\Accidents Stage to NDS\Accidents Stage.Outputs[OLE DB Source Output].Columns[Longitude]};#{Package\Accidents Stage to NDS\Accidents Stage.Outputs[OLE DB Source Output].Columns[Latitude]};</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Determines whether duplicate keys in the reference data should be treated as errors when full cache mode is used."
+                  name="TreatDuplicateKeysAsError">false</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Accidents Stage to NDS\Lookup Location ID.Connections[OleDbConnection]"
+                  connectionManagerID="{AE006570-A2B7-40E0-9892-4B549EA30919}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[LocalHost.NDS_DATH]"
+                  description="Connection manager used to access lookup data."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Accidents Stage to NDS\Lookup Location ID.Inputs[Lookup Input]"
+                  name="Lookup Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Accidents Stage to NDS\Lookup Location ID.Inputs[Lookup Input].Columns[Location_Easting_OSGR]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Location_Easting_OSGR"
+                      lineageId="Package\Accidents Stage to NDS\Accidents Stage.Outputs[OLE DB Source Output].Columns[Location_Easting_OSGR]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table that a column joins."
+                          name="JoinToReferenceColumn">Location_Easting</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Accidents Stage to NDS\Lookup Location ID.Inputs[Lookup Input].Columns[Location_Northing_OSGR]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Location_Northing_OSGR"
+                      lineageId="Package\Accidents Stage to NDS\Accidents Stage.Outputs[OLE DB Source Output].Columns[Location_Northing_OSGR]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table that a column joins."
+                          name="JoinToReferenceColumn">Location_Northing</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Accidents Stage to NDS\Lookup Location ID.Inputs[Lookup Input].Columns[Longitude]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Longitude"
+                      lineageId="Package\Accidents Stage to NDS\Accidents Stage.Outputs[OLE DB Source Output].Columns[Longitude]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table that a column joins."
+                          name="JoinToReferenceColumn">Location_Longtitude</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Accidents Stage to NDS\Lookup Location ID.Inputs[Lookup Input].Columns[Latitude]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Latitude"
+                      lineageId="Package\Accidents Stage to NDS\Accidents Stage.Outputs[OLE DB Source Output].Columns[Latitude]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table that a column joins."
+                          name="JoinToReferenceColumn">Location_Latitude</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Accidents Stage to NDS\Lookup Location ID.Outputs[Lookup Match Output]"
+                  errorOrTruncationOperation="Lookup"
+                  errorRowDisposition="IgnoreFailure"
+                  exclusionGroup="1"
+                  name="Lookup Match Output"
+                  synchronousInputId="Package\Accidents Stage to NDS\Lookup Location ID.Inputs[Lookup Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Accidents Stage to NDS\Lookup Location ID.Outputs[Lookup Match Output].Columns[Location_ID]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Copy Column"
+                      lineageId="Package\Accidents Stage to NDS\Lookup Location ID.Outputs[Lookup Match Output].Columns[Location_ID]"
+                      name="Location_ID"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">Location_ID</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Accidents Stage to NDS\Lookup Location ID.Outputs[Lookup No Match Output]"
+                  description="The Lookup output that handles rows with no matching entries in the reference dataset. Use this output when the NoMatchBehavior property is set to &quot;Send rows with no matching entries to the no match output.&quot;"
+                  exclusionGroup="1"
+                  name="Lookup No Match Output"
+                  synchronousInputId="Package\Accidents Stage to NDS\Lookup Location ID.Inputs[Lookup Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Accidents Stage to NDS\Lookup Location ID.Outputs[Lookup Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Lookup Error Output"
+                  synchronousInputId="Package\Accidents Stage to NDS\Lookup Location ID.Inputs[Lookup Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Accidents Stage to NDS\Lookup Location ID.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Accidents Stage to NDS\Lookup Location ID.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Accidents Stage to NDS\Lookup Location ID.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Accidents Stage to NDS\Lookup Location ID.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Accidents Stage to NDS\Lookup Police Force"
+              componentClassID="Microsoft.Lookup"
+              contactInfo="Lookup;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;6"
+              description="Joins additional columns to the data flow by looking up values in a table. For example, join to the 'employee id' column the employees table to get 'hire date' and 'employee name'. We recommend this transformation when the lookup table can fit into memory."
+              name="Lookup Police Force"
+              usesDispositions="true"
+              version="6">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Specifies the SQL statement that generates the lookup table."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from [dbo].[PoliceForce]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies a SQL statement that uses parameters to generate the lookup table."
+                  expressionType="Notify"
+                  name="SqlCommandParam"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from (select * from [dbo].[PoliceForce]) [refTable]
+where [refTable].[Code_NK] = ?</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the type of connection used to access the reference dataset."
+                  name="ConnectionType"
+                  typeConverter="LookupConnectionType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the cache type of the lookup table."
+                  name="CacheType"
+                  typeConverter="CacheType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies how the Lookup transformation handles rows without matching entries in the reference data set."
+                  name="NoMatchBehavior"
+                  typeConverter="LookupNoMatchBehavior">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the percentage of the cache that is allocated for rows with no matching entries in the reference dataset."
+                  name="NoMatchCachePercentage">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Maximum Memory Usage for Reference Cache on a 32 bit platform."
+                  name="MaxMemoryUsage">25</property>
+                <property
+                  dataType="System.Int64"
+                  description="Maximum Memory Usage for Reference Cache on a 64 bit platform."
+                  name="MaxMemoryUsage64">25</property>
+                <property
+                  dataType="System.String"
+                  description="Indicates whether to reference metadata in an XML format."
+                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="PoliceForce_ID" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Code_NK" dataType="DT_WSTR" length="50" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Label" dataType="DT_WSTR" length="150" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Source_ID" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                <property
+                  containsID="true"
+                  dataType="System.String"
+                  description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
+                  name="ParameterMap">#{Package\Accidents Stage to NDS\Convert Police_Force Code to nvarchar.Outputs[Data Conversion Output].Columns[Copy of Police_Force]};</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Determines whether duplicate keys in the reference data should be treated as errors when full cache mode is used."
+                  name="TreatDuplicateKeysAsError">false</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Accidents Stage to NDS\Lookup Police Force.Connections[OleDbConnection]"
+                  connectionManagerID="{AE006570-A2B7-40E0-9892-4B549EA30919}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[LocalHost.NDS_DATH]"
+                  description="Connection manager used to access lookup data."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Accidents Stage to NDS\Lookup Police Force.Inputs[Lookup Input]"
+                  name="Lookup Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Accidents Stage to NDS\Lookup Police Force.Inputs[Lookup Input].Columns[Copy of Police_Force]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Copy of Police_Force"
+                      lineageId="Package\Accidents Stage to NDS\Convert Police_Force Code to nvarchar.Outputs[Data Conversion Output].Columns[Copy of Police_Force]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table that a column joins."
+                          name="JoinToReferenceColumn">Code_NK</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Accidents Stage to NDS\Lookup Police Force.Outputs[Lookup Match Output]"
+                  errorOrTruncationOperation="Lookup"
+                  errorRowDisposition="IgnoreFailure"
+                  exclusionGroup="1"
+                  name="Lookup Match Output"
+                  synchronousInputId="Package\Accidents Stage to NDS\Lookup Police Force.Inputs[Lookup Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Accidents Stage to NDS\Lookup Police Force.Outputs[Lookup Match Output].Columns[PoliceForce_ID]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Copy Column"
+                      lineageId="Package\Accidents Stage to NDS\Lookup Police Force.Outputs[Lookup Match Output].Columns[PoliceForce_ID]"
+                      name="PoliceForce_ID"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">PoliceForce_ID</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Accidents Stage to NDS\Lookup Police Force.Outputs[Lookup No Match Output]"
+                  description="The Lookup output that handles rows with no matching entries in the reference dataset. Use this output when the NoMatchBehavior property is set to &quot;Send rows with no matching entries to the no match output.&quot;"
+                  exclusionGroup="1"
+                  name="Lookup No Match Output"
+                  synchronousInputId="Package\Accidents Stage to NDS\Lookup Police Force.Inputs[Lookup Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Accidents Stage to NDS\Lookup Police Force.Outputs[Lookup Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Lookup Error Output"
+                  synchronousInputId="Package\Accidents Stage to NDS\Lookup Police Force.Inputs[Lookup Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Accidents Stage to NDS\Lookup Police Force.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Accidents Stage to NDS\Lookup Police Force.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Accidents Stage to NDS\Lookup Police Force.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Accidents Stage to NDS\Lookup Police Force.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
               refId="Package\Accidents Stage to NDS\Lookup RoadType"
               componentClassID="Microsoft.Lookup"
               contactInfo="Lookup;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;6"
@@ -1075,7 +1655,7 @@ where [refTable].[Code_NK] = ?</property>
                   dataType="System.Int32"
                   description="Specifies how the Lookup transformation handles rows without matching entries in the reference data set."
                   name="NoMatchBehavior"
-                  typeConverter="LookupNoMatchBehavior">1</property>
+                  typeConverter="LookupNoMatchBehavior">0</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the percentage of the cache that is allocated for rows with no matching entries in the reference dataset."
@@ -1145,6 +1725,7 @@ where [refTable].[Code_NK] = ?</property>
                 <output
                   refId="Package\Accidents Stage to NDS\Lookup RoadType.Outputs[Lookup Match Output]"
                   errorOrTruncationOperation="Lookup"
+                  errorRowDisposition="IgnoreFailure"
                   exclusionGroup="1"
                   name="Lookup Match Output"
                   synchronousInputId="Package\Accidents Stage to NDS\Lookup RoadType.Inputs[Lookup Input]">
@@ -1234,7 +1815,7 @@ where [refTable].[CODE_NK] = ?</property>
                   dataType="System.Int32"
                   description="Specifies how the Lookup transformation handles rows without matching entries in the reference data set."
                   name="NoMatchBehavior"
-                  typeConverter="LookupNoMatchBehavior">1</property>
+                  typeConverter="LookupNoMatchBehavior">0</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the percentage of the cache that is allocated for rows with no matching entries in the reference dataset."
@@ -1304,6 +1885,7 @@ where [refTable].[CODE_NK] = ?</property>
                 <output
                   refId="Package\Accidents Stage to NDS\Lookup Severity.Outputs[Lookup Match Output]"
                   errorOrTruncationOperation="Lookup"
+                  errorRowDisposition="IgnoreFailure"
                   exclusionGroup="1"
                   name="Lookup Match Output"
                   synchronousInputId="Package\Accidents Stage to NDS\Lookup Severity.Inputs[Lookup Input]">
@@ -1357,8 +1939,255 @@ where [refTable].[CODE_NK] = ?</property>
                 </output>
               </outputs>
             </component>
+            <component
+              refId="Package\Accidents Stage to NDS\Update Accident NDS"
+              componentClassID="Microsoft.OLEDBCommand"
+              contactInfo="OLE DB Command;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;2"
+              description="Runs an SQL statement for each row in a data flow. For example, call a 'new employee setup' stored procedure for each row in the 'new employees' table. Note: running an SQL statement for each row of a large data flow may take a long time."
+              name="Update Accident NDS"
+              usesDispositions="true"
+              version="2">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">UPDATE Accidents set Accident_Severity=?, Date=?, Time=?, Local_Authority=?, RoadType=?, SpeedLimit=?, Location_ID=?, Police_ID=? where Accident_NK=?</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Accidents Stage to NDS\Update Accident NDS.Connections[OleDbConnection]"
+                  connectionManagerID="{AE006570-A2B7-40E0-9892-4B549EA30919}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[LocalHost.NDS_DATH]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Accidents Stage to NDS\Update Accident NDS.Inputs[OLE DB Command Input]"
+                  errorOrTruncationOperation="Command Execution"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Command Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Accidents Stage to NDS\Update Accident NDS.Inputs[OLE DB Command Input].Columns[Severity_ID]"
+                      cachedDataType="i4"
+                      cachedName="Severity_ID"
+                      externalMetadataColumnId="Package\Accidents Stage to NDS\Update Accident NDS.Inputs[OLE DB Command Input].ExternalColumns[Param_0]"
+                      lineageId="Package\Accidents Stage to NDS\Lookup Severity.Outputs[Lookup Match Output].Columns[Severity_ID]" />
+                    <inputColumn
+                      refId="Package\Accidents Stage to NDS\Update Accident NDS.Inputs[OLE DB Command Input].Columns[Date]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Date"
+                      externalMetadataColumnId="Package\Accidents Stage to NDS\Update Accident NDS.Inputs[OLE DB Command Input].ExternalColumns[Param_1]"
+                      lineageId="Package\Accidents Stage to NDS\Accidents Stage.Outputs[OLE DB Source Output].Columns[Date]" />
+                    <inputColumn
+                      refId="Package\Accidents Stage to NDS\Update Accident NDS.Inputs[OLE DB Command Input].Columns[Time]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Time"
+                      externalMetadataColumnId="Package\Accidents Stage to NDS\Update Accident NDS.Inputs[OLE DB Command Input].ExternalColumns[Param_2]"
+                      lineageId="Package\Accidents Stage to NDS\Accidents Stage.Outputs[OLE DB Source Output].Columns[Time]" />
+                    <inputColumn
+                      refId="Package\Accidents Stage to NDS\Update Accident NDS.Inputs[OLE DB Command Input].Columns[Local_Authority_ID]"
+                      cachedDataType="i4"
+                      cachedName="Local_Authority_ID"
+                      externalMetadataColumnId="Package\Accidents Stage to NDS\Update Accident NDS.Inputs[OLE DB Command Input].ExternalColumns[Param_3]"
+                      lineageId="Package\Accidents Stage to NDS\Lookup Local_Authority.Outputs[Lookup Match Output].Columns[Local_Authority_ID]" />
+                    <inputColumn
+                      refId="Package\Accidents Stage to NDS\Update Accident NDS.Inputs[OLE DB Command Input].Columns[RoadType_ID]"
+                      cachedDataType="i4"
+                      cachedName="RoadType_ID"
+                      externalMetadataColumnId="Package\Accidents Stage to NDS\Update Accident NDS.Inputs[OLE DB Command Input].ExternalColumns[Param_4]"
+                      lineageId="Package\Accidents Stage to NDS\Lookup RoadType.Outputs[Lookup Match Output].Columns[RoadType_ID]" />
+                    <inputColumn
+                      refId="Package\Accidents Stage to NDS\Update Accident NDS.Inputs[OLE DB Command Input].Columns[Speed_limit]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Speed_limit"
+                      externalMetadataColumnId="Package\Accidents Stage to NDS\Update Accident NDS.Inputs[OLE DB Command Input].ExternalColumns[Param_5]"
+                      lineageId="Package\Accidents Stage to NDS\Accidents Stage.Outputs[OLE DB Source Output].Columns[Speed_limit]" />
+                    <inputColumn
+                      refId="Package\Accidents Stage to NDS\Update Accident NDS.Inputs[OLE DB Command Input].Columns[Location_ID]"
+                      cachedDataType="i4"
+                      cachedName="Location_ID"
+                      externalMetadataColumnId="Package\Accidents Stage to NDS\Update Accident NDS.Inputs[OLE DB Command Input].ExternalColumns[Param_6]"
+                      lineageId="Package\Accidents Stage to NDS\Lookup Location ID.Outputs[Lookup Match Output].Columns[Location_ID]" />
+                    <inputColumn
+                      refId="Package\Accidents Stage to NDS\Update Accident NDS.Inputs[OLE DB Command Input].Columns[PoliceForce_ID]"
+                      cachedDataType="i4"
+                      cachedName="PoliceForce_ID"
+                      externalMetadataColumnId="Package\Accidents Stage to NDS\Update Accident NDS.Inputs[OLE DB Command Input].ExternalColumns[Param_7]"
+                      lineageId="Package\Accidents Stage to NDS\Lookup Police Force.Outputs[Lookup Match Output].Columns[PoliceForce_ID]" />
+                    <inputColumn
+                      refId="Package\Accidents Stage to NDS\Update Accident NDS.Inputs[OLE DB Command Input].Columns[Accident_Index]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Accident_Index"
+                      externalMetadataColumnId="Package\Accidents Stage to NDS\Update Accident NDS.Inputs[OLE DB Command Input].ExternalColumns[Param_8]"
+                      lineageId="Package\Accidents Stage to NDS\Accidents Stage.Outputs[OLE DB Source Output].Columns[Accident_Index]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Accidents Stage to NDS\Update Accident NDS.Inputs[OLE DB Command Input].ExternalColumns[Param_0]"
+                      dataType="i4"
+                      name="Param_0">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">81</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Accidents Stage to NDS\Update Accident NDS.Inputs[OLE DB Command Input].ExternalColumns[Param_1]"
+                      dataType="dbDate"
+                      name="Param_1">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">65</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Accidents Stage to NDS\Update Accident NDS.Inputs[OLE DB Command Input].ExternalColumns[Param_2]"
+                      dataType="dbTime2"
+                      name="Param_2"
+                      scale="7">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">1073741889</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Accidents Stage to NDS\Update Accident NDS.Inputs[OLE DB Command Input].ExternalColumns[Param_3]"
+                      dataType="i4"
+                      name="Param_3">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">81</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Accidents Stage to NDS\Update Accident NDS.Inputs[OLE DB Command Input].ExternalColumns[Param_4]"
+                      dataType="i4"
+                      name="Param_4">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">81</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Accidents Stage to NDS\Update Accident NDS.Inputs[OLE DB Command Input].ExternalColumns[Param_5]"
+                      dataType="i4"
+                      name="Param_5">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">81</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Accidents Stage to NDS\Update Accident NDS.Inputs[OLE DB Command Input].ExternalColumns[Param_6]"
+                      dataType="i4"
+                      name="Param_6">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">65</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Accidents Stage to NDS\Update Accident NDS.Inputs[OLE DB Command Input].ExternalColumns[Param_7]"
+                      dataType="i4"
+                      name="Param_7">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">81</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Accidents Stage to NDS\Update Accident NDS.Inputs[OLE DB Command Input].ExternalColumns[Param_8]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Param_8">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">81</property>
+                      </properties>
+                    </externalMetadataColumn>
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Accidents Stage to NDS\Update Accident NDS.Outputs[OLE DB Command Output]"
+                  exclusionGroup="1"
+                  name="OLE DB Command Output"
+                  synchronousInputId="Package\Accidents Stage to NDS\Update Accident NDS.Inputs[OLE DB Command Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Accidents Stage to NDS\Update Accident NDS.Outputs[OLE DB Command Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Command Error Output"
+                  synchronousInputId="Package\Accidents Stage to NDS\Update Accident NDS.Inputs[OLE DB Command Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Accidents Stage to NDS\Update Accident NDS.Outputs[OLE DB Command Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Accidents Stage to NDS\Update Accident NDS.Outputs[OLE DB Command Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Accidents Stage to NDS\Update Accident NDS.Outputs[OLE DB Command Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Accidents Stage to NDS\Update Accident NDS.Outputs[OLE DB Command Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
           </components>
           <paths>
+            <path
+              refId="Package\Accidents Stage to NDS.Paths[Data Conversion Output]"
+              endId="Package\Accidents Stage to NDS\Add SourceID column.Inputs[Derived Column Input]"
+              name="Data Conversion Output"
+              startId="Package\Accidents Stage to NDS\Convert Police_Force Code to nvarchar.Outputs[Data Conversion Output]" />
             <path
               refId="Package\Accidents Stage to NDS.Paths[Derived Column Output]"
               endId="Package\Accidents Stage to NDS\Lookup Severity.Inputs[Lookup Input]"
@@ -1378,7 +2207,22 @@ where [refTable].[CODE_NK] = ?</property>
               refId="Package\Accidents Stage to NDS.Paths[Lookup Match Output2]"
               endId="Package\Accidents Stage to NDS\Lookup existing Accidents.Inputs[Lookup Input]"
               name="Lookup Match Output"
+              startId="Package\Accidents Stage to NDS\Lookup Location ID.Outputs[Lookup Match Output]" />
+            <path
+              refId="Package\Accidents Stage to NDS.Paths[Lookup Match Output3]"
+              endId="Package\Accidents Stage to NDS\Lookup Police Force.Inputs[Lookup Input]"
+              name="Lookup Match Output"
               startId="Package\Accidents Stage to NDS\Lookup RoadType.Outputs[Lookup Match Output]" />
+            <path
+              refId="Package\Accidents Stage to NDS.Paths[Lookup Match Output4]"
+              endId="Package\Accidents Stage to NDS\Lookup Location ID.Inputs[Lookup Input]"
+              name="Lookup Match Output"
+              startId="Package\Accidents Stage to NDS\Lookup Police Force.Outputs[Lookup Match Output]" />
+            <path
+              refId="Package\Accidents Stage to NDS.Paths[Lookup Match Output5]"
+              endId="Package\Accidents Stage to NDS\Update Accident NDS.Inputs[OLE DB Command Input]"
+              name="Lookup Match Output"
+              startId="Package\Accidents Stage to NDS\Lookup existing Accidents.Outputs[Lookup Match Output]" />
             <path
               refId="Package\Accidents Stage to NDS.Paths[Lookup No Match Output]"
               endId="Package\Accidents Stage to NDS\Accidents NDS.Inputs[OLE DB Destination Input]"
@@ -1386,14 +2230,91 @@ where [refTable].[CODE_NK] = ?</property>
               startId="Package\Accidents Stage to NDS\Lookup existing Accidents.Outputs[Lookup No Match Output]" />
             <path
               refId="Package\Accidents Stage to NDS.Paths[OLE DB Source Output]"
-              endId="Package\Accidents Stage to NDS\Add SourceID column.Inputs[Derived Column Input]"
+              endId="Package\Accidents Stage to NDS\Convert Police_Force Code to nvarchar.Inputs[Data Conversion Input]"
               name="OLE DB Source Output"
               startId="Package\Accidents Stage to NDS\Accidents Stage.Outputs[OLE DB Source Output]" />
           </paths>
         </pipeline>
       </DTS:ObjectData>
     </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Profile Accidents NDS"
+      DTS:CreationName="Microsoft.DataProfilingTask"
+      DTS:Description="Data Profiling Task"
+      DTS:DTSID="{D0879A74-01FF-4BCF-880C-B964883367D0}"
+      DTS:ExecutableType="Microsoft.DataProfilingTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Profile Accidents NDS"
+      DTS:TaskContact="Data Profiling Task; Microsoft Corporation; SQL Server 2019; (c) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <DataProfilingTaskData
+          Destination="Accidents_NDS_Profiling"
+          OverwriteDestination="True">
+          <ProfileInput><![CDATA[<?xml version="1.0" encoding="utf-16"?>
+<DataProfile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.microsoft.com/sqlserver/2008/DataDebugger/">
+  <ProfileVersion>1.0</ProfileVersion>
+  <DataSources />
+  <DataProfileInput>
+    <ProfileMode>Exact</ProfileMode>
+    <Timeout>0</Timeout>
+    <Requests>
+      <ColumnNullRatioProfileRequest ID="NullRatioReq">
+        <DataSourceID>{C54B8DE8-7CA8-4423-B9EA-54AF1E6EB9DD}</DataSourceID>
+        <Table Schema="dbo" Table="Accidents" />
+        <Column IsWildCard="true" />
+      </ColumnNullRatioProfileRequest>
+      <ColumnStatisticsProfileRequest ID="StatisticsReq">
+        <DataSourceID>{C54B8DE8-7CA8-4423-B9EA-54AF1E6EB9DD}</DataSourceID>
+        <Table Schema="dbo" Table="Accidents" />
+        <Column IsWildCard="true" />
+      </ColumnStatisticsProfileRequest>
+      <ColumnLengthDistributionProfileRequest ID="LengthDistReq">
+        <DataSourceID>{C54B8DE8-7CA8-4423-B9EA-54AF1E6EB9DD}</DataSourceID>
+        <Table Schema="dbo" Table="Accidents" />
+        <Column IsWildCard="true" />
+        <IgnoreLeadingSpace>false</IgnoreLeadingSpace>
+        <IgnoreTrailingSpace>true</IgnoreTrailingSpace>
+      </ColumnLengthDistributionProfileRequest>
+      <ColumnValueDistributionProfileRequest ID="ValueDistReq">
+        <DataSourceID>{C54B8DE8-7CA8-4423-B9EA-54AF1E6EB9DD}</DataSourceID>
+        <Table Schema="dbo" Table="Accidents" />
+        <Column IsWildCard="true" />
+        <Option>FrequentValues</Option>
+        <FrequentValueThreshold>0.001</FrequentValueThreshold>
+      </ColumnValueDistributionProfileRequest>
+      <CandidateKeyProfileRequest ID="KeyReq">
+        <DataSourceID>{C54B8DE8-7CA8-4423-B9EA-54AF1E6EB9DD}</DataSourceID>
+        <Table Schema="dbo" Table="Accidents" />
+        <KeyColumns>
+          <Column IsWildCard="true" />
+        </KeyColumns>
+        <ThresholdSetting>Specified</ThresholdSetting>
+        <KeyStrengthThreshold>0.95</KeyStrengthThreshold>
+        <VerifyOutputInFastMode>false</VerifyOutputInFastMode>
+        <MaxNumberOfViolations>100</MaxNumberOfViolations>
+      </CandidateKeyProfileRequest>
+    </Requests>
+  </DataProfileInput>
+  <DataProfileOutput>
+    <Profiles />
+  </DataProfileOutput>
+</DataProfile>]]></ProfileInput>
+        </DataProfilingTaskData>
+      </DTS:ObjectData>
+    </DTS:Executable>
   </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint]"
+      DTS:CreationName=""
+      DTS:DTSID="{91CA94F5-6E0D-406E-B67A-10130E45927C}"
+      DTS:From="Package\Accidents Stage to NDS"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint"
+      DTS:To="Package\Profile Accidents NDS" />
+  </DTS:PrecedenceConstraints>
   <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
 <!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
 <!--If you manually edit this section and make a mistake, you can delete it. -->
@@ -1405,11 +2326,49 @@ where [refTable].[CODE_NK] = ?</property>
     design-time-name="Package">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="190,42"
           Id="Package\Accidents Stage to NDS"
           TopLeft="334,105" />
+        <NodeLayout
+          Size="180,42"
+          Id="Package\Profile Accidents NDS"
+          TopLeft="263,235" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint]"
+          TopLeft="429,147">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-76,88"
+              Start="0,0"
+              End="-76,80.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,40" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,40"
+                    Point2="0,44"
+                    Point3="-4,44" />
+                  <mssgle:LineSegment
+                    End="-72,44" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-72,44"
+                    Point2="-76,44"
+                    Point3="-76,48" />
+                  <mssgle:LineSegment
+                    End="-76,80.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </Package>
@@ -1417,55 +2376,61 @@ where [refTable].[CODE_NK] = ?</property>
     design-time-name="Package\Accidents Stage to NDS">
     <LayoutInfo>
       <GraphLayout
-        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="153,42"
-          Id="Package\Accidents Stage to NDS\Accidents Stage"
-          TopLeft="488,32" />
+          Size="173,42"
+          Id="Package\Accidents Stage to NDS\Lookup Police Force"
+          TopLeft="477,500" />
+        <NodeLayout
+          Size="200,42"
+          Id="Package\Accidents Stage to NDS\Lookup existing Accidents"
+          TopLeft="467.5,668.75" />
         <NodeLayout
           Size="181,42"
           Id="Package\Accidents Stage to NDS\Add SourceID column"
-          TopLeft="474,138" />
-        <EdgeLayout
-          Id="Package\Accidents Stage to NDS.Paths[OLE DB Source Output]"
-          TopLeft="564.5,74">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,64"
-              Start="0,0"
-              End="0,56.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,56.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
+          TopLeft="470,146" />
+        <NodeLayout
+          Size="170,42"
+          Id="Package\Accidents Stage to NDS\Lookup Location ID"
+          TopLeft="485,581" />
         <NodeLayout
           Size="154,42"
           Id="Package\Accidents Stage to NDS\Lookup Severity"
-          TopLeft="489,224" />
+          TopLeft="489,239" />
+        <NodeLayout
+          Size="153,42"
+          Id="Package\Accidents Stage to NDS\Accidents Stage"
+          TopLeft="487,9" />
+        <NodeLayout
+          Size="192,42"
+          Id="Package\Accidents Stage to NDS\Lookup RoadType"
+          TopLeft="472,422" />
+        <NodeLayout
+          Size="262,42"
+          Id="Package\Accidents Stage to NDS\Convert Police_Force Code to nvarchar"
+          TopLeft="437,80" />
+        <NodeLayout
+          Size="189,42"
+          Id="Package\Accidents Stage to NDS\Lookup Local_Authority"
+          TopLeft="472,343" />
+        <NodeLayout
+          Size="147,42"
+          Id="Package\Accidents Stage to NDS\Accidents NDS"
+          TopLeft="317.538461538462,752.692307692308" />
         <EdgeLayout
-          Id="Package\Accidents Stage to NDS.Paths[Derived Column Output]"
-          TopLeft="565.25,180">
+          Id="Package\Accidents Stage to NDS.Paths[OLE DB Source Output]"
+          TopLeft="565.75,51">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,44"
+              EndConnector="0,29"
               Start="0,0"
-              End="0,36.5">
+              End="0,21.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,36.5" />
+                    End="0,21.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1474,41 +2439,117 @@ where [refTable].[CODE_NK] = ?</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="189,42"
-          Id="Package\Accidents Stage to NDS\Lookup Local_Authority"
-          TopLeft="472,328" />
         <EdgeLayout
-          Id="Package\Accidents Stage to NDS.Paths[Lookup Match Output]"
-          TopLeft="566.25,266">
+          Id="Package\Accidents Stage to NDS.Paths[Lookup No Match Output]"
+          TopLeft="567.5,710.75">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,62"
+              EndConnector="-176.461538461538,41.942307692308"
               Start="0,0"
-              End="0,54.5">
+              End="-176.461538461538,34.442307692308">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,54.5" />
+                    End="0,16.971153846154" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,16.971153846154"
+                    Point2="0,20.971153846154"
+                    Point3="-4,20.971153846154" />
+                  <mssgle:LineSegment
+                    End="-172.461538461538,20.971153846154" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-172.461538461538,20.971153846154"
+                    Point2="-176.461538461538,20.971153846154"
+                    Point3="-176.461538461538,24.971153846154" />
+                  <mssgle:LineSegment
+                    End="-176.461538461538,34.442307692308" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-48.19138671875,21.4453125,96.3827734375,11.609375"
+              BoundingBox="-144.037155949519,25.971153846154,111.6127734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="192,42"
-          Id="Package\Accidents Stage to NDS\Lookup RoadType"
-          TopLeft="472,407" />
+        <EdgeLayout
+          Id="Package\Accidents Stage to NDS.Paths[Lookup Match Output4]"
+          TopLeft="566.75,542">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,39"
+              Start="0,0"
+              End="0,31.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,31.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-48.19138671875,9.9453125,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Accidents Stage to NDS.Paths[Lookup Match Output3]"
+          TopLeft="565.75,464">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,36"
+              Start="0,0"
+              End="0,28.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,28.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-48.19138671875,8.4453125,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Accidents Stage to NDS.Paths[Lookup Match Output2]"
+          TopLeft="568.75,623">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,45.75"
+              Start="0,0"
+              End="0,38.25">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,38.25" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-48.19138671875,13.3203125,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
         <EdgeLayout
           Id="Package\Accidents Stage to NDS.Paths[Lookup Match Output1]"
-          TopLeft="567.25,370">
+          TopLeft="567.25,385">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -1530,59 +2571,111 @@ where [refTable].[CODE_NK] = ?</property>
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="200,42"
-          Id="Package\Accidents Stage to NDS\Lookup existing Accidents"
-          TopLeft="467.5,488.75" />
         <EdgeLayout
-          Id="Package\Accidents Stage to NDS.Paths[Lookup Match Output2]"
-          TopLeft="567.75,449">
+          Id="Package\Accidents Stage to NDS.Paths[Lookup Match Output]"
+          TopLeft="566.25,281">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,39.75"
+              EndConnector="0,62"
               Start="0,0"
-              End="0,32.25">
+              End="0,54.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,32.25" />
+                    End="0,54.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-48.19138671875,10.3203125,96.3827734375,11.609375"
+              BoundingBox="-48.19138671875,21.4453125,96.3827734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="147,42"
-          Id="Package\Accidents Stage to NDS\Accidents NDS"
-          TopLeft="491.538461538462,577.692307692308" />
         <EdgeLayout
-          Id="Package\Accidents Stage to NDS.Paths[Lookup No Match Output]"
-          TopLeft="566.269230769231,530.75">
+          Id="Package\Accidents Stage to NDS.Paths[Derived Column Output]"
+          TopLeft="563.25,188">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,46.9423076923077"
+              EndConnector="0,51"
               Start="0,0"
-              End="0,39.4423076923077">
+              End="0,43.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,39.4423076923077" />
+                    End="0,43.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Accidents Stage to NDS.Paths[Data Conversion Output]"
+          TopLeft="564.25,122">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,24"
+              Start="0,0"
+              End="0,16.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,16.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="179,42"
+          Id="Package\Accidents Stage to NDS\Update Accident NDS"
+          TopLeft="662,750" />
+        <EdgeLayout
+          Id="Package\Accidents Stage to NDS.Paths[Lookup Match Output5]"
+          TopLeft="599.5,710.75">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="152,39.25"
+              Start="0,0"
+              End="152,31.75">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,11.8869047619048" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,11.8869047619048"
+                    Point2="0,15.8869047619048"
+                    Point3="4,15.8869047619048" />
+                  <mssgle:LineSegment
+                    End="148,15.8869047619048" />
+                  <mssgle:CubicBezierSegment
+                    Point1="148,15.8869047619048"
+                    Point2="152,15.8869047619048"
+                    Point3="152,19.8869047619048" />
+                  <mssgle:LineSegment
+                    End="152,31.75" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-55.80638671875,13.9164663461539,111.6127734375,11.609375"
+              BoundingBox="27.80861328125,20.8869047619048,96.3827734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -1590,15 +2683,71 @@ where [refTable].[CODE_NK] = ?</property>
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\Accidents Stage to NDS\Accidents Stage">
+    design-time-name="Package\Accidents Stage to NDS\Lookup Police Force">
     <Properties>
       <Property>
-        <Name>DataSourceViewID</Name>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:boolean">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[PoliceForce]</Value>
       </Property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q2:string">Table</Value>
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Accidents Stage to NDS\Lookup existing Accidents">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[Accidents]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Accidents Stage to NDS\Lookup Location ID">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:boolean">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[Location]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:int">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
@@ -1626,25 +2775,15 @@ where [refTable].[CODE_NK] = ?</property>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Accidents Stage to NDS\Lookup Local_Authority">
+    design-time-name="Package\Accidents Stage to NDS\Accidents Stage">
     <Properties>
       <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:boolean">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string">[dbo].[Local_Authority_Highway]</Value>
+        <Name>DataSourceViewID</Name>
       </Property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:int">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
+          type="q2:string">Table</Value>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
@@ -1664,7 +2803,7 @@ where [refTable].[CODE_NK] = ?</property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:int">0</Value>
+          type="q4:string">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -1672,7 +2811,7 @@ where [refTable].[CODE_NK] = ?</property>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Accidents Stage to NDS\Lookup existing Accidents">
+    design-time-name="Package\Accidents Stage to NDS\Lookup Local_Authority">
     <Properties>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
@@ -1682,12 +2821,12 @@ where [refTable].[CODE_NK] = ?</property>
       <Property>
         <Name>UsedTableName</Name>
         <Value
-          type="q3:string">[dbo].[Accidents]</Value>
+          type="q3:string">[dbo].[Local_Authority_Highway]</Value>
       </Property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:int">0</Value>
+          type="q4:string">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
