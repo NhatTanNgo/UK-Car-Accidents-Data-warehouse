@@ -128,6 +128,14 @@ CREATE TABLE [Wiki_Postcodes] (
 )
 GO
 
+CREATE TABLE [Postcode_district] (
+    [Create_time] datetime,
+    [Update_time] datetime,
+    [Postcode] varchar(50),
+    [Region] varchar(50),
+)
+GO
+
 CREATE PROC Wiki_Split_SingleRow
 AS
 DECLARE 
