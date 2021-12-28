@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="2"
-  DTS:VersionGUID="{5F801276-97C1-47C0-8E64-DC0E6EBC39B6}">
+  DTS:VersionBuild="4"
+  DTS:VersionGUID="{AB40B1C2-43A9-41F9-AD35-C91D671F07A5}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables />
@@ -86,6 +86,23 @@
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
+      DTS:refId="Package\Postcode_district"
+      DTS:CreationName="Microsoft.ExecutePackageTask"
+      DTS:Description="Execute Package Task"
+      DTS:DTSID="{D5A09C3B-DA8A-4595-A781-0C6BDB39D79D}"
+      DTS:ExecutableType="Microsoft.ExecutePackageTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Postcode_district"
+      DTS:TaskContact="Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <ExecutePackageTask>
+          <UseProjectReference>True</UseProjectReference>
+          <PackageName>Staging_PostcodeDistricts.dtsx</PackageName>
+        </ExecutePackageTask>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
       DTS:refId="Package\Vehicle"
       DTS:CreationName="Microsoft.ExecutePackageTask"
       DTS:Description="Execute Package Task"
@@ -133,29 +150,33 @@
       <GraphLayout
         Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
         <NodeLayout
-          Size="124,42.6666666666667"
+          Size="124,42.4"
           Id="Package\Accidents"
           TopLeft="38.74999942258,111.149998012483" />
         <NodeLayout
-          Size="126.666666666667,42.6666666666667"
+          Size="126.4,42.4"
           Id="Package\Casualties"
           TopLeft="40.6249993946404,175.499996861816" />
         <NodeLayout
-          Size="104.666666666667,42.6666666666667"
+          Size="104.8,42.4"
           Id="Package\LSOA"
           TopLeft="193.7499971129,109.199998047352" />
         <NodeLayout
-          Size="121.333333333334,42.6666666666667"
+          Size="121.6,42.4"
           Id="Package\Postcode"
           TopLeft="196.874997066334,172.24999691993" />
         <NodeLayout
-          Size="113.333333333334,42.6666666666667"
+          Size="113.6,42.4"
           Id="Package\Vehicle"
           TopLeft="339.999994933605,111.149998012483" />
         <NodeLayout
-          Size="100,42.6666666666667"
+          Size="100,42.4"
           Id="Package\Wiki"
           TopLeft="345.624994849786,166.399997024536" />
+        <NodeLayout
+          Size="157.6,41.6"
+          Id="Package\Postcode_district"
+          TopLeft="484.285722533051,138.411766647055" />
       </GraphLayout>
     </LayoutInfo>
   </Package>
