@@ -109,16 +109,8 @@ CREATE TABLE [PostCodes] (
 )
 
 CREATE TABLE [PCD_LSOA] (
-	[pcd7] varchar(50),
-    [pcd8] varchar(50),
     [pcds] varchar(50),
-    [oa11cd] varchar(50),
     [lsoa11cd] varchar(50),
-    [msoa11cd] varchar(50),
-    [ladcd] varchar(50),
-    [lsoa11nm] varchar(50),
-    [msoa11nm] varchar(50),
-    [ladnm] varchar(50)
 )
 ------
 CREATE TABLE [Wiki_Postcodes] (

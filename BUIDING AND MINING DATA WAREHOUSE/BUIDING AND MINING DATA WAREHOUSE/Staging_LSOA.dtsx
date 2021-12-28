@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Staging_LSOA"
   DTS:PackageType="5"
-  DTS:VersionBuild="16"
-  DTS:VersionGUID="{31110CBC-C3BF-489D-90CC-7F17D17D9E28}">
+  DTS:VersionBuild="18"
+  DTS:VersionGUID="{FE1D2530-979E-419B-B957-3A4EB2654CF4}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -381,22 +381,6 @@
                   name="OLE DB Destination Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Load data into stage\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[pcd7]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="pcd7"
-                      externalMetadataColumnId="Package\Load data into stage\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[pcd7]"
-                      lineageId="Package\Load data into stage\OLE DB Source.Outputs[OLE DB Source Output].Columns[pcd7]" />
-                    <inputColumn
-                      refId="Package\Load data into stage\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[pcd8]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="pcd8"
-                      externalMetadataColumnId="Package\Load data into stage\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[pcd8]"
-                      lineageId="Package\Load data into stage\OLE DB Source.Outputs[OLE DB Source Output].Columns[pcd8]" />
-                    <inputColumn
                       refId="Package\Load data into stage\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[pcds]"
                       cachedCodepage="1252"
                       cachedDataType="str"
@@ -405,14 +389,6 @@
                       externalMetadataColumnId="Package\Load data into stage\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[pcds]"
                       lineageId="Package\Load data into stage\OLE DB Source.Outputs[OLE DB Source Output].Columns[pcds]" />
                     <inputColumn
-                      refId="Package\Load data into stage\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[oa11cd]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="oa11cd"
-                      externalMetadataColumnId="Package\Load data into stage\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[oa11cd]"
-                      lineageId="Package\Load data into stage\OLE DB Source.Outputs[OLE DB Source Output].Columns[oa11cd]" />
-                    <inputColumn
                       refId="Package\Load data into stage\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[lsoa11cd]"
                       cachedCodepage="1252"
                       cachedDataType="str"
@@ -420,61 +396,9 @@
                       cachedName="lsoa11cd"
                       externalMetadataColumnId="Package\Load data into stage\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[lsoa11cd]"
                       lineageId="Package\Load data into stage\OLE DB Source.Outputs[OLE DB Source Output].Columns[lsoa11cd]" />
-                    <inputColumn
-                      refId="Package\Load data into stage\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[msoa11cd]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="msoa11cd"
-                      externalMetadataColumnId="Package\Load data into stage\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[msoa11cd]"
-                      lineageId="Package\Load data into stage\OLE DB Source.Outputs[OLE DB Source Output].Columns[msoa11cd]" />
-                    <inputColumn
-                      refId="Package\Load data into stage\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[ladcd]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="ladcd"
-                      externalMetadataColumnId="Package\Load data into stage\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ladcd]"
-                      lineageId="Package\Load data into stage\OLE DB Source.Outputs[OLE DB Source Output].Columns[ladcd]" />
-                    <inputColumn
-                      refId="Package\Load data into stage\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[lsoa11nm]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="lsoa11nm"
-                      externalMetadataColumnId="Package\Load data into stage\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[lsoa11nm]"
-                      lineageId="Package\Load data into stage\OLE DB Source.Outputs[OLE DB Source Output].Columns[lsoa11nm]" />
-                    <inputColumn
-                      refId="Package\Load data into stage\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[msoa11nm]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="msoa11nm"
-                      externalMetadataColumnId="Package\Load data into stage\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[msoa11nm]"
-                      lineageId="Package\Load data into stage\OLE DB Source.Outputs[OLE DB Source Output].Columns[msoa11nm]" />
-                    <inputColumn
-                      refId="Package\Load data into stage\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[ladnm]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="ladnm"
-                      externalMetadataColumnId="Package\Load data into stage\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ladnm]"
-                      lineageId="Package\Load data into stage\OLE DB Source.Outputs[OLE DB Source Output].Columns[ladnm]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
-                    <externalMetadataColumn
-                      refId="Package\Load data into stage\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[pcd7]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="pcd7" />
-                    <externalMetadataColumn
-                      refId="Package\Load data into stage\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[pcd8]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="pcd8" />
                     <externalMetadataColumn
                       refId="Package\Load data into stage\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[pcds]"
                       codePage="1252"
@@ -482,47 +406,11 @@
                       length="50"
                       name="pcds" />
                     <externalMetadataColumn
-                      refId="Package\Load data into stage\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[oa11cd]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="oa11cd" />
-                    <externalMetadataColumn
                       refId="Package\Load data into stage\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[lsoa11cd]"
                       codePage="1252"
                       dataType="str"
                       length="50"
                       name="lsoa11cd" />
-                    <externalMetadataColumn
-                      refId="Package\Load data into stage\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[msoa11cd]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="msoa11cd" />
-                    <externalMetadataColumn
-                      refId="Package\Load data into stage\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ladcd]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="ladcd" />
-                    <externalMetadataColumn
-                      refId="Package\Load data into stage\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[lsoa11nm]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="lsoa11nm" />
-                    <externalMetadataColumn
-                      refId="Package\Load data into stage\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[msoa11nm]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="msoa11nm" />
-                    <externalMetadataColumn
-                      refId="Package\Load data into stage\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ladnm]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="ladnm" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
@@ -1171,27 +1059,27 @@ Where (Create_time &gt;=? and Create_time &lt;=?) or (Update_time &gt;=? and Upd
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="172,43"
-          Id="Package\Load data into stage\OLE DB Destination"
-          TopLeft="312.249995734543,45.2499992445112" />
-        <NodeLayout
           Size="151,43"
           Id="Package\Load data into stage\OLE DB Source"
           TopLeft="83.124998761341,48.7499991282821" />
+        <NodeLayout
+          Size="172,43"
+          Id="Package\Load data into stage\OLE DB Destination"
+          TopLeft="316.249995734543,48.2499992445112" />
         <EdgeLayout
           Id="Package\Load data into stage.Paths[OLE DB Source Output]"
-          TopLeft="233.791665428008,68.33333251973">
+          TopLeft="234.124998761341,69.9999991863967">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="78.4583303065353,0"
+              EndConnector="82.124996973202,0"
               Start="0,0"
-              End="70.9583303065353,0">
+              End="74.624996973202,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="70.9583303065353,0" />
+                    End="74.624996973202,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
