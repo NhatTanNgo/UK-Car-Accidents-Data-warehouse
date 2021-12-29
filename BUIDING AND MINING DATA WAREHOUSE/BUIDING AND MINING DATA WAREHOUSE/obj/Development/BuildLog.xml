@@ -2,7 +2,7 @@
 <BuildLog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <ProjectInfo>
     <Name>BUIDING AND MINING DATA WAREHOUSE</Name>
-    <LastWriteTime>2021-12-29T12:02:22.3879034Z</LastWriteTime>
+    <LastWriteTime>2021-12-29T15:45:06.3976008Z</LastWriteTime>
     <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
   </ProjectInfo>
   <LastBuildInfos>
@@ -63,7 +63,7 @@
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>NDS_CodeBook.dtsx</Name>
-      <LastWriteTime>2021-11-19T13:40:29.7918896Z</LastWriteTime>
+      <LastWriteTime>2021-12-29T17:33:23.4249693Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
@@ -83,7 +83,7 @@
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>Staging_PostcodeDistricts.dtsx</Name>
-      <LastWriteTime>2021-12-29T13:12:22.1497002Z</LastWriteTime>
+      <LastWriteTime>2021-12-29T13:14:45.8838099Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
   </LastBuildInfos>
