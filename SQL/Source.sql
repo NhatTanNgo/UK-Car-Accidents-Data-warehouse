@@ -133,8 +133,7 @@ CREATE TABLE [Wiki_Postcodes] (
     [Post town] varchar(50),
     [Former postal county] varchar(50),
     [create_time] datetime,
-    [update_time] datetime,
-	[status] int
+    [update_time] datetime
 )
 
 CREATE TABLE [Postcode_district] (

@@ -1,0 +1,10 @@
+﻿<?xml version="1.0"?>
+<DTS:ConnectionManager xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:ObjectName="Profiling Vehicles"
+  DTS:DTSID="{0DB53988-915E-41C6-A4A8-D6949A122C94}"
+  DTS:CreationName="FILE">
+  <DTS:ObjectData>
+    <DTS:ConnectionManager
+      DTS:ConnectionString="D:\Downloads\BI\BI_Project\UK-Car-Accidents-Data-warehouse\Profiling\Vehicles.txt" />
+  </DTS:ObjectData>
+</DTS:ConnectionManager>

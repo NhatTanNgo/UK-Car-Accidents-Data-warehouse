@@ -1,0 +1,10 @@
+﻿<?xml version="1.0"?>
+<DTS:ConnectionManager xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:ObjectName="Profiling Wiki"
+  DTS:DTSID="{82E25E24-B62D-4A7E-A071-189EF7469556}"
+  DTS:CreationName="FILE">
+  <DTS:ObjectData>
+    <DTS:ConnectionManager
+      DTS:ConnectionString="D:\Downloads\BI\BI_Project\UK-Car-Accidents-Data-warehouse\Profiling\WikiPostcode.txt" />
+  </DTS:ObjectData>
+</DTS:ConnectionManager>

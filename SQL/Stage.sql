@@ -115,16 +115,13 @@ CREATE TABLE [PCD_LSOA] (
 ------
 CREATE TABLE [Wiki_Postcodes] (
     [Postcode districts] nvarchar(150),
-    [Post town] varchar(50),
-    [status] int
+    [County] varchar(50),
 )
 GO
 
 CREATE TABLE [Postcode_district] (
-    [Create_time] datetime,
-    [Update_time] datetime,
     [Postcode] varchar(50),
-    [Region] varchar(50),
+    [Town] varchar(50),
 )
 GO
 
@@ -133,39 +130,42 @@ AS
 DECLARE 
  @pcd VARCHAR(150),
  @split_pcd VARCHAR(50),
- @ptown VARCHAR(50),
- @status INT
+ @pcounty VARCHAR(50)
 BEGIN
-	DECLARE R_pcd CURSOR FOR 
+	DECLARE Raw_pcd CURSOR FOR 
 	SELECT * FROM dbo.Wiki_Postcodes
 	WHERE [Postcode districts] LIKE '%,%'
 
-	OPEN R_pcd
-	FETCH NEXT FROM R_pcd INTO @pcd, @ptown, @status
+	OPEN Raw_pcd
+	FETCH NEXT FROM Raw_pcd INTO @pcd, @pcounty
 	WHILE @@FETCH_STATUS = 0
-	BEGIN
-		DECLARE S_CURSOR CURSOR FOR
-		SELECT * FROM STRING_SPLIT(@pcd,',')
-		OPEN S_CURSOR
-		FETCH NEXT FROM S_CURSOR INTO @split_pcd
-		WHILE @@FETCH_STATUS = 0 
 		BEGIN
-			SELECT @split_pcd = TRIM(' ' FROM @split_pcd) --Remove space at begin of char
-			INSERT INTO dbo.Wiki_Postcodes
-			VALUES
-			(@split_pcd,@ptown, @status)
-			FETCH NEXT FROM S_CURSOR INTO @split_pcd
-		END
-		CLOSE S_CURSOR
-		DEALLOCATE S_CURSOR
 
-		DELETE FROM dbo.Wiki_Postcodes
-		WHERE [Postcode districts] = @pcd
-		FETCH NEXT FROM R_pcd INTO @pcd, @ptown, @status
-	END
-	CLOSE R_pcd
-	DEALLOCATE R_pcd
+			SELECT @pcounty = TRIM('()' FROM @pcounty) --Remove () from string
+
+			DECLARE S_CURSOR CURSOR FOR
+			SELECT * FROM STRING_SPLIT(@pcd,',')
+
+			OPEN S_CURSOR
+			FETCH NEXT FROM S_CURSOR INTO @split_pcd
+			WHILE @@FETCH_STATUS = 0 
+				BEGIN
+					SELECT @split_pcd = TRIM(' ' FROM @split_pcd) --Remove space at begin of char
+
+					INSERT INTO dbo.Wiki_Postcodes
+					VALUES (@split_pcd,@pcounty)
+					FETCH NEXT FROM S_CURSOR INTO @split_pcd
+				END
+			CLOSE S_CURSOR
+			DEALLOCATE S_CURSOR
+
+			DELETE FROM dbo.Wiki_Postcodes
+			WHERE [Postcode districts] = @pcd
+
+			FETCH NEXT FROM Raw_pcd INTO @pcd, @pcounty
+		END
+
+	CLOSE Raw_pcd
+	DEALLOCATE Raw_pcd
 END
 GO
-
-

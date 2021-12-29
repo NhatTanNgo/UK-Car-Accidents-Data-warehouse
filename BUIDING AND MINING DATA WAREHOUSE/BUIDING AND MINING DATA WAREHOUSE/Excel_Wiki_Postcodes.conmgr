@@ -1,0 +1,12 @@
+﻿<?xml version="1.0"?>
+<DTS:ConnectionManager xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:ObjectName="Excel_Wiki_Postcodes"
+  DTS:DTSID="{C20E7D12-09FB-4D04-8FBE-D0F3EC31B923}"
+  DTS:CreationName="EXCEL">
+  <DTS:ObjectData>
+    <DTS:ConnectionManager
+      DTS:ConnectRetryCount="0"
+      DTS:ConnectRetryInterval="0"
+      DTS:ConnectionString="Provider=Microsoft.ACE.OLEDB.12.0;Data Source=D:\Downloads\BI\BI_Project\UK-Car-Accidents-Data-warehouse\Dataset\wikipostcodes.xlsx;Extended Properties=&quot;EXCEL 12.0 XML;HDR=YES&quot;;" />
+  </DTS:ObjectData>
+</DTS:ConnectionManager>

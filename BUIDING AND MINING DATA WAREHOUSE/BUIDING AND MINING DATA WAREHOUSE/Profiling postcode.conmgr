@@ -1,0 +1,10 @@
+﻿<?xml version="1.0"?>
+<DTS:ConnectionManager xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:ObjectName="Profiling postcode"
+  DTS:DTSID="{005B4F3A-D8B2-43AD-B7FB-52585ABF979C}"
+  DTS:CreationName="FILE">
+  <DTS:ObjectData>
+    <DTS:ConnectionManager
+      DTS:ConnectionString="D:\Downloads\BI\BI_Project\UK-Car-Accidents-Data-warehouse\Profiling\Postcodes.txt" />
+  </DTS:ObjectData>
+</DTS:ConnectionManager>

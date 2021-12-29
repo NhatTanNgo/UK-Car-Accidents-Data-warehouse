@@ -11,235 +11,10 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="15"
-  DTS:VersionGUID="{7CCD846F-0772-4AA4-93D4-B34DBCCFAFA8}">
+  DTS:VersionBuild="17"
+  DTS:VersionGUID="{9924D14B-782D-4BC1-865A-ED0BF631F83C}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
-  <DTS:ConnectionManagers>
-    <DTS:ConnectionManager
-      DTS:refId="Package.ConnectionManagers[Casualties]"
-      DTS:CreationName="FLATFILE"
-      DTS:DTSID="{603C828A-4C6A-4C8A-9FF8-9C81290A396F}"
-      DTS:ObjectName="Casualties">
-      <DTS:ObjectData>
-        <DTS:ConnectionManager
-          DTS:Format="Delimited"
-          DTS:LocaleID="1033"
-          DTS:HeaderRowDelimiter="_x000D__x000A_"
-          DTS:ColumnNamesInFirstDataRow="True"
-          DTS:RowDelimiter=""
-          DTS:TextQualifier="_x003C_none_x003E_"
-          DTS:CodePage="1252"
-          DTS:ConnectionString="..\Dataset\UK Accidents Data 2011-2014\Casualties1114.csv">
-          <DTS:FlatFileColumns>
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="Accident_Index"
-              DTS:DTSID="{4A1A573F-9C8D-495D-9CA4-D5064BFF7080}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="Vehicle_Reference"
-              DTS:DTSID="{87E611F3-B560-4A16-91A2-3B52A7A86576}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="Casualty_Reference"
-              DTS:DTSID="{CEBC9F67-300A-49CA-AD71-298ACABFDFAE}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="Casualty_Class"
-              DTS:DTSID="{BDE0ECC5-C533-458F-BD9C-64BE887DD128}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="Sex_of_Casualty"
-              DTS:DTSID="{D424C8CA-3FD9-47A4-9DCD-E57368A1FD55}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="Age_of_Casualty"
-              DTS:DTSID="{0684DC8F-2184-4BB1-9761-F028C94D9125}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="Age_Band_of_Casualty"
-              DTS:DTSID="{264083DE-682F-4D2C-AD10-D3AD2A4872E5}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="Casualty_Severity"
-              DTS:DTSID="{17CDB4E2-BB43-4695-A18A-DB945274318F}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="Pedestrian_Location"
-              DTS:DTSID="{A2AE2F14-052A-4B89-B8E8-D8525633A511}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="Pedestrian_Movement"
-              DTS:DTSID="{A716590F-451B-4A59-B5D2-93292E063600}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="Car_Passenger"
-              DTS:DTSID="{3409DDD9-D6A3-4E12-A941-C3FBA9756DB2}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="Bus_or_Coach_Passenger"
-              DTS:DTSID="{19BBBBE6-83E8-445F-9234-4233839C2A8F}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="Pedestrian_Road_Maintenance_Worker"
-              DTS:DTSID="{E3BDC54B-6F97-45A2-B14A-EF65D3D41FB4}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="Casualty_Type"
-              DTS:DTSID="{4E1FC71D-3B4D-456E-B126-98CC2DBDE7B9}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x000D__x000A_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="Casualty_Home_Area_Type"
-              DTS:DTSID="{B5E8FDEF-D6D1-4C5E-BF2F-109678B604AD}"
-              DTS:CreationName="" />
-          </DTS:FlatFileColumns>
-        </DTS:ConnectionManager>
-      </DTS:ObjectData>
-    </DTS:ConnectionManager>
-    <DTS:ConnectionManager
-      DTS:refId="Package.ConnectionManagers[Casualties.txt]"
-      DTS:CreationName="FILE"
-      DTS:DTSID="{8A5C326D-1916-400A-B023-0CB099CCE6EB}"
-      DTS:ObjectName="Casualties.txt">
-      <DTS:ObjectData>
-        <DTS:ConnectionManager
-          DTS:ConnectionString="C:\Users\WinXs\OneDrive - VNU-HCMUS\Uni\Nam 4 - HKI\BI\Do an\UK-Car-Accidents-Data-warehouse\Profiling\Casualties.txt" />
-      </DTS:ObjectData>
-    </DTS:ConnectionManager>
-    <DTS:ConnectionManager
-      DTS:refId="Package.ConnectionManagers[DESKTOP-0IA21OI.RawSource]"
-      DTS:CreationName="OLEDB"
-      DTS:DTSID="{7D5B67F7-1911-4534-BA63-D69B56353C34}"
-      DTS:ObjectName="DESKTOP-0IA21OI.RawSource">
-      <DTS:ObjectData>
-        <DTS:ConnectionManager
-          DTS:ConnectRetryCount="1"
-          DTS:ConnectRetryInterval="5"
-          DTS:ConnectionString="Data Source=DESKTOP-0IA21OI;Initial Catalog=RawSource;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
-      </DTS:ObjectData>
-    </DTS:ConnectionManager>
-    <DTS:ConnectionManager
-      DTS:refId="Package.ConnectionManagers[DESKTOP-0IA21OI.Stage]"
-      DTS:CreationName="OLEDB"
-      DTS:DTSID="{3BF77565-A6B8-4CEE-9FB5-51E9914078AA}"
-      DTS:ObjectName="DESKTOP-0IA21OI.Stage">
-      <DTS:ObjectData>
-        <DTS:ConnectionManager
-          DTS:ConnectRetryCount="1"
-          DTS:ConnectRetryInterval="5"
-          DTS:ConnectionString="Data Source=DESKTOP-0IA21OI;Initial Catalog=Stage;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
-      </DTS:ObjectData>
-    </DTS:ConnectionManager>
-    <DTS:ConnectionManager
-      DTS:refId="Package.ConnectionManagers[DESKTOP-0IA21OI.Stage 1]"
-      DTS:CreationName="ADO.NET:System.Data.SqlClient.SqlConnection, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"
-      DTS:DTSID="{BB0DBB17-1414-4394-BE40-47423C3871E6}"
-      DTS:ObjectName="DESKTOP-0IA21OI.Stage 1">
-      <DTS:ObjectData>
-        <DTS:ConnectionManager
-          DTS:ConnectionString="Data Source=DESKTOP-0IA21OI;Initial Catalog=Stage;Integrated Security=True;" />
-      </DTS:ObjectData>
-    </DTS:ConnectionManager>
-    <DTS:ConnectionManager
-      DTS:refId="Package.ConnectionManagers[Excel Connection Manager]"
-      DTS:CreationName="EXCEL"
-      DTS:DTSID="{E8AFC09D-5FFD-4B53-9B37-EA7244DC0500}"
-      DTS:ObjectName="Excel Connection Manager">
-      <DTS:ObjectData>
-        <DTS:ConnectionManager
-          DTS:ConnectRetryCount="0"
-          DTS:ConnectRetryInterval="0"
-          DTS:ConnectionString="Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\ASUS-DUCHUY\Desktop\BI\UK-Car-Accidents-Dataware-house\Dataset\UK Accidents Data 2011-2014\Casualties1114.xls;Extended Properties=&quot;EXCEL 8.0;HDR=YES&quot;;" />
-      </DTS:ObjectData>
-    </DTS:ConnectionManager>
-    <DTS:ConnectionManager
-      DTS:refId="Package.ConnectionManagers[LocalHost.Casualties1114]"
-      DTS:CreationName="OLEDB"
-      DTS:DTSID="{C25B7402-9E20-49EB-A45C-FBCB91714629}"
-      DTS:ObjectName="LocalHost.Casualties1114">
-      <DTS:ObjectData>
-        <DTS:ConnectionManager
-          DTS:ConnectRetryCount="1"
-          DTS:ConnectRetryInterval="5"
-          DTS:ConnectionString="Data Source=.;Initial Catalog=Casualties1114;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
-      </DTS:ObjectData>
-    </DTS:ConnectionManager>
-  </DTS:ConnectionManagers>
   <DTS:Variables>
     <DTS:Variable
       DTS:CreationName=""
@@ -276,84 +51,6 @@
         <SQLTask:SqlTaskData
           SQLTask:Connection="{DFF81239-B2A8-4950-83F9-2BB12A3D2296}"
           SQLTask:SqlStatementSource="truncate table Casualties" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
-      </DTS:ObjectData>
-    </DTS:Executable>
-    <DTS:Executable
-      DTS:refId="Package\Data Profiling Task"
-      DTS:CreationName="Microsoft.DataProfilingTask"
-      DTS:Description="Data Profiling Task"
-      DTS:DTSID="{848bdad5-e73f-4c59-b7ef-16119fd81f20}"
-      DTS:ExecutableType="Microsoft.DataProfilingTask"
-      DTS:LocaleID="-1"
-      DTS:ObjectName="Data Profiling Task"
-      DTS:TaskContact="Data Profiling Task; Microsoft Corporation; SQL Server 2019; (c) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="0">
-      <DTS:Variables />
-      <DTS:ObjectData>
-        <DataProfilingTaskData
-          Destination="Casualties.txt"
-          OverwriteDestination="True">
-          <ProfileInput><![CDATA[<?xml version="1.0" encoding="utf-16"?>
-<DataProfile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.microsoft.com/sqlserver/2008/DataDebugger/">
-  <ProfileVersion>1.0</ProfileVersion>
-  <DataSources />
-  <DataProfileInput>
-    <ProfileMode>Exact</ProfileMode>
-    <Timeout>0</Timeout>
-    <Requests>
-      <ColumnNullRatioProfileRequest ID="NullRatioReq">
-        <DataSourceID>{68B744B6-BFA4-417D-AA11-2C26D08D51D7}</DataSourceID>
-        <Table Schema="dbo" Table="PostCodes" />
-        <Column IsWildCard="true" />
-      </ColumnNullRatioProfileRequest>
-      <ColumnStatisticsProfileRequest ID="StatisticsReq">
-        <DataSourceID>{68B744B6-BFA4-417D-AA11-2C26D08D51D7}</DataSourceID>
-        <Table Schema="dbo" Table="PostCodes" />
-        <Column IsWildCard="true" />
-      </ColumnStatisticsProfileRequest>
-      <ColumnLengthDistributionProfileRequest ID="LengthDistReq">
-        <DataSourceID>{68B744B6-BFA4-417D-AA11-2C26D08D51D7}</DataSourceID>
-        <Table Schema="dbo" Table="PostCodes" />
-        <Column IsWildCard="true" />
-        <IgnoreLeadingSpace>false</IgnoreLeadingSpace>
-        <IgnoreTrailingSpace>true</IgnoreTrailingSpace>
-      </ColumnLengthDistributionProfileRequest>
-      <ColumnValueDistributionProfileRequest ID="ValueDistReq">
-        <DataSourceID>{68B744B6-BFA4-417D-AA11-2C26D08D51D7}</DataSourceID>
-        <Table Schema="dbo" Table="PostCodes" />
-        <Column IsWildCard="true" />
-        <Option>FrequentValues</Option>
-        <FrequentValueThreshold>0.001</FrequentValueThreshold>
-      </ColumnValueDistributionProfileRequest>
-      <ColumnPatternProfileRequest ID="PatternReq">
-        <DataSourceID>{68B744B6-BFA4-417D-AA11-2C26D08D51D7}</DataSourceID>
-        <Table Schema="dbo" Table="PostCodes" />
-        <Column IsWildCard="true" />
-        <MaxNumberOfPatterns>10</MaxNumberOfPatterns>
-        <PercentageDataCoverageDesired>95</PercentageDataCoverageDesired>
-        <CaseSensitive>false</CaseSensitive>
-        <Delimiters> \t\r\n</Delimiters>
-        <Symbols>,.;:-"'`~=&amp;/\\@!?()&lt;&gt;[]{}|#*^%</Symbols>
-        <TagTableName />
-      </ColumnPatternProfileRequest>
-      <CandidateKeyProfileRequest ID="KeyReq">
-        <DataSourceID>{68B744B6-BFA4-417D-AA11-2C26D08D51D7}</DataSourceID>
-        <Table Schema="dbo" Table="PostCodes" />
-        <KeyColumns>
-          <Column IsWildCard="true" />
-        </KeyColumns>
-        <ThresholdSetting>Specified</ThresholdSetting>
-        <KeyStrengthThreshold>0.95</KeyStrengthThreshold>
-        <VerifyOutputInFastMode>false</VerifyOutputInFastMode>
-        <MaxNumberOfViolations>100</MaxNumberOfViolations>
-      </CandidateKeyProfileRequest>
-    </Requests>
-  </DataProfileInput>
-  <DataProfileOutput>
-    <Profiles />
-  </DataProfileOutput>
-</DataProfile>]]></ProfileInput>
-        </DataProfilingTaskData>
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
@@ -1206,6 +903,84 @@ Where (Create_time &gt;= ? and Create_time &lt;= ? ) or (Update_time &gt;= ? and
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
+      DTS:refId="Package\Profiling Casualties"
+      DTS:CreationName="Microsoft.DataProfilingTask"
+      DTS:Description="Data Profiling Task"
+      DTS:DTSID="{848bdad5-e73f-4c59-b7ef-16119fd81f20}"
+      DTS:ExecutableType="Microsoft.DataProfilingTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Profiling Casualties"
+      DTS:TaskContact="Data Profiling Task; Microsoft Corporation; SQL Server 2019; (c) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <DataProfilingTaskData
+          Destination="Profiling_Casualties.txt"
+          OverwriteDestination="True">
+          <ProfileInput><![CDATA[<?xml version="1.0" encoding="utf-16"?>
+<DataProfile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.microsoft.com/sqlserver/2008/DataDebugger/">
+  <ProfileVersion>1.0</ProfileVersion>
+  <DataSources />
+  <DataProfileInput>
+    <ProfileMode>Exact</ProfileMode>
+    <Timeout>0</Timeout>
+    <Requests>
+      <ColumnNullRatioProfileRequest ID="NullRatioReq">
+        <DataSourceID>{68B744B6-BFA4-417D-AA11-2C26D08D51D7}</DataSourceID>
+        <Table Schema="dbo" Table="Casualties" />
+        <Column IsWildCard="true" />
+      </ColumnNullRatioProfileRequest>
+      <ColumnStatisticsProfileRequest ID="StatisticsReq">
+        <DataSourceID>{68B744B6-BFA4-417D-AA11-2C26D08D51D7}</DataSourceID>
+        <Table Schema="dbo" Table="Casualties" />
+        <Column IsWildCard="true" />
+      </ColumnStatisticsProfileRequest>
+      <ColumnLengthDistributionProfileRequest ID="LengthDistReq">
+        <DataSourceID>{68B744B6-BFA4-417D-AA11-2C26D08D51D7}</DataSourceID>
+        <Table Schema="dbo" Table="Casualties" />
+        <Column IsWildCard="true" />
+        <IgnoreLeadingSpace>false</IgnoreLeadingSpace>
+        <IgnoreTrailingSpace>true</IgnoreTrailingSpace>
+      </ColumnLengthDistributionProfileRequest>
+      <ColumnValueDistributionProfileRequest ID="ValueDistReq">
+        <DataSourceID>{68B744B6-BFA4-417D-AA11-2C26D08D51D7}</DataSourceID>
+        <Table Schema="dbo" Table="Casualties" />
+        <Column IsWildCard="true" />
+        <Option>FrequentValues</Option>
+        <FrequentValueThreshold>0.001</FrequentValueThreshold>
+      </ColumnValueDistributionProfileRequest>
+      <ColumnPatternProfileRequest ID="PatternReq">
+        <DataSourceID>{68B744B6-BFA4-417D-AA11-2C26D08D51D7}</DataSourceID>
+        <Table Schema="dbo" Table="Casualties" />
+        <Column IsWildCard="true" />
+        <MaxNumberOfPatterns>10</MaxNumberOfPatterns>
+        <PercentageDataCoverageDesired>95</PercentageDataCoverageDesired>
+        <CaseSensitive>false</CaseSensitive>
+        <Delimiters> \t\r\n</Delimiters>
+        <Symbols>,.;:-"'`~=&amp;/\\@!?()&lt;&gt;[]{}|#*^%</Symbols>
+        <TagTableName />
+      </ColumnPatternProfileRequest>
+      <CandidateKeyProfileRequest ID="KeyReq">
+        <DataSourceID>{68B744B6-BFA4-417D-AA11-2C26D08D51D7}</DataSourceID>
+        <Table Schema="dbo" Table="Casualties" />
+        <KeyColumns>
+          <Column IsWildCard="true" />
+        </KeyColumns>
+        <ThresholdSetting>Specified</ThresholdSetting>
+        <KeyStrengthThreshold>0.95</KeyStrengthThreshold>
+        <VerifyOutputInFastMode>false</VerifyOutputInFastMode>
+        <MaxNumberOfViolations>100</MaxNumberOfViolations>
+      </CandidateKeyProfileRequest>
+    </Requests>
+  </DataProfileInput>
+  <DataProfileOutput>
+    <Profiles />
+  </DataProfileOutput>
+</DataProfile>]]></ProfileInput>
+        </DataProfilingTaskData>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
       DTS:refId="Package\Update LSET"
       DTS:CreationName="Microsoft.ExecuteSQLTask"
       DTS:Description="Execute SQL Task"
@@ -1255,7 +1030,7 @@ Where (Create_time &gt;= ? and Create_time &lt;= ? ) or (Update_time &gt;= ? and
       DTS:From="Package\Load data into stage"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint 5"
-      DTS:To="Package\Data Profiling Task" />
+      DTS:To="Package\Profiling Casualties" />
   </DTS:PrecedenceConstraints>
   <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
 <!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
@@ -1270,39 +1045,39 @@ Where (Create_time &gt;= ? and Create_time &lt;= ? ) or (Update_time &gt;= ? and
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="132,42.4"
+          Size="132,42.6666666666667"
           Id="Package\Clear stage"
           TopLeft="272.999996908008,60" />
         <NodeLayout
-          Size="168,42.4"
-          Id="Package\Data Profiling Task"
+          Size="168,42.6666666666667"
+          Id="Package\Profiling Casualties"
           TopLeft="173.124998314306,229.083328974744" />
         <NodeLayout
-          Size="154.4,42.4"
+          Size="154.666666666667,42.6666666666667"
           Id="Package\Get CET &amp; LSET"
-          TopLeft="60,61.416665794949" />
+          TopLeft="57.5000000372529,58.1666658530635" />
         <NodeLayout
-          Size="176,42.4"
+          Size="176,42.6666666666667"
           Id="Package\Load data into stage"
           TopLeft="466.124994030221,182.849997803271" />
         <NodeLayout
-          Size="140,42.4"
+          Size="140,42.6666666666667"
           Id="Package\Update LSET"
           TopLeft="183.749998155981,154.983330299755" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 2]"
-          TopLeft="214.666666666667,82.041666230808">
+          TopLeft="212.16666670392,80.4166662598651">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="58.3333302413411,0"
+              EndConnector="60.8333302040884,0"
               Start="0,0"
-              End="50.8333302413411,0">
+              End="53.3333302040884,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="50.8333302413411,0" />
+                    End="53.3333302040884,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1385,26 +1160,26 @@ Where (Create_time &gt;= ? and Create_time &lt;= ? ) or (Update_time &gt;= ? and
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-124.999995715916,40.4555533936952"
+              EndConnector="-124.999995715915,40.4555533936952"
               Start="0,0"
-              End="-117.499995715916,40.4555533936952">
+              End="-117.499995715915,40.4555533936952">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="-48.7108415669526,0" />
+                    End="-48.7108415669521,0" />
                   <mssgle:CubicBezierSegment
-                    Point1="-48.7108415669526,0"
-                    Point2="-52.7108415669526,0"
-                    Point3="-52.7108415669526,4" />
+                    Point1="-48.7108415669521,0"
+                    Point2="-52.7108415669521,0"
+                    Point3="-52.7108415669521,4" />
                   <mssgle:LineSegment
-                    End="-52.7108415669526,36.4555533936952" />
+                    End="-52.7108415669521,36.4555533936952" />
                   <mssgle:CubicBezierSegment
-                    Point1="-52.7108415669526,36.4555533936952"
-                    Point2="-52.7108415669526,40.4555533936952"
-                    Point3="-56.7108415669526,40.4555533936952" />
+                    Point1="-52.7108415669521,36.4555533936952"
+                    Point2="-52.7108415669521,40.4555533936952"
+                    Point3="-56.7108415669521,40.4555533936952" />
                   <mssgle:LineSegment
-                    End="-117.499995715916,40.4555533936952" />
+                    End="-117.499995715915,40.4555533936952" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1422,11 +1197,11 @@ Where (Create_time &gt;= ? and Create_time &lt;= ? ) or (Update_time &gt;= ? and
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="172,42.4"
+          Size="172,42.6666666666667"
           Id="Package\Load data into stage\OLE DB Destination"
           TopLeft="312.249995734543,45.2499992445112" />
         <NodeLayout
-          Size="150.4,42.4"
+          Size="150.666666666667,42.6666666666667"
           Id="Package\Load data into stage\OLE DB Source"
           TopLeft="83.124998761341,48.7499991282821" />
         <EdgeLayout

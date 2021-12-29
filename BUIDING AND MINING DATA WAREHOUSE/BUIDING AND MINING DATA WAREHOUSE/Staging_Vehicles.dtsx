@@ -11,320 +11,10 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Staging_Vehicles"
   DTS:PackageType="5"
-  DTS:VersionBuild="37"
-  DTS:VersionGUID="{AF004BFD-B72D-42FD-B9CC-620ED6D81206}">
+  DTS:VersionBuild="39"
+  DTS:VersionGUID="{3FE87413-E64D-4D63-9E6D-C159BD71C324}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
-  <DTS:ConnectionManagers>
-    <DTS:ConnectionManager
-      DTS:refId="Package.ConnectionManagers[DESKTOP-0IA21OI.RawSource]"
-      DTS:CreationName="OLEDB"
-      DTS:DTSID="{5819B58E-5723-49C5-B489-FF72210970BA}"
-      DTS:ObjectName="DESKTOP-0IA21OI.RawSource">
-      <DTS:ObjectData>
-        <DTS:ConnectionManager
-          DTS:ConnectRetryCount="1"
-          DTS:ConnectRetryInterval="5"
-          DTS:ConnectionString="Data Source=DESKTOP-0IA21OI;Initial Catalog=RawSource;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
-      </DTS:ObjectData>
-    </DTS:ConnectionManager>
-    <DTS:ConnectionManager
-      DTS:refId="Package.ConnectionManagers[DESKTOP-0IA21OI.Stage]"
-      DTS:CreationName="OLEDB"
-      DTS:DTSID="{6285E2F8-C02C-4E74-8B22-C9978349C6B2}"
-      DTS:ObjectName="DESKTOP-0IA21OI.Stage">
-      <DTS:ObjectData>
-        <DTS:ConnectionManager
-          DTS:ConnectRetryCount="1"
-          DTS:ConnectRetryInterval="5"
-          DTS:ConnectionString="Data Source=DESKTOP-0IA21OI;Initial Catalog=Stage;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
-      </DTS:ObjectData>
-    </DTS:ConnectionManager>
-    <DTS:ConnectionManager
-      DTS:refId="Package.ConnectionManagers[DESKTOP-0IA21OI.Stage 1]"
-      DTS:CreationName="ADO.NET:System.Data.SqlClient.SqlConnection, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"
-      DTS:DTSID="{3F1EC93B-2D4A-4437-BBBD-B90E4E03ACF2}"
-      DTS:ObjectName="DESKTOP-0IA21OI.Stage 1">
-      <DTS:ObjectData>
-        <DTS:ConnectionManager
-          DTS:ConnectionString="Data Source=DESKTOP-0IA21OI;Initial Catalog=Stage;Integrated Security=True;" />
-      </DTS:ObjectData>
-    </DTS:ConnectionManager>
-    <DTS:ConnectionManager
-      DTS:refId="Package.ConnectionManagers[Excel Connection Manager]"
-      DTS:CreationName="EXCEL"
-      DTS:DTSID="{FBBCB99A-5319-4A4B-BFE8-22ED3E6C4392}"
-      DTS:ObjectName="Excel Connection Manager">
-      <DTS:ObjectData>
-        <DTS:ConnectionManager
-          DTS:ConnectRetryCount="0"
-          DTS:ConnectRetryInterval="0"
-          DTS:ConnectionString="Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\ASUS-DUCHUY\Desktop\BI\UK-Car-Accidents-Dataware-house\Dataset\UK Accidents Data 2011-2014\Vehicles1114.xls;Extended Properties=&quot;EXCEL 8.0;HDR=YES&quot;;" />
-      </DTS:ObjectData>
-    </DTS:ConnectionManager>
-    <DTS:ConnectionManager
-      DTS:refId="Package.ConnectionManagers[LocalHost.Vehicles1114]"
-      DTS:CreationName="OLEDB"
-      DTS:DTSID="{5307151B-E736-4C14-A096-9692999AEF9C}"
-      DTS:ObjectName="LocalHost.Vehicles1114">
-      <DTS:ObjectData>
-        <DTS:ConnectionManager
-          DTS:ConnectRetryCount="1"
-          DTS:ConnectRetryInterval="5"
-          DTS:ConnectionString="Data Source=.;Initial Catalog=Vehicles1114;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
-      </DTS:ObjectData>
-    </DTS:ConnectionManager>
-    <DTS:ConnectionManager
-      DTS:refId="Package.ConnectionManagers[LocalHost.Vehicles1114 1]"
-      DTS:CreationName="OLEDB"
-      DTS:DTSID="{2A6F83AB-F373-4981-A1DA-BF6F5D93D79F}"
-      DTS:ObjectName="LocalHost.Vehicles1114 1">
-      <DTS:ObjectData>
-        <DTS:ConnectionManager
-          DTS:ConnectRetryCount="1"
-          DTS:ConnectRetryInterval="5"
-          DTS:ConnectionString="Data Source=.;Initial Catalog=Vehicles1114;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
-      </DTS:ObjectData>
-    </DTS:ConnectionManager>
-    <DTS:ConnectionManager
-      DTS:refId="Package.ConnectionManagers[Vehicles]"
-      DTS:CreationName="FLATFILE"
-      DTS:DTSID="{CA62F96D-4C52-42A6-ADFB-9500EE3814C6}"
-      DTS:ObjectName="Vehicles">
-      <DTS:ObjectData>
-        <DTS:ConnectionManager
-          DTS:Format="Delimited"
-          DTS:LocaleID="1033"
-          DTS:HeaderRowDelimiter="_x000D__x000A_"
-          DTS:ColumnNamesInFirstDataRow="True"
-          DTS:RowDelimiter=""
-          DTS:TextQualifier="_x003C_none_x003E_"
-          DTS:CodePage="1252"
-          DTS:ConnectionString="..\Dataset\UK Accidents Data 2011-2014\Vehicles1114.csv">
-          <DTS:FlatFileColumns>
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="Accident_Index"
-              DTS:DTSID="{C452CC14-EBE4-4DC8-AA48-52CEF1832A3C}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="Vehicle_Reference"
-              DTS:DTSID="{C70DC2B5-69BC-40B1-B3A7-146E59C25BE5}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="Vehicle_Type"
-              DTS:DTSID="{D5D44108-F270-4E2B-BEB8-EBAF20AE400B}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="Towing_and_Articulation"
-              DTS:DTSID="{F7648358-7C2B-4351-BCDC-4D21BA464220}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="Vehicle_Manoeuvre"
-              DTS:DTSID="{90B1B75F-A723-4189-8C89-BB4268C8AB55}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="Vehicle_Location-Restricted_Lane"
-              DTS:DTSID="{3C60AB0C-DB92-43C0-B277-C8BB266A3627}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="Junction_Location"
-              DTS:DTSID="{5ECB03D0-3B1D-4DD7-941E-8A5F6CA38E2C}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="Skidding_and_Overturning"
-              DTS:DTSID="{86F740E3-4BC6-4FD1-A4F5-1B478CEA9E12}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="Hit_Object_in_Carriageway"
-              DTS:DTSID="{E8097C90-C7CB-4B87-918B-98726EF4DA23}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="Vehicle_Leaving_Carriageway"
-              DTS:DTSID="{21B5539F-1ED1-4DE1-A1FD-75060149E618}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="Hit_Object_off_Carriageway"
-              DTS:DTSID="{EBFBC68D-7B8C-454B-B896-4F1368EA633F}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="1st_Point_of_Impact"
-              DTS:DTSID="{72FADF14-04D2-4F6F-961D-621CFC82F651}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="Was_Vehicle_Left_Hand_Drive?"
-              DTS:DTSID="{22CC8D79-86CD-4C33-B8C7-ADED0F561306}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="Journey_Purpose_of_Driver"
-              DTS:DTSID="{BD94C82F-438B-4707-9BD2-5A703689C815}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="Sex_of_Driver"
-              DTS:DTSID="{46526B71-0C5A-4258-9379-571C97930930}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="Age_of_Driver"
-              DTS:DTSID="{D4844F36-BA3E-41D9-A5DA-59D547CC2F52}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="Age_Band_of_Driver"
-              DTS:DTSID="{BD18483B-55C9-4290-8179-5865D3B2F92B}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="Engine_Capacity_(CC)"
-              DTS:DTSID="{F35DEAD5-47F3-4EB4-B6BA-4C5BDC9D0261}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="Propulsion_Code"
-              DTS:DTSID="{EEC3FCF0-2983-4A02-B3AF-B37238AC0BCE}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="Age_of_Vehicle"
-              DTS:DTSID="{C45AED2E-931D-4D57-B705-F181BEF655EC}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="Driver_IMD_Decile"
-              DTS:DTSID="{8B5C1105-E896-4D81-9F79-6899C1B6DD44}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x000D__x000A_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="Driver_Home_Area_Type"
-              DTS:DTSID="{B4174C2F-D9DA-4CD8-ABE7-5EFBAA8BC9A2}"
-              DTS:CreationName="" />
-          </DTS:FlatFileColumns>
-        </DTS:ConnectionManager>
-      </DTS:ObjectData>
-    </DTS:ConnectionManager>
-    <DTS:ConnectionManager
-      DTS:refId="Package.ConnectionManagers[Vehicles.txt]"
-      DTS:CreationName="FILE"
-      DTS:DTSID="{2F9B6D1F-BABB-4227-BE36-248F388EB388}"
-      DTS:ObjectName="Vehicles.txt">
-      <DTS:ObjectData>
-        <DTS:ConnectionManager
-          DTS:ConnectionString="D:\Downloads\BI\BI_Project\UK-Car-Accidents-Data-warehouse\Profiling\Vehicles.txt" />
-      </DTS:ObjectData>
-    </DTS:ConnectionManager>
-    <DTS:ConnectionManager
-      DTS:refId="Package.ConnectionManagers[Vehicles.txt 1]"
-      DTS:CreationName="FILE"
-      DTS:DTSID="{6A5C8976-D0F2-431E-8CB4-4E9E7C299FB6}"
-      DTS:ObjectName="Vehicles.txt 1">
-      <DTS:ObjectData>
-        <DTS:ConnectionManager
-          DTS:ConnectionString="C:\Users\phamd\Desktop\UK-Car-Accidents-Data-warehouse\Profiling\Vehicles.txt" />
-      </DTS:ObjectData>
-    </DTS:ConnectionManager>
-  </DTS:ConnectionManagers>
   <DTS:Variables>
     <DTS:Variable
       DTS:CreationName=""
@@ -361,84 +51,6 @@
         <SQLTask:SqlTaskData
           SQLTask:Connection="{DFF81239-B2A8-4950-83F9-2BB12A3D2296}"
           SQLTask:SqlStatementSource="truncate table Vehicles" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
-      </DTS:ObjectData>
-    </DTS:Executable>
-    <DTS:Executable
-      DTS:refId="Package\Data Profiling Task"
-      DTS:CreationName="Microsoft.DataProfilingTask"
-      DTS:Description="Data Profiling Task"
-      DTS:DTSID="{7c8a6570-8e61-482a-b4b7-f58ec35c4666}"
-      DTS:ExecutableType="Microsoft.DataProfilingTask"
-      DTS:LocaleID="-1"
-      DTS:ObjectName="Data Profiling Task"
-      DTS:TaskContact="Data Profiling Task; Microsoft Corporation; SQL Server 2019; (c) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="0">
-      <DTS:Variables />
-      <DTS:ObjectData>
-        <DataProfilingTaskData
-          Destination="Vehicles.txt"
-          OverwriteDestination="True">
-          <ProfileInput><![CDATA[<?xml version="1.0" encoding="utf-16"?>
-<DataProfile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.microsoft.com/sqlserver/2008/DataDebugger/">
-  <ProfileVersion>1.0</ProfileVersion>
-  <DataSources />
-  <DataProfileInput>
-    <ProfileMode>Exact</ProfileMode>
-    <Timeout>0</Timeout>
-    <Requests>
-      <ColumnNullRatioProfileRequest ID="NullRatioReq">
-        <DataSourceID>{68B744B6-BFA4-417D-AA11-2C26D08D51D7}</DataSourceID>
-        <Table Schema="dbo" Table="PostCodes" />
-        <Column IsWildCard="true" />
-      </ColumnNullRatioProfileRequest>
-      <ColumnStatisticsProfileRequest ID="StatisticsReq">
-        <DataSourceID>{68B744B6-BFA4-417D-AA11-2C26D08D51D7}</DataSourceID>
-        <Table Schema="dbo" Table="PostCodes" />
-        <Column IsWildCard="true" />
-      </ColumnStatisticsProfileRequest>
-      <ColumnLengthDistributionProfileRequest ID="LengthDistReq">
-        <DataSourceID>{68B744B6-BFA4-417D-AA11-2C26D08D51D7}</DataSourceID>
-        <Table Schema="dbo" Table="PostCodes" />
-        <Column IsWildCard="true" />
-        <IgnoreLeadingSpace>false</IgnoreLeadingSpace>
-        <IgnoreTrailingSpace>true</IgnoreTrailingSpace>
-      </ColumnLengthDistributionProfileRequest>
-      <ColumnValueDistributionProfileRequest ID="ValueDistReq">
-        <DataSourceID>{68B744B6-BFA4-417D-AA11-2C26D08D51D7}</DataSourceID>
-        <Table Schema="dbo" Table="PostCodes" />
-        <Column IsWildCard="true" />
-        <Option>FrequentValues</Option>
-        <FrequentValueThreshold>0.001</FrequentValueThreshold>
-      </ColumnValueDistributionProfileRequest>
-      <ColumnPatternProfileRequest ID="PatternReq">
-        <DataSourceID>{68B744B6-BFA4-417D-AA11-2C26D08D51D7}</DataSourceID>
-        <Table Schema="dbo" Table="PostCodes" />
-        <Column IsWildCard="true" />
-        <MaxNumberOfPatterns>10</MaxNumberOfPatterns>
-        <PercentageDataCoverageDesired>95</PercentageDataCoverageDesired>
-        <CaseSensitive>false</CaseSensitive>
-        <Delimiters> \t\r\n</Delimiters>
-        <Symbols>,.;:-"'`~=&amp;/\\@!?()&lt;&gt;[]{}|#*^%</Symbols>
-        <TagTableName />
-      </ColumnPatternProfileRequest>
-      <CandidateKeyProfileRequest ID="KeyReq">
-        <DataSourceID>{68B744B6-BFA4-417D-AA11-2C26D08D51D7}</DataSourceID>
-        <Table Schema="dbo" Table="PostCodes" />
-        <KeyColumns>
-          <Column IsWildCard="true" />
-        </KeyColumns>
-        <ThresholdSetting>Specified</ThresholdSetting>
-        <KeyStrengthThreshold>0.95</KeyStrengthThreshold>
-        <VerifyOutputInFastMode>false</VerifyOutputInFastMode>
-        <MaxNumberOfViolations>100</MaxNumberOfViolations>
-      </CandidateKeyProfileRequest>
-    </Requests>
-  </DataProfileInput>
-  <DataProfileOutput>
-    <Profiles />
-  </DataProfileOutput>
-</DataProfile>]]></ProfileInput>
-        </DataProfilingTaskData>
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
@@ -1543,6 +1155,85 @@ Where (Create_time &gt;=? and Create_time &lt;=?) or (Update_time &gt;=? and Upd
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
+      DTS:refId="Package\Profiling vehicles"
+      DTS:CreationName="Microsoft.DataProfilingTask"
+      DTS:Description="Data Profiling Task"
+      DTS:DTSID="{7c8a6570-8e61-482a-b4b7-f58ec35c4666}"
+      DTS:ExecutableType="Microsoft.DataProfilingTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Profiling vehicles"
+      DTS:TaskContact="Data Profiling Task; Microsoft Corporation; SQL Server 2019; (c) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <DataProfilingTaskData
+          Destination="Profiling Vehicles"
+          OverwriteDestination="True">
+          <ProfileInput><![CDATA[<?xml version="1.0" encoding="utf-16"?>
+<DataProfile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.microsoft.com/sqlserver/2008/DataDebugger/">
+  <ProfileVersion>1.0</ProfileVersion>
+  <DataSources />
+  <DataProfileInput>
+    <ProfileMode>Exact</ProfileMode>
+    <Timeout>0</Timeout>
+    <Requests>
+      <ColumnNullRatioProfileRequest ID="NullRatioReq">
+        <DataSourceID>{68B744B6-BFA4-417D-AA11-2C26D08D51D7}</DataSourceID>
+        <Table Schema="dbo" Table="Vehicles" />
+        <Column IsWildCard="true" />
+      </ColumnNullRatioProfileRequest>
+      <ColumnStatisticsProfileRequest ID="StatisticsReq">
+        <DataSourceID>{68B744B6-BFA4-417D-AA11-2C26D08D51D7}</DataSourceID>
+        <Table Schema="dbo" Table="Vehicles" />
+        <Column IsWildCard="true" />
+      </ColumnStatisticsProfileRequest>
+      <ColumnLengthDistributionProfileRequest ID="LengthDistReq">
+        <DataSourceID>{68B744B6-BFA4-417D-AA11-2C26D08D51D7}</DataSourceID>
+        <Table Schema="dbo" Table="Vehicles" />
+        <Column IsWildCard="true" />
+        <IgnoreLeadingSpace>false</IgnoreLeadingSpace>
+        <IgnoreTrailingSpace>true</IgnoreTrailingSpace>
+      </ColumnLengthDistributionProfileRequest>
+      <ColumnValueDistributionProfileRequest ID="ValueDistReq">
+        <DataSourceID>{68B744B6-BFA4-417D-AA11-2C26D08D51D7}</DataSourceID>
+        <Table Schema="dbo" Table="Vehicles" />
+        <Column IsWildCard="true" />
+        <Option>FrequentValues</Option>
+        <FrequentValueThreshold>0.001</FrequentValueThreshold>
+      </ColumnValueDistributionProfileRequest>
+      <ColumnPatternProfileRequest ID="PatternReq">
+        <DataSourceID>{68B744B6-BFA4-417D-AA11-2C26D08D51D7}</DataSourceID>
+        <Table Schema="dbo" Table="Vehicles" />
+        <Column IsWildCard="true" />
+        <MaxNumberOfPatterns>10</MaxNumberOfPatterns>
+        <PercentageDataCoverageDesired>95</PercentageDataCoverageDesired>
+        <CaseSensitive>false</CaseSensitive>
+        <Delimiters> \t\r\n</Delimiters>
+        <Symbols>,.;:-"'`~=&amp;/\\@!?()&lt;&gt;[]{}|#*^%</Symbols>
+        <TagTableName />
+      </ColumnPatternProfileRequest>
+      <CandidateKeyProfileRequest ID="KeyReq">
+        <DataSourceID>{68B744B6-BFA4-417D-AA11-2C26D08D51D7}</DataSourceID>
+        <Table Schema="dbo" Table="Vehicles" />
+        <KeyColumns>
+          <Column IsWildCard="true" />
+          <Column IsWildCard="true" />
+        </KeyColumns>
+        <ThresholdSetting>Specified</ThresholdSetting>
+        <KeyStrengthThreshold>0.95</KeyStrengthThreshold>
+        <VerifyOutputInFastMode>false</VerifyOutputInFastMode>
+        <MaxNumberOfViolations>100</MaxNumberOfViolations>
+      </CandidateKeyProfileRequest>
+    </Requests>
+  </DataProfileInput>
+  <DataProfileOutput>
+    <Profiles />
+  </DataProfileOutput>
+</DataProfile>]]></ProfileInput>
+        </DataProfilingTaskData>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
       DTS:refId="Package\Update LSET"
       DTS:CreationName="Microsoft.ExecuteSQLTask"
       DTS:Description="Execute SQL Task"
@@ -1551,7 +1242,7 @@ Where (Create_time &gt;=? and Create_time &lt;=?) or (Update_time &gt;=? and Upd
       DTS:LocaleID="-1"
       DTS:ObjectName="Update LSET"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="1">
+      DTS:ThreadHint="0">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -1592,7 +1283,7 @@ Where (Create_time &gt;=? and Create_time &lt;=?) or (Update_time &gt;=? and Upd
       DTS:From="Package\Load data into stage"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint 5"
-      DTS:To="Package\Data Profiling Task" />
+      DTS:To="Package\Profiling vehicles" />
   </DTS:PrecedenceConstraints>
   <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
 <!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
@@ -1607,23 +1298,23 @@ Where (Create_time &gt;=? and Create_time &lt;=?) or (Update_time &gt;=? and Upd
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="132,42.4"
+          Size="132,42.6666666666667"
           Id="Package\Clear stage"
           TopLeft="272.999996908008,60" />
         <NodeLayout
-          Size="168,42.4"
-          Id="Package\Data Profiling Task"
+          Size="158.666666666667,42.6666666666667"
+          Id="Package\Profiling vehicles"
           TopLeft="173.124998314306,229.083328974744" />
         <NodeLayout
-          Size="153.6,41.6"
+          Size="153.333333333334,41.3333333333334"
           Id="Package\Get CET &amp; LSET"
           TopLeft="60,61.416665794949" />
         <NodeLayout
-          Size="176,42.4"
+          Size="176,42.6666666666667"
           Id="Package\Load data into stage"
           TopLeft="466.124994030222,182.849997803271" />
         <NodeLayout
-          Size="140,42.4"
+          Size="140,42.6666666666667"
           Id="Package\Update LSET"
           TopLeft="183.749998155981,154.983330299755" />
         <EdgeLayout
@@ -1722,26 +1413,26 @@ Where (Create_time &gt;=? and Create_time &lt;=?) or (Update_time &gt;=? and Upd
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-124.999995715916,40.4555533936952"
+              EndConnector="-134.333329049249,40.4555533936952"
               Start="0,0"
-              End="-117.499995715916,40.4555533936952">
+              End="-126.833329049249,40.4555533936952">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="-48.7108415669526,0" />
+                    End="-52.6465845388401,0" />
                   <mssgle:CubicBezierSegment
-                    Point1="-48.7108415669526,0"
-                    Point2="-52.7108415669526,0"
-                    Point3="-52.7108415669526,4" />
+                    Point1="-52.6465845388401,0"
+                    Point2="-56.6465845388401,0"
+                    Point3="-56.6465845388401,4" />
                   <mssgle:LineSegment
-                    End="-52.7108415669526,36.4555533936952" />
+                    End="-56.6465845388401,36.4555533936952" />
                   <mssgle:CubicBezierSegment
-                    Point1="-52.7108415669526,36.4555533936952"
-                    Point2="-52.7108415669526,40.4555533936952"
-                    Point3="-56.7108415669526,40.4555533936952" />
+                    Point1="-56.6465845388401,36.4555533936952"
+                    Point2="-56.6465845388401,40.4555533936952"
+                    Point3="-60.6465845388401,40.4555533936952" />
                   <mssgle:LineSegment
-                    End="-117.499995715916,40.4555533936952" />
+                    End="-126.833329049249,40.4555533936952" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1757,13 +1448,13 @@ Where (Create_time &gt;=? and Create_time &lt;=?) or (Update_time &gt;=? and Upd
     design-time-name="Package\Load data into stage">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="149.6,41.6"
+          Size="149.333333333334,41.3333333333334"
           Id="Package\Load data into stage\OLE DB Source"
           TopLeft="83.124998761341,48.7499991282821" />
         <NodeLayout
-          Size="172,42.4"
+          Size="172,42.6666666666667"
           Id="Package\Load data into stage\OLE DB Destination"
           TopLeft="312.249995734543,45.2499992445112" />
         <EdgeLayout
@@ -1785,9 +1476,7 @@ Where (Create_time &gt;=? and Create_time &lt;=?) or (Update_time &gt;=? and Upd
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>

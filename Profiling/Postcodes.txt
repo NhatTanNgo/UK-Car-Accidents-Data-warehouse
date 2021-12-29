@@ -2,8 +2,29 @@
 <DataProfile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.microsoft.com/sqlserver/2008/DataDebugger/">
   <ProfileVersion>1.0</ProfileVersion>
   <DataSources>
-    <DtsDataSource ID="{52060651-B2AF-4B15-B459-8F04EB16EED0}" Name="Postcodes.txt">
+    <DtsDataSource ID="{005B4F3A-D8B2-43AD-B7FB-52585ABF979C}" Name="Postcodes.txt">
       <DtsConnectionManagerID>Postcodes.txt</DtsConnectionManagerID>
+    </DtsDataSource>
+    <DtsDataSource ID="{1D3BB03E-026F-4118-9A81-B32A8F21D086}" Name="Excel_Accidents">
+      <DtsConnectionManagerID>Excel_Accidents</DtsConnectionManagerID>
+    </DtsDataSource>
+    <DtsDataSource ID="{627034E8-7440-456F-9E09-2A0DABD6C8EB}" Name="Excel_Casualties">
+      <DtsConnectionManagerID>Excel_Casualties</DtsConnectionManagerID>
+    </DtsDataSource>
+    <DtsDataSource ID="{A79A3ABC-4E9C-4DCD-BDB7-8AB9ADBB5D90}" Name="Excel_LSOA">
+      <DtsConnectionManagerID>Excel_LSOA</DtsConnectionManagerID>
+    </DtsDataSource>
+    <DtsDataSource ID="{F2CB829C-F707-4480-B125-A8FEA2681400}" Name="Excel_Postcode">
+      <DtsConnectionManagerID>Excel_Postcode</DtsConnectionManagerID>
+    </DtsDataSource>
+    <DtsDataSource ID="{8720A277-9765-4753-B355-EEB4024F323B}" Name="Excel_Postcode_districts">
+      <DtsConnectionManagerID>Excel_Postcode_districts</DtsConnectionManagerID>
+    </DtsDataSource>
+    <DtsDataSource ID="{49F7C6A1-27E1-4ACE-A74F-0D5AFEA35A74}" Name="Excel_Vehicles">
+      <DtsConnectionManagerID>Excel_Vehicles</DtsConnectionManagerID>
+    </DtsDataSource>
+    <DtsDataSource ID="{C20E7D12-09FB-4D04-8FBE-D0F3EC31B923}" Name="Excel_Wiki_Postcodes">
+      <DtsConnectionManagerID>Excel_Wiki_Postcodes</DtsConnectionManagerID>
     </DtsDataSource>
     <DtsDataSource ID="{DFF81239-B2A8-4950-83F9-2BB12A3D2296}" Name="LocalHost Stage_DATH">
       <DtsConnectionManagerID>LocalHost Stage_DATH</DtsConnectionManagerID>
@@ -11,11 +32,26 @@
     <DtsDataSource ID="{DE3C34A7-7A0C-4B26-A05E-3060463C0629}" Name="LocalHost.MetaData_DATH">
       <DtsConnectionManagerID>LocalHost.MetaData_DATH</DtsConnectionManagerID>
     </DtsDataSource>
+    <DtsDataSource ID="{AE006570-A2B7-40E0-9892-4B549EA30919}" Name="LocalHost.NDS_DATH">
+      <DtsConnectionManagerID>LocalHost.NDS_DATH</DtsConnectionManagerID>
+    </DtsDataSource>
     <DtsDataSource ID="{F4A3871F-4AD8-419A-8C9E-BAEC8E731B5E}" Name="LocalHost.Source_DATH">
       <DtsConnectionManagerID>LocalHost.Source_DATH</DtsConnectionManagerID>
     </DtsDataSource>
     <DtsDataSource ID="{68B744B6-BFA4-417D-AA11-2C26D08D51D7}" Name="LocalHost.Stage_DATH 1">
       <DtsConnectionManagerID>LocalHost.Stage_DATH 1</DtsConnectionManagerID>
+    </DtsDataSource>
+    <DtsDataSource ID="{DD9BD263-759E-4E3D-9C42-24E9D5829447}" Name="Profiling Accidents">
+      <DtsConnectionManagerID>Profiling Accidents</DtsConnectionManagerID>
+    </DtsDataSource>
+    <DtsDataSource ID="{60335E41-A8E1-404A-ACAF-C4EDCB80FAEE}" Name="Profiling LSOA">
+      <DtsConnectionManagerID>Profiling LSOA</DtsConnectionManagerID>
+    </DtsDataSource>
+    <DtsDataSource ID="{0DB53988-915E-41C6-A4A8-D6949A122C94}" Name="Profiling Vehicles">
+      <DtsConnectionManagerID>Profiling Vehicles</DtsConnectionManagerID>
+    </DtsDataSource>
+    <DtsDataSource ID="{4BB6DFE4-1C33-4AAB-9C27-FC00588478C7}" Name="Profiling_Casualties.txt">
+      <DtsConnectionManagerID>Profiling_Casualties.txt</DtsConnectionManagerID>
     </DtsDataSource>
   </DataSources>
   <DataProfileInput>

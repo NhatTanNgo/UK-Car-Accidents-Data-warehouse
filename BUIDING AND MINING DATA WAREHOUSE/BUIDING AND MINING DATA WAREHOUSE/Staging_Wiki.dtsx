@@ -11,22 +11,10 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="2"
-  DTS:VersionGUID="{E6AA66B3-256F-49CF-8C23-033BDD0E84FC}">
+  DTS:VersionBuild="6"
+  DTS:VersionGUID="{F0871B1E-598E-4020-A0AC-FF73DE46C9AF}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
-  <DTS:ConnectionManagers>
-    <DTS:ConnectionManager
-      DTS:refId="Package.ConnectionManagers[WikiPostcode.txt]"
-      DTS:CreationName="FILE"
-      DTS:DTSID="{82E25E24-B62D-4A7E-A071-189EF7469556}"
-      DTS:ObjectName="WikiPostcode.txt">
-      <DTS:ObjectData>
-        <DTS:ConnectionManager
-          DTS:ConnectionString="D:\Downloads\BI\BI_Project\UK-Car-Accidents-Data-warehouse\Profiling\WikiPostcode.txt" />
-      </DTS:ObjectData>
-    </DTS:ConnectionManager>
-  </DTS:ConnectionManagers>
   <DTS:Variables>
     <DTS:Variable
       DTS:CreationName=""
@@ -63,84 +51,6 @@
         <SQLTask:SqlTaskData
           SQLTask:Connection="{DFF81239-B2A8-4950-83F9-2BB12A3D2296}"
           SQLTask:SqlStatementSource="truncate table Wiki_Postcodes" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
-      </DTS:ObjectData>
-    </DTS:Executable>
-    <DTS:Executable
-      DTS:refId="Package\Data Profiling Task"
-      DTS:CreationName="Microsoft.DataProfilingTask"
-      DTS:Description="Data Profiling Task"
-      DTS:DTSID="{c00e805e-ccdb-4098-a231-d5681fded9f4}"
-      DTS:ExecutableType="Microsoft.DataProfilingTask"
-      DTS:LocaleID="-1"
-      DTS:ObjectName="Data Profiling Task"
-      DTS:TaskContact="Data Profiling Task; Microsoft Corporation; SQL Server 2019; (c) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="0">
-      <DTS:Variables />
-      <DTS:ObjectData>
-        <DataProfilingTaskData
-          Destination="WikiPostcode.txt"
-          OverwriteDestination="True">
-          <ProfileInput><![CDATA[<?xml version="1.0" encoding="utf-16"?>
-<DataProfile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.microsoft.com/sqlserver/2008/DataDebugger/">
-  <ProfileVersion>1.0</ProfileVersion>
-  <DataSources />
-  <DataProfileInput>
-    <ProfileMode>Exact</ProfileMode>
-    <Timeout>0</Timeout>
-    <Requests>
-      <ColumnNullRatioProfileRequest ID="NullRatioReq">
-        <DataSourceID>{68B744B6-BFA4-417D-AA11-2C26D08D51D7}</DataSourceID>
-        <Table Schema="dbo" Table="Wiki_Postcodes" />
-        <Column IsWildCard="true" />
-      </ColumnNullRatioProfileRequest>
-      <ColumnStatisticsProfileRequest ID="StatisticsReq">
-        <DataSourceID>{68B744B6-BFA4-417D-AA11-2C26D08D51D7}</DataSourceID>
-        <Table Schema="dbo" Table="Wiki_Postcodes" />
-        <Column IsWildCard="true" />
-      </ColumnStatisticsProfileRequest>
-      <ColumnLengthDistributionProfileRequest ID="LengthDistReq">
-        <DataSourceID>{68B744B6-BFA4-417D-AA11-2C26D08D51D7}</DataSourceID>
-        <Table Schema="dbo" Table="Wiki_Postcodes" />
-        <Column IsWildCard="true" />
-        <IgnoreLeadingSpace>false</IgnoreLeadingSpace>
-        <IgnoreTrailingSpace>true</IgnoreTrailingSpace>
-      </ColumnLengthDistributionProfileRequest>
-      <ColumnValueDistributionProfileRequest ID="ValueDistReq">
-        <DataSourceID>{68B744B6-BFA4-417D-AA11-2C26D08D51D7}</DataSourceID>
-        <Table Schema="dbo" Table="Wiki_Postcodes" />
-        <Column IsWildCard="true" />
-        <Option>FrequentValues</Option>
-        <FrequentValueThreshold>0.001</FrequentValueThreshold>
-      </ColumnValueDistributionProfileRequest>
-      <ColumnPatternProfileRequest ID="PatternReq">
-        <DataSourceID>{68B744B6-BFA4-417D-AA11-2C26D08D51D7}</DataSourceID>
-        <Table Schema="dbo" Table="Wiki_Postcodes" />
-        <Column IsWildCard="true" />
-        <MaxNumberOfPatterns>10</MaxNumberOfPatterns>
-        <PercentageDataCoverageDesired>95</PercentageDataCoverageDesired>
-        <CaseSensitive>false</CaseSensitive>
-        <Delimiters> \t\r\n</Delimiters>
-        <Symbols>,.;:-"'`~=&amp;/\\@!?()&lt;&gt;[]{}|#*^%</Symbols>
-        <TagTableName />
-      </ColumnPatternProfileRequest>
-      <CandidateKeyProfileRequest ID="KeyReq">
-        <DataSourceID>{68B744B6-BFA4-417D-AA11-2C26D08D51D7}</DataSourceID>
-        <Table Schema="dbo" Table="Wiki_Postcodes" />
-        <KeyColumns>
-          <Column IsWildCard="true" />
-        </KeyColumns>
-        <ThresholdSetting>Specified</ThresholdSetting>
-        <KeyStrengthThreshold>0.95</KeyStrengthThreshold>
-        <VerifyOutputInFastMode>false</VerifyOutputInFastMode>
-        <MaxNumberOfViolations>100</MaxNumberOfViolations>
-      </CandidateKeyProfileRequest>
-    </Requests>
-  </DataProfileInput>
-  <DataProfileOutput>
-    <Profiles />
-  </DataProfileOutput>
-</DataProfile>]]></ProfileInput>
-        </DataProfilingTaskData>
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
@@ -262,19 +172,13 @@
                       externalMetadataColumnId="Package\Load data into stage\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Postcode districts]"
                       lineageId="Package\Load data into stage\OLE DB Source.Outputs[OLE DB Source Output].Columns[Postcode districts]" />
                     <inputColumn
-                      refId="Package\Load data into stage\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Post town]"
+                      refId="Package\Load data into stage\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Former postal county]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
-                      cachedName="Post town"
-                      externalMetadataColumnId="Package\Load data into stage\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Post town]"
-                      lineageId="Package\Load data into stage\OLE DB Source.Outputs[OLE DB Source Output].Columns[Post town]" />
-                    <inputColumn
-                      refId="Package\Load data into stage\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[status]"
-                      cachedDataType="i4"
-                      cachedName="status"
-                      externalMetadataColumnId="Package\Load data into stage\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[status]"
-                      lineageId="Package\Load data into stage\OLE DB Source.Outputs[OLE DB Source Output].Columns[status]" />
+                      cachedName="Former postal county"
+                      externalMetadataColumnId="Package\Load data into stage\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[County]"
+                      lineageId="Package\Load data into stage\OLE DB Source.Outputs[OLE DB Source Output].Columns[Former postal county]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -284,15 +188,11 @@
                       length="150"
                       name="Postcode districts" />
                     <externalMetadataColumn
-                      refId="Package\Load data into stage\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Post town]"
+                      refId="Package\Load data into stage\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[County]"
                       codePage="1252"
                       dataType="str"
                       length="50"
-                      name="Post town" />
-                    <externalMetadataColumn
-                      refId="Package\Load data into stage\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[status]"
-                      dataType="i4"
-                      name="status" />
+                      name="County" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
@@ -445,15 +345,6 @@ Where (Create_time &gt;=? and Create_time &lt;=?) or (Update_time &gt;=? and Upd
                       lineageId="Package\Load data into stage\OLE DB Source.Outputs[OLE DB Source Output].Columns[update_time]"
                       name="update_time"
                       truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\Load data into stage\OLE DB Source.Outputs[OLE DB Source Output].Columns[status]"
-                      dataType="i4"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Load data into stage\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[status]"
-                      lineageId="Package\Load data into stage\OLE DB Source.Outputs[OLE DB Source Output].Columns[status]"
-                      name="status"
-                      truncationRowDisposition="FailComponent" />
                   </outputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -488,10 +379,6 @@ Where (Create_time &gt;=? and Create_time &lt;=?) or (Update_time &gt;=? and Upd
                       refId="Package\Load data into stage\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[update_time]"
                       dataType="dbTimeStamp"
                       name="update_time" />
-                    <externalMetadataColumn
-                      refId="Package\Load data into stage\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[status]"
-                      dataType="i4"
-                      name="status" />
                   </externalMetadataColumns>
                 </output>
                 <output
@@ -537,11 +424,6 @@ Where (Create_time &gt;=? and Create_time &lt;=?) or (Update_time &gt;=? and Upd
                       lineageId="Package\Load data into stage\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[update_time]"
                       name="update_time" />
                     <outputColumn
-                      refId="Package\Load data into stage\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[status]"
-                      dataType="i4"
-                      lineageId="Package\Load data into stage\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[status]"
-                      name="status" />
-                    <outputColumn
                       refId="Package\Load data into stage\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
                       dataType="i4"
                       lineageId="Package\Load data into stage\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
@@ -567,6 +449,84 @@ Where (Create_time &gt;=? and Create_time &lt;=?) or (Update_time &gt;=? and Upd
               startId="Package\Load data into stage\OLE DB Source.Outputs[OLE DB Source Output]" />
           </paths>
         </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Profiling Wiki"
+      DTS:CreationName="Microsoft.DataProfilingTask"
+      DTS:Description="Data Profiling Task"
+      DTS:DTSID="{c00e805e-ccdb-4098-a231-d5681fded9f4}"
+      DTS:ExecutableType="Microsoft.DataProfilingTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Profiling Wiki"
+      DTS:TaskContact="Data Profiling Task; Microsoft Corporation; SQL Server 2019; (c) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <DataProfilingTaskData
+          Destination="Profiling Wiki"
+          OverwriteDestination="True">
+          <ProfileInput><![CDATA[<?xml version="1.0" encoding="utf-16"?>
+<DataProfile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.microsoft.com/sqlserver/2008/DataDebugger/">
+  <ProfileVersion>1.0</ProfileVersion>
+  <DataSources />
+  <DataProfileInput>
+    <ProfileMode>Exact</ProfileMode>
+    <Timeout>0</Timeout>
+    <Requests>
+      <ColumnNullRatioProfileRequest ID="NullRatioReq">
+        <DataSourceID>{68B744B6-BFA4-417D-AA11-2C26D08D51D7}</DataSourceID>
+        <Table Schema="dbo" Table="Wiki_Postcodes" />
+        <Column IsWildCard="true" />
+      </ColumnNullRatioProfileRequest>
+      <ColumnStatisticsProfileRequest ID="StatisticsReq">
+        <DataSourceID>{68B744B6-BFA4-417D-AA11-2C26D08D51D7}</DataSourceID>
+        <Table Schema="dbo" Table="Wiki_Postcodes" />
+        <Column IsWildCard="true" />
+      </ColumnStatisticsProfileRequest>
+      <ColumnLengthDistributionProfileRequest ID="LengthDistReq">
+        <DataSourceID>{68B744B6-BFA4-417D-AA11-2C26D08D51D7}</DataSourceID>
+        <Table Schema="dbo" Table="Wiki_Postcodes" />
+        <Column IsWildCard="true" />
+        <IgnoreLeadingSpace>false</IgnoreLeadingSpace>
+        <IgnoreTrailingSpace>true</IgnoreTrailingSpace>
+      </ColumnLengthDistributionProfileRequest>
+      <ColumnValueDistributionProfileRequest ID="ValueDistReq">
+        <DataSourceID>{68B744B6-BFA4-417D-AA11-2C26D08D51D7}</DataSourceID>
+        <Table Schema="dbo" Table="Wiki_Postcodes" />
+        <Column IsWildCard="true" />
+        <Option>FrequentValues</Option>
+        <FrequentValueThreshold>0.001</FrequentValueThreshold>
+      </ColumnValueDistributionProfileRequest>
+      <ColumnPatternProfileRequest ID="PatternReq">
+        <DataSourceID>{68B744B6-BFA4-417D-AA11-2C26D08D51D7}</DataSourceID>
+        <Table Schema="dbo" Table="Wiki_Postcodes" />
+        <Column IsWildCard="true" />
+        <MaxNumberOfPatterns>10</MaxNumberOfPatterns>
+        <PercentageDataCoverageDesired>95</PercentageDataCoverageDesired>
+        <CaseSensitive>false</CaseSensitive>
+        <Delimiters> \t\r\n</Delimiters>
+        <Symbols>,.;:-"'`~=&amp;/\\@!?()&lt;&gt;[]{}|#*^%</Symbols>
+        <TagTableName />
+      </ColumnPatternProfileRequest>
+      <CandidateKeyProfileRequest ID="KeyReq">
+        <DataSourceID>{68B744B6-BFA4-417D-AA11-2C26D08D51D7}</DataSourceID>
+        <Table Schema="dbo" Table="Wiki_Postcodes" />
+        <KeyColumns>
+          <Column IsWildCard="true" />
+        </KeyColumns>
+        <ThresholdSetting>Specified</ThresholdSetting>
+        <KeyStrengthThreshold>0.95</KeyStrengthThreshold>
+        <VerifyOutputInFastMode>false</VerifyOutputInFastMode>
+        <MaxNumberOfViolations>100</MaxNumberOfViolations>
+      </CandidateKeyProfileRequest>
+    </Requests>
+  </DataProfileInput>
+  <DataProfileOutput>
+    <Profiles />
+  </DataProfileOutput>
+</DataProfile>]]></ProfileInput>
+        </DataProfilingTaskData>
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
@@ -619,7 +579,7 @@ Where (Create_time &gt;=? and Create_time &lt;=?) or (Update_time &gt;=? and Upd
       DTS:From="Package\Load data into stage"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint 5"
-      DTS:To="Package\Data Profiling Task" />
+      DTS:To="Package\Profiling Wiki" />
   </DTS:PrecedenceConstraints>
   <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
 <!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
@@ -638,8 +598,8 @@ Where (Create_time &gt;=? and Create_time &lt;=?) or (Update_time &gt;=? and Upd
           Id="Package\Clear stage"
           TopLeft="272.999996908008,60" />
         <NodeLayout
-          Size="168,42.6666666666667"
-          Id="Package\Data Profiling Task"
+          Size="141.333333333334,42.6666666666667"
+          Id="Package\Profiling Wiki"
           TopLeft="173.124998314306,229.083328974744" />
         <NodeLayout
           Size="154.666666666667,42.6666666666667"
@@ -749,26 +709,26 @@ Where (Create_time &gt;=? and Create_time &lt;=?) or (Update_time &gt;=? and Upd
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-124.999995715916,40.4555533936952"
+              EndConnector="-151.666662382583,40.4555533936952"
               Start="0,0"
-              End="-117.499995715916,40.4555533936952">
+              End="-144.166662382583,40.4555533936952">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="-48.7108415669526,0" />
+                    End="-59.9558214866313,0" />
                   <mssgle:CubicBezierSegment
-                    Point1="-48.7108415669526,0"
-                    Point2="-52.7108415669526,0"
-                    Point3="-52.7108415669526,4" />
+                    Point1="-59.9558214866313,0"
+                    Point2="-63.9558214866313,0"
+                    Point3="-63.9558214866313,4" />
                   <mssgle:LineSegment
-                    End="-52.7108415669526,36.4555533936952" />
+                    End="-63.9558214866313,36.4555533936952" />
                   <mssgle:CubicBezierSegment
-                    Point1="-52.7108415669526,36.4555533936952"
-                    Point2="-52.7108415669526,40.4555533936952"
-                    Point3="-56.7108415669526,40.4555533936952" />
+                    Point1="-63.9558214866313,36.4555533936952"
+                    Point2="-63.9558214866313,40.4555533936952"
+                    Point3="-67.9558214866313,40.4555533936952" />
                   <mssgle:LineSegment
-                    End="-117.499995715916,40.4555533936952" />
+                    End="-144.166662382583,40.4555533936952" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -786,13 +746,13 @@ Where (Create_time &gt;=? and Create_time &lt;=?) or (Update_time &gt;=? and Upd
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="172,42.6666666666667"
-          Id="Package\Load data into stage\OLE DB Destination"
-          TopLeft="312.249995734543,45.2499992445112" />
-        <NodeLayout
           Size="150.666666666667,42.6666666666667"
           Id="Package\Load data into stage\OLE DB Source"
           TopLeft="76.2499988637865,44.1999992096424" />
+        <NodeLayout
+          Size="172,42.6666666666667"
+          Id="Package\Load data into stage\OLE DB Destination"
+          TopLeft="312.249995734543,45.2499992445112" />
         <EdgeLayout
           Id="Package\Load data into stage.Paths[OLE DB Source Output]"
           TopLeft="226.916665530453,66.0583325604102">

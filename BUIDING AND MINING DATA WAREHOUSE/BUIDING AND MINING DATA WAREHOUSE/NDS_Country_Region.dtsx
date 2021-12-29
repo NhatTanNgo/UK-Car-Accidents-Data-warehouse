@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="7"
-  DTS:VersionGUID="{4E6D286A-B5EB-4C39-ADEA-8651892C9381}">
+  DTS:VersionBuild="8"
+  DTS:VersionGUID="{0A0E8527-ED2C-4AC5-B2C9-F0F7419C698C}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables />
@@ -695,7 +695,7 @@ where [refTable].[Region_NK] = ?</property>
                   containsID="true"
                   dataType="System.String"
                   description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
-                  name="ParameterMap">#{Package\Region\61:invalid};</property>
+                  name="ParameterMap">#{Package\Region\936:invalid};</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the column code page to use when code page information is unavailable from the data source."
@@ -1087,6 +1087,16 @@ GROUP BY region_code, region_name</property>
       </DTS:ObjectData>
     </DTS:Executable>
   </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint]"
+      DTS:CreationName=""
+      DTS:DTSID="{571ADA71-12FF-4878-9FF2-91C7E98A2B00}"
+      DTS:From="Package\Country"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint"
+      DTS:To="Package\Region" />
+  </DTS:PrecedenceConstraints>
   <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
 <!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
 <!--If you manually edit this section and make a mistake, you can delete it. -->
@@ -1098,7 +1108,7 @@ GROUP BY region_code, region_name</property>
     design-time-name="Package">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="116,42.6666666666667"
           Id="Package\Country"
@@ -1107,6 +1117,28 @@ GROUP BY region_code, region_name</property>
           Size="112,42.6666666666667"
           Id="Package\Region"
           TopLeft="62.4999990686775,131.299997652173" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint]"
+          TopLeft="118.249999534339,102.666666666667">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,28.6333309855063"
+              Start="0,0"
+              End="0,21.1333309855063">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,21.1333309855063" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </Package>
@@ -1116,14 +1148,6 @@ GROUP BY region_code, region_name</property>
       <GraphLayout
         Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="113.333333333334,42.6666666666667"
-          Id="Package\Country\Lookup"
-          TopLeft="352,111" />
-        <NodeLayout
-          Size="154.666666666667,42.6666666666667"
-          Id="Package\Country\Derived Column"
-          TopLeft="130,170" />
-        <NodeLayout
           Size="172,42.6666666666667"
           Id="Package\Country\OLE DB Destination"
           TopLeft="648,109" />
@@ -1131,6 +1155,36 @@ GROUP BY region_code, region_name</property>
           Size="150.666666666667,42.6666666666667"
           Id="Package\Country\OLE DB Source"
           TopLeft="128,90" />
+        <NodeLayout
+          Size="113.333333333334,42.6666666666667"
+          Id="Package\Country\Lookup"
+          TopLeft="352,111" />
+        <NodeLayout
+          Size="154.666666666667,42.6666666666667"
+          Id="Package\Country\Derived Column"
+          TopLeft="130,170" />
+        <EdgeLayout
+          Id="Package\Country.Paths[OLE DB Source Output]"
+          TopLeft="205.333333333333,132.666666666667">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,37.3333333333333"
+              Start="0,0"
+              End="0,29.8333333333333">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,29.8333333333333" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
         <EdgeLayout
           Id="Package\Country.Paths[Lookup No Match Output]"
           TopLeft="465.333333333333,131.333333333333">
@@ -1186,33 +1240,7 @@ GROUP BY region_code, region_name</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Country.Paths[OLE DB Source Output]"
-          TopLeft="205.333333333333,132.666666666667">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,37.3333333333333"
-              Start="0,0"
-              End="0,29.8333333333333">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,29.8333333333333" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -1224,79 +1252,21 @@ GROUP BY region_code, region_name</property>
       <GraphLayout
         Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
+          Size="172,42.6666666666667"
+          Id="Package\Region\OLE DB Destination"
+          TopLeft="488.749992717058,51.9999990701676" />
+        <NodeLayout
           Size="150.666666666667,42.6666666666667"
           Id="Package\Region\OLE DB Source"
           TopLeft="48.7499992735683,59.7999989306927" />
         <NodeLayout
-          Size="154.666666666667,42.6666666666667"
-          Id="Package\Region\Derived Column"
-          TopLeft="92.4999986216425,142.349997454584" />
-        <NodeLayout
           Size="113.333333333334,42.6666666666667"
           Id="Package\Region\Lookup"
           TopLeft="236.249996479601,54.5999990236759" />
-        <EdgeLayout
-          Id="Package\Region.Paths[Derived Column Output]"
-          TopLeft="194.27777639942,142.349997454584">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="98.6388867468473,-45.0833317642411"
-              Start="0,0"
-              End="98.6388867468473,-37.5833317642411">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,-14.3102951533949" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,-14.3102951533949"
-                    Point2="0,-18.3102951533949"
-                    Point3="4,-18.3102951533949" />
-                  <mssgle:LineSegment
-                    End="94.6388867468473,-18.3102951533949" />
-                  <mssgle:CubicBezierSegment
-                    Point1="94.6388867468473,-18.3102951533949"
-                    Point2="98.6388867468473,-18.3102951533949"
-                    Point3="98.6388867468473,-22.3102951533949" />
-                  <mssgle:LineSegment
-                    End="98.6388867468473,-37.5833317642411" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
         <NodeLayout
-          Size="172,42.6666666666667"
-          Id="Package\Region\OLE DB Destination"
-          TopLeft="488.749992717058,51.9999990701676" />
-        <EdgeLayout
-          Id="Package\Region.Paths[Lookup No Match Output]"
-          TopLeft="349.583329812934,74.6333323802551">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="139.166662904124,0"
-              Start="0,0"
-              End="131.666662904124,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="131.666662904124,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="10.0269447333118,5,111.6127734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
+          Size="154.666666666667,42.6666666666667"
+          Id="Package\Region\Derived Column"
+          TopLeft="92.4999986216425,142.349997454584" />
         <EdgeLayout
           Id="Package\Region.Paths[OLE DB Source Output]"
           TopLeft="124.083332606902,102.466665597359">
@@ -1331,9 +1301,80 @@ GROUP BY region_code, region_name</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Region.Paths[Lookup No Match Output]"
+          TopLeft="349.583329812934,74.6333323802551">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="139.166662904124,0"
+              Start="0,0"
+              End="131.666662904124,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="131.666662904124,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="10.0269447333118,5,111.6127734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Region.Paths[Derived Column Output]"
+          TopLeft="194.27777639942,142.349997454584">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="98.6388867468473,-45.0833317642411"
+              Start="0,0"
+              End="98.6388867468473,-37.5833317642411">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,-14.3102951533949" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,-14.3102951533949"
+                    Point2="0,-18.3102951533949"
+                    Point3="4,-18.3102951533949" />
+                  <mssgle:LineSegment
+                    End="94.6388867468473,-18.3102951533949" />
+                  <mssgle:CubicBezierSegment
+                    Point1="94.6388867468473,-18.3102951533949"
+                    Point2="98.6388867468473,-18.3102951533949"
+                    Point3="98.6388867468473,-22.3102951533949" />
+                  <mssgle:LineSegment
+                    End="98.6388867468473,-37.5833317642411" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Region\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
   <PipelineComponentMetadata
     design-time-name="Package\Region\OLE DB Source">
     <Properties>
@@ -1353,7 +1394,7 @@ GROUP BY region_code, region_name</property>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:boolean">false</Value>
+          type="q2:string">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -1363,23 +1404,10 @@ GROUP BY region_code, region_name</property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:int">0</Value>
+          type="q4:string">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Region\OLE DB Destination">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
       </Property>
     </Properties>
   </PipelineComponentMetadata>

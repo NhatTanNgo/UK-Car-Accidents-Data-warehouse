@@ -11,22 +11,10 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="4"
-  DTS:VersionGUID="{13FABA96-F109-4322-ADF9-2CFA3E793BB3}">
+  DTS:VersionBuild="7"
+  DTS:VersionGUID="{DC1A4855-4628-45A8-BA75-A2260DC7FE49}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
-  <DTS:ConnectionManagers>
-    <DTS:ConnectionManager
-      DTS:refId="Package.ConnectionManagers[PostcodeDistrict.txt]"
-      DTS:CreationName="FILE"
-      DTS:DTSID="{56E3E844-8EBF-40E0-9221-74E3779679F7}"
-      DTS:ObjectName="PostcodeDistrict.txt">
-      <DTS:ObjectData>
-        <DTS:ConnectionManager
-          DTS:ConnectionString="C:\Users\WinXs\OneDrive - VNU-HCMUS\Uni\Nam 4 - HKI\BI\Do an\UK-Car-Accidents-Data-warehouse\Profiling\PostcodeDistrict.txt" />
-      </DTS:ObjectData>
-    </DTS:ConnectionManager>
-  </DTS:ConnectionManagers>
   <DTS:Variables>
     <DTS:Variable
       DTS:CreationName=""
@@ -63,84 +51,6 @@
         <SQLTask:SqlTaskData
           SQLTask:Connection="{DFF81239-B2A8-4950-83F9-2BB12A3D2296}"
           SQLTask:SqlStatementSource="truncate table Postcode_district" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
-      </DTS:ObjectData>
-    </DTS:Executable>
-    <DTS:Executable
-      DTS:refId="Package\Data Profiling Task"
-      DTS:CreationName="Microsoft.DataProfilingTask"
-      DTS:Description="Data Profiling Task"
-      DTS:DTSID="{6d07bf20-cbd7-4654-968d-dfb35196d736}"
-      DTS:ExecutableType="Microsoft.DataProfilingTask"
-      DTS:LocaleID="-1"
-      DTS:ObjectName="Data Profiling Task"
-      DTS:TaskContact="Data Profiling Task; Microsoft Corporation; SQL Server 2019; (c) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="0">
-      <DTS:Variables />
-      <DTS:ObjectData>
-        <DataProfilingTaskData
-          Destination="PostcodeDistrict.txt"
-          OverwriteDestination="True">
-          <ProfileInput><![CDATA[<?xml version="1.0" encoding="utf-16"?>
-<DataProfile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.microsoft.com/sqlserver/2008/DataDebugger/">
-  <ProfileVersion>1.0</ProfileVersion>
-  <DataSources />
-  <DataProfileInput>
-    <ProfileMode>Exact</ProfileMode>
-    <Timeout>0</Timeout>
-    <Requests>
-      <ColumnNullRatioProfileRequest ID="NullRatioReq">
-        <DataSourceID>{68B744B6-BFA4-417D-AA11-2C26D08D51D7}</DataSourceID>
-        <Table Schema="dbo" Table="PostCodes" />
-        <Column IsWildCard="true" />
-      </ColumnNullRatioProfileRequest>
-      <ColumnStatisticsProfileRequest ID="StatisticsReq">
-        <DataSourceID>{68B744B6-BFA4-417D-AA11-2C26D08D51D7}</DataSourceID>
-        <Table Schema="dbo" Table="PostCodes" />
-        <Column IsWildCard="true" />
-      </ColumnStatisticsProfileRequest>
-      <ColumnLengthDistributionProfileRequest ID="LengthDistReq">
-        <DataSourceID>{68B744B6-BFA4-417D-AA11-2C26D08D51D7}</DataSourceID>
-        <Table Schema="dbo" Table="PostCodes" />
-        <Column IsWildCard="true" />
-        <IgnoreLeadingSpace>false</IgnoreLeadingSpace>
-        <IgnoreTrailingSpace>true</IgnoreTrailingSpace>
-      </ColumnLengthDistributionProfileRequest>
-      <ColumnValueDistributionProfileRequest ID="ValueDistReq">
-        <DataSourceID>{68B744B6-BFA4-417D-AA11-2C26D08D51D7}</DataSourceID>
-        <Table Schema="dbo" Table="PostCodes" />
-        <Column IsWildCard="true" />
-        <Option>FrequentValues</Option>
-        <FrequentValueThreshold>0.001</FrequentValueThreshold>
-      </ColumnValueDistributionProfileRequest>
-      <ColumnPatternProfileRequest ID="PatternReq">
-        <DataSourceID>{68B744B6-BFA4-417D-AA11-2C26D08D51D7}</DataSourceID>
-        <Table Schema="dbo" Table="PostCodes" />
-        <Column IsWildCard="true" />
-        <MaxNumberOfPatterns>10</MaxNumberOfPatterns>
-        <PercentageDataCoverageDesired>95</PercentageDataCoverageDesired>
-        <CaseSensitive>false</CaseSensitive>
-        <Delimiters> \t\r\n</Delimiters>
-        <Symbols>,.;:-"'`~=&amp;/\\@!?()&lt;&gt;[]{}|#*^%</Symbols>
-        <TagTableName />
-      </ColumnPatternProfileRequest>
-      <CandidateKeyProfileRequest ID="KeyReq">
-        <DataSourceID>{68B744B6-BFA4-417D-AA11-2C26D08D51D7}</DataSourceID>
-        <Table Schema="dbo" Table="PostCodes" />
-        <KeyColumns>
-          <Column IsWildCard="true" />
-        </KeyColumns>
-        <ThresholdSetting>Specified</ThresholdSetting>
-        <KeyStrengthThreshold>0.95</KeyStrengthThreshold>
-        <VerifyOutputInFastMode>false</VerifyOutputInFastMode>
-        <MaxNumberOfViolations>100</MaxNumberOfViolations>
-      </CandidateKeyProfileRequest>
-    </Requests>
-  </DataProfileInput>
-  <DataProfileOutput>
-    <Profiles />
-  </DataProfileOutput>
-</DataProfile>]]></ProfileInput>
-        </DataProfilingTaskData>
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
@@ -198,7 +108,7 @@
                 <property
                   dataType="System.String"
                   description="Specifies the name of the database object used to open a rowset."
-                  name="OpenRowset">[Postcode_district]</property>
+                  name="OpenRowset">[dbo].[Postcode_district]</property>
                 <property
                   dataType="System.String"
                   description="Specifies the variable that contains the name of the database object used to open a rowset."
@@ -255,18 +165,6 @@
                   name="OLE DB Destination Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Load data into stage\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Create_time]"
-                      cachedDataType="dbTimeStamp"
-                      cachedName="Create_time"
-                      externalMetadataColumnId="Package\Load data into stage\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Create_time]"
-                      lineageId="Package\Load data into stage\OLE DB Source.Outputs[OLE DB Source Output].Columns[Create_time]" />
-                    <inputColumn
-                      refId="Package\Load data into stage\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Update_time]"
-                      cachedDataType="dbTimeStamp"
-                      cachedName="Update_time"
-                      externalMetadataColumnId="Package\Load data into stage\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Update_time]"
-                      lineageId="Package\Load data into stage\OLE DB Source.Outputs[OLE DB Source Output].Columns[Update_time]" />
-                    <inputColumn
                       refId="Package\Load data into stage\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Postcode]"
                       cachedCodepage="1252"
                       cachedDataType="str"
@@ -280,19 +178,11 @@
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="Region"
-                      externalMetadataColumnId="Package\Load data into stage\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Region]"
+                      externalMetadataColumnId="Package\Load data into stage\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Town]"
                       lineageId="Package\Load data into stage\OLE DB Source.Outputs[OLE DB Source Output].Columns[Region]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
-                    <externalMetadataColumn
-                      refId="Package\Load data into stage\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Create_time]"
-                      dataType="dbTimeStamp"
-                      name="Create_time" />
-                    <externalMetadataColumn
-                      refId="Package\Load data into stage\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Update_time]"
-                      dataType="dbTimeStamp"
-                      name="Update_time" />
                     <externalMetadataColumn
                       refId="Package\Load data into stage\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Postcode]"
                       codePage="1252"
@@ -300,11 +190,11 @@
                       length="50"
                       name="Postcode" />
                     <externalMetadataColumn
-                      refId="Package\Load data into stage\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Region]"
+                      refId="Package\Load data into stage\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Town]"
                       codePage="1252"
                       dataType="str"
                       length="50"
-                      name="Region" />
+                      name="Town" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
@@ -807,6 +697,84 @@ Where (Create_time &gt;= ? and Create_time &lt;= ? ) or (Update_time &gt;= ? and
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
+      DTS:refId="Package\Profiling Postcode district"
+      DTS:CreationName="Microsoft.DataProfilingTask"
+      DTS:Description="Data Profiling Task"
+      DTS:DTSID="{6d07bf20-cbd7-4654-968d-dfb35196d736}"
+      DTS:ExecutableType="Microsoft.DataProfilingTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Profiling Postcode district"
+      DTS:TaskContact="Data Profiling Task; Microsoft Corporation; SQL Server 2019; (c) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <DataProfilingTaskData
+          Destination="Profiling postcode districts"
+          OverwriteDestination="True">
+          <ProfileInput><![CDATA[<?xml version="1.0" encoding="utf-16"?>
+<DataProfile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.microsoft.com/sqlserver/2008/DataDebugger/">
+  <ProfileVersion>1.0</ProfileVersion>
+  <DataSources />
+  <DataProfileInput>
+    <ProfileMode>Exact</ProfileMode>
+    <Timeout>0</Timeout>
+    <Requests>
+      <ColumnNullRatioProfileRequest ID="NullRatioReq">
+        <DataSourceID>{68B744B6-BFA4-417D-AA11-2C26D08D51D7}</DataSourceID>
+        <Table Schema="dbo" Table="Postcode_district" />
+        <Column IsWildCard="true" />
+      </ColumnNullRatioProfileRequest>
+      <ColumnStatisticsProfileRequest ID="StatisticsReq">
+        <DataSourceID>{68B744B6-BFA4-417D-AA11-2C26D08D51D7}</DataSourceID>
+        <Table Schema="dbo" Table="Postcode_district" />
+        <Column IsWildCard="true" />
+      </ColumnStatisticsProfileRequest>
+      <ColumnLengthDistributionProfileRequest ID="LengthDistReq">
+        <DataSourceID>{68B744B6-BFA4-417D-AA11-2C26D08D51D7}</DataSourceID>
+        <Table Schema="dbo" Table="Postcode_district" />
+        <Column IsWildCard="true" />
+        <IgnoreLeadingSpace>false</IgnoreLeadingSpace>
+        <IgnoreTrailingSpace>true</IgnoreTrailingSpace>
+      </ColumnLengthDistributionProfileRequest>
+      <ColumnValueDistributionProfileRequest ID="ValueDistReq">
+        <DataSourceID>{68B744B6-BFA4-417D-AA11-2C26D08D51D7}</DataSourceID>
+        <Table Schema="dbo" Table="Postcode_district" />
+        <Column IsWildCard="true" />
+        <Option>FrequentValues</Option>
+        <FrequentValueThreshold>0.001</FrequentValueThreshold>
+      </ColumnValueDistributionProfileRequest>
+      <ColumnPatternProfileRequest ID="PatternReq">
+        <DataSourceID>{68B744B6-BFA4-417D-AA11-2C26D08D51D7}</DataSourceID>
+        <Table Schema="dbo" Table="Postcode_district" />
+        <Column IsWildCard="true" />
+        <MaxNumberOfPatterns>10</MaxNumberOfPatterns>
+        <PercentageDataCoverageDesired>95</PercentageDataCoverageDesired>
+        <CaseSensitive>false</CaseSensitive>
+        <Delimiters> \t\r\n</Delimiters>
+        <Symbols>,.;:-"'`~=&amp;/\\@!?()&lt;&gt;[]{}|#*^%</Symbols>
+        <TagTableName />
+      </ColumnPatternProfileRequest>
+      <CandidateKeyProfileRequest ID="KeyReq">
+        <DataSourceID>{68B744B6-BFA4-417D-AA11-2C26D08D51D7}</DataSourceID>
+        <Table Schema="dbo" Table="Postcode_district" />
+        <KeyColumns>
+          <Column IsWildCard="true" />
+        </KeyColumns>
+        <ThresholdSetting>Specified</ThresholdSetting>
+        <KeyStrengthThreshold>0.95</KeyStrengthThreshold>
+        <VerifyOutputInFastMode>false</VerifyOutputInFastMode>
+        <MaxNumberOfViolations>100</MaxNumberOfViolations>
+      </CandidateKeyProfileRequest>
+    </Requests>
+  </DataProfileInput>
+  <DataProfileOutput>
+    <Profiles />
+  </DataProfileOutput>
+</DataProfile>]]></ProfileInput>
+        </DataProfilingTaskData>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
       DTS:refId="Package\Update LSET"
       DTS:CreationName="Microsoft.ExecuteSQLTask"
       DTS:Description="Execute SQL Task"
@@ -856,7 +824,7 @@ Where (Create_time &gt;= ? and Create_time &lt;= ? ) or (Update_time &gt;= ? and
       DTS:From="Package\Load data into stage"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint 5"
-      DTS:To="Package\Data Profiling Task" />
+      DTS:To="Package\Profiling Postcode district" />
   </DTS:PrecedenceConstraints>
   <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
 <!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
@@ -871,25 +839,47 @@ Where (Create_time &gt;= ? and Create_time &lt;= ? ) or (Update_time &gt;= ? and
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="153.6,41.6"
-          Id="Package\Get CET &amp; LSET"
-          TopLeft="60,60" />
-        <NodeLayout
-          Size="132,41.6"
+          Size="132,41.3333333333334"
           Id="Package\Clear stage"
           TopLeft="337.732144479734,64.4823515791381" />
         <NodeLayout
-          Size="168,41.6"
-          Id="Package\Data Profiling Task"
-          TopLeft="230.000002895083,246.565680736202" />
+          Size="198.666666666667,42.6666666666667"
+          Id="Package\Profiling Postcode district"
+          TopLeft="203.750003286238,241.365680829185" />
         <NodeLayout
-          Size="176,41.6"
+          Size="162,41.3333333333334"
+          Id="Package\Get CET &amp; LSET"
+          TopLeft="60,60" />
+        <NodeLayout
+          Size="176,41.3333333333334"
           Id="Package\Load data into stage"
           TopLeft="522.999998610998,200.332349564729" />
         <NodeLayout
-          Size="140,41.6"
+          Size="140,41.3333333333334"
           Id="Package\Update LSET"
-          TopLeft="240.625002736758,172.465682061213" />
+          TopLeft="253.125002550494,175.065682014721" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint]"
+          TopLeft="222,82.9078424562357">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="115.732144479734,0"
+              Start="0,0"
+              End="108.232144479734,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="108.232144479734,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 3]"
           TopLeft="403.732144479734,106.082351579138">
@@ -926,30 +916,30 @@ Where (Create_time &gt;= ? and Create_time &lt;= ? ) or (Update_time &gt;= ? and
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 4]"
-          TopLeft="522.999998610998,215.887905120285">
+          TopLeft="522.999998610998,215.44346067584">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-142.374995874241,-22.0888897257382"
+              EndConnector="-129.874996060504,-19.7111119944521"
               Start="0,0"
-              End="-134.874995874241,-22.0888897257382">
+              End="-122.374996060504,-19.7111119944521">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="-56.0376488626317,0" />
+                    End="-50.8540356031944,0" />
                   <mssgle:CubicBezierSegment
-                    Point1="-56.0376488626317,0"
-                    Point2="-60.0376488626317,0"
-                    Point3="-60.0376488626317,-4" />
+                    Point1="-50.8540356031944,0"
+                    Point2="-54.8540356031944,0"
+                    Point3="-54.8540356031944,-4" />
                   <mssgle:LineSegment
-                    End="-60.0376488626317,-18.0888897257382" />
+                    End="-54.8540356031944,-15.7111119944521" />
                   <mssgle:CubicBezierSegment
-                    Point1="-60.0376488626317,-18.0888897257382"
-                    Point2="-60.0376488626317,-22.0888897257382"
-                    Point3="-64.0376488626317,-22.0888897257382" />
+                    Point1="-54.8540356031944,-15.7111119944521"
+                    Point2="-54.8540356031944,-19.7111119944521"
+                    Point3="-58.8540356031944,-19.7111119944521" />
                   <mssgle:LineSegment
-                    End="-134.874995874241,-22.0888897257382" />
+                    End="-122.374996060504,-19.7111119944521" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -960,52 +950,30 @@ Where (Create_time &gt;= ? and Create_time &lt;= ? ) or (Update_time &gt;= ? and
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 5]"
-          TopLeft="522.999998610998,227.44346067584">
+          TopLeft="522.999998610998,226.554571786951">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-124.999995715916,40.4555533936952"
+              EndConnector="-120.583328658093,36.1444423755674"
               Start="0,0"
-              End="-117.499995715916,40.4555533936952">
+              End="-113.083328658093,36.1444423755674">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="-48.7108415669526,0" />
+                    End="-46.929604650623,0" />
                   <mssgle:CubicBezierSegment
-                    Point1="-48.7108415669526,0"
-                    Point2="-52.7108415669526,0"
-                    Point3="-52.7108415669526,4" />
+                    Point1="-46.929604650623,0"
+                    Point2="-50.929604650623,0"
+                    Point3="-50.929604650623,4" />
                   <mssgle:LineSegment
-                    End="-52.7108415669526,36.4555533936952" />
+                    End="-50.929604650623,32.1444423755674" />
                   <mssgle:CubicBezierSegment
-                    Point1="-52.7108415669526,36.4555533936952"
-                    Point2="-52.7108415669526,40.4555533936952"
-                    Point3="-56.7108415669526,40.4555533936952" />
+                    Point1="-50.929604650623,32.1444423755674"
+                    Point2="-50.929604650623,36.1444423755674"
+                    Point3="-54.929604650623,36.1444423755674" />
                   <mssgle:LineSegment
-                    End="-117.499995715916,40.4555533936952" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package.PrecedenceConstraints[Constraint]"
-          TopLeft="213.6,83.0411757895691">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="124.132144479734,0"
-              Start="0,0"
-              End="116.632144479734,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="116.632144479734,0" />
+                    End="-113.083328658093,36.1444423755674" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1023,39 +991,27 @@ Where (Create_time &gt;= ? and Create_time &lt;= ? ) or (Update_time &gt;= ? and
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="149.6,41.6"
+          Size="156,42.6666666666667"
           Id="Package\Load data into stage\OLE DB Source"
           TopLeft="83.124998761341,48.7499991282821" />
         <NodeLayout
-          Size="170.4,41.6"
+          Size="170.666666666667,41.3333333333334"
           Id="Package\Load data into stage\OLE DB Destination"
-          TopLeft="372.857149206862,79.5294128800759" />
+          TopLeft="370.357149244115,50.9294133914837" />
         <EdgeLayout
           Id="Package\Load data into stage.Paths[OLE DB Source Output]"
-          TopLeft="232.724998761341,69.5499991282821">
+          TopLeft="239.124998761341,70.8397062598829">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="140.132150445521,30.7794137517938"
+              EndConnector="131.232150482774,0"
               Start="0,0"
-              End="132.632150445521,30.7794137517938">
+              End="123.732150482774,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="66.0660752227607,0" />
-                  <mssgle:CubicBezierSegment
-                    Point1="66.0660752227607,0"
-                    Point2="70.0660752227607,0"
-                    Point3="70.0660752227607,4" />
-                  <mssgle:LineSegment
-                    End="70.0660752227607,26.7794137517938" />
-                  <mssgle:CubicBezierSegment
-                    Point1="70.0660752227607,26.7794137517938"
-                    Point2="70.0660752227607,30.7794137517938"
-                    Point3="74.0660752227607,30.7794137517938" />
-                  <mssgle:LineSegment
-                    End="132.632150445521,30.7794137517938" />
+                    End="123.732150482774,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1068,14 +1024,6 @@ Where (Create_time &gt;= ? and Create_time &lt;= ? ) or (Update_time &gt;= ? and
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\Load data into stage\OLE DB Source">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
     design-time-name="Package\Load data into stage\OLE DB Destination">
     <Properties>
       <Property>
@@ -1085,6 +1033,14 @@ Where (Create_time &gt;= ? and Create_time &lt;= ? ) or (Update_time &gt;= ? and
         <Name>TableInfoObjectType</Name>
         <Value
           type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Load data into stage\OLE DB Source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
       </Property>
     </Properties>
   </PipelineComponentMetadata>

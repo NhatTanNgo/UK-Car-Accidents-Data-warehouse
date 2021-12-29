@@ -1,0 +1,10 @@
+﻿<?xml version="1.0"?>
+<DTS:ConnectionManager xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:ObjectName="Profiling LSOA"
+  DTS:DTSID="{60335E41-A8E1-404A-ACAF-C4EDCB80FAEE}"
+  DTS:CreationName="FILE">
+  <DTS:ObjectData>
+    <DTS:ConnectionManager
+      DTS:ConnectionString="D:\Downloads\BI\BI_Project\UK-Car-Accidents-Data-warehouse\Profiling\LSOA.txt" />
+  </DTS:ObjectData>
+</DTS:ConnectionManager>
