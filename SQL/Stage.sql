@@ -115,13 +115,14 @@ CREATE TABLE [PCD_LSOA] (
 ------
 CREATE TABLE [Wiki_Postcodes] (
     [Postcode districts] nvarchar(150),
-    [County] varchar(50),
+    [County] varchar(50)
 )
 GO
 
 CREATE TABLE [Postcode_district] (
     [Postcode] varchar(50),
     [Town] varchar(50),
+	[Region] varchar(50)
 )
 GO
 
@@ -169,3 +170,4 @@ BEGIN
 	DEALLOCATE Raw_pcd
 END
 GO
+

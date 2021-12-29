@@ -2,7 +2,7 @@
 <BuildLog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <ProjectInfo>
     <Name>BUIDING AND MINING DATA WAREHOUSE</Name>
-    <LastWriteTime>2021-12-29T08:46:46.5362605Z</LastWriteTime>
+    <LastWriteTime>2021-12-29T12:02:22.3879034Z</LastWriteTime>
     <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
   </ProjectInfo>
   <LastBuildInfos>
@@ -38,12 +38,12 @@
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>NDS_Country_Region.dtsx</Name>
-      <LastWriteTime>2021-11-19T13:40:29.7928919Z</LastWriteTime>
+      <LastWriteTime>2021-12-29T12:02:22.3098998Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>Main_NDS.dtsx</Name>
-      <LastWriteTime>2021-12-28T14:47:07.7035074Z</LastWriteTime>
+      <LastWriteTime>2021-12-29T12:23:04.3716972Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
@@ -67,11 +67,6 @@
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
-      <Name>NDS_Location.dtsx</Name>
-      <LastWriteTime>2021-11-19T13:40:29.7958877Z</LastWriteTime>
-      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
-    </ProjectBuildItemInfo>
-    <ProjectBuildItemInfo>
       <Name>NDS_Accidents.dtsx</Name>
       <LastWriteTime>2021-11-19T13:40:29.7888902Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
@@ -88,7 +83,7 @@
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>Staging_PostcodeDistricts.dtsx</Name>
-      <LastWriteTime>2021-12-29T08:48:03.021937Z</LastWriteTime>
+      <LastWriteTime>2021-12-29T13:12:22.1497002Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
   </LastBuildInfos>

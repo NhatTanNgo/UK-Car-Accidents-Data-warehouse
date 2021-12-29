@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="7"
-  DTS:VersionGUID="{DC1A4855-4628-45A8-BA75-A2260DC7FE49}">
+  DTS:VersionBuild="8"
+  DTS:VersionGUID="{969431E5-555D-4644-B659-5164A9588001}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables>
@@ -180,6 +180,14 @@
                       cachedName="Region"
                       externalMetadataColumnId="Package\Load data into stage\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Town]"
                       lineageId="Package\Load data into stage\OLE DB Source.Outputs[OLE DB Source Output].Columns[Region]" />
+                    <inputColumn
+                      refId="Package\Load data into stage\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[UK region]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="UK region"
+                      externalMetadataColumnId="Package\Load data into stage\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Region]"
+                      lineageId="Package\Load data into stage\OLE DB Source.Outputs[OLE DB Source Output].Columns[UK region]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -195,6 +203,12 @@
                       dataType="str"
                       length="50"
                       name="Town" />
+                    <externalMetadataColumn
+                      refId="Package\Load data into stage\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Region]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Region" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
@@ -843,10 +857,6 @@ Where (Create_time &gt;= ? and Create_time &lt;= ? ) or (Update_time &gt;= ? and
           Id="Package\Clear stage"
           TopLeft="337.732144479734,64.4823515791381" />
         <NodeLayout
-          Size="198.666666666667,42.6666666666667"
-          Id="Package\Profiling Postcode district"
-          TopLeft="203.750003286238,241.365680829185" />
-        <NodeLayout
           Size="162,41.3333333333334"
           Id="Package\Get CET &amp; LSET"
           TopLeft="60,60" />
@@ -854,6 +864,10 @@ Where (Create_time &gt;= ? and Create_time &lt;= ? ) or (Update_time &gt;= ? and
           Size="176,41.3333333333334"
           Id="Package\Load data into stage"
           TopLeft="522.999998610998,200.332349564729" />
+        <NodeLayout
+          Size="198.666666666667,42.6666666666667"
+          Id="Package\Profiling Postcode district"
+          TopLeft="203.750003286238,241.365680829185" />
         <NodeLayout
           Size="140,41.3333333333334"
           Id="Package\Update LSET"

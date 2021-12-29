@@ -126,6 +126,12 @@
         <Column Name="Town" SqlDbType="VarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
         <NullCount>1</NullCount>
       </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{68B744B6-BFA4-417D-AA11-2C26D08D51D7}</DataSourceID>
+        <Table DataSource="." Database="Stage_DATH" Schema="dbo" Table="Postcode_district" RowCount="3114" />
+        <Column Name="Region" SqlDbType="VarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>35</NullCount>
+      </ColumnNullRatioProfile>
       <ColumnLengthDistributionProfile ProfileRequestID="LengthDistReq" IsExact="true">
         <DataSourceID>{68B744B6-BFA4-417D-AA11-2C26D08D51D7}</DataSourceID>
         <Table DataSource="." Database="Stage_DATH" Schema="dbo" Table="Postcode_district" RowCount="3114" />
@@ -257,6 +263,49 @@
           <LengthDistributionItem>
             <Length>8</Length>
             <Count>482</Count>
+          </LengthDistributionItem>
+        </LengthDistribution>
+      </ColumnLengthDistributionProfile>
+      <ColumnLengthDistributionProfile ProfileRequestID="LengthDistReq" IsExact="true">
+        <DataSourceID>{68B744B6-BFA4-417D-AA11-2C26D08D51D7}</DataSourceID>
+        <Table DataSource="." Database="Stage_DATH" Schema="dbo" Table="Postcode_district" RowCount="3114" />
+        <Column Name="Region" SqlDbType="VarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <IgnoreLeadingSpace>false</IgnoreLeadingSpace>
+        <IgnoreTrailingSpace>true</IgnoreTrailingSpace>
+        <MinLength>5</MinLength>
+        <MaxLength>24</MaxLength>
+        <LengthDistribution>
+          <LengthDistributionItem>
+            <Length>15</Length>
+            <Count>254</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>6</Length>
+            <Count>299</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>24</Length>
+            <Count>234</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>10</Length>
+            <Count>1142</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>13</Length>
+            <Count>377</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>5</Length>
+            <Count>214</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>16</Length>
+            <Count>82</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>8</Length>
+            <Count>477</Count>
           </LengthDistributionItem>
         </LengthDistribution>
       </ColumnLengthDistributionProfile>
@@ -1390,6 +1439,62 @@
           </ValueDistributionItem>
         </ValueDistribution>
       </ColumnValueDistributionProfile>
+      <ColumnValueDistributionProfile IsExact="true" ProfileRequestID="ValueDistReq">
+        <DataSourceID>{68B744B6-BFA4-417D-AA11-2C26D08D51D7}</DataSourceID>
+        <Table DataSource="." Database="Stage_DATH" Schema="dbo" Table="Postcode_district" RowCount="3114" />
+        <Column Name="Region" SqlDbType="VarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NumberOfDistinctValues>12</NumberOfDistinctValues>
+        <ValueDistribution>
+          <ValueDistributionItem>
+            <Value>London</Value>
+            <Count>299</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>East of England</Value>
+            <Count>254</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>South East</Value>
+            <Count>402</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>West Midlands</Value>
+            <Count>228</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>North West</Value>
+            <Count>318</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>North East</Value>
+            <Count>132</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>East Midlands</Value>
+            <Count>149</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Northern Ireland</Value>
+            <Count>82</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Yorkshire and The Humber</Value>
+            <Count>234</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Scotland</Value>
+            <Count>477</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>South West</Value>
+            <Count>290</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Wales</Value>
+            <Count>214</Count>
+          </ValueDistributionItem>
+        </ValueDistribution>
+      </ColumnValueDistributionProfile>
       <ColumnPatternProfile ProfileRequestID="PatternReq" IsExact="true">
         <DataSourceID>{68B744B6-BFA4-417D-AA11-2C26D08D51D7}</DataSourceID>
         <Table DataSource="." Database="Stage_DATH" Schema="dbo" Table="Postcode_district" RowCount="3114" />
@@ -1425,6 +1530,53 @@
           <PatternDistributionItem>
             <RegexText>\p{L}+ \p{L}+ \p{L}+</RegexText>
             <Frequency>6</Frequency>
+          </PatternDistributionItem>
+        </TopRegexPatterns>
+      </ColumnPatternProfile>
+      <ColumnPatternProfile ProfileRequestID="PatternReq" IsExact="true">
+        <DataSourceID>{68B744B6-BFA4-417D-AA11-2C26D08D51D7}</DataSourceID>
+        <Table DataSource="." Database="Stage_DATH" Schema="dbo" Table="Postcode_district" RowCount="3114" />
+        <Column Name="Region" SqlDbType="VarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <TopRegexPatterns>
+          <PatternDistributionItem>
+            <RegexText>SCOTLAND</RegexText>
+            <Frequency>15</Frequency>
+          </PatternDistributionItem>
+          <PatternDistributionItem>
+            <RegexText>SOUTH EAST</RegexText>
+            <Frequency>13</Frequency>
+          </PatternDistributionItem>
+          <PatternDistributionItem>
+            <RegexText>\p{L}+ MIDLANDS</RegexText>
+            <Frequency>12</Frequency>
+          </PatternDistributionItem>
+          <PatternDistributionItem>
+            <RegexText>YORKSHIRE AND THE HUMBER</RegexText>
+            <Frequency>8</Frequency>
+          </PatternDistributionItem>
+          <PatternDistributionItem>
+            <RegexText>NORTH WEST</RegexText>
+            <Frequency>10</Frequency>
+          </PatternDistributionItem>
+          <PatternDistributionItem>
+            <RegexText>EAST OF ENGLAND</RegexText>
+            <Frequency>8</Frequency>
+          </PatternDistributionItem>
+          <PatternDistributionItem>
+            <RegexText>SOUTH WEST</RegexText>
+            <Frequency>9</Frequency>
+          </PatternDistributionItem>
+          <PatternDistributionItem>
+            <RegexText>LONDON</RegexText>
+            <Frequency>10</Frequency>
+          </PatternDistributionItem>
+          <PatternDistributionItem>
+            <RegexText>WALES</RegexText>
+            <Frequency>7</Frequency>
+          </PatternDistributionItem>
+          <PatternDistributionItem>
+            <RegexText>NORTH \p{L}+</RegexText>
+            <Frequency>4</Frequency>
           </PatternDistributionItem>
         </TopRegexPatterns>
       </ColumnPatternProfile>

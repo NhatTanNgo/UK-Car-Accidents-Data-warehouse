@@ -47,6 +47,9 @@
     <DtsDataSource ID="{005B4F3A-D8B2-43AD-B7FB-52585ABF979C}" Name="Profiling postcode">
       <DtsConnectionManagerID>Profiling postcode</DtsConnectionManagerID>
     </DtsDataSource>
+    <DtsDataSource ID="{56E3E844-8EBF-40E0-9221-74E3779679F7}" Name="Profiling postcode districts">
+      <DtsConnectionManagerID>Profiling postcode districts</DtsConnectionManagerID>
+    </DtsDataSource>
     <DtsDataSource ID="{0DB53988-915E-41C6-A4A8-D6949A122C94}" Name="Profiling Vehicles">
       <DtsConnectionManagerID>Profiling Vehicles</DtsConnectionManagerID>
     </DtsDataSource>
