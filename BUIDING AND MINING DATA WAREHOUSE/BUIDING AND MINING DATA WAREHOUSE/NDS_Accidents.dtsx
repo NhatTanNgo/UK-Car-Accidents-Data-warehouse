@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="7"
-  DTS:VersionGUID="{2DD18D0C-D34F-4C87-912B-186BD60469E0}">
+  DTS:VersionBuild="8"
+  DTS:VersionGUID="{103BC909-301B-4737-A5A4-D6EABF134896}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -2328,11 +2328,11 @@ where [refTable].[CODE_NK] = ?</property>
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="190,42"
+          Size="190.4,41.6"
           Id="Package\Accidents Stage to NDS"
           TopLeft="334,105" />
         <NodeLayout
-          Size="180,42"
+          Size="180,41.6"
           Id="Package\Profile Accidents NDS"
           TopLeft="263,235" />
         <EdgeLayout
@@ -2378,45 +2378,49 @@ where [refTable].[CODE_NK] = ?</property>
       <GraphLayout
         Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="173,42"
+          Size="172.8,41.6"
           Id="Package\Accidents Stage to NDS\Lookup Police Force"
           TopLeft="477,500" />
         <NodeLayout
-          Size="200,42"
+          Size="200,41.6"
           Id="Package\Accidents Stage to NDS\Lookup existing Accidents"
           TopLeft="467.5,668.75" />
         <NodeLayout
-          Size="181,42"
+          Size="180.8,41.6"
           Id="Package\Accidents Stage to NDS\Add SourceID column"
           TopLeft="470,146" />
         <NodeLayout
-          Size="170,42"
+          Size="169.6,41.6"
           Id="Package\Accidents Stage to NDS\Lookup Location ID"
           TopLeft="485,581" />
         <NodeLayout
-          Size="154,42"
+          Size="153.6,41.6"
           Id="Package\Accidents Stage to NDS\Lookup Severity"
           TopLeft="489,239" />
         <NodeLayout
-          Size="153,42"
+          Size="152.8,41.6"
           Id="Package\Accidents Stage to NDS\Accidents Stage"
           TopLeft="487,9" />
         <NodeLayout
-          Size="192,42"
+          Size="192,41.6"
           Id="Package\Accidents Stage to NDS\Lookup RoadType"
           TopLeft="472,422" />
         <NodeLayout
-          Size="262,42"
+          Size="262.4,41.6"
           Id="Package\Accidents Stage to NDS\Convert Police_Force Code to nvarchar"
           TopLeft="437,80" />
         <NodeLayout
-          Size="189,42"
+          Size="188.8,41.6"
           Id="Package\Accidents Stage to NDS\Lookup Local_Authority"
           TopLeft="472,343" />
         <NodeLayout
-          Size="147,42"
+          Size="147.2,41.6"
           Id="Package\Accidents Stage to NDS\Accidents NDS"
           TopLeft="317.538461538462,752.692307692308" />
+        <NodeLayout
+          Size="179.2,41.6"
+          Id="Package\Accidents Stage to NDS\Update Accident NDS"
+          TopLeft="662,750" />
         <EdgeLayout
           Id="Package\Accidents Stage to NDS.Paths[OLE DB Source Output]"
           TopLeft="565.75,51">
@@ -2472,6 +2476,42 @@ where [refTable].[CODE_NK] = ?</property>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
               BoundingBox="-144.037155949519,25.971153846154,111.6127734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Accidents Stage to NDS.Paths[Lookup Match Output5]"
+          TopLeft="599.5,710.75">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="152,39.25"
+              Start="0,0"
+              End="152,31.75">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,11.8869047619048" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,11.8869047619048"
+                    Point2="0,15.8869047619048"
+                    Point3="4,15.8869047619048" />
+                  <mssgle:LineSegment
+                    End="148,15.8869047619048" />
+                  <mssgle:CubicBezierSegment
+                    Point1="148,15.8869047619048"
+                    Point2="152,15.8869047619048"
+                    Point3="152,19.8869047619048" />
+                  <mssgle:LineSegment
+                    End="152,31.75" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="27.80861328125,20.8869047619048,96.3827734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -2639,46 +2679,6 @@ where [refTable].[CODE_NK] = ?</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="179,42"
-          Id="Package\Accidents Stage to NDS\Update Accident NDS"
-          TopLeft="662,750" />
-        <EdgeLayout
-          Id="Package\Accidents Stage to NDS.Paths[Lookup Match Output5]"
-          TopLeft="599.5,710.75">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="152,39.25"
-              Start="0,0"
-              End="152,31.75">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,11.8869047619048" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,11.8869047619048"
-                    Point2="0,15.8869047619048"
-                    Point3="4,15.8869047619048" />
-                  <mssgle:LineSegment
-                    End="148,15.8869047619048" />
-                  <mssgle:CubicBezierSegment
-                    Point1="148,15.8869047619048"
-                    Point2="152,15.8869047619048"
-                    Point3="152,19.8869047619048" />
-                  <mssgle:LineSegment
-                    End="152,31.75" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="27.80861328125,20.8869047619048,96.3827734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
@@ -2688,7 +2688,7 @@ where [refTable].[CODE_NK] = ?</property>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:boolean">false</Value>
+          type="q2:string">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -2734,7 +2734,7 @@ where [refTable].[CODE_NK] = ?</property>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:boolean">false</Value>
+          type="q2:string">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -2744,7 +2744,7 @@ where [refTable].[CODE_NK] = ?</property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:int">0</Value>
+          type="q4:string">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -2757,7 +2757,7 @@ where [refTable].[CODE_NK] = ?</property>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:boolean">false</Value>
+          type="q2:string">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -2767,7 +2767,7 @@ where [refTable].[CODE_NK] = ?</property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:int">0</Value>
+          type="q4:string">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -2793,7 +2793,7 @@ where [refTable].[CODE_NK] = ?</property>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:boolean">false</Value>
+          type="q2:string">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -2816,7 +2816,7 @@ where [refTable].[CODE_NK] = ?</property>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:boolean">false</Value>
+          type="q2:string">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
