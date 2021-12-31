@@ -11,24 +11,10 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="3"
-  DTS:VersionGUID="{85029F1F-4234-4907-A682-FC119A7D943E}">
+  DTS:VersionBuild="6"
+  DTS:VersionGUID="{44BD725A-3A79-4451-ABFF-89B82F5DB24A}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
-  <DTS:ConnectionManagers>
-    <DTS:ConnectionManager
-      DTS:refId="Package.ConnectionManagers[LocalHost.Stage_DATH]"
-      DTS:CreationName="OLEDB"
-      DTS:DTSID="{8701AD54-3410-4A8D-9115-6451D12B1127}"
-      DTS:ObjectName="LocalHost.Stage_DATH">
-      <DTS:ObjectData>
-        <DTS:ConnectionManager
-          DTS:ConnectRetryCount="1"
-          DTS:ConnectRetryInterval="5"
-          DTS:ConnectionString="Data Source=.;Initial Catalog=Stage_DATH;Provider=MSOLEDBSQL.1;Integrated Security=SSPI;Auto Translate=False;" />
-      </DTS:ObjectData>
-    </DTS:ConnectionManager>
-  </DTS:ConnectionManagers>
   <DTS:Variables />
   <DTS:Executables>
     <DTS:Executable
@@ -328,177 +314,6 @@
               </outputs>
             </component>
             <component
-              refId="Package\Stage to NDS\OLE DB Command"
-              componentClassID="Microsoft.OLEDBCommand"
-              contactInfo="OLE DB Command;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;2"
-              description="Runs an SQL statement for each row in a data flow. For example, call a 'new employee setup' stored procedure for each row in the 'new employees' table. Note: running an SQL statement for each row of a large data flow may take a long time."
-              name="OLE DB Command"
-              usesDispositions="true"
-              version="2">
-              <properties>
-                <property
-                  dataType="System.Int32"
-                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
-                  name="CommandTimeout">0</property>
-                <property
-                  dataType="System.String"
-                  description="The SQL command to be executed."
-                  expressionType="Notify"
-                  name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">UPDATE [dbo].[Town] SET [Create_time] = ?,[Source_ID] = ?,[TownName] = ?,[Update_time] = ? WHERE [Town_NK] = ?</property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies the column code page to use when code page information is unavailable from the data source."
-                  name="DefaultCodePage">1252</property>
-              </properties>
-              <connections>
-                <connection
-                  refId="Package\Stage to NDS\OLE DB Command.Connections[OleDbConnection]"
-                  connectionManagerID="{AE006570-A2B7-40E0-9892-4B549EA30919}:external"
-                  connectionManagerRefId="Project.ConnectionManagers[LocalHost.NDS_DATH]"
-                  description="The OLE DB runtime connection used to access the database."
-                  name="OleDbConnection" />
-              </connections>
-              <inputs>
-                <input
-                  refId="Package\Stage to NDS\OLE DB Command.Inputs[OLE DB Command Input]"
-                  errorOrTruncationOperation="Command Execution"
-                  errorRowDisposition="FailComponent"
-                  hasSideEffects="true"
-                  name="OLE DB Command Input">
-                  <inputColumns>
-                    <inputColumn
-                      refId="Package\Stage to NDS\OLE DB Command.Inputs[OLE DB Command Input].Columns[createAt]"
-                      cachedDataType="dbTimeStamp"
-                      cachedName="createAt"
-                      externalMetadataColumnId="Package\Stage to NDS\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_0]"
-                      lineageId="Package\Stage to NDS\Add SourceID, createAt, updateAt column.Outputs[Derived Column Output].Columns[createAt]" />
-                    <inputColumn
-                      refId="Package\Stage to NDS\OLE DB Command.Inputs[OLE DB Command Input].Columns[SourceID]"
-                      cachedDataType="i4"
-                      cachedName="SourceID"
-                      externalMetadataColumnId="Package\Stage to NDS\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_1]"
-                      lineageId="Package\Stage to NDS\Add SourceID, createAt, updateAt column.Outputs[Derived Column Output].Columns[SourceID]" />
-                    <inputColumn
-                      refId="Package\Stage to NDS\OLE DB Command.Inputs[OLE DB Command Input].Columns[Postcode]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="Postcode"
-                      externalMetadataColumnId="Package\Stage to NDS\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_4]"
-                      lineageId="Package\Stage to NDS\Postcode_district stage.Outputs[OLE DB Source Output].Columns[Postcode]" />
-                    <inputColumn
-                      refId="Package\Stage to NDS\OLE DB Command.Inputs[OLE DB Command Input].Columns[Town]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="Town"
-                      externalMetadataColumnId="Package\Stage to NDS\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_2]"
-                      lineageId="Package\Stage to NDS\Postcode_district stage.Outputs[OLE DB Source Output].Columns[Town]" />
-                    <inputColumn
-                      refId="Package\Stage to NDS\OLE DB Command.Inputs[OLE DB Command Input].Columns[updateAt]"
-                      cachedDataType="dbTimeStamp"
-                      cachedName="updateAt"
-                      externalMetadataColumnId="Package\Stage to NDS\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_3]"
-                      lineageId="Package\Stage to NDS\Add SourceID, createAt, updateAt column.Outputs[Derived Column Output].Columns[updateAt]" />
-                  </inputColumns>
-                  <externalMetadataColumns
-                    isUsed="True">
-                    <externalMetadataColumn
-                      refId="Package\Stage to NDS\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_0]"
-                      dataType="dbTimeStamp"
-                      name="Param_0">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
-                          name="DBParamInfoFlags">65</property>
-                      </properties>
-                    </externalMetadataColumn>
-                    <externalMetadataColumn
-                      refId="Package\Stage to NDS\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_1]"
-                      dataType="i4"
-                      name="Param_1">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
-                          name="DBParamInfoFlags">81</property>
-                      </properties>
-                    </externalMetadataColumn>
-                    <externalMetadataColumn
-                      refId="Package\Stage to NDS\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_2]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="Param_2">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
-                          name="DBParamInfoFlags">65</property>
-                      </properties>
-                    </externalMetadataColumn>
-                    <externalMetadataColumn
-                      refId="Package\Stage to NDS\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_3]"
-                      dataType="dbTimeStamp"
-                      name="Param_3">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
-                          name="DBParamInfoFlags">65</property>
-                      </properties>
-                    </externalMetadataColumn>
-                    <externalMetadataColumn
-                      refId="Package\Stage to NDS\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_4]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="Param_4">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
-                          name="DBParamInfoFlags">65</property>
-                      </properties>
-                    </externalMetadataColumn>
-                  </externalMetadataColumns>
-                </input>
-              </inputs>
-              <outputs>
-                <output
-                  refId="Package\Stage to NDS\OLE DB Command.Outputs[OLE DB Command Output]"
-                  exclusionGroup="1"
-                  name="OLE DB Command Output"
-                  synchronousInputId="Package\Stage to NDS\OLE DB Command.Inputs[OLE DB Command Input]">
-                  <externalMetadataColumns />
-                </output>
-                <output
-                  refId="Package\Stage to NDS\OLE DB Command.Outputs[OLE DB Command Error Output]"
-                  exclusionGroup="1"
-                  isErrorOut="true"
-                  name="OLE DB Command Error Output"
-                  synchronousInputId="Package\Stage to NDS\OLE DB Command.Inputs[OLE DB Command Input]">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\Stage to NDS\OLE DB Command.Outputs[OLE DB Command Error Output].Columns[ErrorCode]"
-                      dataType="i4"
-                      lineageId="Package\Stage to NDS\OLE DB Command.Outputs[OLE DB Command Error Output].Columns[ErrorCode]"
-                      name="ErrorCode"
-                      specialFlags="1" />
-                    <outputColumn
-                      refId="Package\Stage to NDS\OLE DB Command.Outputs[OLE DB Command Error Output].Columns[ErrorColumn]"
-                      dataType="i4"
-                      lineageId="Package\Stage to NDS\OLE DB Command.Outputs[OLE DB Command Error Output].Columns[ErrorColumn]"
-                      name="ErrorColumn"
-                      specialFlags="2" />
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-              </outputs>
-            </component>
-            <component
               refId="Package\Stage to NDS\OLE DB Command 1"
               componentClassID="Microsoft.OLEDBCommand"
               contactInfo="OLE DB Command;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;2"
@@ -671,8 +486,8 @@ WHERE [Town_NK] = ?</property>
               <connections>
                 <connection
                   refId="Package\Stage to NDS\Postcode_district stage.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[LocalHost.Stage_DATH]"
-                  connectionManagerRefId="Package.ConnectionManagers[LocalHost.Stage_DATH]"
+                  connectionManagerID="{DFF81239-B2A8-4950-83F9-2BB12A3D2296}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[LocalHost Stage_DATH]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -952,11 +767,6 @@ WHERE [Town_NK] = ?</property>
               name="Derived Column Output"
               startId="Package\Stage to NDS\Add SourceID, createAt, updateAt column.Outputs[Derived Column Output]" />
             <path
-              refId="Package\Stage to NDS.Paths[Inferred Member Updates Output]"
-              endId="Package\Stage to NDS\OLE DB Command.Inputs[OLE DB Command Input]"
-              name="Inferred Member Updates Output"
-              startId="Package\Stage to NDS\Slowly Changing Dimension.Outputs[Inferred Member Updates Output]" />
-            <path
               refId="Package\Stage to NDS.Paths[New Output]"
               endId="Package\Stage to NDS\Insert Destination.Inputs[OLE DB Destination Input]"
               name="New Output"
@@ -984,9 +794,9 @@ WHERE [Town_NK] = ?</property>
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
         <NodeLayout
-          Size="141.6,41.6"
+          Size="141.333333333334,41.3333333333334"
           Id="Package\Stage to NDS"
-          TopLeft="231.428575369777,104.000001458561" />
+          TopLeft="145.803576645689,83.8500018188711" />
       </GraphLayout>
     </LayoutInfo>
   </Package>
@@ -996,65 +806,39 @@ WHERE [Town_NK] = ?</property>
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="186.4,41.6"
-          Id="Package\Stage to NDS\Postcode_district stage"
-          TopLeft="235.9,5.49999999999984" />
+          Size="174.666666666667,41.3333333333334"
+          Id="Package\Stage to NDS\OLE DB Command 1"
+          TopLeft="354.125001480803,234.900001348257" />
         <NodeLayout
-          Size="275.2,41.6"
-          Id="Package\Stage to NDS\Add SourceID, createAt, updateAt column"
-          TopLeft="173.1,107.1" />
-        <EdgeLayout
-          Id="Package\Stage to NDS.Paths[OLE DB Source Output]"
-          TopLeft="329.1,47.0999999999998">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-18.4,60"
-              Start="0,0"
-              End="-18.4,52.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,26" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,26"
-                    Point2="0,30"
-                    Point3="-4,30" />
-                  <mssgle:LineSegment
-                    End="-14.4,30" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-14.4,30"
-                    Point2="-18.4,30"
-                    Point3="-18.4,34" />
-                  <mssgle:LineSegment
-                    End="-18.4,52.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="208,41.6"
+          Size="208,41.3333333333334"
           Id="Package\Stage to NDS\Slowly Changing Dimension"
-          TopLeft="206.7,208.7" />
+          TopLeft="333.574998109415,124.850001499355" />
+        <NodeLayout
+          Size="275.333333333334,41.3333333333334"
+          Id="Package\Stage to NDS\Add SourceID, createAt, updateAt column"
+          TopLeft="296.224998165295,25.8500014528632" />
+        <NodeLayout
+          Size="186.666666666667,41.3333333333334"
+          Id="Package\Stage to NDS\Postcode_district stage"
+          TopLeft="42.7750028777868,18.4999997675417" />
+        <NodeLayout
+          Size="162.666666666667,41.3333333333334"
+          Id="Package\Stage to NDS\Insert Destination"
+          TopLeft="66.749999087304,121.800003370643" />
         <EdgeLayout
           Id="Package\Stage to NDS.Paths[Derived Column Output]"
-          TopLeft="310.7,148.7">
+          TopLeft="435.733331470688,67.1833347861966">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,60.0000000000001"
+              EndConnector="0,57.6666667131582"
               Start="0,0"
-              End="0,52.5000000000001">
+              End="0,50.1666667131582">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,52.5000000000001" />
+                    End="0,50.1666667131582" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1063,130 +847,79 @@ WHERE [Town_NK] = ?</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="162.4,41.6"
-          Id="Package\Stage to NDS\Insert Destination"
-          TopLeft="5.5000000000001,310.3" />
-        <EdgeLayout
-          Id="Package\Stage to NDS.Paths[New Output]"
-          TopLeft="260.7,250.3">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-174,60"
-              Start="0,0"
-              End="-174,52.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,16.5063291139241" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,16.5063291139241"
-                    Point2="0,20.5063291139241"
-                    Point3="-4,20.5063291139241" />
-                  <mssgle:LineSegment
-                    End="-170,20.5063291139241" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-170,20.5063291139241"
-                    Point2="-174,20.5063291139241"
-                    Point3="-174,24.5063291139241" />
-                  <mssgle:LineSegment
-                    End="-174,52.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-114.09138671875,25.5063291139241,54.1827734375,11.43359375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="164.8,41.6"
-          Id="Package\Stage to NDS\OLE DB Command"
-          TopLeft="228.3,310.3" />
-        <EdgeLayout
-          Id="Package\Stage to NDS.Paths[Inferred Member Updates Output]"
-          TopLeft="310.7,250.3">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,60"
-              Start="0,0"
-              End="0,52.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,52.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-74.40298828125,20.4208984375,148.8059765625,11.658203125"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="174.4,41.6"
-          Id="Package\Stage to NDS\OLE DB Command 1"
-          TopLeft="453.5,310.3" />
         <EdgeLayout
           Id="Package\Stage to NDS.Paths[Changing Attribute Updates Output]"
-          TopLeft="360.7,250.3">
+          TopLeft="439.516666461776,166.183334832688">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="180,60"
+              EndConnector="0,68.7166665155691"
               Start="0,0"
-              End="180,52.5">
+              End="0,61.2166665155691">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,16.5063291139241" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,16.5063291139241"
-                    Point2="0,20.5063291139241"
-                    Point3="4,20.5063291139241" />
-                  <mssgle:LineSegment
-                    End="176,20.5063291139241" />
-                  <mssgle:CubicBezierSegment
-                    Point1="176,20.5063291139241"
-                    Point2="180,20.5063291139241"
-                    Point3="180,24.5063291139241" />
-                  <mssgle:LineSegment
-                    End="180,52.5" />
+                    End="0,61.2166665155691" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="11.46609375,25.5063291139241,157.0678125,11.6630859375"
+              BoundingBox="-78.53390625,24.7767902890345,157.0678125,11.6630859375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Stage to NDS.Paths[OLE DB Source Output]"
+          TopLeft="229.441669544453,42.8416672768691">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="66.7833286208412,0"
+              Start="0,0"
+              End="59.2833286208412,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="59.2833286208412,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Stage to NDS.Paths[New Output]"
+          TopLeft="333.574998109415,143.991669101665">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-104.158332355445,0"
+              Start="0,0"
+              End="-96.6583323554446,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="-96.6583323554446,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-75.4205528964723,5,54.1827734375,11.43359375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
-  <PipelineComponentMetadata
-    design-time-name="Package\Stage to NDS\Postcode_district stage">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
   <PipelineComponentMetadata
     design-time-name="Package\Stage to NDS\Slowly Changing Dimension">
     <Properties>
@@ -1246,6 +979,19 @@ WHERE [Town_NK] = ?</property>
   &lt;DateVariable /&gt;
   &lt;EnableInferredSupport&gt;true&lt;/EnableInferredSupport&gt;
 &lt;/SCDWizardMetadata&gt;</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Stage to NDS\Postcode_district stage">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
       </Property>
     </Properties>
   </PipelineComponentMetadata>

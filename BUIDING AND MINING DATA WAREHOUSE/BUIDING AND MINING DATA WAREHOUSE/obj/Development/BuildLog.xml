@@ -2,7 +2,7 @@
 <BuildLog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <ProjectInfo>
     <Name>BUIDING AND MINING DATA WAREHOUSE</Name>
-    <LastWriteTime>2021-12-30T15:09:17.6752812Z</LastWriteTime>
+    <LastWriteTime>2021-12-31T07:37:21.4112921Z</LastWriteTime>
     <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
   </ProjectInfo>
   <LastBuildInfos>
@@ -43,7 +43,7 @@
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>Main_NDS.dtsx</Name>
-      <LastWriteTime>2021-12-30T14:47:26.4378873Z</LastWriteTime>
+      <LastWriteTime>2021-12-31T07:58:31.0542138Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
@@ -68,7 +68,7 @@
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>NDS_Accidents.dtsx</Name>
-      <LastWriteTime>2021-12-30T15:01:01.4039753Z</LastWriteTime>
+      <LastWriteTime>2021-12-31T02:48:52.2062951Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
@@ -88,12 +88,12 @@
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>NDS_County.dtsx</Name>
-      <LastWriteTime>2021-12-30T15:09:17.6352767Z</LastWriteTime>
+      <LastWriteTime>2021-12-31T08:21:14.8717773Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>NDS_Town.dtsx</Name>
-      <LastWriteTime>2021-12-30T14:46:51.2249626Z</LastWriteTime>
+      <LastWriteTime>2021-12-31T08:22:35.5947373Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
   </LastBuildInfos>
