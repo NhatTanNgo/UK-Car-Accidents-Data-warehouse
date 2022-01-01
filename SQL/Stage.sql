@@ -129,7 +129,7 @@ GO
 CREATE PROC Wiki_Split_SingleRow
 AS
 DECLARE 
- @pcd VARCHAR(150),
+ @pcd VARCHAR(255),
  @split_pcd VARCHAR(50),
  @pcounty VARCHAR(50)
 BEGIN
