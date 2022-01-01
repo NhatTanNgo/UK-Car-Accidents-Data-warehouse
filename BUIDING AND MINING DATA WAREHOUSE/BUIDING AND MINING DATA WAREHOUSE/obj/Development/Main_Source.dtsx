@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="41"
-  DTS:VersionGUID="{FEFF7964-97D7-4AF7-BE43-3FC23B8774B0}">
+  DTS:VersionBuild="43"
+  DTS:VersionGUID="{8F338AA9-7450-4ECC-B79D-0A693CF2988C}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables />
@@ -6998,10 +6998,6 @@
                       refId="Package\Wiki\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[update_time]"
                       dataType="dbTimeStamp"
                       name="update_time" />
-                    <externalMetadataColumn
-                      refId="Package\Wiki\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[status]"
-                      dataType="i4"
-                      name="status" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
@@ -7376,15 +7372,15 @@
     design-time-name="Package\Accidents">
     <LayoutInfo>
       <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
-        <NodeLayout
-          Size="172,43.3333333333334"
-          Id="Package\Accidents\OLE DB Destination"
-          TopLeft="382.499994300306,57.8499989655614" />
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="155.333333333334,43.3333333333334"
           Id="Package\Accidents\Derived Column"
           TopLeft="197.499997057021,193.699996536374" />
+        <NodeLayout
+          Size="172,43.3333333333334"
+          Id="Package\Accidents\OLE DB Destination"
+          TopLeft="382.499994300306,57.8499989655614" />
         <NodeLayout
           Size="137.333333333334,42.6666666666667"
           Id="Package\Accidents\Accident csv"
@@ -7420,7 +7416,9 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -7454,7 +7452,9 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -7477,7 +7477,7 @@
     design-time-name="Package\Casualties">
     <LayoutInfo>
       <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="172,42.6666666666667"
           Id="Package\Casualties\OLE DB Destination"
@@ -7521,7 +7521,9 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -7555,7 +7557,9 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -7578,7 +7582,7 @@
     design-time-name="Package\LSOA">
     <LayoutInfo>
       <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="172,43.3333333333334"
           Id="Package\LSOA\OLE DB Destination"
@@ -7622,7 +7626,9 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -7656,7 +7662,9 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -7679,7 +7687,11 @@
     design-time-name="Package\PostCode">
     <LayoutInfo>
       <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="121.333333333334,42.6666666666667"
+          Id="Package\PostCode\Postcode"
+          TopLeft="60,61" />
         <NodeLayout
           Size="154.666666666667,42.6666666666667"
           Id="Package\PostCode\Derived Column"
@@ -7688,10 +7700,6 @@
           Size="172,42.6666666666667"
           Id="Package\PostCode\OLE DB Destination"
           TopLeft="400,60" />
-        <NodeLayout
-          Size="121.333333333334,42.6666666666667"
-          Id="Package\PostCode\Postcode"
-          TopLeft="60,61" />
         <EdgeLayout
           Id="Package\PostCode.Paths[Flat File Source Output]"
           TopLeft="120.666666666667,103.666666666667">
@@ -7723,7 +7731,9 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -7757,7 +7767,9 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -7780,19 +7792,19 @@
     design-time-name="Package\Postcode district">
     <LayoutInfo>
       <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="166.666666666667,41.3333333333334"
-          Id="Package\Postcode district\Postcode_district"
-          TopLeft="276.250005047768,44.3000026500224" />
+          Size="138.666666666667,41.3333333333334"
+          Id="Package\Postcode district\Excel Source"
+          TopLeft="65.375000493601,31.9166690493627" />
         <NodeLayout
           Size="154.666666666667,41.3333333333334"
           Id="Package\Postcode district\Add timestamps"
           TopLeft="289.333334897955,116.883332787057" />
         <NodeLayout
-          Size="138.666666666667,41.3333333333334"
-          Id="Package\Postcode district\Excel Source"
-          TopLeft="65.375000493601,31.9166690493627" />
+          Size="166.666666666667,41.3333333333334"
+          Id="Package\Postcode district\Postcode_district"
+          TopLeft="276.250005047768,44.3000026500224" />
         <NodeLayout
           Size="155.333333333334,41.3333333333334"
           Id="Package\Postcode district\Data Conversion"
@@ -7816,7 +7828,9 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -7838,7 +7852,9 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -7860,14 +7876,16 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\Postcode district\Postcode_district">
+    design-time-name="Package\Postcode district\Excel Source">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -7880,7 +7898,7 @@
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Postcode district\Excel Source">
+    design-time-name="Package\Postcode district\Postcode_district">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -7896,11 +7914,7 @@
     design-time-name="Package\Vehicle">
     <LayoutInfo>
       <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
-        <NodeLayout
-          Size="172,42.6666666666667"
-          Id="Package\Vehicle\OLE DB Destination"
-          TopLeft="400,60" />
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="150.666666666667,42.6666666666667"
           Id="Package\Vehicle\Add timestamp"
@@ -7909,6 +7923,10 @@
           Size="136,42.6666666666667"
           Id="Package\Vehicle\Vehicles csv"
           TopLeft="60,61" />
+        <NodeLayout
+          Size="172,42.6666666666667"
+          Id="Package\Vehicle\OLE DB Destination"
+          TopLeft="400,60" />
         <EdgeLayout
           Id="Package\Vehicle.Paths[Flat File Source Output]"
           TopLeft="128,103.666666666667">
@@ -7940,7 +7958,9 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -7974,7 +7994,9 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -8009,11 +8031,7 @@
         <NodeLayout
           Size="172,43.3333333333334"
           Id="Package\Wiki\OLE DB Destination"
-          TopLeft="292.49999564141,48.749999128282" />
-        <NodeLayout
-          Size="156.666666666667,43.3333333333334"
-          Id="Package\Wiki\Data Conversion"
-          TopLeft="297.499995566905,145.599997396469" />
+          TopLeft="293.124995632097,48.749999128282" />
         <EdgeLayout
           Id="Package\Wiki.Paths[Excel Source Output]"
           TopLeft="174.041665856416,96.3333333333333">
@@ -8036,20 +8054,24 @@
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
+        <NodeLayout
+          Size="157.333333333334,42.6666666666667"
+          Id="Package\Wiki\Data Conversion"
+          TopLeft="299.374995538965,141.04999747783" />
         <EdgeLayout
           Id="Package\Wiki.Paths[Derived Column Output]"
-          TopLeft="240.749998379499,164.333330776294">
+          TopLeft="240.749998379499,162.224997483641">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="56.749997187406,0"
+              EndConnector="58.6249971594658,0"
               Start="0,0"
-              End="49.249997187406,0">
+              End="51.1249971594658,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="49.249997187406,0" />
+                    End="51.1249971594658,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -8060,18 +8082,18 @@
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Wiki.Paths[Data Conversion Output]"
-          TopLeft="377.333328937491,145.599997396469">
+          TopLeft="378.583328918864,141.04999747783">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,-54.1833316015204"
+              EndConnector="0,-48.9666650162142"
               Start="0,0"
-              End="0,-46.6833316015204">
+              End="0,-41.4666650162142">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,-46.6833316015204" />
+                    End="0,-41.4666650162142" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
