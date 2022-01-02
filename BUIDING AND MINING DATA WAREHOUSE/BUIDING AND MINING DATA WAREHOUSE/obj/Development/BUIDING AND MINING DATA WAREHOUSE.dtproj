@@ -26,7 +26,7 @@
           <SSIS:Property SSIS:Name="CreatorComputerName">ASUS-DUCHUY</SSIS:Property>
           <SSIS:Property SSIS:Name="Description">
           </SSIS:Property>
-          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAfXtkuD4W3UudaHsMxO48ewAAAAACAAAAAAAQZgAAAAEAACAAAAAza2zTmvq8AVZz2K2UH150nFQLT7wev5NH0TIufcuRrwAAAAAOgAAAAAIAACAAAAClOF4wlZ70il5JekntSI6z+0SkC3NO1kfJjY5FXoH5oJAAAADSfkOcr3HbXpX6X8Jh+wjK0Mfb/2NMKzoCrwCkHj3lRuKUx/ZHPi9M2W4FhNxsrOjSJz9ZC9mKGcUwo5H3TOT4qSNM427gdFYnNEUMLQDQc82I+H7MPoRJY6qQVE6punufLX58mxbqSfnFCV89lVp7ZwO0GTle2WbzC5RW2EeKi/TM6eERFP1vdNB0dSqJ9o5AAAAApE162PtaLoEHllq1LYyc0XFDlnOG5eTI1Pi7YOYyeJWCOz6BY5Y5b64dDpWdDxJ338oV2oBIt+/rBNerVfTThQ==</SSIS:Property>
+          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAfXtkuD4W3UudaHsMxO48ewAAAAACAAAAAAAQZgAAAAEAACAAAACP9wHm/ltZAFkx8vNj8YiDKaH0lVu7IbkDnoyhfP8omwAAAAAOgAAAAAIAACAAAADx3m6dGruCKXjHvp9l39Vx8qGwEvfeO2VlbznRyaS1x5AAAAAT3qLDmoEGevOZDmlFVYCoXlAkyMhAUgzzZe+S5LhYlhFcXZdo8aQvt4VKond4/6mD7N5mBuQeOKNVuv3DzxuPwA9gcpt10BSyr9FcjizEx401M7iJ6RE5SRQRIM348N+9CcxnXJxppRi0Rf9m6uMya886zsIYRbRXt5crx7WW57P3PksjPbL0oVIACCefm+1AAAAAcNtQWbrZVDUiI+RViHpeKr0FgqPyLJp2NV/pNeV7dfmsFhbENcD90usjawgrKqevnZBfU/+d7nApgAsmsVCzLA==</SSIS:Property>
           <SSIS:Property SSIS:Name="FormatVersion">1</SSIS:Property>
         </SSIS:Properties>
         <SSIS:Packages>
@@ -49,7 +49,7 @@
           <SSIS:Package SSIS:Name="NDS_County.dtsx" SSIS:EntryPoint="1" />
           <SSIS:Package SSIS:Name="NDS_Town.dtsx" SSIS:EntryPoint="1" />
           <SSIS:Package SSIS:Name="NDS_Postcode_2.dtsx" SSIS:EntryPoint="1" />
-          <SSIS:Package SSIS:Name="NDS_LSOA_2.dtsx" SSIS:EntryPoint="1" />
+          <SSIS:Package SSIS:Name="NDS_LSOA.dtsx" SSIS:EntryPoint="1" />
         </SSIS:Packages>
         <SSIS:ConnectionManagers>
           <SSIS:ConnectionManager SSIS:Name="LocalHost.Source_DATH.conmgr" />
@@ -3670,10 +3670,10 @@
                 <SSIS:Property SSIS:Name="Name">Package1</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionBuild">14</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">15</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionComments">
                 </SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionGUID">{2EC4932D-B137-4713-AB90-D67FF4614A50}</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{C7E54A0C-8A5F-4E29-B0BF-217379D718D4}</SSIS:Property>
                 <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
                 <SSIS:Property SSIS:Name="Description">
                 </SSIS:Property>
@@ -3681,16 +3681,16 @@
               </SSIS:Properties>
               <SSIS:Parameters />
             </SSIS:PackageMetaData>
-            <SSIS:PackageMetaData SSIS:Name="NDS_LSOA_2.dtsx">
+            <SSIS:PackageMetaData SSIS:Name="NDS_LSOA.dtsx">
               <SSIS:Properties>
-                <SSIS:Property SSIS:Name="ID">{43BBDD0E-0E0A-4C8A-819D-13813CF75E49}</SSIS:Property>
-                <SSIS:Property SSIS:Name="Name">NDS_LSOA_2</SSIS:Property>
+                <SSIS:Property SSIS:Name="ID">{339941BB-F460-44EC-957D-0AC081E8CD0D}</SSIS:Property>
+                <SSIS:Property SSIS:Name="Name">NDS_LSOA</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionBuild">16</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">24</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionComments">
                 </SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionGUID">{08A769AB-2AF3-4628-9F12-CC5216E7933A}</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{F0810478-762D-45DA-A554-94875ED4636E}</SSIS:Property>
                 <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
                 <SSIS:Property SSIS:Name="Description">
                 </SSIS:Property>

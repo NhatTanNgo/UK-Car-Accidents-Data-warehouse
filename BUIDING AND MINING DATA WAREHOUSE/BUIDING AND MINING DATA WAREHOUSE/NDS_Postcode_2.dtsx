@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="14"
-  DTS:VersionGUID="{2EC4932D-B137-4713-AB90-D67FF4614A50}">
+  DTS:VersionBuild="15"
+  DTS:VersionGUID="{C7E54A0C-8A5F-4E29-B0BF-217379D718D4}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables>
@@ -25,7 +25,7 @@
       DTS:Namespace="User"
       DTS:ObjectName="CET">
       <DTS:VariableValue
-        DTS:DataType="7">1/2/2022 2:40:08 PM</DTS:VariableValue>
+        DTS:DataType="7">1/2/2022 6:57:43 PM</DTS:VariableValue>
     </DTS:Variable>
   </DTS:Variables>
   <DTS:Executables>
@@ -43,6 +43,253 @@
         <pipeline
           version="1">
           <components>
+            <component
+              refId="Package\Postcode\Insert Destination"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="Insert Destination"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[Postcode]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Postcode\Insert Destination.Connections[OleDbConnection]"
+                  connectionManagerID="{AE006570-A2B7-40E0-9892-4B549EA30919}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[LocalHost.NDS_DATH]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Postcode\Insert Destination.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Postcode\Insert Destination.Inputs[OLE DB Destination Input].Columns[postcode]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="postcode"
+                      externalMetadataColumnId="Package\Postcode\Insert Destination.Inputs[OLE DB Destination Input].ExternalColumns[Postcode]"
+                      lineageId="Package\Postcode\postcodes.Outputs[OLE DB Source Output].Columns[postcode]" />
+                    <inputColumn
+                      refId="Package\Postcode\Insert Destination.Inputs[OLE DB Destination Input].Columns[latitude]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="latitude"
+                      externalMetadataColumnId="Package\Postcode\Insert Destination.Inputs[OLE DB Destination Input].ExternalColumns[Latitude]"
+                      lineageId="Package\Postcode\postcodes.Outputs[OLE DB Source Output].Columns[latitude]" />
+                    <inputColumn
+                      refId="Package\Postcode\Insert Destination.Inputs[OLE DB Destination Input].Columns[longitude]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="longitude"
+                      externalMetadataColumnId="Package\Postcode\Insert Destination.Inputs[OLE DB Destination Input].ExternalColumns[Longtitude]"
+                      lineageId="Package\Postcode\postcodes.Outputs[OLE DB Source Output].Columns[longitude]" />
+                    <inputColumn
+                      refId="Package\Postcode\Insert Destination.Inputs[OLE DB Destination Input].Columns[easting]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="easting"
+                      externalMetadataColumnId="Package\Postcode\Insert Destination.Inputs[OLE DB Destination Input].ExternalColumns[Easting]"
+                      lineageId="Package\Postcode\postcodes.Outputs[OLE DB Source Output].Columns[easting]" />
+                    <inputColumn
+                      refId="Package\Postcode\Insert Destination.Inputs[OLE DB Destination Input].Columns[northing]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="northing"
+                      externalMetadataColumnId="Package\Postcode\Insert Destination.Inputs[OLE DB Destination Input].ExternalColumns[Northing]"
+                      lineageId="Package\Postcode\postcodes.Outputs[OLE DB Source Output].Columns[northing]" />
+                    <inputColumn
+                      refId="Package\Postcode\Insert Destination.Inputs[OLE DB Destination Input].Columns[TownID]"
+                      cachedDataType="i4"
+                      cachedName="TownID"
+                      externalMetadataColumnId="Package\Postcode\Insert Destination.Inputs[OLE DB Destination Input].ExternalColumns[TownID]"
+                      lineageId="Package\Postcode\Lookup TownID.Outputs[Lookup Match Output].Columns[TownID]" />
+                    <inputColumn
+                      refId="Package\Postcode\Insert Destination.Inputs[OLE DB Destination Input].Columns[CountyID]"
+                      cachedDataType="i4"
+                      cachedName="CountyID"
+                      externalMetadataColumnId="Package\Postcode\Insert Destination.Inputs[OLE DB Destination Input].ExternalColumns[CountyID]"
+                      lineageId="Package\Postcode\Lookup CountyID.Outputs[Lookup Match Output].Columns[CountyID]" />
+                    <inputColumn
+                      refId="Package\Postcode\Insert Destination.Inputs[OLE DB Destination Input].Columns[CountryID]"
+                      cachedDataType="i4"
+                      cachedName="CountryID"
+                      externalMetadataColumnId="Package\Postcode\Insert Destination.Inputs[OLE DB Destination Input].ExternalColumns[CountryID]"
+                      lineageId="Package\Postcode\Lookup CountryID.Outputs[Lookup Match Output].Columns[CountryID]" />
+                    <inputColumn
+                      refId="Package\Postcode\Insert Destination.Inputs[OLE DB Destination Input].Columns[RegionID]"
+                      cachedDataType="i4"
+                      cachedName="RegionID"
+                      externalMetadataColumnId="Package\Postcode\Insert Destination.Inputs[OLE DB Destination Input].ExternalColumns[RegionID]"
+                      lineageId="Package\Postcode\Lookup RegionID.Outputs[Lookup Match Output].Columns[RegionID]" />
+                    <inputColumn
+                      refId="Package\Postcode\Insert Destination.Inputs[OLE DB Destination Input].Columns[Create_time]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="Create_time"
+                      externalMetadataColumnId="Package\Postcode\Insert Destination.Inputs[OLE DB Destination Input].ExternalColumns[Create_time]"
+                      lineageId="Package\Postcode\timestamp &amp; srcID.Outputs[Derived Column Output].Columns[Create_time]" />
+                    <inputColumn
+                      refId="Package\Postcode\Insert Destination.Inputs[OLE DB Destination Input].Columns[Update_time]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="Update_time"
+                      externalMetadataColumnId="Package\Postcode\Insert Destination.Inputs[OLE DB Destination Input].ExternalColumns[Update_time]"
+                      lineageId="Package\Postcode\timestamp &amp; srcID.Outputs[Derived Column Output].Columns[Update_time]" />
+                    <inputColumn
+                      refId="Package\Postcode\Insert Destination.Inputs[OLE DB Destination Input].Columns[Source_ID]"
+                      cachedDataType="i4"
+                      cachedName="Source_ID"
+                      externalMetadataColumnId="Package\Postcode\Insert Destination.Inputs[OLE DB Destination Input].ExternalColumns[Source_ID]"
+                      lineageId="Package\Postcode\timestamp &amp; srcID.Outputs[Derived Column Output].Columns[Source_ID]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Postcode\Insert Destination.Inputs[OLE DB Destination Input].ExternalColumns[Postcode_ID]"
+                      dataType="i4"
+                      name="Postcode_ID" />
+                    <externalMetadataColumn
+                      refId="Package\Postcode\Insert Destination.Inputs[OLE DB Destination Input].ExternalColumns[Postcode]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Postcode" />
+                    <externalMetadataColumn
+                      refId="Package\Postcode\Insert Destination.Inputs[OLE DB Destination Input].ExternalColumns[Latitude]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Latitude" />
+                    <externalMetadataColumn
+                      refId="Package\Postcode\Insert Destination.Inputs[OLE DB Destination Input].ExternalColumns[Longtitude]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Longtitude" />
+                    <externalMetadataColumn
+                      refId="Package\Postcode\Insert Destination.Inputs[OLE DB Destination Input].ExternalColumns[Easting]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Easting" />
+                    <externalMetadataColumn
+                      refId="Package\Postcode\Insert Destination.Inputs[OLE DB Destination Input].ExternalColumns[Northing]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Northing" />
+                    <externalMetadataColumn
+                      refId="Package\Postcode\Insert Destination.Inputs[OLE DB Destination Input].ExternalColumns[TownID]"
+                      dataType="i4"
+                      name="TownID" />
+                    <externalMetadataColumn
+                      refId="Package\Postcode\Insert Destination.Inputs[OLE DB Destination Input].ExternalColumns[CountyID]"
+                      dataType="i4"
+                      name="CountyID" />
+                    <externalMetadataColumn
+                      refId="Package\Postcode\Insert Destination.Inputs[OLE DB Destination Input].ExternalColumns[CountryID]"
+                      dataType="i4"
+                      name="CountryID" />
+                    <externalMetadataColumn
+                      refId="Package\Postcode\Insert Destination.Inputs[OLE DB Destination Input].ExternalColumns[RegionID]"
+                      dataType="i4"
+                      name="RegionID" />
+                    <externalMetadataColumn
+                      refId="Package\Postcode\Insert Destination.Inputs[OLE DB Destination Input].ExternalColumns[Create_time]"
+                      dataType="dbTimeStamp"
+                      name="Create_time" />
+                    <externalMetadataColumn
+                      refId="Package\Postcode\Insert Destination.Inputs[OLE DB Destination Input].ExternalColumns[Update_time]"
+                      dataType="dbTimeStamp"
+                      name="Update_time" />
+                    <externalMetadataColumn
+                      refId="Package\Postcode\Insert Destination.Inputs[OLE DB Destination Input].ExternalColumns[Source_ID]"
+                      dataType="i4"
+                      name="Source_ID" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Postcode\Insert Destination.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Postcode\Insert Destination.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Postcode\Insert Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Postcode\Insert Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Postcode\Insert Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Postcode\Insert Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
             <component
               refId="Package\Postcode\Lookup CountryID"
               componentClassID="Microsoft.Lookup"
@@ -239,7 +486,7 @@ where [refTable].[County_NK] = ?</property>
                   dataType="System.Int32"
                   description="Specifies how the Lookup transformation handles rows without matching entries in the reference data set."
                   name="NoMatchBehavior"
-                  typeConverter="LookupNoMatchBehavior">1</property>
+                  typeConverter="LookupNoMatchBehavior">0</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the percentage of the cache that is allocated for rows with no matching entries in the reference dataset."
@@ -309,6 +556,7 @@ where [refTable].[County_NK] = ?</property>
                 <output
                   refId="Package\Postcode\Lookup CountyID.Outputs[Lookup Match Output]"
                   errorOrTruncationOperation="Lookup"
+                  errorRowDisposition="IgnoreFailure"
                   exclusionGroup="1"
                   name="Lookup Match Output"
                   synchronousInputId="Package\Postcode\Lookup CountyID.Inputs[Lookup Input]">
@@ -558,7 +806,7 @@ where [refTable].[Town_NK] = ?</property>
                   dataType="System.Int32"
                   description="Specifies how the Lookup transformation handles rows without matching entries in the reference data set."
                   name="NoMatchBehavior"
-                  typeConverter="LookupNoMatchBehavior">1</property>
+                  typeConverter="LookupNoMatchBehavior">0</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the percentage of the cache that is allocated for rows with no matching entries in the reference dataset."
@@ -628,6 +876,7 @@ where [refTable].[Town_NK] = ?</property>
                 <output
                   refId="Package\Postcode\Lookup TownID.Outputs[Lookup Match Output]"
                   errorOrTruncationOperation="Lookup"
+                  errorRowDisposition="IgnoreFailure"
                   exclusionGroup="1"
                   name="Lookup Match Output"
                   synchronousInputId="Package\Postcode\Lookup TownID.Inputs[Lookup Input]">
@@ -682,466 +931,6 @@ where [refTable].[Town_NK] = ?</property>
               </outputs>
             </component>
             <component
-              refId="Package\Postcode\No_match_Postcodes_CountyID"
-              componentClassID="Microsoft.FlatFileDestination"
-              contactInfo="Flat File Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
-              description="Flat File Destination"
-              localeId="1033"
-              name="No_match_Postcodes_CountyID"
-              version="1">
-              <properties>
-                <property
-                  dataType="System.Boolean"
-                  description="Specifies whether the data will overwrite or append to the destination file."
-                  name="Overwrite">true</property>
-                <property
-                  dataType="System.Null"
-                  description="Specifies the text to write to the destination file before any data is written."
-                  expressionType="Notify"
-                  name="Header" />
-                <property
-                  dataType="System.Boolean"
-                  description="When text qualifier is enabled, specifies whether the text qualifier in the data written to the destination file will be escaped or not."
-                  name="EscapeQualifier">false</property>
-              </properties>
-              <connections>
-                <connection
-                  refId="Package\Postcode\No_match_Postcodes_CountyID.Connections[FlatFileConnection]"
-                  connectionManagerID="{46E1B29A-7092-4B62-B4B1-CA96E0C1404E}:external"
-                  connectionManagerRefId="Project.ConnectionManagers[Flatfile_No_match_Postcodes_CountyID]"
-                  name="FlatFileConnection" />
-              </connections>
-              <inputs>
-                <input
-                  refId="Package\Postcode\No_match_Postcodes_CountyID.Inputs[Flat File Destination Input]"
-                  hasSideEffects="true"
-                  name="Flat File Destination Input">
-                  <inputColumns>
-                    <inputColumn
-                      refId="Package\Postcode\No_match_Postcodes_CountyID.Inputs[Flat File Destination Input].Columns[postcode]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="postcode"
-                      externalMetadataColumnId="Package\Postcode\No_match_Postcodes_CountyID.Inputs[Flat File Destination Input].ExternalColumns[postcode]"
-                      lineageId="Package\Postcode\postcodes.Outputs[OLE DB Source Output].Columns[postcode]" />
-                    <inputColumn
-                      refId="Package\Postcode\No_match_Postcodes_CountyID.Inputs[Flat File Destination Input].Columns[city]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="city"
-                      externalMetadataColumnId="Package\Postcode\No_match_Postcodes_CountyID.Inputs[Flat File Destination Input].ExternalColumns[city]"
-                      lineageId="Package\Postcode\postcodes.Outputs[OLE DB Source Output].Columns[city]" />
-                    <inputColumn
-                      refId="Package\Postcode\No_match_Postcodes_CountyID.Inputs[Flat File Destination Input].Columns[county]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="county"
-                      externalMetadataColumnId="Package\Postcode\No_match_Postcodes_CountyID.Inputs[Flat File Destination Input].ExternalColumns[county]"
-                      lineageId="Package\Postcode\postcodes.Outputs[OLE DB Source Output].Columns[county]" />
-                    <inputColumn
-                      refId="Package\Postcode\No_match_Postcodes_CountyID.Inputs[Flat File Destination Input].Columns[country_code]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="country_code"
-                      externalMetadataColumnId="Package\Postcode\No_match_Postcodes_CountyID.Inputs[Flat File Destination Input].ExternalColumns[country_code]"
-                      lineageId="Package\Postcode\postcodes.Outputs[OLE DB Source Output].Columns[country_code]" />
-                    <inputColumn
-                      refId="Package\Postcode\No_match_Postcodes_CountyID.Inputs[Flat File Destination Input].Columns[country_name]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="country_name"
-                      externalMetadataColumnId="Package\Postcode\No_match_Postcodes_CountyID.Inputs[Flat File Destination Input].ExternalColumns[country_name]"
-                      lineageId="Package\Postcode\postcodes.Outputs[OLE DB Source Output].Columns[country_name]" />
-                    <inputColumn
-                      refId="Package\Postcode\No_match_Postcodes_CountyID.Inputs[Flat File Destination Input].Columns[iso3166-2]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="iso3166-2"
-                      externalMetadataColumnId="Package\Postcode\No_match_Postcodes_CountyID.Inputs[Flat File Destination Input].ExternalColumns[iso3166-2]"
-                      lineageId="Package\Postcode\postcodes.Outputs[OLE DB Source Output].Columns[iso3166-2]" />
-                    <inputColumn
-                      refId="Package\Postcode\No_match_Postcodes_CountyID.Inputs[Flat File Destination Input].Columns[region_code]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="region_code"
-                      externalMetadataColumnId="Package\Postcode\No_match_Postcodes_CountyID.Inputs[Flat File Destination Input].ExternalColumns[region_code]"
-                      lineageId="Package\Postcode\postcodes.Outputs[OLE DB Source Output].Columns[region_code]" />
-                    <inputColumn
-                      refId="Package\Postcode\No_match_Postcodes_CountyID.Inputs[Flat File Destination Input].Columns[region_name]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="region_name"
-                      externalMetadataColumnId="Package\Postcode\No_match_Postcodes_CountyID.Inputs[Flat File Destination Input].ExternalColumns[region_name]"
-                      lineageId="Package\Postcode\postcodes.Outputs[OLE DB Source Output].Columns[region_name]" />
-                    <inputColumn
-                      refId="Package\Postcode\No_match_Postcodes_CountyID.Inputs[Flat File Destination Input].Columns[Create_time]"
-                      cachedDataType="dbTimeStamp"
-                      cachedName="Create_time"
-                      externalMetadataColumnId="Package\Postcode\No_match_Postcodes_CountyID.Inputs[Flat File Destination Input].ExternalColumns[Create_time]"
-                      lineageId="Package\Postcode\timestamp &amp; srcID.Outputs[Derived Column Output].Columns[Create_time]" />
-                    <inputColumn
-                      refId="Package\Postcode\No_match_Postcodes_CountyID.Inputs[Flat File Destination Input].Columns[Update_time]"
-                      cachedDataType="dbTimeStamp"
-                      cachedName="Update_time"
-                      externalMetadataColumnId="Package\Postcode\No_match_Postcodes_CountyID.Inputs[Flat File Destination Input].ExternalColumns[Update_time]"
-                      lineageId="Package\Postcode\timestamp &amp; srcID.Outputs[Derived Column Output].Columns[Update_time]" />
-                    <inputColumn
-                      refId="Package\Postcode\No_match_Postcodes_CountyID.Inputs[Flat File Destination Input].Columns[Source_ID]"
-                      cachedDataType="i4"
-                      cachedName="Source_ID"
-                      externalMetadataColumnId="Package\Postcode\No_match_Postcodes_CountyID.Inputs[Flat File Destination Input].ExternalColumns[Source_ID]"
-                      lineageId="Package\Postcode\timestamp &amp; srcID.Outputs[Derived Column Output].Columns[Source_ID]" />
-                    <inputColumn
-                      refId="Package\Postcode\No_match_Postcodes_CountyID.Inputs[Flat File Destination Input].Columns[TownID]"
-                      cachedDataType="i4"
-                      cachedName="TownID"
-                      externalMetadataColumnId="Package\Postcode\No_match_Postcodes_CountyID.Inputs[Flat File Destination Input].ExternalColumns[TownID]"
-                      lineageId="Package\Postcode\Lookup TownID.Outputs[Lookup Match Output].Columns[TownID]" />
-                  </inputColumns>
-                  <externalMetadataColumns
-                    isUsed="True">
-                    <externalMetadataColumn
-                      refId="Package\Postcode\No_match_Postcodes_CountyID.Inputs[Flat File Destination Input].ExternalColumns[postcode]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="postcode" />
-                    <externalMetadataColumn
-                      refId="Package\Postcode\No_match_Postcodes_CountyID.Inputs[Flat File Destination Input].ExternalColumns[city]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="city" />
-                    <externalMetadataColumn
-                      refId="Package\Postcode\No_match_Postcodes_CountyID.Inputs[Flat File Destination Input].ExternalColumns[county]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="county" />
-                    <externalMetadataColumn
-                      refId="Package\Postcode\No_match_Postcodes_CountyID.Inputs[Flat File Destination Input].ExternalColumns[country_code]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="country_code" />
-                    <externalMetadataColumn
-                      refId="Package\Postcode\No_match_Postcodes_CountyID.Inputs[Flat File Destination Input].ExternalColumns[country_name]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="country_name" />
-                    <externalMetadataColumn
-                      refId="Package\Postcode\No_match_Postcodes_CountyID.Inputs[Flat File Destination Input].ExternalColumns[iso3166-2]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="iso3166-2" />
-                    <externalMetadataColumn
-                      refId="Package\Postcode\No_match_Postcodes_CountyID.Inputs[Flat File Destination Input].ExternalColumns[region_code]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="region_code" />
-                    <externalMetadataColumn
-                      refId="Package\Postcode\No_match_Postcodes_CountyID.Inputs[Flat File Destination Input].ExternalColumns[region_name]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="region_name" />
-                    <externalMetadataColumn
-                      refId="Package\Postcode\No_match_Postcodes_CountyID.Inputs[Flat File Destination Input].ExternalColumns[Create_time]"
-                      dataType="dbTimeStamp"
-                      name="Create_time" />
-                    <externalMetadataColumn
-                      refId="Package\Postcode\No_match_Postcodes_CountyID.Inputs[Flat File Destination Input].ExternalColumns[Update_time]"
-                      dataType="dbTimeStamp"
-                      name="Update_time" />
-                    <externalMetadataColumn
-                      refId="Package\Postcode\No_match_Postcodes_CountyID.Inputs[Flat File Destination Input].ExternalColumns[Source_ID]"
-                      dataType="i4"
-                      name="Source_ID" />
-                    <externalMetadataColumn
-                      refId="Package\Postcode\No_match_Postcodes_CountyID.Inputs[Flat File Destination Input].ExternalColumns[TownID]"
-                      dataType="i4"
-                      name="TownID" />
-                    <externalMetadataColumn
-                      refId="Package\Postcode\No_match_Postcodes_CountyID.Inputs[Flat File Destination Input].ExternalColumns[easting]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="easting" />
-                    <externalMetadataColumn
-                      refId="Package\Postcode\No_match_Postcodes_CountyID.Inputs[Flat File Destination Input].ExternalColumns[northing]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="northing" />
-                    <externalMetadataColumn
-                      refId="Package\Postcode\No_match_Postcodes_CountyID.Inputs[Flat File Destination Input].ExternalColumns[latitude]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="latitude" />
-                    <externalMetadataColumn
-                      refId="Package\Postcode\No_match_Postcodes_CountyID.Inputs[Flat File Destination Input].ExternalColumns[longitude]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="longitude" />
-                  </externalMetadataColumns>
-                </input>
-              </inputs>
-            </component>
-            <component
-              refId="Package\Postcode\No_match_Postcodes_TownID"
-              componentClassID="Microsoft.FlatFileDestination"
-              contactInfo="Flat File Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
-              description="Flat File Destination"
-              localeId="1033"
-              name="No_match_Postcodes_TownID"
-              version="1">
-              <properties>
-                <property
-                  dataType="System.Boolean"
-                  description="Specifies whether the data will overwrite or append to the destination file."
-                  name="Overwrite">true</property>
-                <property
-                  dataType="System.Null"
-                  description="Specifies the text to write to the destination file before any data is written."
-                  expressionType="Notify"
-                  name="Header" />
-                <property
-                  dataType="System.Boolean"
-                  description="When text qualifier is enabled, specifies whether the text qualifier in the data written to the destination file will be escaped or not."
-                  name="EscapeQualifier">false</property>
-              </properties>
-              <connections>
-                <connection
-                  refId="Package\Postcode\No_match_Postcodes_TownID.Connections[FlatFileConnection]"
-                  connectionManagerID="{254CB340-4E9A-40F6-8399-ED617F44CBD3}:external"
-                  connectionManagerRefId="Project.ConnectionManagers[Flatfile_No_match_Postcodes_TownID]"
-                  name="FlatFileConnection" />
-              </connections>
-              <inputs>
-                <input
-                  refId="Package\Postcode\No_match_Postcodes_TownID.Inputs[Flat File Destination Input]"
-                  hasSideEffects="true"
-                  name="Flat File Destination Input">
-                  <inputColumns>
-                    <inputColumn
-                      refId="Package\Postcode\No_match_Postcodes_TownID.Inputs[Flat File Destination Input].Columns[postcode]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="postcode"
-                      externalMetadataColumnId="Package\Postcode\No_match_Postcodes_TownID.Inputs[Flat File Destination Input].ExternalColumns[postcode]"
-                      lineageId="Package\Postcode\postcodes.Outputs[OLE DB Source Output].Columns[postcode]" />
-                    <inputColumn
-                      refId="Package\Postcode\No_match_Postcodes_TownID.Inputs[Flat File Destination Input].Columns[easting]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="easting"
-                      externalMetadataColumnId="Package\Postcode\No_match_Postcodes_TownID.Inputs[Flat File Destination Input].ExternalColumns[easting]"
-                      lineageId="Package\Postcode\postcodes.Outputs[OLE DB Source Output].Columns[easting]" />
-                    <inputColumn
-                      refId="Package\Postcode\No_match_Postcodes_TownID.Inputs[Flat File Destination Input].Columns[northing]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="northing"
-                      externalMetadataColumnId="Package\Postcode\No_match_Postcodes_TownID.Inputs[Flat File Destination Input].ExternalColumns[northing]"
-                      lineageId="Package\Postcode\postcodes.Outputs[OLE DB Source Output].Columns[northing]" />
-                    <inputColumn
-                      refId="Package\Postcode\No_match_Postcodes_TownID.Inputs[Flat File Destination Input].Columns[latitude]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="latitude"
-                      externalMetadataColumnId="Package\Postcode\No_match_Postcodes_TownID.Inputs[Flat File Destination Input].ExternalColumns[latitude]"
-                      lineageId="Package\Postcode\postcodes.Outputs[OLE DB Source Output].Columns[latitude]" />
-                    <inputColumn
-                      refId="Package\Postcode\No_match_Postcodes_TownID.Inputs[Flat File Destination Input].Columns[longitude]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="longitude"
-                      externalMetadataColumnId="Package\Postcode\No_match_Postcodes_TownID.Inputs[Flat File Destination Input].ExternalColumns[longitude]"
-                      lineageId="Package\Postcode\postcodes.Outputs[OLE DB Source Output].Columns[longitude]" />
-                    <inputColumn
-                      refId="Package\Postcode\No_match_Postcodes_TownID.Inputs[Flat File Destination Input].Columns[city]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="city"
-                      externalMetadataColumnId="Package\Postcode\No_match_Postcodes_TownID.Inputs[Flat File Destination Input].ExternalColumns[city]"
-                      lineageId="Package\Postcode\postcodes.Outputs[OLE DB Source Output].Columns[city]" />
-                    <inputColumn
-                      refId="Package\Postcode\No_match_Postcodes_TownID.Inputs[Flat File Destination Input].Columns[county]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="county"
-                      externalMetadataColumnId="Package\Postcode\No_match_Postcodes_TownID.Inputs[Flat File Destination Input].ExternalColumns[county]"
-                      lineageId="Package\Postcode\postcodes.Outputs[OLE DB Source Output].Columns[county]" />
-                    <inputColumn
-                      refId="Package\Postcode\No_match_Postcodes_TownID.Inputs[Flat File Destination Input].Columns[country_code]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="country_code"
-                      externalMetadataColumnId="Package\Postcode\No_match_Postcodes_TownID.Inputs[Flat File Destination Input].ExternalColumns[country_code]"
-                      lineageId="Package\Postcode\postcodes.Outputs[OLE DB Source Output].Columns[country_code]" />
-                    <inputColumn
-                      refId="Package\Postcode\No_match_Postcodes_TownID.Inputs[Flat File Destination Input].Columns[country_name]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="country_name"
-                      externalMetadataColumnId="Package\Postcode\No_match_Postcodes_TownID.Inputs[Flat File Destination Input].ExternalColumns[country_name]"
-                      lineageId="Package\Postcode\postcodes.Outputs[OLE DB Source Output].Columns[country_name]" />
-                    <inputColumn
-                      refId="Package\Postcode\No_match_Postcodes_TownID.Inputs[Flat File Destination Input].Columns[iso3166-2]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="iso3166-2"
-                      externalMetadataColumnId="Package\Postcode\No_match_Postcodes_TownID.Inputs[Flat File Destination Input].ExternalColumns[iso3166-2]"
-                      lineageId="Package\Postcode\postcodes.Outputs[OLE DB Source Output].Columns[iso3166-2]" />
-                    <inputColumn
-                      refId="Package\Postcode\No_match_Postcodes_TownID.Inputs[Flat File Destination Input].Columns[region_code]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="region_code"
-                      externalMetadataColumnId="Package\Postcode\No_match_Postcodes_TownID.Inputs[Flat File Destination Input].ExternalColumns[region_code]"
-                      lineageId="Package\Postcode\postcodes.Outputs[OLE DB Source Output].Columns[region_code]" />
-                    <inputColumn
-                      refId="Package\Postcode\No_match_Postcodes_TownID.Inputs[Flat File Destination Input].Columns[region_name]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="region_name"
-                      externalMetadataColumnId="Package\Postcode\No_match_Postcodes_TownID.Inputs[Flat File Destination Input].ExternalColumns[region_name]"
-                      lineageId="Package\Postcode\postcodes.Outputs[OLE DB Source Output].Columns[region_name]" />
-                    <inputColumn
-                      refId="Package\Postcode\No_match_Postcodes_TownID.Inputs[Flat File Destination Input].Columns[Create_time]"
-                      cachedDataType="dbTimeStamp"
-                      cachedName="Create_time"
-                      externalMetadataColumnId="Package\Postcode\No_match_Postcodes_TownID.Inputs[Flat File Destination Input].ExternalColumns[Create_time]"
-                      lineageId="Package\Postcode\timestamp &amp; srcID.Outputs[Derived Column Output].Columns[Create_time]" />
-                    <inputColumn
-                      refId="Package\Postcode\No_match_Postcodes_TownID.Inputs[Flat File Destination Input].Columns[Update_time]"
-                      cachedDataType="dbTimeStamp"
-                      cachedName="Update_time"
-                      externalMetadataColumnId="Package\Postcode\No_match_Postcodes_TownID.Inputs[Flat File Destination Input].ExternalColumns[Update_time]"
-                      lineageId="Package\Postcode\timestamp &amp; srcID.Outputs[Derived Column Output].Columns[Update_time]" />
-                    <inputColumn
-                      refId="Package\Postcode\No_match_Postcodes_TownID.Inputs[Flat File Destination Input].Columns[Source_ID]"
-                      cachedDataType="i4"
-                      cachedName="Source_ID"
-                      externalMetadataColumnId="Package\Postcode\No_match_Postcodes_TownID.Inputs[Flat File Destination Input].ExternalColumns[Source_ID]"
-                      lineageId="Package\Postcode\timestamp &amp; srcID.Outputs[Derived Column Output].Columns[Source_ID]" />
-                  </inputColumns>
-                  <externalMetadataColumns
-                    isUsed="True">
-                    <externalMetadataColumn
-                      refId="Package\Postcode\No_match_Postcodes_TownID.Inputs[Flat File Destination Input].ExternalColumns[postcode]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="postcode" />
-                    <externalMetadataColumn
-                      refId="Package\Postcode\No_match_Postcodes_TownID.Inputs[Flat File Destination Input].ExternalColumns[easting]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="easting" />
-                    <externalMetadataColumn
-                      refId="Package\Postcode\No_match_Postcodes_TownID.Inputs[Flat File Destination Input].ExternalColumns[northing]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="northing" />
-                    <externalMetadataColumn
-                      refId="Package\Postcode\No_match_Postcodes_TownID.Inputs[Flat File Destination Input].ExternalColumns[latitude]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="latitude" />
-                    <externalMetadataColumn
-                      refId="Package\Postcode\No_match_Postcodes_TownID.Inputs[Flat File Destination Input].ExternalColumns[longitude]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="longitude" />
-                    <externalMetadataColumn
-                      refId="Package\Postcode\No_match_Postcodes_TownID.Inputs[Flat File Destination Input].ExternalColumns[city]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="city" />
-                    <externalMetadataColumn
-                      refId="Package\Postcode\No_match_Postcodes_TownID.Inputs[Flat File Destination Input].ExternalColumns[county]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="county" />
-                    <externalMetadataColumn
-                      refId="Package\Postcode\No_match_Postcodes_TownID.Inputs[Flat File Destination Input].ExternalColumns[country_code]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="country_code" />
-                    <externalMetadataColumn
-                      refId="Package\Postcode\No_match_Postcodes_TownID.Inputs[Flat File Destination Input].ExternalColumns[country_name]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="country_name" />
-                    <externalMetadataColumn
-                      refId="Package\Postcode\No_match_Postcodes_TownID.Inputs[Flat File Destination Input].ExternalColumns[iso3166-2]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="iso3166-2" />
-                    <externalMetadataColumn
-                      refId="Package\Postcode\No_match_Postcodes_TownID.Inputs[Flat File Destination Input].ExternalColumns[region_code]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="region_code" />
-                    <externalMetadataColumn
-                      refId="Package\Postcode\No_match_Postcodes_TownID.Inputs[Flat File Destination Input].ExternalColumns[region_name]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="region_name" />
-                    <externalMetadataColumn
-                      refId="Package\Postcode\No_match_Postcodes_TownID.Inputs[Flat File Destination Input].ExternalColumns[Create_time]"
-                      dataType="dbTimeStamp"
-                      name="Create_time" />
-                    <externalMetadataColumn
-                      refId="Package\Postcode\No_match_Postcodes_TownID.Inputs[Flat File Destination Input].ExternalColumns[Update_time]"
-                      dataType="dbTimeStamp"
-                      name="Update_time" />
-                    <externalMetadataColumn
-                      refId="Package\Postcode\No_match_Postcodes_TownID.Inputs[Flat File Destination Input].ExternalColumns[Source_ID]"
-                      dataType="i4"
-                      name="Source_ID" />
-                  </externalMetadataColumns>
-                </input>
-              </inputs>
-            </component>
-            <component
               refId="Package\Postcode\OLE DB Command"
               componentClassID="Microsoft.OLEDBCommand"
               contactInfo="OLE DB Command;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;2"
@@ -1159,7 +948,7 @@ where [refTable].[Town_NK] = ?</property>
                   description="The SQL command to be executed."
                   expressionType="Notify"
                   name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">UPDATE [dbo].[Postcode] SET [CountryID] = ?,[CountyID] = ?,[Create_time] = ?,[Easting] = ?,[Latitude] = ?,[Longtitude] = ?,[Northing] = ?,[RegionID] = ?,[TownID] = ?,[Update_time] = ? WHERE [Postcode] = ? AND [Source_ID] = ?</property>
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">UPDATE [dbo].[Postcode] SET [CountryID] = ?,[CountyID] = ?,[Easting] = ?,[Latitude] = ?,[Longtitude] = ?,[Northing] = ?,[RegionID] = ?,[TownID] = ?,[Update_time] = ? WHERE [Postcode] = ? AND [Source_ID] = ?</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the column code page to use when code page information is unavailable from the data source."
@@ -1194,18 +983,12 @@ where [refTable].[Town_NK] = ?</property>
                       externalMetadataColumnId="Package\Postcode\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_1]"
                       lineageId="Package\Postcode\Lookup CountyID.Outputs[Lookup Match Output].Columns[CountyID]" />
                     <inputColumn
-                      refId="Package\Postcode\OLE DB Command.Inputs[OLE DB Command Input].Columns[Create_time]"
-                      cachedDataType="dbTimeStamp"
-                      cachedName="Create_time"
-                      externalMetadataColumnId="Package\Postcode\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_2]"
-                      lineageId="Package\Postcode\timestamp &amp; srcID.Outputs[Derived Column Output].Columns[Create_time]" />
-                    <inputColumn
                       refId="Package\Postcode\OLE DB Command.Inputs[OLE DB Command Input].Columns[easting]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="easting"
-                      externalMetadataColumnId="Package\Postcode\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_3]"
+                      externalMetadataColumnId="Package\Postcode\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_2]"
                       lineageId="Package\Postcode\postcodes.Outputs[OLE DB Source Output].Columns[easting]" />
                     <inputColumn
                       refId="Package\Postcode\OLE DB Command.Inputs[OLE DB Command Input].Columns[latitude]"
@@ -1213,7 +996,7 @@ where [refTable].[Town_NK] = ?</property>
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="latitude"
-                      externalMetadataColumnId="Package\Postcode\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_4]"
+                      externalMetadataColumnId="Package\Postcode\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_3]"
                       lineageId="Package\Postcode\postcodes.Outputs[OLE DB Source Output].Columns[latitude]" />
                     <inputColumn
                       refId="Package\Postcode\OLE DB Command.Inputs[OLE DB Command Input].Columns[longitude]"
@@ -1221,7 +1004,7 @@ where [refTable].[Town_NK] = ?</property>
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="longitude"
-                      externalMetadataColumnId="Package\Postcode\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_5]"
+                      externalMetadataColumnId="Package\Postcode\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_4]"
                       lineageId="Package\Postcode\postcodes.Outputs[OLE DB Source Output].Columns[longitude]" />
                     <inputColumn
                       refId="Package\Postcode\OLE DB Command.Inputs[OLE DB Command Input].Columns[northing]"
@@ -1229,7 +1012,7 @@ where [refTable].[Town_NK] = ?</property>
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="northing"
-                      externalMetadataColumnId="Package\Postcode\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_6]"
+                      externalMetadataColumnId="Package\Postcode\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_5]"
                       lineageId="Package\Postcode\postcodes.Outputs[OLE DB Source Output].Columns[northing]" />
                     <inputColumn
                       refId="Package\Postcode\OLE DB Command.Inputs[OLE DB Command Input].Columns[postcode]"
@@ -1237,31 +1020,31 @@ where [refTable].[Town_NK] = ?</property>
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="postcode"
-                      externalMetadataColumnId="Package\Postcode\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_10]"
+                      externalMetadataColumnId="Package\Postcode\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_9]"
                       lineageId="Package\Postcode\postcodes.Outputs[OLE DB Source Output].Columns[postcode]" />
                     <inputColumn
                       refId="Package\Postcode\OLE DB Command.Inputs[OLE DB Command Input].Columns[RegionID]"
                       cachedDataType="i4"
                       cachedName="RegionID"
-                      externalMetadataColumnId="Package\Postcode\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_7]"
+                      externalMetadataColumnId="Package\Postcode\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_6]"
                       lineageId="Package\Postcode\Lookup RegionID.Outputs[Lookup Match Output].Columns[RegionID]" />
                     <inputColumn
                       refId="Package\Postcode\OLE DB Command.Inputs[OLE DB Command Input].Columns[Source_ID]"
                       cachedDataType="i4"
                       cachedName="Source_ID"
-                      externalMetadataColumnId="Package\Postcode\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_11]"
+                      externalMetadataColumnId="Package\Postcode\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_10]"
                       lineageId="Package\Postcode\timestamp &amp; srcID.Outputs[Derived Column Output].Columns[Source_ID]" />
                     <inputColumn
                       refId="Package\Postcode\OLE DB Command.Inputs[OLE DB Command Input].Columns[TownID]"
                       cachedDataType="i4"
                       cachedName="TownID"
-                      externalMetadataColumnId="Package\Postcode\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_8]"
+                      externalMetadataColumnId="Package\Postcode\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_7]"
                       lineageId="Package\Postcode\Lookup TownID.Outputs[Lookup Match Output].Columns[TownID]" />
                     <inputColumn
                       refId="Package\Postcode\OLE DB Command.Inputs[OLE DB Command Input].Columns[Update_time]"
                       cachedDataType="dbTimeStamp"
                       cachedName="Update_time"
-                      externalMetadataColumnId="Package\Postcode\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_9]"
+                      externalMetadataColumnId="Package\Postcode\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_8]"
                       lineageId="Package\Postcode\timestamp &amp; srcID.Outputs[Derived Column Output].Columns[Update_time]" />
                   </inputColumns>
                   <externalMetadataColumns
@@ -1290,7 +1073,9 @@ where [refTable].[Town_NK] = ?</property>
                     </externalMetadataColumn>
                     <externalMetadataColumn
                       refId="Package\Postcode\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_2]"
-                      dataType="dbTimeStamp"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
                       name="Param_2">
                       <properties>
                         <property
@@ -1340,15 +1125,13 @@ where [refTable].[Town_NK] = ?</property>
                     </externalMetadataColumn>
                     <externalMetadataColumn
                       refId="Package\Postcode\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_6]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
+                      dataType="i4"
                       name="Param_6">
                       <properties>
                         <property
                           dataType="System.Int32"
                           description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
-                          name="DBParamInfoFlags">65</property>
+                          name="DBParamInfoFlags">81</property>
                       </properties>
                     </externalMetadataColumn>
                     <externalMetadataColumn
@@ -1364,18 +1147,20 @@ where [refTable].[Town_NK] = ?</property>
                     </externalMetadataColumn>
                     <externalMetadataColumn
                       refId="Package\Postcode\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_8]"
-                      dataType="i4"
+                      dataType="dbTimeStamp"
                       name="Param_8">
                       <properties>
                         <property
                           dataType="System.Int32"
                           description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
-                          name="DBParamInfoFlags">81</property>
+                          name="DBParamInfoFlags">65</property>
                       </properties>
                     </externalMetadataColumn>
                     <externalMetadataColumn
                       refId="Package\Postcode\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_9]"
-                      dataType="dbTimeStamp"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
                       name="Param_9">
                       <properties>
                         <property
@@ -1386,21 +1171,8 @@ where [refTable].[Town_NK] = ?</property>
                     </externalMetadataColumn>
                     <externalMetadataColumn
                       refId="Package\Postcode\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_10]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="Param_10">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
-                          name="DBParamInfoFlags">65</property>
-                      </properties>
-                    </externalMetadataColumn>
-                    <externalMetadataColumn
-                      refId="Package\Postcode\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_11]"
                       dataType="i4"
-                      name="Param_11">
+                      name="Param_10">
                       <properties>
                         <property
                           dataType="System.Int32"
@@ -1436,253 +1208,6 @@ where [refTable].[Town_NK] = ?</property>
                       refId="Package\Postcode\OLE DB Command.Outputs[OLE DB Command Error Output].Columns[ErrorColumn]"
                       dataType="i4"
                       lineageId="Package\Postcode\OLE DB Command.Outputs[OLE DB Command Error Output].Columns[ErrorColumn]"
-                      name="ErrorColumn"
-                      specialFlags="2" />
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-              </outputs>
-            </component>
-            <component
-              refId="Package\Postcode\Postcode"
-              componentClassID="Microsoft.OLEDBDestination"
-              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
-              description="OLE DB Destination"
-              name="Postcode"
-              usesDispositions="true"
-              version="4">
-              <properties>
-                <property
-                  dataType="System.Int32"
-                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
-                  name="CommandTimeout">0</property>
-                <property
-                  dataType="System.String"
-                  description="Specifies the name of the database object used to open a rowset."
-                  name="OpenRowset">[dbo].[Postcode]</property>
-                <property
-                  dataType="System.String"
-                  description="Specifies the variable that contains the name of the database object used to open a rowset."
-                  name="OpenRowsetVariable"></property>
-                <property
-                  dataType="System.String"
-                  description="The SQL command to be executed."
-                  name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies the column code page to use when code page information is unavailable from the data source."
-                  name="DefaultCodePage">1252</property>
-                <property
-                  dataType="System.Boolean"
-                  description="Forces the use of the DefaultCodePage property value when describing character data."
-                  name="AlwaysUseDefaultCodePage">false</property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies the mode used to access the database."
-                  name="AccessMode"
-                  typeConverter="AccessMode">0</property>
-                <property
-                  dataType="System.Boolean"
-                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
-                  name="FastLoadKeepIdentity">false</property>
-                <property
-                  dataType="System.Boolean"
-                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
-                  name="FastLoadKeepNulls">false</property>
-                <property
-                  dataType="System.String"
-                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
-                  name="FastLoadOptions"></property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
-                  name="FastLoadMaxInsertCommitSize">2147483647</property>
-              </properties>
-              <connections>
-                <connection
-                  refId="Package\Postcode\Postcode.Connections[OleDbConnection]"
-                  connectionManagerID="{AE006570-A2B7-40E0-9892-4B549EA30919}:external"
-                  connectionManagerRefId="Project.ConnectionManagers[LocalHost.NDS_DATH]"
-                  description="The OLE DB runtime connection used to access the database."
-                  name="OleDbConnection" />
-              </connections>
-              <inputs>
-                <input
-                  refId="Package\Postcode\Postcode.Inputs[OLE DB Destination Input]"
-                  errorOrTruncationOperation="Insert"
-                  errorRowDisposition="FailComponent"
-                  hasSideEffects="true"
-                  name="OLE DB Destination Input">
-                  <inputColumns>
-                    <inputColumn
-                      refId="Package\Postcode\Postcode.Inputs[OLE DB Destination Input].Columns[postcode]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="postcode"
-                      externalMetadataColumnId="Package\Postcode\Postcode.Inputs[OLE DB Destination Input].ExternalColumns[Postcode]"
-                      lineageId="Package\Postcode\postcodes.Outputs[OLE DB Source Output].Columns[postcode]" />
-                    <inputColumn
-                      refId="Package\Postcode\Postcode.Inputs[OLE DB Destination Input].Columns[latitude]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="latitude"
-                      externalMetadataColumnId="Package\Postcode\Postcode.Inputs[OLE DB Destination Input].ExternalColumns[Latitude]"
-                      lineageId="Package\Postcode\postcodes.Outputs[OLE DB Source Output].Columns[latitude]" />
-                    <inputColumn
-                      refId="Package\Postcode\Postcode.Inputs[OLE DB Destination Input].Columns[longitude]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="longitude"
-                      externalMetadataColumnId="Package\Postcode\Postcode.Inputs[OLE DB Destination Input].ExternalColumns[Longtitude]"
-                      lineageId="Package\Postcode\postcodes.Outputs[OLE DB Source Output].Columns[longitude]" />
-                    <inputColumn
-                      refId="Package\Postcode\Postcode.Inputs[OLE DB Destination Input].Columns[easting]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="easting"
-                      externalMetadataColumnId="Package\Postcode\Postcode.Inputs[OLE DB Destination Input].ExternalColumns[Easting]"
-                      lineageId="Package\Postcode\postcodes.Outputs[OLE DB Source Output].Columns[easting]" />
-                    <inputColumn
-                      refId="Package\Postcode\Postcode.Inputs[OLE DB Destination Input].Columns[northing]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="northing"
-                      externalMetadataColumnId="Package\Postcode\Postcode.Inputs[OLE DB Destination Input].ExternalColumns[Northing]"
-                      lineageId="Package\Postcode\postcodes.Outputs[OLE DB Source Output].Columns[northing]" />
-                    <inputColumn
-                      refId="Package\Postcode\Postcode.Inputs[OLE DB Destination Input].Columns[TownID]"
-                      cachedDataType="i4"
-                      cachedName="TownID"
-                      externalMetadataColumnId="Package\Postcode\Postcode.Inputs[OLE DB Destination Input].ExternalColumns[TownID]"
-                      lineageId="Package\Postcode\Lookup TownID.Outputs[Lookup Match Output].Columns[TownID]" />
-                    <inputColumn
-                      refId="Package\Postcode\Postcode.Inputs[OLE DB Destination Input].Columns[CountyID]"
-                      cachedDataType="i4"
-                      cachedName="CountyID"
-                      externalMetadataColumnId="Package\Postcode\Postcode.Inputs[OLE DB Destination Input].ExternalColumns[CountyID]"
-                      lineageId="Package\Postcode\Lookup CountyID.Outputs[Lookup Match Output].Columns[CountyID]" />
-                    <inputColumn
-                      refId="Package\Postcode\Postcode.Inputs[OLE DB Destination Input].Columns[CountryID]"
-                      cachedDataType="i4"
-                      cachedName="CountryID"
-                      externalMetadataColumnId="Package\Postcode\Postcode.Inputs[OLE DB Destination Input].ExternalColumns[CountryID]"
-                      lineageId="Package\Postcode\Lookup CountryID.Outputs[Lookup Match Output].Columns[CountryID]" />
-                    <inputColumn
-                      refId="Package\Postcode\Postcode.Inputs[OLE DB Destination Input].Columns[RegionID]"
-                      cachedDataType="i4"
-                      cachedName="RegionID"
-                      externalMetadataColumnId="Package\Postcode\Postcode.Inputs[OLE DB Destination Input].ExternalColumns[RegionID]"
-                      lineageId="Package\Postcode\Lookup RegionID.Outputs[Lookup Match Output].Columns[RegionID]" />
-                    <inputColumn
-                      refId="Package\Postcode\Postcode.Inputs[OLE DB Destination Input].Columns[Create_time]"
-                      cachedDataType="dbTimeStamp"
-                      cachedName="Create_time"
-                      externalMetadataColumnId="Package\Postcode\Postcode.Inputs[OLE DB Destination Input].ExternalColumns[Create_time]"
-                      lineageId="Package\Postcode\timestamp &amp; srcID.Outputs[Derived Column Output].Columns[Create_time]" />
-                    <inputColumn
-                      refId="Package\Postcode\Postcode.Inputs[OLE DB Destination Input].Columns[Update_time]"
-                      cachedDataType="dbTimeStamp"
-                      cachedName="Update_time"
-                      externalMetadataColumnId="Package\Postcode\Postcode.Inputs[OLE DB Destination Input].ExternalColumns[Update_time]"
-                      lineageId="Package\Postcode\timestamp &amp; srcID.Outputs[Derived Column Output].Columns[Update_time]" />
-                    <inputColumn
-                      refId="Package\Postcode\Postcode.Inputs[OLE DB Destination Input].Columns[Source_ID]"
-                      cachedDataType="i4"
-                      cachedName="Source_ID"
-                      externalMetadataColumnId="Package\Postcode\Postcode.Inputs[OLE DB Destination Input].ExternalColumns[Source_ID]"
-                      lineageId="Package\Postcode\timestamp &amp; srcID.Outputs[Derived Column Output].Columns[Source_ID]" />
-                  </inputColumns>
-                  <externalMetadataColumns
-                    isUsed="True">
-                    <externalMetadataColumn
-                      refId="Package\Postcode\Postcode.Inputs[OLE DB Destination Input].ExternalColumns[Postcode_ID]"
-                      dataType="i4"
-                      name="Postcode_ID" />
-                    <externalMetadataColumn
-                      refId="Package\Postcode\Postcode.Inputs[OLE DB Destination Input].ExternalColumns[Postcode]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="Postcode" />
-                    <externalMetadataColumn
-                      refId="Package\Postcode\Postcode.Inputs[OLE DB Destination Input].ExternalColumns[Latitude]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="Latitude" />
-                    <externalMetadataColumn
-                      refId="Package\Postcode\Postcode.Inputs[OLE DB Destination Input].ExternalColumns[Longtitude]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="Longtitude" />
-                    <externalMetadataColumn
-                      refId="Package\Postcode\Postcode.Inputs[OLE DB Destination Input].ExternalColumns[Easting]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="Easting" />
-                    <externalMetadataColumn
-                      refId="Package\Postcode\Postcode.Inputs[OLE DB Destination Input].ExternalColumns[Northing]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="Northing" />
-                    <externalMetadataColumn
-                      refId="Package\Postcode\Postcode.Inputs[OLE DB Destination Input].ExternalColumns[TownID]"
-                      dataType="i4"
-                      name="TownID" />
-                    <externalMetadataColumn
-                      refId="Package\Postcode\Postcode.Inputs[OLE DB Destination Input].ExternalColumns[CountyID]"
-                      dataType="i4"
-                      name="CountyID" />
-                    <externalMetadataColumn
-                      refId="Package\Postcode\Postcode.Inputs[OLE DB Destination Input].ExternalColumns[CountryID]"
-                      dataType="i4"
-                      name="CountryID" />
-                    <externalMetadataColumn
-                      refId="Package\Postcode\Postcode.Inputs[OLE DB Destination Input].ExternalColumns[RegionID]"
-                      dataType="i4"
-                      name="RegionID" />
-                    <externalMetadataColumn
-                      refId="Package\Postcode\Postcode.Inputs[OLE DB Destination Input].ExternalColumns[Create_time]"
-                      dataType="dbTimeStamp"
-                      name="Create_time" />
-                    <externalMetadataColumn
-                      refId="Package\Postcode\Postcode.Inputs[OLE DB Destination Input].ExternalColumns[Update_time]"
-                      dataType="dbTimeStamp"
-                      name="Update_time" />
-                    <externalMetadataColumn
-                      refId="Package\Postcode\Postcode.Inputs[OLE DB Destination Input].ExternalColumns[Source_ID]"
-                      dataType="i4"
-                      name="Source_ID" />
-                  </externalMetadataColumns>
-                </input>
-              </inputs>
-              <outputs>
-                <output
-                  refId="Package\Postcode\Postcode.Outputs[OLE DB Destination Error Output]"
-                  exclusionGroup="1"
-                  isErrorOut="true"
-                  name="OLE DB Destination Error Output"
-                  synchronousInputId="Package\Postcode\Postcode.Inputs[OLE DB Destination Input]">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\Postcode\Postcode.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
-                      dataType="i4"
-                      lineageId="Package\Postcode\Postcode.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
-                      name="ErrorCode"
-                      specialFlags="1" />
-                    <outputColumn
-                      refId="Package\Postcode\Postcode.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
-                      dataType="i4"
-                      lineageId="Package\Postcode\Postcode.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -2078,7 +1603,7 @@ where [refTable].[Town_NK] = ?</property>
                   dataType="System.String"
                   description="Specifies the SELECT statement used to create a schema rowset."
                   name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT [CountryID], [CountyID], [Create_time], [Easting], [Latitude], [Longtitude], [Northing], [Postcode], [RegionID], [Source_ID], [TownID], [Update_time] FROM [dbo].[Postcode]</property>
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT [CountryID], [CountyID], [Easting], [Latitude], [Longtitude], [Northing], [Postcode], [RegionID], [Source_ID], [TownID], [Update_time] FROM [dbo].[Postcode]</property>
                 <property
                   dataType="System.String"
                   description="Specifies the WHERE clause in the SELECT statement that selects the current row among rows with identical business keys."
@@ -2145,19 +1670,6 @@ where [refTable].[Town_NK] = ?</property>
                       cachedName="CountyID"
                       externalMetadataColumnId="Package\Postcode\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input].ExternalColumns[CountyID]"
                       lineageId="Package\Postcode\Lookup CountyID.Outputs[Lookup Match Output].Columns[CountyID]">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          name="ColumnType"
-                          typeConverter="ColumnType">2</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\Postcode\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input].Columns[Create_time]"
-                      cachedDataType="dbTimeStamp"
-                      cachedName="Create_time"
-                      externalMetadataColumnId="Package\Postcode\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input].ExternalColumns[Create_time]"
-                      lineageId="Package\Postcode\timestamp &amp; srcID.Outputs[Derived Column Output].Columns[Create_time]">
                       <properties>
                         <property
                           dataType="System.Int32"
@@ -2303,10 +1815,6 @@ where [refTable].[Town_NK] = ?</property>
                       refId="Package\Postcode\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input].ExternalColumns[CountyID]"
                       dataType="i4"
                       name="CountyID" />
-                    <externalMetadataColumn
-                      refId="Package\Postcode\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input].ExternalColumns[Create_time]"
-                      dataType="dbTimeStamp"
-                      name="Create_time" />
                     <externalMetadataColumn
                       refId="Package\Postcode\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input].ExternalColumns[Easting]"
                       codePage="1252"
@@ -2557,18 +2065,8 @@ where [refTable].[Town_NK] = ?</property>
               name="Lookup Match Output"
               startId="Package\Postcode\Lookup RegionID.Outputs[Lookup Match Output]" />
             <path
-              refId="Package\Postcode.Paths[Lookup No Match Output]"
-              endId="Package\Postcode\No_match_Postcodes_TownID.Inputs[Flat File Destination Input]"
-              name="Lookup No Match Output"
-              startId="Package\Postcode\Lookup TownID.Outputs[Lookup No Match Output]" />
-            <path
-              refId="Package\Postcode.Paths[Lookup No Match Output1]"
-              endId="Package\Postcode\No_match_Postcodes_CountyID.Inputs[Flat File Destination Input]"
-              name="Lookup No Match Output"
-              startId="Package\Postcode\Lookup CountyID.Outputs[Lookup No Match Output]" />
-            <path
               refId="Package\Postcode.Paths[New Output]"
-              endId="Package\Postcode\Postcode.Inputs[OLE DB Destination Input]"
+              endId="Package\Postcode\Insert Destination.Inputs[OLE DB Destination Input]"
               name="New Output"
               startId="Package\Postcode\Slowly Changing Dimension.Outputs[New Output]" />
             <path
@@ -2606,14 +2104,6 @@ where [refTable].[Town_NK] = ?</property>
       <GraphLayout
         Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="160,42"
-          Id="Package\Postcode\Lookup RegionID"
-          TopLeft="414,515.5" />
-        <NodeLayout
-          Size="167,42"
-          Id="Package\Postcode\timestamp &amp; srcID"
-          TopLeft="410.5,107.5" />
-        <NodeLayout
           Size="209,42"
           Id="Package\Postcode\Slowly Changing Dimension"
           TopLeft="389.5,617.5" />
@@ -2626,13 +2116,9 @@ where [refTable].[Town_NK] = ?</property>
           Id="Package\Postcode\Lookup TownID"
           TopLeft="417.5,209.5" />
         <NodeLayout
-          Size="230,42"
-          Id="Package\Postcode\No_match_Postcodes_CountyID"
-          TopLeft="121,413.5" />
-        <NodeLayout
-          Size="222,42"
-          Id="Package\Postcode\No_match_Postcodes_TownID"
-          TopLeft="131,311.5" />
+          Size="167,42"
+          Id="Package\Postcode\timestamp &amp; srcID"
+          TopLeft="410.5,107.5" />
         <NodeLayout
           Size="126,42"
           Id="Package\Postcode\postcodes"
@@ -2641,76 +2127,30 @@ where [refTable].[Town_NK] = ?</property>
           Size="164,42"
           Id="Package\Postcode\Lookup CountryID"
           TopLeft="412,413.5" />
+        <NodeLayout
+          Size="160,42"
+          Id="Package\Postcode\Lookup RegionID"
+          TopLeft="414,515.5" />
         <EdgeLayout
-          Id="Package\Postcode.Paths[Lookup No Match Output1]"
-          TopLeft="468.5,353.5">
+          Id="Package\Postcode.Paths[OLE DB Source Output]"
+          TopLeft="494,47.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-232.5,60"
+              EndConnector="0,60"
               Start="0,0"
-              End="-232.5,52.5">
+              End="0,52.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,20.3542435424354" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,20.3542435424354"
-                    Point2="0,24.3542435424354"
-                    Point3="-4,24.3542435424354" />
-                  <mssgle:LineSegment
-                    End="-228.5,24.3542435424354" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-228.5,24.3542435424354"
-                    Point2="-232.5,24.3542435424354"
-                    Point3="-232.5,28.3542435424354" />
-                  <mssgle:LineSegment
-                    End="-232.5,52.5" />
+                    End="0,52.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-180.9250390625,29.3542435424354,129.350078125,16"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Postcode.Paths[Lookup No Match Output]"
-          TopLeft="469.833333333333,251.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-227.833333333333,60"
-              Start="0,0"
-              End="-227.833333333333,52.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,20.372574385511" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,20.372574385511"
-                    Point2="0,24.372574385511"
-                    Point3="-4,24.372574385511" />
-                  <mssgle:LineSegment
-                    End="-223.833333333333,24.372574385511" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-223.833333333333,24.372574385511"
-                    Point2="-227.833333333333,24.372574385511"
-                    Point3="-227.833333333333,28.372574385511" />
-                  <mssgle:LineSegment
-                    End="-227.833333333333,52.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-178.591705729167,29.372574385511,129.350078125,16"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -2763,73 +2203,49 @@ where [refTable].[Town_NK] = ?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Postcode.Paths[Lookup Match Output1]"
-          TopLeft="519.5,353.5">
+          TopLeft="494,353.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-25.4999999999999,60"
+              EndConnector="0,60"
               Start="0,0"
-              End="-25.4999999999999,52.5">
+              End="0,52.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,20.3542435424354" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,20.3542435424354"
-                    Point2="0,24.3542435424354"
-                    Point3="-4,24.3542435424354" />
-                  <mssgle:LineSegment
-                    End="-21.4999999999999,24.3542435424354" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-21.4999999999999,24.3542435424354"
-                    Point2="-25.4999999999999,24.3542435424354"
-                    Point3="-25.4999999999999,28.3542435424354" />
-                  <mssgle:LineSegment
-                    End="-25.4999999999999,52.5" />
+                    End="0,52.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-60.94138671875,29.3542435424354,96.3827734375,11.609375"
+              BoundingBox="-48.19138671875,20.4453125,96.3827734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Postcode.Paths[Lookup Match Output]"
-          TopLeft="518.166666666667,251.5">
+          TopLeft="494,251.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-24.1666666666667,60"
+              EndConnector="0,60"
               Start="0,0"
-              End="-24.1666666666667,52.5">
+              End="0,52.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,20.372574385511" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,20.372574385511"
-                    Point2="0,24.372574385511"
-                    Point3="-4,24.372574385511" />
-                  <mssgle:LineSegment
-                    End="-20.1666666666667,24.372574385511" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-20.1666666666667,24.372574385511"
-                    Point2="-24.1666666666667,24.372574385511"
-                    Point3="-24.1666666666667,28.372574385511" />
-                  <mssgle:LineSegment
-                    End="-24.1666666666667,52.5" />
+                    End="0,52.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-60.2747200520833,29.372574385511,96.3827734375,11.609375"
+              BoundingBox="-48.19138671875,20.4453125,96.3827734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -2855,31 +2271,9 @@ where [refTable].[Town_NK] = ?</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Postcode.Paths[OLE DB Source Output]"
-          TopLeft="494,47.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,60"
-              Start="0,0"
-              End="0,52.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,52.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
         <NodeLayout
-          Size="121,42"
-          Id="Package\Postcode\Postcode"
+          Size="163,42"
+          Id="Package\Postcode\Insert Destination"
           TopLeft="187.5,719.5" />
         <EdgeLayout
           Id="Package\Postcode.Paths[New Output]"
@@ -2887,9 +2281,9 @@ where [refTable].[Town_NK] = ?</property>
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-212.5,60"
+              EndConnector="-191.5,60"
               Start="0,0"
-              End="-212.5,52.5">
+              End="-191.5,52.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
@@ -2900,20 +2294,20 @@ where [refTable].[Town_NK] = ?</property>
                     Point2="0,24.2735042735043"
                     Point3="-4,24.2735042735043" />
                   <mssgle:LineSegment
-                    End="-208.5,24.2735042735043" />
+                    End="-187.5,24.2735042735043" />
                   <mssgle:CubicBezierSegment
-                    Point1="-208.5,24.2735042735043"
-                    Point2="-212.5,24.2735042735043"
-                    Point3="-212.5,28.2735042735043" />
+                    Point1="-187.5,24.2735042735043"
+                    Point2="-191.5,24.2735042735043"
+                    Point3="-191.5,28.2735042735043" />
                   <mssgle:LineSegment
-                    End="-212.5,52.5" />
+                    End="-191.5,52.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-133.34138671875,29.2735042735043,54.1827734375,11.43359375"
+              BoundingBox="-122.84138671875,29.2735042735043,54.1827734375,11.43359375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -2961,29 +2355,6 @@ where [refTable].[Town_NK] = ?</property>
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\Postcode\Lookup RegionID">
-    <Properties>
-      <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:string">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string">[dbo].[Region]</Value>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q4:string">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
     design-time-name="Package\Postcode\Slowly Changing Dimension">
     <Properties>
       <Property>
@@ -3010,7 +2381,7 @@ where [refTable].[Town_NK] = ?</property>
       &lt;IdentificationString&gt;timestamp &amp;amp; srcID.Outputs[Derived Column Output].Columns[Create_time]&lt;/IdentificationString&gt;
       &lt;ColumnName&gt;Create_time&lt;/ColumnName&gt;
       &lt;KeyType&gt;None&lt;/KeyType&gt;
-      &lt;ChangeType&gt;ChangingAttribute&lt;/ChangeType&gt;
+      &lt;ChangeType&gt;None&lt;/ChangeType&gt;
     &lt;/InputColumnToDBColumn&gt;
     &lt;InputColumnToDBColumn&gt;
       &lt;IdentificationString&gt;postcodes.Outputs[OLE DB Source Output].Columns[easting]&lt;/IdentificationString&gt;
@@ -3102,7 +2473,7 @@ where [refTable].[Town_NK] = ?</property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:int">0</Value>
+          type="q4:string">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -3115,7 +2486,7 @@ where [refTable].[Town_NK] = ?</property>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:string">false</Value>
+          type="q2:boolean">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -3151,7 +2522,7 @@ where [refTable].[Town_NK] = ?</property>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:boolean">false</Value>
+          type="q2:string">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -3161,7 +2532,30 @@ where [refTable].[Town_NK] = ?</property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:int">0</Value>
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Postcode\Lookup RegionID">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[Region]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
