@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="41"
-  DTS:VersionGUID="{FEFF7964-97D7-4AF7-BE43-3FC23B8774B0}">
+  DTS:VersionBuild="55"
+  DTS:VersionGUID="{CA79B976-F789-4C60-ACB4-58FFB3C0F7D6}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables />
@@ -6581,6 +6581,12 @@
                       cachedLength="255"
                       cachedName="Former postal county"
                       lineageId="Package\Wiki\Excel Source.Outputs[Excel Source Output].Columns[Former postal county]" />
+                    <inputColumn
+                      refId="Package\Wiki\Data Conversion.Inputs[Data Conversion Input].Columns[Postcode districts]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Postcode districts"
+                      lineageId="Package\Wiki\Excel Source.Outputs[Excel Source Output].Columns[Postcode districts]" />
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
@@ -6598,7 +6604,7 @@
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      length="255"
+                      length="50"
                       lineageId="Package\Wiki\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Postcode area]"
                       name="Copy of Postcode area"
                       truncationRowDisposition="FailComponent">
@@ -6620,7 +6626,7 @@
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      length="255"
+                      length="50"
                       lineageId="Package\Wiki\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Post town]"
                       name="Copy of Post town"
                       truncationRowDisposition="FailComponent">
@@ -6642,7 +6648,7 @@
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      length="255"
+                      length="50"
                       lineageId="Package\Wiki\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Former postal county]"
                       name="Copy of Former postal county"
                       truncationRowDisposition="FailComponent">
@@ -6652,6 +6658,28 @@
                           dataType="System.Int32"
                           description="Specifies the input column used as the source of data for the conversion."
                           name="SourceInputColumnLineageID">#{Package\Wiki\Excel Source.Outputs[Excel Source Output].Columns[Former postal county]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Wiki\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Postcode districts]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="255"
+                      lineageId="Package\Wiki\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Postcode districts]"
+                      name="Copy of Postcode districts"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Wiki\Excel Source.Outputs[Excel Source Output].Columns[Postcode districts]}</property>
                         <property
                           dataType="System.Boolean"
                           description="Indicates whether the column uses the faster, locale-neutral parsing routines."
@@ -6922,13 +6950,6 @@
                   name="OLE DB Destination Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Wiki\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Postcode districts]"
-                      cachedDataType="wstr"
-                      cachedLength="255"
-                      cachedName="Postcode districts"
-                      externalMetadataColumnId="Package\Wiki\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Postcode districts]"
-                      lineageId="Package\Wiki\Excel Source.Outputs[Excel Source Output].Columns[Postcode districts]" />
-                    <inputColumn
                       refId="Package\Wiki\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[create_time]"
                       cachedDataType="dbTimeStamp"
                       cachedName="create_time"
@@ -6941,18 +6962,10 @@
                       externalMetadataColumnId="Package\Wiki\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[update_time]"
                       lineageId="Package\Wiki\Timestamp.Outputs[Derived Column Output].Columns[update_time]" />
                     <inputColumn
-                      refId="Package\Wiki\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Copy of Postcode area]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="255"
-                      cachedName="Copy of Postcode area"
-                      externalMetadataColumnId="Package\Wiki\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Postcode area]"
-                      lineageId="Package\Wiki\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Postcode area]" />
-                    <inputColumn
                       refId="Package\Wiki\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Copy of Post town]"
                       cachedCodepage="1252"
                       cachedDataType="str"
-                      cachedLength="255"
+                      cachedLength="50"
                       cachedName="Copy of Post town"
                       externalMetadataColumnId="Package\Wiki\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Post town]"
                       lineageId="Package\Wiki\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Post town]" />
@@ -6960,10 +6973,26 @@
                       refId="Package\Wiki\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Copy of Former postal county]"
                       cachedCodepage="1252"
                       cachedDataType="str"
-                      cachedLength="255"
+                      cachedLength="50"
                       cachedName="Copy of Former postal county"
                       externalMetadataColumnId="Package\Wiki\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Former postal county]"
                       lineageId="Package\Wiki\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Former postal county]" />
+                    <inputColumn
+                      refId="Package\Wiki\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Copy of Postcode area]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Copy of Postcode area"
+                      externalMetadataColumnId="Package\Wiki\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Postcode area]"
+                      lineageId="Package\Wiki\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Postcode area]" />
+                    <inputColumn
+                      refId="Package\Wiki\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Copy of Postcode districts]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="Copy of Postcode districts"
+                      externalMetadataColumnId="Package\Wiki\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Postcode districts]"
+                      lineageId="Package\Wiki\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Postcode districts]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -6975,8 +7004,8 @@
                       name="Postcode area" />
                     <externalMetadataColumn
                       refId="Package\Wiki\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Postcode districts]"
-                      dataType="wstr"
-                      length="150"
+                      codePage="1252"
+                      dataType="text"
                       name="Postcode districts" />
                     <externalMetadataColumn
                       refId="Package\Wiki\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Post town]"
@@ -6998,10 +7027,6 @@
                       refId="Package\Wiki\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[update_time]"
                       dataType="dbTimeStamp"
                       name="update_time" />
-                    <externalMetadataColumn
-                      refId="Package\Wiki\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[status]"
-                      dataType="i4"
-                      name="status" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
@@ -7210,31 +7235,31 @@
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="123.333333333334,41.3333333333334"
+          Size="123,41"
           Id="Package\Accidents"
           TopLeft="45.0892850652109,94.2499983146787" />
         <NodeLayout
-          Size="136,41.3333333333334"
+          Size="136,41"
           Id="Package\Casualties"
           TopLeft="219.374996731058,92.9499983379245" />
         <NodeLayout
-          Size="117.333333333334,41.3333333333334"
+          Size="117,41"
           Id="Package\LSOA"
           TopLeft="224.285710761134,176.685290933869" />
         <NodeLayout
-          Size="122.666666666667,41.3333333333334"
+          Size="123,42"
           Id="Package\PostCode"
           TopLeft="391.249994169921,92.9499983379246" />
         <NodeLayout
-          Size="156,42.6666666666667"
+          Size="156,43"
           Id="Package\Postcode district"
-          TopLeft="37.589286454212,273.535297912398" />
+          TopLeft="19.589286454212,271.535297912398" />
         <NodeLayout
-          Size="112,41.3333333333334"
+          Size="112,41"
           Id="Package\Vehicle"
           TopLeft="398.749994058163,179.399996792079" />
         <NodeLayout
-          Size="120.666666666667,43.3333333333334"
+          Size="99,42"
           Id="Package\Wiki"
           TopLeft="54.4642842868913,176.723526373696" />
         <EdgeLayout
@@ -7261,18 +7286,18 @@
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 1]"
-          TopLeft="355.374996731058,113.616665004591">
+          TopLeft="355.374996731058,113.699998337925">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="35.8749974388625,0"
+              EndConnector="35.874997438863,0"
               Start="0,0"
-              End="28.3749974388625,0">
+              End="28.374997438863,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="28.3749974388625,0" />
+                    End="28.374997438863,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -7283,18 +7308,18 @@
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 2]"
-          TopLeft="453.666660780708,134.283331671258">
+          TopLeft="453.749994114042,134.949998337925">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,45.1166651208208"
+              EndConnector="0,44.4499984541544"
               Start="0,0"
-              End="0,37.6166651208208">
+              End="0,36.9499984541544">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,37.6166651208208" />
+                    End="0,36.9499984541544" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -7327,18 +7352,18 @@
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 4]"
-          TopLeft="224.285710761134,197.871075320449">
+          TopLeft="224.285710761134,197.454408653782">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-49.1547598075762,0"
+              EndConnector="-70.8214264742427,0"
               Start="0,0"
-              End="-41.6547598075762,0">
+              End="-63.3214264742427,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="-41.6547598075762,0" />
+                    End="-63.3214264742427,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -7349,18 +7374,18 @@
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 5]"
-          TopLeft="115.193452037218,220.05685970703">
+          TopLeft="100.776785370552,218.723526373696">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,53.4784382053685"
+              EndConnector="0,52.811771538702"
               Start="0,0"
-              End="0,45.9784382053685">
+              End="0,45.311771538702">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,45.9784382053685" />
+                    End="0,45.311771538702" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -7376,15 +7401,15 @@
     design-time-name="Package\Accidents">
     <LayoutInfo>
       <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
-        <NodeLayout
-          Size="172,43.3333333333334"
-          Id="Package\Accidents\OLE DB Destination"
-          TopLeft="382.499994300306,57.8499989655614" />
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="155.333333333334,43.3333333333334"
           Id="Package\Accidents\Derived Column"
           TopLeft="197.499997057021,193.699996536374" />
+        <NodeLayout
+          Size="172,43.3333333333334"
+          Id="Package\Accidents\OLE DB Destination"
+          TopLeft="382.499994300306,57.8499989655614" />
         <NodeLayout
           Size="137.333333333334,42.6666666666667"
           Id="Package\Accidents\Accident csv"
@@ -7420,7 +7445,9 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -7454,7 +7481,9 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -7477,7 +7506,7 @@
     design-time-name="Package\Casualties">
     <LayoutInfo>
       <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="172,42.6666666666667"
           Id="Package\Casualties\OLE DB Destination"
@@ -7521,7 +7550,9 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -7555,7 +7586,9 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -7580,15 +7613,15 @@
       <GraphLayout
         Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="172,43.3333333333334"
+          Size="172,43"
           Id="Package\LSOA\OLE DB Destination"
           TopLeft="400,60" />
         <NodeLayout
-          Size="150.666666666667,42.6666666666667"
+          Size="151,43"
           Id="Package\LSOA\Add timestamp"
           TopLeft="219,146" />
         <NodeLayout
-          Size="122.666666666667,42.6666666666667"
+          Size="123,43"
           Id="Package\LSOA\LSOA csv"
           TopLeft="60,61" />
         <EdgeLayout
@@ -7681,17 +7714,17 @@
       <GraphLayout
         Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="154.666666666667,42.6666666666667"
+          Size="121,43"
+          Id="Package\PostCode\Postcode"
+          TopLeft="60,61" />
+        <NodeLayout
+          Size="155,43"
           Id="Package\PostCode\Derived Column"
           TopLeft="219,146" />
         <NodeLayout
-          Size="172,42.6666666666667"
+          Size="172,43"
           Id="Package\PostCode\OLE DB Destination"
           TopLeft="400,60" />
-        <NodeLayout
-          Size="121.333333333334,42.6666666666667"
-          Id="Package\PostCode\Postcode"
-          TopLeft="60,61" />
         <EdgeLayout
           Id="Package\PostCode.Paths[Flat File Source Output]"
           TopLeft="120.666666666667,103.666666666667">
@@ -7782,19 +7815,19 @@
       <GraphLayout
         Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="166.666666666667,41.3333333333334"
-          Id="Package\Postcode district\Postcode_district"
-          TopLeft="276.250005047768,44.3000026500224" />
-        <NodeLayout
-          Size="154.666666666667,41.3333333333334"
-          Id="Package\Postcode district\Add timestamps"
-          TopLeft="289.333334897955,116.883332787057" />
-        <NodeLayout
-          Size="138.666666666667,41.3333333333334"
+          Size="139,41"
           Id="Package\Postcode district\Excel Source"
           TopLeft="65.375000493601,31.9166690493627" />
         <NodeLayout
-          Size="155.333333333334,41.3333333333334"
+          Size="155,41"
+          Id="Package\Postcode district\Add timestamps"
+          TopLeft="289.333334897955,116.883332787057" />
+        <NodeLayout
+          Size="167,41"
+          Id="Package\Postcode district\Postcode_district"
+          TopLeft="276.250005047768,44.3000026500224" />
+        <NodeLayout
+          Size="155,41"
           Id="Package\Postcode district\Data Conversion"
           TopLeft="55.8333363135653,121.416668235759" />
         <EdgeLayout
@@ -7867,7 +7900,7 @@
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\Postcode district\Postcode_district">
+    design-time-name="Package\Postcode district\Excel Source">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -7880,7 +7913,7 @@
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Postcode district\Excel Source">
+    design-time-name="Package\Postcode district\Postcode_district">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -7896,11 +7929,7 @@
     design-time-name="Package\Vehicle">
     <LayoutInfo>
       <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
-        <NodeLayout
-          Size="172,42.6666666666667"
-          Id="Package\Vehicle\OLE DB Destination"
-          TopLeft="400,60" />
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="150.666666666667,42.6666666666667"
           Id="Package\Vehicle\Add timestamp"
@@ -7909,6 +7938,10 @@
           Size="136,42.6666666666667"
           Id="Package\Vehicle\Vehicles csv"
           TopLeft="60,61" />
+        <NodeLayout
+          Size="172,42.6666666666667"
+          Id="Package\Vehicle\OLE DB Destination"
+          TopLeft="400,60" />
         <EdgeLayout
           Id="Package\Vehicle.Paths[Flat File Source Output]"
           TopLeft="128,103.666666666667">
@@ -7940,7 +7973,9 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -7974,7 +8009,9 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -7999,19 +8036,19 @@
       <GraphLayout
         Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="138.666666666667,41.3333333333334"
+          Size="139,41"
           Id="Package\Wiki\Excel Source"
           TopLeft="104,55" />
         <NodeLayout
-          Size="132,43.3333333333334"
+          Size="132,43"
           Id="Package\Wiki\Timestamp"
           TopLeft="108.749998379499,140.399997489452" />
         <NodeLayout
-          Size="172,43.3333333333334"
+          Size="171,42"
           Id="Package\Wiki\OLE DB Destination"
           TopLeft="292.49999564141,48.749999128282" />
         <NodeLayout
-          Size="156.666666666667,43.3333333333334"
+          Size="157,43"
           Id="Package\Wiki\Data Conversion"
           TopLeft="297.499995566905,145.599997396469" />
         <EdgeLayout
@@ -8060,18 +8097,18 @@
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Wiki.Paths[Data Conversion Output]"
-          TopLeft="377.333328937491,145.599997396469">
+          TopLeft="376.999995604158,145.599997396469">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,-54.1833316015204"
+              EndConnector="0,-54.849998268187"
               Start="0,0"
-              End="0,-46.6833316015204">
+              End="0,-47.349998268187">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,-46.6833316015204" />
+                    End="0,-47.349998268187" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>

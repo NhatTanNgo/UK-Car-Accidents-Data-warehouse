@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="16"
-  DTS:VersionGUID="{8081A874-89CA-440B-BBFC-181245A03A29}">
+  DTS:VersionBuild="18"
+  DTS:VersionGUID="{D62D4D58-BAF8-47DC-ADCF-21A197810339}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables />
@@ -186,8 +186,8 @@
                       lineageId="Package\Stage to NDS\WikiPostcode.Outputs[OLE DB Source Output].Columns[County]" />
                     <inputColumn
                       refId="Package\Stage to NDS\Data Conversion.Inputs[Data Conversion Input].Columns[Postcode districts]"
-                      cachedDataType="wstr"
-                      cachedLength="150"
+                      cachedCodepage="1252"
+                      cachedDataType="text"
                       cachedName="Postcode districts"
                       lineageId="Package\Stage to NDS\WikiPostcode.Outputs[OLE DB Source Output].Columns[Postcode districts]" />
                   </inputColumns>
@@ -345,6 +345,14 @@
                   name="OLE DB Destination Input">
                   <inputColumns>
                     <inputColumn
+                      refId="Package\Stage to NDS\Insert Destination.Inputs[OLE DB Destination Input].Columns[Copy of Postcode districts]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="150"
+                      cachedName="Copy of Postcode districts"
+                      externalMetadataColumnId="Package\Stage to NDS\Insert Destination.Inputs[OLE DB Destination Input].ExternalColumns[County_NK]"
+                      lineageId="Package\Stage to NDS\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Postcode districts]" />
+                    <inputColumn
                       refId="Package\Stage to NDS\Insert Destination.Inputs[OLE DB Destination Input].Columns[Copy of County]"
                       cachedCodepage="1252"
                       cachedDataType="str"
@@ -370,14 +378,6 @@
                       cachedName="SourceID"
                       externalMetadataColumnId="Package\Stage to NDS\Insert Destination.Inputs[OLE DB Destination Input].ExternalColumns[Source_ID]"
                       lineageId="Package\Stage to NDS\Add SourceID, timestamps.Outputs[Derived Column Output].Columns[SourceID]" />
-                    <inputColumn
-                      refId="Package\Stage to NDS\Insert Destination.Inputs[OLE DB Destination Input].Columns[Copy of Postcode districts]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="150"
-                      cachedName="Copy of Postcode districts"
-                      externalMetadataColumnId="Package\Stage to NDS\Insert Destination.Inputs[OLE DB Destination Input].ExternalColumns[County_NK]"
-                      lineageId="Package\Stage to NDS\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Postcode districts]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -455,7 +455,7 @@
                   description="The SQL command to be executed."
                   expressionType="Notify"
                   name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">UPDATE [dbo].[County] SET [CountyName] = ?, update_time = getdate() WHERE [County_NK] = ?</property>
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">UPDATE [dbo].[County] SET [Update_time] = ? WHERE [County_NK] = ?</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the column code page to use when code page information is unavailable from the data source."
@@ -478,14 +478,6 @@
                   name="OLE DB Command Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Stage to NDS\OLE DB Command.Inputs[OLE DB Command Input].Columns[Copy of County]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="Copy of County"
-                      externalMetadataColumnId="Package\Stage to NDS\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_0]"
-                      lineageId="Package\Stage to NDS\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of County]" />
-                    <inputColumn
                       refId="Package\Stage to NDS\OLE DB Command.Inputs[OLE DB Command Input].Columns[Copy of Postcode districts]"
                       cachedCodepage="1252"
                       cachedDataType="str"
@@ -493,14 +485,18 @@
                       cachedName="Copy of Postcode districts"
                       externalMetadataColumnId="Package\Stage to NDS\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_1]"
                       lineageId="Package\Stage to NDS\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Postcode districts]" />
+                    <inputColumn
+                      refId="Package\Stage to NDS\OLE DB Command.Inputs[OLE DB Command Input].Columns[updateAt]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="updateAt"
+                      externalMetadataColumnId="Package\Stage to NDS\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_0]"
+                      lineageId="Package\Stage to NDS\Add SourceID, timestamps.Outputs[Derived Column Output].Columns[updateAt]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
                       refId="Package\Stage to NDS\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_0]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
+                      dataType="dbTimeStamp"
                       name="Param_0">
                       <properties>
                         <property
@@ -569,7 +565,7 @@
                   dataType="System.String"
                   description="Specifies the SELECT statement used to create a schema rowset."
                   name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT [County_NK], [CountyName] FROM [dbo].[County]</property>
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT [County_NK], [CountyName], [Create_time], [Source_ID], [Update_time] FROM [dbo].[County]</property>
                 <property
                   dataType="System.String"
                   description="Specifies the WHERE clause in the SELECT statement that selects the current row among rows with identical business keys."
@@ -618,12 +614,13 @@
                   name="Slowly Changing Dimension Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Stage to NDS\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input].Columns[Postcode districts]"
-                      cachedDataType="wstr"
+                      refId="Package\Stage to NDS\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input].Columns[Copy of Postcode districts]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
                       cachedLength="150"
-                      cachedName="Postcode districts"
+                      cachedName="Copy of Postcode districts"
                       externalMetadataColumnId="Package\Stage to NDS\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input].ExternalColumns[County_NK]"
-                      lineageId="Package\Stage to NDS\WikiPostcode.Outputs[OLE DB Source Output].Columns[Postcode districts]">
+                      lineageId="Package\Stage to NDS\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Postcode districts]">
                       <properties>
                         <property
                           dataType="System.Int32"
@@ -639,6 +636,45 @@
                       cachedName="Copy of County"
                       externalMetadataColumnId="Package\Stage to NDS\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input].ExternalColumns[CountyName]"
                       lineageId="Package\Stage to NDS\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of County]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          name="ColumnType"
+                          typeConverter="ColumnType">4</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Stage to NDS\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input].Columns[createAt]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="createAt"
+                      externalMetadataColumnId="Package\Stage to NDS\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input].ExternalColumns[Create_time]"
+                      lineageId="Package\Stage to NDS\Add SourceID, timestamps.Outputs[Derived Column Output].Columns[createAt]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          name="ColumnType"
+                          typeConverter="ColumnType">4</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Stage to NDS\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input].Columns[SourceID]"
+                      cachedDataType="i4"
+                      cachedName="SourceID"
+                      externalMetadataColumnId="Package\Stage to NDS\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input].ExternalColumns[Source_ID]"
+                      lineageId="Package\Stage to NDS\Add SourceID, timestamps.Outputs[Derived Column Output].Columns[SourceID]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          name="ColumnType"
+                          typeConverter="ColumnType">4</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Stage to NDS\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input].Columns[updateAt]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="updateAt"
+                      externalMetadataColumnId="Package\Stage to NDS\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input].ExternalColumns[Update_time]"
+                      lineageId="Package\Stage to NDS\Add SourceID, timestamps.Outputs[Derived Column Output].Columns[updateAt]">
                       <properties>
                         <property
                           dataType="System.Int32"
@@ -661,6 +697,18 @@
                       dataType="str"
                       length="50"
                       name="CountyName" />
+                    <externalMetadataColumn
+                      refId="Package\Stage to NDS\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input].ExternalColumns[Create_time]"
+                      dataType="dbTimeStamp"
+                      name="Create_time" />
+                    <externalMetadataColumn
+                      refId="Package\Stage to NDS\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input].ExternalColumns[Source_ID]"
+                      dataType="i4"
+                      name="Source_ID" />
+                    <externalMetadataColumn
+                      refId="Package\Stage to NDS\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input].ExternalColumns[Update_time]"
+                      dataType="dbTimeStamp"
+                      name="Update_time" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
@@ -778,11 +826,11 @@
                   <outputColumns>
                     <outputColumn
                       refId="Package\Stage to NDS\WikiPostcode.Outputs[OLE DB Source Output].Columns[Postcode districts]"
-                      dataType="wstr"
+                      codePage="1252"
+                      dataType="text"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Stage to NDS\WikiPostcode.Outputs[OLE DB Source Output].ExternalColumns[Postcode districts]"
-                      length="150"
                       lineageId="Package\Stage to NDS\WikiPostcode.Outputs[OLE DB Source Output].Columns[Postcode districts]"
                       name="Postcode districts"
                       truncationRowDisposition="FailComponent" />
@@ -802,8 +850,8 @@
                     isUsed="True">
                     <externalMetadataColumn
                       refId="Package\Stage to NDS\WikiPostcode.Outputs[OLE DB Source Output].ExternalColumns[Postcode districts]"
-                      dataType="wstr"
-                      length="150"
+                      codePage="1252"
+                      dataType="text"
                       name="Postcode districts" />
                     <externalMetadataColumn
                       refId="Package\Stage to NDS\WikiPostcode.Outputs[OLE DB Source Output].ExternalColumns[County]"
@@ -820,8 +868,8 @@
                   <outputColumns>
                     <outputColumn
                       refId="Package\Stage to NDS\WikiPostcode.Outputs[OLE DB Source Error Output].Columns[Postcode districts]"
-                      dataType="wstr"
-                      length="150"
+                      codePage="1252"
+                      dataType="text"
                       lineageId="Package\Stage to NDS\WikiPostcode.Outputs[OLE DB Source Error Output].Columns[Postcode districts]"
                       name="Postcode districts" />
                     <outputColumn
@@ -903,27 +951,27 @@
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="141.333333333334,41.3333333333334"
-          Id="Package\Stage to NDS"
-          TopLeft="283.125002805942,88.8588249415345" />
-        <NodeLayout
-          Size="145.333333333334,42.6666666666667"
+          Size="145,43"
           Id="Package\Split postcode"
           TopLeft="38.1249994318932,84.4999984890223" />
+        <NodeLayout
+          Size="142,42"
+          Id="Package\Stage to NDS"
+          TopLeft="283.125002805942,88.8588249415345" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
-          TopLeft="183.458332765227,107.679411715278">
+          TopLeft="183.124999431893,107.929411715278">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="99.6666700407157,0"
+              EndConnector="100.000003374049,0"
               Start="0,0"
-              End="92.1666700407157,0">
+              End="92.5000033740488,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="92.1666700407157,0" />
+                    End="92.5000033740488,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -941,27 +989,35 @@
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="141.333333333334,42.6666666666667"
+          Size="141,43"
           Id="Package\Stage to NDS\WikiPostcode"
-          TopLeft="49.70833621112,27.5999996048212" />
+          TopLeft="241.5,5.5" />
         <NodeLayout
-          Size="205.333333333334,42.6666666666667"
+          Size="209,42"
+          Id="Package\Stage to NDS\Slowly Changing Dimension"
+          TopLeft="207.5,314.5" />
+        <NodeLayout
+          Size="205,43"
           Id="Package\Stage to NDS\Add SourceID, timestamps"
-          TopLeft="230.208333044623,32.1166680265467" />
+          TopLeft="209.5,108.5" />
+        <NodeLayout
+          Size="157,43"
+          Id="Package\Stage to NDS\Data Conversion"
+          TopLeft="233.5,211.5" />
         <EdgeLayout
           Id="Package\Stage to NDS.Paths[OLE DB Source Output]"
-          TopLeft="191.041669544453,51.1916671490173">
+          TopLeft="312,48.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="39.1666635001699,0"
+              EndConnector="0,60"
               Start="0,0"
-              End="31.6666635001699,0">
+              End="0,52.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="31.6666635001699,0" />
+                    End="0,52.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -970,24 +1026,20 @@
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="157.333333333334,42.6666666666667"
-          Id="Package\Stage to NDS\Data Conversion"
-          TopLeft="252.95833306325,113.983335065147" />
         <EdgeLayout
           Id="Package\Stage to NDS.Paths[Derived Column Output]"
-          TopLeft="332.249999720603,74.7833346932134">
+          TopLeft="312,151.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,39.2000003719331"
+              EndConnector="0,60"
               Start="0,0"
-              End="0,31.7000003719331">
+              End="0,52.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,31.7000003719331" />
+                    End="0,52.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -996,24 +1048,20 @@
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="209.333333333334,42"
-          Id="Package\Stage to NDS\Slowly Changing Dimension"
-          TopLeft="221.958333137756,209.500001859665" />
         <EdgeLayout
           Id="Package\Stage to NDS.Paths[Data Conversion Output]"
-          TopLeft="329.124999767169,156.650001731813">
+          TopLeft="312,254.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,52.8500001278519"
+              EndConnector="0,60"
               Start="0,0"
-              End="0,45.3500001278519">
+              End="0,52.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,45.3500001278519" />
+                    End="0,52.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1023,82 +1071,82 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <NodeLayout
-          Size="164,42.6666666666667"
+          Size="163,42"
           Id="Package\Stage to NDS\Insert Destination"
-          TopLeft="37.9999995157124,117.816672001581" />
+          TopLeft="5.50000000000006,416.5" />
         <EdgeLayout
           Id="Package\Stage to NDS.Paths[New Output]"
-          TopLeft="276.291666471089,209.500001859665">
+          TopLeft="278.5,356.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-156.291666955377,-49.0166631914176"
+              EndConnector="-191.5,60"
               Start="0,0"
-              End="-156.291666955377,-41.5166631914176">
+              End="-191.5,52.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,-12.7499289312391" />
+                    End="0,20.2735042735043" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,-12.7499289312391"
-                    Point2="0,-16.7499289312391"
-                    Point3="-4,-16.7499289312391" />
+                    Point1="0,20.2735042735043"
+                    Point2="0,24.2735042735043"
+                    Point3="-4,24.2735042735043" />
                   <mssgle:LineSegment
-                    End="-152.291666955377,-16.7499289312391" />
+                    End="-187.5,24.2735042735043" />
                   <mssgle:CubicBezierSegment
-                    Point1="-152.291666955377,-16.7499289312391"
-                    Point2="-156.291666955377,-16.7499289312391"
-                    Point3="-156.291666955377,-20.7499289312391" />
+                    Point1="-187.5,24.2735042735043"
+                    Point2="-191.5,24.2735042735043"
+                    Point3="-191.5,28.2735042735043" />
                   <mssgle:LineSegment
-                    End="-156.291666955377,-41.5166631914176" />
+                    End="-191.5,52.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-105.237220196438,-11.7499289312391,54.1827734375,11.43359375"
+              BoundingBox="-122.84138671875,29.2735042735043,54.1827734375,11.43359375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <NodeLayout
-          Size="166.666666666667,42.6666666666667"
+          Size="166,42"
           Id="Package\Stage to NDS\OLE DB Command"
-          TopLeft="474.541663025195,115.216672048072" />
+          TopLeft="400,414.5" />
         <EdgeLayout
           Id="Package\Stage to NDS.Paths[Changing Attribute Updates Output]"
-          TopLeft="376.958333137756,209.500001859665">
+          TopLeft="345.5,356.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="180.916663220773,-51.6166631449262"
+              EndConnector="137.5,58"
               Start="0,0"
-              End="180.916663220773,-44.1166631449262">
+              End="137.5,50.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,-13.6383985170293" />
+                    End="0,19.4643874643875" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,-13.6383985170293"
-                    Point2="0,-17.6383985170293"
-                    Point3="4,-17.6383985170293" />
+                    Point1="0,19.4643874643875"
+                    Point2="0,23.4643874643875"
+                    Point3="4,23.4643874643875" />
                   <mssgle:LineSegment
-                    End="176.916663220773,-17.6383985170293" />
+                    End="133.5,23.4643874643875" />
                   <mssgle:CubicBezierSegment
-                    Point1="176.916663220773,-17.6383985170293"
-                    Point2="180.916663220773,-17.6383985170293"
-                    Point3="180.916663220773,-21.6383985170293" />
+                    Point1="133.5,23.4643874643875"
+                    Point2="137.5,23.4643874643875"
+                    Point3="137.5,27.4643874643875" />
                   <mssgle:LineSegment
-                    End="180.916663220773,-44.1166631449262" />
+                    End="137.5,50.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="11.9244253603864,-12.6383985170293,157.0678125,11.6630859375"
+              BoundingBox="-9.78390625000003,28.4643874643875,157.0678125,11.6630859375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -1130,7 +1178,7 @@
   &lt;TableName&gt;[dbo].[County]&lt;/TableName&gt;
   &lt;InputToColumnsCollection&gt;
     &lt;InputColumnToDBColumn&gt;
-      &lt;IdentificationString&gt;WikiPostcode.Outputs[OLE DB Source Output].Columns[Postcode districts]&lt;/IdentificationString&gt;
+      &lt;IdentificationString&gt;Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Postcode districts]&lt;/IdentificationString&gt;
       &lt;ColumnName&gt;County_NK&lt;/ColumnName&gt;
       &lt;KeyType&gt;BusinessKey&lt;/KeyType&gt;
       &lt;ChangeType&gt;None&lt;/ChangeType&gt;
@@ -1139,25 +1187,25 @@
       &lt;IdentificationString&gt;Data Conversion.Outputs[Data Conversion Output].Columns[Copy of County]&lt;/IdentificationString&gt;
       &lt;ColumnName&gt;CountyName&lt;/ColumnName&gt;
       &lt;KeyType&gt;None&lt;/KeyType&gt;
-      &lt;ChangeType&gt;ChangingAttribute&lt;/ChangeType&gt;
+      &lt;ChangeType&gt;FixedAttribute&lt;/ChangeType&gt;
     &lt;/InputColumnToDBColumn&gt;
     &lt;InputColumnToDBColumn&gt;
       &lt;IdentificationString&gt;Add SourceID, timestamps.Outputs[Derived Column Output].Columns[createAt]&lt;/IdentificationString&gt;
       &lt;ColumnName&gt;Create_time&lt;/ColumnName&gt;
       &lt;KeyType&gt;None&lt;/KeyType&gt;
-      &lt;ChangeType&gt;None&lt;/ChangeType&gt;
+      &lt;ChangeType&gt;FixedAttribute&lt;/ChangeType&gt;
     &lt;/InputColumnToDBColumn&gt;
     &lt;InputColumnToDBColumn&gt;
       &lt;IdentificationString&gt;Add SourceID, timestamps.Outputs[Derived Column Output].Columns[SourceID]&lt;/IdentificationString&gt;
       &lt;ColumnName&gt;Source_ID&lt;/ColumnName&gt;
       &lt;KeyType&gt;None&lt;/KeyType&gt;
-      &lt;ChangeType&gt;None&lt;/ChangeType&gt;
+      &lt;ChangeType&gt;FixedAttribute&lt;/ChangeType&gt;
     &lt;/InputColumnToDBColumn&gt;
     &lt;InputColumnToDBColumn&gt;
       &lt;IdentificationString&gt;Add SourceID, timestamps.Outputs[Derived Column Output].Columns[updateAt]&lt;/IdentificationString&gt;
       &lt;ColumnName&gt;Update_time&lt;/ColumnName&gt;
       &lt;KeyType&gt;None&lt;/KeyType&gt;
-      &lt;ChangeType&gt;None&lt;/ChangeType&gt;
+      &lt;ChangeType&gt;ChangingAttribute&lt;/ChangeType&gt;
     &lt;/InputColumnToDBColumn&gt;
   &lt;/InputToColumnsCollection&gt;
   &lt;GeneratedComponentsIdentificationStrings&gt;
@@ -1176,19 +1224,6 @@
   &lt;DateVariable /&gt;
   &lt;EnableInferredSupport&gt;false&lt;/EnableInferredSupport&gt;
 &lt;/SCDWizardMetadata&gt;</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Stage to NDS\Insert Destination">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
