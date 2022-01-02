@@ -114,8 +114,10 @@ CREATE TABLE [PCD_LSOA] (
     [lsoa11cd] varchar(50),
 )
 ------
+DROP TABLE Wiki_Postcodes
+
 CREATE TABLE [Wiki_Postcodes] (
-    [Postcode districts] varchar(MAX),
+    [Postcode districts] varchar(255),
     [County] varchar(50)
 )
 GO
