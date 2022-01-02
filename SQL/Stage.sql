@@ -1,4 +1,5 @@
 use master
+GO
 
 if DB_ID ('Stage_DATH') is not null
 	drop database Stage_DATH
@@ -113,8 +114,10 @@ CREATE TABLE [PCD_LSOA] (
     [lsoa11cd] varchar(50),
 )
 ------
+DROP TABLE Wiki_Postcodes
+
 CREATE TABLE [Wiki_Postcodes] (
-    [Postcode districts] nvarchar(150),
+    [Postcode districts] varchar(255),
     [County] varchar(50)
 )
 GO
@@ -126,10 +129,13 @@ CREATE TABLE [Postcode_district] (
 )
 GO
 
+use Stage_DATH
+GO
+
 CREATE PROC Wiki_Split_SingleRow
 AS
 DECLARE 
- @pcd VARCHAR(150),
+ @pcd VARCHAR(255),
  @split_pcd VARCHAR(50),
  @pcounty VARCHAR(50)
 BEGIN
