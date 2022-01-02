@@ -22,7 +22,7 @@ CREATE TABLE Source_NDS
 )
 
 INSERT INTO dbo.Source_NDS
-VALUES ('Codebook'), ('Accidents'), ('Casualties'), ('Vehicles'), ('Postcodes'), ('WikiPostcodes'), ('PostcodeDistrict')
+VALUES ('Codebook'), ('Accidents'), ('Casualties'), ('Vehicles'), ('Postcodes'), ('WikiPostcodes'), ('PostcodeDistrict'), ('LSOA')
 
 
 CREATE TABLE Severity

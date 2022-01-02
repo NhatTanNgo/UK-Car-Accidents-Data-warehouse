@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="9"
-  DTS:VersionGUID="{297FD50A-BBB6-403E-937C-3A3B35777CF7}">
+  DTS:VersionBuild="11"
+  DTS:VersionGUID="{F98AE402-EE72-4F62-A936-A6056C9E232F}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables>
@@ -166,7 +166,8 @@
                   <inputColumns>
                     <inputColumn
                       refId="Package\Load data into stage\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Postcode districts]"
-                      cachedDataType="wstr"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
                       cachedLength="255"
                       cachedName="Postcode districts"
                       externalMetadataColumnId="Package\Load data into stage\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Postcode districts]"
@@ -184,7 +185,8 @@
                     isUsed="True">
                     <externalMetadataColumn
                       refId="Package\Load data into stage\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Postcode districts]"
-                      dataType="wstr"
+                      codePage="1252"
+                      dataType="str"
                       length="255"
                       name="Postcode districts" />
                     <externalMetadataColumn
@@ -297,7 +299,8 @@ Where (Create_time &gt;=? and Create_time &lt;=?) or (Update_time &gt;=? and Upd
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
                       refId="Package\Load data into stage\OLE DB Source.Outputs[OLE DB Source Output].Columns[Postcode districts]"
-                      dataType="wstr"
+                      codePage="1252"
+                      dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Load data into stage\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Postcode districts]"
@@ -356,7 +359,8 @@ Where (Create_time &gt;=? and Create_time &lt;=?) or (Update_time &gt;=? and Upd
                       name="Postcode area" />
                     <externalMetadataColumn
                       refId="Package\Load data into stage\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Postcode districts]"
-                      dataType="wstr"
+                      codePage="1252"
+                      dataType="str"
                       length="255"
                       name="Postcode districts" />
                     <externalMetadataColumn
@@ -395,7 +399,8 @@ Where (Create_time &gt;=? and Create_time &lt;=?) or (Update_time &gt;=? and Upd
                       name="Postcode area" />
                     <outputColumn
                       refId="Package\Load data into stage\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Postcode districts]"
-                      dataType="wstr"
+                      codePage="1252"
+                      dataType="str"
                       length="255"
                       lineageId="Package\Load data into stage\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Postcode districts]"
                       name="Postcode districts" />
@@ -594,23 +599,23 @@ Where (Create_time &gt;=? and Create_time &lt;=?) or (Update_time &gt;=? and Upd
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="132,42.6666666666667"
+          Size="132,43"
           Id="Package\Clear stage"
           TopLeft="272.999996908008,60" />
         <NodeLayout
-          Size="154.666666666667,42.6666666666667"
+          Size="155,43"
           Id="Package\Get CET &amp; LSET"
           TopLeft="63.1249999534339,58.8166658414406" />
         <NodeLayout
-          Size="176,42.6666666666667"
+          Size="176,43"
           Id="Package\Load data into stage"
           TopLeft="466.124994030222,182.849997803271" />
         <NodeLayout
-          Size="141.333333333334,42.6666666666667"
+          Size="141,43"
           Id="Package\Profiling Wiki"
           TopLeft="173.124998314306,229.083328974744" />
         <NodeLayout
-          Size="140,42.6666666666667"
+          Size="140,43"
           Id="Package\Update LSET"
           TopLeft="177.499998249113,154.983330299755" />
         <EdgeLayout
@@ -746,11 +751,11 @@ Where (Create_time &gt;=? and Create_time &lt;=?) or (Update_time &gt;=? and Upd
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="150.666666666667,42.6666666666667"
+          Size="151,43"
           Id="Package\Load data into stage\OLE DB Source"
           TopLeft="75.6249988730997,64.9999988377094" />
         <NodeLayout
-          Size="172,42.6666666666667"
+          Size="172,43"
           Id="Package\Load data into stage\OLE DB Destination"
           TopLeft="315.374995687977,62.7999989306928" />
         <EdgeLayout

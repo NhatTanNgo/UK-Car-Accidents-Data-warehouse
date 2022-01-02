@@ -1,0 +1,61 @@
+﻿<?xml version="1.0"?>
+<DTS:ConnectionManager xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:ObjectName="Flatfile_No_match_LSOA_Postcode_ID"
+  DTS:DTSID="{2BD3B96C-0A04-4D9C-A949-29EFCA98FD63}"
+  DTS:CreationName="FLATFILE">
+  <DTS:ObjectData>
+    <DTS:ConnectionManager
+      DTS:Format="Delimited"
+      DTS:LocaleID="1033"
+      DTS:HeaderRowDelimiter="_x000D__x000A_"
+      DTS:RowDelimiter=""
+      DTS:TextQualifier="_x003C_none_x003E_"
+      DTS:CodePage="1252"
+      DTS:ConnectionString="C:\Flatfile_No_mat_LSOA_Postcode_ID.txt">
+      <DTS:FlatFileColumns>
+        <DTS:FlatFileColumn
+          DTS:ColumnType="Delimited"
+          DTS:ColumnDelimiter="_x002C_"
+          DTS:DataType="3"
+          DTS:TextQualified="True"
+          DTS:ObjectName="SrcID"
+          DTS:DTSID="{AB1C4FF2-7054-4FF9-BF63-AE58DF1A84A6}"
+          DTS:CreationName="" />
+        <DTS:FlatFileColumn
+          DTS:ColumnType="Delimited"
+          DTS:ColumnDelimiter="_x002C_"
+          DTS:MaximumWidth="255"
+          DTS:DataType="129"
+          DTS:TextQualified="True"
+          DTS:ObjectName="LSOA"
+          DTS:DTSID="{B95AA55B-AAB8-4D24-BCBA-D2F037D0EA2D}"
+          DTS:CreationName="" />
+        <DTS:FlatFileColumn
+          DTS:ColumnType="Delimited"
+          DTS:ColumnDelimiter="_x002C_"
+          DTS:MaximumWidth="255"
+          DTS:DataType="129"
+          DTS:TextQualified="True"
+          DTS:ObjectName="Postcode_NK"
+          DTS:DTSID="{1F85BEBE-C9E0-4FD1-BB97-6DF67502A17C}"
+          DTS:CreationName="" />
+        <DTS:FlatFileColumn
+          DTS:ColumnType="Delimited"
+          DTS:ColumnDelimiter="_x002C_"
+          DTS:DataType="135"
+          DTS:TextQualified="True"
+          DTS:ObjectName="Create_time"
+          DTS:DTSID="{63256E76-FE9A-4336-A92A-AB5E85F9977D}"
+          DTS:CreationName="" />
+        <DTS:FlatFileColumn
+          DTS:ColumnType="Delimited"
+          DTS:ColumnDelimiter="_x000D__x000A_"
+          DTS:DataType="135"
+          DTS:TextQualified="True"
+          DTS:ObjectName="Update_time"
+          DTS:DTSID="{D7A90F88-3816-4331-A2E1-BF56EA6654C0}"
+          DTS:CreationName="" />
+      </DTS:FlatFileColumns>
+    </DTS:ConnectionManager>
+  </DTS:ObjectData>
+</DTS:ConnectionManager>
