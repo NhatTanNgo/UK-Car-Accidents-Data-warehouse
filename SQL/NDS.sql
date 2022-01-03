@@ -204,6 +204,10 @@ CREATE TABLE Accidents
 	Source_ID INT FOREIGN KEY REFERENCES dbo.Source_NDS
 )
 
+Alter table Accidents
+add Number_Of_Casualties int
+
+go
 CREATE TABLE Casualties
 (
 	Casualties_ID INT IDENTITY(1,1) PRIMARY KEY,

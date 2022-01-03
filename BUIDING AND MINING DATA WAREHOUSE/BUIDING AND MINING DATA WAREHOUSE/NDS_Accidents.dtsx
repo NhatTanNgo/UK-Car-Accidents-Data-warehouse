@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="38"
-  DTS:VersionGUID="{F456CE6C-6B38-44E5-A5AA-72266B537FA3}">
+  DTS:VersionBuild="39"
+  DTS:VersionGUID="{DAD4A56A-5090-4FEB-BB82-1BA1CB1AB26B}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -257,6 +257,17 @@
                       length="50"
                       lineageId="Package\Accidents Stage to NDS\Accidents Stage.Outputs[OLE DB Source Output].Columns[Police_Force]"
                       name="Police_Force"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Accidents Stage to NDS\Accidents Stage.Outputs[OLE DB Source Output].Columns[Number_of_Casualties]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Accidents Stage to NDS\Accidents Stage.Outputs[OLE DB Source Output].ExternalColumns[Number_of_Casualties]"
+                      length="50"
+                      lineageId="Package\Accidents Stage to NDS\Accidents Stage.Outputs[OLE DB Source Output].Columns[Number_of_Casualties]"
+                      name="Number_of_Casualties"
                       truncationRowDisposition="FailComponent" />
                   </outputColumns>
                   <externalMetadataColumns
@@ -563,6 +574,13 @@
                       length="50"
                       lineageId="Package\Accidents Stage to NDS\Accidents Stage.Outputs[OLE DB Source Error Output].Columns[Police_Force]"
                       name="Police_Force" />
+                    <outputColumn
+                      refId="Package\Accidents Stage to NDS\Accidents Stage.Outputs[OLE DB Source Error Output].Columns[Number_of_Casualties]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Accidents Stage to NDS\Accidents Stage.Outputs[OLE DB Source Error Output].Columns[Number_of_Casualties]"
+                      name="Number_of_Casualties" />
                   </outputColumns>
                   <externalMetadataColumns />
                 </output>
@@ -1967,7 +1985,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
                   dataType="System.Int32"
                   description="Specifies the mode used to access the database."
                   name="AccessMode"
-                  typeConverter="AccessMode">0</property>
+                  typeConverter="AccessMode">3</property>
                 <property
                   dataType="System.Boolean"
                   description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
@@ -1979,7 +1997,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
                 <property
                   dataType="System.String"
                   description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
-                  name="FastLoadOptions"></property>
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
@@ -2115,6 +2133,14 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
                       cachedName="SourceID"
                       externalMetadataColumnId="Package\Accidents Stage to NDS\Insert Destination.Inputs[OLE DB Destination Input].ExternalColumns[Source_ID]"
                       lineageId="Package\Accidents Stage to NDS\Union All.Outputs[Union All Output 1].Columns[SourceID]" />
+                    <inputColumn
+                      refId="Package\Accidents Stage to NDS\Insert Destination.Inputs[OLE DB Destination Input].Columns[Number_of_Casualties]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Number_of_Casualties"
+                      externalMetadataColumnId="Package\Accidents Stage to NDS\Insert Destination.Inputs[OLE DB Destination Input].ExternalColumns[Number_Of_Casualties]"
+                      lineageId="Package\Accidents Stage to NDS\Union All.Outputs[Union All Output 1].Columns[Number_of_Casualties]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -2203,6 +2229,10 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
                       refId="Package\Accidents Stage to NDS\Insert Destination.Inputs[OLE DB Destination Input].ExternalColumns[Source_ID]"
                       dataType="i4"
                       name="Source_ID" />
+                    <externalMetadataColumn
+                      refId="Package\Accidents Stage to NDS\Insert Destination.Inputs[OLE DB Destination Input].ExternalColumns[Number_Of_Casualties]"
+                      dataType="i4"
+                      name="Number_Of_Casualties" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
@@ -4403,6 +4433,21 @@ where [refTable].[CODE_NK] = ?</property>
                           name="OutputColumnLineageID">#{Package\Accidents Stage to NDS\Union All.Outputs[Union All Output 1].Columns[Built_Up_Road]}</property>
                       </properties>
                     </inputColumn>
+                    <inputColumn
+                      refId="Package\Accidents Stage to NDS\Union All.Inputs[Union All Input 1].Columns[Number_of_Casualties]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Number_of_Casualties"
+                      lineageId="Package\Accidents Stage to NDS\Accidents Stage.Outputs[OLE DB Source Output].Columns[Number_of_Casualties]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Accidents Stage to NDS\Union All.Outputs[Union All Output 1].Columns[Number_of_Casualties]}</property>
+                      </properties>
+                    </inputColumn>
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
@@ -4793,6 +4838,21 @@ where [refTable].[CODE_NK] = ?</property>
                           name="OutputColumnLineageID">#{Package\Accidents Stage to NDS\Union All.Outputs[Union All Output 1].Columns[Built_Up_Road]}</property>
                       </properties>
                     </inputColumn>
+                    <inputColumn
+                      refId="Package\Accidents Stage to NDS\Union All.Inputs[Union All Input 2].Columns[Number_of_Casualties]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Number_of_Casualties"
+                      lineageId="Package\Accidents Stage to NDS\Accidents Stage.Outputs[OLE DB Source Output].Columns[Number_of_Casualties]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Accidents Stage to NDS\Union All.Outputs[Union All Output 1].Columns[Number_of_Casualties]}</property>
+                      </properties>
+                    </inputColumn>
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
@@ -4975,6 +5035,13 @@ where [refTable].[CODE_NK] = ?</property>
                       length="50"
                       lineageId="Package\Accidents Stage to NDS\Union All.Outputs[Union All Output 1].Columns[Built_Up_Road]"
                       name="Built_Up_Road" />
+                    <outputColumn
+                      refId="Package\Accidents Stage to NDS\Union All.Outputs[Union All Output 1].Columns[Number_of_Casualties]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Accidents Stage to NDS\Union All.Outputs[Union All Output 1].Columns[Number_of_Casualties]"
+                      name="Number_of_Casualties" />
                   </outputColumns>
                   <externalMetadataColumns />
                 </output>
@@ -4993,35 +5060,45 @@ where [refTable].[CODE_NK] = ?</property>
               name="Changing Attribute Updates Output"
               startId="Package\Accidents Stage to NDS\Slowly Changing Dimension.Outputs[Changing Attribute Updates Output]" />
             <path
-              refId="Package\Accidents Stage to NDS.Paths[Data Conversion Output1]"
+              refId="Package\Accidents Stage to NDS.Paths[Data Conversion Output]"
               endId="Package\Accidents Stage to NDS\Split speedLimit.Inputs[Conditional Split Input]"
               name="Data Conversion Output"
               startId="Package\Accidents Stage to NDS\Data conversion.Outputs[Data Conversion Output]" />
             <path
-              refId="Package\Accidents Stage to NDS.Paths[Data Conversion Output]"
+              refId="Package\Accidents Stage to NDS.Paths[Data Conversion Output1]"
               endId="Package\Accidents Stage to NDS\Add SourceID column.Inputs[Derived Column Input]"
               name="Data Conversion Output"
               startId="Package\Accidents Stage to NDS\Convert Police_Force Code to nvarchar.Outputs[Data Conversion Output]" />
             <path
-              refId="Package\Accidents Stage to NDS.Paths[Derived Column Output1]"
+              refId="Package\Accidents Stage to NDS.Paths[Derived Column Output]"
               endId="Package\Accidents Stage to NDS\convert time.Inputs[Input 0]"
               name="Derived Column Output"
               startId="Package\Accidents Stage to NDS\Add Timestamps.Outputs[Derived Column Output]" />
             <path
-              refId="Package\Accidents Stage to NDS.Paths[Derived Column Output2]"
+              refId="Package\Accidents Stage to NDS.Paths[Derived Column Output1]"
               endId="Package\Accidents Stage to NDS\Union All.Inputs[Union All Input 1]"
               name="Derived Column Output"
               startId="Package\Accidents Stage to NDS\Built up road.Outputs[Derived Column Output]" />
             <path
-              refId="Package\Accidents Stage to NDS.Paths[Derived Column Output3]"
+              refId="Package\Accidents Stage to NDS.Paths[Derived Column Output2]"
               endId="Package\Accidents Stage to NDS\Union All.Inputs[Union All Input 2]"
               name="Derived Column Output"
               startId="Package\Accidents Stage to NDS\Non built up road.Outputs[Derived Column Output]" />
             <path
-              refId="Package\Accidents Stage to NDS.Paths[Derived Column Output]"
+              refId="Package\Accidents Stage to NDS.Paths[Derived Column Output3]"
               endId="Package\Accidents Stage to NDS\Lookup Severity.Inputs[Lookup Input]"
               name="Derived Column Output"
               startId="Package\Accidents Stage to NDS\Add SourceID column.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\Accidents Stage to NDS.Paths[Lookup Match Output4]"
+              endId="Package\Accidents Stage to NDS\Lookup LSOA.Inputs[Lookup Input]"
+              name="Lookup Match Output"
+              startId="Package\Accidents Stage to NDS\Lookup Police Force.Outputs[Lookup Match Output]" />
+            <path
+              refId="Package\Accidents Stage to NDS.Paths[Lookup Match Output3]"
+              endId="Package\Accidents Stage to NDS\Lookup RoadType.Inputs[Lookup Input]"
+              name="Lookup Match Output"
+              startId="Package\Accidents Stage to NDS\Lookup Local_Authority.Outputs[Lookup Match Output]" />
             <path
               refId="Package\Accidents Stage to NDS.Paths[Lookup Match Output]"
               endId="Package\Accidents Stage to NDS\Lookup Local_Authority.Inputs[Lookup Input]"
@@ -5037,16 +5114,6 @@ where [refTable].[CODE_NK] = ?</property>
               endId="Package\Accidents Stage to NDS\Add Timestamps.Inputs[Derived Column Input]"
               name="Lookup Match Output"
               startId="Package\Accidents Stage to NDS\Lookup LSOA.Outputs[Lookup Match Output]" />
-            <path
-              refId="Package\Accidents Stage to NDS.Paths[Lookup Match Output3]"
-              endId="Package\Accidents Stage to NDS\Lookup RoadType.Inputs[Lookup Input]"
-              name="Lookup Match Output"
-              startId="Package\Accidents Stage to NDS\Lookup Local_Authority.Outputs[Lookup Match Output]" />
-            <path
-              refId="Package\Accidents Stage to NDS.Paths[Lookup Match Output4]"
-              endId="Package\Accidents Stage to NDS\Lookup LSOA.Inputs[Lookup Input]"
-              name="Lookup Match Output"
-              startId="Package\Accidents Stage to NDS\Lookup Police Force.Outputs[Lookup Match Output]" />
             <path
               refId="Package\Accidents Stage to NDS.Paths[New Output]"
               endId="Package\Accidents Stage to NDS\Insert Destination.Inputs[OLE DB Destination Input]"
@@ -5102,21 +5169,17 @@ where [refTable].[CODE_NK] = ?</property>
       <GraphLayout
         Capacity="64" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="152.8,41.6"
-          Id="Package\Accidents Stage to NDS\Split speedLimit"
-          TopLeft="234.3,1224.7" />
-        <NodeLayout
-          Size="140.8,41.6"
-          Id="Package\Accidents Stage to NDS\Lookup LSOA"
-          TopLeft="240.3,716.7" />
+          Size="162.4,41.6"
+          Id="Package\Accidents Stage to NDS\Insert Destination"
+          TopLeft="5.50000000000021,1631.1" />
         <NodeLayout
           Size="262.4,41.6"
           Id="Package\Accidents Stage to NDS\Convert Police_Force Code to nvarchar"
           TopLeft="179.5,107.100000000001" />
         <NodeLayout
-          Size="138.4,41.6"
-          Id="Package\Accidents Stage to NDS\Built up road"
-          TopLeft="241.5,1326.3" />
+          Size="120,41.6"
+          Id="Package\Accidents Stage to NDS\Union All"
+          TopLeft="275.892861841285,1451.7500043301" />
         <NodeLayout
           Size="160.8,41.6"
           Id="Package\Accidents Stage to NDS\Non built up road"
@@ -5126,21 +5189,21 @@ where [refTable].[CODE_NK] = ?</property>
           Id="Package\Accidents Stage to NDS\Lookup Police Force"
           TopLeft="224.3,615.1" />
         <NodeLayout
+          Size="138.4,41.6"
+          Id="Package\Accidents Stage to NDS\Built up road"
+          TopLeft="241.5,1326.3" />
+        <NodeLayout
           Size="208,41.6"
           Id="Package\Accidents Stage to NDS\Slowly Changing Dimension"
           TopLeft="206.7,1529.5" />
         <NodeLayout
+          Size="140.8,41.6"
+          Id="Package\Accidents Stage to NDS\Lookup LSOA"
+          TopLeft="240.3,716.7" />
+        <NodeLayout
           Size="154.4,41.6"
           Id="Package\Accidents Stage to NDS\Data conversion"
           TopLeft="233.5,1021.5" />
-        <NodeLayout
-          Size="153.6,41.6"
-          Id="Package\Accidents Stage to NDS\Lookup Severity"
-          TopLeft="233.9,310.3" />
-        <NodeLayout
-          Size="156.8,41.6"
-          Id="Package\Accidents Stage to NDS\Add Timestamps"
-          TopLeft="232.3,818.3" />
         <NodeLayout
           Size="192,41.6"
           Id="Package\Accidents Stage to NDS\Lookup RoadType"
@@ -5151,12 +5214,32 @@ where [refTable].[CODE_NK] = ?</property>
           TopLeft="216.3,411.9" />
         <NodeLayout
           Size="152.8,41.6"
+          Id="Package\Accidents Stage to NDS\Split speedLimit"
+          TopLeft="234.3,1224.7" />
+        <NodeLayout
+          Size="156.8,41.6"
+          Id="Package\Accidents Stage to NDS\Add Timestamps"
+          TopLeft="232.3,818.3" />
+        <NodeLayout
+          Size="137.6,41.6"
+          Id="Package\Accidents Stage to NDS\convert time"
+          TopLeft="229.5,919.9" />
+        <NodeLayout
+          Size="153.6,41.6"
+          Id="Package\Accidents Stage to NDS\Lookup Severity"
+          TopLeft="233.9,310.3" />
+        <NodeLayout
+          Size="152.8,41.6"
           Id="Package\Accidents Stage to NDS\Accidents Stage"
           TopLeft="234.3,5.50000000000018" />
         <NodeLayout
           Size="180.8,41.6"
           Id="Package\Accidents Stage to NDS\Add SourceID column"
           TopLeft="220.3,208.7" />
+        <NodeLayout
+          Size="164.8,41.6"
+          Id="Package\Accidents Stage to NDS\OLE DB Command"
+          TopLeft="228.3,1631.1" />
         <EdgeLayout
           Id="Package\Accidents Stage to NDS.Paths[OLE DB Source Output]"
           TopLeft="310.7,47.1000000000002">
@@ -5212,6 +5295,42 @@ where [refTable].[CODE_NK] = ?</property>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
               BoundingBox="-133.476321614583,29.3730569948187,81.0859765625,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Accidents Stage to NDS.Paths[New Output]"
+          TopLeft="277.366666666667,1571.1">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-190.666666666667,60.0000000000002"
+              Start="0,0"
+              End="-190.666666666667,52.5000000000002">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,20.2748091603054" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,20.2748091603054"
+                    Point2="0,24.2748091603054"
+                    Point3="-4,24.2748091603054" />
+                  <mssgle:LineSegment
+                    End="-186.666666666667,24.2748091603054" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-186.666666666667,24.2748091603054"
+                    Point2="-190.666666666667,24.2748091603054"
+                    Point3="-190.666666666667,28.2748091603054" />
+                  <mssgle:LineSegment
+                    End="-190.666666666667,52.5000000000002" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-122.424720052083,29.2748091603054,54.1827734375,11.43359375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -5336,7 +5455,7 @@ where [refTable].[CODE_NK] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Accidents Stage to NDS.Paths[Derived Column Output]"
+          Id="Package\Accidents Stage to NDS.Paths[Derived Column Output3]"
           TopLeft="310.7,250.3">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -5358,7 +5477,109 @@ where [refTable].[CODE_NK] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Accidents Stage to NDS.Paths[Data Conversion Output]"
+          Id="Package\Accidents Stage to NDS.Paths[Derived Column Output2]"
+          TopLeft="100.7,1367.9">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="216.526195174618,83.8500043301026"
+              Start="0,0"
+              End="216.526195174618,76.3500043301026">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,45.648028879666" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,45.648028879666"
+                    Point2="0,49.648028879666"
+                    Point3="4,49.648028879666" />
+                  <mssgle:LineSegment
+                    End="212.526195174618,49.648028879666" />
+                  <mssgle:CubicBezierSegment
+                    Point1="212.526195174618,49.648028879666"
+                    Point2="216.526195174618,49.648028879666"
+                    Point3="216.526195174618,53.648028879666" />
+                  <mssgle:LineSegment
+                    End="216.526195174618,76.3500043301026" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Accidents Stage to NDS.Paths[Derived Column Output1]"
+          TopLeft="310.7,1367.9">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="25.1928618412844,83.8500043301026"
+              Start="0,0"
+              End="25.1928618412844,76.3500043301026">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,37.9250021650513" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,37.9250021650513"
+                    Point2="0,41.9250021650513"
+                    Point3="4,41.9250021650513" />
+                  <mssgle:LineSegment
+                    End="21.1928618412844,41.9250021650513" />
+                  <mssgle:CubicBezierSegment
+                    Point1="21.1928618412844,41.9250021650513"
+                    Point2="25.1928618412844,41.9250021650513"
+                    Point3="25.1928618412844,45.9250021650513" />
+                  <mssgle:LineSegment
+                    End="25.1928618412844,76.3500043301026" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Accidents Stage to NDS.Paths[Derived Column Output]"
+          TopLeft="310.7,859.9">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-12.4,59.9999999999999"
+              Start="0,0"
+              End="-12.4,52.4999999999999">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,25.9999999999999" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,25.9999999999999"
+                    Point2="0,29.9999999999999"
+                    Point3="-4,29.9999999999999" />
+                  <mssgle:LineSegment
+                    End="-8.39999999999998,29.9999999999999" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-8.39999999999998,29.9999999999999"
+                    Point2="-12.4,29.9999999999999"
+                    Point3="-12.4,33.9999999999999" />
+                  <mssgle:LineSegment
+                    End="-12.4,52.4999999999999" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Accidents Stage to NDS.Paths[Data Conversion Output1]"
           TopLeft="310.7,148.700000000001">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -5377,6 +5598,64 @@ where [refTable].[CODE_NK] = ?</property>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Accidents Stage to NDS.Paths[Data Conversion Output]"
+          TopLeft="310.7,1063.1">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,161.6"
+              Start="0,0"
+              End="0,154.1">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,154.1" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Accidents Stage to NDS.Paths[Changing Attribute Updates Output]"
+          TopLeft="344.033333333334,1571.1">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-33.3333333333333,60.0000000000002"
+              Start="0,0"
+              End="-33.3333333333333,52.5000000000002">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,20.2748091603054" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,20.2748091603054"
+                    Point2="0,24.2748091603054"
+                    Point3="-4,24.2748091603054" />
+                  <mssgle:LineSegment
+                    End="-29.3333333333333,24.2748091603054" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-29.3333333333333,24.2748091603054"
+                    Point2="-33.3333333333333,24.2748091603054"
+                    Point3="-33.3333333333333,28.2748091603054" />
+                  <mssgle:LineSegment
+                    End="-33.3333333333333,52.5000000000002" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-95.2005729166667,29.2748091603054,157.0678125,11.6630859375"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -5415,36 +5694,32 @@ where [refTable].[CODE_NK] = ?</property>
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="137.6,41.6"
-          Id="Package\Accidents Stage to NDS\convert time"
-          TopLeft="229.5,919.9" />
         <EdgeLayout
-          Id="Package\Accidents Stage to NDS.Paths[Derived Column Output1]"
-          TopLeft="310.7,859.9">
+          Id="Package\Accidents Stage to NDS.Paths[Union All Output 1]"
+          TopLeft="335.892861841285,1493.3500043301">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-12.4,59.9999999999999"
+              EndConnector="-25.1928618412844,36.1499956698974"
               Start="0,0"
-              End="-12.4,52.4999999999999">
+              End="-25.1928618412844,28.6499956698974">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,25.9999999999999" />
+                    End="0,14.0749978349487" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,25.9999999999999"
-                    Point2="0,29.9999999999999"
-                    Point3="-4,29.9999999999999" />
+                    Point1="0,14.0749978349487"
+                    Point2="0,18.0749978349487"
+                    Point3="-4,18.0749978349487" />
                   <mssgle:LineSegment
-                    End="-8.39999999999998,29.9999999999999" />
+                    End="-21.1928618412844,18.0749978349487" />
                   <mssgle:CubicBezierSegment
-                    Point1="-8.39999999999998,29.9999999999999"
-                    Point2="-12.4,29.9999999999999"
-                    Point3="-12.4,33.9999999999999" />
+                    Point1="-21.1928618412844,18.0749978349487"
+                    Point2="-25.1928618412844,18.0749978349487"
+                    Point3="-25.1928618412844,22.0749978349487" />
                   <mssgle:LineSegment
-                    End="-12.4,52.4999999999999" />
+                    End="-25.1928618412844,28.6499956698974" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -5487,237 +5762,19 @@ where [refTable].[CODE_NK] = ?</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="162.4,41.6"
-          Id="Package\Accidents Stage to NDS\Insert Destination"
-          TopLeft="5.50000000000021,1631.1" />
-        <EdgeLayout
-          Id="Package\Accidents Stage to NDS.Paths[New Output]"
-          TopLeft="277.366666666667,1571.1">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-190.666666666667,60.0000000000002"
-              Start="0,0"
-              End="-190.666666666667,52.5000000000002">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,20.2748091603054" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,20.2748091603054"
-                    Point2="0,24.2748091603054"
-                    Point3="-4,24.2748091603054" />
-                  <mssgle:LineSegment
-                    End="-186.666666666667,24.2748091603054" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-186.666666666667,24.2748091603054"
-                    Point2="-190.666666666667,24.2748091603054"
-                    Point3="-190.666666666667,28.2748091603054" />
-                  <mssgle:LineSegment
-                    End="-190.666666666667,52.5000000000002" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-122.424720052083,29.2748091603054,54.1827734375,11.43359375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="164.8,41.6"
-          Id="Package\Accidents Stage to NDS\OLE DB Command"
-          TopLeft="228.3,1631.1" />
-        <EdgeLayout
-          Id="Package\Accidents Stage to NDS.Paths[Changing Attribute Updates Output]"
-          TopLeft="344.033333333334,1571.1">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-33.3333333333333,60.0000000000002"
-              Start="0,0"
-              End="-33.3333333333333,52.5000000000002">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,20.2748091603054" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,20.2748091603054"
-                    Point2="0,24.2748091603054"
-                    Point3="-4,24.2748091603054" />
-                  <mssgle:LineSegment
-                    End="-29.3333333333333,24.2748091603054" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-29.3333333333333,24.2748091603054"
-                    Point2="-33.3333333333333,24.2748091603054"
-                    Point3="-33.3333333333333,28.2748091603054" />
-                  <mssgle:LineSegment
-                    End="-33.3333333333333,52.5000000000002" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-95.2005729166667,29.2748091603054,157.0678125,11.6630859375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="120,41.6"
-          Id="Package\Accidents Stage to NDS\Union All"
-          TopLeft="275.892861841285,1451.7500043301" />
-        <EdgeLayout
-          Id="Package\Accidents Stage to NDS.Paths[Derived Column Output2]"
-          TopLeft="310.7,1367.9">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="25.1928618412844,83.8500043301026"
-              Start="0,0"
-              End="25.1928618412844,76.3500043301026">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,37.9250021650513" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,37.9250021650513"
-                    Point2="0,41.9250021650513"
-                    Point3="4,41.9250021650513" />
-                  <mssgle:LineSegment
-                    End="21.1928618412844,41.9250021650513" />
-                  <mssgle:CubicBezierSegment
-                    Point1="21.1928618412844,41.9250021650513"
-                    Point2="25.1928618412844,41.9250021650513"
-                    Point3="25.1928618412844,45.9250021650513" />
-                  <mssgle:LineSegment
-                    End="25.1928618412844,76.3500043301026" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Accidents Stage to NDS.Paths[Derived Column Output3]"
-          TopLeft="100.7,1367.9">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="216.526195174618,83.8500043301026"
-              Start="0,0"
-              End="216.526195174618,76.3500043301026">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,45.648028879666" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,45.648028879666"
-                    Point2="0,49.648028879666"
-                    Point3="4,49.648028879666" />
-                  <mssgle:LineSegment
-                    End="212.526195174618,49.648028879666" />
-                  <mssgle:CubicBezierSegment
-                    Point1="212.526195174618,49.648028879666"
-                    Point2="216.526195174618,49.648028879666"
-                    Point3="216.526195174618,53.648028879666" />
-                  <mssgle:LineSegment
-                    End="216.526195174618,76.3500043301026" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Accidents Stage to NDS.Paths[Union All Output 1]"
-          TopLeft="335.892861841285,1493.3500043301">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-25.1928618412844,36.1499956698974"
-              Start="0,0"
-              End="-25.1928618412844,28.6499956698974">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,14.0749978349487" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,14.0749978349487"
-                    Point2="0,18.0749978349487"
-                    Point3="-4,18.0749978349487" />
-                  <mssgle:LineSegment
-                    End="-21.1928618412844,18.0749978349487" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-21.1928618412844,18.0749978349487"
-                    Point2="-25.1928618412844,18.0749978349487"
-                    Point3="-25.1928618412844,22.0749978349487" />
-                  <mssgle:LineSegment
-                    End="-25.1928618412844,28.6499956698974" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Accidents Stage to NDS.Paths[Data Conversion Output1]"
-          TopLeft="310.7,1063.1">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,161.6"
-              Start="0,0"
-              End="0,154.1">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,154.1" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\Accidents Stage to NDS\Lookup LSOA">
+    design-time-name="Package\Accidents Stage to NDS\Insert Destination">
     <Properties>
       <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:string">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string">[dbo].[LSOA_Mapping]</Value>
+        <Name>DataSourceViewID</Name>
       </Property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:string">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
+          type="q2:string">Table</Value>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
@@ -5878,7 +5935,7 @@ where [refTable].[CODE_NK] = ?</property>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Accidents Stage to NDS\Lookup Severity">
+    design-time-name="Package\Accidents Stage to NDS\Lookup LSOA">
     <Properties>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
@@ -5888,7 +5945,7 @@ where [refTable].[CODE_NK] = ?</property>
       <Property>
         <Name>UsedTableName</Name>
         <Value
-          type="q3:string">[dbo].[Severity]</Value>
+          type="q3:string">[dbo].[LSOA_Mapping]</Value>
       </Property>
       <Property>
         <Name>TableInfoObjectType</Name>
@@ -5935,6 +5992,29 @@ where [refTable].[CODE_NK] = ?</property>
         <Name>UsedTableName</Name>
         <Value
           type="q3:string">[dbo].[Local_Authority_Highway]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Accidents Stage to NDS\Lookup Severity">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[Severity]</Value>
       </Property>
       <Property>
         <Name>TableInfoObjectType</Name>
