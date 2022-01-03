@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="8"
-  DTS:VersionGUID="{969431E5-555D-4644-B659-5164A9588001}">
+  DTS:VersionBuild="9"
+  DTS:VersionGUID="{5F3288B2-20ED-45F7-96EB-1DEB1BCC3C47}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables>
@@ -173,14 +173,6 @@
                       externalMetadataColumnId="Package\Load data into stage\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Postcode]"
                       lineageId="Package\Load data into stage\OLE DB Source.Outputs[OLE DB Source Output].Columns[Postcode]" />
                     <inputColumn
-                      refId="Package\Load data into stage\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Region]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="Region"
-                      externalMetadataColumnId="Package\Load data into stage\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Town]"
-                      lineageId="Package\Load data into stage\OLE DB Source.Outputs[OLE DB Source Output].Columns[Region]" />
-                    <inputColumn
                       refId="Package\Load data into stage\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[UK region]"
                       cachedCodepage="1252"
                       cachedDataType="str"
@@ -197,12 +189,6 @@
                       dataType="str"
                       length="50"
                       name="Postcode" />
-                    <externalMetadataColumn
-                      refId="Package\Load data into stage\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Town]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="Town" />
                     <externalMetadataColumn
                       refId="Package\Load data into stage\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Region]"
                       codePage="1252"
@@ -853,23 +839,23 @@ Where (Create_time &gt;= ? and Create_time &lt;= ? ) or (Update_time &gt;= ? and
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="132,41.3333333333334"
+          Size="132,41.6"
           Id="Package\Clear stage"
           TopLeft="337.732144479734,64.4823515791381" />
         <NodeLayout
-          Size="162,41.3333333333334"
+          Size="161.6,41.6"
           Id="Package\Get CET &amp; LSET"
           TopLeft="60,60" />
         <NodeLayout
-          Size="176,41.3333333333334"
+          Size="176,41.6"
           Id="Package\Load data into stage"
           TopLeft="522.999998610998,200.332349564729" />
         <NodeLayout
-          Size="198.666666666667,42.6666666666667"
+          Size="198.4,42.4"
           Id="Package\Profiling Postcode district"
           TopLeft="203.750003286238,241.365680829185" />
         <NodeLayout
-          Size="140,41.3333333333334"
+          Size="140,41.6"
           Id="Package\Update LSET"
           TopLeft="253.125002550494,175.065682014721" />
         <EdgeLayout
@@ -1005,11 +991,11 @@ Where (Create_time &gt;= ? and Create_time &lt;= ? ) or (Update_time &gt;= ? and
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="156,42.6666666666667"
+          Size="156,42.4"
           Id="Package\Load data into stage\OLE DB Source"
           TopLeft="83.124998761341,48.7499991282821" />
         <NodeLayout
-          Size="170.666666666667,41.3333333333334"
+          Size="170.4,41.6"
           Id="Package\Load data into stage\OLE DB Destination"
           TopLeft="370.357149244115,50.9294133914837" />
         <EdgeLayout

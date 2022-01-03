@@ -2,17 +2,14 @@
 <DataProfile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.microsoft.com/sqlserver/2008/DataDebugger/">
   <ProfileVersion>1.0</ProfileVersion>
   <DataSources>
-    <DtsDataSource ID="{4BB6DFE4-1C33-4AAB-9C27-FC00588478C7}" Name="Casualties.txt">
-      <DtsConnectionManagerID>Casualties.txt</DtsConnectionManagerID>
-    </DtsDataSource>
-    <DtsDataSource ID="{21AD008F-DA45-41A4-AC46-411DD940B8C3}" Name="Accidents.txt">
-      <DtsConnectionManagerID>Accidents.txt</DtsConnectionManagerID>
-    </DtsDataSource>
     <DtsDataSource ID="{1D3BB03E-026F-4118-9A81-B32A8F21D086}" Name="Excel_Accidents">
       <DtsConnectionManagerID>Excel_Accidents</DtsConnectionManagerID>
     </DtsDataSource>
     <DtsDataSource ID="{627034E8-7440-456F-9E09-2A0DABD6C8EB}" Name="Excel_Casualties">
       <DtsConnectionManagerID>Excel_Casualties</DtsConnectionManagerID>
+    </DtsDataSource>
+    <DtsDataSource ID="{54B0FA4C-C577-451F-B860-AA9EA627FC84}" Name="Excel_CodeBook">
+      <DtsConnectionManagerID>Excel_CodeBook</DtsConnectionManagerID>
     </DtsDataSource>
     <DtsDataSource ID="{A79A3ABC-4E9C-4DCD-BDB7-8AB9ADBB5D90}" Name="Excel_LSOA">
       <DtsConnectionManagerID>Excel_LSOA</DtsConnectionManagerID>
@@ -29,6 +26,15 @@
     <DtsDataSource ID="{C20E7D12-09FB-4D04-8FBE-D0F3EC31B923}" Name="Excel_Wiki_Postcodes">
       <DtsConnectionManagerID>Excel_Wiki_Postcodes</DtsConnectionManagerID>
     </DtsDataSource>
+    <DtsDataSource ID="{2BD3B96C-0A04-4D9C-A949-29EFCA98FD63}" Name="Flatfile_No_match_LSOA_Postcode_ID">
+      <DtsConnectionManagerID>Flatfile_No_match_LSOA_Postcode_ID</DtsConnectionManagerID>
+    </DtsDataSource>
+    <DtsDataSource ID="{46E1B29A-7092-4B62-B4B1-CA96E0C1404E}" Name="Flatfile_No_match_Postcodes_CountyID">
+      <DtsConnectionManagerID>Flatfile_No_match_Postcodes_CountyID</DtsConnectionManagerID>
+    </DtsDataSource>
+    <DtsDataSource ID="{254CB340-4E9A-40F6-8399-ED617F44CBD3}" Name="Flatfile_No_match_Postcodes_TownID">
+      <DtsConnectionManagerID>Flatfile_No_match_Postcodes_TownID</DtsConnectionManagerID>
+    </DtsDataSource>
     <DtsDataSource ID="{DFF81239-B2A8-4950-83F9-2BB12A3D2296}" Name="LocalHost Stage_DATH">
       <DtsConnectionManagerID>LocalHost Stage_DATH</DtsConnectionManagerID>
     </DtsDataSource>
@@ -43,6 +49,27 @@
     </DtsDataSource>
     <DtsDataSource ID="{68B744B6-BFA4-417D-AA11-2C26D08D51D7}" Name="LocalHost.Stage_DATH 1">
       <DtsConnectionManagerID>LocalHost.Stage_DATH 1</DtsConnectionManagerID>
+    </DtsDataSource>
+    <DtsDataSource ID="{DD9BD263-759E-4E3D-9C42-24E9D5829447}" Name="Profiling Accidents">
+      <DtsConnectionManagerID>Profiling Accidents</DtsConnectionManagerID>
+    </DtsDataSource>
+    <DtsDataSource ID="{60335E41-A8E1-404A-ACAF-C4EDCB80FAEE}" Name="Profiling LSOA">
+      <DtsConnectionManagerID>Profiling LSOA</DtsConnectionManagerID>
+    </DtsDataSource>
+    <DtsDataSource ID="{005B4F3A-D8B2-43AD-B7FB-52585ABF979C}" Name="Profiling postcode">
+      <DtsConnectionManagerID>Profiling postcode</DtsConnectionManagerID>
+    </DtsDataSource>
+    <DtsDataSource ID="{56E3E844-8EBF-40E0-9221-74E3779679F7}" Name="Profiling postcode districts">
+      <DtsConnectionManagerID>Profiling postcode districts</DtsConnectionManagerID>
+    </DtsDataSource>
+    <DtsDataSource ID="{0DB53988-915E-41C6-A4A8-D6949A122C94}" Name="Profiling Vehicles">
+      <DtsConnectionManagerID>Profiling Vehicles</DtsConnectionManagerID>
+    </DtsDataSource>
+    <DtsDataSource ID="{82E25E24-B62D-4A7E-A071-189EF7469556}" Name="Profiling Wiki">
+      <DtsConnectionManagerID>Profiling Wiki</DtsConnectionManagerID>
+    </DtsDataSource>
+    <DtsDataSource ID="{4BB6DFE4-1C33-4AAB-9C27-FC00588478C7}" Name="Profiling_Casualties.txt">
+      <DtsConnectionManagerID>Profiling_Casualties.txt</DtsConnectionManagerID>
     </DtsDataSource>
   </DataSources>
   <DataProfileInput>
@@ -101,97 +128,97 @@
     <Profiles>
       <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
         <DataSourceID>{68B744B6-BFA4-417D-AA11-2C26D08D51D7}</DataSourceID>
-        <Table DataSource="." Database="Stage_DATH" Schema="dbo" Table="Casualties" RowCount="777820" />
+        <Table DataSource="." Database="Stage_DATH" Schema="dbo" Table="Casualties" RowCount="1555640" />
         <Column Name="Accident_Index" SqlDbType="VarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
         <NullCount>0</NullCount>
       </ColumnNullRatioProfile>
       <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
         <DataSourceID>{68B744B6-BFA4-417D-AA11-2C26D08D51D7}</DataSourceID>
-        <Table DataSource="." Database="Stage_DATH" Schema="dbo" Table="Casualties" RowCount="777820" />
+        <Table DataSource="." Database="Stage_DATH" Schema="dbo" Table="Casualties" RowCount="1555640" />
         <Column Name="Vehicle_Reference" SqlDbType="VarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
         <NullCount>0</NullCount>
       </ColumnNullRatioProfile>
       <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
         <DataSourceID>{68B744B6-BFA4-417D-AA11-2C26D08D51D7}</DataSourceID>
-        <Table DataSource="." Database="Stage_DATH" Schema="dbo" Table="Casualties" RowCount="777820" />
+        <Table DataSource="." Database="Stage_DATH" Schema="dbo" Table="Casualties" RowCount="1555640" />
         <Column Name="Casualty_Reference" SqlDbType="VarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
         <NullCount>0</NullCount>
       </ColumnNullRatioProfile>
       <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
         <DataSourceID>{68B744B6-BFA4-417D-AA11-2C26D08D51D7}</DataSourceID>
-        <Table DataSource="." Database="Stage_DATH" Schema="dbo" Table="Casualties" RowCount="777820" />
+        <Table DataSource="." Database="Stage_DATH" Schema="dbo" Table="Casualties" RowCount="1555640" />
         <Column Name="Casualty_Class" SqlDbType="VarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
         <NullCount>0</NullCount>
       </ColumnNullRatioProfile>
       <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
         <DataSourceID>{68B744B6-BFA4-417D-AA11-2C26D08D51D7}</DataSourceID>
-        <Table DataSource="." Database="Stage_DATH" Schema="dbo" Table="Casualties" RowCount="777820" />
+        <Table DataSource="." Database="Stage_DATH" Schema="dbo" Table="Casualties" RowCount="1555640" />
         <Column Name="Sex_of_Casualty" SqlDbType="VarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
         <NullCount>0</NullCount>
       </ColumnNullRatioProfile>
       <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
         <DataSourceID>{68B744B6-BFA4-417D-AA11-2C26D08D51D7}</DataSourceID>
-        <Table DataSource="." Database="Stage_DATH" Schema="dbo" Table="Casualties" RowCount="777820" />
+        <Table DataSource="." Database="Stage_DATH" Schema="dbo" Table="Casualties" RowCount="1555640" />
         <Column Name="Age_of_Casualty" SqlDbType="VarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
         <NullCount>0</NullCount>
       </ColumnNullRatioProfile>
       <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
         <DataSourceID>{68B744B6-BFA4-417D-AA11-2C26D08D51D7}</DataSourceID>
-        <Table DataSource="." Database="Stage_DATH" Schema="dbo" Table="Casualties" RowCount="777820" />
+        <Table DataSource="." Database="Stage_DATH" Schema="dbo" Table="Casualties" RowCount="1555640" />
         <Column Name="Age_Band_of_Casualty" SqlDbType="VarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
         <NullCount>0</NullCount>
       </ColumnNullRatioProfile>
       <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
         <DataSourceID>{68B744B6-BFA4-417D-AA11-2C26D08D51D7}</DataSourceID>
-        <Table DataSource="." Database="Stage_DATH" Schema="dbo" Table="Casualties" RowCount="777820" />
+        <Table DataSource="." Database="Stage_DATH" Schema="dbo" Table="Casualties" RowCount="1555640" />
         <Column Name="Casualty_Severity" SqlDbType="VarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
         <NullCount>0</NullCount>
       </ColumnNullRatioProfile>
       <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
         <DataSourceID>{68B744B6-BFA4-417D-AA11-2C26D08D51D7}</DataSourceID>
-        <Table DataSource="." Database="Stage_DATH" Schema="dbo" Table="Casualties" RowCount="777820" />
+        <Table DataSource="." Database="Stage_DATH" Schema="dbo" Table="Casualties" RowCount="1555640" />
         <Column Name="Pedestrian_Location" SqlDbType="VarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
         <NullCount>0</NullCount>
       </ColumnNullRatioProfile>
       <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
         <DataSourceID>{68B744B6-BFA4-417D-AA11-2C26D08D51D7}</DataSourceID>
-        <Table DataSource="." Database="Stage_DATH" Schema="dbo" Table="Casualties" RowCount="777820" />
+        <Table DataSource="." Database="Stage_DATH" Schema="dbo" Table="Casualties" RowCount="1555640" />
         <Column Name="Pedestrian_Movement" SqlDbType="VarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
         <NullCount>0</NullCount>
       </ColumnNullRatioProfile>
       <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
         <DataSourceID>{68B744B6-BFA4-417D-AA11-2C26D08D51D7}</DataSourceID>
-        <Table DataSource="." Database="Stage_DATH" Schema="dbo" Table="Casualties" RowCount="777820" />
+        <Table DataSource="." Database="Stage_DATH" Schema="dbo" Table="Casualties" RowCount="1555640" />
         <Column Name="Car_Passenger" SqlDbType="VarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
         <NullCount>0</NullCount>
       </ColumnNullRatioProfile>
       <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
         <DataSourceID>{68B744B6-BFA4-417D-AA11-2C26D08D51D7}</DataSourceID>
-        <Table DataSource="." Database="Stage_DATH" Schema="dbo" Table="Casualties" RowCount="777820" />
+        <Table DataSource="." Database="Stage_DATH" Schema="dbo" Table="Casualties" RowCount="1555640" />
         <Column Name="Bus_or_Coach_Passenger" SqlDbType="VarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
         <NullCount>0</NullCount>
       </ColumnNullRatioProfile>
       <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
         <DataSourceID>{68B744B6-BFA4-417D-AA11-2C26D08D51D7}</DataSourceID>
-        <Table DataSource="." Database="Stage_DATH" Schema="dbo" Table="Casualties" RowCount="777820" />
+        <Table DataSource="." Database="Stage_DATH" Schema="dbo" Table="Casualties" RowCount="1555640" />
         <Column Name="Pedestrian_Road_Maintenance_Worker" SqlDbType="VarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
         <NullCount>0</NullCount>
       </ColumnNullRatioProfile>
       <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
         <DataSourceID>{68B744B6-BFA4-417D-AA11-2C26D08D51D7}</DataSourceID>
-        <Table DataSource="." Database="Stage_DATH" Schema="dbo" Table="Casualties" RowCount="777820" />
+        <Table DataSource="." Database="Stage_DATH" Schema="dbo" Table="Casualties" RowCount="1555640" />
         <Column Name="Casualty_Type" SqlDbType="VarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
         <NullCount>0</NullCount>
       </ColumnNullRatioProfile>
       <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
         <DataSourceID>{68B744B6-BFA4-417D-AA11-2C26D08D51D7}</DataSourceID>
-        <Table DataSource="." Database="Stage_DATH" Schema="dbo" Table="Casualties" RowCount="777820" />
+        <Table DataSource="." Database="Stage_DATH" Schema="dbo" Table="Casualties" RowCount="1555640" />
         <Column Name="Casualty_Home_Area_Type" SqlDbType="VarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
         <NullCount>0</NullCount>
       </ColumnNullRatioProfile>
       <ColumnLengthDistributionProfile ProfileRequestID="LengthDistReq" IsExact="true">
         <DataSourceID>{68B744B6-BFA4-417D-AA11-2C26D08D51D7}</DataSourceID>
-        <Table DataSource="." Database="Stage_DATH" Schema="dbo" Table="Casualties" RowCount="777820" />
+        <Table DataSource="." Database="Stage_DATH" Schema="dbo" Table="Casualties" RowCount="1555640" />
         <Column Name="Accident_Index" SqlDbType="VarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
         <IgnoreLeadingSpace>false</IgnoreLeadingSpace>
         <IgnoreTrailingSpace>true</IgnoreTrailingSpace>
@@ -200,13 +227,13 @@
         <LengthDistribution>
           <LengthDistributionItem>
             <Length>13</Length>
-            <Count>777820</Count>
+            <Count>1555640</Count>
           </LengthDistributionItem>
         </LengthDistribution>
       </ColumnLengthDistributionProfile>
       <ColumnLengthDistributionProfile ProfileRequestID="LengthDistReq" IsExact="true">
         <DataSourceID>{68B744B6-BFA4-417D-AA11-2C26D08D51D7}</DataSourceID>
-        <Table DataSource="." Database="Stage_DATH" Schema="dbo" Table="Casualties" RowCount="777820" />
+        <Table DataSource="." Database="Stage_DATH" Schema="dbo" Table="Casualties" RowCount="1555640" />
         <Column Name="Vehicle_Reference" SqlDbType="VarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
         <IgnoreLeadingSpace>false</IgnoreLeadingSpace>
         <IgnoreTrailingSpace>true</IgnoreTrailingSpace>
@@ -215,17 +242,17 @@
         <LengthDistribution>
           <LengthDistributionItem>
             <Length>1</Length>
-            <Count>777675</Count>
+            <Count>1555350</Count>
           </LengthDistributionItem>
           <LengthDistributionItem>
             <Length>2</Length>
-            <Count>145</Count>
+            <Count>290</Count>
           </LengthDistributionItem>
         </LengthDistribution>
       </ColumnLengthDistributionProfile>
       <ColumnLengthDistributionProfile ProfileRequestID="LengthDistReq" IsExact="true">
         <DataSourceID>{68B744B6-BFA4-417D-AA11-2C26D08D51D7}</DataSourceID>
-        <Table DataSource="." Database="Stage_DATH" Schema="dbo" Table="Casualties" RowCount="777820" />
+        <Table DataSource="." Database="Stage_DATH" Schema="dbo" Table="Casualties" RowCount="1555640" />
         <Column Name="Casualty_Reference" SqlDbType="VarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
         <IgnoreLeadingSpace>false</IgnoreLeadingSpace>
         <IgnoreTrailingSpace>true</IgnoreTrailingSpace>
@@ -234,21 +261,21 @@
         <LengthDistribution>
           <LengthDistributionItem>
             <Length>1</Length>
-            <Count>776429</Count>
+            <Count>1552858</Count>
           </LengthDistributionItem>
           <LengthDistributionItem>
             <Length>2</Length>
-            <Count>1387</Count>
+            <Count>2774</Count>
           </LengthDistributionItem>
           <LengthDistributionItem>
             <Length>3</Length>
-            <Count>4</Count>
+            <Count>8</Count>
           </LengthDistributionItem>
         </LengthDistribution>
       </ColumnLengthDistributionProfile>
       <ColumnLengthDistributionProfile ProfileRequestID="LengthDistReq" IsExact="true">
         <DataSourceID>{68B744B6-BFA4-417D-AA11-2C26D08D51D7}</DataSourceID>
-        <Table DataSource="." Database="Stage_DATH" Schema="dbo" Table="Casualties" RowCount="777820" />
+        <Table DataSource="." Database="Stage_DATH" Schema="dbo" Table="Casualties" RowCount="1555640" />
         <Column Name="Casualty_Class" SqlDbType="VarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
         <IgnoreLeadingSpace>false</IgnoreLeadingSpace>
         <IgnoreTrailingSpace>true</IgnoreTrailingSpace>
@@ -257,13 +284,13 @@
         <LengthDistribution>
           <LengthDistributionItem>
             <Length>1</Length>
-            <Count>777820</Count>
+            <Count>1555640</Count>
           </LengthDistributionItem>
         </LengthDistribution>
       </ColumnLengthDistributionProfile>
       <ColumnLengthDistributionProfile ProfileRequestID="LengthDistReq" IsExact="true">
         <DataSourceID>{68B744B6-BFA4-417D-AA11-2C26D08D51D7}</DataSourceID>
-        <Table DataSource="." Database="Stage_DATH" Schema="dbo" Table="Casualties" RowCount="777820" />
+        <Table DataSource="." Database="Stage_DATH" Schema="dbo" Table="Casualties" RowCount="1555640" />
         <Column Name="Sex_of_Casualty" SqlDbType="VarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
         <IgnoreLeadingSpace>false</IgnoreLeadingSpace>
         <IgnoreTrailingSpace>true</IgnoreTrailingSpace>
@@ -272,17 +299,17 @@
         <LengthDistribution>
           <LengthDistributionItem>
             <Length>1</Length>
-            <Count>777792</Count>
+            <Count>1555584</Count>
           </LengthDistributionItem>
           <LengthDistributionItem>
             <Length>2</Length>
-            <Count>28</Count>
+            <Count>56</Count>
           </LengthDistributionItem>
         </LengthDistribution>
       </ColumnLengthDistributionProfile>
       <ColumnLengthDistributionProfile ProfileRequestID="LengthDistReq" IsExact="true">
         <DataSourceID>{68B744B6-BFA4-417D-AA11-2C26D08D51D7}</DataSourceID>
-        <Table DataSource="." Database="Stage_DATH" Schema="dbo" Table="Casualties" RowCount="777820" />
+        <Table DataSource="." Database="Stage_DATH" Schema="dbo" Table="Casualties" RowCount="1555640" />
         <Column Name="Age_of_Casualty" SqlDbType="VarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
         <IgnoreLeadingSpace>false</IgnoreLeadingSpace>
         <IgnoreTrailingSpace>true</IgnoreTrailingSpace>
@@ -291,21 +318,21 @@
         <LengthDistribution>
           <LengthDistributionItem>
             <Length>1</Length>
-            <Count>31241</Count>
+            <Count>62482</Count>
           </LengthDistributionItem>
           <LengthDistributionItem>
             <Length>2</Length>
-            <Count>746570</Count>
+            <Count>1493140</Count>
           </LengthDistributionItem>
           <LengthDistributionItem>
             <Length>3</Length>
-            <Count>9</Count>
+            <Count>18</Count>
           </LengthDistributionItem>
         </LengthDistribution>
       </ColumnLengthDistributionProfile>
       <ColumnLengthDistributionProfile ProfileRequestID="LengthDistReq" IsExact="true">
         <DataSourceID>{68B744B6-BFA4-417D-AA11-2C26D08D51D7}</DataSourceID>
-        <Table DataSource="." Database="Stage_DATH" Schema="dbo" Table="Casualties" RowCount="777820" />
+        <Table DataSource="." Database="Stage_DATH" Schema="dbo" Table="Casualties" RowCount="1555640" />
         <Column Name="Age_Band_of_Casualty" SqlDbType="VarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
         <IgnoreLeadingSpace>false</IgnoreLeadingSpace>
         <IgnoreTrailingSpace>true</IgnoreTrailingSpace>
@@ -314,17 +341,17 @@
         <LengthDistribution>
           <LengthDistributionItem>
             <Length>1</Length>
-            <Count>702671</Count>
+            <Count>1405342</Count>
           </LengthDistributionItem>
           <LengthDistributionItem>
             <Length>2</Length>
-            <Count>75149</Count>
+            <Count>150298</Count>
           </LengthDistributionItem>
         </LengthDistribution>
       </ColumnLengthDistributionProfile>
       <ColumnLengthDistributionProfile ProfileRequestID="LengthDistReq" IsExact="true">
         <DataSourceID>{68B744B6-BFA4-417D-AA11-2C26D08D51D7}</DataSourceID>
-        <Table DataSource="." Database="Stage_DATH" Schema="dbo" Table="Casualties" RowCount="777820" />
+        <Table DataSource="." Database="Stage_DATH" Schema="dbo" Table="Casualties" RowCount="1555640" />
         <Column Name="Casualty_Severity" SqlDbType="VarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
         <IgnoreLeadingSpace>false</IgnoreLeadingSpace>
         <IgnoreTrailingSpace>true</IgnoreTrailingSpace>
@@ -333,13 +360,13 @@
         <LengthDistribution>
           <LengthDistributionItem>
             <Length>1</Length>
-            <Count>777820</Count>
+            <Count>1555640</Count>
           </LengthDistributionItem>
         </LengthDistribution>
       </ColumnLengthDistributionProfile>
       <ColumnLengthDistributionProfile ProfileRequestID="LengthDistReq" IsExact="true">
         <DataSourceID>{68B744B6-BFA4-417D-AA11-2C26D08D51D7}</DataSourceID>
-        <Table DataSource="." Database="Stage_DATH" Schema="dbo" Table="Casualties" RowCount="777820" />
+        <Table DataSource="." Database="Stage_DATH" Schema="dbo" Table="Casualties" RowCount="1555640" />
         <Column Name="Pedestrian_Location" SqlDbType="VarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
         <IgnoreLeadingSpace>false</IgnoreLeadingSpace>
         <IgnoreTrailingSpace>true</IgnoreTrailingSpace>
@@ -348,17 +375,17 @@
         <LengthDistribution>
           <LengthDistributionItem>
             <Length>1</Length>
-            <Count>771709</Count>
+            <Count>1543418</Count>
           </LengthDistributionItem>
           <LengthDistributionItem>
             <Length>2</Length>
-            <Count>6111</Count>
+            <Count>12222</Count>
           </LengthDistributionItem>
         </LengthDistribution>
       </ColumnLengthDistributionProfile>
       <ColumnLengthDistributionProfile ProfileRequestID="LengthDistReq" IsExact="true">
         <DataSourceID>{68B744B6-BFA4-417D-AA11-2C26D08D51D7}</DataSourceID>
-        <Table DataSource="." Database="Stage_DATH" Schema="dbo" Table="Casualties" RowCount="777820" />
+        <Table DataSource="." Database="Stage_DATH" Schema="dbo" Table="Casualties" RowCount="1555640" />
         <Column Name="Pedestrian_Movement" SqlDbType="VarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
         <IgnoreLeadingSpace>false</IgnoreLeadingSpace>
         <IgnoreTrailingSpace>true</IgnoreTrailingSpace>
@@ -367,17 +394,17 @@
         <LengthDistribution>
           <LengthDistributionItem>
             <Length>1</Length>
-            <Count>777817</Count>
+            <Count>1555634</Count>
           </LengthDistributionItem>
           <LengthDistributionItem>
             <Length>2</Length>
-            <Count>3</Count>
+            <Count>6</Count>
           </LengthDistributionItem>
         </LengthDistribution>
       </ColumnLengthDistributionProfile>
       <ColumnLengthDistributionProfile ProfileRequestID="LengthDistReq" IsExact="true">
         <DataSourceID>{68B744B6-BFA4-417D-AA11-2C26D08D51D7}</DataSourceID>
-        <Table DataSource="." Database="Stage_DATH" Schema="dbo" Table="Casualties" RowCount="777820" />
+        <Table DataSource="." Database="Stage_DATH" Schema="dbo" Table="Casualties" RowCount="1555640" />
         <Column Name="Car_Passenger" SqlDbType="VarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
         <IgnoreLeadingSpace>false</IgnoreLeadingSpace>
         <IgnoreTrailingSpace>true</IgnoreTrailingSpace>
@@ -386,17 +413,17 @@
         <LengthDistribution>
           <LengthDistributionItem>
             <Length>1</Length>
-            <Count>777437</Count>
+            <Count>1554874</Count>
           </LengthDistributionItem>
           <LengthDistributionItem>
             <Length>2</Length>
-            <Count>383</Count>
+            <Count>766</Count>
           </LengthDistributionItem>
         </LengthDistribution>
       </ColumnLengthDistributionProfile>
       <ColumnLengthDistributionProfile ProfileRequestID="LengthDistReq" IsExact="true">
         <DataSourceID>{68B744B6-BFA4-417D-AA11-2C26D08D51D7}</DataSourceID>
-        <Table DataSource="." Database="Stage_DATH" Schema="dbo" Table="Casualties" RowCount="777820" />
+        <Table DataSource="." Database="Stage_DATH" Schema="dbo" Table="Casualties" RowCount="1555640" />
         <Column Name="Bus_or_Coach_Passenger" SqlDbType="VarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
         <IgnoreLeadingSpace>false</IgnoreLeadingSpace>
         <IgnoreTrailingSpace>true</IgnoreTrailingSpace>
@@ -405,17 +432,17 @@
         <LengthDistribution>
           <LengthDistributionItem>
             <Length>1</Length>
-            <Count>777791</Count>
+            <Count>1555582</Count>
           </LengthDistributionItem>
           <LengthDistributionItem>
             <Length>2</Length>
-            <Count>29</Count>
+            <Count>58</Count>
           </LengthDistributionItem>
         </LengthDistribution>
       </ColumnLengthDistributionProfile>
       <ColumnLengthDistributionProfile ProfileRequestID="LengthDistReq" IsExact="true">
         <DataSourceID>{68B744B6-BFA4-417D-AA11-2C26D08D51D7}</DataSourceID>
-        <Table DataSource="." Database="Stage_DATH" Schema="dbo" Table="Casualties" RowCount="777820" />
+        <Table DataSource="." Database="Stage_DATH" Schema="dbo" Table="Casualties" RowCount="1555640" />
         <Column Name="Pedestrian_Road_Maintenance_Worker" SqlDbType="VarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
         <IgnoreLeadingSpace>false</IgnoreLeadingSpace>
         <IgnoreTrailingSpace>true</IgnoreTrailingSpace>
@@ -424,17 +451,17 @@
         <LengthDistribution>
           <LengthDistributionItem>
             <Length>1</Length>
-            <Count>777698</Count>
+            <Count>1555396</Count>
           </LengthDistributionItem>
           <LengthDistributionItem>
             <Length>2</Length>
-            <Count>122</Count>
+            <Count>244</Count>
           </LengthDistributionItem>
         </LengthDistribution>
       </ColumnLengthDistributionProfile>
       <ColumnLengthDistributionProfile ProfileRequestID="LengthDistReq" IsExact="true">
         <DataSourceID>{68B744B6-BFA4-417D-AA11-2C26D08D51D7}</DataSourceID>
-        <Table DataSource="." Database="Stage_DATH" Schema="dbo" Table="Casualties" RowCount="777820" />
+        <Table DataSource="." Database="Stage_DATH" Schema="dbo" Table="Casualties" RowCount="1555640" />
         <Column Name="Casualty_Type" SqlDbType="VarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
         <IgnoreLeadingSpace>false</IgnoreLeadingSpace>
         <IgnoreTrailingSpace>true</IgnoreTrailingSpace>
@@ -443,17 +470,17 @@
         <LengthDistribution>
           <LengthDistributionItem>
             <Length>1</Length>
-            <Count>725220</Count>
+            <Count>1450440</Count>
           </LengthDistributionItem>
           <LengthDistributionItem>
             <Length>2</Length>
-            <Count>52600</Count>
+            <Count>105200</Count>
           </LengthDistributionItem>
         </LengthDistribution>
       </ColumnLengthDistributionProfile>
       <ColumnLengthDistributionProfile ProfileRequestID="LengthDistReq" IsExact="true">
         <DataSourceID>{68B744B6-BFA4-417D-AA11-2C26D08D51D7}</DataSourceID>
-        <Table DataSource="." Database="Stage_DATH" Schema="dbo" Table="Casualties" RowCount="777820" />
+        <Table DataSource="." Database="Stage_DATH" Schema="dbo" Table="Casualties" RowCount="1555640" />
         <Column Name="Casualty_Home_Area_Type" SqlDbType="VarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
         <IgnoreLeadingSpace>false</IgnoreLeadingSpace>
         <IgnoreTrailingSpace>true</IgnoreTrailingSpace>
@@ -462,803 +489,803 @@
         <LengthDistribution>
           <LengthDistributionItem>
             <Length>1</Length>
-            <Count>688935</Count>
+            <Count>1377870</Count>
           </LengthDistributionItem>
           <LengthDistributionItem>
             <Length>2</Length>
-            <Count>88885</Count>
+            <Count>177770</Count>
           </LengthDistributionItem>
         </LengthDistribution>
       </ColumnLengthDistributionProfile>
       <ColumnValueDistributionProfile IsExact="true" ProfileRequestID="ValueDistReq">
         <DataSourceID>{68B744B6-BFA4-417D-AA11-2C26D08D51D7}</DataSourceID>
-        <Table DataSource="." Database="Stage_DATH" Schema="dbo" Table="Casualties" RowCount="777820" />
+        <Table DataSource="." Database="Stage_DATH" Schema="dbo" Table="Casualties" RowCount="1555640" />
         <Column Name="Accident_Index" SqlDbType="VarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
         <NumberOfDistinctValues>582027</NumberOfDistinctValues>
       </ColumnValueDistributionProfile>
       <ColumnValueDistributionProfile IsExact="true" ProfileRequestID="ValueDistReq">
         <DataSourceID>{68B744B6-BFA4-417D-AA11-2C26D08D51D7}</DataSourceID>
-        <Table DataSource="." Database="Stage_DATH" Schema="dbo" Table="Casualties" RowCount="777820" />
+        <Table DataSource="." Database="Stage_DATH" Schema="dbo" Table="Casualties" RowCount="1555640" />
         <Column Name="Vehicle_Reference" SqlDbType="VarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
         <NumberOfDistinctValues>67</NumberOfDistinctValues>
         <ValueDistribution>
           <ValueDistributionItem>
-            <Value>3</Value>
-            <Count>22547</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
             <Value>2</Value>
-            <Count>316837</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
-            <Value>5</Value>
-            <Count>850</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
-            <Value>1</Value>
-            <Count>433031</Count>
+            <Count>633674</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
             <Value>4</Value>
-            <Count>3897</Count>
+            <Count>7794</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>5</Value>
+            <Count>1700</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>1</Value>
+            <Count>866062</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>3</Value>
+            <Count>45094</Count>
           </ValueDistributionItem>
         </ValueDistribution>
       </ColumnValueDistributionProfile>
       <ColumnValueDistributionProfile IsExact="true" ProfileRequestID="ValueDistReq">
         <DataSourceID>{68B744B6-BFA4-417D-AA11-2C26D08D51D7}</DataSourceID>
-        <Table DataSource="." Database="Stage_DATH" Schema="dbo" Table="Casualties" RowCount="777820" />
+        <Table DataSource="." Database="Stage_DATH" Schema="dbo" Table="Casualties" RowCount="1555640" />
         <Column Name="Casualty_Reference" SqlDbType="VarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
         <NumberOfDistinctValues>97</NumberOfDistinctValues>
         <ValueDistribution>
           <ValueDistributionItem>
-            <Value>4</Value>
-            <Count>15108</Count>
+            <Value>3</Value>
+            <Count>82760</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
-            <Value>2</Value>
-            <Count>131554</Count>
+            <Value>4</Value>
+            <Count>30216</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
             <Value>1</Value>
-            <Count>578768</Count>
+            <Count>1157536</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
             <Value>6</Value>
-            <Count>2223</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
-            <Value>7</Value>
-            <Count>924</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
-            <Value>3</Value>
-            <Count>41380</Count>
+            <Count>4446</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
             <Value>5</Value>
-            <Count>5692</Count>
+            <Count>11384</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2</Value>
+            <Count>263108</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>7</Value>
+            <Count>1848</Count>
           </ValueDistributionItem>
         </ValueDistribution>
       </ColumnValueDistributionProfile>
       <ColumnValueDistributionProfile IsExact="true" ProfileRequestID="ValueDistReq">
         <DataSourceID>{68B744B6-BFA4-417D-AA11-2C26D08D51D7}</DataSourceID>
-        <Table DataSource="." Database="Stage_DATH" Schema="dbo" Table="Casualties" RowCount="777820" />
+        <Table DataSource="." Database="Stage_DATH" Schema="dbo" Table="Casualties" RowCount="1555640" />
         <Column Name="Casualty_Class" SqlDbType="VarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
         <NumberOfDistinctValues>3</NumberOfDistinctValues>
         <ValueDistribution>
           <ValueDistributionItem>
             <Value>2</Value>
-            <Count>180229</Count>
+            <Count>360458</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
             <Value>1</Value>
-            <Count>497394</Count>
+            <Count>994788</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
             <Value>3</Value>
-            <Count>100197</Count>
+            <Count>200394</Count>
           </ValueDistributionItem>
         </ValueDistribution>
       </ColumnValueDistributionProfile>
       <ColumnValueDistributionProfile IsExact="true" ProfileRequestID="ValueDistReq">
         <DataSourceID>{68B744B6-BFA4-417D-AA11-2C26D08D51D7}</DataSourceID>
-        <Table DataSource="." Database="Stage_DATH" Schema="dbo" Table="Casualties" RowCount="777820" />
+        <Table DataSource="." Database="Stage_DATH" Schema="dbo" Table="Casualties" RowCount="1555640" />
         <Column Name="Sex_of_Casualty" SqlDbType="VarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
         <NumberOfDistinctValues>3</NumberOfDistinctValues>
         <ValueDistribution>
           <ValueDistributionItem>
             <Value>2</Value>
-            <Count>320581</Count>
+            <Count>641162</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
             <Value>1</Value>
-            <Count>457211</Count>
+            <Count>914422</Count>
           </ValueDistributionItem>
         </ValueDistribution>
       </ColumnValueDistributionProfile>
       <ColumnValueDistributionProfile IsExact="true" ProfileRequestID="ValueDistReq">
         <DataSourceID>{68B744B6-BFA4-417D-AA11-2C26D08D51D7}</DataSourceID>
-        <Table DataSource="." Database="Stage_DATH" Schema="dbo" Table="Casualties" RowCount="777820" />
+        <Table DataSource="." Database="Stage_DATH" Schema="dbo" Table="Casualties" RowCount="1555640" />
         <Column Name="Age_of_Casualty" SqlDbType="VarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
         <NumberOfDistinctValues>105</NumberOfDistinctValues>
         <ValueDistribution>
           <ValueDistributionItem>
-            <Value>2</Value>
-            <Count>2392</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
-            <Value>21</Value>
-            <Count>21851</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
-            <Value>31</Value>
-            <Count>14186</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
-            <Value>38</Value>
-            <Count>11750</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
-            <Value>41</Value>
-            <Count>12346</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
-            <Value>68</Value>
-            <Count>3679</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
-            <Value>85</Value>
-            <Count>1571</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
-            <Value>87</Value>
-            <Count>1114</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
-            <Value>22</Value>
-            <Count>20868</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
-            <Value>25</Value>
-            <Count>19434</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
-            <Value>43</Value>
-            <Count>12450</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
-            <Value>46</Value>
-            <Count>12015</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
-            <Value>63</Value>
-            <Count>5129</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
-            <Value>66</Value>
-            <Count>4301</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
-            <Value>70</Value>
-            <Count>3757</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
-            <Value>73</Value>
-            <Count>2866</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
-            <Value>13</Value>
-            <Count>6272</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
-            <Value>15</Value>
-            <Count>6702</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
-            <Value>33</Value>
-            <Count>13274</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
-            <Value>35</Value>
-            <Count>13076</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
-            <Value>47</Value>
-            <Count>11616</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
-            <Value>54</Value>
-            <Count>8290</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
-            <Value>56</Value>
-            <Count>7462</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
-            <Value>57</Value>
-            <Count>6666</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
-            <Value>60</Value>
-            <Count>6562</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
-            <Value>78</Value>
-            <Count>2470</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
-            <Value>8</Value>
-            <Count>4223</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
-            <Value>81</Value>
-            <Count>2188</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
-            <Value>83</Value>
-            <Count>1909</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
-            <Value>1</Value>
-            <Count>1783</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
-            <Value>10</Value>
-            <Count>5213</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
-            <Value>17</Value>
-            <Count>18569</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
-            <Value>29</Value>
-            <Count>15190</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
-            <Value>30</Value>
-            <Count>17438</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
-            <Value>39</Value>
-            <Count>12070</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
-            <Value>42</Value>
-            <Count>12570</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
-            <Value>49</Value>
-            <Count>11024</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
-            <Value>50</Value>
-            <Count>11598</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
-            <Value>59</Value>
-            <Count>6136</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
-            <Value>6</Value>
-            <Count>3785</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
-            <Value>62</Value>
-            <Count>5271</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
-            <Value>69</Value>
-            <Count>3432</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
-            <Value>74</Value>
-            <Count>2811</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
-            <Value>88</Value>
-            <Count>902</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
-            <Value>12</Value>
-            <Count>6946</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
-            <Value>18</Value>
-            <Count>22669</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
-            <Value>26</Value>
-            <Count>17489</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
-            <Value>28</Value>
-            <Count>16126</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
-            <Value>3</Value>
-            <Count>3003</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
-            <Value>48</Value>
-            <Count>11581</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
-            <Value>51</Value>
-            <Count>9827</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
-            <Value>53</Value>
-            <Count>8949</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
-            <Value>58</Value>
-            <Count>6439</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
-            <Value>61</Value>
-            <Count>5328</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
-            <Value>75</Value>
-            <Count>3013</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
-            <Value>77</Value>
-            <Count>2562</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
-            <Value>80</Value>
-            <Count>2604</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
-            <Value>9</Value>
-            <Count>4479</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
-            <Value>14</Value>
-            <Count>6360</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
-            <Value>20</Value>
-            <Count>22572</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
-            <Value>34</Value>
-            <Count>12538</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
-            <Value>36</Value>
-            <Count>11576</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
-            <Value>55</Value>
-            <Count>8018</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
-            <Value>7</Value>
-            <Count>4048</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
-            <Value>79</Value>
-            <Count>2462</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
-            <Value>82</Value>
-            <Count>2062</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
-            <Value>84</Value>
-            <Count>1654</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
-            <Value>19</Value>
-            <Count>22887</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
-            <Value>27</Value>
-            <Count>16336</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
-            <Value>32</Value>
-            <Count>13993</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
-            <Value>37</Value>
-            <Count>11434</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
-            <Value>4</Value>
-            <Count>3269</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
-            <Value>40</Value>
-            <Count>13744</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
-            <Value>52</Value>
-            <Count>9623</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
-            <Value>64</Value>
-            <Count>5010</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
-            <Value>67</Value>
-            <Count>4082</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
-            <Value>76</Value>
-            <Count>2730</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
-            <Value>86</Value>
-            <Count>1241</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
             <Value>-1</Value>
-            <Count>12889</Count>
+            <Count>25778</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
             <Value>11</Value>
-            <Count>6474</Count>
+            <Count>12948</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
             <Value>16</Value>
-            <Count>11394</Count>
+            <Count>22788</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
             <Value>23</Value>
-            <Count>20391</Count>
+            <Count>40782</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
             <Value>24</Value>
-            <Count>18943</Count>
+            <Count>37886</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
             <Value>44</Value>
-            <Count>12140</Count>
+            <Count>24280</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
             <Value>45</Value>
-            <Count>12583</Count>
+            <Count>25166</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
             <Value>5</Value>
-            <Count>3576</Count>
+            <Count>7152</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
             <Value>65</Value>
-            <Count>5032</Count>
+            <Count>10064</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
             <Value>71</Value>
-            <Count>2971</Count>
+            <Count>5942</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
             <Value>72</Value>
-            <Count>2913</Count>
+            <Count>5826</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
             <Value>89</Value>
-            <Count>784</Count>
+            <Count>1568</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>12</Value>
+            <Count>13892</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>18</Value>
+            <Count>45338</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>26</Value>
+            <Count>34978</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>28</Value>
+            <Count>32252</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>3</Value>
+            <Count>6006</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>48</Value>
+            <Count>23162</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>51</Value>
+            <Count>19654</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>53</Value>
+            <Count>17898</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>58</Value>
+            <Count>12878</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>61</Value>
+            <Count>10656</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>75</Value>
+            <Count>6026</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>77</Value>
+            <Count>5124</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>80</Value>
+            <Count>5208</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>9</Value>
+            <Count>8958</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>19</Value>
+            <Count>45774</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>27</Value>
+            <Count>32672</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>32</Value>
+            <Count>27986</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>37</Value>
+            <Count>22868</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>4</Value>
+            <Count>6538</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>40</Value>
+            <Count>27488</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>52</Value>
+            <Count>19246</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>64</Value>
+            <Count>10020</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>67</Value>
+            <Count>8164</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>76</Value>
+            <Count>5460</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>86</Value>
+            <Count>2482</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>22</Value>
+            <Count>41736</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>25</Value>
+            <Count>38868</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>43</Value>
+            <Count>24900</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>46</Value>
+            <Count>24030</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>63</Value>
+            <Count>10258</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>66</Value>
+            <Count>8602</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>70</Value>
+            <Count>7514</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>73</Value>
+            <Count>5732</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>1</Value>
+            <Count>3566</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>10</Value>
+            <Count>10426</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>17</Value>
+            <Count>37138</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>29</Value>
+            <Count>30380</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>30</Value>
+            <Count>34876</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>39</Value>
+            <Count>24140</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>42</Value>
+            <Count>25140</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>49</Value>
+            <Count>22048</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>50</Value>
+            <Count>23196</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>59</Value>
+            <Count>12272</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>6</Value>
+            <Count>7570</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>62</Value>
+            <Count>10542</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>69</Value>
+            <Count>6864</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>74</Value>
+            <Count>5622</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>88</Value>
+            <Count>1804</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>14</Value>
+            <Count>12720</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>20</Value>
+            <Count>45144</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>34</Value>
+            <Count>25076</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>36</Value>
+            <Count>23152</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>55</Value>
+            <Count>16036</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>7</Value>
+            <Count>8096</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>79</Value>
+            <Count>4924</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>82</Value>
+            <Count>4124</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>84</Value>
+            <Count>3308</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>13</Value>
+            <Count>12544</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>15</Value>
+            <Count>13404</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>33</Value>
+            <Count>26548</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>35</Value>
+            <Count>26152</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>47</Value>
+            <Count>23232</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>54</Value>
+            <Count>16580</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>56</Value>
+            <Count>14924</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>57</Value>
+            <Count>13332</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>60</Value>
+            <Count>13124</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>78</Value>
+            <Count>4940</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>8</Value>
+            <Count>8446</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>81</Value>
+            <Count>4376</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>83</Value>
+            <Count>3818</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2</Value>
+            <Count>4784</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>21</Value>
+            <Count>43702</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>31</Value>
+            <Count>28372</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>38</Value>
+            <Count>23500</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>41</Value>
+            <Count>24692</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>68</Value>
+            <Count>7358</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>85</Value>
+            <Count>3142</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>87</Value>
+            <Count>2228</Count>
           </ValueDistributionItem>
         </ValueDistribution>
       </ColumnValueDistributionProfile>
       <ColumnValueDistributionProfile IsExact="true" ProfileRequestID="ValueDistReq">
         <DataSourceID>{68B744B6-BFA4-417D-AA11-2C26D08D51D7}</DataSourceID>
-        <Table DataSource="." Database="Stage_DATH" Schema="dbo" Table="Casualties" RowCount="777820" />
+        <Table DataSource="." Database="Stage_DATH" Schema="dbo" Table="Casualties" RowCount="1555640" />
         <Column Name="Age_Band_of_Casualty" SqlDbType="VarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
         <NumberOfDistinctValues>12</NumberOfDistinctValues>
         <ValueDistribution>
           <ValueDistributionItem>
-            <Value>-1</Value>
-            <Count>12889</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
-            <Value>11</Value>
-            <Count>28435</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
-            <Value>5</Value>
-            <Count>101487</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
-            <Value>7</Value>
-            <Count>122663</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
-            <Value>1</Value>
-            <Count>14706</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
-            <Value>10</Value>
-            <Count>33825</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
-            <Value>6</Value>
-            <Count>149646</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
-            <Value>2</Value>
-            <Count>21748</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
-            <Value>3</Value>
-            <Count>32754</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
-            <Value>9</Value>
-            <Count>59035</Count>
+            <Value>8</Value>
+            <Count>205082</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
             <Value>4</Value>
-            <Count>98091</Count>
+            <Count>196182</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
-            <Value>8</Value>
-            <Count>102541</Count>
+            <Value>-1</Value>
+            <Count>25778</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>11</Value>
+            <Count>56870</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>5</Value>
+            <Count>202974</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>1</Value>
+            <Count>29412</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>10</Value>
+            <Count>67650</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>6</Value>
+            <Count>299292</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>3</Value>
+            <Count>65508</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>9</Value>
+            <Count>118070</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2</Value>
+            <Count>43496</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>7</Value>
+            <Count>245326</Count>
           </ValueDistributionItem>
         </ValueDistribution>
       </ColumnValueDistributionProfile>
       <ColumnValueDistributionProfile IsExact="true" ProfileRequestID="ValueDistReq">
         <DataSourceID>{68B744B6-BFA4-417D-AA11-2C26D08D51D7}</DataSourceID>
-        <Table DataSource="." Database="Stage_DATH" Schema="dbo" Table="Casualties" RowCount="777820" />
+        <Table DataSource="." Database="Stage_DATH" Schema="dbo" Table="Casualties" RowCount="1555640" />
         <Column Name="Casualty_Severity" SqlDbType="VarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
         <NumberOfDistinctValues>3</NumberOfDistinctValues>
         <ValueDistribution>
           <ValueDistributionItem>
+            <Value>3</Value>
+            <Count>1360104</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
             <Value>2</Value>
-            <Count>90625</Count>
+            <Count>181250</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
             <Value>1</Value>
-            <Count>7143</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
-            <Value>3</Value>
-            <Count>680052</Count>
+            <Count>14286</Count>
           </ValueDistributionItem>
         </ValueDistribution>
       </ColumnValueDistributionProfile>
       <ColumnValueDistributionProfile IsExact="true" ProfileRequestID="ValueDistReq">
         <DataSourceID>{68B744B6-BFA4-417D-AA11-2C26D08D51D7}</DataSourceID>
-        <Table DataSource="." Database="Stage_DATH" Schema="dbo" Table="Casualties" RowCount="777820" />
+        <Table DataSource="." Database="Stage_DATH" Schema="dbo" Table="Casualties" RowCount="1555640" />
         <Column Name="Pedestrian_Location" SqlDbType="VarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
         <NumberOfDistinctValues>12</NumberOfDistinctValues>
         <ValueDistribution>
           <ValueDistributionItem>
-            <Value>4</Value>
-            <Count>8874</Count>
+            <Value>9</Value>
+            <Count>21160</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
-            <Value>0</Value>
-            <Count>677623</Count>
+            <Value>4</Value>
+            <Count>17748</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
             <Value>5</Value>
-            <Count>46755</Count>
+            <Count>93510</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
-            <Value>9</Value>
-            <Count>10580</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
-            <Value>1</Value>
-            <Count>13733</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
-            <Value>10</Value>
-            <Count>6109</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
-            <Value>6</Value>
-            <Count>10094</Count>
+            <Value>0</Value>
+            <Count>1355246</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
             <Value>8</Value>
-            <Count>2903</Count>
+            <Count>5806</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>1</Value>
+            <Count>27466</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>10</Value>
+            <Count>12218</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>6</Value>
+            <Count>20188</Count>
           </ValueDistributionItem>
         </ValueDistribution>
       </ColumnValueDistributionProfile>
       <ColumnValueDistributionProfile IsExact="true" ProfileRequestID="ValueDistReq">
         <DataSourceID>{68B744B6-BFA4-417D-AA11-2C26D08D51D7}</DataSourceID>
-        <Table DataSource="." Database="Stage_DATH" Schema="dbo" Table="Casualties" RowCount="777820" />
+        <Table DataSource="." Database="Stage_DATH" Schema="dbo" Table="Casualties" RowCount="1555640" />
         <Column Name="Pedestrian_Movement" SqlDbType="VarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
         <NumberOfDistinctValues>11</NumberOfDistinctValues>
         <ValueDistribution>
           <ValueDistributionItem>
-            <Value>1</Value>
-            <Count>35767</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
-            <Value>2</Value>
-            <Count>8238</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
-            <Value>8</Value>
-            <Count>2213</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
-            <Value>3</Value>
-            <Count>20429</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
-            <Value>9</Value>
-            <Count>21000</Count>
+            <Value>7</Value>
+            <Count>2676</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
             <Value>4</Value>
-            <Count>5430</Count>
+            <Count>10860</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
-            <Value>7</Value>
-            <Count>1338</Count>
+            <Value>8</Value>
+            <Count>4426</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2</Value>
+            <Count>16476</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
             <Value>0</Value>
-            <Count>677623</Count>
+            <Count>1355246</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
             <Value>5</Value>
-            <Count>5110</Count>
+            <Count>10220</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>3</Value>
+            <Count>40858</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>9</Value>
+            <Count>42000</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>1</Value>
+            <Count>71534</Count>
           </ValueDistributionItem>
         </ValueDistribution>
       </ColumnValueDistributionProfile>
       <ColumnValueDistributionProfile IsExact="true" ProfileRequestID="ValueDistReq">
         <DataSourceID>{68B744B6-BFA4-417D-AA11-2C26D08D51D7}</DataSourceID>
-        <Table DataSource="." Database="Stage_DATH" Schema="dbo" Table="Casualties" RowCount="777820" />
+        <Table DataSource="." Database="Stage_DATH" Schema="dbo" Table="Casualties" RowCount="1555640" />
         <Column Name="Car_Passenger" SqlDbType="VarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
         <NumberOfDistinctValues>4</NumberOfDistinctValues>
         <ValueDistribution>
           <ValueDistributionItem>
             <Value>2</Value>
-            <Count>55294</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
-            <Value>0</Value>
-            <Count>625322</Count>
+            <Count>110588</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
             <Value>1</Value>
-            <Count>96821</Count>
+            <Count>193642</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>0</Value>
+            <Count>1250644</Count>
           </ValueDistributionItem>
         </ValueDistribution>
       </ColumnValueDistributionProfile>
       <ColumnValueDistributionProfile IsExact="true" ProfileRequestID="ValueDistReq">
         <DataSourceID>{68B744B6-BFA4-417D-AA11-2C26D08D51D7}</DataSourceID>
-        <Table DataSource="." Database="Stage_DATH" Schema="dbo" Table="Casualties" RowCount="777820" />
+        <Table DataSource="." Database="Stage_DATH" Schema="dbo" Table="Casualties" RowCount="1555640" />
         <Column Name="Bus_or_Coach_Passenger" SqlDbType="VarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
         <NumberOfDistinctValues>6</NumberOfDistinctValues>
         <ValueDistribution>
           <ValueDistributionItem>
-            <Value>0</Value>
-            <Count>757765</Count>
+            <Value>3</Value>
+            <Count>11124</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
-            <Value>3</Value>
-            <Count>5562</Count>
+            <Value>0</Value>
+            <Count>1515530</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
             <Value>1</Value>
-            <Count>1139</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
-            <Value>4</Value>
-            <Count>12240</Count>
+            <Count>2278</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
             <Value>2</Value>
-            <Count>1085</Count>
+            <Count>2170</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>4</Value>
+            <Count>24480</Count>
           </ValueDistributionItem>
         </ValueDistribution>
       </ColumnValueDistributionProfile>
       <ColumnValueDistributionProfile IsExact="true" ProfileRequestID="ValueDistReq">
         <DataSourceID>{68B744B6-BFA4-417D-AA11-2C26D08D51D7}</DataSourceID>
-        <Table DataSource="." Database="Stage_DATH" Schema="dbo" Table="Casualties" RowCount="777820" />
+        <Table DataSource="." Database="Stage_DATH" Schema="dbo" Table="Casualties" RowCount="1555640" />
         <Column Name="Pedestrian_Road_Maintenance_Worker" SqlDbType="VarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
         <NumberOfDistinctValues>4</NumberOfDistinctValues>
         <ValueDistribution>
           <ValueDistributionItem>
             <Value>2</Value>
-            <Count>26260</Count>
+            <Count>52520</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
             <Value>0</Value>
-            <Count>751308</Count>
+            <Count>1502616</Count>
           </ValueDistributionItem>
         </ValueDistribution>
       </ColumnValueDistributionProfile>
       <ColumnValueDistributionProfile IsExact="true" ProfileRequestID="ValueDistReq">
         <DataSourceID>{68B744B6-BFA4-417D-AA11-2C26D08D51D7}</DataSourceID>
-        <Table DataSource="." Database="Stage_DATH" Schema="dbo" Table="Casualties" RowCount="777820" />
+        <Table DataSource="." Database="Stage_DATH" Schema="dbo" Table="Casualties" RowCount="1555640" />
         <Column Name="Casualty_Type" SqlDbType="VarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
         <NumberOfDistinctValues>21</NumberOfDistinctValues>
         <ValueDistribution>
           <ValueDistributionItem>
-            <Value>11</Value>
-            <Count>21482</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
-            <Value>5</Value>
-            <Count>29239</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
-            <Value>19</Value>
-            <Count>18373</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
-            <Value>4</Value>
-            <Count>9038</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
             <Value>3</Value>
-            <Count>29415</Count>
+            <Count>58830</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
             <Value>9</Value>
-            <Count>456371</Count>
+            <Count>912742</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
             <Value>2</Value>
-            <Count>10659</Count>
+            <Count>21318</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
             <Value>21</Value>
-            <Count>3550</Count>
+            <Count>7100</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
             <Value>0</Value>
-            <Count>100197</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
-            <Value>20</Value>
-            <Count>1853</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
-            <Value>8</Value>
-            <Count>11270</Count>
+            <Count>200394</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
             <Value>1</Value>
-            <Count>79031</Count>
+            <Count>158062</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
             <Value>10</Value>
-            <Count>2308</Count>
+            <Count>4616</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
             <Value>90</Value>
-            <Count>3447</Count>
+            <Count>6894</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>11</Value>
+            <Count>42964</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>5</Value>
+            <Count>58478</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>19</Value>
+            <Count>36746</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>4</Value>
+            <Count>18076</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>8</Value>
+            <Count>22540</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>20</Value>
+            <Count>3706</Count>
           </ValueDistributionItem>
         </ValueDistribution>
       </ColumnValueDistributionProfile>
       <ColumnValueDistributionProfile IsExact="true" ProfileRequestID="ValueDistReq">
         <DataSourceID>{68B744B6-BFA4-417D-AA11-2C26D08D51D7}</DataSourceID>
-        <Table DataSource="." Database="Stage_DATH" Schema="dbo" Table="Casualties" RowCount="777820" />
+        <Table DataSource="." Database="Stage_DATH" Schema="dbo" Table="Casualties" RowCount="1555640" />
         <Column Name="Casualty_Home_Area_Type" SqlDbType="VarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
         <NumberOfDistinctValues>4</NumberOfDistinctValues>
         <ValueDistribution>
           <ValueDistributionItem>
-            <Value>2</Value>
-            <Count>63981</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
             <Value>3</Value>
-            <Count>79206</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
-            <Value>1</Value>
-            <Count>545748</Count>
+            <Count>158412</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
             <Value>-1</Value>
-            <Count>88885</Count>
+            <Count>177770</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2</Value>
+            <Count>127962</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>1</Value>
+            <Count>1091496</Count>
           </ValueDistributionItem>
         </ValueDistribution>
       </ColumnValueDistributionProfile>
       <ColumnPatternProfile ProfileRequestID="PatternReq" IsExact="false">
         <DataSourceID>{68B744B6-BFA4-417D-AA11-2C26D08D51D7}</DataSourceID>
-        <Table DataSource="." Database="Stage_DATH" Schema="dbo" Table="Casualties" RowCount="777820" />
+        <Table DataSource="." Database="Stage_DATH" Schema="dbo" Table="Casualties" RowCount="1555640" />
         <Column Name="Accident_Index" SqlDbType="VarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
         <TopRegexPatterns>
           <PatternDistributionItem>
@@ -1269,7 +1296,7 @@
       </ColumnPatternProfile>
       <ColumnPatternProfile ProfileRequestID="PatternReq" IsExact="false">
         <DataSourceID>{68B744B6-BFA4-417D-AA11-2C26D08D51D7}</DataSourceID>
-        <Table DataSource="." Database="Stage_DATH" Schema="dbo" Table="Casualties" RowCount="777820" />
+        <Table DataSource="." Database="Stage_DATH" Schema="dbo" Table="Casualties" RowCount="1555640" />
         <Column Name="Vehicle_Reference" SqlDbType="VarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
         <TopRegexPatterns>
           <PatternDistributionItem>
@@ -1278,13 +1305,13 @@
           </PatternDistributionItem>
           <PatternDistributionItem>
             <RegexText>2</RegexText>
-            <Frequency>41</Frequency>
+            <Frequency>42</Frequency>
           </PatternDistributionItem>
         </TopRegexPatterns>
       </ColumnPatternProfile>
       <ColumnPatternProfile ProfileRequestID="PatternReq" IsExact="false">
         <DataSourceID>{68B744B6-BFA4-417D-AA11-2C26D08D51D7}</DataSourceID>
-        <Table DataSource="." Database="Stage_DATH" Schema="dbo" Table="Casualties" RowCount="777820" />
+        <Table DataSource="." Database="Stage_DATH" Schema="dbo" Table="Casualties" RowCount="1555640" />
         <Column Name="Casualty_Reference" SqlDbType="VarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
         <TopRegexPatterns>
           <PatternDistributionItem>
@@ -1297,13 +1324,13 @@
           </PatternDistributionItem>
           <PatternDistributionItem>
             <RegexText>3</RegexText>
-            <Frequency>5</Frequency>
+            <Frequency>6</Frequency>
           </PatternDistributionItem>
         </TopRegexPatterns>
       </ColumnPatternProfile>
       <ColumnPatternProfile ProfileRequestID="PatternReq" IsExact="false">
         <DataSourceID>{68B744B6-BFA4-417D-AA11-2C26D08D51D7}</DataSourceID>
-        <Table DataSource="." Database="Stage_DATH" Schema="dbo" Table="Casualties" RowCount="777820" />
+        <Table DataSource="." Database="Stage_DATH" Schema="dbo" Table="Casualties" RowCount="1555640" />
         <Column Name="Casualty_Class" SqlDbType="VarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
         <TopRegexPatterns>
           <PatternDistributionItem>
@@ -1312,7 +1339,7 @@
           </PatternDistributionItem>
           <PatternDistributionItem>
             <RegexText>2</RegexText>
-            <Frequency>23</Frequency>
+            <Frequency>22</Frequency>
           </PatternDistributionItem>
           <PatternDistributionItem>
             <RegexText>3</RegexText>
@@ -1322,7 +1349,7 @@
       </ColumnPatternProfile>
       <ColumnPatternProfile ProfileRequestID="PatternReq" IsExact="false">
         <DataSourceID>{68B744B6-BFA4-417D-AA11-2C26D08D51D7}</DataSourceID>
-        <Table DataSource="." Database="Stage_DATH" Schema="dbo" Table="Casualties" RowCount="777820" />
+        <Table DataSource="." Database="Stage_DATH" Schema="dbo" Table="Casualties" RowCount="1555640" />
         <Column Name="Sex_of_Casualty" SqlDbType="VarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
         <TopRegexPatterns>
           <PatternDistributionItem>
@@ -1337,7 +1364,7 @@
       </ColumnPatternProfile>
       <ColumnPatternProfile ProfileRequestID="PatternReq" IsExact="false">
         <DataSourceID>{68B744B6-BFA4-417D-AA11-2C26D08D51D7}</DataSourceID>
-        <Table DataSource="." Database="Stage_DATH" Schema="dbo" Table="Casualties" RowCount="777820" />
+        <Table DataSource="." Database="Stage_DATH" Schema="dbo" Table="Casualties" RowCount="1555640" />
         <Column Name="Age_of_Casualty" SqlDbType="VarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
         <TopRegexPatterns>
           <PatternDistributionItem>
@@ -1352,12 +1379,12 @@
       </ColumnPatternProfile>
       <ColumnPatternProfile ProfileRequestID="PatternReq" IsExact="false">
         <DataSourceID>{68B744B6-BFA4-417D-AA11-2C26D08D51D7}</DataSourceID>
-        <Table DataSource="." Database="Stage_DATH" Schema="dbo" Table="Casualties" RowCount="777820" />
+        <Table DataSource="." Database="Stage_DATH" Schema="dbo" Table="Casualties" RowCount="1555640" />
         <Column Name="Age_Band_of_Casualty" SqlDbType="VarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
         <TopRegexPatterns>
           <PatternDistributionItem>
             <RegexText>\d</RegexText>
-            <Frequency>91</Frequency>
+            <Frequency>90</Frequency>
           </PatternDistributionItem>
           <PatternDistributionItem>
             <RegexText>\d\d</RegexText>
@@ -1367,22 +1394,22 @@
       </ColumnPatternProfile>
       <ColumnPatternProfile ProfileRequestID="PatternReq" IsExact="false">
         <DataSourceID>{68B744B6-BFA4-417D-AA11-2C26D08D51D7}</DataSourceID>
-        <Table DataSource="." Database="Stage_DATH" Schema="dbo" Table="Casualties" RowCount="777820" />
+        <Table DataSource="." Database="Stage_DATH" Schema="dbo" Table="Casualties" RowCount="1555640" />
         <Column Name="Casualty_Severity" SqlDbType="VarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
         <TopRegexPatterns>
           <PatternDistributionItem>
             <RegexText>3</RegexText>
-            <Frequency>86</Frequency>
+            <Frequency>87</Frequency>
           </PatternDistributionItem>
           <PatternDistributionItem>
             <RegexText>2</RegexText>
-            <Frequency>13</Frequency>
+            <Frequency>12</Frequency>
           </PatternDistributionItem>
         </TopRegexPatterns>
       </ColumnPatternProfile>
       <ColumnPatternProfile ProfileRequestID="PatternReq" IsExact="false">
         <DataSourceID>{68B744B6-BFA4-417D-AA11-2C26D08D51D7}</DataSourceID>
-        <Table DataSource="." Database="Stage_DATH" Schema="dbo" Table="Casualties" RowCount="777820" />
+        <Table DataSource="." Database="Stage_DATH" Schema="dbo" Table="Casualties" RowCount="1555640" />
         <Column Name="Pedestrian_Location" SqlDbType="VarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
         <TopRegexPatterns>
           <PatternDistributionItem>
@@ -1401,72 +1428,72 @@
       </ColumnPatternProfile>
       <ColumnPatternProfile ProfileRequestID="PatternReq" IsExact="false">
         <DataSourceID>{68B744B6-BFA4-417D-AA11-2C26D08D51D7}</DataSourceID>
-        <Table DataSource="." Database="Stage_DATH" Schema="dbo" Table="Casualties" RowCount="777820" />
+        <Table DataSource="." Database="Stage_DATH" Schema="dbo" Table="Casualties" RowCount="1555640" />
         <Column Name="Pedestrian_Movement" SqlDbType="VarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
         <TopRegexPatterns>
           <PatternDistributionItem>
             <RegexText>0</RegexText>
-            <Frequency>87</Frequency>
+            <Frequency>88</Frequency>
           </PatternDistributionItem>
           <PatternDistributionItem>
             <RegexText>\d</RegexText>
-            <Frequency>13</Frequency>
+            <Frequency>12</Frequency>
           </PatternDistributionItem>
         </TopRegexPatterns>
       </ColumnPatternProfile>
       <ColumnPatternProfile ProfileRequestID="PatternReq" IsExact="false">
         <DataSourceID>{68B744B6-BFA4-417D-AA11-2C26D08D51D7}</DataSourceID>
-        <Table DataSource="." Database="Stage_DATH" Schema="dbo" Table="Casualties" RowCount="777820" />
+        <Table DataSource="." Database="Stage_DATH" Schema="dbo" Table="Casualties" RowCount="1555640" />
         <Column Name="Car_Passenger" SqlDbType="VarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
         <TopRegexPatterns>
           <PatternDistributionItem>
             <RegexText>0</RegexText>
-            <Frequency>81</Frequency>
+            <Frequency>80</Frequency>
           </PatternDistributionItem>
           <PatternDistributionItem>
             <RegexText>1</RegexText>
-            <Frequency>12</Frequency>
+            <Frequency>13</Frequency>
           </PatternDistributionItem>
           <PatternDistributionItem>
             <RegexText>2</RegexText>
-            <Frequency>7</Frequency>
+            <Frequency>8</Frequency>
           </PatternDistributionItem>
         </TopRegexPatterns>
       </ColumnPatternProfile>
       <ColumnPatternProfile ProfileRequestID="PatternReq" IsExact="false">
         <DataSourceID>{68B744B6-BFA4-417D-AA11-2C26D08D51D7}</DataSourceID>
-        <Table DataSource="." Database="Stage_DATH" Schema="dbo" Table="Casualties" RowCount="777820" />
+        <Table DataSource="." Database="Stage_DATH" Schema="dbo" Table="Casualties" RowCount="1555640" />
         <Column Name="Bus_or_Coach_Passenger" SqlDbType="VarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
         <TopRegexPatterns>
           <PatternDistributionItem>
             <RegexText>0</RegexText>
-            <Frequency>98</Frequency>
+            <Frequency>97</Frequency>
           </PatternDistributionItem>
         </TopRegexPatterns>
       </ColumnPatternProfile>
       <ColumnPatternProfile ProfileRequestID="PatternReq" IsExact="false">
         <DataSourceID>{68B744B6-BFA4-417D-AA11-2C26D08D51D7}</DataSourceID>
-        <Table DataSource="." Database="Stage_DATH" Schema="dbo" Table="Casualties" RowCount="777820" />
+        <Table DataSource="." Database="Stage_DATH" Schema="dbo" Table="Casualties" RowCount="1555640" />
         <Column Name="Pedestrian_Road_Maintenance_Worker" SqlDbType="VarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
         <TopRegexPatterns>
           <PatternDistributionItem>
             <RegexText>0</RegexText>
-            <Frequency>96</Frequency>
+            <Frequency>97</Frequency>
           </PatternDistributionItem>
         </TopRegexPatterns>
       </ColumnPatternProfile>
       <ColumnPatternProfile ProfileRequestID="PatternReq" IsExact="false">
         <DataSourceID>{68B744B6-BFA4-417D-AA11-2C26D08D51D7}</DataSourceID>
-        <Table DataSource="." Database="Stage_DATH" Schema="dbo" Table="Casualties" RowCount="777820" />
+        <Table DataSource="." Database="Stage_DATH" Schema="dbo" Table="Casualties" RowCount="1555640" />
         <Column Name="Casualty_Type" SqlDbType="VarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
         <TopRegexPatterns>
           <PatternDistributionItem>
             <RegexText>9</RegexText>
-            <Frequency>58</Frequency>
+            <Frequency>57</Frequency>
           </PatternDistributionItem>
           <PatternDistributionItem>
             <RegexText>\d</RegexText>
-            <Frequency>35</Frequency>
+            <Frequency>36</Frequency>
           </PatternDistributionItem>
           <PatternDistributionItem>
             <RegexText>\d\d</RegexText>
@@ -1476,16 +1503,16 @@
       </ColumnPatternProfile>
       <ColumnPatternProfile ProfileRequestID="PatternReq" IsExact="false">
         <DataSourceID>{68B744B6-BFA4-417D-AA11-2C26D08D51D7}</DataSourceID>
-        <Table DataSource="." Database="Stage_DATH" Schema="dbo" Table="Casualties" RowCount="777820" />
+        <Table DataSource="." Database="Stage_DATH" Schema="dbo" Table="Casualties" RowCount="1555640" />
         <Column Name="Casualty_Home_Area_Type" SqlDbType="VarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
         <TopRegexPatterns>
           <PatternDistributionItem>
             <RegexText>1</RegexText>
-            <Frequency>71</Frequency>
+            <Frequency>69</Frequency>
           </PatternDistributionItem>
           <PatternDistributionItem>
             <RegexText>-1</RegexText>
-            <Frequency>10</Frequency>
+            <Frequency>11</Frequency>
           </PatternDistributionItem>
           <PatternDistributionItem>
             <RegexText>3</RegexText>
@@ -1493,7 +1520,7 @@
           </PatternDistributionItem>
           <PatternDistributionItem>
             <RegexText>2</RegexText>
-            <Frequency>8</Frequency>
+            <Frequency>9</Frequency>
           </PatternDistributionItem>
         </TopRegexPatterns>
       </ColumnPatternProfile>

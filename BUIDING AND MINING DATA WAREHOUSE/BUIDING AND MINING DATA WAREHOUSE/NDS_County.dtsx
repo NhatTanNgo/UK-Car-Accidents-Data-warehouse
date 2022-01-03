@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="22"
-  DTS:VersionGUID="{34CAFF90-1A47-413D-A803-7C2F67217B5D}">
+  DTS:VersionBuild="24"
+  DTS:VersionGUID="{2751AD84-CF9A-4A17-AAD0-332B9144D8C8}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables />
@@ -718,7 +718,7 @@ namespace SC_c25473f5c07f4811bc81e206226383d0.Properties {
     <msb:CodeName>SC_c25473f5c07f4811bc81e206226383d0</msb:CodeName>
     <msb:Language>msBuild</msb:Language>
     <msb:DisplayName>SC_c25473f5c07f4811bc81e206226383d0</msb:DisplayName>
-    <msb:ProjectId>{7A549A3E-C3A1-44B3-8213-547A0C3DBFDB}</msb:ProjectId>
+    <msb:ProjectId>{4FD46230-8410-48E0-A622-974B0AE1E51C}</msb:ProjectId>
   </msb:PropertyGroup>
   <msb:ItemGroup>
     <msb:Project Include="SC_c25473f5c07f4811bc81e206226383d0.csproj" />
@@ -885,7 +885,7 @@ using System.Runtime.CompilerServices;
                     <arrayElement
                       dataType="System.String"><![CDATA[TVqQAAMAAAAEAAAA//8AALgAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAgAAAAA4fug4AtAnNIbgBTM0hVGhpcyBwcm9ncmFtIGNhbm5vdCBiZSBydW4gaW4gRE9TIG1v
-ZGUuDQ0KJAAAAAAAAABQRQAATAEDAI1/0GEAAAAAAAAAAOAAIiALATAAABQAAAAIAAAAAAAAyjIA
+ZGUuDQ0KJAAAAAAAAABQRQAATAEDANdD0mEAAAAAAAAAAOAAIiALATAAABQAAAAIAAAAAAAAyjIA
 AAAgAAAAQAAAAAAAEAAgAAAAAgAABAAAAAAAAAAGAAAAAAAAAACAAAAAAgAAAAAAAAMAYIUAABAA
 ABAAAAAAEAAAEAAAAAAAABAAAAAAAAAAAAAAAHgyAABPAAAAAEAAAEgEAAAAAAAAAAAAAAAAAAAA
 AAAAAGAAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -963,7 +963,7 @@ AHkAIABjAGEAbgBuAG8AdAAgAGIAZQAgAHMAZQB0ACAAdABvACAARgBhAGwAcwBlAC4AIABBAHMA
 cwBpAGcAbgAgAGEAIAB2AGEAbAB1AGUAIAB0AG8AIAB0AGgAZQAgAGMAbwBsAHUAbQBuACAAaQBu
 AHMAdABlAGEAZAAuAAAPSQBuAHAAdQB0ACAAMAAAcVMAQwBfAGMAMgA1ADQANwAzAGYANQBjADAA
 NwBmADQAOAAxADEAYgBjADgAMQBlADIAMAA2ADIAMgA2ADMAOAAzAGQAMAAuAFAAcgBvAHAAZQBy
-AHQAaQBlAHMALgBSAGUAcwBvAHUAcgBjAGUAcwAAAADtosKAIA+NSbKQwWBYRFhvAAQgAQEIAyAA
+AHQAaQBlAHMALgBSAGUAcwBvAHUAcgBjAGUAcwAAAAC/QcSNiMQcS6MGUEBQjH8pAAQgAQEIAyAA
 AQUgAQEREQQgAQEOBSABARFZCAcGDg4ICAgDBAABAg4DIAAIBCABAwgDIAAOBQACDg4OCSADARI9
 HQgSQQMGEj0DBh0IBCABDggEIAECCAUgAgEIHAMgAAIGIAICDhF1BSABHQgIBgABEnkRfQUgABKA
 gQcgAgEOEoCBCLd6XFYZNOCJCImEXc2AgMyRAwYSFAMGEhgDBhJFAwYSUQMGElUDBhIgBSABARIM
@@ -1106,19 +1106,19 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
                   name="Data Conversion Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Stage to NDS\Data Conversion.Inputs[Data Conversion Input].Columns[County]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="County"
-                      lineageId="Package\Stage to NDS\Union All.Outputs[Union All Output 1].Columns[County]" />
-                    <inputColumn
                       refId="Package\Stage to NDS\Data Conversion.Inputs[Data Conversion Input].Columns[Postcode districts]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="255"
                       cachedName="Postcode districts"
                       lineageId="Package\Stage to NDS\Union All.Outputs[Union All Output 1].Columns[Postcode districts]" />
+                    <inputColumn
+                      refId="Package\Stage to NDS\Data Conversion.Inputs[Data Conversion Input].Columns[County]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="County"
+                      lineageId="Package\Stage to NDS\Union All.Outputs[Union All Output 1].Columns[County]" />
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
@@ -1130,28 +1130,6 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
                   name="Data Conversion Output"
                   synchronousInputId="Package\Stage to NDS\Data Conversion.Inputs[Data Conversion Input]">
                   <outputColumns>
-                    <outputColumn
-                      refId="Package\Stage to NDS\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of County]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      length="50"
-                      lineageId="Package\Stage to NDS\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of County]"
-                      name="Copy of County"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the input column used as the source of data for the conversion."
-                          name="SourceInputColumnLineageID">#{Package\Stage to NDS\Union All.Outputs[Union All Output 1].Columns[County]}</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                      </properties>
-                    </outputColumn>
                     <outputColumn
                       refId="Package\Stage to NDS\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Postcode districts]"
                       codePage="1252"
@@ -1168,6 +1146,28 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
                           dataType="System.Int32"
                           description="Specifies the input column used as the source of data for the conversion."
                           name="SourceInputColumnLineageID">#{Package\Stage to NDS\Union All.Outputs[Union All Output 1].Columns[Postcode districts]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Stage to NDS\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of County]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="50"
+                      lineageId="Package\Stage to NDS\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of County]"
+                      name="Copy of County"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Stage to NDS\Union All.Outputs[Union All Output 1].Columns[County]}</property>
                         <property
                           dataType="System.Boolean"
                           description="Indicates whether the column uses the faster, locale-neutral parsing routines."
@@ -2155,11 +2155,11 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="145,43"
+          Size="144.8,43.2"
           Id="Package\Split postcode"
           TopLeft="38.1249994318932,84.4999984890223" />
         <NodeLayout
-          Size="158,41"
+          Size="158.4,40.8"
           Id="Package\Stage to NDS"
           TopLeft="264.375003085339,84.9588250112719" />
         <EdgeLayout
@@ -2193,33 +2193,129 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
       <GraphLayout
         Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="157,43"
+          Size="156.8,43.2"
           Id="Package\Stage to NDS\Data Conversion"
           TopLeft="128.831350785902,281.841274079018" />
         <NodeLayout
-          Size="164,43"
+          Size="164,43.2"
           Id="Package\Stage to NDS\Insert Destination"
           TopLeft="719.367055700737,194.73678186166" />
         <NodeLayout
-          Size="169,43"
+          Size="140.8,41.6"
+          Id="Package\Stage to NDS\Wikipostcode"
+          TopLeft="11,13" />
+        <NodeLayout
+          Size="168.8,43.2"
           Id="Package\Stage to NDS\Split dirty postcode"
           TopLeft="257.999999565383,103.944446355766" />
         <NodeLayout
-          Size="167,43"
+          Size="167.2,43.2"
           Id="Package\Stage to NDS\OLE DB Command"
           TopLeft="372.057538268556,185.63360726033" />
         <NodeLayout
-          Size="209,42"
+          Size="208.8,41.6"
           Id="Package\Stage to NDS\Slowly Changing Dimension"
           TopLeft="489.571425807027,298.959000545353" />
         <NodeLayout
-          Size="205,43"
+          Size="204.8,43.2"
           Id="Package\Stage to NDS\Add SourceID, timestamps"
           TopLeft="237.222221828997,19.3333349217969" />
         <NodeLayout
-          Size="125,43"
+          Size="124.8,43.2"
           Id="Package\Stage to NDS\Cleansing"
           TopLeft="55.3055566214026,99.7222260448663" />
+        <EdgeLayout
+          Id="Package\Stage to NDS.Paths[Data Conversion Output]"
+          TopLeft="285.831350785902,303.341274079018">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="203.740075021125,16.617726466335"
+              Start="0,0"
+              End="196.240075021125,16.617726466335">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="97.8700375105625,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="97.8700375105625,0"
+                    Point2="101.870037510562,0"
+                    Point3="101.870037510562,4" />
+                  <mssgle:LineSegment
+                    End="101.870037510562,12.617726466335" />
+                  <mssgle:CubicBezierSegment
+                    Point1="101.870037510562,12.617726466335"
+                    Point2="101.870037510562,16.617726466335"
+                    Point3="105.870037510562,16.617726466335" />
+                  <mssgle:LineSegment
+                    End="196.240075021125,16.617726466335" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Stage to NDS.Paths[Changing Attribute Updates Output]"
+          TopLeft="560.571425807027,298.959000545353">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-105.013887538471,-70.325393285023"
+              Start="0,0"
+              End="-105.013887538471,-62.825393285023">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,-24.4507289073312" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,-24.4507289073312"
+                    Point2="0,-28.4507289073312"
+                    Point3="-4,-28.4507289073312" />
+                  <mssgle:LineSegment
+                    End="-101.013887538471,-28.4507289073312" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-101.013887538471,-28.4507289073312"
+                    Point2="-105.013887538471,-28.4507289073312"
+                    Point3="-105.013887538471,-32.4507289073312" />
+                  <mssgle:LineSegment
+                    End="-105.013887538471,-62.825393285023" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-131.040850019236,-23.4507289073312,157.0678125,11.6630859375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Stage to NDS.Paths[OLE DB Source Output]"
+          TopLeft="152,37.4166674608985">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="85.222221828997,0"
+              Start="0,0"
+              End="77.722221828997,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="77.722221828997,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
         <EdgeLayout
           Id="Package\Stage to NDS.Paths[New Output]"
           TopLeft="627.571425807027,298.959000545353">
@@ -2302,168 +2398,72 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Stage to NDS.Paths[Data Conversion Output]"
-          TopLeft="285.831350785902,303.341274079018">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="203.740075021125,16.617726466335"
-              Start="0,0"
-              End="196.240075021125,16.617726466335">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="97.8700375105625,0" />
-                  <mssgle:CubicBezierSegment
-                    Point1="97.8700375105625,0"
-                    Point2="101.870037510562,0"
-                    Point3="101.870037510562,4" />
-                  <mssgle:LineSegment
-                    End="101.870037510562,12.617726466335" />
-                  <mssgle:CubicBezierSegment
-                    Point1="101.870037510562,12.617726466335"
-                    Point2="101.870037510562,16.617726466335"
-                    Point3="105.870037510562,16.617726466335" />
-                  <mssgle:LineSegment
-                    End="196.240075021125,16.617726466335" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Stage to NDS.Paths[Changing Attribute Updates Output]"
-          TopLeft="560.571425807027,298.959000545353">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-105.013887538471,-70.325393285023"
-              Start="0,0"
-              End="-105.013887538471,-62.825393285023">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,-24.4507289073312" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,-24.4507289073312"
-                    Point2="0,-28.4507289073312"
-                    Point3="-4,-28.4507289073312" />
-                  <mssgle:LineSegment
-                    End="-101.013887538471,-28.4507289073312" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-101.013887538471,-28.4507289073312"
-                    Point2="-105.013887538471,-28.4507289073312"
-                    Point3="-105.013887538471,-32.4507289073312" />
-                  <mssgle:LineSegment
-                    End="-105.013887538471,-62.825393285023" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-131.040850019236,-23.4507289073312,157.0678125,11.6630859375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
         <NodeLayout
-          Size="141,42"
-          Id="Package\Stage to NDS\Wikipostcode"
-          TopLeft="11,13" />
-        <EdgeLayout
-          Id="Package\Stage to NDS.Paths[OLE DB Source Output]"
-          TopLeft="152,37.4166674608985">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="85.222221828997,0"
-              Start="0,0"
-              End="77.722221828997,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="77.722221828997,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="121,42"
+          Size="120,41.6"
           Id="Package\Stage to NDS\Union All"
-          TopLeft="152,195" />
+          TopLeft="136.685716572586,194.235296841724" />
         <EdgeLayout
           Id="Package\Stage to NDS.Paths[Clean]"
-          TopLeft="342.499999565383,146.944446355766">
+          TopLeft="342.399999565383,147.144446355766">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-129.999999565383,48.055553644234"
+              EndConnector="-127.04761632613,47.0908504859578"
               Start="0,0"
-              End="-129.999999565383,40.555553644234">
+              End="-127.04761632613,39.5908504859578">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,20.027776822117" />
+                    End="0,23.8827404193171" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,20.027776822117"
-                    Point2="0,24.027776822117"
-                    Point3="-4,24.027776822117" />
+                    Point1="0,23.8827404193171"
+                    Point2="0,27.8827404193171"
+                    Point3="-4,27.8827404193171" />
                   <mssgle:LineSegment
-                    End="-125.999999565383,24.027776822117" />
+                    End="-123.04761632613,27.8827404193171" />
                   <mssgle:CubicBezierSegment
-                    Point1="-125.999999565383,24.027776822117"
-                    Point2="-129.999999565383,24.027776822117"
-                    Point3="-129.999999565383,28.027776822117" />
+                    Point1="-123.04761632613,27.8827404193171"
+                    Point2="-127.04761632613,27.8827404193171"
+                    Point3="-127.04761632613,31.8827404193171" />
                   <mssgle:LineSegment
-                    End="-129.999999565383,40.555553644234" />
+                    End="-127.04761632613,39.5908504859578" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-77.7194529076915,29.027776822117,25.43890625,9.7490234375"
+              BoundingBox="-76.243261288065,32.8827404193171,25.43890625,9.7490234375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Stage to NDS.Paths[Output 0]"
-          TopLeft="117.805556621403,142.722226044866">
+          TopLeft="117.705556621403,142.922226044866">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="75.8611100452641,52.2777739551337"
+              EndConnector="60.3134932845172,51.3130707968575"
               Start="0,0"
-              End="75.8611100452641,44.7777739551337">
+              End="60.3134932845172,43.8130707968575">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,26.957311493823" />
+                    End="0,26.382739287613" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,26.957311493823"
-                    Point2="0,30.957311493823"
-                    Point3="4,30.957311493823" />
+                    Point1="0,26.382739287613"
+                    Point2="0,30.382739287613"
+                    Point3="4,30.382739287613" />
                   <mssgle:LineSegment
-                    End="71.8611100452641,30.957311493823" />
+                    End="56.3134932845172,30.382739287613" />
                   <mssgle:CubicBezierSegment
-                    Point1="71.8611100452641,30.957311493823"
-                    Point2="75.8611100452641,30.957311493823"
-                    Point3="75.8611100452641,34.957311493823" />
+                    Point1="56.3134932845172,30.382739287613"
+                    Point2="60.3134932845172,30.382739287613"
+                    Point3="60.3134932845172,34.382739287613" />
                   <mssgle:LineSegment
-                    End="75.8611100452641,44.7777739551337" />
+                    End="60.3134932845172,43.8130707968575" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -2474,18 +2474,30 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Stage to NDS.Paths[Union All Output 1]"
-          TopLeft="209.915675392951,237">
+          TopLeft="196.685716572586,235.835296841724">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,44.841274079018"
+              EndConnector="10.5456342133156,46.0059772372942"
               Start="0,0"
-              End="0,37.341274079018">
+              End="10.5456342133156,38.5059772372942">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,37.341274079018" />
+                    End="0,19.0029886186471" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,19.0029886186471"
+                    Point2="0,23.0029886186471"
+                    Point3="4,23.0029886186471" />
+                  <mssgle:LineSegment
+                    End="6.54563421331557,23.0029886186471" />
+                  <mssgle:CubicBezierSegment
+                    Point1="6.54563421331557,23.0029886186471"
+                    Point2="10.5456342133156,23.0029886186471"
+                    Point3="10.5456342133156,27.0029886186471" />
+                  <mssgle:LineSegment
+                    End="10.5456342133156,38.5059772372942" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -2497,6 +2509,19 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Stage to NDS\Wikipostcode">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
   <PipelineComponentMetadata
     design-time-name="Package\Stage to NDS\Slowly Changing Dimension">
     <Properties>
@@ -2555,19 +2580,6 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
   &lt;DateVariable /&gt;
   &lt;EnableInferredSupport&gt;false&lt;/EnableInferredSupport&gt;
 &lt;/SCDWizardMetadata&gt;</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Stage to NDS\Wikipostcode">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
