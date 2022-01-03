@@ -11,7 +11,7 @@
       DTS:RowDelimiter=""
       DTS:TextQualifier="_x003C_none_x003E_"
       DTS:CodePage="1252"
-      DTS:ConnectionString="C:\Flatfile_No_mat_LSOA_Postcode_ID.txt">
+      DTS:ConnectionString="D:\Downloads\BI\BI_Project\UK-Car-Accidents-Data-warehouse\Profiling\LSOA_No match.txt">
       <DTS:FlatFileColumns>
         <DTS:FlatFileColumn
           DTS:ColumnType="Delimited"
@@ -19,7 +19,7 @@
           DTS:DataType="3"
           DTS:TextQualified="True"
           DTS:ObjectName="SrcID"
-          DTS:DTSID="{AB1C4FF2-7054-4FF9-BF63-AE58DF1A84A6}"
+          DTS:DTSID="{14CD93B6-7351-4FA7-9ADB-48DB79C8B16D}"
           DTS:CreationName="" />
         <DTS:FlatFileColumn
           DTS:ColumnType="Delimited"
@@ -28,7 +28,7 @@
           DTS:DataType="129"
           DTS:TextQualified="True"
           DTS:ObjectName="LSOA"
-          DTS:DTSID="{B95AA55B-AAB8-4D24-BCBA-D2F037D0EA2D}"
+          DTS:DTSID="{B65CCACE-F0BF-4947-97D7-CEEB1A73B49F}"
           DTS:CreationName="" />
         <DTS:FlatFileColumn
           DTS:ColumnType="Delimited"
@@ -37,7 +37,7 @@
           DTS:DataType="129"
           DTS:TextQualified="True"
           DTS:ObjectName="Postcode_NK"
-          DTS:DTSID="{1F85BEBE-C9E0-4FD1-BB97-6DF67502A17C}"
+          DTS:DTSID="{714F4A5E-9301-4328-9D0E-3B73FD8D82DC}"
           DTS:CreationName="" />
         <DTS:FlatFileColumn
           DTS:ColumnType="Delimited"
@@ -45,7 +45,7 @@
           DTS:DataType="135"
           DTS:TextQualified="True"
           DTS:ObjectName="Create_time"
-          DTS:DTSID="{63256E76-FE9A-4336-A92A-AB5E85F9977D}"
+          DTS:DTSID="{A72CB6D8-E941-4438-B349-2AA6197F615C}"
           DTS:CreationName="" />
         <DTS:FlatFileColumn
           DTS:ColumnType="Delimited"
@@ -53,7 +53,7 @@
           DTS:DataType="135"
           DTS:TextQualified="True"
           DTS:ObjectName="Update_time"
-          DTS:DTSID="{D7A90F88-3816-4331-A2E1-BF56EA6654C0}"
+          DTS:DTSID="{D6985D05-C852-48B6-8568-FA85A707D2B2}"
           DTS:CreationName="" />
       </DTS:FlatFileColumns>
     </DTS:ConnectionManager>
