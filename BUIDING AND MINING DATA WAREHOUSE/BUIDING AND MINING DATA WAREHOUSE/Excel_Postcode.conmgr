@@ -12,7 +12,7 @@
       DTS:RowDelimiter=""
       DTS:TextQualifier="_x003C_none_x003E_"
       DTS:CodePage="1252"
-      DTS:ConnectionString="C:\Users\khoaf\Documents\Academic\Senior 1st\BI\Về nhà\TH\Đồ án\UK Accidents Data\postcodes.csv">
+      DTS:ConnectionString="C:\Users\WinXs\OneDrive - VNU-HCMUS\Uni\Nam 4 - HKI\BI\Do an\UK-Car-Accidents-Data-warehouse\Dataset\postcodes.csv">
       <DTS:FlatFileColumns>
         <DTS:FlatFileColumn
           DTS:ColumnType="Delimited"
@@ -21,7 +21,7 @@
           DTS:DataType="129"
           DTS:TextQualified="True"
           DTS:ObjectName="postcode"
-          DTS:DTSID="{3D7F2CA7-48DD-47AA-8E8B-2244C08D05A3}"
+          DTS:DTSID="{11FC2DDF-50BA-4D38-A674-EC0A9902A8B1}"
           DTS:CreationName="" />
         <DTS:FlatFileColumn
           DTS:ColumnType="Delimited"
@@ -30,7 +30,7 @@
           DTS:DataType="129"
           DTS:TextQualified="True"
           DTS:ObjectName="easting"
-          DTS:DTSID="{BDFB4EB1-FFC4-4C34-AB48-B03F1347948C}"
+          DTS:DTSID="{94C517C3-9F39-459B-95DD-F34C8D0B00F2}"
           DTS:CreationName="" />
         <DTS:FlatFileColumn
           DTS:ColumnType="Delimited"
@@ -39,7 +39,7 @@
           DTS:DataType="129"
           DTS:TextQualified="True"
           DTS:ObjectName="northing"
-          DTS:DTSID="{C30793BA-3601-4B81-94AB-899627F833FC}"
+          DTS:DTSID="{F22122CF-5D8D-4AC8-90DA-80E59EA384DC}"
           DTS:CreationName="" />
         <DTS:FlatFileColumn
           DTS:ColumnType="Delimited"
@@ -48,7 +48,7 @@
           DTS:DataType="129"
           DTS:TextQualified="True"
           DTS:ObjectName="latitude"
-          DTS:DTSID="{2474F6E2-82DB-417F-B498-62D8CD5BD81E}"
+          DTS:DTSID="{25660DC5-1B3E-47DC-A45C-0E2BB2A23EB9}"
           DTS:CreationName="" />
         <DTS:FlatFileColumn
           DTS:ColumnType="Delimited"
@@ -57,7 +57,7 @@
           DTS:DataType="129"
           DTS:TextQualified="True"
           DTS:ObjectName="longitude"
-          DTS:DTSID="{E4AA033F-B2ED-4D3F-8659-0BF96FC10092}"
+          DTS:DTSID="{CA27F3FA-B8F6-4628-8863-8F00C6E20C42}"
           DTS:CreationName="" />
         <DTS:FlatFileColumn
           DTS:ColumnType="Delimited"
@@ -66,7 +66,7 @@
           DTS:DataType="129"
           DTS:TextQualified="True"
           DTS:ObjectName="city"
-          DTS:DTSID="{F8129303-0285-42C5-9DA5-B9A1AA1CFAD8}"
+          DTS:DTSID="{38788595-DC79-4B6B-A1F9-FC3441D85A45}"
           DTS:CreationName="" />
         <DTS:FlatFileColumn
           DTS:ColumnType="Delimited"
@@ -75,7 +75,7 @@
           DTS:DataType="129"
           DTS:TextQualified="True"
           DTS:ObjectName="county"
-          DTS:DTSID="{D1D3F95C-C799-45F6-AFB9-936D95C4D25D}"
+          DTS:DTSID="{AA038164-0334-4130-87BB-6F1E2950F08C}"
           DTS:CreationName="" />
         <DTS:FlatFileColumn
           DTS:ColumnType="Delimited"
@@ -84,7 +84,7 @@
           DTS:DataType="129"
           DTS:TextQualified="True"
           DTS:ObjectName="country_code"
-          DTS:DTSID="{A409E1D5-57F7-48CA-AB37-06501BA114F3}"
+          DTS:DTSID="{D5888574-F06D-477B-AC13-D301FA84DBB5}"
           DTS:CreationName="" />
         <DTS:FlatFileColumn
           DTS:ColumnType="Delimited"
@@ -93,7 +93,7 @@
           DTS:DataType="129"
           DTS:TextQualified="True"
           DTS:ObjectName="country_name"
-          DTS:DTSID="{CCADBCB5-C8E0-4B10-B297-3BE7CCC0F875}"
+          DTS:DTSID="{56692D05-008A-48C4-8763-CF2D2E24CB11}"
           DTS:CreationName="" />
         <DTS:FlatFileColumn
           DTS:ColumnType="Delimited"
@@ -102,7 +102,7 @@
           DTS:DataType="129"
           DTS:TextQualified="True"
           DTS:ObjectName="iso3166-2"
-          DTS:DTSID="{ECE7BAD8-33AD-413B-9A9A-F53C30022F43}"
+          DTS:DTSID="{39D92CA7-B86C-4D21-B254-719E1FE8643C}"
           DTS:CreationName="" />
         <DTS:FlatFileColumn
           DTS:ColumnType="Delimited"
@@ -111,7 +111,7 @@
           DTS:DataType="129"
           DTS:TextQualified="True"
           DTS:ObjectName="region_code"
-          DTS:DTSID="{F4F9D3CA-2497-4051-AC12-9ED1DA4C8AFB}"
+          DTS:DTSID="{062A05B3-BE11-4C89-A861-36EA70C26F96}"
           DTS:CreationName="" />
         <DTS:FlatFileColumn
           DTS:ColumnType="Delimited"
@@ -120,7 +120,7 @@
           DTS:DataType="129"
           DTS:TextQualified="True"
           DTS:ObjectName="region_name"
-          DTS:DTSID="{966317F3-F0B4-4122-8DEA-2C925AB9B007}"
+          DTS:DTSID="{F7B041F4-EB6C-4C14-B479-B41FF7CB9F0F}"
           DTS:CreationName="" />
       </DTS:FlatFileColumns>
     </DTS:ConnectionManager>

@@ -12,7 +12,7 @@
       DTS:RowDelimiter=""
       DTS:TextQualifier="_x003C_none_x003E_"
       DTS:CodePage="1252"
-      DTS:ConnectionString="D:\Downloads\BI\BI_Project\UK-Car-Accidents-Data-warehouse\Dataset\Casualties1114.csv">
+      DTS:ConnectionString="C:\Users\WinXs\OneDrive - VNU-HCMUS\Uni\Nam 4 - HKI\BI\Do an\UK-Car-Accidents-Data-warehouse\Dataset\Casualties1114.csv">
       <DTS:FlatFileColumns>
         <DTS:FlatFileColumn
           DTS:ColumnType="Delimited"
@@ -21,7 +21,7 @@
           DTS:DataType="129"
           DTS:TextQualified="True"
           DTS:ObjectName="Accident_Index"
-          DTS:DTSID="{D6C98F31-0D9F-4AE2-A0F0-4DD87F32B3CA}"
+          DTS:DTSID="{8AE5D16A-0107-4B5E-9294-B3F593BBEB58}"
           DTS:CreationName="" />
         <DTS:FlatFileColumn
           DTS:ColumnType="Delimited"
@@ -30,7 +30,7 @@
           DTS:DataType="129"
           DTS:TextQualified="True"
           DTS:ObjectName="Vehicle_Reference"
-          DTS:DTSID="{CE9501F8-A54C-4758-890A-467917EEC07A}"
+          DTS:DTSID="{E4DC4E47-49F7-4B35-B66A-AE888DA15C2D}"
           DTS:CreationName="" />
         <DTS:FlatFileColumn
           DTS:ColumnType="Delimited"
@@ -39,7 +39,7 @@
           DTS:DataType="129"
           DTS:TextQualified="True"
           DTS:ObjectName="Casualty_Reference"
-          DTS:DTSID="{A0FD41C8-301A-43FD-AF80-833892C61D6C}"
+          DTS:DTSID="{1A589F05-8CEE-405E-BEB8-F4E06F201130}"
           DTS:CreationName="" />
         <DTS:FlatFileColumn
           DTS:ColumnType="Delimited"
@@ -48,7 +48,7 @@
           DTS:DataType="129"
           DTS:TextQualified="True"
           DTS:ObjectName="Casualty_Class"
-          DTS:DTSID="{B97518C6-5CE1-4E9C-8759-991977B7FAB4}"
+          DTS:DTSID="{CCAF061F-2D99-4002-9426-D4BFCBDEF3C0}"
           DTS:CreationName="" />
         <DTS:FlatFileColumn
           DTS:ColumnType="Delimited"
@@ -57,7 +57,7 @@
           DTS:DataType="129"
           DTS:TextQualified="True"
           DTS:ObjectName="Sex_of_Casualty"
-          DTS:DTSID="{712CCD23-30CD-4C40-A00D-CC2F4C195338}"
+          DTS:DTSID="{8740558C-DFE9-4728-B6DE-BD92F585BD97}"
           DTS:CreationName="" />
         <DTS:FlatFileColumn
           DTS:ColumnType="Delimited"
@@ -66,7 +66,7 @@
           DTS:DataType="129"
           DTS:TextQualified="True"
           DTS:ObjectName="Age_of_Casualty"
-          DTS:DTSID="{DD1D8EFF-6EEC-4447-8ACA-F6BCF24FE0E8}"
+          DTS:DTSID="{73F43F48-E17A-441E-BB54-645B6A5BE659}"
           DTS:CreationName="" />
         <DTS:FlatFileColumn
           DTS:ColumnType="Delimited"
@@ -75,7 +75,7 @@
           DTS:DataType="129"
           DTS:TextQualified="True"
           DTS:ObjectName="Age_Band_of_Casualty"
-          DTS:DTSID="{DFA0871F-7828-462A-84DA-0B44D3CBFD96}"
+          DTS:DTSID="{DAF01052-95DA-45D8-BDD8-24EF9654659F}"
           DTS:CreationName="" />
         <DTS:FlatFileColumn
           DTS:ColumnType="Delimited"
@@ -84,7 +84,7 @@
           DTS:DataType="129"
           DTS:TextQualified="True"
           DTS:ObjectName="Casualty_Severity"
-          DTS:DTSID="{46085419-EF8A-4616-8190-E1616DE3F1FB}"
+          DTS:DTSID="{49993B61-C54A-4845-BA09-31109A21A8FF}"
           DTS:CreationName="" />
         <DTS:FlatFileColumn
           DTS:ColumnType="Delimited"
@@ -93,7 +93,7 @@
           DTS:DataType="129"
           DTS:TextQualified="True"
           DTS:ObjectName="Pedestrian_Location"
-          DTS:DTSID="{F9EFBEDC-8451-4320-AF8A-8271160F5A18}"
+          DTS:DTSID="{75DBD468-A7BA-48E4-96FF-6507DC4F17DE}"
           DTS:CreationName="" />
         <DTS:FlatFileColumn
           DTS:ColumnType="Delimited"
@@ -102,7 +102,7 @@
           DTS:DataType="129"
           DTS:TextQualified="True"
           DTS:ObjectName="Pedestrian_Movement"
-          DTS:DTSID="{1691C804-A050-4656-B429-5176AF721B97}"
+          DTS:DTSID="{743FCBFB-7B9F-4E99-A2C0-B3A5A175764D}"
           DTS:CreationName="" />
         <DTS:FlatFileColumn
           DTS:ColumnType="Delimited"
@@ -111,7 +111,7 @@
           DTS:DataType="129"
           DTS:TextQualified="True"
           DTS:ObjectName="Car_Passenger"
-          DTS:DTSID="{352BC2FF-0965-48CA-BFD4-0000597CB29F}"
+          DTS:DTSID="{0D2190C9-DFDE-461C-9C0E-11D142AE5C72}"
           DTS:CreationName="" />
         <DTS:FlatFileColumn
           DTS:ColumnType="Delimited"
@@ -120,7 +120,7 @@
           DTS:DataType="129"
           DTS:TextQualified="True"
           DTS:ObjectName="Bus_or_Coach_Passenger"
-          DTS:DTSID="{A6B5426E-3667-48BB-9917-C69637B454E3}"
+          DTS:DTSID="{3E9D3B56-5BE9-40D3-B31D-A93CEFAC5C2C}"
           DTS:CreationName="" />
         <DTS:FlatFileColumn
           DTS:ColumnType="Delimited"
@@ -129,7 +129,7 @@
           DTS:DataType="129"
           DTS:TextQualified="True"
           DTS:ObjectName="Pedestrian_Road_Maintenance_Worker"
-          DTS:DTSID="{E45540A0-269C-476C-A208-D3966A908688}"
+          DTS:DTSID="{B89C4296-559C-42B4-8B4B-E25659822A94}"
           DTS:CreationName="" />
         <DTS:FlatFileColumn
           DTS:ColumnType="Delimited"
@@ -138,7 +138,7 @@
           DTS:DataType="129"
           DTS:TextQualified="True"
           DTS:ObjectName="Casualty_Type"
-          DTS:DTSID="{AB665C4D-2E62-4801-8789-DB6071640E36}"
+          DTS:DTSID="{46C325DF-51A0-4FB6-9FED-7540472E53B8}"
           DTS:CreationName="" />
         <DTS:FlatFileColumn
           DTS:ColumnType="Delimited"
@@ -147,7 +147,7 @@
           DTS:DataType="129"
           DTS:TextQualified="True"
           DTS:ObjectName="Casualty_Home_Area_Type"
-          DTS:DTSID="{C4045991-D1FB-4702-94E1-4F870C802AC4}"
+          DTS:DTSID="{B7F8A3D1-6884-4682-B936-19DE94B85EF8}"
           DTS:CreationName="" />
       </DTS:FlatFileColumns>
     </DTS:ConnectionManager>

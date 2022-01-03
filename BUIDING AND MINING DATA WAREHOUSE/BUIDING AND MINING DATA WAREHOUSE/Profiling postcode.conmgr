@@ -5,6 +5,6 @@
   DTS:CreationName="FILE">
   <DTS:ObjectData>
     <DTS:ConnectionManager
-      DTS:ConnectionString="D:\Downloads\BI\BI_Project\UK-Car-Accidents-Data-warehouse\Profiling\Postcodes.txt" />
+      DTS:ConnectionString="C:\Users\WinXs\OneDrive - VNU-HCMUS\Uni\Nam 4 - HKI\BI\Do an\UK-Car-Accidents-Data-warehouse\Profiling\Postcodes.txt" />
   </DTS:ObjectData>
 </DTS:ConnectionManager>
