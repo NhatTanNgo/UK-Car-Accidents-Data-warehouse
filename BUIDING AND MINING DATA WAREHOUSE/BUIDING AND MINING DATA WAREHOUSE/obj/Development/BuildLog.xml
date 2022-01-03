@@ -2,7 +2,7 @@
 <BuildLog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <ProjectInfo>
     <Name>BUIDING AND MINING DATA WAREHOUSE</Name>
-    <LastWriteTime>2022-01-02T12:16:11.9485757Z</LastWriteTime>
+    <LastWriteTime>2022-01-03T00:54:16.781124Z</LastWriteTime>
     <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
   </ProjectInfo>
   <LastBuildInfos>
@@ -23,7 +23,7 @@
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>Staging_postcodes.dtsx</Name>
-      <LastWriteTime>2021-12-30T12:59:33.7368643Z</LastWriteTime>
+      <LastWriteTime>2022-01-02T14:47:50.2304708Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
@@ -33,27 +33,22 @@
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>Main_Source.dtsx</Name>
-      <LastWriteTime>2022-01-02T11:55:58.328063Z</LastWriteTime>
+      <LastWriteTime>2022-01-02T14:13:57.7190315Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>NDS_Country_Region.dtsx</Name>
-      <LastWriteTime>2021-12-31T06:56:21.8713854Z</LastWriteTime>
+      <LastWriteTime>2022-01-02T14:13:57.7560371Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>Main_NDS.dtsx</Name>
-      <LastWriteTime>2021-12-31T12:39:57.9999178Z</LastWriteTime>
+      <LastWriteTime>2022-01-03T00:54:16.7461252Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>Staging_Wiki.dtsx</Name>
-      <LastWriteTime>2022-01-02T11:55:58.3360038Z</LastWriteTime>
-      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
-    </ProjectBuildItemInfo>
-    <ProjectBuildItemInfo>
-      <Name>NDS_Postcode.dtsx</Name>
-      <LastWriteTime>2021-12-30T12:59:33.7272532Z</LastWriteTime>
+      <LastWriteTime>2022-01-03T00:44:42.7822658Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
@@ -63,12 +58,12 @@
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>NDS_CodeBook.dtsx</Name>
-      <LastWriteTime>2021-12-31T06:56:21.8693777Z</LastWriteTime>
+      <LastWriteTime>2022-01-02T15:07:36.6599629Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>NDS_Accidents.dtsx</Name>
-      <LastWriteTime>2021-12-31T12:39:58.0029113Z</LastWriteTime>
+      <LastWriteTime>2022-01-03T03:16:53.3806968Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
@@ -83,27 +78,27 @@
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>Staging_PostcodeDistricts.dtsx</Name>
-      <LastWriteTime>2021-12-31T06:56:21.8723834Z</LastWriteTime>
+      <LastWriteTime>2022-01-02T14:51:29.2016023Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>NDS_County.dtsx</Name>
-      <LastWriteTime>2022-01-02T11:55:58.3310175Z</LastWriteTime>
+      <LastWriteTime>2022-01-03T00:49:05.2698719Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>NDS_Town.dtsx</Name>
-      <LastWriteTime>2021-12-31T12:39:58.0049045Z</LastWriteTime>
-      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
-    </ProjectBuildItemInfo>
-    <ProjectBuildItemInfo>
-      <Name>NDS_Postcode_2.dtsx</Name>
-      <LastWriteTime>2022-01-02T12:11:55.0827939Z</LastWriteTime>
+      <LastWriteTime>2022-01-02T14:13:57.7700362Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>NDS_LSOA.dtsx</Name>
-      <LastWriteTime>2022-01-02T12:39:42.2471076Z</LastWriteTime>
+      <LastWriteTime>2022-01-02T14:13:57.7600326Z</LastWriteTime>
+      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
+    </ProjectBuildItemInfo>
+    <ProjectBuildItemInfo>
+      <Name>NDS_Postcode.dtsx</Name>
+      <LastWriteTime>2022-01-03T00:54:14.1371247Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
   </LastBuildInfos>

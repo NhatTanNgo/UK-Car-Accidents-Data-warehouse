@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="11"
-  DTS:VersionGUID="{F98AE402-EE72-4F62-A936-A6056C9E232F}">
+  DTS:VersionBuild="13"
+  DTS:VersionGUID="{BEDECC0B-DFF7-40C7-AE8A-0566BB63A381}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables>
@@ -348,6 +348,15 @@ Where (Create_time &gt;=? and Create_time &lt;=?) or (Update_time &gt;=? and Upd
                       lineageId="Package\Load data into stage\OLE DB Source.Outputs[OLE DB Source Output].Columns[update_time]"
                       name="update_time"
                       truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Load data into stage\OLE DB Source.Outputs[OLE DB Source Output].Columns[status]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load data into stage\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[status]"
+                      lineageId="Package\Load data into stage\OLE DB Source.Outputs[OLE DB Source Output].Columns[status]"
+                      name="status"
+                      truncationRowDisposition="FailComponent" />
                   </outputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -383,6 +392,10 @@ Where (Create_time &gt;=? and Create_time &lt;=?) or (Update_time &gt;=? and Upd
                       refId="Package\Load data into stage\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[update_time]"
                       dataType="dbTimeStamp"
                       name="update_time" />
+                    <externalMetadataColumn
+                      refId="Package\Load data into stage\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[status]"
+                      dataType="i4"
+                      name="status" />
                   </externalMetadataColumns>
                 </output>
                 <output
@@ -428,6 +441,11 @@ Where (Create_time &gt;=? and Create_time &lt;=?) or (Update_time &gt;=? and Upd
                       dataType="dbTimeStamp"
                       lineageId="Package\Load data into stage\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[update_time]"
                       name="update_time" />
+                    <outputColumn
+                      refId="Package\Load data into stage\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[status]"
+                      dataType="i4"
+                      lineageId="Package\Load data into stage\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[status]"
+                      name="status" />
                     <outputColumn
                       refId="Package\Load data into stage\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
                       dataType="i4"
@@ -599,23 +617,23 @@ Where (Create_time &gt;=? and Create_time &lt;=?) or (Update_time &gt;=? and Upd
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="132,43"
+          Size="132,43.2"
           Id="Package\Clear stage"
           TopLeft="272.999996908008,60" />
         <NodeLayout
-          Size="155,43"
+          Size="155.2,43.2"
           Id="Package\Get CET &amp; LSET"
           TopLeft="63.1249999534339,58.8166658414406" />
         <NodeLayout
-          Size="176,43"
+          Size="176,43.2"
           Id="Package\Load data into stage"
           TopLeft="466.124994030222,182.849997803271" />
         <NodeLayout
-          Size="141,43"
+          Size="140.8,43.2"
           Id="Package\Profiling Wiki"
           TopLeft="173.124998314306,229.083328974744" />
         <NodeLayout
-          Size="140,43"
+          Size="140,43.2"
           Id="Package\Update LSET"
           TopLeft="177.499998249113,154.983330299755" />
         <EdgeLayout
@@ -751,27 +769,27 @@ Where (Create_time &gt;=? and Create_time &lt;=?) or (Update_time &gt;=? and Upd
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="151,43"
+          Size="151.2,43.2"
           Id="Package\Load data into stage\OLE DB Source"
-          TopLeft="75.6249988730997,64.9999988377094" />
+          TopLeft="77.0535703259996,64.2352929446318" />
         <NodeLayout
-          Size="172,43"
+          Size="172,43.2"
           Id="Package\Load data into stage\OLE DB Destination"
           TopLeft="315.374995687977,62.7999989306928" />
         <EdgeLayout
           Id="Package\Load data into stage.Paths[OLE DB Source Output]"
-          TopLeft="226.291665539766,85.2333322175344">
+          TopLeft="228.253570326,85.1176459376623">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="89.0833301482105,0"
+              EndConnector="87.1214253619774,0"
               Start="0,0"
-              End="81.5833301482105,0">
+              End="79.6214253619774,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="81.5833301482105,0" />
+                    End="79.6214253619774,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>

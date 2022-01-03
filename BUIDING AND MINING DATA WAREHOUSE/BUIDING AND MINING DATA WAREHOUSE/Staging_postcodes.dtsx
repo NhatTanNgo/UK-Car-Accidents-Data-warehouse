@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Staging_postcodes"
   DTS:PackageType="5"
-  DTS:VersionBuild="26"
-  DTS:VersionGUID="{A66B3EE6-F565-4E29-AC87-0E2DCBB148DA}">
+  DTS:VersionBuild="27"
+  DTS:VersionGUID="{7AAABA25-63A5-4F90-9288-D517FAD95890}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables>
@@ -931,23 +931,23 @@ Where (Create_time &gt;=? and Create_time &lt;=?) or (Update_time &gt;=? and Upd
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="132,42.6666666666667"
+          Size="132,42.4"
           Id="Package\Clear stage"
           TopLeft="301.74999558553,103.916666143636" />
         <NodeLayout
-          Size="162.666666666667,42.6666666666667"
-          Id="Package\Profiling postcode"
-          TopLeft="201.874996991828,272.99999511838" />
-        <NodeLayout
-          Size="154.666666666667,42.6666666666667"
+          Size="154.4,42.4"
           Id="Package\Get CET &amp; LSET"
           TopLeft="88.7499986775219,105.333331938585" />
         <NodeLayout
-          Size="176,42.6666666666667"
+          Size="176,42.4"
           Id="Package\Load data into stage"
           TopLeft="494.874992707744,226.766663946907" />
         <NodeLayout
-          Size="140,42.6666666666667"
+          Size="162.4,42.4"
+          Id="Package\Profiling postcode"
+          TopLeft="201.874996991828,272.99999511838" />
+        <NodeLayout
+          Size="140,42.4"
           Id="Package\Update LSET"
           TopLeft="212.499996833503,198.899996443391" />
         <EdgeLayout
@@ -1083,11 +1083,11 @@ Where (Create_time &gt;=? and Create_time &lt;=?) or (Update_time &gt;=? and Upd
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="172,42.6666666666667"
+          Size="172,42.4"
           Id="Package\Load data into stage\OLE DB Destination"
           TopLeft="312.249995734543,45.2499992445112" />
         <NodeLayout
-          Size="150.666666666667,42.6666666666667"
+          Size="150.4,42.4"
           Id="Package\Load data into stage\OLE DB Source"
           TopLeft="83.124998761341,48.7499991282821" />
         <EdgeLayout

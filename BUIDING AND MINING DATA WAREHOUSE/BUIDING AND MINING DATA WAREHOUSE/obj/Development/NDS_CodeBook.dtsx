@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="39"
-  DTS:VersionGUID="{03ACB211-F566-4F23-B9EE-878393E26E44}">
+  DTS:VersionBuild="48"
+  DTS:VersionGUID="{50AAA9F8-1799-49E9-B601-1584646B45F5}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables />
@@ -179,8 +179,8 @@
               <connections>
                 <connection
                   refId="Package\AgeBand\Excel Source.Connections[OleDbConnection]"
-                  connectionManagerID="{B9D8D372-4BBD-4B25-962A-AB66A5756E11}:external"
-                  connectionManagerRefId="Project.ConnectionManagers[Excel_CodeBook]"
+                  connectionManagerID="{B9D8D372-4BBD-4B25-962A-AB66A5756E11}:invalid"
+                  connectionManagerRefId="{B9D8D372-4BBD-4B25-962A-AB66A5756E11}:invalid"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -1009,7 +1009,7 @@
               <connections>
                 <connection
                   refId="Package\Casualties_Class\Excel Source.Connections[OleDbConnection]"
-                  connectionManagerID="{B9D8D372-4BBD-4B25-962A-AB66A5756E11}:external"
+                  connectionManagerID="{54B0FA4C-C577-451F-B860-AA9EA627FC84}:external"
                   connectionManagerRefId="Project.ConnectionManagers[Excel_CodeBook]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
@@ -1839,8 +1839,8 @@
               <connections>
                 <connection
                   refId="Package\CasualtyType\Excel Source.Connections[OleDbConnection]"
-                  connectionManagerID="{B9D8D372-4BBD-4B25-962A-AB66A5756E11}:external"
-                  connectionManagerRefId="Project.ConnectionManagers[Excel_CodeBook]"
+                  connectionManagerID="{B9D8D372-4BBD-4B25-962A-AB66A5756E11}:invalid"
+                  connectionManagerRefId="{B9D8D372-4BBD-4B25-962A-AB66A5756E11}:invalid"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -2669,8 +2669,8 @@
               <connections>
                 <connection
                   refId="Package\JourneyPurpose\Excel Source.Connections[OleDbConnection]"
-                  connectionManagerID="{B9D8D372-4BBD-4B25-962A-AB66A5756E11}:external"
-                  connectionManagerRefId="Project.ConnectionManagers[Excel_CodeBook]"
+                  connectionManagerID="{B9D8D372-4BBD-4B25-962A-AB66A5756E11}:invalid"
+                  connectionManagerRefId="{B9D8D372-4BBD-4B25-962A-AB66A5756E11}:invalid"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -3364,17 +3364,17 @@
                   name="Data Conversion Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Local_Authority\Data Conversion.Inputs[Data Conversion Input].Columns[label]"
+                      refId="Package\Local_Authority\Data Conversion.Inputs[Data Conversion Input].Columns[Label]"
                       cachedDataType="wstr"
                       cachedLength="255"
-                      cachedName="label"
-                      lineageId="Package\Local_Authority\Excel Source.Outputs[Excel Source Output].Columns[label]" />
+                      cachedName="Label"
+                      lineageId="Package\Local_Authority\Excel Source.Outputs[Excel Source Output].Columns[Label]" />
                     <inputColumn
-                      refId="Package\Local_Authority\Data Conversion.Inputs[Data Conversion Input].Columns[code]"
+                      refId="Package\Local_Authority\Data Conversion.Inputs[Data Conversion Input].Columns[Code]"
                       cachedDataType="wstr"
                       cachedLength="255"
-                      cachedName="code"
-                      lineageId="Package\Local_Authority\Excel Source.Outputs[Excel Source Output].Columns[code]" />
+                      cachedName="Code"
+                      lineageId="Package\Local_Authority\Excel Source.Outputs[Excel Source Output].Columns[Code]" />
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
@@ -3401,7 +3401,7 @@
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the input column used as the source of data for the conversion."
-                          name="SourceInputColumnLineageID">#{Package\Local_Authority\Excel Source.Outputs[Excel Source Output].Columns[label]}</property>
+                          name="SourceInputColumnLineageID">#{Package\Local_Authority\Excel Source.Outputs[Excel Source Output].Columns[Label]}</property>
                         <property
                           dataType="System.Boolean"
                           description="Indicates whether the column uses the faster, locale-neutral parsing routines."
@@ -3423,7 +3423,7 @@
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the input column used as the source of data for the conversion."
-                          name="SourceInputColumnLineageID">#{Package\Local_Authority\Excel Source.Outputs[Excel Source Output].Columns[code]}</property>
+                          name="SourceInputColumnLineageID">#{Package\Local_Authority\Excel Source.Outputs[Excel Source Output].Columns[Code]}</property>
                         <property
                           dataType="System.Boolean"
                           description="Indicates whether the column uses the faster, locale-neutral parsing routines."
@@ -3500,7 +3500,7 @@
               <connections>
                 <connection
                   refId="Package\Local_Authority\Excel Source.Connections[OleDbConnection]"
-                  connectionManagerID="{B9D8D372-4BBD-4B25-962A-AB66A5756E11}:external"
+                  connectionManagerID="{54B0FA4C-C577-451F-B860-AA9EA627FC84}:external"
                   connectionManagerRefId="Project.ConnectionManagers[Excel_CodeBook]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
@@ -3511,38 +3511,38 @@
                   name="Excel Source Output">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Local_Authority\Excel Source.Outputs[Excel Source Output].Columns[code]"
+                      refId="Package\Local_Authority\Excel Source.Outputs[Excel Source Output].Columns[Code]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Local_Authority\Excel Source.Outputs[Excel Source Output].ExternalColumns[code]"
+                      externalMetadataColumnId="Package\Local_Authority\Excel Source.Outputs[Excel Source Output].ExternalColumns[Code]"
                       length="255"
-                      lineageId="Package\Local_Authority\Excel Source.Outputs[Excel Source Output].Columns[code]"
-                      name="code"
+                      lineageId="Package\Local_Authority\Excel Source.Outputs[Excel Source Output].Columns[Code]"
+                      name="Code"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Local_Authority\Excel Source.Outputs[Excel Source Output].Columns[label]"
+                      refId="Package\Local_Authority\Excel Source.Outputs[Excel Source Output].Columns[Label]"
                       dataType="wstr"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Local_Authority\Excel Source.Outputs[Excel Source Output].ExternalColumns[label]"
+                      externalMetadataColumnId="Package\Local_Authority\Excel Source.Outputs[Excel Source Output].ExternalColumns[Label]"
                       length="255"
-                      lineageId="Package\Local_Authority\Excel Source.Outputs[Excel Source Output].Columns[label]"
-                      name="label"
+                      lineageId="Package\Local_Authority\Excel Source.Outputs[Excel Source Output].Columns[Label]"
+                      name="Label"
                       truncationRowDisposition="FailComponent" />
                   </outputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\Local_Authority\Excel Source.Outputs[Excel Source Output].ExternalColumns[code]"
+                      refId="Package\Local_Authority\Excel Source.Outputs[Excel Source Output].ExternalColumns[Code]"
                       dataType="wstr"
                       length="255"
-                      name="code" />
+                      name="Code" />
                     <externalMetadataColumn
-                      refId="Package\Local_Authority\Excel Source.Outputs[Excel Source Output].ExternalColumns[label]"
+                      refId="Package\Local_Authority\Excel Source.Outputs[Excel Source Output].ExternalColumns[Label]"
                       dataType="wstr"
                       length="255"
-                      name="label" />
+                      name="Label" />
                   </externalMetadataColumns>
                 </output>
                 <output
@@ -3551,17 +3551,17 @@
                   name="Excel Source Error Output">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Local_Authority\Excel Source.Outputs[Excel Source Error Output].Columns[code]"
+                      refId="Package\Local_Authority\Excel Source.Outputs[Excel Source Error Output].Columns[Code]"
                       dataType="wstr"
                       length="255"
-                      lineageId="Package\Local_Authority\Excel Source.Outputs[Excel Source Error Output].Columns[code]"
-                      name="code" />
+                      lineageId="Package\Local_Authority\Excel Source.Outputs[Excel Source Error Output].Columns[Code]"
+                      name="Code" />
                     <outputColumn
-                      refId="Package\Local_Authority\Excel Source.Outputs[Excel Source Error Output].Columns[label]"
+                      refId="Package\Local_Authority\Excel Source.Outputs[Excel Source Error Output].Columns[Label]"
                       dataType="wstr"
                       length="255"
-                      lineageId="Package\Local_Authority\Excel Source.Outputs[Excel Source Error Output].Columns[label]"
-                      name="label" />
+                      lineageId="Package\Local_Authority\Excel Source.Outputs[Excel Source Error Output].Columns[Label]"
+                      name="Label" />
                     <outputColumn
                       refId="Package\Local_Authority\Excel Source.Outputs[Excel Source Error Output].Columns[ErrorCode]"
                       dataType="i4"
@@ -4333,7 +4333,7 @@
               <connections>
                 <connection
                   refId="Package\PoliceForce\Excel Source.Connections[OleDbConnection]"
-                  connectionManagerID="{B9D8D372-4BBD-4B25-962A-AB66A5756E11}:external"
+                  connectionManagerID="{54B0FA4C-C577-451F-B860-AA9EA627FC84}:external"
                   connectionManagerRefId="Project.ConnectionManagers[Excel_CodeBook]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
@@ -5151,8 +5151,8 @@
               <connections>
                 <connection
                   refId="Package\RoadType\Excel Source.Connections[OleDbConnection]"
-                  connectionManagerID="{B9D8D372-4BBD-4B25-962A-AB66A5756E11}:external"
-                  connectionManagerRefId="Project.ConnectionManagers[Excel_CodeBook]"
+                  connectionManagerID="{B9D8D372-4BBD-4B25-962A-AB66A5756E11}:invalid"
+                  connectionManagerRefId="{B9D8D372-4BBD-4B25-962A-AB66A5756E11}:invalid"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -5981,8 +5981,8 @@
               <connections>
                 <connection
                   refId="Package\Severity\Excel Source.Connections[OleDbConnection]"
-                  connectionManagerID="{B9D8D372-4BBD-4B25-962A-AB66A5756E11}:external"
-                  connectionManagerRefId="Project.ConnectionManagers[Excel_CodeBook]"
+                  connectionManagerID="{B9D8D372-4BBD-4B25-962A-AB66A5756E11}:invalid"
+                  connectionManagerRefId="{B9D8D372-4BBD-4B25-962A-AB66A5756E11}:invalid"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -6811,7 +6811,7 @@
               <connections>
                 <connection
                   refId="Package\VehicleType\Excel Source.Connections[OleDbConnection]"
-                  connectionManagerID="{B9D8D372-4BBD-4B25-962A-AB66A5756E11}:external"
+                  connectionManagerID="{54B0FA4C-C577-451F-B860-AA9EA627FC84}:external"
                   connectionManagerRefId="Project.ConnectionManagers[Excel_CodeBook]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
@@ -7493,41 +7493,41 @@
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
         <NodeLayout
-          Size="121.333333333334,42.6666666666667"
+          Size="121.6,42.4"
           Id="Package\AgeBand"
-          TopLeft="248.749996293336,141.699997466207" />
+          TopLeft="283.749996889382,155.464703541605" />
         <NodeLayout
-          Size="156,42.6666666666667"
+          Size="156,42.4"
           Id="Package\Casualties_Class"
-          TopLeft="52.4999992176891,202.799996373653" />
+          TopLeft="253.214288350119,350.38823373764" />
         <NodeLayout
-          Size="142.666666666667,42.6666666666667"
+          Size="142.4,42.4"
           Id="Package\CasualtyType"
           TopLeft="248.124996302649,77.9999986052513" />
         <NodeLayout
-          Size="154.666666666667,42.6666666666667"
+          Size="154.4,42.4"
           Id="Package\JourneyPurpose"
-          TopLeft="430.624993583188,139.749997501075" />
+          TopLeft="563.482138702874,140.514703394153" />
         <NodeLayout
-          Size="152,42.6666666666667"
+          Size="152,42.4"
           Id="Package\Local_Authority"
-          TopLeft="56.2499991618098,140.399997489452" />
+          TopLeft="20.5357128393134,361.400000588894" />
         <NodeLayout
-          Size="132,42.6666666666667"
+          Size="132,42.4"
           Id="Package\PoliceForce"
-          TopLeft="431.874993564561,205.399996327162" />
+          TopLeft="671.874997651737,338.458821722674" />
         <NodeLayout
-          Size="126.666666666667,42.6666666666667"
+          Size="126.4,42.4"
           Id="Package\RoadType"
           TopLeft="429.374993601814,79.2999985820055" />
         <NodeLayout
-          Size="117.333333333334,42.6666666666667"
+          Size="117.6,42.4"
           Id="Package\Severity"
           TopLeft="55.6249991711229,75.399998651743" />
         <NodeLayout
-          Size="136,42.6666666666667"
+          Size="136,42.4"
           Id="Package\VehicleType"
-          TopLeft="249.374996284023,202.149996385276" />
+          TopLeft="478.66071447445,342.855880711564" />
       </GraphLayout>
     </LayoutInfo>
   </Package>
@@ -7537,27 +7537,27 @@
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="139.333333333334,42.6666666666667"
+          Size="139.2,42.4"
           Id="Package\AgeBand\Excel Source"
           TopLeft="36.7222222222222,23.0555555555556" />
         <NodeLayout
-          Size="166.666666666667,42.6666666666667"
+          Size="166.4,42.4"
           Id="Package\AgeBand\OLE DB Command"
           TopLeft="486.611111111111,108.166666666667" />
         <NodeLayout
-          Size="209.333333333334,42.6666666666667"
+          Size="209.6,42.4"
           Id="Package\AgeBand\Slowly Changing Dimension"
           TopLeft="243.5,189.944444444445" />
         <NodeLayout
-          Size="176,42.6666666666667"
+          Size="176,42.4"
           Id="Package\AgeBand\SrcID &amp; Timestamps"
           TopLeft="252.833333333333,16.388888888889" />
         <NodeLayout
-          Size="157.333333333334,42.6666666666667"
+          Size="157.6,42.4"
           Id="Package\AgeBand\Data Conversion"
           TopLeft="264.833333333333,103.944444444445" />
         <NodeLayout
-          Size="164,42.6666666666667"
+          Size="164,42.4"
           Id="Package\AgeBand\Insert Destination"
           TopLeft="32.1666666666667,105.055555555556" />
         <EdgeLayout
@@ -7592,7 +7592,7 @@
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="7.18831597222214,-8.36501281155366,157.0678125,11.6630859375"
+              BoundingBox="7.18831597222197,-8.3650128115537,157.0678125,11.6630859375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -7628,7 +7628,7 @@
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-118.924720052083,-9.4281388306545,54.1827734375,11.43359375"
+              BoundingBox="-118.924720052084,-9.4281388306545,54.1827734375,11.43359375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -7651,7 +7651,9 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -7673,7 +7675,9 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -7695,7 +7699,9 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -7776,27 +7782,27 @@
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="139.333333333334,42.6666666666667"
+          Size="139.2,42.4"
           Id="Package\Casualties_Class\Excel Source"
           TopLeft="27.8333333333333,14.1666666666667" />
         <NodeLayout
-          Size="166.666666666667,42.6666666666667"
+          Size="166.4,42.4"
           Id="Package\Casualties_Class\OLE DB Command"
           TopLeft="446.388888888889,103.5" />
         <NodeLayout
-          Size="209.333333333334,42.6666666666667"
+          Size="209.6,42.4"
           Id="Package\Casualties_Class\Slowly Changing Dimension"
           TopLeft="201.944444444445,203.277777777778" />
         <NodeLayout
-          Size="172,42.6666666666667"
+          Size="172,42.4"
           Id="Package\Casualties_Class\Src ID &amp; timestamp"
           TopLeft="233.722222222222,15.2777777777779" />
         <NodeLayout
-          Size="157.333333333334,42.6666666666667"
+          Size="157.6,42.4"
           Id="Package\Casualties_Class\Data Conversion"
           TopLeft="235.722222222222,100.388888888889" />
         <NodeLayout
-          Size="164,42.6666666666667"
+          Size="164,42.4"
           Id="Package\Casualties_Class\Insert Destination"
           TopLeft="16.1666666666667,101.055555555556" />
         <EdgeLayout
@@ -8033,27 +8039,27 @@
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="139.333333333334,42.6666666666667"
+          Size="139.2,42.4"
           Id="Package\CasualtyType\Excel Source"
           TopLeft="45.1666666666667,11.1666666666667" />
         <NodeLayout
-          Size="166.666666666667,42.6666666666667"
+          Size="166.4,42.4"
           Id="Package\CasualtyType\OLE DB Command"
           TopLeft="490.166666666667,109.166666666667" />
         <NodeLayout
-          Size="209.333333333334,42.6666666666667"
+          Size="209.6,42.4"
           Id="Package\CasualtyType\Slowly Changing Dimension"
           TopLeft="261.166666666667,209.166666666667" />
         <NodeLayout
-          Size="176,42.6666666666667"
+          Size="176,42.4"
           Id="Package\CasualtyType\SrcID &amp; Timestamps"
           TopLeft="277.166666666667,16.1666666666668" />
         <NodeLayout
-          Size="157.333333333334,42.6666666666667"
+          Size="157.6,42.4"
           Id="Package\CasualtyType\Data Conversion"
           TopLeft="293.5,106.833333333334" />
         <NodeLayout
-          Size="164,42.6666666666667"
+          Size="164,42.4"
           Id="Package\CasualtyType\Insert Destination"
           TopLeft="54.1666666666667,112.5" />
         <EdgeLayout
@@ -8088,7 +8094,7 @@
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="0.132760416666741,-14.591893780573,157.0678125,11.6630859375"
+              BoundingBox="0.132760416666969,-14.591893780573,157.0678125,11.6630859375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -8147,7 +8153,9 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -8169,7 +8177,9 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -8191,7 +8201,9 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -8391,7 +8403,9 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -8413,7 +8427,9 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -8435,7 +8451,9 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -8516,27 +8534,27 @@
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="139.333333333334,42.6666666666667"
+          Size="139.2,42.4"
           Id="Package\Local_Authority\Excel Source"
           TopLeft="145.636752136752,9.94444444444438" />
         <NodeLayout
-          Size="166.666666666667,42.6666666666667"
+          Size="166.4,42.4"
           Id="Package\Local_Authority\OLE DB Command"
           TopLeft="678.380341880342,100.269230769231" />
         <NodeLayout
-          Size="209.333333333334,42.6666666666667"
+          Size="209.6,42.4"
           Id="Package\Local_Authority\Slowly Changing Dimension"
           TopLeft="368.07264957265,194.611111111111" />
         <NodeLayout
-          Size="172,42.6666666666667"
+          Size="172,42.4"
           Id="Package\Local_Authority\SrcID &amp; Timestamp"
           TopLeft="389.217948717949,14.491452991453" />
         <NodeLayout
-          Size="157.333333333334,42.6666666666667"
+          Size="157.6,42.4"
           Id="Package\Local_Authority\Data Conversion"
           TopLeft="394.927350427351,95.1923076923078" />
         <NodeLayout
-          Size="164,42.6666666666667"
+          Size="164,42.4"
           Id="Package\Local_Authority\Insert Destination"
           TopLeft="128.92735042735,105.568376068376" />
         <EdgeLayout
@@ -8760,95 +8778,29 @@
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="139.333333333334,42.6666666666667"
+          Size="139.2,42.4"
           Id="Package\PoliceForce\Excel Source"
           TopLeft="33.8333333333333,21.5" />
         <NodeLayout
-          Size="176,42.6666666666667"
-          Id="Package\PoliceForce\SrcID &amp; Timestamps"
-          TopLeft="234.785714285714,17.8809523809525" />
-        <NodeLayout
-          Size="166.666666666667,42.6666666666667"
+          Size="166.4,42.4"
           Id="Package\PoliceForce\OLE DB Command"
           TopLeft="457.166666666667,112.309523809524" />
         <NodeLayout
-          Size="209.333333333334,42.6666666666667"
+          Size="209.6,42.4"
           Id="Package\PoliceForce\Slowly Changing Dimension"
           TopLeft="220.119047619048,224.214285714286" />
         <NodeLayout
-          Size="157.333333333334,42.6666666666667"
+          Size="176,42.4"
+          Id="Package\PoliceForce\SrcID &amp; Timestamps"
+          TopLeft="234.785714285714,17.8809523809525" />
+        <NodeLayout
+          Size="157.6,42.4"
           Id="Package\PoliceForce\Data Conversion"
           TopLeft="249.547619047619,110.976190476191" />
         <NodeLayout
-          Size="164,42.6666666666667"
+          Size="164,42.4"
           Id="Package\PoliceForce\Insert Destination"
           TopLeft="28.0714285714286,115.738095238096" />
-        <EdgeLayout
-          Id="Package\PoliceForce.Paths[Excel Source Output]"
-          TopLeft="173.166666666667,41.0238095238096">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="61.6190476190476,0"
-              Start="0,0"
-              End="54.1190476190476,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="54.1190476190476,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\PoliceForce.Paths[Derived Column Output]"
-          TopLeft="325.5,60.5476190476192">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,50.4285714285715"
-              Start="0,0"
-              End="0,42.9285714285715">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,42.9285714285715" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\PoliceForce.Paths[Data Conversion Output]"
-          TopLeft="326.5,153.642857142857">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,70.5714285714286"
-              Start="0,0"
-              End="0,63.0714285714286">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,63.0714285714286" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
         <EdgeLayout
           Id="Package\PoliceForce.Paths[Changing Attribute Updates Output]"
           TopLeft="375.119047619048,224.214285714286">
@@ -8919,6 +8871,72 @@
             <mssgm:EdgeLabel
               BoundingBox="-109.281862909226,-17.4883697713886,54.1827734375,11.43359375"
               RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\PoliceForce.Paths[Excel Source Output]"
+          TopLeft="173.166666666667,41.0238095238096">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="61.6190476190476,0"
+              Start="0,0"
+              End="54.1190476190476,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="54.1190476190476,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\PoliceForce.Paths[Derived Column Output]"
+          TopLeft="325.5,60.5476190476192">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,50.4285714285715"
+              Start="0,0"
+              End="0,42.9285714285715">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,42.9285714285715" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\PoliceForce.Paths[Data Conversion Output]"
+          TopLeft="326.5,153.642857142857">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,70.5714285714286"
+              Start="0,0"
+              End="0,63.0714285714286">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,63.0714285714286" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -9113,7 +9131,9 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -9135,7 +9155,9 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -9157,7 +9179,9 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -9352,7 +9376,9 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -9374,7 +9400,9 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -9396,7 +9424,9 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -9495,27 +9525,27 @@
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="139.333333333334,42.6666666666667"
+          Size="139.2,42.4"
           Id="Package\VehicleType\Excel Source"
           TopLeft="33.8333333333333,47.9603174603175" />
         <NodeLayout
-          Size="166.666666666667,42.6666666666667"
+          Size="166.4,42.4"
           Id="Package\VehicleType\OLE DB Command"
           TopLeft="552.388888888889,134.261904761905" />
         <NodeLayout
-          Size="209.333333333334,42.6666666666667"
+          Size="209.6,42.4"
           Id="Package\VehicleType\Slowly Changing Dimension"
           TopLeft="280.420634920635,236.039682539683" />
         <NodeLayout
-          Size="174.666666666667,42.6666666666667"
+          Size="174.4,42.4"
           Id="Package\VehicleType\Src ID &amp; Timestamp"
           TopLeft="292.674603174603,51.7380952380954" />
         <NodeLayout
-          Size="157.333333333334,42.6666666666667"
+          Size="157.6,42.4"
           Id="Package\VehicleType\Data Conversion"
           TopLeft="306.103174603175,139.722222222222" />
         <NodeLayout
-          Size="164,42.6666666666667"
+          Size="164,42.4"
           Id="Package\VehicleType\Insert Destination"
           TopLeft="51.5317460317461,141.325396825397" />
         <EdgeLayout

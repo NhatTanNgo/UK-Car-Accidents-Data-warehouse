@@ -8,7 +8,7 @@
     <DtsDataSource ID="{627034E8-7440-456F-9E09-2A0DABD6C8EB}" Name="Excel_Casualties">
       <DtsConnectionManagerID>Excel_Casualties</DtsConnectionManagerID>
     </DtsDataSource>
-    <DtsDataSource ID="{B9D8D372-4BBD-4B25-962A-AB66A5756E11}" Name="Excel_CodeBook">
+    <DtsDataSource ID="{54B0FA4C-C577-451F-B860-AA9EA627FC84}" Name="Excel_CodeBook">
       <DtsConnectionManagerID>Excel_CodeBook</DtsConnectionManagerID>
     </DtsDataSource>
     <DtsDataSource ID="{A79A3ABC-4E9C-4DCD-BDB7-8AB9ADBB5D90}" Name="Excel_LSOA">
@@ -25,6 +25,15 @@
     </DtsDataSource>
     <DtsDataSource ID="{C20E7D12-09FB-4D04-8FBE-D0F3EC31B923}" Name="Excel_Wiki_Postcodes">
       <DtsConnectionManagerID>Excel_Wiki_Postcodes</DtsConnectionManagerID>
+    </DtsDataSource>
+    <DtsDataSource ID="{2BD3B96C-0A04-4D9C-A949-29EFCA98FD63}" Name="Flatfile_No_match_LSOA_Postcode_ID">
+      <DtsConnectionManagerID>Flatfile_No_match_LSOA_Postcode_ID</DtsConnectionManagerID>
+    </DtsDataSource>
+    <DtsDataSource ID="{46E1B29A-7092-4B62-B4B1-CA96E0C1404E}" Name="Flatfile_No_match_Postcodes_CountyID">
+      <DtsConnectionManagerID>Flatfile_No_match_Postcodes_CountyID</DtsConnectionManagerID>
+    </DtsDataSource>
+    <DtsDataSource ID="{254CB340-4E9A-40F6-8399-ED617F44CBD3}" Name="Flatfile_No_match_Postcodes_TownID">
+      <DtsConnectionManagerID>Flatfile_No_match_Postcodes_TownID</DtsConnectionManagerID>
     </DtsDataSource>
     <DtsDataSource ID="{DFF81239-B2A8-4950-83F9-2BB12A3D2296}" Name="LocalHost Stage_DATH">
       <DtsConnectionManagerID>LocalHost Stage_DATH</DtsConnectionManagerID>
@@ -119,20 +128,20 @@
     <Profiles>
       <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
         <DataSourceID>{68B744B6-BFA4-417D-AA11-2C26D08D51D7}</DataSourceID>
-        <Table DataSource="." Database="Stage_DATH" Schema="dbo" Table="Wiki_Postcodes" RowCount="1503" />
-        <Column Name="Postcode districts" SqlDbType="NVarChar" MaxLength="255" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <Table DataSource="." Database="Stage_DATH" Schema="dbo" Table="Wiki_Postcodes" RowCount="1532" />
+        <Column Name="Postcode districts" SqlDbType="VarChar" MaxLength="255" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
         <NullCount>0</NullCount>
       </ColumnNullRatioProfile>
       <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
         <DataSourceID>{68B744B6-BFA4-417D-AA11-2C26D08D51D7}</DataSourceID>
-        <Table DataSource="." Database="Stage_DATH" Schema="dbo" Table="Wiki_Postcodes" RowCount="1503" />
+        <Table DataSource="." Database="Stage_DATH" Schema="dbo" Table="Wiki_Postcodes" RowCount="1532" />
         <Column Name="County" SqlDbType="VarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
         <NullCount>0</NullCount>
       </ColumnNullRatioProfile>
       <ColumnLengthDistributionProfile ProfileRequestID="LengthDistReq" IsExact="true">
         <DataSourceID>{68B744B6-BFA4-417D-AA11-2C26D08D51D7}</DataSourceID>
-        <Table DataSource="." Database="Stage_DATH" Schema="dbo" Table="Wiki_Postcodes" RowCount="1503" />
-        <Column Name="Postcode districts" SqlDbType="NVarChar" MaxLength="255" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <Table DataSource="." Database="Stage_DATH" Schema="dbo" Table="Wiki_Postcodes" RowCount="1532" />
+        <Column Name="Postcode districts" SqlDbType="VarChar" MaxLength="255" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
         <IgnoreLeadingSpace>false</IgnoreLeadingSpace>
         <IgnoreTrailingSpace>true</IgnoreTrailingSpace>
         <MinLength>3</MinLength>
@@ -163,12 +172,12 @@
             <Count>1</Count>
           </LengthDistributionItem>
           <LengthDistributionItem>
-            <Length>15</Length>
-            <Count>6</Count>
+            <Length>9</Length>
+            <Count>55</Count>
           </LengthDistributionItem>
           <LengthDistributionItem>
-            <Length>9</Length>
-            <Count>54</Count>
+            <Length>15</Length>
+            <Count>6</Count>
           </LengthDistributionItem>
           <LengthDistributionItem>
             <Length>89</Length>
@@ -176,7 +185,7 @@
           </LengthDistributionItem>
           <LengthDistributionItem>
             <Length>3</Length>
-            <Count>248</Count>
+            <Count>249</Count>
           </LengthDistributionItem>
           <LengthDistributionItem>
             <Length>52</Length>
@@ -199,24 +208,24 @@
             <Count>1</Count>
           </LengthDistributionItem>
           <LengthDistributionItem>
-            <Length>63</Length>
-            <Count>2</Count>
-          </LengthDistributionItem>
-          <LengthDistributionItem>
             <Length>112</Length>
             <Count>1</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>63</Length>
+            <Count>2</Count>
           </LengthDistributionItem>
           <LengthDistributionItem>
             <Length>255</Length>
             <Count>1</Count>
           </LengthDistributionItem>
           <LengthDistributionItem>
-            <Length>43</Length>
-            <Count>2</Count>
-          </LengthDistributionItem>
-          <LengthDistributionItem>
             <Length>55</Length>
             <Count>1</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>43</Length>
+            <Count>2</Count>
           </LengthDistributionItem>
           <LengthDistributionItem>
             <Length>49</Length>
@@ -268,11 +277,11 @@
           </LengthDistributionItem>
           <LengthDistributionItem>
             <Length>70</Length>
-            <Count>1</Count>
+            <Count>2</Count>
           </LengthDistributionItem>
           <LengthDistributionItem>
             <Length>18</Length>
-            <Count>11</Count>
+            <Count>12</Count>
           </LengthDistributionItem>
           <LengthDistributionItem>
             <Length>30</Length>
@@ -304,7 +313,7 @@
           </LengthDistributionItem>
           <LengthDistributionItem>
             <Length>4</Length>
-            <Count>681</Count>
+            <Count>704</Count>
           </LengthDistributionItem>
           <LengthDistributionItem>
             <Length>119</Length>
@@ -452,7 +461,7 @@
           </LengthDistributionItem>
           <LengthDistributionItem>
             <Length>14</Length>
-            <Count>11</Count>
+            <Count>13</Count>
           </LengthDistributionItem>
           <LengthDistributionItem>
             <Length>37</Length>
@@ -470,7 +479,7 @@
       </ColumnLengthDistributionProfile>
       <ColumnLengthDistributionProfile ProfileRequestID="LengthDistReq" IsExact="true">
         <DataSourceID>{68B744B6-BFA4-417D-AA11-2C26D08D51D7}</DataSourceID>
-        <Table DataSource="." Database="Stage_DATH" Schema="dbo" Table="Wiki_Postcodes" RowCount="1503" />
+        <Table DataSource="." Database="Stage_DATH" Schema="dbo" Table="Wiki_Postcodes" RowCount="1532" />
         <Column Name="County" SqlDbType="VarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
         <IgnoreLeadingSpace>false</IgnoreLeadingSpace>
         <IgnoreTrailingSpace>true</IgnoreTrailingSpace>
@@ -479,7 +488,7 @@
         <LengthDistribution>
           <LengthDistributionItem>
             <Length>15</Length>
-            <Count>121</Count>
+            <Count>127</Count>
           </LengthDistributionItem>
           <LengthDistributionItem>
             <Length>9</Length>
@@ -487,7 +496,7 @@
           </LengthDistributionItem>
           <LengthDistributionItem>
             <Length>12</Length>
-            <Count>100</Count>
+            <Count>101</Count>
           </LengthDistributionItem>
           <LengthDistributionItem>
             <Length>6</Length>
@@ -507,7 +516,7 @@
           </LengthDistributionItem>
           <LengthDistributionItem>
             <Length>10</Length>
-            <Count>136</Count>
+            <Count>141</Count>
           </LengthDistributionItem>
           <LengthDistributionItem>
             <Length>4</Length>
@@ -515,7 +524,7 @@
           </LengthDistributionItem>
           <LengthDistributionItem>
             <Length>13</Length>
-            <Count>182</Count>
+            <Count>199</Count>
           </LengthDistributionItem>
           <LengthDistributionItem>
             <Length>5</Length>
@@ -547,257 +556,128 @@
           </LengthDistributionItem>
         </LengthDistribution>
       </ColumnLengthDistributionProfile>
-      <CandidateKeyProfile IsExact="true" ProfileRequestID="KeyReq">
-        <DataSourceID>{68B744B6-BFA4-417D-AA11-2C26D08D51D7}</DataSourceID>
-        <Table DataSource="." Database="Stage_DATH" Schema="dbo" Table="Wiki_Postcodes" RowCount="1503" />
-        <KeyColumns>
-          <Column Name="Postcode districts" SqlDbType="NVarChar" MaxLength="255" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
-        </KeyColumns>
-        <IsExactKey>false</IsExactKey>
-        <KeyStrength>0.9627412</KeyStrength>
-        <KeyViolations>
-          <MultiColumnValueDistributionItem>
-            <ColumnValues>
-              <ColumnValue>SY22shared</ColumnValue>
-            </ColumnValues>
-            <Count>5</Count>
-          </MultiColumnValueDistributionItem>
-          <MultiColumnValueDistributionItem>
-            <ColumnValues>
-              <ColumnValue>GL17shared</ColumnValue>
-            </ColumnValues>
-            <Count>5</Count>
-          </MultiColumnValueDistributionItem>
-          <MultiColumnValueDistributionItem>
-            <ColumnValues>
-              <ColumnValue>EH14shared</ColumnValue>
-            </ColumnValues>
-            <Count>3</Count>
-          </MultiColumnValueDistributionItem>
-          <MultiColumnValueDistributionItem>
-            <ColumnValues>
-              <ColumnValue>DL8shared</ColumnValue>
-            </ColumnValues>
-            <Count>3</Count>
-          </MultiColumnValueDistributionItem>
-          <MultiColumnValueDistributionItem>
-            <ColumnValues>
-              <ColumnValue>GL14shared</ColumnValue>
-            </ColumnValues>
-            <Count>3</Count>
-          </MultiColumnValueDistributionItem>
-          <MultiColumnValueDistributionItem>
-            <ColumnValues>
-              <ColumnValue>GL7shared</ColumnValue>
-            </ColumnValues>
-            <Count>3</Count>
-          </MultiColumnValueDistributionItem>
-          <MultiColumnValueDistributionItem>
-            <ColumnValues>
-              <ColumnValue>OX18shared</ColumnValue>
-            </ColumnValues>
-            <Count>3</Count>
-          </MultiColumnValueDistributionItem>
-          <MultiColumnValueDistributionItem>
-            <ColumnValues>
-              <ColumnValue>LE67shared</ColumnValue>
-            </ColumnValues>
-            <Count>3</Count>
-          </MultiColumnValueDistributionItem>
-          <MultiColumnValueDistributionItem>
-            <ColumnValues>
-              <ColumnValue>SA19shared</ColumnValue>
-            </ColumnValues>
-            <Count>3</Count>
-          </MultiColumnValueDistributionItem>
-          <MultiColumnValueDistributionItem>
-            <ColumnValues>
-              <ColumnValue>SY24shared</ColumnValue>
-            </ColumnValues>
-            <Count>3</Count>
-          </MultiColumnValueDistributionItem>
-          <MultiColumnValueDistributionItem>
-            <ColumnValues>
-              <ColumnValue>SY23shared</ColumnValue>
-            </ColumnValues>
-            <Count>3</Count>
-          </MultiColumnValueDistributionItem>
-          <MultiColumnValueDistributionItem>
-            <ColumnValues>
-              <ColumnValue>TD12shared</ColumnValue>
-            </ColumnValues>
-            <Count>3</Count>
-          </MultiColumnValueDistributionItem>
-          <MultiColumnValueDistributionItem>
-            <ColumnValues>
-              <ColumnValue>SY7shared</ColumnValue>
-            </ColumnValues>
-            <Count>3</Count>
-          </MultiColumnValueDistributionItem>
-          <MultiColumnValueDistributionItem>
-            <ColumnValues>
-              <ColumnValue>TD9shared</ColumnValue>
-            </ColumnValues>
-            <Count>2</Count>
-          </MultiColumnValueDistributionItem>
-          <MultiColumnValueDistributionItem>
-            <ColumnValues>
-              <ColumnValue>SY25shared</ColumnValue>
-            </ColumnValues>
-            <Count>2</Count>
-          </MultiColumnValueDistributionItem>
-          <MultiColumnValueDistributionItem>
-            <ColumnValues>
-              <ColumnValue>SY17shared</ColumnValue>
-            </ColumnValues>
-            <Count>2</Count>
-          </MultiColumnValueDistributionItem>
-          <MultiColumnValueDistributionItem>
-            <ColumnValues>
-              <ColumnValue>SK9shared</ColumnValue>
-            </ColumnValues>
-            <Count>2</Count>
-          </MultiColumnValueDistributionItem>
-          <MultiColumnValueDistributionItem>
-            <ColumnValues>
-              <ColumnValue>SA17shared</ColumnValue>
-            </ColumnValues>
-            <Count>2</Count>
-          </MultiColumnValueDistributionItem>
-          <MultiColumnValueDistributionItem>
-            <ColumnValues>
-              <ColumnValue>RH6shared</ColumnValue>
-            </ColumnValues>
-            <Count>2</Count>
-          </MultiColumnValueDistributionItem>
-          <MultiColumnValueDistributionItem>
-            <ColumnValues>
-              <ColumnValue>PO9shared</ColumnValue>
-            </ColumnValues>
-            <Count>2</Count>
-          </MultiColumnValueDistributionItem>
-          <MultiColumnValueDistributionItem>
-            <ColumnValues>
-              <ColumnValue>PL18shared</ColumnValue>
-            </ColumnValues>
-            <Count>2</Count>
-          </MultiColumnValueDistributionItem>
-          <MultiColumnValueDistributionItem>
-            <ColumnValues>
-              <ColumnValue>KY4shared</ColumnValue>
-            </ColumnValues>
-            <Count>2</Count>
-          </MultiColumnValueDistributionItem>
-          <MultiColumnValueDistributionItem>
-            <ColumnValues>
-              <ColumnValue>KT8shared</ColumnValue>
-            </ColumnValues>
-            <Count>2</Count>
-          </MultiColumnValueDistributionItem>
-          <MultiColumnValueDistributionItem>
-            <ColumnValues>
-              <ColumnValue>GL18shared</ColumnValue>
-            </ColumnValues>
-            <Count>2</Count>
-          </MultiColumnValueDistributionItem>
-          <MultiColumnValueDistributionItem>
-            <ColumnValues>
-              <ColumnValue>GL15shared</ColumnValue>
-            </ColumnValues>
-            <Count>2</Count>
-          </MultiColumnValueDistributionItem>
-          <MultiColumnValueDistributionItem>
-            <ColumnValues>
-              <ColumnValue>G83shared</ColumnValue>
-            </ColumnValues>
-            <Count>2</Count>
-          </MultiColumnValueDistributionItem>
-          <MultiColumnValueDistributionItem>
-            <ColumnValues>
-              <ColumnValue>FK10shared</ColumnValue>
-            </ColumnValues>
-            <Count>2</Count>
-          </MultiColumnValueDistributionItem>
-          <MultiColumnValueDistributionItem>
-            <ColumnValues>
-              <ColumnValue>EX35shared</ColumnValue>
-            </ColumnValues>
-            <Count>2</Count>
-          </MultiColumnValueDistributionItem>
-          <MultiColumnValueDistributionItem>
-            <ColumnValues>
-              <ColumnValue>EX34shared</ColumnValue>
-            </ColumnValues>
-            <Count>2</Count>
-          </MultiColumnValueDistributionItem>
-          <MultiColumnValueDistributionItem>
-            <ColumnValues>
-              <ColumnValue>EX20shared</ColumnValue>
-            </ColumnValues>
-            <Count>2</Count>
-          </MultiColumnValueDistributionItem>
-          <MultiColumnValueDistributionItem>
-            <ColumnValues>
-              <ColumnValue>EH32shared</ColumnValue>
-            </ColumnValues>
-            <Count>2</Count>
-          </MultiColumnValueDistributionItem>
-          <MultiColumnValueDistributionItem>
-            <ColumnValues>
-              <ColumnValue>DD8shared</ColumnValue>
-            </ColumnValues>
-            <Count>2</Count>
-          </MultiColumnValueDistributionItem>
-          <MultiColumnValueDistributionItem>
-            <ColumnValues>
-              <ColumnValue>DD6shared</ColumnValue>
-            </ColumnValues>
-            <Count>2</Count>
-          </MultiColumnValueDistributionItem>
-          <MultiColumnValueDistributionItem>
-            <ColumnValues>
-              <ColumnValue>CR8shared</ColumnValue>
-            </ColumnValues>
-            <Count>2</Count>
-          </MultiColumnValueDistributionItem>
-          <MultiColumnValueDistributionItem>
-            <ColumnValues>
-              <ColumnValue>CR3shared</ColumnValue>
-            </ColumnValues>
-            <Count>2</Count>
-          </MultiColumnValueDistributionItem>
-          <MultiColumnValueDistributionItem>
-            <ColumnValues>
-              <ColumnValue>CM0shared</ColumnValue>
-            </ColumnValues>
-            <Count>2</Count>
-          </MultiColumnValueDistributionItem>
-          <MultiColumnValueDistributionItem>
-            <ColumnValues>
-              <ColumnValue>CH7shared</ColumnValue>
-            </ColumnValues>
-            <Count>2</Count>
-          </MultiColumnValueDistributionItem>
-          <MultiColumnValueDistributionItem>
-            <ColumnValues>
-              <ColumnValue>CH6shared</ColumnValue>
-            </ColumnValues>
-            <Count>2</Count>
-          </MultiColumnValueDistributionItem>
-          <MultiColumnValueDistributionItem>
-            <ColumnValues>
-              <ColumnValue>CF64shared</ColumnValue>
-            </ColumnValues>
-            <Count>2</Count>
-          </MultiColumnValueDistributionItem>
-        </KeyViolations>
-      </CandidateKeyProfile>
       <ColumnValueDistributionProfile IsExact="true" ProfileRequestID="ValueDistReq">
         <DataSourceID>{68B744B6-BFA4-417D-AA11-2C26D08D51D7}</DataSourceID>
-        <Table DataSource="." Database="Stage_DATH" Schema="dbo" Table="Wiki_Postcodes" RowCount="1503" />
-        <Column Name="Postcode districts" SqlDbType="NVarChar" MaxLength="255" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <Table DataSource="." Database="Stage_DATH" Schema="dbo" Table="Wiki_Postcodes" RowCount="1532" />
+        <Column Name="Postcode districts" SqlDbType="VarChar" MaxLength="255" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
         <NumberOfDistinctValues>1447</NumberOfDistinctValues>
         <ValueDistribution>
+          <ValueDistributionItem>
+            <Value>AB10, AB11,AB12, AB15, AB16, AB21, AB22, AB23, AB24, AB25, AB99non-geo</Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>AB13</Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>AB14</Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>AB30</Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>AB31</Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>AB32</Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>AB33</Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>AB34</Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>AB35</Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>AB36</Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>AB37</Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>AB38</Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>AB39</Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>AB41</Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>AB42</Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>AB43</Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>AB44</Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>AB45</Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>AB51</Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>AB52</Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>AB53</Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>AB54</Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>AB55</Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>AB56</Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>AL1, AL2, AL3, AL4</Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>AL5</Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>AL6, AL7shared</Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>AL7shared, AL8</Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>AL9, AL10</Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
           <ValueDistributionItem>
             <Value>CF64shared</Value>
             <Count>2</Count>
@@ -958,17 +838,17 @@
       </ColumnValueDistributionProfile>
       <ColumnValueDistributionProfile IsExact="true" ProfileRequestID="ValueDistReq">
         <DataSourceID>{68B744B6-BFA4-417D-AA11-2C26D08D51D7}</DataSourceID>
-        <Table DataSource="." Database="Stage_DATH" Schema="dbo" Table="Wiki_Postcodes" RowCount="1503" />
+        <Table DataSource="." Database="Stage_DATH" Schema="dbo" Table="Wiki_Postcodes" RowCount="1532" />
         <Column Name="County" SqlDbType="VarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
         <NumberOfDistinctValues>183</NumberOfDistinctValues>
         <ValueDistribution>
           <ValueDistributionItem>
-            <Value>Powys</Value>
-            <Count>22</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
             <Value>Angus</Value>
             <Count>6</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Powys</Value>
+            <Count>22</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
             <Value>Devon</Value>
@@ -1031,6 +911,10 @@
             <Count>45</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
+            <Value>County Antrim</Value>
+            <Count>11</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
             <Value>Oxfordshire</Value>
             <Count>18</Count>
           </ValueDistributionItem>
@@ -1039,16 +923,12 @@
             <Count>2</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
-            <Value>County Antrim</Value>
-            <Count>11</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
             <Value>Banffshire</Value>
-            <Count>5</Count>
+            <Count>10</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
             <Value>Hertfordshire</Value>
-            <Count>29</Count>
+            <Count>34</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
             <Value>(Wiltshire)</Value>
@@ -1067,16 +947,16 @@
             <Count>17</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
-            <Value>Roxburghshire</Value>
-            <Count>5</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
             <Value>Avon</Value>
             <Count>6</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
             <Value>Ross-shire</Value>
             <Count>18</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Roxburghshire</Value>
+            <Count>5</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
             <Value>Ayrshire</Value>
@@ -1139,12 +1019,12 @@
             <Count>4</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
-            <Value>(Devon)</Value>
-            <Count>3</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
             <Value>non-geographic</Value>
             <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>(Devon)</Value>
+            <Count>3</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
             <Value>(Kent)</Value>
@@ -1235,12 +1115,16 @@
             <Count>15</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
-            <Value>Lanarkshire</Value>
-            <Count>11</Count>
+            <Value>(Banffshire)</Value>
+            <Count>2</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
             <Value>(Merseyside)</Value>
             <Count>3</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Lanarkshire</Value>
+            <Count>11</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
             <Value>South Humberside</Value>
@@ -1255,12 +1139,12 @@
             <Count>34</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
-            <Value>Middlesex</Value>
-            <Count>23</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
             <Value>Fife</Value>
             <Count>14</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Middlesex</Value>
+            <Count>23</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
             <Value>Suffolk</Value>
@@ -1291,12 +1175,12 @@
             <Count>3</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
-            <Value>(London)</Value>
-            <Count>8</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
             <Value>(Essex)</Value>
             <Count>4</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>(London)</Value>
+            <Count>8</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
             <Value>County Down</Value>
@@ -1304,7 +1188,7 @@
           </ValueDistributionItem>
           <ValueDistributionItem>
             <Value>(Aberdeenshire)</Value>
-            <Count>3</Count>
+            <Count>6</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
             <Value>Cumbria</Value>
@@ -1328,19 +1212,19 @@
           </ValueDistributionItem>
           <ValueDistributionItem>
             <Value>Aberdeenshire</Value>
-            <Count>12</Count>
+            <Count>24</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
             <Value>(Lanarkshire)</Value>
             <Count>2</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
-            <Value>(Berkshire)</Value>
-            <Count>2</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
             <Value>Clackmannanshire</Value>
             <Count>5</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>(Berkshire)</Value>
+            <Count>2</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
             <Value>Essex</Value>
@@ -1416,15 +1300,15 @@
           </ValueDistributionItem>
           <ValueDistributionItem>
             <Value>Kincardineshire</Value>
-            <Count>3</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
-            <Value>Berwickshire</Value>
-            <Count>7</Count>
+            <Count>6</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
             <Value>Wigtownshire</Value>
             <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Berwickshire</Value>
+            <Count>7</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
             <Value>Caithness</Value>
@@ -1438,12 +1322,12 @@
       </ColumnValueDistributionProfile>
       <ColumnPatternProfile ProfileRequestID="PatternReq" IsExact="true">
         <DataSourceID>{68B744B6-BFA4-417D-AA11-2C26D08D51D7}</DataSourceID>
-        <Table DataSource="." Database="Stage_DATH" Schema="dbo" Table="Wiki_Postcodes" RowCount="1503" />
-        <Column Name="Postcode districts" SqlDbType="NVarChar" MaxLength="255" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <Table DataSource="." Database="Stage_DATH" Schema="dbo" Table="Wiki_Postcodes" RowCount="1532" />
+        <Column Name="Postcode districts" SqlDbType="VarChar" MaxLength="255" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
         <TopRegexPatterns>
           <PatternDistributionItem>
             <RegexText>\w\w\w\w</RegexText>
-            <Frequency>45</Frequency>
+            <Frequency>46</Frequency>
           </PatternDistributionItem>
           <PatternDistributionItem>
             <RegexText>\w+</RegexText>
@@ -1451,7 +1335,7 @@
           </PatternDistributionItem>
           <PatternDistributionItem>
             <RegexText>\w+, \w+</RegexText>
-            <Frequency>12</Frequency>
+            <Frequency>11</Frequency>
           </PatternDistributionItem>
           <PatternDistributionItem>
             <RegexText>.*</RegexText>
@@ -1461,12 +1345,12 @@
       </ColumnPatternProfile>
       <ColumnPatternProfile ProfileRequestID="PatternReq" IsExact="true">
         <DataSourceID>{68B744B6-BFA4-417D-AA11-2C26D08D51D7}</DataSourceID>
-        <Table DataSource="." Database="Stage_DATH" Schema="dbo" Table="Wiki_Postcodes" RowCount="1503" />
+        <Table DataSource="." Database="Stage_DATH" Schema="dbo" Table="Wiki_Postcodes" RowCount="1532" />
         <Column Name="County" SqlDbType="VarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
         <TopRegexPatterns>
           <PatternDistributionItem>
             <RegexText>\p{L}+</RegexText>
-            <Frequency>71</Frequency>
+            <Frequency>72</Frequency>
           </PatternDistributionItem>
           <PatternDistributionItem>
             <RegexText>\p{L}+ \p{L}+</RegexText>
