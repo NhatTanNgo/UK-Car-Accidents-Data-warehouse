@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="18"
-  DTS:VersionGUID="{21D184B5-C3B4-465A-AA53-89BF2A380E5F}">
+  DTS:VersionBuild="24"
+  DTS:VersionGUID="{48EBB5ED-657F-4EF8-99F8-B663027F0FC6}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -43,6 +43,23 @@
   </DTS:ConnectionManagers>
   <DTS:Variables />
   <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Change Sex"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{43ecc4c2-97e0-41d6-8ef6-115e57b6a9ad}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Change Sex"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{AE006570-A2B7-40E0-9892-4B549EA30919}"
+          SQLTask:SqlStatementSource="begin&#xA;update Vehicle&#xA;set Driver_sex = 'Unknown' where Driver_sex != '1' and Driver_sex != '2'&#xA;update Vehicle&#xA;set Driver_sex = 'Male' where Driver_sex = '1'&#xA;update Vehicle&#xA;set Driver_sex = 'Female' where Driver_sex = '2'&#xA;end" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
     <DTS:Executable
       DTS:refId="Package\Stage to NDS"
       DTS:CreationName="Microsoft.Pipeline"
@@ -100,6 +117,50 @@
                           description="Derived Column Friendly Expression"
                           expressionType="Notify"
                           name="FriendlyExpression">4</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Stage to NDS\Derived Column.Outputs[Derived Column Output].Columns[createTime]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Stage to NDS\Derived Column.Outputs[Derived Column Output].Columns[createTime]"
+                      name="createTime"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">[GETDATE]()</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">GETDATE()</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Stage to NDS\Derived Column.Outputs[Derived Column Output].Columns[updatedTime]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Stage to NDS\Derived Column.Outputs[Derived Column Output].Columns[updatedTime]"
+                      name="updatedTime"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">[GETDATE]()</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">GETDATE()</property>
                       </properties>
                     </outputColumn>
                   </outputColumns>
@@ -264,6 +325,18 @@
                       cachedName="SourceId"
                       externalMetadataColumnId="Package\Stage to NDS\Insert Vehicles.Inputs[OLE DB Destination Input].ExternalColumns[Source_ID]"
                       lineageId="Package\Stage to NDS\Derived Column.Outputs[Derived Column Output].Columns[SourceId]" />
+                    <inputColumn
+                      refId="Package\Stage to NDS\Insert Vehicles.Inputs[OLE DB Destination Input].Columns[createTime]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="createTime"
+                      externalMetadataColumnId="Package\Stage to NDS\Insert Vehicles.Inputs[OLE DB Destination Input].ExternalColumns[Create_time]"
+                      lineageId="Package\Stage to NDS\Derived Column.Outputs[Derived Column Output].Columns[createTime]" />
+                    <inputColumn
+                      refId="Package\Stage to NDS\Insert Vehicles.Inputs[OLE DB Destination Input].Columns[updatedTime]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="updatedTime"
+                      externalMetadataColumnId="Package\Stage to NDS\Insert Vehicles.Inputs[OLE DB Destination Input].ExternalColumns[Update_time]"
+                      lineageId="Package\Stage to NDS\Derived Column.Outputs[Derived Column Output].Columns[updatedTime]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -311,6 +384,14 @@
                       refId="Package\Stage to NDS\Insert Vehicles.Inputs[OLE DB Destination Input].ExternalColumns[Source_ID]"
                       dataType="i4"
                       name="Source_ID" />
+                    <externalMetadataColumn
+                      refId="Package\Stage to NDS\Insert Vehicles.Inputs[OLE DB Destination Input].ExternalColumns[Create_time]"
+                      dataType="dbTimeStamp"
+                      name="Create_time" />
+                    <externalMetadataColumn
+                      refId="Package\Stage to NDS\Insert Vehicles.Inputs[OLE DB Destination Input].ExternalColumns[Update_time]"
+                      dataType="dbTimeStamp"
+                      name="Update_time" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
@@ -445,7 +526,7 @@ where [refTable].[Accident_NK] = ?</property>
                 <output
                   refId="Package\Stage to NDS\Lookup accident.Outputs[Lookup Match Output]"
                   errorOrTruncationOperation="Lookup"
-                  errorRowDisposition="FailComponent"
+                  errorRowDisposition="IgnoreFailure"
                   exclusionGroup="1"
                   name="Lookup Match Output"
                   synchronousInputId="Package\Stage to NDS\Lookup accident.Inputs[Lookup Input]">
@@ -695,7 +776,7 @@ where [refTable].[JourneyPurpose] = ? and [refTable].[VehicleType] = ? and [refT
                   dataType="System.Int32"
                   description="Specifies how the Lookup transformation handles rows without matching entries in the reference data set."
                   name="NoMatchBehavior"
-                  typeConverter="LookupNoMatchBehavior">0</property>
+                  typeConverter="LookupNoMatchBehavior">1</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the percentage of the cache that is allocated for rows with no matching entries in the reference dataset."
@@ -811,7 +892,6 @@ where [refTable].[JourneyPurpose] = ? and [refTable].[VehicleType] = ? and [refT
                 <output
                   refId="Package\Stage to NDS\Lookup existing data.Outputs[Lookup Match Output]"
                   errorOrTruncationOperation="Lookup"
-                  errorRowDisposition="IgnoreFailure"
                   exclusionGroup="1"
                   name="Lookup Match Output"
                   synchronousInputId="Package\Stage to NDS\Lookup existing data.Inputs[Lookup Input]">
@@ -1170,88 +1250,6 @@ where [refTable].[Code_NK] = ?</property>
               </outputs>
             </component>
             <component
-              refId="Package\Stage to NDS\Map Stage Sex Male to NDS Sex"
-              componentClassID="Microsoft.OLEDBCommand"
-              contactInfo="OLE DB Command;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;2"
-              description="Runs an SQL statement for each row in a data flow. For example, call a 'new employee setup' stored procedure for each row in the 'new employees' table. Note: running an SQL statement for each row of a large data flow may take a long time."
-              name="Map Stage Sex Male to NDS Sex"
-              usesDispositions="true"
-              version="2">
-              <properties>
-                <property
-                  dataType="System.Int32"
-                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
-                  name="CommandTimeout">0</property>
-                <property
-                  dataType="System.String"
-                  description="The SQL command to be executed."
-                  expressionType="Notify"
-                  name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">begin
-update Vehicles
-set Sex_of_Driver = 'Male' where Sex_of_Driver = 1
-update Vehicles
-set Sex_of_Driver = 'Female' where Sex_of_Driver=2
-update Vehicles
-set Sex_of_Driver = 'Unknown' where Sex_of_Driver != 1 and Sex_of_Driver != 2
-end</property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies the column code page to use when code page information is unavailable from the data source."
-                  name="DefaultCodePage">1252</property>
-              </properties>
-              <connections>
-                <connection
-                  refId="Package\Stage to NDS\Map Stage Sex Male to NDS Sex.Connections[OleDbConnection]"
-                  connectionManagerID="{DFF81239-B2A8-4950-83F9-2BB12A3D2296}:external"
-                  connectionManagerRefId="Project.ConnectionManagers[LocalHost Stage_DATH]"
-                  description="The OLE DB runtime connection used to access the database."
-                  name="OleDbConnection" />
-              </connections>
-              <inputs>
-                <input
-                  refId="Package\Stage to NDS\Map Stage Sex Male to NDS Sex.Inputs[OLE DB Command Input]"
-                  errorOrTruncationOperation="Command Execution"
-                  errorRowDisposition="FailComponent"
-                  hasSideEffects="true"
-                  name="OLE DB Command Input">
-                  <externalMetadataColumns
-                    isUsed="True" />
-                </input>
-              </inputs>
-              <outputs>
-                <output
-                  refId="Package\Stage to NDS\Map Stage Sex Male to NDS Sex.Outputs[OLE DB Command Output]"
-                  exclusionGroup="1"
-                  name="OLE DB Command Output"
-                  synchronousInputId="Package\Stage to NDS\Map Stage Sex Male to NDS Sex.Inputs[OLE DB Command Input]">
-                  <externalMetadataColumns />
-                </output>
-                <output
-                  refId="Package\Stage to NDS\Map Stage Sex Male to NDS Sex.Outputs[OLE DB Command Error Output]"
-                  exclusionGroup="1"
-                  isErrorOut="true"
-                  name="OLE DB Command Error Output"
-                  synchronousInputId="Package\Stage to NDS\Map Stage Sex Male to NDS Sex.Inputs[OLE DB Command Input]">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\Stage to NDS\Map Stage Sex Male to NDS Sex.Outputs[OLE DB Command Error Output].Columns[ErrorCode]"
-                      dataType="i4"
-                      lineageId="Package\Stage to NDS\Map Stage Sex Male to NDS Sex.Outputs[OLE DB Command Error Output].Columns[ErrorCode]"
-                      name="ErrorCode"
-                      specialFlags="1" />
-                    <outputColumn
-                      refId="Package\Stage to NDS\Map Stage Sex Male to NDS Sex.Outputs[OLE DB Command Error Output].Columns[ErrorColumn]"
-                      dataType="i4"
-                      lineageId="Package\Stage to NDS\Map Stage Sex Male to NDS Sex.Outputs[OLE DB Command Error Output].Columns[ErrorColumn]"
-                      name="ErrorColumn"
-                      specialFlags="2" />
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-              </outputs>
-            </component>
-            <component
               refId="Package\Stage to NDS\OLE DB Command"
               componentClassID="Microsoft.OLEDBCommand"
               contactInfo="OLE DB Command;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;2"
@@ -1277,7 +1275,8 @@ SET
 [VehicleAge] = ?
 WHERE 
 [Accident_ID] = ? and [JourneyPurpose] = ?
-and [VehicleType] = ? and [AgeBand] = ?</property>
+and [VehicleType] = ? and [AgeBand] = ?
+and [Update_time]  = ?</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the column code page to use when code page information is unavailable from the data source."
@@ -1355,6 +1354,12 @@ and [VehicleType] = ? and [AgeBand] = ?</property>
                       cachedName="AgeBand_ID"
                       externalMetadataColumnId="Package\Stage to NDS\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_7]"
                       lineageId="Package\Stage to NDS\Lookup age_band.Outputs[Lookup Match Output].Columns[AgeBand_ID]" />
+                    <inputColumn
+                      refId="Package\Stage to NDS\OLE DB Command.Inputs[OLE DB Command Input].Columns[updatedTime]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="updatedTime"
+                      externalMetadataColumnId="Package\Stage to NDS\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_8]"
+                      lineageId="Package\Stage to NDS\Derived Column.Outputs[Derived Column Output].Columns[updatedTime]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -1448,6 +1453,17 @@ and [VehicleType] = ? and [AgeBand] = ?</property>
                           dataType="System.Int32"
                           description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
                           name="DBParamInfoFlags">81</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Stage to NDS\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_8]"
+                      dataType="dbTimeStamp"
+                      name="Param_8">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">65</property>
                       </properties>
                     </externalMetadataColumn>
                   </externalMetadataColumns>
@@ -2101,24 +2117,19 @@ and [VehicleType] = ? and [AgeBand] = ?</property>
               startId="Package\Stage to NDS\Lookup age_band.Outputs[Lookup Match Output]" />
             <path
               refId="Package\Stage to NDS.Paths[Lookup Match Output3]"
-              endId="Package\Stage to NDS\Map Stage Sex Male to NDS Sex.Inputs[OLE DB Command Input]"
-              name="Lookup Match Output"
-              startId="Package\Stage to NDS\Lookup accident.Outputs[Lookup Match Output]" />
-            <path
-              refId="Package\Stage to NDS.Paths[Lookup Match Output4]"
               endId="Package\Stage to NDS\OLE DB Command.Inputs[OLE DB Command Input]"
               name="Lookup Match Output"
               startId="Package\Stage to NDS\Lookup existing data.Outputs[Lookup Match Output]" />
+            <path
+              refId="Package\Stage to NDS.Paths[Lookup Match Output4]"
+              endId="Package\Stage to NDS\Derived Column.Inputs[Derived Column Input]"
+              name="Lookup Match Output"
+              startId="Package\Stage to NDS\Lookup accident.Outputs[Lookup Match Output]" />
             <path
               refId="Package\Stage to NDS.Paths[Lookup No Match Output]"
               endId="Package\Stage to NDS\Insert Vehicles.Inputs[OLE DB Destination Input]"
               name="Lookup No Match Output"
               startId="Package\Stage to NDS\Lookup existing data.Outputs[Lookup No Match Output]" />
-            <path
-              refId="Package\Stage to NDS.Paths[OLE DB Command Output]"
-              endId="Package\Stage to NDS\Derived Column.Inputs[Derived Column Input]"
-              name="OLE DB Command Output"
-              startId="Package\Stage to NDS\Map Stage Sex Male to NDS Sex.Outputs[OLE DB Command Output]" />
             <path
               refId="Package\Stage to NDS.Paths[OLE DB Source Output]"
               endId="Package\Stage to NDS\Lookup Journey_purpose_of_driver.Inputs[Lookup Input]"
@@ -2129,6 +2140,16 @@ and [VehicleType] = ? and [AgeBand] = ?</property>
       </DTS:ObjectData>
     </DTS:Executable>
   </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint]"
+      DTS:CreationName=""
+      DTS:DTSID="{2FF70806-FE0E-48F4-B99F-D24606FE248E}"
+      DTS:From="Package\Stage to NDS"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint"
+      DTS:To="Package\Change Sex" />
+  </DTS:PrecedenceConstraints>
   <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
 <!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
 <!--If you manually edit this section and make a mistake, you can delete it. -->
@@ -2140,11 +2161,37 @@ and [VehicleType] = ? and [AgeBand] = ?</property>
     design-time-name="Package">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="141.6,41.6"
           Id="Package\Stage to NDS"
           TopLeft="215.000003661428,102.470589672405" />
+        <NodeLayout
+          Size="133.6,41.6"
+          Id="Package\Change Sex"
+          TopLeft="428.571435869957,107.717647144621" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint]"
+          TopLeft="356.600003661428,125.894118408513">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="71.9714322085286,0"
+              Start="0,0"
+              End="64.4714322085286,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="64.4714322085286,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </Package>
@@ -2158,91 +2205,37 @@ and [VehicleType] = ? and [AgeBand] = ?</property>
           Id="Package\Stage to NDS\Stage vehicles"
           TopLeft="9.61538461538468,17.7692307692308" />
         <NodeLayout
+          Size="154.4,44"
+          Id="Package\Stage to NDS\Lookup accident"
+          TopLeft="19.2307692307693,168.461538461538" />
+        <NodeLayout
+          Size="176,41.6"
+          Id="Package\Stage to NDS\Lookup existing data"
+          TopLeft="496.153846153846,408.615384615385" />
+        <NodeLayout
+          Size="147.2,41.6"
+          Id="Package\Stage to NDS\Insert Vehicles"
+          TopLeft="513.076923076923,590" />
+        <NodeLayout
           Size="244,41.6"
           Id="Package\Stage to NDS\Lookup Journey_purpose_of_driver"
-          TopLeft="190.769230769231,15.3846153846154" />
-        <EdgeLayout
-          Id="Package\Stage to NDS.Paths[OLE DB Source Output]"
-          TopLeft="155.215384615385,37.3769230769231">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="35.5538461538461,0"
-              Start="0,0"
-              End="28.0538461538461,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="28.0538461538461,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
+          TopLeft="205.05494529823,10.7963800261495" />
         <NodeLayout
-          Size="174.4,41.6"
-          Id="Package\Stage to NDS\Lookup vehicle_type"
-          TopLeft="569.230769230769,16.9230769230769" />
-        <EdgeLayout
-          Id="Package\Stage to NDS.Paths[Lookup Match Output]"
-          TopLeft="434.769230769231,36.9538461538462">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="134.461538461538,0"
-              Start="0,0"
-              End="126.961538461538,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="126.961538461538,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="15.2893825120191,5,96.3827734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
+          Size="164.8,41.6"
+          Id="Package\Stage to NDS\OLE DB Command"
+          TopLeft="113.076923076923,464.461538461539" />
         <NodeLayout
           Size="162.4,41.6"
           Id="Package\Stage to NDS\Lookup age_band"
           TopLeft="577.692307692308,173.846153846154" />
-        <EdgeLayout
-          Id="Package\Stage to NDS.Paths[Lookup Match Output1]"
-          TopLeft="657.661538461538,58.5230769230769">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,115.323076923077"
-              Start="0,0"
-              End="0,107.823076923077">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,107.823076923077" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-48.19138671875,48.1068509615385,96.3827734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
         <NodeLayout
-          Size="154.4,44"
-          Id="Package\Stage to NDS\Lookup accident"
-          TopLeft="19.2307692307693,168.461538461538" />
+          Size="152.8,41.6"
+          Id="Package\Stage to NDS\Derived Column"
+          TopLeft="513.846153846154,302.307692307692" />
+        <NodeLayout
+          Size="174.4,41.6"
+          Id="Package\Stage to NDS\Lookup vehicle_type"
+          TopLeft="569.230769230769,16.9230769230769" />
         <EdgeLayout
           Id="Package\Stage to NDS.Paths[Lookup Match Output2]"
           TopLeft="577.692307692308,192.553846153846">
@@ -2267,76 +2260,54 @@ and [VehicleType] = ? and [AgeBand] = ?</property>
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="229.6,41.6"
-          Id="Package\Stage to NDS\Map Stage Sex Male to NDS Sex"
-          TopLeft="35.7692307692308,303.230769230769" />
         <EdgeLayout
-          Id="Package\Stage to NDS.Paths[Lookup Match Output3]"
-          TopLeft="96.4307692307693,212.461538461538">
+          Id="Package\Stage to NDS.Paths[Lookup Match Output1]"
+          TopLeft="657.661538461538,58.5230769230769">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="54.1384615384615,90.7692307692308"
+              EndConnector="0,115.323076923077"
               Start="0,0"
-              End="54.1384615384615,83.2692307692308">
+              End="0,107.823076923077">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,41.3846153846154" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,41.3846153846154"
-                    Point2="0,45.3846153846154"
-                    Point3="4,45.3846153846154" />
-                  <mssgle:LineSegment
-                    End="50.1384615384615,45.3846153846154" />
-                  <mssgle:CubicBezierSegment
-                    Point1="50.1384615384615,45.3846153846154"
-                    Point2="54.1384615384615,45.3846153846154"
-                    Point3="54.1384615384615,49.3846153846154" />
-                  <mssgle:LineSegment
-                    End="54.1384615384615,83.2692307692308" />
+                    End="0,107.823076923077" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-21.1221559495192,50.3846153846154,96.3827734375,11.609375"
+              BoundingBox="-48.19138671875,48.1068509615385,96.3827734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="152.8,41.6"
-          Id="Package\Stage to NDS\Derived Column"
-          TopLeft="513.846153846154,302.307692307692" />
         <EdgeLayout
-          Id="Package\Stage to NDS.Paths[OLE DB Command Output]"
-          TopLeft="265.369230769231,323.569230769231">
+          Id="Package\Stage to NDS.Paths[Lookup Match Output]"
+          TopLeft="449.05494529823,34.6597284746132">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="248.476923076923,0"
+              EndConnector="120.175823932539,0"
               Start="0,0"
-              End="240.976923076923,0">
+              End="112.675823932539,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="240.976923076923,0" />
+                    End="112.675823932539,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="8.14652524751973,5,96.3827734375,11.609375"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="176,41.6"
-          Id="Package\Stage to NDS\Lookup existing data"
-          TopLeft="496.153846153846,408.615384615385" />
         <EdgeLayout
           Id="Package\Stage to NDS.Paths[Derived Column Output]"
           TopLeft="587.2,343.907692307692">
@@ -2359,12 +2330,54 @@ and [VehicleType] = ? and [AgeBand] = ?</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="164.8,41.6"
-          Id="Package\Stage to NDS\OLE DB Command"
-          TopLeft="113.076923076923,464.461538461539" />
         <EdgeLayout
-          Id="Package\Stage to NDS.Paths[Lookup Match Output4]"
+          Id="Package\Stage to NDS.Paths[OLE DB Source Output]"
+          TopLeft="155.215384615385,35.0828053976901">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="49.8395606828449,0"
+              Start="0,0"
+              End="42.3395606828449,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="42.3395606828449,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Stage to NDS.Paths[Lookup No Match Output]"
+          TopLeft="585.415384615384,450.215384615385">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,139.784615384615"
+              Start="0,0"
+              End="0,132.284615384615">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,132.284615384615" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-55.80638671875,60.3376201923075,111.6127734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Stage to NDS.Paths[Lookup Match Output3]"
           TopLeft="496.153846153846,429.415384615385">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -2399,31 +2412,39 @@ and [VehicleType] = ? and [AgeBand] = ?</property>
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="147.2,41.6"
-          Id="Package\Stage to NDS\Insert Vehicles"
-          TopLeft="513.076923076923,590" />
         <EdgeLayout
-          Id="Package\Stage to NDS.Paths[Lookup No Match Output]"
-          TopLeft="585.415384615384,450.215384615385">
+          Id="Package\Stage to NDS.Paths[Lookup Match Output4]"
+          TopLeft="96.4307692307693,212.461538461538">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,139.784615384615"
+              EndConnector="493.815384615385,89.846153846154"
               Start="0,0"
-              End="0,132.284615384615">
+              End="493.815384615385,82.346153846154">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,132.284615384615" />
+                    End="0,40.923076923077" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,40.923076923077"
+                    Point2="0,44.923076923077"
+                    Point3="4,44.923076923077" />
+                  <mssgle:LineSegment
+                    End="489.815384615385,44.923076923077" />
+                  <mssgle:CubicBezierSegment
+                    Point1="489.815384615385,44.923076923077"
+                    Point2="493.815384615385,44.923076923077"
+                    Point3="493.815384615385,48.923076923077" />
+                  <mssgle:LineSegment
+                    End="493.815384615385,82.346153846154" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-55.80638671875,60.3376201923077,111.6127734375,11.609375"
+              BoundingBox="198.716305588942,49.923076923077,96.3827734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -2432,6 +2453,65 @@ and [VehicleType] = ? and [AgeBand] = ?</property>
   </TaskHost>
   <PipelineComponentMetadata
     design-time-name="Package\Stage to NDS\Stage vehicles">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Stage to NDS\Lookup accident">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:boolean">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[Accidents]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Stage to NDS\Lookup existing data">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:boolean">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[Vehicle]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Stage to NDS\Insert Vehicles">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -2459,30 +2539,7 @@ and [VehicleType] = ? and [AgeBand] = ?</property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:int">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Stage to NDS\Lookup vehicle_type">
-    <Properties>
-      <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:boolean">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string">[dbo].[VehicleType]</Value>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q4:int">0</Value>
+          type="q4:string">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -2505,7 +2562,7 @@ and [VehicleType] = ? and [AgeBand] = ?</property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:int">0</Value>
+          type="q4:string">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -2513,7 +2570,7 @@ and [VehicleType] = ? and [AgeBand] = ?</property>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Stage to NDS\Lookup accident">
+    design-time-name="Package\Stage to NDS\Lookup vehicle_type">
     <Properties>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
@@ -2523,51 +2580,15 @@ and [VehicleType] = ? and [AgeBand] = ?</property>
       <Property>
         <Name>UsedTableName</Name>
         <Value
-          type="q3:string">[dbo].[Accidents]</Value>
+          type="q3:string">[dbo].[VehicleType]</Value>
       </Property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:int">0</Value>
+          type="q4:string">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Stage to NDS\Lookup existing data">
-    <Properties>
-      <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:boolean">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string">[dbo].[Vehicle]</Value>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q4:int">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Stage to NDS\Insert Vehicles">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
       </Property>
     </Properties>
   </PipelineComponentMetadata>

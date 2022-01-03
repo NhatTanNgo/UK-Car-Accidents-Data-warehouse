@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="50"
-  DTS:VersionGUID="{989B4E74-666D-4579-A40C-E5744269760E}">
+  DTS:VersionBuild="51"
+  DTS:VersionGUID="{69DFC531-AC81-4545-A283-33FD53913FA0}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables />
@@ -179,8 +179,8 @@
               <connections>
                 <connection
                   refId="Package\AgeBand\Excel Source.Connections[OleDbConnection]"
-                  connectionManagerID="{B9D8D372-4BBD-4B25-962A-AB66A5756E11}:external"
-                  connectionManagerRefId="Project.ConnectionManagers[Excel_CodeBook]"
+                  connectionManagerID="{B9D8D372-4BBD-4B25-962A-AB66A5756E11}:invalid"
+                  connectionManagerRefId="{B9D8D372-4BBD-4B25-962A-AB66A5756E11}:invalid"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -1009,7 +1009,7 @@
               <connections>
                 <connection
                   refId="Package\Area\Excel Source.Connections[OleDbConnection]"
-                  connectionManagerID="{B9D8D372-4BBD-4B25-962A-AB66A5756E11}:external"
+                  connectionManagerID="{54B0FA4C-C577-451F-B860-AA9EA627FC84}:external"
                   connectionManagerRefId="Project.ConnectionManagers[Excel_CodeBook]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
@@ -1839,8 +1839,8 @@
               <connections>
                 <connection
                   refId="Package\Casualties_Class\Excel Source.Connections[OleDbConnection]"
-                  connectionManagerID="{54B0FA4C-C577-451F-B860-AA9EA627FC84}:invalid"
-                  connectionManagerRefId="{54B0FA4C-C577-451F-B860-AA9EA627FC84}:invalid"
+                  connectionManagerID="{54B0FA4C-C577-451F-B860-AA9EA627FC84}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[Excel_CodeBook]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -2669,8 +2669,8 @@
               <connections>
                 <connection
                   refId="Package\CasualtyType\Excel Source.Connections[OleDbConnection]"
-                  connectionManagerID="{B9D8D372-4BBD-4B25-962A-AB66A5756E11}:external"
-                  connectionManagerRefId="Project.ConnectionManagers[Excel_CodeBook]"
+                  connectionManagerID="{B9D8D372-4BBD-4B25-962A-AB66A5756E11}:invalid"
+                  connectionManagerRefId="{B9D8D372-4BBD-4B25-962A-AB66A5756E11}:invalid"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -3499,8 +3499,8 @@
               <connections>
                 <connection
                   refId="Package\JourneyPurpose\Excel Source.Connections[OleDbConnection]"
-                  connectionManagerID="{B9D8D372-4BBD-4B25-962A-AB66A5756E11}:external"
-                  connectionManagerRefId="Project.ConnectionManagers[Excel_CodeBook]"
+                  connectionManagerID="{B9D8D372-4BBD-4B25-962A-AB66A5756E11}:invalid"
+                  connectionManagerRefId="{B9D8D372-4BBD-4B25-962A-AB66A5756E11}:invalid"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -4330,8 +4330,8 @@
               <connections>
                 <connection
                   refId="Package\Local_Authority\Excel Source.Connections[OleDbConnection]"
-                  connectionManagerID="{54B0FA4C-C577-451F-B860-AA9EA627FC84}:invalid"
-                  connectionManagerRefId="{54B0FA4C-C577-451F-B860-AA9EA627FC84}:invalid"
+                  connectionManagerID="{54B0FA4C-C577-451F-B860-AA9EA627FC84}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[Excel_CodeBook]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -5163,8 +5163,8 @@
               <connections>
                 <connection
                   refId="Package\PoliceForce\Excel Source.Connections[OleDbConnection]"
-                  connectionManagerID="{54B0FA4C-C577-451F-B860-AA9EA627FC84}:invalid"
-                  connectionManagerRefId="{54B0FA4C-C577-451F-B860-AA9EA627FC84}:invalid"
+                  connectionManagerID="{54B0FA4C-C577-451F-B860-AA9EA627FC84}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[Excel_CodeBook]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -5981,8 +5981,8 @@
               <connections>
                 <connection
                   refId="Package\RoadType\Excel Source.Connections[OleDbConnection]"
-                  connectionManagerID="{B9D8D372-4BBD-4B25-962A-AB66A5756E11}:external"
-                  connectionManagerRefId="Project.ConnectionManagers[Excel_CodeBook]"
+                  connectionManagerID="{B9D8D372-4BBD-4B25-962A-AB66A5756E11}:invalid"
+                  connectionManagerRefId="{B9D8D372-4BBD-4B25-962A-AB66A5756E11}:invalid"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -6811,8 +6811,8 @@
               <connections>
                 <connection
                   refId="Package\Severity\Excel Source.Connections[OleDbConnection]"
-                  connectionManagerID="{B9D8D372-4BBD-4B25-962A-AB66A5756E11}:external"
-                  connectionManagerRefId="Project.ConnectionManagers[Excel_CodeBook]"
+                  connectionManagerID="{B9D8D372-4BBD-4B25-962A-AB66A5756E11}:invalid"
+                  connectionManagerRefId="{B9D8D372-4BBD-4B25-962A-AB66A5756E11}:invalid"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -7641,8 +7641,8 @@
               <connections>
                 <connection
                   refId="Package\VehicleType\Excel Source.Connections[OleDbConnection]"
-                  connectionManagerID="{54B0FA4C-C577-451F-B860-AA9EA627FC84}:invalid"
-                  connectionManagerRefId="{54B0FA4C-C577-451F-B860-AA9EA627FC84}:invalid"
+                  connectionManagerID="{54B0FA4C-C577-451F-B860-AA9EA627FC84}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[Excel_CodeBook]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -8323,45 +8323,45 @@
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
         <NodeLayout
-          Size="121.333333333334,42.6666666666667"
+          Size="121.6,42.4"
           Id="Package\AgeBand"
           TopLeft="57.5000002607697,136.614703878669" />
         <NodeLayout
-          Size="156,42.6666666666667"
+          Size="100.8,42.4"
+          Id="Package\Area"
+          TopLeft="61.3068172682754,273.054062823263" />
+        <NodeLayout
+          Size="156,42.4"
           Id="Package\Casualties_Class"
           TopLeft="250.535716961461,206.459664882712" />
         <NodeLayout
-          Size="142.666666666667,42.6666666666667"
+          Size="142.4,42.4"
           Id="Package\CasualtyType"
           TopLeft="248.124996302649,77.9999986052513" />
         <NodeLayout
-          Size="154.666666666667,42.6666666666667"
+          Size="154.4,42.4"
           Id="Package\JourneyPurpose"
           TopLeft="245.625000582171,137.728989158251" />
         <NodeLayout
-          Size="152,42.6666666666667"
+          Size="152,42.4"
           Id="Package\Local_Authority"
           TopLeft="57.1428551509673,207.257146202326" />
         <NodeLayout
-          Size="132,42.6666666666667"
+          Size="132,42.4"
           Id="Package\PoliceForce"
           TopLeft="437.946429708973,209.387395459222" />
         <NodeLayout
-          Size="126.666666666667,42.6666666666667"
+          Size="126.4,42.4"
           Id="Package\RoadType"
           TopLeft="429.374993601814,79.2999985820055" />
         <NodeLayout
-          Size="117.333333333334,42.6666666666667"
+          Size="117.6,42.4"
           Id="Package\Severity"
           TopLeft="55.6249991711229,75.399998651743" />
         <NodeLayout
-          Size="136,42.6666666666667"
+          Size="136,42.4"
           Id="Package\VehicleType"
           TopLeft="431.339286608166,140.427312902697" />
-        <NodeLayout
-          Size="100.666666666667,42.6666666666667"
-          Id="Package\Area"
-          TopLeft="61.3068172682754,273.054062823263" />
       </GraphLayout>
     </LayoutInfo>
   </Package>
@@ -8601,6 +8601,250 @@
         <Name>TableInfoObjectType</Name>
         <Value
           type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\Area">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="139.2,42.4"
+          Id="Package\Area\Excel Source"
+          TopLeft="38.1349206349206,24.7857142857142" />
+        <NodeLayout
+          Size="176,42.4"
+          Id="Package\Area\OLE DB Command 1"
+          TopLeft="511.388888888889,112.833333333334" />
+        <NodeLayout
+          Size="209.6,42.4"
+          Id="Package\Area\Slowly Changing Dimension"
+          TopLeft="225.912698412698,231.674603174603" />
+        <NodeLayout
+          Size="176,43.2"
+          Id="Package\Area\SrcID &amp; Timestamps"
+          TopLeft="253.055555555556,25.6269841269841" />
+        <NodeLayout
+          Size="157.6,42.4"
+          Id="Package\Area\Data Conversion"
+          TopLeft="259.611111111111,117.5" />
+        <NodeLayout
+          Size="173.6,42.4"
+          Id="Package\Area\Insert Destination 1"
+          TopLeft="38.8333333333333,117.277777777778" />
+        <EdgeLayout
+          Id="Package\Area.Paths[Changing Attribute Updates Output]"
+          TopLeft="380.912698412698,231.674603174603">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="218.47619047619,-76.1746031746031"
+              Start="0,0"
+              End="218.47619047619,-68.6746031746031">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,-22.030315130944" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,-22.030315130944"
+                    Point2="0,-26.030315130944"
+                    Point3="4,-26.030315130944" />
+                  <mssgle:LineSegment
+                    End="214.47619047619,-26.030315130944" />
+                  <mssgle:CubicBezierSegment
+                    Point1="214.47619047619,-26.030315130944"
+                    Point2="218.47619047619,-26.030315130944"
+                    Point3="218.47619047619,-30.030315130944" />
+                  <mssgle:LineSegment
+                    End="218.47619047619,-68.6746031746031" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="30.7041889880952,-21.030315130944,157.0678125,11.6630859375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Area.Paths[New Output]"
+          TopLeft="280.246031746032,231.674603174603">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-154.746031746032,-71.7301587301585"
+              Start="0,0"
+              End="-154.746031746032,-64.2301587301585">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,-20.5115636750856" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,-20.5115636750856"
+                    Point2="0,-24.5115636750856"
+                    Point3="-4,-24.5115636750856" />
+                  <mssgle:LineSegment
+                    End="-150.746031746032,-24.5115636750856" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-150.746031746032,-24.5115636750856"
+                    Point2="-154.746031746032,-24.5115636750856"
+                    Point3="-154.746031746032,-28.5115636750856" />
+                  <mssgle:LineSegment
+                    End="-154.746031746032,-64.2301587301585" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-104.464402591766,-19.5115636750856,54.1827734375,11.43359375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Area.Paths[Excel Source Output]"
+          TopLeft="177.468253968254,46.7063492063492">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="75.5873015873016,0"
+              Start="0,0"
+              End="68.0873015873016,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="68.0873015873016,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Area.Paths[Derived Column Output]"
+          TopLeft="339.666666666667,68.9603174603175">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,48.5396825396827"
+              Start="0,0"
+              End="0,41.0396825396827">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,41.0396825396827" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Area.Paths[Data Conversion Output]"
+          TopLeft="334.428571428571,160.166666666667">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,71.5079365079365"
+              Start="0,0"
+              End="0,64.0079365079365">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,64.0079365079365" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Area\Excel Source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Area\Slowly Changing Dimension">
+    <Properties>
+      <Property>
+        <Name>SCDMetadata</Name>
+        <Value
+          type="q2:string">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SCDWizardMetadata xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionID&gt;{AE006570-A2B7-40E0-9892-4B549EA30919}&lt;/ConnectionID&gt;
+  &lt;TableName&gt;[dbo].[Area]&lt;/TableName&gt;
+  &lt;InputToColumnsCollection&gt;
+    &lt;InputColumnToDBColumn&gt;
+      &lt;IdentificationString&gt;Data Conversion.Outputs[Data Conversion Output].Columns[Copy of code]&lt;/IdentificationString&gt;
+      &lt;ColumnName&gt;CODE_NK&lt;/ColumnName&gt;
+      &lt;KeyType&gt;BusinessKey&lt;/KeyType&gt;
+      &lt;ChangeType&gt;None&lt;/ChangeType&gt;
+    &lt;/InputColumnToDBColumn&gt;
+    &lt;InputColumnToDBColumn&gt;
+      &lt;IdentificationString&gt;SrcID &amp;amp; Timestamps.Outputs[Derived Column Output].Columns[create time]&lt;/IdentificationString&gt;
+      &lt;ColumnName&gt;Create_time&lt;/ColumnName&gt;
+      &lt;KeyType&gt;None&lt;/KeyType&gt;
+      &lt;ChangeType&gt;None&lt;/ChangeType&gt;
+    &lt;/InputColumnToDBColumn&gt;
+    &lt;InputColumnToDBColumn&gt;
+      &lt;IdentificationString&gt;Data Conversion.Outputs[Data Conversion Output].Columns[Copy of label]&lt;/IdentificationString&gt;
+      &lt;ColumnName&gt;LABEL&lt;/ColumnName&gt;
+      &lt;KeyType&gt;None&lt;/KeyType&gt;
+      &lt;ChangeType&gt;ChangingAttribute&lt;/ChangeType&gt;
+    &lt;/InputColumnToDBColumn&gt;
+    &lt;InputColumnToDBColumn&gt;
+      &lt;IdentificationString&gt;SrcID &amp;amp; Timestamps.Outputs[Derived Column Output].Columns[SrcID]&lt;/IdentificationString&gt;
+      &lt;ColumnName&gt;Source_ID&lt;/ColumnName&gt;
+      &lt;KeyType&gt;None&lt;/KeyType&gt;
+      &lt;ChangeType&gt;None&lt;/ChangeType&gt;
+    &lt;/InputColumnToDBColumn&gt;
+    &lt;InputColumnToDBColumn&gt;
+      &lt;IdentificationString&gt;SrcID &amp;amp; Timestamps.Outputs[Derived Column Output].Columns[update time]&lt;/IdentificationString&gt;
+      &lt;ColumnName&gt;Update_time&lt;/ColumnName&gt;
+      &lt;KeyType&gt;None&lt;/KeyType&gt;
+      &lt;ChangeType&gt;None&lt;/ChangeType&gt;
+    &lt;/InputColumnToDBColumn&gt;
+  &lt;/InputToColumnsCollection&gt;
+  &lt;GeneratedComponentsIdentificationStrings&gt;
+    &lt;anyType xsi:type="xsd:string"&gt;Insert Destination 1&lt;/anyType&gt;
+    &lt;anyType xsi:type="xsd:string"&gt;OLE DB Command 1&lt;/anyType&gt;
+  &lt;/GeneratedComponentsIdentificationStrings&gt;
+  &lt;FailFixedAttribute&gt;false&lt;/FailFixedAttribute&gt;
+  &lt;FailChangeAttribute&gt;false&lt;/FailChangeAttribute&gt;
+  &lt;UseStartEndDate&gt;false&lt;/UseStartEndDate&gt;
+  &lt;CurrentIndicatorColumn /&gt;
+  &lt;InferredIndicatorColumn /&gt;
+  &lt;ValueCurrent /&gt;
+  &lt;ValueExpired /&gt;
+  &lt;StartDateColumn /&gt;
+  &lt;EndDateColumn /&gt;
+  &lt;DateVariable /&gt;
+  &lt;EnableInferredSupport&gt;false&lt;/EnableInferredSupport&gt;
+&lt;/SCDWizardMetadata&gt;</Value>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
@@ -10607,250 +10851,6 @@
         <Name>TableInfoObjectType</Name>
         <Value
           type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <TaskHost
-    design-time-name="Package\Area">
-    <LayoutInfo>
-      <GraphLayout
-        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
-        <NodeLayout
-          Size="139.333333333334,42.6666666666667"
-          Id="Package\Area\Excel Source"
-          TopLeft="38.1349206349206,24.7857142857142" />
-        <NodeLayout
-          Size="209.333333333334,42.6666666666667"
-          Id="Package\Area\Slowly Changing Dimension"
-          TopLeft="225.912698412698,231.674603174603" />
-        <NodeLayout
-          Size="176,43.3333333333334"
-          Id="Package\Area\SrcID &amp; Timestamps"
-          TopLeft="253.055555555556,25.6269841269841" />
-        <NodeLayout
-          Size="157.333333333334,42.6666666666667"
-          Id="Package\Area\Data Conversion"
-          TopLeft="259.611111111111,117.5" />
-        <EdgeLayout
-          Id="Package\Area.Paths[Excel Source Output]"
-          TopLeft="177.468253968254,46.7063492063492">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="75.5873015873016,0"
-              Start="0,0"
-              End="68.0873015873016,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="68.0873015873016,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Area.Paths[Derived Column Output]"
-          TopLeft="339.666666666667,68.9603174603175">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,48.5396825396827"
-              Start="0,0"
-              End="0,41.0396825396827">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,41.0396825396827" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Area.Paths[Data Conversion Output]"
-          TopLeft="334.428571428571,160.166666666667">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,71.5079365079365"
-              Start="0,0"
-              End="0,64.0079365079365">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,64.0079365079365" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="173.333333333334,42.6666666666667"
-          Id="Package\Area\Insert Destination 1"
-          TopLeft="38.8333333333333,117.277777777778" />
-        <EdgeLayout
-          Id="Package\Area.Paths[New Output]"
-          TopLeft="280.246031746032,231.674603174603">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-154.746031746032,-71.7301587301585"
-              Start="0,0"
-              End="-154.746031746032,-64.2301587301585">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,-20.5115636750856" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,-20.5115636750856"
-                    Point2="0,-24.5115636750856"
-                    Point3="-4,-24.5115636750856" />
-                  <mssgle:LineSegment
-                    End="-150.746031746032,-24.5115636750856" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-150.746031746032,-24.5115636750856"
-                    Point2="-154.746031746032,-24.5115636750856"
-                    Point3="-154.746031746032,-28.5115636750856" />
-                  <mssgle:LineSegment
-                    End="-154.746031746032,-64.2301587301585" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-104.464402591766,-19.5115636750856,54.1827734375,11.43359375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="176,42.6666666666667"
-          Id="Package\Area\OLE DB Command 1"
-          TopLeft="511.388888888889,112.833333333334" />
-        <EdgeLayout
-          Id="Package\Area.Paths[Changing Attribute Updates Output]"
-          TopLeft="380.912698412698,231.674603174603">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="218.47619047619,-76.1746031746031"
-              Start="0,0"
-              End="218.47619047619,-68.6746031746031">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,-22.030315130944" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,-22.030315130944"
-                    Point2="0,-26.030315130944"
-                    Point3="4,-26.030315130944" />
-                  <mssgle:LineSegment
-                    End="214.47619047619,-26.030315130944" />
-                  <mssgle:CubicBezierSegment
-                    Point1="214.47619047619,-26.030315130944"
-                    Point2="218.47619047619,-26.030315130944"
-                    Point3="218.47619047619,-30.030315130944" />
-                  <mssgle:LineSegment
-                    End="218.47619047619,-68.6746031746031" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="30.7041889880952,-21.030315130944,157.0678125,11.6630859375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-      </GraphLayout>
-    </LayoutInfo>
-  </TaskHost>
-  <PipelineComponentMetadata
-    design-time-name="Package\Area\Excel Source">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Area\Slowly Changing Dimension">
-    <Properties>
-      <Property>
-        <Name>SCDMetadata</Name>
-        <Value
-          type="q2:string">&lt;?xml version="1.0" encoding="utf-16"?&gt;
-&lt;SCDWizardMetadata xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
-  &lt;ConnectionID&gt;{AE006570-A2B7-40E0-9892-4B549EA30919}&lt;/ConnectionID&gt;
-  &lt;TableName&gt;[dbo].[Area]&lt;/TableName&gt;
-  &lt;InputToColumnsCollection&gt;
-    &lt;InputColumnToDBColumn&gt;
-      &lt;IdentificationString&gt;Data Conversion.Outputs[Data Conversion Output].Columns[Copy of code]&lt;/IdentificationString&gt;
-      &lt;ColumnName&gt;CODE_NK&lt;/ColumnName&gt;
-      &lt;KeyType&gt;BusinessKey&lt;/KeyType&gt;
-      &lt;ChangeType&gt;None&lt;/ChangeType&gt;
-    &lt;/InputColumnToDBColumn&gt;
-    &lt;InputColumnToDBColumn&gt;
-      &lt;IdentificationString&gt;SrcID &amp;amp; Timestamps.Outputs[Derived Column Output].Columns[create time]&lt;/IdentificationString&gt;
-      &lt;ColumnName&gt;Create_time&lt;/ColumnName&gt;
-      &lt;KeyType&gt;None&lt;/KeyType&gt;
-      &lt;ChangeType&gt;None&lt;/ChangeType&gt;
-    &lt;/InputColumnToDBColumn&gt;
-    &lt;InputColumnToDBColumn&gt;
-      &lt;IdentificationString&gt;Data Conversion.Outputs[Data Conversion Output].Columns[Copy of label]&lt;/IdentificationString&gt;
-      &lt;ColumnName&gt;LABEL&lt;/ColumnName&gt;
-      &lt;KeyType&gt;None&lt;/KeyType&gt;
-      &lt;ChangeType&gt;ChangingAttribute&lt;/ChangeType&gt;
-    &lt;/InputColumnToDBColumn&gt;
-    &lt;InputColumnToDBColumn&gt;
-      &lt;IdentificationString&gt;SrcID &amp;amp; Timestamps.Outputs[Derived Column Output].Columns[SrcID]&lt;/IdentificationString&gt;
-      &lt;ColumnName&gt;Source_ID&lt;/ColumnName&gt;
-      &lt;KeyType&gt;None&lt;/KeyType&gt;
-      &lt;ChangeType&gt;None&lt;/ChangeType&gt;
-    &lt;/InputColumnToDBColumn&gt;
-    &lt;InputColumnToDBColumn&gt;
-      &lt;IdentificationString&gt;SrcID &amp;amp; Timestamps.Outputs[Derived Column Output].Columns[update time]&lt;/IdentificationString&gt;
-      &lt;ColumnName&gt;Update_time&lt;/ColumnName&gt;
-      &lt;KeyType&gt;None&lt;/KeyType&gt;
-      &lt;ChangeType&gt;None&lt;/ChangeType&gt;
-    &lt;/InputColumnToDBColumn&gt;
-  &lt;/InputToColumnsCollection&gt;
-  &lt;GeneratedComponentsIdentificationStrings&gt;
-    &lt;anyType xsi:type="xsd:string"&gt;Insert Destination 1&lt;/anyType&gt;
-    &lt;anyType xsi:type="xsd:string"&gt;OLE DB Command 1&lt;/anyType&gt;
-  &lt;/GeneratedComponentsIdentificationStrings&gt;
-  &lt;FailFixedAttribute&gt;false&lt;/FailFixedAttribute&gt;
-  &lt;FailChangeAttribute&gt;false&lt;/FailChangeAttribute&gt;
-  &lt;UseStartEndDate&gt;false&lt;/UseStartEndDate&gt;
-  &lt;CurrentIndicatorColumn /&gt;
-  &lt;InferredIndicatorColumn /&gt;
-  &lt;ValueCurrent /&gt;
-  &lt;ValueExpired /&gt;
-  &lt;StartDateColumn /&gt;
-  &lt;EndDateColumn /&gt;
-  &lt;DateVariable /&gt;
-  &lt;EnableInferredSupport&gt;false&lt;/EnableInferredSupport&gt;
-&lt;/SCDWizardMetadata&gt;</Value>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
