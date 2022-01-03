@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="17"
-  DTS:VersionGUID="{1D9AF7F1-6925-4A40-B4A6-8B975880C65C}">
+  DTS:VersionBuild="18"
+  DTS:VersionGUID="{CA1BDFED-1377-438C-BECB-9C856D41F3C1}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables />
@@ -47,6 +47,7 @@
       <DTS:ObjectData>
         <ExecutePackageTask>
           <UseProjectReference>True</UseProjectReference>
+          <PackageName>NDS_Casualties.dtsx</PackageName>
         </ExecutePackageTask>
       </DTS:ObjectData>
     </DTS:Executable>
@@ -114,6 +115,7 @@
       <DTS:ObjectData>
         <ExecutePackageTask>
           <UseProjectReference>True</UseProjectReference>
+          <PackageName>NDS_LSOA.dtsx</PackageName>
         </ExecutePackageTask>
       </DTS:ObjectData>
     </DTS:Executable>
@@ -248,39 +250,39 @@
       <GraphLayout
         Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="124,42.4"
+          Size="124,42.6666666666667"
           Id="Package\Accidents"
           TopLeft="413.749993834645,100.74999819845" />
         <NodeLayout
-          Size="126.4,42.4"
+          Size="126.666666666667,42.6666666666667"
           Id="Package\Casualties"
           TopLeft="414.374993825332,240.499995699525" />
         <NodeLayout
-          Size="127.2,43.2"
+          Size="127.333333333334,43.3333333333334"
           Id="Package\Codebook"
           TopLeft="62.6785727966654,97.6352949465061" />
         <NodeLayout
-          Size="154.4,42.4"
+          Size="154.666666666667,42.6666666666667"
           Id="Package\Country_Region"
           TopLeft="44.374999338761,171.599996931553" />
         <NodeLayout
-          Size="112,42.4"
+          Size="112,42.6666666666667"
           Id="Package\County"
           TopLeft="70.6249989476055,242.449995664656" />
         <NodeLayout
-          Size="148,42.4"
+          Size="148,42.6666666666667"
           Id="Package\LSOA Mapping"
           TopLeft="224.999996647239,101.399998186827" />
         <NodeLayout
-          Size="121.6,42.4"
+          Size="121.333333333334,42.6666666666667"
           Id="Package\Postcode"
           TopLeft="241.874998034909,171.149996850192" />
         <NodeLayout
-          Size="105.6,42.4"
+          Size="105.333333333334,42.6666666666667"
           Id="Package\Town"
           TopLeft="243.749996367842,247.183329044481" />
         <NodeLayout
-          Size="112,41.6"
+          Size="112,41.3333333333334"
           Id="Package\Vehicle"
           TopLeft="417.857152368037,169.152945373801" />
         <EdgeLayout

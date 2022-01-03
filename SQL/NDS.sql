@@ -24,6 +24,15 @@ CREATE TABLE Source_NDS
 INSERT INTO dbo.Source_NDS
 VALUES ('Codebook'), ('Accidents'), ('Casualties'), ('Vehicles'), ('Postcodes'), ('WikiPostcodes'), ('PostcodeDistrict'), ('LSOA')
 
+CREATE TABLE Area
+(
+	Area_ID INT IDENTITY(1,1) PRIMARY KEY,
+	CODE_NK  VARCHAR(50),
+	LABEL VARCHAR(50),
+	Source_ID INT FOREIGN KEY REFERENCES dbo.Source_NDS, 
+	[Create_time] datetime,
+	[Update_time] DATETIME
+)
 
 CREATE TABLE Severity
 (
@@ -201,9 +210,15 @@ CREATE TABLE Accidents
 	Police_ID INT FOREIGN KEY REFERENCES dbo.PoliceForce,
 	[Create_time] datetime,
 	[Update_time] DATETIME,
+	NumberOfCasualties INT,
+	AreaID INT FOREIGN KEY REFERENCES dbo.Area,
 	Source_ID INT FOREIGN KEY REFERENCES dbo.Source_NDS
 )
 
+Alter table Accidents
+add Number_Of_Casualties int
+
+go
 CREATE TABLE Casualties
 (
 	Casualties_ID INT IDENTITY(1,1) PRIMARY KEY,
