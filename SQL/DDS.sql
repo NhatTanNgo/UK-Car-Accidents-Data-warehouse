@@ -122,7 +122,7 @@ CREATE TABLE DimGeography
 
 CREATE TABLE DimVehicleType
 (
-    VehicleKey INT IDENTITY(1,1) PRIMARY KEY,
+  VehicleKey INT IDENTITY(1,1) PRIMARY KEY,
 	VehicleNK INT,
 	VehicleTypeName VARCHAR(50)
 )
