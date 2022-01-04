@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="4"
-  DTS:VersionGUID="{E2FE1A01-BB7F-46B2-AFCA-97217CAD3063}">
+  DTS:VersionBuild="7"
+  DTS:VersionGUID="{62C175E6-72A7-4EBF-826D-B9573DA58BFA}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables>
@@ -207,7 +207,7 @@ where [refTable].[VehicleKey] = ?</property>
                 <property
                   dataType="System.String"
                   description="Specifies the name of the database object used to open a rowset."
-                  name="OpenRowset"></property>
+                  name="OpenRowset">[dbo].[FactAccidentVehicle]</property>
                 <property
                   dataType="System.String"
                   description="Specifies the variable that contains the name of the database object used to open a rowset."
@@ -229,7 +229,7 @@ where [refTable].[VehicleKey] = ?</property>
                   dataType="System.Int32"
                   description="Specifies the mode used to access the database."
                   name="AccessMode"
-                  typeConverter="AccessMode">0</property>
+                  typeConverter="AccessMode">3</property>
                 <property
                   dataType="System.Boolean"
                   description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
@@ -241,7 +241,7 @@ where [refTable].[VehicleKey] = ?</property>
                 <property
                   dataType="System.String"
                   description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
-                  name="FastLoadOptions"></property>
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
@@ -250,6 +250,8 @@ where [refTable].[VehicleKey] = ?</property>
               <connections>
                 <connection
                   refId="Package\Data Flow Task\insert.Connections[OleDbConnection]"
+                  connectionManagerID="{E41874B6-BE37-4CD6-ADE3-B77F7AA958CD}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[LocalHost.DDS_DATH]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -260,8 +262,127 @@ where [refTable].[VehicleKey] = ?</property>
                   errorRowDisposition="FailComponent"
                   hasSideEffects="true"
                   name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task\insert.Inputs[OLE DB Destination Input].Columns[VehicleAge]"
+                      cachedDataType="i4"
+                      cachedName="VehicleAge"
+                      externalMetadataColumnId="Package\Data Flow Task\insert.Inputs[OLE DB Destination Input].ExternalColumns[VehicleAge]"
+                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[VehicleAge]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\insert.Inputs[OLE DB Destination Input].Columns[DateKey]"
+                      cachedDataType="i4"
+                      cachedName="DateKey"
+                      externalMetadataColumnId="Package\Data Flow Task\insert.Inputs[OLE DB Destination Input].ExternalColumns[DateKey]"
+                      lineageId="Package\Data Flow Task\Lookup date key.Outputs[Lookup Match Output].Columns[DateKey]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\insert.Inputs[OLE DB Destination Input].Columns[TimeKey]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="5"
+                      cachedName="TimeKey"
+                      externalMetadataColumnId="Package\Data Flow Task\insert.Inputs[OLE DB Destination Input].ExternalColumns[TimeKey]"
+                      lineageId="Package\Data Flow Task\Lookup time key.Outputs[Lookup Match Output].Columns[TimeKey]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\insert.Inputs[OLE DB Destination Input].Columns[PurposeKey]"
+                      cachedDataType="i4"
+                      cachedName="PurposeKey"
+                      externalMetadataColumnId="Package\Data Flow Task\insert.Inputs[OLE DB Destination Input].ExternalColumns[PurposeKey]"
+                      lineageId="Package\Data Flow Task\Lookup JourneyPurpose key.Outputs[Lookup Match Output].Columns[PurposeKey]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\insert.Inputs[OLE DB Destination Input].Columns[VehicleKey]"
+                      cachedDataType="i4"
+                      cachedName="VehicleKey"
+                      externalMetadataColumnId="Package\Data Flow Task\insert.Inputs[OLE DB Destination Input].ExternalColumns[VehicleKey]"
+                      lineageId="Package\Data Flow Task\Lookup vehicle type.Outputs[Lookup Match Output].Columns[VehicleKey]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\insert.Inputs[OLE DB Destination Input].Columns[Accident_ID]"
+                      cachedDataType="i4"
+                      cachedName="Accident_ID"
+                      externalMetadataColumnId="Package\Data Flow Task\insert.Inputs[OLE DB Destination Input].ExternalColumns[AccidentKey]"
+                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[Accident_ID]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\insert.Inputs[OLE DB Destination Input].Columns[SeverityName]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="SeverityName"
+                      externalMetadataColumnId="Package\Data Flow Task\insert.Inputs[OLE DB Destination Input].ExternalColumns[AccidentServerity]"
+                      lineageId="Package\Data Flow Task\Lookup severity name.Outputs[Lookup Match Output].Columns[SeverityName]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\insert.Inputs[OLE DB Destination Input].Columns[Driver_sex]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="10"
+                      cachedName="Driver_sex"
+                      externalMetadataColumnId="Package\Data Flow Task\insert.Inputs[OLE DB Destination Input].ExternalColumns[SexOfDriver]"
+                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[Driver_sex]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\insert.Inputs[OLE DB Destination Input].Columns[Driver_Age]"
+                      cachedDataType="i4"
+                      cachedName="Driver_Age"
+                      externalMetadataColumnId="Package\Data Flow Task\insert.Inputs[OLE DB Destination Input].ExternalColumns[AgeOfDriver]"
+                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[Driver_Age]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\insert.Inputs[OLE DB Destination Input].Columns[AgeBandName]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="AgeBandName"
+                      externalMetadataColumnId="Package\Data Flow Task\insert.Inputs[OLE DB Destination Input].ExternalColumns[AgeBand]"
+                      lineageId="Package\Data Flow Task\Lookup age band.Outputs[Lookup Match Output].Columns[AgeBandName]" />
+                  </inputColumns>
                   <externalMetadataColumns
-                    isUsed="True" />
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\insert.Inputs[OLE DB Destination Input].ExternalColumns[DateKey]"
+                      dataType="i4"
+                      name="DateKey" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\insert.Inputs[OLE DB Destination Input].ExternalColumns[TimeKey]"
+                      codePage="1252"
+                      dataType="str"
+                      length="5"
+                      name="TimeKey" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\insert.Inputs[OLE DB Destination Input].ExternalColumns[VehicleKey]"
+                      dataType="i4"
+                      name="VehicleKey" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\insert.Inputs[OLE DB Destination Input].ExternalColumns[PurposeKey]"
+                      dataType="i4"
+                      name="PurposeKey" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\insert.Inputs[OLE DB Destination Input].ExternalColumns[AccidentKey]"
+                      dataType="i4"
+                      name="AccidentKey" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\insert.Inputs[OLE DB Destination Input].ExternalColumns[AccidentServerity]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="AccidentServerity" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\insert.Inputs[OLE DB Destination Input].ExternalColumns[SexOfDriver]"
+                      codePage="1252"
+                      dataType="str"
+                      length="10"
+                      name="SexOfDriver" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\insert.Inputs[OLE DB Destination Input].ExternalColumns[AgeOfDriver]"
+                      dataType="i4"
+                      name="AgeOfDriver" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\insert.Inputs[OLE DB Destination Input].ExternalColumns[AgeBand]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="AgeBand" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\insert.Inputs[OLE DB Destination Input].ExternalColumns[VehicleAge]"
+                      dataType="i4"
+                      name="VehicleAge" />
+                  </externalMetadataColumns>
                 </input>
               </inputs>
               <outputs>
@@ -290,11 +411,11 @@ where [refTable].[VehicleKey] = ?</property>
               </outputs>
             </component>
             <component
-              refId="Package\Data Flow Task\Lookup accident severity"
+              refId="Package\Data Flow Task\Lookup accident severity key"
               componentClassID="Microsoft.Lookup"
               contactInfo="Lookup;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;6"
               description="Joins additional columns to the data flow by looking up values in a table. For example, join to the 'employee id' column the employees table to get 'hire date' and 'employee name'. We recommend this transformation when the lookup table can fit into memory."
-              name="Lookup accident severity"
+              name="Lookup accident severity key"
               usesDispositions="true"
               version="6">
               <properties>
@@ -358,7 +479,7 @@ where [refTable].[Accident_ID] = ?</property>
               </properties>
               <connections>
                 <connection
-                  refId="Package\Data Flow Task\Lookup accident severity.Connections[OleDbConnection]"
+                  refId="Package\Data Flow Task\Lookup accident severity key.Connections[OleDbConnection]"
                   connectionManagerID="{AE006570-A2B7-40E0-9892-4B549EA30919}:external"
                   connectionManagerRefId="Project.ConnectionManagers[LocalHost.NDS_DATH]"
                   description="Connection manager used to access lookup data."
@@ -366,11 +487,11 @@ where [refTable].[Accident_ID] = ?</property>
               </connections>
               <inputs>
                 <input
-                  refId="Package\Data Flow Task\Lookup accident severity.Inputs[Lookup Input]"
+                  refId="Package\Data Flow Task\Lookup accident severity key.Inputs[Lookup Input]"
                   name="Lookup Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Data Flow Task\Lookup accident severity.Inputs[Lookup Input].Columns[Accident_ID]"
+                      refId="Package\Data Flow Task\Lookup accident severity key.Inputs[Lookup Input].Columns[Accident_ID]"
                       cachedDataType="i4"
                       cachedName="Accident_ID"
                       lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[Accident_ID]">
@@ -391,17 +512,17 @@ where [refTable].[Accident_ID] = ?</property>
               </inputs>
               <outputs>
                 <output
-                  refId="Package\Data Flow Task\Lookup accident severity.Outputs[Lookup Match Output]"
+                  refId="Package\Data Flow Task\Lookup accident severity key.Outputs[Lookup Match Output]"
                   errorOrTruncationOperation="Lookup"
                   exclusionGroup="1"
                   name="Lookup Match Output"
-                  synchronousInputId="Package\Data Flow Task\Lookup accident severity.Inputs[Lookup Input]">
+                  synchronousInputId="Package\Data Flow Task\Lookup accident severity key.Inputs[Lookup Input]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Data Flow Task\Lookup accident severity.Outputs[Lookup Match Output].Columns[Accident_Severity]"
+                      refId="Package\Data Flow Task\Lookup accident severity key.Outputs[Lookup Match Output].Columns[Accident_Severity]"
                       dataType="i4"
                       errorOrTruncationOperation="Copy Column"
-                      lineageId="Package\Data Flow Task\Lookup accident severity.Outputs[Lookup Match Output].Columns[Accident_Severity]"
+                      lineageId="Package\Data Flow Task\Lookup accident severity key.Outputs[Lookup Match Output].Columns[Accident_Severity]"
                       name="Accident_Severity"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -415,30 +536,30 @@ where [refTable].[Accident_ID] = ?</property>
                   <externalMetadataColumns />
                 </output>
                 <output
-                  refId="Package\Data Flow Task\Lookup accident severity.Outputs[Lookup No Match Output]"
+                  refId="Package\Data Flow Task\Lookup accident severity key.Outputs[Lookup No Match Output]"
                   description="The Lookup output that handles rows with no matching entries in the reference dataset. Use this output when the NoMatchBehavior property is set to &quot;Send rows with no matching entries to the no match output.&quot;"
                   exclusionGroup="1"
                   name="Lookup No Match Output"
-                  synchronousInputId="Package\Data Flow Task\Lookup accident severity.Inputs[Lookup Input]">
+                  synchronousInputId="Package\Data Flow Task\Lookup accident severity key.Inputs[Lookup Input]">
                   <externalMetadataColumns />
                 </output>
                 <output
-                  refId="Package\Data Flow Task\Lookup accident severity.Outputs[Lookup Error Output]"
+                  refId="Package\Data Flow Task\Lookup accident severity key.Outputs[Lookup Error Output]"
                   exclusionGroup="1"
                   isErrorOut="true"
                   name="Lookup Error Output"
-                  synchronousInputId="Package\Data Flow Task\Lookup accident severity.Inputs[Lookup Input]">
+                  synchronousInputId="Package\Data Flow Task\Lookup accident severity key.Inputs[Lookup Input]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Data Flow Task\Lookup accident severity.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      refId="Package\Data Flow Task\Lookup accident severity key.Outputs[Lookup Error Output].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\Data Flow Task\Lookup accident severity.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      lineageId="Package\Data Flow Task\Lookup accident severity key.Outputs[Lookup Error Output].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Data Flow Task\Lookup accident severity.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      refId="Package\Data Flow Task\Lookup accident severity key.Outputs[Lookup Error Output].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Data Flow Task\Lookup accident severity.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      lineageId="Package\Data Flow Task\Lookup accident severity key.Outputs[Lookup Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -482,7 +603,7 @@ where [refTable].[Accident_ID] = ?</property>
                   dataType="System.Int32"
                   description="Specifies how the Lookup transformation handles rows without matching entries in the reference data set."
                   name="NoMatchBehavior"
-                  typeConverter="LookupNoMatchBehavior">0</property>
+                  typeConverter="LookupNoMatchBehavior">1</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the percentage of the cache that is allocated for rows with no matching entries in the reference dataset."
@@ -550,27 +671,10 @@ where [refTable].[Accident_ID] = ?</property>
                 <output
                   refId="Package\Data Flow Task\Lookup accident time &amp; date.Outputs[Lookup Match Output]"
                   errorOrTruncationOperation="Lookup"
-                  errorRowDisposition="FailComponent"
                   exclusionGroup="1"
                   name="Lookup Match Output"
                   synchronousInputId="Package\Data Flow Task\Lookup accident time &amp; date.Inputs[Lookup Input]">
                   <outputColumns>
-                    <outputColumn
-                      refId="Package\Data Flow Task\Lookup accident time &amp; date.Outputs[Lookup Match Output].Columns[Accident_NK]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Copy Column"
-                      length="50"
-                      lineageId="Package\Data Flow Task\Lookup accident time &amp; date.Outputs[Lookup Match Output].Columns[Accident_NK]"
-                      name="Accident_NK"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.String"
-                          description="Specifies the column in the reference table from which a column is copied."
-                          name="CopyFromReferenceColumn">Accident_NK</property>
-                      </properties>
-                    </outputColumn>
                     <outputColumn
                       refId="Package\Data Flow Task\Lookup accident time &amp; date.Outputs[Lookup Match Output].Columns[Date]"
                       dataType="dbDate"
@@ -628,6 +732,165 @@ where [refTable].[Accident_ID] = ?</property>
                       refId="Package\Data Flow Task\Lookup accident time &amp; date.Outputs[Lookup Error Output].Columns[ErrorColumn]"
                       dataType="i4"
                       lineageId="Package\Data Flow Task\Lookup accident time &amp; date.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task\Lookup age band"
+              componentClassID="Microsoft.Lookup"
+              contactInfo="Lookup;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;6"
+              description="Joins additional columns to the data flow by looking up values in a table. For example, join to the 'employee id' column the employees table to get 'hire date' and 'employee name'. We recommend this transformation when the lookup table can fit into memory."
+              name="Lookup age band"
+              usesDispositions="true"
+              version="6">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Specifies the SQL statement that generates the lookup table."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from [dbo].[AgeBand]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies a SQL statement that uses parameters to generate the lookup table."
+                  expressionType="Notify"
+                  name="SqlCommandParam"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from (select * from [dbo].[AgeBand]) [refTable]
+where [refTable].[AgeBand_ID] = ?</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the type of connection used to access the reference dataset."
+                  name="ConnectionType"
+                  typeConverter="LookupConnectionType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the cache type of the lookup table."
+                  name="CacheType"
+                  typeConverter="CacheType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies how the Lookup transformation handles rows without matching entries in the reference data set."
+                  name="NoMatchBehavior"
+                  typeConverter="LookupNoMatchBehavior">1</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the percentage of the cache that is allocated for rows with no matching entries in the reference dataset."
+                  name="NoMatchCachePercentage">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Maximum Memory Usage for Reference Cache on a 32 bit platform."
+                  name="MaxMemoryUsage">25</property>
+                <property
+                  dataType="System.Int64"
+                  description="Maximum Memory Usage for Reference Cache on a 64 bit platform."
+                  name="MaxMemoryUsage64">25</property>
+                <property
+                  dataType="System.String"
+                  description="Indicates whether to reference metadata in an XML format."
+                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="AgeBand_ID" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Code_NK" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="Label" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="Create_time" dataType="DT_DBTIMESTAMP" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Update_time" dataType="DT_DBTIMESTAMP" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Source_ID" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                <property
+                  containsID="true"
+                  dataType="System.String"
+                  description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
+                  name="ParameterMap">#{Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[AgeBand]};</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Determines whether duplicate keys in the reference data should be treated as errors when full cache mode is used."
+                  name="TreatDuplicateKeysAsError">false</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task\Lookup age band.Connections[OleDbConnection]"
+                  connectionManagerID="{AE006570-A2B7-40E0-9892-4B549EA30919}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[LocalHost.NDS_DATH]"
+                  description="Connection manager used to access lookup data."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task\Lookup age band.Inputs[Lookup Input]"
+                  name="Lookup Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Lookup age band.Inputs[Lookup Input].Columns[AgeBand]"
+                      cachedDataType="i4"
+                      cachedName="AgeBand"
+                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[AgeBand]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table that a column joins."
+                          name="JoinToReferenceColumn">AgeBand_ID</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\Lookup age band.Outputs[Lookup Match Output]"
+                  errorOrTruncationOperation="Lookup"
+                  exclusionGroup="1"
+                  name="Lookup Match Output"
+                  synchronousInputId="Package\Data Flow Task\Lookup age band.Inputs[Lookup Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Lookup age band.Outputs[Lookup Match Output].Columns[AgeBandName]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Copy Column"
+                      length="50"
+                      lineageId="Package\Data Flow Task\Lookup age band.Outputs[Lookup Match Output].Columns[AgeBandName]"
+                      name="AgeBandName"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">Label</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Data Flow Task\Lookup age band.Outputs[Lookup No Match Output]"
+                  description="The Lookup output that handles rows with no matching entries in the reference dataset. Use this output when the NoMatchBehavior property is set to &quot;Send rows with no matching entries to the no match output.&quot;"
+                  exclusionGroup="1"
+                  name="Lookup No Match Output"
+                  synchronousInputId="Package\Data Flow Task\Lookup age band.Inputs[Lookup Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Data Flow Task\Lookup age band.Outputs[Lookup Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Lookup Error Output"
+                  synchronousInputId="Package\Data Flow Task\Lookup age band.Inputs[Lookup Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Lookup age band.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Lookup age band.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Lookup age band.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Lookup age band.Outputs[Lookup Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -1006,7 +1269,7 @@ where [refTable].[Severity_ID] = ?</property>
                   containsID="true"
                   dataType="System.String"
                   description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
-                  name="ParameterMap">#{Package\Data Flow Task\Lookup accident severity.Outputs[Lookup Match Output].Columns[Accident_Severity]};</property>
+                  name="ParameterMap">#{Package\Data Flow Task\Lookup accident severity key.Outputs[Lookup Match Output].Columns[Accident_Severity]};</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the column code page to use when code page information is unavailable from the data source."
@@ -1033,7 +1296,7 @@ where [refTable].[Severity_ID] = ?</property>
                       refId="Package\Data Flow Task\Lookup severity name.Inputs[Lookup Input].Columns[Accident_Severity]"
                       cachedDataType="i4"
                       cachedName="Accident_Severity"
-                      lineageId="Package\Data Flow Task\Lookup accident severity.Outputs[Lookup Match Output].Columns[Accident_Severity]">
+                      lineageId="Package\Data Flow Task\Lookup accident severity key.Outputs[Lookup Match Output].Columns[Accident_Severity]">
                       <properties>
                         <property
                           dataType="System.String"
@@ -1059,13 +1322,13 @@ where [refTable].[Severity_ID] = ?</property>
                   synchronousInputId="Package\Data Flow Task\Lookup severity name.Inputs[Lookup Input]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Data Flow Task\Lookup severity name.Outputs[Lookup Match Output].Columns[LABEL]"
+                      refId="Package\Data Flow Task\Lookup severity name.Outputs[Lookup Match Output].Columns[SeverityName]"
                       codePage="1252"
                       dataType="str"
                       errorOrTruncationOperation="Copy Column"
                       length="50"
-                      lineageId="Package\Data Flow Task\Lookup severity name.Outputs[Lookup Match Output].Columns[LABEL]"
-                      name="LABEL"
+                      lineageId="Package\Data Flow Task\Lookup severity name.Outputs[Lookup Match Output].Columns[SeverityName]"
+                      name="SeverityName"
                       truncationRowDisposition="FailComponent">
                       <properties>
                         <property
@@ -1277,6 +1540,163 @@ where [refTable].[Hour] = ? and [refTable].[Minute] = ?</property>
                       refId="Package\Data Flow Task\Lookup time key.Outputs[Lookup Error Output].Columns[ErrorColumn]"
                       dataType="i4"
                       lineageId="Package\Data Flow Task\Lookup time key.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task\Lookup vehicle type"
+              componentClassID="Microsoft.Lookup"
+              contactInfo="Lookup;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;6"
+              description="Joins additional columns to the data flow by looking up values in a table. For example, join to the 'employee id' column the employees table to get 'hire date' and 'employee name'. We recommend this transformation when the lookup table can fit into memory."
+              name="Lookup vehicle type"
+              usesDispositions="true"
+              version="6">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Specifies the SQL statement that generates the lookup table."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from [dbo].[DimVehicleType]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies a SQL statement that uses parameters to generate the lookup table."
+                  expressionType="Notify"
+                  name="SqlCommandParam"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from (select * from [dbo].[DimVehicleType]) [refTable]
+where [refTable].[VehicleNK] = ?</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the type of connection used to access the reference dataset."
+                  name="ConnectionType"
+                  typeConverter="LookupConnectionType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the cache type of the lookup table."
+                  name="CacheType"
+                  typeConverter="CacheType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies how the Lookup transformation handles rows without matching entries in the reference data set."
+                  name="NoMatchBehavior"
+                  typeConverter="LookupNoMatchBehavior">1</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the percentage of the cache that is allocated for rows with no matching entries in the reference dataset."
+                  name="NoMatchCachePercentage">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Maximum Memory Usage for Reference Cache on a 32 bit platform."
+                  name="MaxMemoryUsage">25</property>
+                <property
+                  dataType="System.Int64"
+                  description="Maximum Memory Usage for Reference Cache on a 64 bit platform."
+                  name="MaxMemoryUsage64">25</property>
+                <property
+                  dataType="System.String"
+                  description="Indicates whether to reference metadata in an XML format."
+                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="VehicleKey" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="VehicleNK" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="VehicleTypeName" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="EngineCapacity" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                <property
+                  containsID="true"
+                  dataType="System.String"
+                  description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
+                  name="ParameterMap">#{Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[VehicleType]};</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Determines whether duplicate keys in the reference data should be treated as errors when full cache mode is used."
+                  name="TreatDuplicateKeysAsError">false</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task\Lookup vehicle type.Connections[OleDbConnection]"
+                  connectionManagerID="{E41874B6-BE37-4CD6-ADE3-B77F7AA958CD}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[LocalHost.DDS_DATH]"
+                  description="Connection manager used to access lookup data."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task\Lookup vehicle type.Inputs[Lookup Input]"
+                  name="Lookup Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Lookup vehicle type.Inputs[Lookup Input].Columns[VehicleType]"
+                      cachedDataType="i4"
+                      cachedName="VehicleType"
+                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[VehicleType]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table that a column joins."
+                          name="JoinToReferenceColumn">VehicleNK</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task\Lookup vehicle type.Outputs[Lookup Match Output]"
+                  errorOrTruncationOperation="Lookup"
+                  exclusionGroup="1"
+                  name="Lookup Match Output"
+                  synchronousInputId="Package\Data Flow Task\Lookup vehicle type.Inputs[Lookup Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Lookup vehicle type.Outputs[Lookup Match Output].Columns[VehicleKey]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Copy Column"
+                      lineageId="Package\Data Flow Task\Lookup vehicle type.Outputs[Lookup Match Output].Columns[VehicleKey]"
+                      name="VehicleKey"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">VehicleKey</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Data Flow Task\Lookup vehicle type.Outputs[Lookup No Match Output]"
+                  description="The Lookup output that handles rows with no matching entries in the reference dataset. Use this output when the NoMatchBehavior property is set to &quot;Send rows with no matching entries to the no match output.&quot;"
+                  exclusionGroup="1"
+                  name="Lookup No Match Output"
+                  synchronousInputId="Package\Data Flow Task\Lookup vehicle type.Inputs[Lookup Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Data Flow Task\Lookup vehicle type.Outputs[Lookup Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Lookup Error Output"
+                  synchronousInputId="Package\Data Flow Task\Lookup vehicle type.Inputs[Lookup Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task\Lookup vehicle type.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Lookup vehicle type.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Lookup vehicle type.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task\Lookup vehicle type.Outputs[Lookup Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -1723,7 +2143,18 @@ or (Update_time &gt;= ? and Update_time &lt;= ?)</property>
                   description="The SQL command to be executed."
                   expressionType="Notify"
                   name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">update FactAccidentVehicle
+set [AccidentServerity] = ?, 
+[SexOfDriver] = ?, 
+[AgeOfDriver] = ?,
+[AgeBand] = ?,
+ [VehicleAge] = ?
+where [DateKey] = ?
+and [TimeKey] = ?
+and [VehicleKey] = ?
+and [PurposeKey] = ?
+and [AccidentKey] = ?
+</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the column code page to use when code page information is unavailable from the data source."
@@ -1732,6 +2163,8 @@ or (Update_time &gt;= ? and Update_time &lt;= ?)</property>
               <connections>
                 <connection
                   refId="Package\Data Flow Task\update.Connections[OleDbConnection]"
+                  connectionManagerID="{E41874B6-BE37-4CD6-ADE3-B77F7AA958CD}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[LocalHost.DDS_DATH]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -1742,8 +2175,197 @@ or (Update_time &gt;= ? and Update_time &lt;= ?)</property>
                   errorRowDisposition="FailComponent"
                   hasSideEffects="true"
                   name="OLE DB Command Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task\update.Inputs[OLE DB Command Input].Columns[SeverityName]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="SeverityName"
+                      externalMetadataColumnId="Package\Data Flow Task\update.Inputs[OLE DB Command Input].ExternalColumns[Param_0]"
+                      lineageId="Package\Data Flow Task\Lookup severity name.Outputs[Lookup Match Output].Columns[SeverityName]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\update.Inputs[OLE DB Command Input].Columns[Driver_sex]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="10"
+                      cachedName="Driver_sex"
+                      externalMetadataColumnId="Package\Data Flow Task\update.Inputs[OLE DB Command Input].ExternalColumns[Param_1]"
+                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[Driver_sex]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\update.Inputs[OLE DB Command Input].Columns[Driver_Age]"
+                      cachedDataType="i4"
+                      cachedName="Driver_Age"
+                      externalMetadataColumnId="Package\Data Flow Task\update.Inputs[OLE DB Command Input].ExternalColumns[Param_2]"
+                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[Driver_Age]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\update.Inputs[OLE DB Command Input].Columns[AgeBandName]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="AgeBandName"
+                      externalMetadataColumnId="Package\Data Flow Task\update.Inputs[OLE DB Command Input].ExternalColumns[Param_3]"
+                      lineageId="Package\Data Flow Task\Lookup age band.Outputs[Lookup Match Output].Columns[AgeBandName]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\update.Inputs[OLE DB Command Input].Columns[VehicleAge]"
+                      cachedDataType="i4"
+                      cachedName="VehicleAge"
+                      externalMetadataColumnId="Package\Data Flow Task\update.Inputs[OLE DB Command Input].ExternalColumns[Param_4]"
+                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[VehicleAge]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\update.Inputs[OLE DB Command Input].Columns[DateKey]"
+                      cachedDataType="i4"
+                      cachedName="DateKey"
+                      externalMetadataColumnId="Package\Data Flow Task\update.Inputs[OLE DB Command Input].ExternalColumns[Param_5]"
+                      lineageId="Package\Data Flow Task\Lookup date key.Outputs[Lookup Match Output].Columns[DateKey]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\update.Inputs[OLE DB Command Input].Columns[TimeKey]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="5"
+                      cachedName="TimeKey"
+                      externalMetadataColumnId="Package\Data Flow Task\update.Inputs[OLE DB Command Input].ExternalColumns[Param_6]"
+                      lineageId="Package\Data Flow Task\Lookup time key.Outputs[Lookup Match Output].Columns[TimeKey]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\update.Inputs[OLE DB Command Input].Columns[VehicleKey]"
+                      cachedDataType="i4"
+                      cachedName="VehicleKey"
+                      externalMetadataColumnId="Package\Data Flow Task\update.Inputs[OLE DB Command Input].ExternalColumns[Param_7]"
+                      lineageId="Package\Data Flow Task\Lookup vehicle type.Outputs[Lookup Match Output].Columns[VehicleKey]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\update.Inputs[OLE DB Command Input].Columns[PurposeKey]"
+                      cachedDataType="i4"
+                      cachedName="PurposeKey"
+                      externalMetadataColumnId="Package\Data Flow Task\update.Inputs[OLE DB Command Input].ExternalColumns[Param_8]"
+                      lineageId="Package\Data Flow Task\Lookup JourneyPurpose key.Outputs[Lookup Match Output].Columns[PurposeKey]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\update.Inputs[OLE DB Command Input].Columns[Accident_ID]"
+                      cachedDataType="i4"
+                      cachedName="Accident_ID"
+                      externalMetadataColumnId="Package\Data Flow Task\update.Inputs[OLE DB Command Input].ExternalColumns[Param_9]"
+                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[Accident_ID]" />
+                  </inputColumns>
                   <externalMetadataColumns
-                    isUsed="True" />
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\update.Inputs[OLE DB Command Input].ExternalColumns[Param_0]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Param_0">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">81</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\update.Inputs[OLE DB Command Input].ExternalColumns[Param_1]"
+                      codePage="1252"
+                      dataType="str"
+                      length="10"
+                      name="Param_1">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">65</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\update.Inputs[OLE DB Command Input].ExternalColumns[Param_2]"
+                      dataType="i4"
+                      name="Param_2">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">81</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\update.Inputs[OLE DB Command Input].ExternalColumns[Param_3]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Param_3">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">81</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\update.Inputs[OLE DB Command Input].ExternalColumns[Param_4]"
+                      dataType="i4"
+                      name="Param_4">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">81</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\update.Inputs[OLE DB Command Input].ExternalColumns[Param_5]"
+                      dataType="i4"
+                      name="Param_5">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">65</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\update.Inputs[OLE DB Command Input].ExternalColumns[Param_6]"
+                      codePage="1252"
+                      dataType="str"
+                      length="5"
+                      name="Param_6">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">65</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\update.Inputs[OLE DB Command Input].ExternalColumns[Param_7]"
+                      dataType="i4"
+                      name="Param_7">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">81</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\update.Inputs[OLE DB Command Input].ExternalColumns[Param_8]"
+                      dataType="i4"
+                      name="Param_8">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">65</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\update.Inputs[OLE DB Command Input].ExternalColumns[Param_9]"
+                      dataType="i4"
+                      name="Param_9">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">81</property>
+                      </properties>
+                    </externalMetadataColumn>
+                  </externalMetadataColumns>
                 </input>
               </inputs>
               <outputs>
@@ -1787,39 +2409,49 @@ or (Update_time &gt;= ? and Update_time &lt;= ?)</property>
               startId="Package\Data Flow Task\split time.Outputs[Derived Column Output]" />
             <path
               refId="Package\Data Flow Task.Paths[Lookup Match Output]"
-              endId="Package\Data Flow Task\Lookup JourneyPurpose key.Inputs[Lookup Input]"
-              name="Lookup Match Output"
-              startId="Package\Data Flow Task\Lookup accident time &amp; date.Outputs[Lookup Match Output]" />
-            <path
-              refId="Package\Data Flow Task.Paths[Lookup Match Output1]"
-              endId="Package\Data Flow Task\Lookup date key.Inputs[Lookup Input]"
-              name="Lookup Match Output"
-              startId="Package\Data Flow Task\Lookup JourneyPurpose key.Outputs[Lookup Match Output]" />
-            <path
-              refId="Package\Data Flow Task.Paths[Lookup Match Output2]"
               endId="Package\Data Flow Task\split time.Inputs[Derived Column Input]"
               name="Lookup Match Output"
               startId="Package\Data Flow Task\Lookup date key.Outputs[Lookup Match Output]" />
             <path
-              refId="Package\Data Flow Task.Paths[Lookup Match Output3]"
+              refId="Package\Data Flow Task.Paths[Lookup Match Output1]"
               endId="Package\Data Flow Task\update.Inputs[OLE DB Command Input]"
               name="Lookup Match Output"
               startId="Package\Data Flow Task\check data exist.Outputs[Lookup Match Output]" />
             <path
+              refId="Package\Data Flow Task.Paths[Lookup Match Output2]"
+              endId="Package\Data Flow Task\Lookup severity name.Inputs[Lookup Input]"
+              name="Lookup Match Output"
+              startId="Package\Data Flow Task\Lookup accident severity key.Outputs[Lookup Match Output]" />
+            <path
+              refId="Package\Data Flow Task.Paths[Lookup Match Output3]"
+              endId="Package\Data Flow Task\Lookup date key.Inputs[Lookup Input]"
+              name="Lookup Match Output"
+              startId="Package\Data Flow Task\Lookup accident time &amp; date.Outputs[Lookup Match Output]" />
+            <path
               refId="Package\Data Flow Task.Paths[Lookup Match Output4]"
-              endId="Package\Data Flow Task\Lookup accident severity.Inputs[Lookup Input]"
+              endId="Package\Data Flow Task\Lookup JourneyPurpose key.Inputs[Lookup Input]"
               name="Lookup Match Output"
               startId="Package\Data Flow Task\Lookup time key.Outputs[Lookup Match Output]" />
             <path
               refId="Package\Data Flow Task.Paths[Lookup Match Output5]"
-              endId="Package\Data Flow Task\Lookup severity name.Inputs[Lookup Input]"
+              endId="Package\Data Flow Task\Lookup accident severity key.Inputs[Lookup Input]"
               name="Lookup Match Output"
-              startId="Package\Data Flow Task\Lookup accident severity.Outputs[Lookup Match Output]" />
+              startId="Package\Data Flow Task\Lookup JourneyPurpose key.Outputs[Lookup Match Output]" />
             <path
               refId="Package\Data Flow Task.Paths[Lookup Match Output6]"
-              endId="Package\Data Flow Task\check data exist.Inputs[Lookup Input]"
+              endId="Package\Data Flow Task\Lookup age band.Inputs[Lookup Input]"
               name="Lookup Match Output"
               startId="Package\Data Flow Task\Lookup severity name.Outputs[Lookup Match Output]" />
+            <path
+              refId="Package\Data Flow Task.Paths[Lookup Match Output7]"
+              endId="Package\Data Flow Task\Lookup vehicle type.Inputs[Lookup Input]"
+              name="Lookup Match Output"
+              startId="Package\Data Flow Task\Lookup age band.Outputs[Lookup Match Output]" />
+            <path
+              refId="Package\Data Flow Task.Paths[Lookup Match Output8]"
+              endId="Package\Data Flow Task\check data exist.Inputs[Lookup Input]"
+              name="Lookup Match Output"
+              startId="Package\Data Flow Task\Lookup vehicle type.Outputs[Lookup Match Output]" />
             <path
               refId="Package\Data Flow Task.Paths[Lookup No Match Output]"
               endId="Package\Data Flow Task\insert.Inputs[OLE DB Destination Input]"
@@ -1908,13 +2540,17 @@ or (Update_time &gt;= ? and Update_time &lt;= ?)</property>
       <GraphLayout
         Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
+          Size="150.4,41.6"
+          Id="Package\Data Flow Task"
+          TopLeft="332.857148525666,69.5882362700664" />
+        <NodeLayout
           Size="164,41.6"
           Id="Package\Get CET &amp; LSET"
           TopLeft="60,60" />
         <NodeLayout
-          Size="150.4,41.6"
-          Id="Package\Data Flow Task"
-          TopLeft="332.857148525666,69.5882362700664" />
+          Size="140,41.6"
+          Id="Package\Update LSET"
+          TopLeft="587.142866120047,62.5999994530397" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
           TopLeft="224,80.8">
@@ -1949,10 +2585,6 @@ or (Update_time &gt;= ? and Update_time &lt;= ?)</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="140,41.6"
-          Id="Package\Update LSET"
-          TopLeft="587.142866120047,62.5999994530397" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 1]"
           TopLeft="483.257148525666,86.894117861553">
@@ -1984,137 +2616,63 @@ or (Update_time &gt;= ? and Update_time &lt;= ?)</property>
       <GraphLayout
         Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="149.6,41.6"
-          Id="Package\Data Flow Task\OLE DB Source"
-          TopLeft="41.4285721340957,58.1176478739016" />
-        <NodeLayout
           Size="212.8,41.6"
           Id="Package\Data Flow Task\Lookup accident time &amp; date"
-          TopLeft="267.857147418723,64.2352950185229" />
-        <EdgeLayout
-          Id="Package\Data Flow Task.Paths[OLE DB Source Output]"
-          TopLeft="191.028572134096,81.9764714462122">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="76.8285752846274,0"
-              Start="0,0"
-              End="69.3285752846274,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="69.3285752846274,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="209.6,41.6"
-          Id="Package\Data Flow Task\Lookup JourneyPurpose key"
-          TopLeft="596.42858158569,65.7647068046781" />
-        <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Lookup Match Output]"
-          TopLeft="480.657147418723,85.8000009116005">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="115.771434166967,0"
-              Start="0,0"
-              End="108.271434166967,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="108.271434166967,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="5.9443303647334,5,96.3827734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="156,41.6"
-          Id="Package\Data Flow Task\Lookup date key"
-          TopLeft="628.25397895307,179.366015587436" />
-        <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Lookup Match Output1]"
-          TopLeft="703.74128026938,107.364706804678">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,72.0013087827579"
-              Start="0,0"
-              End="0,64.5013087827579">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,64.5013087827579" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-48.19138671875,26.445966891379,96.3827734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="121.6,41.6"
-          Id="Package\Data Flow Task\split time"
-          TopLeft="368.17460944458,178.941178980171" />
-        <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Lookup Match Output2]"
-          TopLeft="628.25397895307,199.953597283803">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-138.47936950849,0"
-              Start="0,0"
-              End="-130.97936950849,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="-130.97936950849,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-113.681071472995,5,96.3827734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
+          TopLeft="242.857146992975,42.8235300123486" />
         <NodeLayout
           Size="156,41.6"
           Id="Package\Data Flow Task\Lookup time key"
-          TopLeft="70.2380964342428,175.287584157689" />
+          TopLeft="393.09524478961,157.699348616903" />
+        <NodeLayout
+          Size="121.6,41.6"
+          Id="Package\Data Flow Task\split time"
+          TopLeft="660.317471562601,158.294119867074" />
+        <NodeLayout
+          Size="181.6,41.6"
+          Id="Package\Data Flow Task\Lookup severity name"
+          TopLeft="378.253974695595,266.267977191594" />
+        <NodeLayout
+          Size="156,41.6"
+          Id="Package\Data Flow Task\Lookup date key"
+          TopLeft="644.682550661419,44.0130725126915" />
+        <NodeLayout
+          Size="214.4,41.6"
+          Id="Package\Data Flow Task\Lookup accident severity key"
+          TopLeft="44.9206356856286,268.666670434615" />
+        <NodeLayout
+          Size="111.2,41.6"
+          Id="Package\Data Flow Task\update"
+          TopLeft="623.25397886792,487.117653890465" />
+        <NodeLayout
+          Size="104.8,41.6"
+          Id="Package\Data Flow Task\insert"
+          TopLeft="79.6825410395252,487.789549246186" />
+        <NodeLayout
+          Size="149.6,41.6"
+          Id="Package\Data Flow Task\OLE DB Source"
+          TopLeft="25.7142861521973,38.2352946538826" />
+        <NodeLayout
+          Size="154.4,41.6"
+          Id="Package\Data Flow Task\check data exist"
+          TopLeft="300.634925754704,383.754253680703" />
+        <NodeLayout
+          Size="209.6,41.6"
+          Id="Package\Data Flow Task\Lookup JourneyPurpose key"
+          TopLeft="49.2857151250456,160.588237546307" />
         <EdgeLayout
           Id="Package\Data Flow Task.Paths[Derived Column Output]"
-          TopLeft="368.17460944458,197.91438156893">
+          TopLeft="660.317471562601,178.796734241989">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-141.936513010337,0"
+              EndConnector="-111.22222677299,0"
               Start="0,0"
-              End="-134.436513010337,0">
+              End="-103.72222677299,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="-134.436513010337,0" />
+                    End="-103.72222677299,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -2123,179 +2681,333 @@ or (Update_time &gt;= ? and Update_time &lt;= ?)</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="154.4,41.6"
-          Id="Package\Data Flow Task\check data exist"
-          TopLeft="197.063495419464,406.695430473033" />
-        <NodeLayout
-          Size="104.8,41.6"
-          Id="Package\Data Flow Task\insert"
-          TopLeft="763.968266978556,363.142488674529" />
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[OLE DB Source Output]"
+          TopLeft="175.314286152197,61.3294123331156">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="67.5428608407782,0"
+              Start="0,0"
+              End="60.0428608407782,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="60.0428608407782,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
         <EdgeLayout
           Id="Package\Data Flow Task.Paths[Lookup No Match Output]"
-          TopLeft="351.463495419464,427.495430473033">
+          TopLeft="353.434925754704,425.354253680703">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="412.504771559092,-43.5529417985036"
+              EndConnector="-221.352384715178,62.4352955654829"
               Start="0,0"
-              End="405.004771559092,-43.5529417985036">
+              End="-221.352384715178,54.9352955654829">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="202.252385779546,0" />
+                    End="0,21.3583354296731" />
                   <mssgle:CubicBezierSegment
-                    Point1="202.252385779546,0"
-                    Point2="206.252385779546,0"
-                    Point3="206.252385779546,-4" />
+                    Point1="0,21.3583354296731"
+                    Point2="0,25.3583354296731"
+                    Point3="-4,25.3583354296731" />
                   <mssgle:LineSegment
-                    End="206.252385779546,-39.5529417985036" />
+                    End="-217.352384715178,25.3583354296731" />
                   <mssgle:CubicBezierSegment
-                    Point1="206.252385779546,-39.5529417985036"
-                    Point2="206.252385779546,-43.5529417985036"
-                    Point3="210.252385779546,-43.5529417985036" />
+                    Point1="-217.352384715178,25.3583354296731"
+                    Point2="-221.352384715178,25.3583354296731"
+                    Point3="-221.352384715178,29.3583354296731" />
                   <mssgle:LineSegment
-                    End="405.004771559092,-43.5529417985036" />
+                    End="-221.352384715178,54.9352955654829" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="150.445999060796,1,111.6127734375,11.609375"
+              BoundingBox="-166.482579076339,30.3583354296731,111.6127734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="111.2,41.6"
-          Id="Package\Data Flow Task\update"
-          TopLeft="753.968266808257,435.882359054262" />
-        <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Lookup Match Output3]"
-          TopLeft="351.463495419464,433.095430473033">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="402.504771388794,23.5869285812291"
-              Start="0,0"
-              End="395.004771388794,23.5869285812291">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="165.946459030824,0" />
-                  <mssgle:CubicBezierSegment
-                    Point1="165.946459030824,0"
-                    Point2="169.946459030824,0"
-                    Point3="169.946459030824,4" />
-                  <mssgle:LineSegment
-                    End="169.946459030824,19.5869285812291" />
-                  <mssgle:CubicBezierSegment
-                    Point1="169.946459030824,19.5869285812291"
-                    Point2="169.946459030824,23.5869285812291"
-                    Point3="173.946459030824,23.5869285812291" />
-                  <mssgle:LineSegment
-                    End="395.004771388794,23.5869285812291" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="121.755072312074,-17.609375,96.3827734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="194.4,41.6"
-          Id="Package\Data Flow Task\Lookup accident severity"
-          TopLeft="57.0634930352776,290.078435440789" />
         <EdgeLayout
           Id="Package\Data Flow Task.Paths[Lookup Match Output4]"
-          TopLeft="151.25079473476,216.887584157689">
+          TopLeft="393.09524478961,179.943793081605">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,73.1908512831008"
+              EndConnector="-134.209529664564,0"
               Start="0,0"
-              End="0,65.6908512831008">
+              End="-126.709529664564,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,65.6908512831008" />
+                    End="-126.709529664564,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-48.19138671875,27.0407381415504,96.3827734375,11.609375"
+              BoundingBox="-111.546151551032,5,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Lookup Match Output3]"
+          TopLeft="455.657146992976,64.2183012625201">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="189.025403668443,0"
+              Start="0,0"
+              End="181.525403668443,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="181.525403668443,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="42.5713151154715,5,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Lookup Match Output2]"
+          TopLeft="259.320635685629,288.267323813105">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="118.933339009967,0"
+              Start="0,0"
+              End="111.433339009967,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="111.433339009967,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="7.52528278623337,5,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Lookup Match Output1]"
+          TopLeft="402.234925754704,425.354253680703">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="276.619053113217,61.7634002097613"
+              Start="0,0"
+              End="276.619053113217,54.2634002097613">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,21.0854425467338" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,21.0854425467338"
+                    Point2="0,25.0854425467338"
+                    Point3="4,25.0854425467338" />
+                  <mssgle:LineSegment
+                    End="272.619053113217,25.0854425467338" />
+                  <mssgle:CubicBezierSegment
+                    Point1="272.619053113217,25.0854425467338"
+                    Point2="276.619053113217,25.0854425467338"
+                    Point3="276.619053113217,29.0854425467338" />
+                  <mssgle:LineSegment
+                    End="276.619053113217,54.2634002097613" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="90.1181398378584,30.0854425467338,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Lookup Match Output]"
+          TopLeft="721.900011112009,85.6130725126915">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,72.6810473543829"
+              Start="0,0"
+              End="0,65.1810473543829">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,65.1810473543829" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-48.19138671875,26.7858361771914,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Lookup Match Output5]"
+          TopLeft="153.103175405337,202.188237546307">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,66.4784328883082"
+              Start="0,0"
+              End="0,58.9784328883082">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,58.9784328883082" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-48.19138671875,23.6845289441541,96.3827734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <NodeLayout
-          Size="181.6,41.6"
-          Id="Package\Data Flow Task\Lookup severity name"
-          TopLeft="396.825403583293,288.444448090846" />
+          Size="159.2,41.6"
+          Id="Package\Data Flow Task\Lookup age band"
+          TopLeft="654.285725428134,258.258825760152" />
         <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Lookup Match Output5]"
-          TopLeft="251.463493035278,310.061441765818">
+          Id="Package\Data Flow Task.Paths[Lookup Match Output6]"
+          TopLeft="559.853974695595,287.067977191594">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="145.361910548016,0"
+              EndConnector="94.4317507325385,-8.00915143144226"
               Start="0,0"
-              End="137.861910548016,0">
+              End="86.9317507325385,-8.00915143144226">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="137.861910548016,0" />
+                    End="43.2158753662692,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="43.2158753662692,0"
+                    Point2="47.2158753662692,0"
+                    Point3="47.2158753662692,-4" />
+                  <mssgle:LineSegment
+                    End="47.2158753662692,-4.00915143144226" />
+                  <mssgle:CubicBezierSegment
+                    Point1="47.2158753662692,-4.00915143144226"
+                    Point2="47.2158753662692,-8.00915143144226"
+                    Point3="51.2158753662692,-8.00915143144226" />
+                  <mssgle:LineSegment
+                    End="86.9317507325385,-8.00915143144226" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="20.7395685552579,5,96.3827734375,11.609375"
+              BoundingBox="-0.975511352480758,1,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="172,41.6"
+          Id="Package\Data Flow Task\Lookup vehicle type"
+          TopLeft="683.333344970431,365.019612800337" />
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Lookup Match Output7]"
+          TopLeft="733.885725428134,299.858825760152">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="35.4476195422968,65.1607870401853"
+              Start="0,0"
+              End="35.4476195422968,57.6607870401853">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,28.5803935200926" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,28.5803935200926"
+                    Point2="0,32.5803935200926"
+                    Point3="4,32.5803935200926" />
+                  <mssgle:LineSegment
+                    End="31.4476195422968,32.5803935200926" />
+                  <mssgle:CubicBezierSegment
+                    Point1="31.4476195422968,32.5803935200926"
+                    Point2="35.4476195422968,32.5803935200926"
+                    Point3="35.4476195422968,36.5803935200926" />
+                  <mssgle:LineSegment
+                    End="35.4476195422968,57.6607870401853" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-30.4675769476016,37.5803935200926,96.3827734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Lookup Match Output6]"
-          TopLeft="487.625403583293,330.044448090846">
+          Id="Package\Data Flow Task.Paths[Lookup Match Output8]"
+          TopLeft="683.333344970431,385.819612800337">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-213.36190816383,76.6509823821867"
+              EndConnector="-228.298419215727,18.7346408803663"
               Start="0,0"
-              End="-213.36190816383,69.1509823821867">
+              End="-220.798419215727,18.7346408803663">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,34.3254911910933" />
+                    End="-110.149209607863,0" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,34.3254911910933"
-                    Point2="0,38.3254911910933"
-                    Point3="-4,38.3254911910933" />
+                    Point1="-110.149209607863,0"
+                    Point2="-114.149209607863,0"
+                    Point3="-114.149209607863,4" />
                   <mssgle:LineSegment
-                    End="-209.36190816383,38.3254911910933" />
+                    End="-114.149209607863,14.7346408803663" />
                   <mssgle:CubicBezierSegment
-                    Point1="-209.36190816383,38.3254911910933"
-                    Point2="-213.36190816383,38.3254911910933"
-                    Point3="-213.36190816383,42.3254911910933" />
+                    Point1="-114.149209607863,14.7346408803663"
+                    Point2="-114.149209607863,18.7346408803663"
+                    Point3="-118.149209607863,18.7346408803663" />
                   <mssgle:LineSegment
-                    End="-213.36190816383,69.1509823821867" />
+                    End="-220.798419215727,18.7346408803663" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-154.872340800665,43.3254911910933,96.3827734375,11.609375"
+              BoundingBox="-162.340596326614,-17.609375,96.3827734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -2303,15 +3015,99 @@ or (Update_time &gt;= ? and Update_time &lt;= ?)</property>
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task\OLE DB Source">
+    design-time-name="Package\Data Flow Task\Lookup accident time &amp; date">
     <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[Accidents]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
       <Property>
         <Name>DataSourceViewID</Name>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task\Lookup accident time &amp; date">
+    design-time-name="Package\Data Flow Task\Lookup time key">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[DimTime]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task\Lookup severity name">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:boolean">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[Severity]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:int">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task\Lookup date key">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[DimDate]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task\Lookup accident severity key">
     <Properties>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
@@ -2327,6 +3123,50 @@ or (Update_time &gt;= ? and Update_time &lt;= ?)</property>
         <Name>TableInfoObjectType</Name>
         <Value
           type="q4:int">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task\insert">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task\OLE DB Source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task\check data exist">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[FactAccidentVehicle]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -2357,7 +3197,7 @@ or (Update_time &gt;= ? and Update_time &lt;= ?)</property>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task\Lookup date key">
+    design-time-name="Package\Data Flow Task\Lookup age band">
     <Properties>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
@@ -2367,7 +3207,7 @@ or (Update_time &gt;= ? and Update_time &lt;= ?)</property>
       <Property>
         <Name>UsedTableName</Name>
         <Value
-          type="q3:string">[dbo].[DimDate]</Value>
+          type="q3:string">[dbo].[AgeBand]</Value>
       </Property>
       <Property>
         <Name>TableInfoObjectType</Name>
@@ -2380,7 +3220,7 @@ or (Update_time &gt;= ? and Update_time &lt;= ?)</property>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task\Lookup time key">
+    design-time-name="Package\Data Flow Task\Lookup vehicle type">
     <Properties>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
@@ -2390,63 +3230,7 @@ or (Update_time &gt;= ? and Update_time &lt;= ?)</property>
       <Property>
         <Name>UsedTableName</Name>
         <Value
-          type="q3:string">[dbo].[DimTime]</Value>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q4:int">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task\check data exist">
-    <Properties>
-      <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:boolean">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string">[dbo].[FactAccidentVehicle]</Value>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q4:int">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task\Lookup accident severity">
-    <Properties>
-      <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:boolean">false</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task\Lookup severity name">
-    <Properties>
-      <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:boolean">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string">[dbo].[Severity]</Value>
+          type="q3:string">[dbo].[DimVehicleType]</Value>
       </Property>
       <Property>
         <Name>TableInfoObjectType</Name>
