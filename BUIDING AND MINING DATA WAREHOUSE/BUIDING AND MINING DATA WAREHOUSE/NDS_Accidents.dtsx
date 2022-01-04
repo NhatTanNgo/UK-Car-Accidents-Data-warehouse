@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="55"
-  DTS:VersionGUID="{AC02647E-33EF-492C-B770-64C12FD390F0}">
+  DTS:VersionBuild="58"
+  DTS:VersionGUID="{A3F16543-3E6C-485C-812E-F9D39A63D7AD}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -2505,7 +2505,7 @@ where [refTable].[LSOA] = ?</property>
                   dataType="System.Int32"
                   description="Specifies how the Lookup transformation handles rows without matching entries in the reference data set."
                   name="NoMatchBehavior"
-                  typeConverter="LookupNoMatchBehavior">1</property>
+                  typeConverter="LookupNoMatchBehavior">0</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the percentage of the cache that is allocated for rows with no matching entries in the reference dataset."
@@ -2575,6 +2575,7 @@ where [refTable].[LSOA] = ?</property>
                 <output
                   refId="Package\Accidents Stage to NDS\Lookup LSOA.Outputs[Lookup Match Output]"
                   errorOrTruncationOperation="Lookup"
+                  errorRowDisposition="IgnoreFailure"
                   exclusionGroup="1"
                   name="Lookup Match Output"
                   synchronousInputId="Package\Accidents Stage to NDS\Lookup LSOA.Inputs[Lookup Input]">
@@ -3627,13 +3628,21 @@ WHERE Accident_NK = ?</property>
       <GraphLayout
         Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
+          Size="156,42.4"
+          Id="Package\Accidents Stage to NDS\Data conversion"
+          TopLeft="333.937498000983,21.7067010041365" />
+        <NodeLayout
+          Size="192,41.6"
+          Id="Package\Accidents Stage to NDS\Lookup RoadType"
+          TopLeft="31.5625027706848,112.354173887397" />
+        <NodeLayout
           Size="188.8,41.6"
           Id="Package\Accidents Stage to NDS\Lookup Local_Authority"
           TopLeft="345.729164780739,106.083338854213" />
         <NodeLayout
-          Size="156,42.4"
-          Id="Package\Accidents Stage to NDS\Data conversion"
-          TopLeft="333.937498000983,21.7067010041365" />
+          Size="154.4,42.4"
+          Id="Package\Accidents Stage to NDS\Lookup Severity"
+          TopLeft="667.416660240541,113.104170226181" />
         <NodeLayout
           Size="137.6,41.6"
           Id="Package\Accidents Stage to NDS\Lookup area"
@@ -3655,9 +3664,9 @@ WHERE Accident_NK = ?</property>
           Id="Package\Accidents Stage to NDS\Lookup Police Force"
           TopLeft="34.6458361971503,212.875007235258" />
         <NodeLayout
-          Size="154.4,42.4"
-          Id="Package\Accidents Stage to NDS\Lookup Severity"
-          TopLeft="667.416660240541,113.104170226181" />
+          Size="137.6,42.4"
+          Id="Package\Accidents Stage to NDS\Update Row"
+          TopLeft="421.874993713573,414.916659247379" />
         <NodeLayout
           Size="150.4,42.4"
           Id="Package\Accidents Stage to NDS\Insert new row"
@@ -3667,17 +3676,81 @@ WHERE Accident_NK = ?</property>
           Id="Package\Accidents Stage to NDS\Add SourceID, timestamps column"
           TopLeft="616.385410345315,21.8125033561139" />
         <NodeLayout
-          Size="137.6,42.4"
-          Id="Package\Accidents Stage to NDS\Update Row"
-          TopLeft="421.874993713573,414.916659247379" />
-        <NodeLayout
           Size="152.8,41.6"
           Id="Package\Accidents Stage to NDS\Accidents Stage"
           TopLeft="30.9166697400312,14.4374998401851" />
-        <NodeLayout
-          Size="192,41.6"
-          Id="Package\Accidents Stage to NDS\Lookup RoadType"
-          TopLeft="31.5625027706848,112.354173887397" />
+        <EdgeLayout
+          Id="Package\Accidents Stage to NDS.Paths[Lookup Match Output6]"
+          TopLeft="489.031243810585,361.666675461332">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,53.2499837860468"
+              Start="0,0"
+              End="0,45.7499837860468">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,45.7499837860468" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-48.19138671875,17.0703043930234,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Accidents Stage to NDS.Paths[Lookup Match Output5]"
+          TopLeft="742.01561861462,250.062510969117">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,68.7708326698593"
+              Start="0,0"
+              End="0,61.2708326698593">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,61.2708326698593" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-48.19138671875,24.8307288349297,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Accidents Stage to NDS.Paths[Lookup Match Output4]"
+          TopLeft="501.541664912676,228.604176735008">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="170.63541205274,0"
+              Start="0,0"
+              End="163.13541205274,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="163.13541205274,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="33.37631930762,5,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
         <EdgeLayout
           Id="Package\Accidents Stage to NDS.Paths[Lookup Match Output3]"
           TopLeft="124.437502817251,153.68750722073">
@@ -3886,81 +3959,32 @@ WHERE Accident_NK = ?</property>
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Accidents Stage to NDS.Paths[Lookup Match Output6]"
-          TopLeft="489.031243810585,361.666675461332">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,53.2499837860468"
-              Start="0,0"
-              End="0,45.7499837860468">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,45.7499837860468" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-48.19138671875,17.0703043930234,96.3827734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Accidents Stage to NDS.Paths[Lookup Match Output5]"
-          TopLeft="742.01561861462,250.062510969117">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,68.7708326698593"
-              Start="0,0"
-              End="0,61.2708326698593">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,61.2708326698593" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-48.19138671875,24.8307288349297,96.3827734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Accidents Stage to NDS.Paths[Lookup Match Output4]"
-          TopLeft="501.541664912676,228.604176735008">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="170.63541205274,0"
-              Start="0,0"
-              End="163.13541205274,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="163.13541205274,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="33.37631930762,5,96.3827734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Accidents Stage to NDS\Lookup RoadType">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[RoadType]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
   <PipelineComponentMetadata
     design-time-name="Package\Accidents Stage to NDS\Lookup Local_Authority">
     <Properties>
@@ -3985,12 +4009,35 @@ WHERE Accident_NK = ?</property>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
+    design-time-name="Package\Accidents Stage to NDS\Lookup Severity">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[Severity]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
     design-time-name="Package\Accidents Stage to NDS\Lookup area">
     <Properties>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:boolean">false</Value>
+          type="q2:string">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -4000,7 +4047,7 @@ WHERE Accident_NK = ?</property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:int">0</Value>
+          type="q4:string">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -4013,7 +4060,7 @@ WHERE Accident_NK = ?</property>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:string">false</Value>
+          type="q2:boolean">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -4077,29 +4124,6 @@ WHERE Accident_NK = ?</property>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Accidents Stage to NDS\Lookup Severity">
-    <Properties>
-      <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:string">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string">[dbo].[Severity]</Value>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q4:string">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
     design-time-name="Package\Accidents Stage to NDS\Insert new row">
     <Properties>
       <Property>
@@ -4122,29 +4146,6 @@ WHERE Accident_NK = ?</property>
         <Name>TableInfoObjectType</Name>
         <Value
           type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Accidents Stage to NDS\Lookup RoadType">
-    <Properties>
-      <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:string">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string">[dbo].[RoadType]</Value>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q4:string">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
