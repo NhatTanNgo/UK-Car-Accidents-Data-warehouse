@@ -123,19 +123,21 @@ CREATE TABLE DimGeography
 CREATE TABLE DimVehicleType
 (
     VehicleKey INT IDENTITY(1,1) PRIMARY KEY,
-	VehicleTypeName VARCHAR(50),
-	EngineCapacity VARCHAR(50),
+	VehicleNK INT,
+	VehicleTypeName VARCHAR(50)
 )
 
 CREATE TABLE DimJourneyPurpose
 (
 	PurposeKey INT IDENTITY(1,1) PRIMARY KEY,
+	PurposeNK INT,
 	PurposeName VARCHAR(50)
 )
 
 CREATE TABLE DimRoadType
 (
 	RoadTypeKey INT IDENTITY(1,1) PRIMARY KEY,
+	RoadTypeNK INT,
 	AreaType VARCHAR(50),
 	RoadType VARCHAR(50),
 	SpeedLimit INT,
@@ -145,6 +147,7 @@ CREATE TABLE DimRoadType
 CREATE TABLE DimCasualties
 (
 	CasualtiesID INT IDENTITY(1,1) PRIMARY KEY,
+	CasualtiesNK INT,
 	CasualtiesClass VARCHAR(50),
 	CasualtiesType VARCHAR(50),
 	AgeBand VARCHAR(50)
@@ -191,6 +194,6 @@ CREATE TABLE FactAccidentVehicle
 	SexOfDriver VARCHAR(10),
 	AgeOfDriver INT,
 	AgeBand VARCHAR(50),
-	VehicleAge INT
+	VehicleAge INT,
+	EngineCapacity INT
 )
-
