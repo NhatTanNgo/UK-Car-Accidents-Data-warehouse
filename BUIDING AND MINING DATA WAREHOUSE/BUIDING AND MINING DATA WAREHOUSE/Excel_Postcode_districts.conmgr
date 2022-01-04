@@ -7,6 +7,6 @@
     <DTS:ConnectionManager
       DTS:ConnectRetryCount="0"
       DTS:ConnectRetryInterval="0"
-      DTS:ConnectionString="Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\khoaf\Documents\Academic\Senior 1st\BI\Về nhà\TH\Đồ án\UKAccidents_Project\UK-Car-Accidents-Data-warehouse\Dataset\Postcode districts.xlsx;Extended Properties=&quot;EXCEL 12.0 XML;HDR=YES&quot;;" />
+      DTS:ConnectionString="Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\WinXs\OneDrive - VNU-HCMUS\Uni\Nam 4 - HKI\BI\Do an\UK-Car-Accidents-Data-warehouse\Dataset\Postcode districts.xlsx;Extended Properties=&quot;EXCEL 12.0 XML;HDR=YES&quot;;" />
   </DTS:ObjectData>
 </DTS:ConnectionManager>

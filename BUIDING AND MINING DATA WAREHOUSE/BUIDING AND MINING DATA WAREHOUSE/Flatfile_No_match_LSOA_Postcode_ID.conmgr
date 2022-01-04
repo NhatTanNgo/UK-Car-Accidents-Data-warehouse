@@ -11,7 +11,7 @@
       DTS:RowDelimiter=""
       DTS:TextQualifier="_x003C_none_x003E_"
       DTS:CodePage="1252"
-      DTS:ConnectionString="D:\Downloads\BI\BI_Project\UK-Car-Accidents-Data-warehouse\Profiling\LSOA_No match.txt">
+      DTS:ConnectionString="C:\Users\WinXs\OneDrive - VNU-HCMUS\Uni\Nam 4 - HKI\BI\Do an\UK-Car-Accidents-Data-warehouse\Dataset\LSOA_nomatch.txt">
       <DTS:FlatFileColumns>
         <DTS:FlatFileColumn
           DTS:ColumnType="Delimited"
@@ -19,7 +19,7 @@
           DTS:DataType="3"
           DTS:TextQualified="True"
           DTS:ObjectName="SrcID"
-          DTS:DTSID="{14CD93B6-7351-4FA7-9ADB-48DB79C8B16D}"
+          DTS:DTSID="{84286FE8-20DD-4306-8AA2-1624B10F5B8C}"
           DTS:CreationName="" />
         <DTS:FlatFileColumn
           DTS:ColumnType="Delimited"
@@ -28,7 +28,7 @@
           DTS:DataType="129"
           DTS:TextQualified="True"
           DTS:ObjectName="LSOA"
-          DTS:DTSID="{B65CCACE-F0BF-4947-97D7-CEEB1A73B49F}"
+          DTS:DTSID="{59F6D0F5-97C8-4D0B-AA2D-17232C557F5C}"
           DTS:CreationName="" />
         <DTS:FlatFileColumn
           DTS:ColumnType="Delimited"
@@ -37,7 +37,7 @@
           DTS:DataType="129"
           DTS:TextQualified="True"
           DTS:ObjectName="Postcode_NK"
-          DTS:DTSID="{714F4A5E-9301-4328-9D0E-3B73FD8D82DC}"
+          DTS:DTSID="{1AFA5776-BE46-4081-8EE0-DDE015539491}"
           DTS:CreationName="" />
         <DTS:FlatFileColumn
           DTS:ColumnType="Delimited"
@@ -45,7 +45,7 @@
           DTS:DataType="135"
           DTS:TextQualified="True"
           DTS:ObjectName="Create_time"
-          DTS:DTSID="{A72CB6D8-E941-4438-B349-2AA6197F615C}"
+          DTS:DTSID="{AF9FE085-2758-4A98-8B4A-B3EA599FFE42}"
           DTS:CreationName="" />
         <DTS:FlatFileColumn
           DTS:ColumnType="Delimited"
@@ -53,7 +53,7 @@
           DTS:DataType="135"
           DTS:TextQualified="True"
           DTS:ObjectName="Update_time"
-          DTS:DTSID="{D6985D05-C852-48B6-8568-FA85A707D2B2}"
+          DTS:DTSID="{0A9FA614-3E39-4B35-B421-A9F121790577}"
           DTS:CreationName="" />
       </DTS:FlatFileColumns>
     </DTS:ConnectionManager>
