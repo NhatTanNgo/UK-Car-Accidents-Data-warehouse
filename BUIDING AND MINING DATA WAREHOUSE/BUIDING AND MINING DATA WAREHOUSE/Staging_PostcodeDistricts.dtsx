@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="9"
-  DTS:VersionGUID="{5F3288B2-20ED-45F7-96EB-1DEB1BCC3C47}">
+  DTS:VersionBuild="12"
+  DTS:VersionGUID="{5778F45D-1336-4517-B14B-FC0CE592F6B1}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables>
@@ -180,6 +180,14 @@
                       cachedName="UK region"
                       externalMetadataColumnId="Package\Load data into stage\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Region]"
                       lineageId="Package\Load data into stage\OLE DB Source.Outputs[OLE DB Source Output].Columns[UK region]" />
+                    <inputColumn
+                      refId="Package\Load data into stage\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Town Area]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Town Area"
+                      externalMetadataColumnId="Package\Load data into stage\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Town]"
+                      lineageId="Package\Load data into stage\OLE DB Source.Outputs[OLE DB Source Output].Columns[Town Area]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -195,6 +203,12 @@
                       dataType="str"
                       length="50"
                       name="Region" />
+                    <externalMetadataColumn
+                      refId="Package\Load data into stage\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Town]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Town" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
@@ -839,23 +853,23 @@ Where (Create_time &gt;= ? and Create_time &lt;= ? ) or (Update_time &gt;= ? and
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="132,41.6"
+          Size="132,42"
           Id="Package\Clear stage"
           TopLeft="337.732144479734,64.4823515791381" />
         <NodeLayout
-          Size="161.6,41.6"
+          Size="162,42"
           Id="Package\Get CET &amp; LSET"
           TopLeft="60,60" />
         <NodeLayout
-          Size="176,41.6"
+          Size="175,42"
           Id="Package\Load data into stage"
           TopLeft="522.999998610998,200.332349564729" />
         <NodeLayout
-          Size="198.4,42.4"
+          Size="198,42"
           Id="Package\Profiling Postcode district"
           TopLeft="203.750003286238,241.365680829185" />
         <NodeLayout
-          Size="140,41.6"
+          Size="140,42"
           Id="Package\Update LSET"
           TopLeft="253.125002550494,175.065682014721" />
         <EdgeLayout
@@ -882,30 +896,30 @@ Where (Create_time &gt;= ? and Create_time &lt;= ? ) or (Update_time &gt;= ? and
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 3]"
-          TopLeft="403.732144479734,106.082351579138">
+          TopLeft="403.732144479734,106.482351579138">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="207.267854131264,94.2499979855911"
+              EndConnector="206.767854131264,93.8499979855909"
               Start="0,0"
-              End="207.267854131264,86.7499979855911">
+              End="206.767854131264,86.3499979855909">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,43.1249989927955" />
+                    End="0,42.9249989927954" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,43.1249989927955"
-                    Point2="0,47.1249989927955"
-                    Point3="4,47.1249989927955" />
+                    Point1="0,42.9249989927954"
+                    Point2="0,46.9249989927954"
+                    Point3="4,46.9249989927954" />
                   <mssgle:LineSegment
-                    End="203.267854131264,47.1249989927955" />
+                    End="202.767854131264,46.9249989927954" />
                   <mssgle:CubicBezierSegment
-                    Point1="203.267854131264,47.1249989927955"
-                    Point2="207.267854131264,47.1249989927955"
-                    Point3="207.267854131264,51.1249989927955" />
+                    Point1="202.767854131264,46.9249989927954"
+                    Point2="206.767854131264,46.9249989927954"
+                    Point3="206.767854131264,50.9249989927954" />
                   <mssgle:LineSegment
-                    End="207.267854131264,86.7499979855911" />
+                    End="206.767854131264,86.3499979855909" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -916,30 +930,30 @@ Where (Create_time &gt;= ? and Create_time &lt;= ? ) or (Update_time &gt;= ? and
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 4]"
-          TopLeft="522.999998610998,215.44346067584">
+          TopLeft="522.999998610998,215.665682898062">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-129.874996060504,-19.7111119944521"
+              EndConnector="-129.874996060504,-19.6000008833413"
               Start="0,0"
-              End="-122.374996060504,-19.7111119944521">
+              End="-122.374996060504,-19.6000008833413">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="-50.8540356031944,0" />
+                    End="-50.8096313649834,0" />
                   <mssgle:CubicBezierSegment
-                    Point1="-50.8540356031944,0"
-                    Point2="-54.8540356031944,0"
-                    Point3="-54.8540356031944,-4" />
+                    Point1="-50.8096313649834,0"
+                    Point2="-54.8096313649834,0"
+                    Point3="-54.8096313649834,-4" />
                   <mssgle:LineSegment
-                    End="-54.8540356031944,-15.7111119944521" />
+                    End="-54.8096313649834,-15.6000008833413" />
                   <mssgle:CubicBezierSegment
-                    Point1="-54.8540356031944,-15.7111119944521"
-                    Point2="-54.8540356031944,-19.7111119944521"
-                    Point3="-58.8540356031944,-19.7111119944521" />
+                    Point1="-54.8096313649834,-15.6000008833413"
+                    Point2="-54.8096313649834,-19.6000008833413"
+                    Point3="-58.8096313649834,-19.6000008833413" />
                   <mssgle:LineSegment
-                    End="-122.374996060504,-19.7111119944521" />
+                    End="-122.374996060504,-19.6000008833413" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -950,30 +964,30 @@ Where (Create_time &gt;= ? and Create_time &lt;= ? ) or (Update_time &gt;= ? and
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 5]"
-          TopLeft="522.999998610998,226.554571786951">
+          TopLeft="522.999998610998,226.999016231396">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-120.583328658093,36.1444423755674"
+              EndConnector="-121.24999532476,35.3666645977894"
               Start="0,0"
-              End="-113.083328658093,36.1444423755674">
+              End="-113.74999532476,35.3666645977894">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="-46.929604650623,0" />
+                    End="-47.1697227976052,0" />
                   <mssgle:CubicBezierSegment
-                    Point1="-46.929604650623,0"
-                    Point2="-50.929604650623,0"
-                    Point3="-50.929604650623,4" />
+                    Point1="-47.1697227976052,0"
+                    Point2="-51.1697227976052,0"
+                    Point3="-51.1697227976052,4" />
                   <mssgle:LineSegment
-                    End="-50.929604650623,32.1444423755674" />
+                    End="-51.1697227976052,31.3666645977894" />
                   <mssgle:CubicBezierSegment
-                    Point1="-50.929604650623,32.1444423755674"
-                    Point2="-50.929604650623,36.1444423755674"
-                    Point3="-54.929604650623,36.1444423755674" />
+                    Point1="-51.1697227976052,31.3666645977894"
+                    Point2="-51.1697227976052,35.3666645977894"
+                    Point3="-55.1697227976052,35.3666645977894" />
                   <mssgle:LineSegment
-                    End="-113.083328658093,36.1444423755674" />
+                    End="-113.74999532476,35.3666645977894" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -991,11 +1005,11 @@ Where (Create_time &gt;= ? and Create_time &lt;= ? ) or (Update_time &gt;= ? and
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="156,42.4"
+          Size="156,42"
           Id="Package\Load data into stage\OLE DB Source"
           TopLeft="83.124998761341,48.7499991282821" />
         <NodeLayout
-          Size="170.4,41.6"
+          Size="170,42"
           Id="Package\Load data into stage\OLE DB Destination"
           TopLeft="370.357149244115,50.9294133914837" />
         <EdgeLayout

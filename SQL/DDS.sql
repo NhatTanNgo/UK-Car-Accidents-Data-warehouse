@@ -149,7 +149,7 @@ CREATE TABLE DimCasualties
 	CasualtiesID INT IDENTITY(1,1) PRIMARY KEY,
 	CasualtiesNK INT,
 	CasualtiesClass VARCHAR(50),
-	CasualtiesType VARCHAR(50),
+	CasualtiesType VARCHAR(150),
 	AgeBand VARCHAR(50)
 )
 
