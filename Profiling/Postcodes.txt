@@ -682,48 +682,48 @@
         <Column Name="region_name" SqlDbType="VarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
         <IgnoreLeadingSpace>false</IgnoreLeadingSpace>
         <IgnoreTrailingSpace>true</IgnoreTrailingSpace>
-        <MinLength>4</MinLength>
-        <MaxLength>24</MaxLength>
+        <MinLength>5</MinLength>
+        <MaxLength>26</MaxLength>
         <LengthDistribution>
           <LengthDistributionItem>
             <Length>15</Length>
-            <Count>245</Count>
-          </LengthDistributionItem>
-          <LengthDistributionItem>
-            <Length>6</Length>
-            <Count>279</Count>
-          </LengthDistributionItem>
-          <LengthDistributionItem>
-            <Length>24</Length>
-            <Count>200</Count>
-          </LengthDistributionItem>
-          <LengthDistributionItem>
-            <Length>10</Length>
-            <Count>1039</Count>
-          </LengthDistributionItem>
-          <LengthDistributionItem>
-            <Length>4</Length>
-            <Count>6</Count>
-          </LengthDistributionItem>
-          <LengthDistributionItem>
-            <Length>13</Length>
             <Count>356</Count>
           </LengthDistributionItem>
           <LengthDistributionItem>
-            <Length>5</Length>
+            <Length>9</Length>
+            <Count>449</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>26</Length>
+            <Count>200</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>12</Length>
+            <Count>1043</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>6</Length>
             <Count>190</Count>
           </LengthDistributionItem>
           <LengthDistributionItem>
+            <Length>7</Length>
+            <Count>44</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>5</Length>
+            <Count>6</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
             <Length>16</Length>
+            <Count>245</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>17</Length>
             <Count>80</Count>
           </LengthDistributionItem>
           <LengthDistributionItem>
-            <Length>11</Length>
-            <Count>4</Count>
-          </LengthDistributionItem>
-          <LengthDistributionItem>
             <Length>8</Length>
-            <Count>449</Count>
+            <Count>235</Count>
           </LengthDistributionItem>
         </LengthDistribution>
       </ColumnLengthDistributionProfile>
@@ -3355,75 +3355,79 @@
         <DataSourceID>{68B744B6-BFA4-417D-AA11-2C26D08D51D7}</DataSourceID>
         <Table DataSource="." Database="Stage_DATH" Schema="dbo" Table="PostCodes" RowCount="2848" />
         <Column Name="region_name" SqlDbType="VarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
-        <NumberOfDistinctValues>17</NumberOfDistinctValues>
+        <NumberOfDistinctValues>18</NumberOfDistinctValues>
         <ValueDistribution>
           <ValueDistributionItem>
-            <Value>Guernsey</Value>
-            <Count>9</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
-            <Value>London</Value>
-            <Count>275</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
-            <Value>East of England</Value>
-            <Count>240</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
-            <Value>IMN,Isle of Man</Value>
-            <Count>5</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
-            <Value>South East </Value>
-            <Count>374</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
-            <Value>#N/A</Value>
-            <Count>6</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
-            <Value>West Midlands </Value>
-            <Count>212</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
-            <Value>North West </Value>
+            <Value>North West </Value>
             <Count>272</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
-            <Value>North East </Value>
-            <Count>117</Count>
+            <Value>West Midlands </Value>
+            <Count>212</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
-            <Value>East Midlands </Value>
+            <Value>London </Value>
+            <Count>235</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>East Midlands </Value>
             <Count>144</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
-            <Value>Isle of Man</Value>
-            <Count>4</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
-            <Value>Jersey</Value>
-            <Count>4</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
-            <Value>Northern ireland</Value>
-            <Count>80</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
-            <Value>Yorkshire and the Humber </Value>
+            <Value>Yorkshire and the Humber </Value>
             <Count>200</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
-            <Value>South West </Value>
-            <Count>276</Count>
+            <Value>IMN,Isle of Man</Value>
+            <Count>5</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
-            <Value>Scotland</Value>
+            <Value>Scotland</Value>
             <Count>440</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
-            <Value>Wales</Value>
+            <Value>South West </Value>
+            <Count>276</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Jersey</Value>
+            <Count>4</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Isle of Man</Value>
+            <Count>4</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Guernsey</Value>
+            <Count>9</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>London</Value>
+            <Count>40</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>North East </Value>
+            <Count>117</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>East of England</Value>
+            <Count>240</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Wales</Value>
             <Count>190</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>#N/A</Value>
+            <Count>6</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Northern ireland</Value>
+            <Count>80</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>South East </Value>
+            <Count>374</Count>
           </ValueDistributionItem>
         </ValueDistribution>
       </ColumnValueDistributionProfile>

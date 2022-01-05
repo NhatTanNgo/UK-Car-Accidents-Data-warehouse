@@ -202,16 +202,16 @@
         <NumberOfDistinctValues>42622</NumberOfDistinctValues>
         <ValueDistribution>
           <ValueDistributionItem>
-            <Value>"E01004763"</Value>
-            <Count>3799</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
-            <Value>"E01032739"</Value>
-            <Count>4499</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
             <Value>"L99999999"</Value>
             <Count>6982</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>"E01033595"</Value>
+            <Count>3323</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>"E01002726"</Value>
+            <Count>3403</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
             <Value>"M99999999"</Value>
@@ -222,12 +222,12 @@
             <Count>10332</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
-            <Value>"E01033595"</Value>
-            <Count>3323</Count>
+            <Value>"E01004763"</Value>
+            <Count>3799</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
-            <Value>"E01002726"</Value>
-            <Count>3403</Count>
+            <Value>"E01032739"</Value>
+            <Count>4499</Count>
           </ValueDistributionItem>
         </ValueDistribution>
       </ColumnValueDistributionProfile>
@@ -238,7 +238,7 @@
         <TopRegexPatterns>
           <PatternDistributionItem>
             <RegexText>"\p{L}\p{L}\d\d \d\p{L}\p{L}"</RegexText>
-            <Frequency>44</Frequency>
+            <Frequency>43</Frequency>
           </PatternDistributionItem>
           <PatternDistributionItem>
             <RegexText>"\p{L}+\d \d\p{L}\p{L}"</RegexText>
@@ -246,7 +246,7 @@
           </PatternDistributionItem>
           <PatternDistributionItem>
             <RegexText>"\p{L}\d\d \d\p{L}\p{L}"</RegexText>
-            <Frequency>9</Frequency>
+            <Frequency>10</Frequency>
           </PatternDistributionItem>
         </TopRegexPatterns>
       </ColumnPatternProfile>
@@ -256,8 +256,12 @@
         <Column Name="lsoa11cd" SqlDbType="VarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
         <TopRegexPatterns>
           <PatternDistributionItem>
-            <RegexText>"\p{L}010\d\d\d\d\d"</RegexText>
-            <Frequency>97</Frequency>
+            <RegexText>"E010\d\d\d\d\d"</RegexText>
+            <Frequency>84</Frequency>
+          </PatternDistributionItem>
+          <PatternDistributionItem>
+            <RegexText>"\p{L}\d+"</RegexText>
+            <Frequency>13</Frequency>
           </PatternDistributionItem>
         </TopRegexPatterns>
       </ColumnPatternProfile>
