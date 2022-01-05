@@ -29,14 +29,11 @@
     <DtsDataSource ID="{2BD3B96C-0A04-4D9C-A949-29EFCA98FD63}" Name="Flatfile_No_match_LSOA_Postcode_ID">
       <DtsConnectionManagerID>Flatfile_No_match_LSOA_Postcode_ID</DtsConnectionManagerID>
     </DtsDataSource>
-    <DtsDataSource ID="{46E1B29A-7092-4B62-B4B1-CA96E0C1404E}" Name="Flatfile_No_match_Postcodes_CountyID">
-      <DtsConnectionManagerID>Flatfile_No_match_Postcodes_CountyID</DtsConnectionManagerID>
-    </DtsDataSource>
-    <DtsDataSource ID="{254CB340-4E9A-40F6-8399-ED617F44CBD3}" Name="Flatfile_No_match_Postcodes_TownID">
-      <DtsConnectionManagerID>Flatfile_No_match_Postcodes_TownID</DtsConnectionManagerID>
-    </DtsDataSource>
     <DtsDataSource ID="{DFF81239-B2A8-4950-83F9-2BB12A3D2296}" Name="LocalHost Stage_DATH">
       <DtsConnectionManagerID>LocalHost Stage_DATH</DtsConnectionManagerID>
+    </DtsDataSource>
+    <DtsDataSource ID="{FE586EEE-F8D2-4B75-A592-FFE0324433A8}" Name="LocalHost.DDS_DATH">
+      <DtsConnectionManagerID>LocalHost.DDS_DATH</DtsConnectionManagerID>
     </DtsDataSource>
     <DtsDataSource ID="{DE3C34A7-7A0C-4B26-A05E-3060463C0629}" Name="LocalHost.MetaData_DATH">
       <DtsConnectionManagerID>LocalHost.MetaData_DATH</DtsConnectionManagerID>
@@ -128,25 +125,25 @@
     <Profiles>
       <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
         <DataSourceID>{68B744B6-BFA4-417D-AA11-2C26D08D51D7}</DataSourceID>
-        <Table DataSource="." Database="Stage_DATH" Schema="dbo" Table="Postcode_district" RowCount="6228" />
+        <Table DataSource="." Database="Stage_DATH" Schema="dbo" Table="Postcode_district" RowCount="3114" />
         <Column Name="Postcode" SqlDbType="VarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
         <NullCount>0</NullCount>
       </ColumnNullRatioProfile>
       <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
         <DataSourceID>{68B744B6-BFA4-417D-AA11-2C26D08D51D7}</DataSourceID>
-        <Table DataSource="." Database="Stage_DATH" Schema="dbo" Table="Postcode_district" RowCount="6228" />
+        <Table DataSource="." Database="Stage_DATH" Schema="dbo" Table="Postcode_district" RowCount="3114" />
         <Column Name="Town" SqlDbType="VarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
-        <NullCount>6228</NullCount>
+        <NullCount>1</NullCount>
       </ColumnNullRatioProfile>
       <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
         <DataSourceID>{68B744B6-BFA4-417D-AA11-2C26D08D51D7}</DataSourceID>
-        <Table DataSource="." Database="Stage_DATH" Schema="dbo" Table="Postcode_district" RowCount="6228" />
+        <Table DataSource="." Database="Stage_DATH" Schema="dbo" Table="Postcode_district" RowCount="3114" />
         <Column Name="Region" SqlDbType="VarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
-        <NullCount>70</NullCount>
+        <NullCount>35</NullCount>
       </ColumnNullRatioProfile>
       <ColumnLengthDistributionProfile ProfileRequestID="LengthDistReq" IsExact="true">
         <DataSourceID>{68B744B6-BFA4-417D-AA11-2C26D08D51D7}</DataSourceID>
-        <Table DataSource="." Database="Stage_DATH" Schema="dbo" Table="Postcode_district" RowCount="6228" />
+        <Table DataSource="." Database="Stage_DATH" Schema="dbo" Table="Postcode_district" RowCount="3114" />
         <Column Name="Postcode" SqlDbType="VarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
         <IgnoreLeadingSpace>false</IgnoreLeadingSpace>
         <IgnoreTrailingSpace>true</IgnoreTrailingSpace>
@@ -155,21 +152,132 @@
         <LengthDistribution>
           <LengthDistributionItem>
             <Length>3</Length>
-            <Count>2612</Count>
+            <Count>1306</Count>
           </LengthDistributionItem>
           <LengthDistributionItem>
             <Length>4</Length>
-            <Count>3480</Count>
+            <Count>1740</Count>
           </LengthDistributionItem>
           <LengthDistributionItem>
             <Length>2</Length>
-            <Count>136</Count>
+            <Count>68</Count>
           </LengthDistributionItem>
         </LengthDistribution>
       </ColumnLengthDistributionProfile>
       <ColumnLengthDistributionProfile ProfileRequestID="LengthDistReq" IsExact="true">
         <DataSourceID>{68B744B6-BFA4-417D-AA11-2C26D08D51D7}</DataSourceID>
-        <Table DataSource="." Database="Stage_DATH" Schema="dbo" Table="Postcode_district" RowCount="6228" />
+        <Table DataSource="." Database="Stage_DATH" Schema="dbo" Table="Postcode_district" RowCount="3114" />
+        <Column Name="Town" SqlDbType="VarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <IgnoreLeadingSpace>false</IgnoreLeadingSpace>
+        <IgnoreTrailingSpace>true</IgnoreTrailingSpace>
+        <MinLength>3</MinLength>
+        <MaxLength>28</MaxLength>
+        <LengthDistribution>
+          <LengthDistributionItem>
+            <Length>23</Length>
+            <Count>8</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>9</Length>
+            <Count>437</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>15</Length>
+            <Count>74</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>3</Length>
+            <Count>2</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>26</Length>
+            <Count>6</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>12</Length>
+            <Count>101</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>6</Length>
+            <Count>253</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>21</Length>
+            <Count>33</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>7</Length>
+            <Count>397</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>24</Length>
+            <Count>17</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>18</Length>
+            <Count>49</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>10</Length>
+            <Count>280</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>4</Length>
+            <Count>83</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>19</Length>
+            <Count>29</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>25</Length>
+            <Count>35</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>13</Length>
+            <Count>204</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>5</Length>
+            <Count>127</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>22</Length>
+            <Count>14</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>16</Length>
+            <Count>47</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>17</Length>
+            <Count>101</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>11</Length>
+            <Count>151</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>20</Length>
+            <Count>32</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>28</Length>
+            <Count>6</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>14</Length>
+            <Count>145</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>8</Length>
+            <Count>482</Count>
+          </LengthDistributionItem>
+        </LengthDistribution>
+      </ColumnLengthDistributionProfile>
+      <ColumnLengthDistributionProfile ProfileRequestID="LengthDistReq" IsExact="true">
+        <DataSourceID>{68B744B6-BFA4-417D-AA11-2C26D08D51D7}</DataSourceID>
+        <Table DataSource="." Database="Stage_DATH" Schema="dbo" Table="Postcode_district" RowCount="3114" />
         <Column Name="Region" SqlDbType="VarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
         <IgnoreLeadingSpace>false</IgnoreLeadingSpace>
         <IgnoreTrailingSpace>true</IgnoreTrailingSpace>
@@ -178,109 +286,1227 @@
         <LengthDistribution>
           <LengthDistributionItem>
             <Length>15</Length>
-            <Count>508</Count>
+            <Count>254</Count>
           </LengthDistributionItem>
           <LengthDistributionItem>
             <Length>6</Length>
-            <Count>598</Count>
+            <Count>299</Count>
           </LengthDistributionItem>
           <LengthDistributionItem>
             <Length>24</Length>
-            <Count>468</Count>
+            <Count>234</Count>
           </LengthDistributionItem>
           <LengthDistributionItem>
             <Length>10</Length>
-            <Count>2284</Count>
+            <Count>1142</Count>
           </LengthDistributionItem>
           <LengthDistributionItem>
             <Length>13</Length>
-            <Count>754</Count>
+            <Count>377</Count>
           </LengthDistributionItem>
           <LengthDistributionItem>
             <Length>5</Length>
-            <Count>428</Count>
+            <Count>214</Count>
           </LengthDistributionItem>
           <LengthDistributionItem>
             <Length>16</Length>
-            <Count>164</Count>
+            <Count>82</Count>
           </LengthDistributionItem>
           <LengthDistributionItem>
             <Length>8</Length>
-            <Count>954</Count>
+            <Count>477</Count>
           </LengthDistributionItem>
         </LengthDistribution>
       </ColumnLengthDistributionProfile>
+      <CandidateKeyProfile IsExact="true" ProfileRequestID="KeyReq">
+        <DataSourceID>{68B744B6-BFA4-417D-AA11-2C26D08D51D7}</DataSourceID>
+        <Table DataSource="." Database="Stage_DATH" Schema="dbo" Table="Postcode_district" RowCount="3114" />
+        <KeyColumns>
+          <Column Name="Postcode" SqlDbType="VarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        </KeyColumns>
+        <IsExactKey>true</IsExactKey>
+      </CandidateKeyProfile>
       <ColumnValueDistributionProfile IsExact="true" ProfileRequestID="ValueDistReq">
         <DataSourceID>{68B744B6-BFA4-417D-AA11-2C26D08D51D7}</DataSourceID>
-        <Table DataSource="." Database="Stage_DATH" Schema="dbo" Table="Postcode_district" RowCount="6228" />
+        <Table DataSource="." Database="Stage_DATH" Schema="dbo" Table="Postcode_district" RowCount="3114" />
         <Column Name="Postcode" SqlDbType="VarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
         <NumberOfDistinctValues>3114</NumberOfDistinctValues>
       </ColumnValueDistributionProfile>
       <ColumnValueDistributionProfile IsExact="true" ProfileRequestID="ValueDistReq">
         <DataSourceID>{68B744B6-BFA4-417D-AA11-2C26D08D51D7}</DataSourceID>
-        <Table DataSource="." Database="Stage_DATH" Schema="dbo" Table="Postcode_district" RowCount="6228" />
+        <Table DataSource="." Database="Stage_DATH" Schema="dbo" Table="Postcode_district" RowCount="3114" />
         <Column Name="Town" SqlDbType="VarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
-        <NumberOfDistinctValues>0</NumberOfDistinctValues>
+        <NumberOfDistinctValues>425</NumberOfDistinctValues>
+        <ValueDistribution>
+          <ValueDistributionItem>
+            <Value>Brighton and Hove</Value>
+            <Count>9</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Angus</Value>
+            <Count>5</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Powys</Value>
+            <Count>9</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>North Down</Value>
+            <Count>4</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Salford</Value>
+            <Count>9</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Mid Sussex</Value>
+            <Count>6</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>South Lanarkshire</Value>
+            <Count>11</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Horsham</Value>
+            <Count>5</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Colchester</Value>
+            <Count>8</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Eastbourne</Value>
+            <Count>4</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Bedford</Value>
+            <Count>7</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Elmbridge</Value>
+            <Count>7</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Isles of Scilly</Value>
+            <Count>5</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Ealing</Value>
+            <Count>9</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Northumberland</Value>
+            <Count>25</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Blaenau Gwent</Value>
+            <Count>4</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Milton Keynes</Value>
+            <Count>20</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Dumfriesshire</Value>
+            <Count>10</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>North Yorkshire</Value>
+            <Count>18</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Haringey</Value>
+            <Count>7</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>St. Helens</Value>
+            <Count>4</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Barrow-in-Furness</Value>
+            <Count>4</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>South Hams</Value>
+            <Count>7</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Mole Valley</Value>
+            <Count>6</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Dudley</Value>
+            <Count>10</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>East Hertfordshire</Value>
+            <Count>8</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Wolverhampton</Value>
+            <Count>15</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Worthing</Value>
+            <Count>6</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>South Oxfordshire</Value>
+            <Count>10</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Guernsey</Value>
+            <Count>10</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Test Valley</Value>
+            <Count>5</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Wychavon</Value>
+            <Count>4</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Derby</Value>
+            <Count>9</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Wycombe</Value>
+            <Count>8</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Poole</Value>
+            <Count>7</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Wokingham</Value>
+            <Count>6</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Southwark</Value>
+            <Count>5</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Welwyn Hatfield</Value>
+            <Count>5</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Newport</Value>
+            <Count>11</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>County Durham</Value>
+            <Count>24</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Tendring</Value>
+            <Count>6</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Hillingdon</Value>
+            <Count>9</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>London</Value>
+            <Count>16</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Peterborough</Value>
+            <Count>8</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Denbighshire</Value>
+            <Count>4</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Stockport</Value>
+            <Count>8</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>East Ayrshire</Value>
+            <Count>9</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Tewkesbury</Value>
+            <Count>7</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Anglesey</Value>
+            <Count>21</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Bournemouth </Value>
+            <Count>11</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Gateshead</Value>
+            <Count>12</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Merton</Value>
+            <Count>4</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Derbyshire Dales</Value>
+            <Count>5</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>East Dunbartonshire</Value>
+            <Count>4</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Swindon</Value>
+            <Count>12</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Rhondda Cynon Taf</Value>
+            <Count>10</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Greenwich</Value>
+            <Count>7</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Calderdale</Value>
+            <Count>9</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Sefton</Value>
+            <Count>9</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Doncaster</Value>
+            <Count>14</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Daventry</Value>
+            <Count>4</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Birmingham </Value>
+            <Count>46</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Barnet</Value>
+            <Count>10</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Barnsley</Value>
+            <Count>8</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Winchester</Value>
+            <Count>4</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Amber Valley</Value>
+            <Count>4</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Sevenoaks</Value>
+            <Count>6</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Highland</Value>
+            <Count>85</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Trafford</Value>
+            <Count>8</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Kensington and Chelsea</Value>
+            <Count>8</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Hartlepool</Value>
+            <Count>4</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>West Lothian</Value>
+            <Count>8</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Oxford</Value>
+            <Count>6</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Bradford </Value>
+            <Count>23</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Bromley</Value>
+            <Count>12</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>West Dunbartonshire</Value>
+            <Count>4</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Monmouthshire</Value>
+            <Count>6</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Walsall</Value>
+            <Count>7</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Kent</Value>
+            <Count>16</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Enfield</Value>
+            <Count>12</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>St Albans</Value>
+            <Count>5</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Gwynedd</Value>
+            <Count>23</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Newcastle</Value>
+            <Count>15</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Lambeth</Value>
+            <Count>12</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Wirral</Value>
+            <Count>21</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Leeds</Value>
+            <Count>31</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Braintree</Value>
+            <Count>4</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>South Buckinghamshire</Value>
+            <Count>9</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Rochdale</Value>
+            <Count>6</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Redcar &amp; Cleveland</Value>
+            <Count>6</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Hereford</Value>
+            <Count>9</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Kingston upon Thames</Value>
+            <Count>6</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Islington</Value>
+            <Count>8</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Sandwell</Value>
+            <Count>9</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>North Tyneside</Value>
+            <Count>7</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Wiltshire</Value>
+            <Count>17</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Knowsley</Value>
+            <Count>5</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Ceredigion</Value>
+            <Count>9</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Bexley</Value>
+            <Count>9</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Copeland</Value>
+            <Count>13</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Camden</Value>
+            <Count>20</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Staffordshire</Value>
+            <Count>21</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Falkirk</Value>
+            <Count>22</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Dacorum</Value>
+            <Count>6</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Norfolk</Value>
+            <Count>31</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Huntingdonshire</Value>
+            <Count>6</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Bury</Value>
+            <Count>6</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Harlow</Value>
+            <Count>5</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Runnymede</Value>
+            <Count>4</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Oldham</Value>
+            <Count>8</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Sunderland</Value>
+            <Count>12</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Waverley</Value>
+            <Count>7</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Bath and North East Somerset</Value>
+            <Count>6</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Bristol</Value>
+            <Count>25</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Uttlesford</Value>
+            <Count>4</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Newark and Sherwood</Value>
+            <Count>5</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Redbridge</Value>
+            <Count>8</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>North Ayrshire</Value>
+            <Count>15</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Down</Value>
+            <Count>4</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Berkshire</Value>
+            <Count>12</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>East Hampshire</Value>
+            <Count>6</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>North Lanarkshire</Value>
+            <Count>10</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Lewes</Value>
+            <Count>5</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Kingston upon Hull</Value>
+            <Count>9</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Westminster</Value>
+            <Count>26</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Tunbridge Wells</Value>
+            <Count>4</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Tameside</Value>
+            <Count>8</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Dungannon and South Tyrone</Value>
+            <Count>6</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Hart</Value>
+            <Count>4</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Sussex</Value>
+            <Count>5</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Hertsmere</Value>
+            <Count>4</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Northampton</Value>
+            <Count>5</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Wandsworth</Value>
+            <Count>5</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Solihull</Value>
+            <Count>8</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>City of London</Value>
+            <Count>16</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Leicester</Value>
+            <Count>23</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Wigan</Value>
+            <Count>10</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Chiltern</Value>
+            <Count>4</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Carmarthenshire</Value>
+            <Count>15</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>York</Value>
+            <Count>20</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>East Lindsey</Value>
+            <Count>4</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Bracknell Forest</Value>
+            <Count>5</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Havering</Value>
+            <Count>10</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Middlesbrough</Value>
+            <Count>7</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Bolton</Value>
+            <Count>9</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Coleraine</Value>
+            <Count>4</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Fenland</Value>
+            <Count>4</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>North Dorset</Value>
+            <Count>4</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>South Somerset</Value>
+            <Count>8</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Lancaster</Value>
+            <Count>7</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Perth and Kinross</Value>
+            <Count>18</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Plymouth</Value>
+            <Count>9</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Central Bedfordshire</Value>
+            <Count>8</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Richmond upon Thames</Value>
+            <Count>8</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Southend-on-Sea</Value>
+            <Count>6</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Wakefield</Value>
+            <Count>11</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Torbay</Value>
+            <Count>5</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>High Peak</Value>
+            <Count>4</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Ashford</Value>
+            <Count>7</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Caerphilly</Value>
+            <Count>5</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Blackpool</Value>
+            <Count>5</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Sutton</Value>
+            <Count>6</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Eastleigh</Value>
+            <Count>5</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Vale of Glamorgan</Value>
+            <Count>5</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Bridgend</Value>
+            <Count>6</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Conwy</Value>
+            <Count>14</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Harrogate</Value>
+            <Count>4</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Manchester</Value>
+            <Count>24</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Warrington</Value>
+            <Count>6</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Tower Hamlets</Value>
+            <Count>8</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Neath Port Talbot</Value>
+            <Count>6</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Rochford</Value>
+            <Count>4</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Comhairle nan Eilean Siar</Value>
+            <Count>17</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Cheshire West and Chester</Value>
+            <Count>15</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Barking and Dagenham</Value>
+            <Count>5</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Edinburgh</Value>
+            <Count>24</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Aylesbury Vale</Value>
+            <Count>8</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>St Edmundsbury</Value>
+            <Count>6</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Fife</Value>
+            <Count>17</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>North Lincolnshire</Value>
+            <Count>9</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Glasgow</Value>
+            <Count>35</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Hampshire</Value>
+            <Count>27</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>South Lakeland</Value>
+            <Count>10</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Cambridge</Value>
+            <Count>10</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Suffolk</Value>
+            <Count>4</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Exeter</Value>
+            <Count>27</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>New Forest</Value>
+            <Count>8</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Somerset</Value>
+            <Count>27</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Dartford</Value>
+            <Count>6</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Rother</Value>
+            <Count>9</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Stratford-on-Avon</Value>
+            <Count>7</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Liverpool</Value>
+            <Count>52</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Midlothian</Value>
+            <Count>10</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>West Norfolk</Value>
+            <Count>9</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Croydon</Value>
+            <Count>12</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>South Ayrshire</Value>
+            <Count>6</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Craigavon</Value>
+            <Count>6</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Teignbridge</Value>
+            <Count>5</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Pendle</Value>
+            <Count>4</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Wyre Forest</Value>
+            <Count>4</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Isle of Man</Value>
+            <Count>9</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Argyllshire</Value>
+            <Count>46</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Newtownabbey</Value>
+            <Count>4</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Wrexham</Value>
+            <Count>4</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>East Riding of Yorkshire</Value>
+            <Count>17</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Guildford</Value>
+            <Count>8</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>West Dorset</Value>
+            <Count>6</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>South Kesteven</Value>
+            <Count>6</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Belfast</Value>
+            <Count>18</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Harrow</Value>
+            <Count>7</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Watford</Value>
+            <Count>8</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Shropshire</Value>
+            <Count>20</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>South Tyneside</Value>
+            <Count>6</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Stockton-on-Tees</Value>
+            <Count>9</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Pembrokeshire</Value>
+            <Count>17</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Hounslow</Value>
+            <Count>8</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Carlisle</Value>
+            <Count>8</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Telford and Wrekin</Value>
+            <Count>9</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Cornwall</Value>
+            <Count>46</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Epping Forest</Value>
+            <Count>6</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Scottish Borders</Value>
+            <Count>17</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Aberdeenshire</Value>
+            <Count>17</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Surrey Heath</Value>
+            <Count>5</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Reigate and Banstead</Value>
+            <Count>4</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>West Oxfordshire</Value>
+            <Count>5</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>North Somerset</Value>
+            <Count>8</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Fermanagh</Value>
+            <Count>5</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Southampton</Value>
+            <Count>14</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Worcester</Value>
+            <Count>11</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Kirklees</Value>
+            <Count>16</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Coventry</Value>
+            <Count>7</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Allerdale</Value>
+            <Count>6</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Basildon</Value>
+            <Count>8</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>South Gloucestershire</Value>
+            <Count>6</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Tonbridge and Malling</Value>
+            <Count>5</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Chelmsford</Value>
+            <Count>5</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Lewisham</Value>
+            <Count>8</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Spelthorne</Value>
+            <Count>5</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Cheshire East</Value>
+            <Count>14</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Llandrindod Wells</Value>
+            <Count>8</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Flintshire</Value>
+            <Count>5</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Mid Suffolk</Value>
+            <Count>4</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Luton</Value>
+            <Count>4</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Sheffield</Value>
+            <Count>25</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Gloucester</Value>
+            <Count>13</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Hastings</Value>
+            <Count>4</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Newham</Value>
+            <Count>7</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Cherwell</Value>
+            <Count>7</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Swansea</Value>
+            <Count>9</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>North Hertfordshire</Value>
+            <Count>6</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Aberdeen</Value>
+            <Count>19</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Warwick</Value>
+            <Count>6</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Ipswich</Value>
+            <Count>6</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Renfrewshire</Value>
+            <Count>19</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Crawley</Value>
+            <Count>4</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>East Lothian</Value>
+            <Count>12</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Lincoln</Value>
+            <Count>9</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Eden</Value>
+            <Count>5</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Medway</Value>
+            <Count>7</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Cardiff</Value>
+            <Count>19</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>North East Lincolnshire</Value>
+            <Count>8</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Maidstone</Value>
+            <Count>7</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Moray</Value>
+            <Count>8</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Brentwood</Value>
+            <Count>4</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Hackney</Value>
+            <Count>7</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Nottingham</Value>
+            <Count>9</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Rotherham</Value>
+            <Count>9</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Mendip</Value>
+            <Count>5</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Swale</Value>
+            <Count>5</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Isle of Wight</Value>
+            <Count>12</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Dundee</Value>
+            <Count>5</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Wealden</Value>
+            <Count>8</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Stroud</Value>
+            <Count>5</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Suffolk Coastal</Value>
+            <Count>8</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Preston</Value>
+            <Count>4</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Thurrock</Value>
+            <Count>7</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Chesterfield</Value>
+            <Count>5</Count>
+          </ValueDistributionItem>
+        </ValueDistribution>
       </ColumnValueDistributionProfile>
       <ColumnValueDistributionProfile IsExact="true" ProfileRequestID="ValueDistReq">
         <DataSourceID>{68B744B6-BFA4-417D-AA11-2C26D08D51D7}</DataSourceID>
-        <Table DataSource="." Database="Stage_DATH" Schema="dbo" Table="Postcode_district" RowCount="6228" />
+        <Table DataSource="." Database="Stage_DATH" Schema="dbo" Table="Postcode_district" RowCount="3114" />
         <Column Name="Region" SqlDbType="VarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
         <NumberOfDistinctValues>12</NumberOfDistinctValues>
         <ValueDistribution>
           <ValueDistributionItem>
             <Value>London</Value>
-            <Count>598</Count>
+            <Count>299</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
             <Value>East of England</Value>
-            <Count>508</Count>
+            <Count>254</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
             <Value>South East</Value>
-            <Count>804</Count>
+            <Count>402</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
             <Value>West Midlands</Value>
-            <Count>456</Count>
+            <Count>228</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
             <Value>North West</Value>
-            <Count>636</Count>
+            <Count>318</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
             <Value>North East</Value>
-            <Count>264</Count>
+            <Count>132</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
             <Value>East Midlands</Value>
-            <Count>298</Count>
+            <Count>149</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
             <Value>Northern Ireland</Value>
-            <Count>164</Count>
+            <Count>82</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
             <Value>Yorkshire and The Humber</Value>
-            <Count>468</Count>
+            <Count>234</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
             <Value>Scotland</Value>
-            <Count>954</Count>
+            <Count>477</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
             <Value>South West</Value>
-            <Count>580</Count>
+            <Count>290</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
             <Value>Wales</Value>
-            <Count>428</Count>
+            <Count>214</Count>
           </ValueDistributionItem>
         </ValueDistribution>
       </ColumnValueDistributionProfile>
-      <ColumnPatternProfile ProfileRequestID="PatternReq" IsExact="false">
+      <ColumnPatternProfile ProfileRequestID="PatternReq" IsExact="true">
         <DataSourceID>{68B744B6-BFA4-417D-AA11-2C26D08D51D7}</DataSourceID>
-        <Table DataSource="." Database="Stage_DATH" Schema="dbo" Table="Postcode_district" RowCount="6228" />
+        <Table DataSource="." Database="Stage_DATH" Schema="dbo" Table="Postcode_district" RowCount="3114" />
         <Column Name="Postcode" SqlDbType="VarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
         <TopRegexPatterns>
           <PatternDistributionItem>
@@ -289,17 +1515,36 @@
           </PatternDistributionItem>
           <PatternDistributionItem>
             <RegexText>\p{L}+\d</RegexText>
-            <Frequency>33</Frequency>
+            <Frequency>34</Frequency>
           </PatternDistributionItem>
           <PatternDistributionItem>
             <RegexText>\p{L}\d\d</RegexText>
-            <Frequency>10</Frequency>
+            <Frequency>9</Frequency>
           </PatternDistributionItem>
         </TopRegexPatterns>
       </ColumnPatternProfile>
-      <ColumnPatternProfile ProfileRequestID="PatternReq" IsExact="false">
+      <ColumnPatternProfile ProfileRequestID="PatternReq" IsExact="true">
         <DataSourceID>{68B744B6-BFA4-417D-AA11-2C26D08D51D7}</DataSourceID>
-        <Table DataSource="." Database="Stage_DATH" Schema="dbo" Table="Postcode_district" RowCount="6228" />
+        <Table DataSource="." Database="Stage_DATH" Schema="dbo" Table="Postcode_district" RowCount="3114" />
+        <Column Name="Town" SqlDbType="VarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <TopRegexPatterns>
+          <PatternDistributionItem>
+            <RegexText>\p{L}+</RegexText>
+            <Frequency>75</Frequency>
+          </PatternDistributionItem>
+          <PatternDistributionItem>
+            <RegexText>\p{L}+ \p{L}+</RegexText>
+            <Frequency>16</Frequency>
+          </PatternDistributionItem>
+          <PatternDistributionItem>
+            <RegexText>\p{L}+ \p{L}+ \p{L}+</RegexText>
+            <Frequency>6</Frequency>
+          </PatternDistributionItem>
+        </TopRegexPatterns>
+      </ColumnPatternProfile>
+      <ColumnPatternProfile ProfileRequestID="PatternReq" IsExact="true">
+        <DataSourceID>{68B744B6-BFA4-417D-AA11-2C26D08D51D7}</DataSourceID>
+        <Table DataSource="." Database="Stage_DATH" Schema="dbo" Table="Postcode_district" RowCount="3114" />
         <Column Name="Region" SqlDbType="VarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
         <TopRegexPatterns>
           <PatternDistributionItem>
@@ -307,8 +1552,12 @@
             <Frequency>15</Frequency>
           </PatternDistributionItem>
           <PatternDistributionItem>
-            <RegexText>SOUTH \p{L}+</RegexText>
-            <Frequency>23</Frequency>
+            <RegexText>SOUTH EAST</RegexText>
+            <Frequency>13</Frequency>
+          </PatternDistributionItem>
+          <PatternDistributionItem>
+            <RegexText>\p{L}+ MIDLANDS</RegexText>
+            <Frequency>12</Frequency>
           </PatternDistributionItem>
           <PatternDistributionItem>
             <RegexText>YORKSHIRE AND THE HUMBER</RegexText>
@@ -319,16 +1568,16 @@
             <Frequency>10</Frequency>
           </PatternDistributionItem>
           <PatternDistributionItem>
-            <RegexText>\p{L}+ MIDLANDS</RegexText>
-            <Frequency>12</Frequency>
-          </PatternDistributionItem>
-          <PatternDistributionItem>
             <RegexText>EAST OF ENGLAND</RegexText>
             <Frequency>8</Frequency>
           </PatternDistributionItem>
           <PatternDistributionItem>
-            <RegexText>LONDON</RegexText>
+            <RegexText>SOUTH WEST</RegexText>
             <Frequency>9</Frequency>
+          </PatternDistributionItem>
+          <PatternDistributionItem>
+            <RegexText>LONDON</RegexText>
+            <Frequency>10</Frequency>
           </PatternDistributionItem>
           <PatternDistributionItem>
             <RegexText>WALES</RegexText>
