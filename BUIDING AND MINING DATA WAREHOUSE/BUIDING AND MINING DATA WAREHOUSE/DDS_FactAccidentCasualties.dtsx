@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="8"
-  DTS:VersionGUID="{98DD838B-6EF4-4E18-9371-E4D73C3B280A}">
+  DTS:VersionBuild="10"
+  DTS:VersionGUID="{9F823D96-6A91-40DF-9729-50197368F9AF}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables>
@@ -23,7 +23,7 @@
       DTS:Namespace="User"
       DTS:ObjectName="CETResult">
       <DTS:VariableValue
-        DTS:DataType="7">1/4/2022 9:00:31 PM</DTS:VariableValue>
+        DTS:DataType="7">1/1/2000</DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
@@ -41,7 +41,7 @@
       DTS:Namespace="User"
       DTS:ObjectName="LSETResult">
       <DTS:VariableValue
-        DTS:DataType="7">1/4/2022 9:00:45 PM</DTS:VariableValue>
+        DTS:DataType="7">1/1/2000</DTS:VariableValue>
     </DTS:Variable>
   </DTS:Variables>
   <DTS:Executables>
@@ -329,183 +329,6 @@ WHERE ((Create_time &gt;= ?) AND (Create_time &lt;= ?)) OR
                       refId="Package\Data Flow Task\Casualties.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
                       dataType="i4"
                       lineageId="Package\Data Flow Task\Casualties.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
-                      name="ErrorColumn"
-                      specialFlags="2" />
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-              </outputs>
-            </component>
-            <component
-              refId="Package\Data Flow Task\Insert Destination"
-              componentClassID="Microsoft.OLEDBDestination"
-              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
-              description="OLE DB Destination"
-              name="Insert Destination"
-              usesDispositions="true"
-              version="4">
-              <properties>
-                <property
-                  dataType="System.Int32"
-                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
-                  name="CommandTimeout">0</property>
-                <property
-                  dataType="System.String"
-                  description="Specifies the name of the database object used to open a rowset."
-                  name="OpenRowset">[dbo].[FactAccidentCasualties]</property>
-                <property
-                  dataType="System.String"
-                  description="Specifies the variable that contains the name of the database object used to open a rowset."
-                  name="OpenRowsetVariable"></property>
-                <property
-                  dataType="System.String"
-                  description="The SQL command to be executed."
-                  name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies the column code page to use when code page information is unavailable from the data source."
-                  name="DefaultCodePage">1252</property>
-                <property
-                  dataType="System.Boolean"
-                  description="Forces the use of the DefaultCodePage property value when describing character data."
-                  name="AlwaysUseDefaultCodePage">false</property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies the mode used to access the database."
-                  name="AccessMode"
-                  typeConverter="AccessMode">0</property>
-                <property
-                  dataType="System.Boolean"
-                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
-                  name="FastLoadKeepIdentity">false</property>
-                <property
-                  dataType="System.Boolean"
-                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
-                  name="FastLoadKeepNulls">false</property>
-                <property
-                  dataType="System.String"
-                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
-                  name="FastLoadOptions"></property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
-                  name="FastLoadMaxInsertCommitSize">2147483647</property>
-              </properties>
-              <connections>
-                <connection
-                  refId="Package\Data Flow Task\Insert Destination.Connections[OleDbConnection]"
-                  connectionManagerID="{FE586EEE-F8D2-4B75-A592-FFE0324433A8}:external"
-                  connectionManagerRefId="Project.ConnectionManagers[LocalHost.DDS_DATH]"
-                  description="The OLE DB runtime connection used to access the database."
-                  name="OleDbConnection" />
-              </connections>
-              <inputs>
-                <input
-                  refId="Package\Data Flow Task\Insert Destination.Inputs[OLE DB Destination Input]"
-                  errorOrTruncationOperation="Insert"
-                  errorRowDisposition="FailComponent"
-                  hasSideEffects="true"
-                  name="OLE DB Destination Input">
-                  <inputColumns>
-                    <inputColumn
-                      refId="Package\Data Flow Task\Insert Destination.Inputs[OLE DB Destination Input].Columns[Accident_ID]"
-                      cachedDataType="i4"
-                      cachedName="Accident_ID"
-                      externalMetadataColumnId="Package\Data Flow Task\Insert Destination.Inputs[OLE DB Destination Input].ExternalColumns[AccidentKey]"
-                      lineageId="Package\Data Flow Task\Casualties.Outputs[OLE DB Source Output].Columns[Accident_ID]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\Insert Destination.Inputs[OLE DB Destination Input].Columns[Casualties_ID]"
-                      cachedDataType="i4"
-                      cachedName="Casualties_ID"
-                      externalMetadataColumnId="Package\Data Flow Task\Insert Destination.Inputs[OLE DB Destination Input].ExternalColumns[CasualtiesKey]"
-                      lineageId="Package\Data Flow Task\Casualties.Outputs[OLE DB Source Output].Columns[Casualties_ID]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\Insert Destination.Inputs[OLE DB Destination Input].Columns[DateKey]"
-                      cachedDataType="i4"
-                      cachedName="DateKey"
-                      externalMetadataColumnId="Package\Data Flow Task\Insert Destination.Inputs[OLE DB Destination Input].ExternalColumns[DateKey]"
-                      lineageId="Package\Data Flow Task\Lookup Date.Outputs[Lookup Match Output].Columns[DateKey]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\Insert Destination.Inputs[OLE DB Destination Input].Columns[TimeKey]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="5"
-                      cachedName="TimeKey"
-                      externalMetadataColumnId="Package\Data Flow Task\Insert Destination.Inputs[OLE DB Destination Input].ExternalColumns[TimeKey]"
-                      lineageId="Package\Data Flow Task\Lookup Time.Outputs[Lookup Match Output].Columns[TimeKey]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\Insert Destination.Inputs[OLE DB Destination Input].Columns[Sex]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="10"
-                      cachedName="Sex"
-                      externalMetadataColumnId="Package\Data Flow Task\Insert Destination.Inputs[OLE DB Destination Input].ExternalColumns[SexOfCasualties]"
-                      lineageId="Package\Data Flow Task\Casualties.Outputs[OLE DB Source Output].Columns[Sex]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\Insert Destination.Inputs[OLE DB Destination Input].Columns[Age]"
-                      cachedDataType="i4"
-                      cachedName="Age"
-                      externalMetadataColumnId="Package\Data Flow Task\Insert Destination.Inputs[OLE DB Destination Input].ExternalColumns[AgeOfCasualties]"
-                      lineageId="Package\Data Flow Task\Casualties.Outputs[OLE DB Source Output].Columns[Age]" />
-                  </inputColumns>
-                  <externalMetadataColumns
-                    isUsed="True">
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\Insert Destination.Inputs[OLE DB Destination Input].ExternalColumns[AccidentKey]"
-                      dataType="i4"
-                      name="AccidentKey" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\Insert Destination.Inputs[OLE DB Destination Input].ExternalColumns[CasualtiesKey]"
-                      dataType="i4"
-                      name="CasualtiesKey" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\Insert Destination.Inputs[OLE DB Destination Input].ExternalColumns[DateKey]"
-                      dataType="i4"
-                      name="DateKey" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\Insert Destination.Inputs[OLE DB Destination Input].ExternalColumns[TimeKey]"
-                      codePage="1252"
-                      dataType="str"
-                      length="5"
-                      name="TimeKey" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\Insert Destination.Inputs[OLE DB Destination Input].ExternalColumns[SexOfCasualties]"
-                      codePage="1252"
-                      dataType="str"
-                      length="10"
-                      name="SexOfCasualties" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\Insert Destination.Inputs[OLE DB Destination Input].ExternalColumns[AgeOfCasualties]"
-                      dataType="i4"
-                      name="AgeOfCasualties" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\Insert Destination.Inputs[OLE DB Destination Input].ExternalColumns[CasualtiesSeverity]"
-                      codePage="1252"
-                      dataType="str"
-                      length="10"
-                      name="CasualtiesSeverity" />
-                  </externalMetadataColumns>
-                </input>
-              </inputs>
-              <outputs>
-                <output
-                  refId="Package\Data Flow Task\Insert Destination.Outputs[OLE DB Destination Error Output]"
-                  exclusionGroup="1"
-                  isErrorOut="true"
-                  name="OLE DB Destination Error Output"
-                  synchronousInputId="Package\Data Flow Task\Insert Destination.Inputs[OLE DB Destination Input]">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\Data Flow Task\Insert Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
-                      dataType="i4"
-                      lineageId="Package\Data Flow Task\Insert Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
-                      name="ErrorCode"
-                      specialFlags="1" />
-                    <outputColumn
-                      refId="Package\Data Flow Task\Insert Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
-                      dataType="i4"
-                      lineageId="Package\Data Flow Task\Insert Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -893,7 +716,7 @@ where [refTable].[Hour] = ? and [refTable].[Minute] = ?</property>
                   dataType="System.Int32"
                   description="Specifies how the Lookup transformation handles rows without matching entries in the reference data set."
                   name="NoMatchBehavior"
-                  typeConverter="LookupNoMatchBehavior">0</property>
+                  typeConverter="LookupNoMatchBehavior">1</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the percentage of the cache that is allocated for rows with no matching entries in the reference dataset."
@@ -977,7 +800,6 @@ where [refTable].[Hour] = ? and [refTable].[Minute] = ?</property>
                 <output
                   refId="Package\Data Flow Task\Lookup Time.Outputs[Lookup Match Output]"
                   errorOrTruncationOperation="Lookup"
-                  errorRowDisposition="FailComponent"
                   exclusionGroup="1"
                   name="Lookup Match Output"
                   synchronousInputId="Package\Data Flow Task\Lookup Time.Inputs[Lookup Input]">
@@ -1034,172 +856,59 @@ where [refTable].[Hour] = ? and [refTable].[Minute] = ?</property>
               </outputs>
             </component>
             <component
-              refId="Package\Data Flow Task\OLE DB Command"
-              componentClassID="Microsoft.OLEDBCommand"
-              contactInfo="OLE DB Command;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;2"
-              description="Runs an SQL statement for each row in a data flow. For example, call a 'new employee setup' stored procedure for each row in the 'new employees' table. Note: running an SQL statement for each row of a large data flow may take a long time."
-              name="OLE DB Command"
-              usesDispositions="true"
-              version="2">
+              refId="Package\Data Flow Task\Match time"
+              componentClassID="Microsoft.RowCount"
+              contactInfo="Row Count;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Counts rows as they pass through a data flow. For example, use the number of rows processed to determine whether or not to perform cleanup operations, or update text in an e-mail message to communicate processing status."
+              name="Match time">
               <properties>
                 <property
-                  dataType="System.Int32"
-                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
-                  name="CommandTimeout">0</property>
-                <property
                   dataType="System.String"
-                  description="The SQL command to be executed."
-                  expressionType="Notify"
-                  name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">UPDATE [dbo].[FactAccidentCasualties] SET [AgeOfCasualties] = ?,[DateKey] = ?,[SexOfCasualties] = ?,[TimeKey] = ? WHERE [CasualtiesKey] = ?</property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies the column code page to use when code page information is unavailable from the data source."
-                  name="DefaultCodePage">1252</property>
+                  description="Specifies the variable to hold the row count."
+                  name="VariableName">User::EmptyAccidentID</property>
               </properties>
-              <connections>
-                <connection
-                  refId="Package\Data Flow Task\OLE DB Command.Connections[OleDbConnection]"
-                  connectionManagerID="{FE586EEE-F8D2-4B75-A592-FFE0324433A8}:external"
-                  connectionManagerRefId="Project.ConnectionManagers[LocalHost.DDS_DATH]"
-                  description="The OLE DB runtime connection used to access the database."
-                  name="OleDbConnection" />
-              </connections>
               <inputs>
                 <input
-                  refId="Package\Data Flow Task\OLE DB Command.Inputs[OLE DB Command Input]"
-                  errorOrTruncationOperation="Command Execution"
-                  errorRowDisposition="FailComponent"
+                  refId="Package\Data Flow Task\Match time.Inputs[Row Count Input 1]"
                   hasSideEffects="true"
-                  name="OLE DB Command Input">
-                  <inputColumns>
-                    <inputColumn
-                      refId="Package\Data Flow Task\OLE DB Command.Inputs[OLE DB Command Input].Columns[Age]"
-                      cachedDataType="i4"
-                      cachedName="Age"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_0]"
-                      lineageId="Package\Data Flow Task\Casualties.Outputs[OLE DB Source Output].Columns[Age]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\OLE DB Command.Inputs[OLE DB Command Input].Columns[Casualties_ID]"
-                      cachedDataType="i4"
-                      cachedName="Casualties_ID"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_4]"
-                      lineageId="Package\Data Flow Task\Casualties.Outputs[OLE DB Source Output].Columns[Casualties_ID]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\OLE DB Command.Inputs[OLE DB Command Input].Columns[DateKey]"
-                      cachedDataType="i4"
-                      cachedName="DateKey"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_1]"
-                      lineageId="Package\Data Flow Task\Lookup Date.Outputs[Lookup Match Output].Columns[DateKey]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\OLE DB Command.Inputs[OLE DB Command Input].Columns[Sex]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="10"
-                      cachedName="Sex"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_2]"
-                      lineageId="Package\Data Flow Task\Casualties.Outputs[OLE DB Source Output].Columns[Sex]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\OLE DB Command.Inputs[OLE DB Command Input].Columns[TimeKey]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="5"
-                      cachedName="TimeKey"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_3]"
-                      lineageId="Package\Data Flow Task\Lookup Time.Outputs[Lookup Match Output].Columns[TimeKey]" />
-                  </inputColumns>
-                  <externalMetadataColumns
-                    isUsed="True">
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_0]"
-                      dataType="i4"
-                      name="Param_0">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
-                          name="DBParamInfoFlags">81</property>
-                      </properties>
-                    </externalMetadataColumn>
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_1]"
-                      dataType="i4"
-                      name="Param_1">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
-                          name="DBParamInfoFlags">81</property>
-                      </properties>
-                    </externalMetadataColumn>
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_2]"
-                      codePage="1252"
-                      dataType="str"
-                      length="10"
-                      name="Param_2">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
-                          name="DBParamInfoFlags">65</property>
-                      </properties>
-                    </externalMetadataColumn>
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_3]"
-                      codePage="1252"
-                      dataType="str"
-                      length="5"
-                      name="Param_3">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
-                          name="DBParamInfoFlags">65</property>
-                      </properties>
-                    </externalMetadataColumn>
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_4]"
-                      dataType="i4"
-                      name="Param_4">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
-                          name="DBParamInfoFlags">81</property>
-                      </properties>
-                    </externalMetadataColumn>
-                  </externalMetadataColumns>
+                  name="Row Count Input 1">
+                  <externalMetadataColumns />
                 </input>
               </inputs>
               <outputs>
                 <output
-                  refId="Package\Data Flow Task\OLE DB Command.Outputs[OLE DB Command Output]"
-                  exclusionGroup="1"
-                  name="OLE DB Command Output"
-                  synchronousInputId="Package\Data Flow Task\OLE DB Command.Inputs[OLE DB Command Input]">
+                  refId="Package\Data Flow Task\Match time.Outputs[Row Count Output 1]"
+                  name="Row Count Output 1"
+                  synchronousInputId="Package\Data Flow Task\Match time.Inputs[Row Count Input 1]">
                   <externalMetadataColumns />
                 </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task\No match time"
+              componentClassID="Microsoft.RowCount"
+              contactInfo="Row Count;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Counts rows as they pass through a data flow. For example, use the number of rows processed to determine whether or not to perform cleanup operations, or update text in an e-mail message to communicate processing status."
+              name="No match time">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable to hold the row count."
+                  name="VariableName">User::EmptyAccidentID</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task\No match time.Inputs[Row Count Input 1]"
+                  hasSideEffects="true"
+                  name="Row Count Input 1">
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
                 <output
-                  refId="Package\Data Flow Task\OLE DB Command.Outputs[OLE DB Command Error Output]"
-                  exclusionGroup="1"
-                  isErrorOut="true"
-                  name="OLE DB Command Error Output"
-                  synchronousInputId="Package\Data Flow Task\OLE DB Command.Inputs[OLE DB Command Input]">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\Data Flow Task\OLE DB Command.Outputs[OLE DB Command Error Output].Columns[ErrorCode]"
-                      dataType="i4"
-                      lineageId="Package\Data Flow Task\OLE DB Command.Outputs[OLE DB Command Error Output].Columns[ErrorCode]"
-                      name="ErrorCode"
-                      specialFlags="1" />
-                    <outputColumn
-                      refId="Package\Data Flow Task\OLE DB Command.Outputs[OLE DB Command Error Output].Columns[ErrorColumn]"
-                      dataType="i4"
-                      lineageId="Package\Data Flow Task\OLE DB Command.Outputs[OLE DB Command Error Output].Columns[ErrorColumn]"
-                      name="ErrorColumn"
-                      specialFlags="2" />
-                  </outputColumns>
+                  refId="Package\Data Flow Task\No match time.Outputs[Row Count Output 1]"
+                  name="Row Count Output 1"
+                  synchronousInputId="Package\Data Flow Task\No match time.Inputs[Row Count Input 1]">
                   <externalMetadataColumns />
                 </output>
               </outputs>
@@ -1336,240 +1045,8 @@ where [refTable].[Hour] = ? and [refTable].[Minute] = ?</property>
                 </output>
               </outputs>
             </component>
-            <component
-              refId="Package\Data Flow Task\Slowly Changing Dimension"
-              componentClassID="Microsoft.SCD"
-              contactInfo="Slowly Changing Dimension;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;3"
-              description="Updates a SQL Server Analysis Services data warehouse dimension. Update dimension records that are already present and  insert dimension records that aren't. For example, update the DimProduct table of the AdventureWorksDW OLAP database with data from the Products table in the AdventureWorks OLTP database."
-              name="Slowly Changing Dimension"
-              version="3">
-              <properties>
-                <property
-                  dataType="System.String"
-                  description="Specifies the SELECT statement used to create a schema rowset."
-                  name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT [AccidentKey], [AgeOfCasualties], [CasualtiesKey], [DateKey], [SexOfCasualties], [TimeKey] FROM [dbo].[FactAccidentCasualties]</property>
-                <property
-                  dataType="System.String"
-                  description="Specifies the WHERE clause in the SELECT statement that selects the current row among rows with identical business keys."
-                  name="CurrentRowWhere"></property>
-                <property
-                  dataType="System.Boolean"
-                  description="Indicates whether historical attribute updates are directed to the transformation output for changing attribute updates."
-                  name="UpdateChangingAttributeHistory">true</property>
-                <property
-                  dataType="System.Boolean"
-                  description="Indicates whether the transformation fails when columns with fixed attributes contain changes."
-                  name="FailOnFixedAttributeChange">true</property>
-                <property
-                  dataType="System.String"
-                  description="Specifies the column name for the inferred member."
-                  name="InferredMemberIndicator"></property>
-                <property
-                  dataType="System.Boolean"
-                  description="Indicates whether inferred member updates are detected."
-                  name="EnableInferredMember">false</property>
-                <property
-                  dataType="System.Boolean"
-                  description="Indicates whether the transformation fails when a lookup of an existing record fails."
-                  name="FailOnLookupFailure">false</property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies that all rows in the input are new or the transformation detects the change type."
-                  name="IncomingRowChangeType"
-                  typeConverter="IncomingRowChangeType">1</property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies the column code page to use when code page information is unavailable from the data source."
-                  name="DefaultCodePage">1252</property>
-              </properties>
-              <connections>
-                <connection
-                  refId="Package\Data Flow Task\Slowly Changing Dimension.Connections[LookupConnection]"
-                  connectionManagerID="{FE586EEE-F8D2-4B75-A592-FFE0324433A8}:external"
-                  connectionManagerRefId="Project.ConnectionManagers[LocalHost.DDS_DATH]"
-                  description="Defines the connection to use for lookups in the dimension table"
-                  name="LookupConnection" />
-              </connections>
-              <inputs>
-                <input
-                  refId="Package\Data Flow Task\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input]"
-                  name="Slowly Changing Dimension Input">
-                  <inputColumns>
-                    <inputColumn
-                      refId="Package\Data Flow Task\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input].Columns[Accident_ID]"
-                      cachedDataType="i4"
-                      cachedName="Accident_ID"
-                      externalMetadataColumnId="Package\Data Flow Task\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input].ExternalColumns[AccidentKey]"
-                      lineageId="Package\Data Flow Task\Casualties.Outputs[OLE DB Source Output].Columns[Accident_ID]">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          name="ColumnType"
-                          typeConverter="ColumnType">4</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\Data Flow Task\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input].Columns[Age]"
-                      cachedDataType="i4"
-                      cachedName="Age"
-                      externalMetadataColumnId="Package\Data Flow Task\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input].ExternalColumns[AgeOfCasualties]"
-                      lineageId="Package\Data Flow Task\Casualties.Outputs[OLE DB Source Output].Columns[Age]">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          name="ColumnType"
-                          typeConverter="ColumnType">2</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\Data Flow Task\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input].Columns[Casualties_ID]"
-                      cachedDataType="i4"
-                      cachedName="Casualties_ID"
-                      externalMetadataColumnId="Package\Data Flow Task\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input].ExternalColumns[CasualtiesKey]"
-                      lineageId="Package\Data Flow Task\Casualties.Outputs[OLE DB Source Output].Columns[Casualties_ID]">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          name="ColumnType"
-                          typeConverter="ColumnType">1</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\Data Flow Task\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input].Columns[DateKey]"
-                      cachedDataType="i4"
-                      cachedName="DateKey"
-                      externalMetadataColumnId="Package\Data Flow Task\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input].ExternalColumns[DateKey]"
-                      lineageId="Package\Data Flow Task\Lookup Date.Outputs[Lookup Match Output].Columns[DateKey]">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          name="ColumnType"
-                          typeConverter="ColumnType">2</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\Data Flow Task\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input].Columns[Sex]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="10"
-                      cachedName="Sex"
-                      externalMetadataColumnId="Package\Data Flow Task\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input].ExternalColumns[SexOfCasualties]"
-                      lineageId="Package\Data Flow Task\Casualties.Outputs[OLE DB Source Output].Columns[Sex]">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          name="ColumnType"
-                          typeConverter="ColumnType">2</property>
-                      </properties>
-                    </inputColumn>
-                    <inputColumn
-                      refId="Package\Data Flow Task\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input].Columns[TimeKey]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="5"
-                      cachedName="TimeKey"
-                      externalMetadataColumnId="Package\Data Flow Task\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input].ExternalColumns[TimeKey]"
-                      lineageId="Package\Data Flow Task\Lookup Time.Outputs[Lookup Match Output].Columns[TimeKey]">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          name="ColumnType"
-                          typeConverter="ColumnType">2</property>
-                      </properties>
-                    </inputColumn>
-                  </inputColumns>
-                  <externalMetadataColumns
-                    isUsed="True">
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input].ExternalColumns[AccidentKey]"
-                      dataType="i4"
-                      name="AccidentKey" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input].ExternalColumns[AgeOfCasualties]"
-                      dataType="i4"
-                      name="AgeOfCasualties" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input].ExternalColumns[CasualtiesKey]"
-                      dataType="i4"
-                      name="CasualtiesKey" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input].ExternalColumns[DateKey]"
-                      dataType="i4"
-                      name="DateKey" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input].ExternalColumns[SexOfCasualties]"
-                      codePage="1252"
-                      dataType="str"
-                      length="10"
-                      name="SexOfCasualties" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input].ExternalColumns[TimeKey]"
-                      codePage="1252"
-                      dataType="str"
-                      length="5"
-                      name="TimeKey" />
-                  </externalMetadataColumns>
-                </input>
-              </inputs>
-              <outputs>
-                <output
-                  refId="Package\Data Flow Task\Slowly Changing Dimension.Outputs[Unchanged Output]"
-                  description="Unchanged rows"
-                  exclusionGroup="1"
-                  name="Unchanged Output"
-                  synchronousInputId="Package\Data Flow Task\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input]">
-                  <externalMetadataColumns />
-                </output>
-                <output
-                  refId="Package\Data Flow Task\Slowly Changing Dimension.Outputs[New Output]"
-                  description="New rows"
-                  exclusionGroup="1"
-                  name="New Output"
-                  synchronousInputId="Package\Data Flow Task\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input]">
-                  <externalMetadataColumns />
-                </output>
-                <output
-                  refId="Package\Data Flow Task\Slowly Changing Dimension.Outputs[Fixed Attribute Output]"
-                  description="Rows with changes in columns tagged FixedAttribute"
-                  exclusionGroup="1"
-                  name="Fixed Attribute Output"
-                  synchronousInputId="Package\Data Flow Task\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input]">
-                  <externalMetadataColumns />
-                </output>
-                <output
-                  refId="Package\Data Flow Task\Slowly Changing Dimension.Outputs[Changing Attribute Updates Output]"
-                  description="These rows contain new information for ChangingAttribute (Type 1) column changes"
-                  exclusionGroup="1"
-                  name="Changing Attribute Updates Output"
-                  synchronousInputId="Package\Data Flow Task\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input]">
-                  <externalMetadataColumns />
-                </output>
-                <output
-                  refId="Package\Data Flow Task\Slowly Changing Dimension.Outputs[Historical Attribute Inserts Output]"
-                  description="HistoricalAttribute (Type 2) changes result in these new rows"
-                  exclusionGroup="2"
-                  name="Historical Attribute Inserts Output"
-                  synchronousInputId="Package\Data Flow Task\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input]">
-                  <externalMetadataColumns />
-                </output>
-                <output
-                  refId="Package\Data Flow Task\Slowly Changing Dimension.Outputs[Inferred Member Updates Output]"
-                  description="Information to update unpopulated initial dimension row"
-                  exclusionGroup="1"
-                  name="Inferred Member Updates Output"
-                  synchronousInputId="Package\Data Flow Task\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input]">
-                  <externalMetadataColumns />
-                </output>
-              </outputs>
-            </component>
           </components>
           <paths>
-            <path
-              refId="Package\Data Flow Task.Paths[Changing Attribute Updates Output]"
-              endId="Package\Data Flow Task\OLE DB Command.Inputs[OLE DB Command Input]"
-              name="Changing Attribute Updates Output"
-              startId="Package\Data Flow Task\Slowly Changing Dimension.Outputs[Changing Attribute Updates Output]" />
             <path
               refId="Package\Data Flow Task.Paths[Derived Column Output]"
               endId="Package\Data Flow Task\Lookup Date.Inputs[Lookup Input]"
@@ -1587,7 +1064,7 @@ where [refTable].[Hour] = ? and [refTable].[Minute] = ?</property>
               startId="Package\Data Flow Task\Lookup Date, time, Severity.Outputs[Lookup Match Output]" />
             <path
               refId="Package\Data Flow Task.Paths[Lookup Match Output2]"
-              endId="Package\Data Flow Task\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input]"
+              endId="Package\Data Flow Task\Match time.Inputs[Row Count Input 1]"
               name="Lookup Match Output"
               startId="Package\Data Flow Task\Lookup Time.Outputs[Lookup Match Output]" />
             <path
@@ -1596,10 +1073,10 @@ where [refTable].[Hour] = ? and [refTable].[Minute] = ?</property>
               name="Lookup No Match Output"
               startId="Package\Data Flow Task\Lookup Date, time, Severity.Outputs[Lookup No Match Output]" />
             <path
-              refId="Package\Data Flow Task.Paths[New Output]"
-              endId="Package\Data Flow Task\Insert Destination.Inputs[OLE DB Destination Input]"
-              name="New Output"
-              startId="Package\Data Flow Task\Slowly Changing Dimension.Outputs[New Output]" />
+              refId="Package\Data Flow Task.Paths[Lookup No Match Output1]"
+              endId="Package\Data Flow Task\No match time.Inputs[Row Count Input 1]"
+              name="Lookup No Match Output"
+              startId="Package\Data Flow Task\Lookup Time.Outputs[Lookup No Match Output]" />
             <path
               refId="Package\Data Flow Task.Paths[OLE DB Source Output]"
               endId="Package\Data Flow Task\Lookup Date, time, Severity.Inputs[Lookup Input]"
@@ -1683,6 +1160,10 @@ where [refTable].[Hour] = ? and [refTable].[Minute] = ?</property>
       <GraphLayout
         Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
+          Size="151,42"
+          Id="Package\Data Flow Task"
+          TopLeft="437,135" />
+        <NodeLayout
           Size="147,42"
           Id="Package\Get LSET_CET"
           TopLeft="226,133" />
@@ -1690,10 +1171,6 @@ where [refTable].[Hour] = ? and [refTable].[Minute] = ?</property>
           Size="140,43"
           Id="Package\Update LSET"
           TopLeft="439.749996814877,224.949998337925" />
-        <NodeLayout
-          Size="151,42"
-          Id="Package\Data Flow Task"
-          TopLeft="437,135" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
           TopLeft="511.124998407439,177">
@@ -1745,7 +1222,23 @@ where [refTable].[Hour] = ? and [refTable].[Minute] = ?</property>
     design-time-name="Package\Data Flow Task">
     <LayoutInfo>
       <GraphLayout
-        Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="146,42"
+          Id="Package\Data Flow Task\Reformat time"
+          TopLeft="239,209.5" />
+        <NodeLayout
+          Size="140,42"
+          Id="Package\Data Flow Task\Lookup Time"
+          TopLeft="242,413.5" />
+        <NodeLayout
+          Size="130,42"
+          Id="Package\Data Flow Task\Row Count"
+          TopLeft="446,209.5" />
+        <NodeLayout
+          Size="138,42"
+          Id="Package\Data Flow Task\Lookup Date"
+          TopLeft="243,311.5" />
         <NodeLayout
           Size="126,42"
           Id="Package\Data Flow Task\Casualties"
@@ -1776,106 +1269,6 @@ where [refTable].[Hour] = ? and [refTable].[Minute] = ?</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="138,42"
-          Id="Package\Data Flow Task\Lookup Date"
-          TopLeft="243,311.5" />
-        <NodeLayout
-          Size="140,42"
-          Id="Package\Data Flow Task\Lookup Time"
-          TopLeft="242,413.5" />
-        <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Lookup Match Output]"
-          TopLeft="312,353.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,60"
-              Start="0,0"
-              End="0,52.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,52.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-48.19138671875,20.4453125,96.3827734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="146,42"
-          Id="Package\Data Flow Task\Reformat time"
-          TopLeft="239,209.5" />
-        <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Lookup Match Output1]"
-          TopLeft="477.333333333333,149.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-165.333333333333,60"
-              Start="0,0"
-              End="-165.333333333333,52.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,20.2722117202268" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,20.2722117202268"
-                    Point2="0,24.2722117202268"
-                    Point3="-4,24.2722117202268" />
-                  <mssgle:LineSegment
-                    End="-161.333333333333,24.2722117202268" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-161.333333333333,24.2722117202268"
-                    Point2="-165.333333333333,24.2722117202268"
-                    Point3="-165.333333333333,28.2722117202268" />
-                  <mssgle:LineSegment
-                    End="-165.333333333333,52.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-130.858053385417,29.2722117202268,96.3827734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Derived Column Output]"
-          TopLeft="312,251.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,60"
-              Start="0,0"
-              End="0,52.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,52.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-8,18.25,16,16"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="130,42"
-          Id="Package\Data Flow Task\Row Count"
-          TopLeft="446,209.5" />
         <EdgeLayout
           Id="Package\Data Flow Task.Paths[Lookup No Match Output]"
           TopLeft="544.666666666667,149.5">
@@ -1912,13 +1305,45 @@ where [refTable].[Hour] = ? and [refTable].[Minute] = ?</property>
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="209,42"
-          Id="Package\Data Flow Task\Slowly Changing Dimension"
-          TopLeft="207.5,515.5" />
         <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Lookup Match Output2]"
-          TopLeft="312,455.5">
+          Id="Package\Data Flow Task.Paths[Lookup Match Output1]"
+          TopLeft="477.333333333333,149.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-165.333333333333,60"
+              Start="0,0"
+              End="-165.333333333333,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,20.2722117202268" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,20.2722117202268"
+                    Point2="0,24.2722117202268"
+                    Point3="-4,24.2722117202268" />
+                  <mssgle:LineSegment
+                    End="-161.333333333333,24.2722117202268" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-161.333333333333,24.2722117202268"
+                    Point2="-165.333333333333,24.2722117202268"
+                    Point3="-165.333333333333,28.2722117202268" />
+                  <mssgle:LineSegment
+                    End="-165.333333333333,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-130.858053385416,29.2722117202268,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Lookup Match Output]"
+          TopLeft="312,353.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -1940,89 +1365,135 @@ where [refTable].[Hour] = ? and [refTable].[Minute] = ?</property>
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="163,42"
-          Id="Package\Data Flow Task\Insert Destination"
-          TopLeft="5.50000000000011,617.5" />
         <EdgeLayout
-          Id="Package\Data Flow Task.Paths[New Output]"
-          TopLeft="278.5,557.5">
+          Id="Package\Data Flow Task.Paths[Derived Column Output]"
+          TopLeft="312,251.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-191.5,60"
+              EndConnector="0,60"
               Start="0,0"
-              End="-191.5,52.5">
+              End="0,52.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,20.2735042735043" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,20.2735042735043"
-                    Point2="0,24.2735042735043"
-                    Point3="-4,24.2735042735043" />
-                  <mssgle:LineSegment
-                    End="-187.5,24.2735042735043" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-187.5,24.2735042735043"
-                    Point2="-191.5,24.2735042735043"
-                    Point3="-191.5,28.2735042735043" />
-                  <mssgle:LineSegment
-                    End="-191.5,52.5" />
+                    End="0,52.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-122.84138671875,29.2735042735043,54.1827734375,11.43359375"
+              BoundingBox="-8,18.25,16,16"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <NodeLayout
-          Size="166,42"
-          Id="Package\Data Flow Task\OLE DB Command"
-          TopLeft="229,617.5" />
+          Size="131,42"
+          Id="Package\Data Flow Task\Match time"
+          TopLeft="506,410" />
         <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Changing Attribute Updates Output]"
-          TopLeft="345.5,557.5">
+          Id="Package\Data Flow Task.Paths[Lookup Match Output2]"
+          TopLeft="382,432.75">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-33.5,60"
+              EndConnector="124,0"
               Start="0,0"
-              End="-33.5,52.5">
+              End="116.5,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,20.2735042735043" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,20.2735042735043"
-                    Point2="0,24.2735042735043"
-                    Point3="-4,24.2735042735043" />
-                  <mssgle:LineSegment
-                    End="-29.5,24.2735042735043" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-29.5,24.2735042735043"
-                    Point2="-33.5,24.2735042735043"
-                    Point3="-33.5,28.2735042735043" />
-                  <mssgle:LineSegment
-                    End="-33.5,52.5" />
+                    End="116.5,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-95.28390625,29.2735042735043,157.0678125,11.6630859375"
+              BoundingBox="10.05861328125,5,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="148,42"
+          Id="Package\Data Flow Task\No match time"
+          TopLeft="237,516" />
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Lookup No Match Output1]"
+          TopLeft="311.5,455.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60.5"
+              Start="0,0"
+              End="0,53">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,53" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-55.80638671875,20.6953125,111.6127734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task\Lookup Time">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:boolean">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[DimTime]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task\Lookup Date">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[DimDate]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
   <PipelineComponentMetadata
     design-time-name="Package\Data Flow Task\Casualties">
     <Properties>
@@ -2042,7 +1513,7 @@ where [refTable].[Hour] = ? and [refTable].[Minute] = ?</property>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:boolean">false</Value>
+          type="q2:string">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -2052,123 +1523,10 @@ where [refTable].[Hour] = ? and [refTable].[Minute] = ?</property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:int">0</Value>
+          type="q4:string">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task\Lookup Date">
-    <Properties>
-      <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:boolean">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string">[dbo].[DimDate]</Value>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q4:int">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task\Lookup Time">
-    <Properties>
-      <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:boolean">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string">[dbo].[DimTime]</Value>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q4:int">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task\Slowly Changing Dimension">
-    <Properties>
-      <Property>
-        <Name>SCDMetadata</Name>
-        <Value
-          type="q2:string">&lt;?xml version="1.0" encoding="utf-16"?&gt;
-&lt;SCDWizardMetadata xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
-  &lt;ConnectionID&gt;{FE586EEE-F8D2-4B75-A592-FFE0324433A8}&lt;/ConnectionID&gt;
-  &lt;TableName&gt;[dbo].[FactAccidentCasualties]&lt;/TableName&gt;
-  &lt;InputToColumnsCollection&gt;
-    &lt;InputColumnToDBColumn&gt;
-      &lt;IdentificationString&gt;Casualties.Outputs[OLE DB Source Output].Columns[Accident_ID]&lt;/IdentificationString&gt;
-      &lt;ColumnName&gt;AccidentKey&lt;/ColumnName&gt;
-      &lt;KeyType&gt;None&lt;/KeyType&gt;
-      &lt;ChangeType&gt;FixedAttribute&lt;/ChangeType&gt;
-    &lt;/InputColumnToDBColumn&gt;
-    &lt;InputColumnToDBColumn&gt;
-      &lt;IdentificationString&gt;Casualties.Outputs[OLE DB Source Output].Columns[Age]&lt;/IdentificationString&gt;
-      &lt;ColumnName&gt;AgeOfCasualties&lt;/ColumnName&gt;
-      &lt;KeyType&gt;None&lt;/KeyType&gt;
-      &lt;ChangeType&gt;ChangingAttribute&lt;/ChangeType&gt;
-    &lt;/InputColumnToDBColumn&gt;
-    &lt;InputColumnToDBColumn&gt;
-      &lt;IdentificationString&gt;Casualties.Outputs[OLE DB Source Output].Columns[Casualties_ID]&lt;/IdentificationString&gt;
-      &lt;ColumnName&gt;CasualtiesKey&lt;/ColumnName&gt;
-      &lt;KeyType&gt;BusinessKey&lt;/KeyType&gt;
-      &lt;ChangeType&gt;None&lt;/ChangeType&gt;
-    &lt;/InputColumnToDBColumn&gt;
-    &lt;InputColumnToDBColumn&gt;
-      &lt;IdentificationString&gt;Lookup Date.Outputs[Lookup Match Output].Columns[DateKey]&lt;/IdentificationString&gt;
-      &lt;ColumnName&gt;DateKey&lt;/ColumnName&gt;
-      &lt;KeyType&gt;None&lt;/KeyType&gt;
-      &lt;ChangeType&gt;ChangingAttribute&lt;/ChangeType&gt;
-    &lt;/InputColumnToDBColumn&gt;
-    &lt;InputColumnToDBColumn&gt;
-      &lt;IdentificationString&gt;Casualties.Outputs[OLE DB Source Output].Columns[Sex]&lt;/IdentificationString&gt;
-      &lt;ColumnName&gt;SexOfCasualties&lt;/ColumnName&gt;
-      &lt;KeyType&gt;None&lt;/KeyType&gt;
-      &lt;ChangeType&gt;ChangingAttribute&lt;/ChangeType&gt;
-    &lt;/InputColumnToDBColumn&gt;
-    &lt;InputColumnToDBColumn&gt;
-      &lt;IdentificationString&gt;Lookup Time.Outputs[Lookup Match Output].Columns[TimeKey]&lt;/IdentificationString&gt;
-      &lt;ColumnName&gt;TimeKey&lt;/ColumnName&gt;
-      &lt;KeyType&gt;None&lt;/KeyType&gt;
-      &lt;ChangeType&gt;ChangingAttribute&lt;/ChangeType&gt;
-    &lt;/InputColumnToDBColumn&gt;
-  &lt;/InputToColumnsCollection&gt;
-  &lt;GeneratedComponentsIdentificationStrings&gt;
-    &lt;anyType xsi:type="xsd:string"&gt;Insert Destination&lt;/anyType&gt;
-    &lt;anyType xsi:type="xsd:string"&gt;OLE DB Command&lt;/anyType&gt;
-  &lt;/GeneratedComponentsIdentificationStrings&gt;
-  &lt;FailFixedAttribute&gt;true&lt;/FailFixedAttribute&gt;
-  &lt;FailChangeAttribute&gt;true&lt;/FailChangeAttribute&gt;
-  &lt;UseStartEndDate&gt;false&lt;/UseStartEndDate&gt;
-  &lt;CurrentIndicatorColumn /&gt;
-  &lt;InferredIndicatorColumn /&gt;
-  &lt;ValueCurrent /&gt;
-  &lt;ValueExpired /&gt;
-  &lt;StartDateColumn /&gt;
-  &lt;EndDateColumn /&gt;
-  &lt;DateVariable /&gt;
-  &lt;EnableInferredSupport&gt;false&lt;/EnableInferredSupport&gt;
-&lt;/SCDWizardMetadata&gt;</Value>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
