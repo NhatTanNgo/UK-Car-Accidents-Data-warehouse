@@ -26,7 +26,7 @@
           <SSIS:Property SSIS:Name="CreatorComputerName">ASUS-DUCHUY</SSIS:Property>
           <SSIS:Property SSIS:Name="Description">
           </SSIS:Property>
-          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAfXtkuD4W3UudaHsMxO48ewAAAAACAAAAAAAQZgAAAAEAACAAAABKPPcbbTP78saQSW+bxSKOR0bcoOd1n8lS49MPO1rcBwAAAAAOgAAAAAIAACAAAAD0AGkiu6hBdGRhU+tcaN02oRLXYdKYKqgv5muYO22T5pAAAADQBpwOpLLWpSffx7OsTHG8I6B8+YGg8wYm0665m/ly1f3YMaUX/CvB8OtLbpAdgr9KF7aYyccqiogG+50dV6OqRflx0MNjEsSYZp2OlyiUa6lxFTkgYLLJzWXeL/WS5XbXNLcTehPsuc7JuIt/p0DbiG3xrth8lOBNXDMQ+J9LxCLwmS3TslndeFi1JJ6Bwh1AAAAAhcEioS6OBedixhYmwdVSnNu2dYqwfWOO5Z9hrVzCWuKabkVhWZR4jAXKuKRtbZAPGakR7y6NZv15Km5fznkhOg==</SSIS:Property>
+          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAfXtkuD4W3UudaHsMxO48ewAAAAACAAAAAAAQZgAAAAEAACAAAAAWdrgMazyC3fBbskmjV2hmpJjqfcM9CnAKBqatfhBC7wAAAAAOgAAAAAIAACAAAAB0VLShRrlJWGZk+ZhDSdswFY+3Q5AEBX50G3QuFWNgyZAAAACOJnflMhxmevHmX+/dBk8/BvCMyPks2UF5zFn1ru4wqTQrogg/7Ps2z/RhHXdA2uwAoZJz+9XYWu/2FiSg7XP65mEU0WbA7hpzTBiUaO+Oa7499d7zogDQJenqoM5GVZ0IY1edyS6Nxd89Q85fr0YFWzKgXnJrmJGEQ3bdhBaAU2b1EGdsWkRDNX8nvu6CfIZAAAAAOtpbH1fvEjaVWJDcf886joogoLnox1pOSDLDIX1lFJi1QKa5/zpRdeohIgBXGE6KadrbTBJSuKWHgXSm7wQ3pA==</SSIS:Property>
           <SSIS:Property SSIS:Name="FormatVersion">1</SSIS:Property>
         </SSIS:Properties>
         <SSIS:Packages>
@@ -53,6 +53,7 @@
           <SSIS:Package SSIS:Name="DDS_DimVehicleType.dtsx" SSIS:EntryPoint="1" />
           <SSIS:Package SSIS:Name="DDS_DimGeo.dtsx" SSIS:EntryPoint="1" />
           <SSIS:Package SSIS:Name="DDS_FactAccidentCasualties.dtsx" SSIS:EntryPoint="1" />
+          <SSIS:Package SSIS:Name="DDS_DimCasualties.dtsx" SSIS:EntryPoint="1" />
         </SSIS:Packages>
         <SSIS:ConnectionManagers>
           <SSIS:ConnectionManager SSIS:Name="LocalHost.Source_DATH.conmgr" />
@@ -1656,7 +1657,7 @@
                 <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                 <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                 <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="Value">C:\Users\khoaf\Documents\Academic\Senior 1st\BI\Về nhà\TH\Đồ án\UK Accidents Data\Casualties1114.csv</SSIS:Property>
+                <SSIS:Property SSIS:Name="Value">C:\Users\WinXs\OneDrive - VNU-HCMUS\Uni\Nam 4 - HKI\BI\Do an\UK-Car-Accidents-Data-warehouse\Dataset\Casualties1114.csv</SSIS:Property>
                 <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
               </SSIS:Properties>
             </SSIS:Parameter>
@@ -1853,7 +1854,7 @@
                 <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                 <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                 <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="Value">C:\Users\khoaf\Documents\Academic\Senior 1st\BI\Về nhà\TH\Đồ án\UK Accidents Data\Accidents1114.csv</SSIS:Property>
+                <SSIS:Property SSIS:Name="Value">C:\Users\WinXs\OneDrive - VNU-HCMUS\Uni\Nam 4 - HKI\BI\Do an\UK-Car-Accidents-Data-warehouse\Dataset\Accidents1114.csv</SSIS:Property>
                 <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
               </SSIS:Properties>
             </SSIS:Parameter>
@@ -2844,10 +2845,10 @@
                 <SSIS:Property SSIS:Name="Name">Package1</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionBuild">49</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">57</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionComments">
                 </SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionGUID">{B42358EC-E1A0-40E4-AED1-5D75854883AE}</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{ECD71B51-FAC3-4776-8F51-B4176873A1A7}</SSIS:Property>
                 <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
                 <SSIS:Property SSIS:Name="Description">
                 </SSIS:Property>
@@ -3494,10 +3495,27 @@
                 <SSIS:Property SSIS:Name="Name">Package1</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionBuild">0</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">10</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionComments">
                 </SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionGUID">{14985D29-663C-4D93-BFC3-1CAC794E192D}</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{9F823D96-6A91-40DF-9729-50197368F9AF}</SSIS:Property>
+                <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
+                <SSIS:Property SSIS:Name="Description">
+                </SSIS:Property>
+                <SSIS:Property SSIS:Name="ProtectionLevel">1</SSIS:Property>
+              </SSIS:Properties>
+              <SSIS:Parameters />
+            </SSIS:PackageMetaData>
+            <SSIS:PackageMetaData SSIS:Name="DDS_DimCasualties.dtsx">
+              <SSIS:Properties>
+                <SSIS:Property SSIS:Name="ID">{F2C50193-3C96-438A-A332-A827930E2869}</SSIS:Property>
+                <SSIS:Property SSIS:Name="Name">DDS_DimCasualties</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">2</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionComments">
+                </SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{8D1DCF9D-1718-400A-8845-E639103E1EB5}</SSIS:Property>
                 <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
                 <SSIS:Property SSIS:Name="Description">
                 </SSIS:Property>
