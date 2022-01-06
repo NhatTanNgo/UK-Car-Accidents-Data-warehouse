@@ -2,13 +2,13 @@
 <BuildLog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <ProjectInfo>
     <Name>BUIDING AND MINING DATA WAREHOUSE</Name>
-    <LastWriteTime>2022-01-05T15:14:37.0348044Z</LastWriteTime>
+    <LastWriteTime>2022-01-06T02:12:12.8029577Z</LastWriteTime>
     <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
   </ProjectInfo>
   <LastBuildInfos>
     <ProjectBuildItemInfo>
       <Name>Staging_Accidents.dtsx</Name>
-      <LastWriteTime>2022-01-05T14:37:55.8039702Z</LastWriteTime>
+      <LastWriteTime>2022-01-05T18:12:51.526699Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
@@ -33,7 +33,7 @@
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>Main_Source.dtsx</Name>
-      <LastWriteTime>2022-01-05T15:08:26.4410986Z</LastWriteTime>
+      <LastWriteTime>2022-01-05T18:12:51.5047052Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
@@ -43,27 +43,27 @@
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>Main_NDS.dtsx</Name>
-      <LastWriteTime>2022-01-05T17:41:38.6314841Z</LastWriteTime>
+      <LastWriteTime>2022-01-05T18:12:51.4997168Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>Staging_Wiki.dtsx</Name>
-      <LastWriteTime>2022-01-05T14:37:55.8074088Z</LastWriteTime>
+      <LastWriteTime>2022-01-05T18:12:51.5297007Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>Main_Staging.dtsx</Name>
-      <LastWriteTime>2022-01-05T15:14:16.4449036Z</LastWriteTime>
+      <LastWriteTime>2022-01-05T18:12:51.505709Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>NDS_CodeBook.dtsx</Name>
-      <LastWriteTime>2022-01-05T15:36:47.3060859Z</LastWriteTime>
+      <LastWriteTime>2022-01-05T18:12:51.5137001Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>NDS_Accidents.dtsx</Name>
-      <LastWriteTime>2022-01-05T14:37:55.7777806Z</LastWriteTime>
+      <LastWriteTime>2022-01-05T18:12:51.5077004Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
@@ -78,7 +78,7 @@
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>Staging_PostcodeDistricts.dtsx</Name>
-      <LastWriteTime>2022-01-05T15:22:26.7826306Z</LastWriteTime>
+      <LastWriteTime>2022-01-05T18:12:51.5287001Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
@@ -93,22 +93,27 @@
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>NDS_LSOA.dtsx</Name>
-      <LastWriteTime>2022-01-05T17:21:38.8261821Z</LastWriteTime>
+      <LastWriteTime>2022-01-05T18:12:51.5157058Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>NDS_Postcode.dtsx</Name>
-      <LastWriteTime>2022-01-05T15:39:51.6154441Z</LastWriteTime>
+      <LastWriteTime>2022-01-05T18:12:51.5177365Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>Main_DDS.dtsx</Name>
-      <LastWriteTime>2022-01-04T15:34:52.7366222Z</LastWriteTime>
+      <LastWriteTime>2022-01-05T18:18:17.1991415Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>pDDS_DimVehicleType.dtsx</Name>
-      <LastWriteTime>2022-01-05T18:08:09.1262513Z</LastWriteTime>
+      <LastWriteTime>2022-01-05T18:12:51.5847096Z</LastWriteTime>
+      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
+    </ProjectBuildItemInfo>
+    <ProjectBuildItemInfo>
+      <Name>pDDS_DimRoadType.dtsx</Name>
+      <LastWriteTime>2022-01-06T02:12:12.4909828Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
   </LastBuildInfos>

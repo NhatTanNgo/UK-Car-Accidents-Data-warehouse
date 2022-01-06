@@ -5,20 +5,20 @@
   DTS:CreationName="Microsoft.Package"
   DTS:CreatorComputerName="PDH372"
   DTS:CreatorName="PDH372\phamd"
-  DTS:DTSID="{F0592E08-7407-45E7-A196-07984619A7F6}"
+  DTS:DTSID="{FC784BAB-2CDA-4B4E-953A-D20179921DE1}"
   DTS:ExecutableType="Microsoft.Package"
   DTS:LastModifiedProductVersion="15.0.2000.170"
   DTS:LocaleID="1033"
-  DTS:ObjectName="Package1"
+  DTS:ObjectName="pDDS_DimRoadType"
   DTS:PackageType="5"
-  DTS:VersionBuild="3"
-  DTS:VersionGUID="{239A960A-67C1-4914-A52C-BB637367D443}">
+  DTS:VersionBuild="4"
+  DTS:VersionGUID="{39C8C90A-4A5A-4238-82EB-80C88469A19C}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables>
     <DTS:Variable
       DTS:CreationName=""
-      DTS:DTSID="{821CAECC-856F-4DC9-A758-AB58CA4BF8C8}"
+      DTS:DTSID="{9F5CB6B9-7EFF-4A31-B3ED-837D71A42BF7}"
       DTS:IncludeInDebugDump="2345"
       DTS:Namespace="User"
       DTS:ObjectName="CET">
@@ -27,7 +27,7 @@
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
-      DTS:DTSID="{E614F490-B735-4289-8793-7DA7443AFF7B}"
+      DTS:DTSID="{087E2EC0-FDD5-4CBD-85A7-5BCFEA220408}"
       DTS:IncludeInDebugDump="2345"
       DTS:Namespace="User"
       DTS:ObjectName="LSET">
@@ -40,7 +40,7 @@
       DTS:refId="Package\Get LSET_CET"
       DTS:CreationName="Microsoft.ExecuteSQLTask"
       DTS:Description="Execute SQL Task"
-      DTS:DTSID="{6b0fd05b-8525-43b3-97f3-548e81340af8}"
+      DTS:DTSID="{E78F88C0-4E61-41FC-8E98-DFD54DA976FC}"
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="Get LSET_CET"
@@ -65,7 +65,7 @@
       DTS:refId="Package\Populating data"
       DTS:CreationName="Microsoft.Pipeline"
       DTS:Description="Data Flow Task"
-      DTS:DTSID="{e94ee747-d89c-4318-a5bb-eb479144ee63}"
+      DTS:DTSID="{F91D875F-E85C-403A-B3C2-148DC9DC26C5}"
       DTS:ExecutableType="Microsoft.Pipeline"
       DTS:LocaleID="-1"
       DTS:ObjectName="Populating data"
@@ -845,7 +845,7 @@ WHERE ((Create_time &gt;= ?) AND (Create_time &lt;= ?)) OR
                 <property
                   dataType="System.String"
                   description="The mappings between the parameters in the SQL command and variables."
-                  name="ParameterMapping">"Parameter0:Input",{821CAECC-856F-4DC9-A758-AB58CA4BF8C8};"Parameter1:Input",{E614F490-B735-4289-8793-7DA7443AFF7B};"Parameter2:Input",{821CAECC-856F-4DC9-A758-AB58CA4BF8C8};"Parameter3:Input",{E614F490-B735-4289-8793-7DA7443AFF7B};</property>
+                  name="ParameterMapping">"Parameter0:Input",{9F5CB6B9-7EFF-4A31-B3ED-837D71A42BF7};"Parameter1:Input",{087E2EC0-FDD5-4CBD-85A7-5BCFEA220408};"Parameter2:Input",{9F5CB6B9-7EFF-4A31-B3ED-837D71A42BF7};"Parameter3:Input",{087E2EC0-FDD5-4CBD-85A7-5BCFEA220408};</property>
               </properties>
               <connections>
                 <connection
@@ -1481,7 +1481,7 @@ WHERE ((Create_time &gt;= ?) AND (Create_time &lt;= ?)) OR
       DTS:refId="Package\Update LSET"
       DTS:CreationName="Microsoft.ExecuteSQLTask"
       DTS:Description="Execute SQL Task"
-      DTS:DTSID="{227691be-beb6-462a-8b00-24844d6a92ec}"
+      DTS:DTSID="{8FF56384-13B8-4D49-90C2-5B53C39F8870}"
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="Update LSET"
@@ -1499,7 +1499,7 @@ WHERE ((Create_time &gt;= ?) AND (Create_time &lt;= ?)) OR
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Constraint]"
       DTS:CreationName=""
-      DTS:DTSID="{33a8270e-c840-4365-b7f1-86030700815b}"
+      DTS:DTSID="{6410A311-8AC0-4C54-B63C-04C24E22D23C}"
       DTS:From="Package\Get LSET_CET"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint"
@@ -1507,7 +1507,7 @@ WHERE ((Create_time &gt;= ?) AND (Create_time &lt;= ?)) OR
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Constraint 1]"
       DTS:CreationName=""
-      DTS:DTSID="{2773c6a0-503a-4df0-a2c8-21d6a7271d38}"
+      DTS:DTSID="{E7C71DBA-0169-43E0-AD9E-20DE7353AE2E}"
       DTS:From="Package\Populating data"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint 1"
@@ -1526,15 +1526,15 @@ WHERE ((Create_time &gt;= ?) AND (Create_time &lt;= ?)) OR
       <GraphLayout
         Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="146.4,42.4"
+          Size="146.666666666667,42.6666666666667"
           Id="Package\Get LSET_CET"
           TopLeft="55.7142856413004,60.7264704532514" />
         <NodeLayout
-          Size="153.6,42.4"
+          Size="153.333333333334,42.6666666666667"
           Id="Package\Populating data"
           TopLeft="265.178568416788,60.7647058930776" />
         <NodeLayout
-          Size="140,42.4"
+          Size="140,42.6666666666667"
           Id="Package\Update LSET"
           TopLeft="273.749996814877,157.499998256564" />
         <EdgeLayout
@@ -1590,121 +1590,33 @@ WHERE ((Create_time &gt;= ?) AND (Create_time &lt;= ?)) OR
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="146.4,41.6"
+          Size="208,41.3333333333334"
+          Id="Package\Populating data\Slowly Changing Dimension"
+          TopLeft="206.7,411.9" />
+        <NodeLayout
+          Size="146.666666666667,41.3333333333334"
           Id="Package\Populating data\NDS Accidents"
           TopLeft="237.5,5.49999999999995" />
         <NodeLayout
-          Size="171.2,41.6"
+          Size="171.333333333334,41.3333333333334"
           Id="Package\Populating data\get road type name"
           TopLeft="225.1,107.1" />
-        <EdgeLayout
-          Id="Package\Populating data.Paths[OLE DB Source Output]"
-          TopLeft="310.7,47.1">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,59.9999999999999"
-              Start="0,0"
-              End="0,52.4999999999999">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,52.4999999999999" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
         <NodeLayout
-          Size="147.2,41.6"
-          Id="Package\Populating data\get area name"
-          TopLeft="237.1,208.7" />
-        <EdgeLayout
-          Id="Package\Populating data.Paths[Lookup Match Output]"
-          TopLeft="310.7,148.7">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,59.9999999999999"
-              Start="0,0"
-              End="0,52.4999999999999">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,52.4999999999999" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-48.19138671875,20.4453124999999,96.3827734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="152.8,41.6"
-          Id="Package\Populating data\delete duplicate"
-          TopLeft="234.3,310.3" />
-        <EdgeLayout
-          Id="Package\Populating data.Paths[Lookup Match Output1]"
-          TopLeft="310.7,250.3">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,59.9999999999999"
-              Start="0,0"
-              End="0,52.4999999999999">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,52.4999999999999" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-48.19138671875,20.4453125,96.3827734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="208,41.6"
-          Id="Package\Populating data\Slowly Changing Dimension"
-          TopLeft="206.7,411.9" />
-        <EdgeLayout
-          Id="Package\Populating data.Paths[Sort Output]"
-          TopLeft="310.7,351.9">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,60"
-              Start="0,0"
-              End="0,52.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,52.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="162.4,41.6"
+          Size="162.666666666667,41.3333333333334"
           Id="Package\Populating data\Insert Destination"
           TopLeft="5.50000000000004,513.5" />
+        <NodeLayout
+          Size="147.333333333334,41.3333333333334"
+          Id="Package\Populating data\get area name"
+          TopLeft="237.1,208.7" />
+        <NodeLayout
+          Size="152.666666666667,41.3333333333334"
+          Id="Package\Populating data\delete duplicate"
+          TopLeft="234.3,310.3" />
+        <NodeLayout
+          Size="164.666666666667,41.3333333333334"
+          Id="Package\Populating data\OLE DB Command"
+          TopLeft="389.014288451234,507.382352855378" />
         <EdgeLayout
           Id="Package\Populating data.Paths[New Output]"
           TopLeft="277.366666666667,453.5">
@@ -1741,10 +1653,54 @@ WHERE ((Create_time &gt;= ?) AND (Create_time &lt;= ?)) OR
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="164.8,41.6"
-          Id="Package\Populating data\OLE DB Command"
-          TopLeft="389.014288451234,507.382352855378" />
+        <EdgeLayout
+          Id="Package\Populating data.Paths[Lookup Match Output1]"
+          TopLeft="310.7,250.3">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,59.9999999999999"
+              Start="0,0"
+              End="0,52.4999999999999">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.4999999999999" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-48.19138671875,20.4453125,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Populating data.Paths[Lookup Match Output]"
+          TopLeft="310.7,148.7">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,59.9999999999999"
+              Start="0,0"
+              End="0,52.4999999999999">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.4999999999999" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-48.19138671875,20.4453124999999,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
         <EdgeLayout
           Id="Package\Populating data.Paths[Changing Attribute Updates Output]"
           TopLeft="344.033333333333,453.5">
@@ -1781,63 +1737,53 @@ WHERE ((Create_time &gt;= ?) AND (Create_time &lt;= ?)) OR
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Populating data.Paths[Sort Output]"
+          TopLeft="310.7,351.9">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Populating data.Paths[OLE DB Source Output]"
+          TopLeft="310.7,47.1">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,59.9999999999999"
+              Start="0,0"
+              End="0,52.4999999999999">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.4999999999999" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
-  <PipelineComponentMetadata
-    design-time-name="Package\Populating data\NDS Accidents">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Populating data\get road type name">
-    <Properties>
-      <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:boolean">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string">[dbo].[RoadType]</Value>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q4:int">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Populating data\get area name">
-    <Properties>
-      <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:boolean">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string">[dbo].[Area]</Value>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q4:int">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
   <PipelineComponentMetadata
     design-time-name="Package\Populating data\Slowly Changing Dimension">
     <Properties>
@@ -1896,6 +1842,60 @@ WHERE ((Create_time &gt;= ?) AND (Create_time &lt;= ?)) OR
   &lt;DateVariable /&gt;
   &lt;EnableInferredSupport&gt;false&lt;/EnableInferredSupport&gt;
 &lt;/SCDWizardMetadata&gt;</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Populating data\NDS Accidents">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Populating data\get road type name">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[RoadType]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Populating data\get area name">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[Area]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
