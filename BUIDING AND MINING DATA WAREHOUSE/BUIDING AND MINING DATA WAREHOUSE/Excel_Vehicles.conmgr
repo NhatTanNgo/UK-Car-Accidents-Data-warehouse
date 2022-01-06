@@ -12,7 +12,7 @@
       DTS:RowDelimiter=""
       DTS:TextQualifier="_x003C_none_x003E_"
       DTS:CodePage="1252"
-      DTS:ConnectionString="C:\Users\WinXs\OneDrive - VNU-HCMUS\Uni\Nam 4 - HKI\BI\Do an\UK-Car-Accidents-Data-warehouse\Dataset\Vehicles1114.csv">
+      DTS:ConnectionString="D:\Downloads\BI\BI_Project\UK-Car-Accidents-Data-warehouse\Dataset\Vehicles1114.csv">
       <DTS:FlatFileColumns>
         <DTS:FlatFileColumn
           DTS:ColumnType="Delimited"
@@ -21,7 +21,7 @@
           DTS:DataType="129"
           DTS:TextQualified="True"
           DTS:ObjectName="Accident_Index"
-          DTS:DTSID="{3FF153A7-0F57-429D-A539-FBED7E4959D8}"
+          DTS:DTSID="{1EEFEC87-9AD6-45C0-B872-6C9B1157BDE9}"
           DTS:CreationName="" />
         <DTS:FlatFileColumn
           DTS:ColumnType="Delimited"
@@ -30,7 +30,7 @@
           DTS:DataType="129"
           DTS:TextQualified="True"
           DTS:ObjectName="Vehicle_Reference"
-          DTS:DTSID="{671EF9E1-2368-4C77-877E-E6433B488FEE}"
+          DTS:DTSID="{FEBAFC01-B026-48EF-81CA-74FAB591CC3C}"
           DTS:CreationName="" />
         <DTS:FlatFileColumn
           DTS:ColumnType="Delimited"
@@ -39,7 +39,7 @@
           DTS:DataType="129"
           DTS:TextQualified="True"
           DTS:ObjectName="Vehicle_Type"
-          DTS:DTSID="{22FE2B15-9B8D-4DBD-A0F3-7477B945D284}"
+          DTS:DTSID="{18F801F8-56C3-464F-A204-A2995825E619}"
           DTS:CreationName="" />
         <DTS:FlatFileColumn
           DTS:ColumnType="Delimited"
@@ -48,7 +48,7 @@
           DTS:DataType="129"
           DTS:TextQualified="True"
           DTS:ObjectName="Towing_and_Articulation"
-          DTS:DTSID="{4A001396-8F32-474A-BA48-67EA33E5FA70}"
+          DTS:DTSID="{90EC0940-681E-4E24-A8AB-9510DE5089EB}"
           DTS:CreationName="" />
         <DTS:FlatFileColumn
           DTS:ColumnType="Delimited"
@@ -57,7 +57,7 @@
           DTS:DataType="129"
           DTS:TextQualified="True"
           DTS:ObjectName="Vehicle_Manoeuvre"
-          DTS:DTSID="{EC3E4FD4-9686-4291-8D26-C28C0E3028D7}"
+          DTS:DTSID="{B8D3DFA0-4FAD-4AA4-A583-DA9E623781B1}"
           DTS:CreationName="" />
         <DTS:FlatFileColumn
           DTS:ColumnType="Delimited"
@@ -66,7 +66,7 @@
           DTS:DataType="129"
           DTS:TextQualified="True"
           DTS:ObjectName="Vehicle_Location-Restricted_Lane"
-          DTS:DTSID="{5F037302-73A9-41C0-B774-42A4DF26CB97}"
+          DTS:DTSID="{822C0C11-D9A6-4B78-9E8E-53A1FC39D9AB}"
           DTS:CreationName="" />
         <DTS:FlatFileColumn
           DTS:ColumnType="Delimited"
@@ -75,7 +75,7 @@
           DTS:DataType="129"
           DTS:TextQualified="True"
           DTS:ObjectName="Junction_Location"
-          DTS:DTSID="{7B934DC2-DC11-4AD0-AC9D-5CAF827504B5}"
+          DTS:DTSID="{1A2D07E2-473A-4AB4-AF57-163050C965C1}"
           DTS:CreationName="" />
         <DTS:FlatFileColumn
           DTS:ColumnType="Delimited"
@@ -84,7 +84,7 @@
           DTS:DataType="129"
           DTS:TextQualified="True"
           DTS:ObjectName="Skidding_and_Overturning"
-          DTS:DTSID="{93C4FC84-17DE-46F4-B41F-A22091292F28}"
+          DTS:DTSID="{527E580E-BAD9-41FD-9CFD-0B1EE6D3D375}"
           DTS:CreationName="" />
         <DTS:FlatFileColumn
           DTS:ColumnType="Delimited"
@@ -93,7 +93,7 @@
           DTS:DataType="129"
           DTS:TextQualified="True"
           DTS:ObjectName="Hit_Object_in_Carriageway"
-          DTS:DTSID="{C244F0E9-D88F-4595-9CA8-7BB0E6E20F80}"
+          DTS:DTSID="{BBD0D004-8DF1-474C-8A8B-D5BD201C5FE5}"
           DTS:CreationName="" />
         <DTS:FlatFileColumn
           DTS:ColumnType="Delimited"
@@ -102,7 +102,7 @@
           DTS:DataType="129"
           DTS:TextQualified="True"
           DTS:ObjectName="Vehicle_Leaving_Carriageway"
-          DTS:DTSID="{C7CEA030-28C3-4A5E-B592-ACFC4999E4B9}"
+          DTS:DTSID="{2511ED02-E207-4CF4-8D07-A286F0AE956A}"
           DTS:CreationName="" />
         <DTS:FlatFileColumn
           DTS:ColumnType="Delimited"
@@ -111,7 +111,7 @@
           DTS:DataType="129"
           DTS:TextQualified="True"
           DTS:ObjectName="Hit_Object_off_Carriageway"
-          DTS:DTSID="{8656CFA8-82CA-4086-8FDA-82E80603BBD4}"
+          DTS:DTSID="{A6BA100D-A40A-4713-87F1-1AB833C2D1CA}"
           DTS:CreationName="" />
         <DTS:FlatFileColumn
           DTS:ColumnType="Delimited"
@@ -120,7 +120,7 @@
           DTS:DataType="129"
           DTS:TextQualified="True"
           DTS:ObjectName="1st_Point_of_Impact"
-          DTS:DTSID="{5043E8E3-ADA1-44C1-938B-05ED2DF1509B}"
+          DTS:DTSID="{CCC94C94-72F1-4C31-84E2-E6FCFC9D4069}"
           DTS:CreationName="" />
         <DTS:FlatFileColumn
           DTS:ColumnType="Delimited"
@@ -129,7 +129,7 @@
           DTS:DataType="129"
           DTS:TextQualified="True"
           DTS:ObjectName="Was_Vehicle_Left_Hand_Drive?"
-          DTS:DTSID="{D92AFCE0-A5D4-4634-A6A0-308ABCE7D8D9}"
+          DTS:DTSID="{102C097C-1A76-4A11-BE15-752CBB5B0D3A}"
           DTS:CreationName="" />
         <DTS:FlatFileColumn
           DTS:ColumnType="Delimited"
@@ -138,7 +138,7 @@
           DTS:DataType="129"
           DTS:TextQualified="True"
           DTS:ObjectName="Journey_Purpose_of_Driver"
-          DTS:DTSID="{2696F7A4-6FDB-4980-BB98-42D4FA9B3EF0}"
+          DTS:DTSID="{3E7CB651-FFF1-43B9-AA37-6E4B2587AB7E}"
           DTS:CreationName="" />
         <DTS:FlatFileColumn
           DTS:ColumnType="Delimited"
@@ -147,7 +147,7 @@
           DTS:DataType="129"
           DTS:TextQualified="True"
           DTS:ObjectName="Sex_of_Driver"
-          DTS:DTSID="{8B55EB10-450E-41AB-A694-D79695C38784}"
+          DTS:DTSID="{F29BBE49-A1F3-4B8D-9E5C-8E22EB0E2076}"
           DTS:CreationName="" />
         <DTS:FlatFileColumn
           DTS:ColumnType="Delimited"
@@ -156,7 +156,7 @@
           DTS:DataType="129"
           DTS:TextQualified="True"
           DTS:ObjectName="Age_of_Driver"
-          DTS:DTSID="{0AD91138-BD58-4E9A-8970-72E8EA1A3DB7}"
+          DTS:DTSID="{D95CCAE7-DA8D-4F50-AB90-8A4738677D8E}"
           DTS:CreationName="" />
         <DTS:FlatFileColumn
           DTS:ColumnType="Delimited"
@@ -165,7 +165,7 @@
           DTS:DataType="129"
           DTS:TextQualified="True"
           DTS:ObjectName="Age_Band_of_Driver"
-          DTS:DTSID="{BBF5A46D-4CA4-441E-9701-C59DE071D157}"
+          DTS:DTSID="{EF390E3B-E6F6-447D-B93F-AA8A8CFD5607}"
           DTS:CreationName="" />
         <DTS:FlatFileColumn
           DTS:ColumnType="Delimited"
@@ -174,7 +174,7 @@
           DTS:DataType="129"
           DTS:TextQualified="True"
           DTS:ObjectName="Engine_Capacity_(CC)"
-          DTS:DTSID="{89710BA3-063E-47C2-A87B-B88EC8EF8DE6}"
+          DTS:DTSID="{AD68B0F2-5F5C-4B27-A4CF-5680DD7AA74D}"
           DTS:CreationName="" />
         <DTS:FlatFileColumn
           DTS:ColumnType="Delimited"
@@ -183,7 +183,7 @@
           DTS:DataType="129"
           DTS:TextQualified="True"
           DTS:ObjectName="Propulsion_Code"
-          DTS:DTSID="{1FFADC85-9245-4416-92D8-EE1E6C2B5C2F}"
+          DTS:DTSID="{A280557E-C283-4C66-AE08-C025284A74C9}"
           DTS:CreationName="" />
         <DTS:FlatFileColumn
           DTS:ColumnType="Delimited"
@@ -192,7 +192,7 @@
           DTS:DataType="129"
           DTS:TextQualified="True"
           DTS:ObjectName="Age_of_Vehicle"
-          DTS:DTSID="{AB3520EB-3739-405F-AA1A-EC009B337F8E}"
+          DTS:DTSID="{993D78AB-A7FA-47E5-9005-999E4FE545A3}"
           DTS:CreationName="" />
         <DTS:FlatFileColumn
           DTS:ColumnType="Delimited"
@@ -201,7 +201,7 @@
           DTS:DataType="129"
           DTS:TextQualified="True"
           DTS:ObjectName="Driver_IMD_Decile"
-          DTS:DTSID="{6FB7409E-DA52-4E22-ADAC-CDEDE819F425}"
+          DTS:DTSID="{1932F107-33CC-48FE-AC50-4CD887583E92}"
           DTS:CreationName="" />
         <DTS:FlatFileColumn
           DTS:ColumnType="Delimited"
@@ -210,7 +210,7 @@
           DTS:DataType="129"
           DTS:TextQualified="True"
           DTS:ObjectName="Driver_Home_Area_Type"
-          DTS:DTSID="{43994756-F9E8-44EC-A6C7-A732E6C4E7E9}"
+          DTS:DTSID="{8BC43A6B-0D0C-4885-ADBB-F940115420A2}"
           DTS:CreationName="" />
       </DTS:FlatFileColumns>
     </DTS:ConnectionManager>

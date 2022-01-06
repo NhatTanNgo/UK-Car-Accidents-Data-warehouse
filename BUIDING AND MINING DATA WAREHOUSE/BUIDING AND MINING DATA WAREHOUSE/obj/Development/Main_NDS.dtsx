@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="18"
-  DTS:VersionGUID="{CA1BDFED-1377-438C-BECB-9C856D41F3C1}">
+  DTS:VersionBuild="19"
+  DTS:VersionGUID="{81983C89-67EB-4ADB-AEA1-44064A309C42}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables />
@@ -264,7 +264,7 @@
         <NodeLayout
           Size="154.666666666667,42.6666666666667"
           Id="Package\Country_Region"
-          TopLeft="44.374999338761,171.599996931553" />
+          TopLeft="44.9999993294477,171.599996931553" />
         <NodeLayout
           Size="112,42.6666666666667"
           Id="Package\County"
@@ -287,18 +287,18 @@
           TopLeft="417.857152368037,169.152945373801" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
-          TopLeft="124.026786067713,140.968628279839">
+          TopLeft="124.339286063057,140.968628279839">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,30.6313686517138"
+              EndConnector="0,30.6313686517135"
               Start="0,0"
-              End="0,23.1313686517138">
+              End="0,23.1313686517135">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,23.1313686517138" />
+                    End="0,23.1313686517135" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -309,18 +309,18 @@
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 1]"
-          TopLeft="124.16666580985,214.26666359822">
+          TopLeft="124.479165805193,214.26666359822">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,28.1833320664362"
+              EndConnector="0,28.1833320664364"
               Start="0,0"
-              End="0,20.6833320664362">
+              End="0,20.6833320664364">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,20.6833320664362" />
+                    End="0,20.6833320664364" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>

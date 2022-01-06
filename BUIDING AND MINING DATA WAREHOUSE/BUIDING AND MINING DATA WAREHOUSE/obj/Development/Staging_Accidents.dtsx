@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Staging_Accidents"
   DTS:PackageType="5"
-  DTS:VersionBuild="50"
-  DTS:VersionGUID="{BF7DFB9B-1BD9-48E3-9CC2-6DF39A237BAD}">
+  DTS:VersionBuild="51"
+  DTS:VersionGUID="{3D6070A0-A829-4354-A7C9-A69554838A80}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables>
@@ -142,7 +142,7 @@
                 <property
                   dataType="System.String"
                   description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
-                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                  name="FastLoadOptions">TABLOCK</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
@@ -1691,23 +1691,23 @@ Where (Create_time &gt;= ? and Create_time &lt;= ? ) or (Update_time &gt;= ? and
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="132,41.3333333333334"
+          Size="132,41.6"
           Id="Package\Clear stage"
           TopLeft="389.944443345778,155.957518504072" />
         <NodeLayout
-          Size="164,41.3333333333334"
+          Size="164,41.6"
           Id="Package\Get CET &amp; LSET"
           TopLeft="145.000002469335,156.651962089713" />
         <NodeLayout
-          Size="176,41.3333333333334"
+          Size="176,41.6"
           Id="Package\Load data into stage"
           TopLeft="369.180554766295,268.696405377032" />
         <NodeLayout
-          Size="165.333333333334,42.6666666666667"
+          Size="165.6,42.4"
           Id="Package\Profiling Accidents"
           TopLeft="144.930558025925,304.818625618195" />
         <NodeLayout
-          Size="140,41.3333333333334"
+          Size="140,41.6"
           Id="Package\Update LSET"
           TopLeft="167.361113247239,237.940849036285" />
         <EdgeLayout
@@ -1831,11 +1831,11 @@ Where (Create_time &gt;= ? and Create_time &lt;= ? ) or (Update_time &gt;= ? and
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="149.333333333334,41.3333333333334"
+          Size="149.6,41.6"
           Id="Package\Load data into stage\OLE DB Source"
           TopLeft="83.124998761341,48.7499991282821" />
         <NodeLayout
-          Size="172,41.3333333333334"
+          Size="172,41.6"
           Id="Package\Load data into stage\OLE DB Destination"
           TopLeft="312.249995734543,45.8999992328883" />
         <EdgeLayout
