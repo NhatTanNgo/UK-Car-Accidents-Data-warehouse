@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="DDS_DimCasualties"
   DTS:PackageType="5"
-  DTS:VersionBuild="12"
-  DTS:VersionGUID="{AA9D5C1E-F9DC-4AE1-AA96-CC8F79AACE40}">
+  DTS:VersionBuild="13"
+  DTS:VersionGUID="{410D27BA-E734-403D-B06D-A05DF180DB66}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables>
@@ -84,7 +84,10 @@
                   dataType="System.String"
                   description="The SQL command to be executed."
                   name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT *
+FROM   Casualties
+WHERE ((Create_time &gt;= ?) AND (Create_time &lt;= ?)) OR
+             ((Update_time &gt;= ?) AND (Update_time &lt;= ?))</property>
                 <property
                   dataType="System.String"
                   description="The variable that contains the SQL command to be executed."
@@ -101,11 +104,11 @@
                   dataType="System.Int32"
                   description="Specifies the mode used to access the database."
                   name="AccessMode"
-                  typeConverter="AccessMode">0</property>
+                  typeConverter="AccessMode">2</property>
                 <property
                   dataType="System.String"
                   description="The mappings between the parameters in the SQL command and variables."
-                  name="ParameterMapping"></property>
+                  name="ParameterMapping">"Parameter0:Input",{A489B754-4B7A-492B-BA55-B0DA876EC487};"Parameter1:Input",{83889FB0-A38C-4E5F-B02C-67B8F268A0E1};"Parameter2:Input",{A489B754-4B7A-492B-BA55-B0DA876EC487};"Parameter3:Input",{83889FB0-A38C-4E5F-B02C-67B8F268A0E1};</property>
               </properties>
               <connections>
                 <connection
