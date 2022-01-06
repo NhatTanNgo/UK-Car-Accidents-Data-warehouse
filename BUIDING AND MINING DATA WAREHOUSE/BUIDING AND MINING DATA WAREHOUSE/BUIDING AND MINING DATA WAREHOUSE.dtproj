@@ -26,7 +26,7 @@
           <SSIS:Property SSIS:Name="CreatorComputerName">ASUS-DUCHUY</SSIS:Property>
           <SSIS:Property SSIS:Name="Description">
           </SSIS:Property>
-          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA0UK3wNsyDEaCf3pcP3N8EAAAAAACAAAAAAAQZgAAAAEAACAAAADpXb82BlV/r4KuvtpjcL2vRV04gtrh9oECxiZ69CUk/AAAAAAOgAAAAAIAACAAAAATGC+ekZojAk6aZIdouqwKRHAzAlX7JVEO4ka3+SQLeZAAAACCvPpKAOHe/rambBZC7dBqlSeAgqpyeOMxwPfI+dhTdIbM/bMBaIRkBf9/iVW0LHnwi0nwJwwdG2sWkhI3qqIfeHVkOb7fvSgHxYzsg83Vf/JC407CEdpoHlooEeRJP0P1tMFclTj5ick8PKbUpVIa+BSTL8fAkk35jJYOQ4H6vfUX6mQoqf1vE5KzRz6eZW5AAAAAgnqkw4bA5CEjH5ZqcnED8YQeRUeVLuzOhbIEaVbMZLF5Pv0w+6tbuEqIp0dCiOSHK51u6P9ju1h/yg5wk1PWEw==</SSIS:Property>
+          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA0UK3wNsyDEaCf3pcP3N8EAAAAAACAAAAAAAQZgAAAAEAACAAAADxgZzi0BpSjfkj5bOPVtQwRo8C0lyPxAhSLELeywz8FQAAAAAOgAAAAAIAACAAAADZNu8nf3LQ9Hz1jEvXOYWsduCJvherJac1lyoXqZYQ3pAAAADxRBn74WkTMCJ5SJWH0fZ7bwIAOfuhEJ53IsWQekBjOstdLhONpwlbQNLaxE2wHF5NsMyWW5z5YhhOhTtX1udqp9kAFtFiooZ4UQS4ywAnKS5bReVY4fjHMqmrqEvHq/HDHhrrPWt/sevfLNTiVydINbIlGHu6jK9E/6jgb9+zPTuCEQQXxcDgdqMlrTQ9P/RAAAAAJJynwBTQL9e05WMbgt1Dg7Ed15NsJu8TOTuEIHmL1QZ19csVJh5FTmNgzS2Bq27JW74p7GMXXLU7/RYZsTqAJA==</SSIS:Property>
           <SSIS:Property SSIS:Name="FormatVersion">1</SSIS:Property>
         </SSIS:Properties>
         <SSIS:Packages>
@@ -54,6 +54,10 @@
           <SSIS:Package SSIS:Name="pDDS_DimRoadType.dtsx" SSIS:EntryPoint="1" />
           <SSIS:Package SSIS:Name="pDDS_DimJourneyPurpose.dtsx" SSIS:EntryPoint="1" />
           <SSIS:Package SSIS:Name="pDDS_FactAccidentVehicle.dtsx" SSIS:EntryPoint="1" />
+          <SSIS:Package SSIS:Name="pDDS_DimGeo.dtsx" SSIS:EntryPoint="1" />
+          <SSIS:Package SSIS:Name="pDDS_DimCasualties.dtsx" SSIS:EntryPoint="1" />
+          <SSIS:Package SSIS:Name="pDDS_FactAccident.dtsx" SSIS:EntryPoint="1" />
+          <SSIS:Package SSIS:Name="pDDS_FactAccidentCasualties.dtsx" SSIS:EntryPoint="1" />
         </SSIS:Packages>
         <SSIS:ConnectionManagers>
           <SSIS:ConnectionManager SSIS:Name="LocalHost.Source_DATH.conmgr" />
@@ -3444,10 +3448,10 @@
                 <SSIS:Property SSIS:Name="Name">Main_DDS</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionBuild">1</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">9</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionComments">
                 </SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionGUID">{EA34CE1A-C94A-4650-A5DD-2EE82210E150}</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{DA4DF80B-1338-46E7-90EC-4F849652A019}</SSIS:Property>
                 <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
                 <SSIS:Property SSIS:Name="Description">
                 </SSIS:Property>
@@ -3512,10 +3516,78 @@
                 <SSIS:Property SSIS:Name="Name">pDDS_FactAccidentVehicle</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionBuild">9</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">12</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionComments">
                 </SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionGUID">{E87328EE-41F0-492A-8978-52099BD2B8E7}</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{6E86D2BD-6844-4961-BC8C-0777972BA2C1}</SSIS:Property>
+                <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
+                <SSIS:Property SSIS:Name="Description">
+                </SSIS:Property>
+                <SSIS:Property SSIS:Name="ProtectionLevel">1</SSIS:Property>
+              </SSIS:Properties>
+              <SSIS:Parameters />
+            </SSIS:PackageMetaData>
+            <SSIS:PackageMetaData SSIS:Name="pDDS_DimGeo.dtsx">
+              <SSIS:Properties>
+                <SSIS:Property SSIS:Name="ID">{B71C7A81-0D9E-4E61-9FF5-0743ED7E730F}</SSIS:Property>
+                <SSIS:Property SSIS:Name="Name">pDDS_DimGeo</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">13</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionComments">
+                </SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{99235C7A-17E8-4640-93C9-E072C67A7A30}</SSIS:Property>
+                <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
+                <SSIS:Property SSIS:Name="Description">
+                </SSIS:Property>
+                <SSIS:Property SSIS:Name="ProtectionLevel">1</SSIS:Property>
+              </SSIS:Properties>
+              <SSIS:Parameters />
+            </SSIS:PackageMetaData>
+            <SSIS:PackageMetaData SSIS:Name="pDDS_DimCasualties.dtsx">
+              <SSIS:Properties>
+                <SSIS:Property SSIS:Name="ID">{EBD32B76-1321-4EF1-ADA4-3B542D51DB55}</SSIS:Property>
+                <SSIS:Property SSIS:Name="Name">pDDS_DimCasualties</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">14</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionComments">
+                </SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{0925377C-462E-4CBA-93F3-148172923C5C}</SSIS:Property>
+                <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
+                <SSIS:Property SSIS:Name="Description">
+                </SSIS:Property>
+                <SSIS:Property SSIS:Name="ProtectionLevel">1</SSIS:Property>
+              </SSIS:Properties>
+              <SSIS:Parameters />
+            </SSIS:PackageMetaData>
+            <SSIS:PackageMetaData SSIS:Name="pDDS_FactAccident.dtsx">
+              <SSIS:Properties>
+                <SSIS:Property SSIS:Name="ID">{AD86927F-253D-4250-80F9-69814A6B28B5}</SSIS:Property>
+                <SSIS:Property SSIS:Name="Name">pDDS_FactAccident</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">8</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionComments">
+                </SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{56CFAC55-0FB9-460E-84B6-6B3599F70E30}</SSIS:Property>
+                <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
+                <SSIS:Property SSIS:Name="Description">
+                </SSIS:Property>
+                <SSIS:Property SSIS:Name="ProtectionLevel">1</SSIS:Property>
+              </SSIS:Properties>
+              <SSIS:Parameters />
+            </SSIS:PackageMetaData>
+            <SSIS:PackageMetaData SSIS:Name="pDDS_FactAccidentCasualties.dtsx">
+              <SSIS:Properties>
+                <SSIS:Property SSIS:Name="ID">{9FF35C80-1A62-4E14-96B1-D174AE025AE0}</SSIS:Property>
+                <SSIS:Property SSIS:Name="Name">pDDS_FactAccidentCasualties</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">3</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionComments">
+                </SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{4B348028-2C14-4E44-A625-9063A7293092}</SSIS:Property>
                 <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
                 <SSIS:Property SSIS:Name="Description">
                 </SSIS:Property>

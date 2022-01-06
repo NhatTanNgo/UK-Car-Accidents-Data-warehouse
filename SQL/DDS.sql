@@ -116,8 +116,7 @@ CREATE TABLE DimGeography
 	RegionKey INT,
 	RegionName VARCHAR(50),
 	CountyName VARCHAR(50),
-	TownName VARCHAR(50),
-	Status INT
+	TownName VARCHAR(50)
 )
 
 CREATE TABLE DimVehicleType
