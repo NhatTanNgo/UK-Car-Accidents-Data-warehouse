@@ -11,12 +11,29 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Main_DDS"
   DTS:PackageType="5"
-  DTS:VersionBuild="2"
-  DTS:VersionGUID="{89B3437C-7CB7-4A73-BD5D-121C64131B82}">
+  DTS:VersionBuild="4"
+  DTS:VersionGUID="{77D4531F-3CB1-4BFE-8E68-1A4331459739}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables />
   <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\DimRoadtype"
+      DTS:CreationName="Microsoft.ExecutePackageTask"
+      DTS:Description="Execute Package Task"
+      DTS:DTSID="{2291E754-2FCF-4B21-9931-EFB09F83EF24}"
+      DTS:ExecutableType="Microsoft.ExecutePackageTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="DimRoadtype"
+      DTS:TaskContact="Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <ExecutePackageTask>
+          <UseProjectReference>True</UseProjectReference>
+          <PackageName>DDS_DimRoadType.dtsx</PackageName>
+        </ExecutePackageTask>
+      </DTS:ObjectData>
+    </DTS:Executable>
     <DTS:Executable
       DTS:refId="Package\DimVehicleType"
       DTS:CreationName="Microsoft.ExecutePackageTask"
@@ -48,9 +65,13 @@
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
         <NodeLayout
-          Size="154.666666666667,42.6666666666667"
+          Size="154.4,42.4"
           Id="Package\DimVehicleType"
           TopLeft="59.9999991059303,92.9499983379246" />
+        <NodeLayout
+          Size="141.6,41.6"
+          Id="Package\DimRoadtype"
+          TopLeft="280.000004768372,95.5882366347066" />
       </GraphLayout>
     </LayoutInfo>
   </Package>

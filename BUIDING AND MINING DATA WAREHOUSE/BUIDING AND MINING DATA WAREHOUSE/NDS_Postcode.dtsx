@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="16"
-  DTS:VersionGUID="{EABF9677-2748-42D3-AD68-3ACF51B60BB9}">
+  DTS:VersionBuild="17"
+  DTS:VersionGUID="{95E4309D-AB0B-422B-B7A0-D89D0FD718F9}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables>
@@ -25,7 +25,7 @@
       DTS:Namespace="User"
       DTS:ObjectName="CET">
       <DTS:VariableValue
-        DTS:DataType="7">1/3/2022 7:54:14 AM</DTS:VariableValue>
+        DTS:DataType="7">1/5/2022 10:39:52 PM</DTS:VariableValue>
     </DTS:Variable>
   </DTS:Variables>
   <DTS:Executables>
@@ -2092,9 +2092,9 @@ where [refTable].[Town_NK] = ?</property>
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
         <NodeLayout
-          Size="120.8,41.6"
+          Size="128.666666666667,41.3333333333334"
           Id="Package\Postcode"
-          TopLeft="467,181" />
+          TopLeft="60.7500060535967,101.700001417995" />
       </GraphLayout>
     </LayoutInfo>
   </Package>
@@ -2104,39 +2104,39 @@ where [refTable].[Town_NK] = ?</property>
       <GraphLayout
         Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="126.4,41.6"
+          Size="126.666666666667,41.3333333333334"
           Id="Package\Postcode\postcodes"
           TopLeft="431,5.5" />
         <NodeLayout
-          Size="164,41.6"
+          Size="164,41.3333333333334"
           Id="Package\Postcode\Lookup CountryID"
           TopLeft="412,413.5" />
         <NodeLayout
-          Size="160,41.6"
+          Size="160,41.3333333333334"
           Id="Package\Postcode\Lookup RegionID"
           TopLeft="414,515.5" />
         <NodeLayout
-          Size="166.4,41.6"
+          Size="166.666666666667,41.3333333333334"
           Id="Package\Postcode\OLE DB Command"
           TopLeft="411,719.5" />
         <NodeLayout
-          Size="208.8,41.6"
+          Size="208.666666666667,41.3333333333334"
           Id="Package\Postcode\Slowly Changing Dimension"
           TopLeft="389.5,617.5" />
         <NodeLayout
-          Size="167.2,41.6"
+          Size="167.333333333334,41.3333333333334"
           Id="Package\Postcode\timestamp &amp; srcID"
           TopLeft="410.5,107.5" />
         <NodeLayout
-          Size="163.2,41.6"
+          Size="163.333333333334,41.3333333333334"
           Id="Package\Postcode\Insert Destination"
           TopLeft="187.5,719.5" />
         <NodeLayout
-          Size="160.8,41.6"
+          Size="160.666666666667,41.3333333333334"
           Id="Package\Postcode\Lookup CountyID"
           TopLeft="413.5,311.5" />
         <NodeLayout
-          Size="152.8,41.6"
+          Size="152.666666666667,41.3333333333334"
           Id="Package\Postcode\Lookup TownID"
           TopLeft="417.5,209.5" />
         <EdgeLayout

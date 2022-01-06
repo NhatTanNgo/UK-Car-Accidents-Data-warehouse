@@ -507,20 +507,20 @@
         <NumberOfDistinctValues>67</NumberOfDistinctValues>
         <ValueDistribution>
           <ValueDistributionItem>
-            <Value>5</Value>
-            <Count>850</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
-            <Value>2</Value>
-            <Count>316837</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
             <Value>1</Value>
             <Count>433031</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
+            <Value>5</Value>
+            <Count>850</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
             <Value>4</Value>
             <Count>3897</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2</Value>
+            <Count>316837</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
             <Value>3</Value>
@@ -535,12 +535,8 @@
         <NumberOfDistinctValues>97</NumberOfDistinctValues>
         <ValueDistribution>
           <ValueDistributionItem>
-            <Value>7</Value>
-            <Count>924</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
-            <Value>5</Value>
-            <Count>5692</Count>
+            <Value>4</Value>
+            <Count>15108</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
             <Value>1</Value>
@@ -555,12 +551,16 @@
             <Count>131554</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
-            <Value>4</Value>
-            <Count>15108</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
             <Value>3</Value>
             <Count>41380</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>7</Value>
+            <Count>924</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>5</Value>
+            <Count>5692</Count>
           </ValueDistributionItem>
         </ValueDistribution>
       </ColumnValueDistributionProfile>
@@ -575,12 +575,12 @@
             <Count>180229</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
-            <Value>3</Value>
-            <Count>100197</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
             <Value>1</Value>
             <Count>497394</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>3</Value>
+            <Count>100197</Count>
           </ValueDistributionItem>
         </ValueDistribution>
       </ColumnValueDistributionProfile>
@@ -591,12 +591,12 @@
         <NumberOfDistinctValues>3</NumberOfDistinctValues>
         <ValueDistribution>
           <ValueDistributionItem>
-            <Value>1</Value>
-            <Count>457211</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
             <Value>2</Value>
             <Count>320581</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>1</Value>
+            <Count>457211</Count>
           </ValueDistributionItem>
         </ValueDistribution>
       </ColumnValueDistributionProfile>
@@ -606,306 +606,6 @@
         <Column Name="Age_of_Casualty" SqlDbType="VarChar" MaxLength="50" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
         <NumberOfDistinctValues>105</NumberOfDistinctValues>
         <ValueDistribution>
-          <ValueDistributionItem>
-            <Value>19</Value>
-            <Count>22887</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
-            <Value>27</Value>
-            <Count>16336</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
-            <Value>32</Value>
-            <Count>13993</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
-            <Value>37</Value>
-            <Count>11434</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
-            <Value>4</Value>
-            <Count>3269</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
-            <Value>40</Value>
-            <Count>13744</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
-            <Value>52</Value>
-            <Count>9623</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
-            <Value>64</Value>
-            <Count>5010</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
-            <Value>67</Value>
-            <Count>4082</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
-            <Value>76</Value>
-            <Count>2730</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
-            <Value>86</Value>
-            <Count>1241</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
-            <Value>2</Value>
-            <Count>2392</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
-            <Value>21</Value>
-            <Count>21851</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
-            <Value>31</Value>
-            <Count>14186</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
-            <Value>38</Value>
-            <Count>11750</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
-            <Value>41</Value>
-            <Count>12346</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
-            <Value>68</Value>
-            <Count>3679</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
-            <Value>85</Value>
-            <Count>1571</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
-            <Value>87</Value>
-            <Count>1114</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
-            <Value>-1</Value>
-            <Count>12889</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
-            <Value>11</Value>
-            <Count>6474</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
-            <Value>16</Value>
-            <Count>11394</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
-            <Value>23</Value>
-            <Count>20391</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
-            <Value>24</Value>
-            <Count>18943</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
-            <Value>44</Value>
-            <Count>12140</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
-            <Value>45</Value>
-            <Count>12583</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
-            <Value>5</Value>
-            <Count>3576</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
-            <Value>65</Value>
-            <Count>5032</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
-            <Value>71</Value>
-            <Count>2971</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
-            <Value>72</Value>
-            <Count>2913</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
-            <Value>89</Value>
-            <Count>784</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
-            <Value>22</Value>
-            <Count>20868</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
-            <Value>25</Value>
-            <Count>19434</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
-            <Value>43</Value>
-            <Count>12450</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
-            <Value>46</Value>
-            <Count>12015</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
-            <Value>63</Value>
-            <Count>5129</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
-            <Value>66</Value>
-            <Count>4301</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
-            <Value>70</Value>
-            <Count>3757</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
-            <Value>73</Value>
-            <Count>2866</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
-            <Value>12</Value>
-            <Count>6946</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
-            <Value>18</Value>
-            <Count>22669</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
-            <Value>26</Value>
-            <Count>17489</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
-            <Value>28</Value>
-            <Count>16126</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
-            <Value>3</Value>
-            <Count>3003</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
-            <Value>48</Value>
-            <Count>11581</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
-            <Value>51</Value>
-            <Count>9827</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
-            <Value>53</Value>
-            <Count>8949</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
-            <Value>58</Value>
-            <Count>6439</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
-            <Value>61</Value>
-            <Count>5328</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
-            <Value>75</Value>
-            <Count>3013</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
-            <Value>77</Value>
-            <Count>2562</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
-            <Value>80</Value>
-            <Count>2604</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
-            <Value>9</Value>
-            <Count>4479</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
-            <Value>14</Value>
-            <Count>6360</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
-            <Value>20</Value>
-            <Count>22572</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
-            <Value>34</Value>
-            <Count>12538</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
-            <Value>36</Value>
-            <Count>11576</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
-            <Value>55</Value>
-            <Count>8018</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
-            <Value>7</Value>
-            <Count>4048</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
-            <Value>79</Value>
-            <Count>2462</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
-            <Value>82</Value>
-            <Count>2062</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
-            <Value>84</Value>
-            <Count>1654</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
-            <Value>13</Value>
-            <Count>6272</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
-            <Value>15</Value>
-            <Count>6702</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
-            <Value>33</Value>
-            <Count>13274</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
-            <Value>35</Value>
-            <Count>13076</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
-            <Value>47</Value>
-            <Count>11616</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
-            <Value>54</Value>
-            <Count>8290</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
-            <Value>56</Value>
-            <Count>7462</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
-            <Value>57</Value>
-            <Count>6666</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
-            <Value>60</Value>
-            <Count>6562</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
-            <Value>78</Value>
-            <Count>2470</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
-            <Value>8</Value>
-            <Count>4223</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
-            <Value>81</Value>
-            <Count>2188</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
-            <Value>83</Value>
-            <Count>1909</Count>
-          </ValueDistributionItem>
           <ValueDistributionItem>
             <Value>1</Value>
             <Count>1783</Count>
@@ -966,6 +666,306 @@
             <Value>88</Value>
             <Count>902</Count>
           </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>12</Value>
+            <Count>6946</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>18</Value>
+            <Count>22669</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>26</Value>
+            <Count>17489</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>28</Value>
+            <Count>16126</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>3</Value>
+            <Count>3003</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>48</Value>
+            <Count>11581</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>51</Value>
+            <Count>9827</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>53</Value>
+            <Count>8949</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>58</Value>
+            <Count>6439</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>61</Value>
+            <Count>5328</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>75</Value>
+            <Count>3013</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>77</Value>
+            <Count>2562</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>80</Value>
+            <Count>2604</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>9</Value>
+            <Count>4479</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>22</Value>
+            <Count>20868</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>25</Value>
+            <Count>19434</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>43</Value>
+            <Count>12450</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>46</Value>
+            <Count>12015</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>63</Value>
+            <Count>5129</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>66</Value>
+            <Count>4301</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>70</Value>
+            <Count>3757</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>73</Value>
+            <Count>2866</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>-1</Value>
+            <Count>12889</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>11</Value>
+            <Count>6474</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>16</Value>
+            <Count>11394</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>23</Value>
+            <Count>20391</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>24</Value>
+            <Count>18943</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>44</Value>
+            <Count>12140</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>45</Value>
+            <Count>12583</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>5</Value>
+            <Count>3576</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>65</Value>
+            <Count>5032</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>71</Value>
+            <Count>2971</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>72</Value>
+            <Count>2913</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>89</Value>
+            <Count>784</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>14</Value>
+            <Count>6360</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>20</Value>
+            <Count>22572</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>34</Value>
+            <Count>12538</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>36</Value>
+            <Count>11576</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>55</Value>
+            <Count>8018</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>7</Value>
+            <Count>4048</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>79</Value>
+            <Count>2462</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>82</Value>
+            <Count>2062</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>84</Value>
+            <Count>1654</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>19</Value>
+            <Count>22887</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>27</Value>
+            <Count>16336</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>32</Value>
+            <Count>13993</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>37</Value>
+            <Count>11434</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>4</Value>
+            <Count>3269</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>40</Value>
+            <Count>13744</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>52</Value>
+            <Count>9623</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>64</Value>
+            <Count>5010</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>67</Value>
+            <Count>4082</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>76</Value>
+            <Count>2730</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>86</Value>
+            <Count>1241</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>13</Value>
+            <Count>6272</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>15</Value>
+            <Count>6702</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>33</Value>
+            <Count>13274</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>35</Value>
+            <Count>13076</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>47</Value>
+            <Count>11616</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>54</Value>
+            <Count>8290</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>56</Value>
+            <Count>7462</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>57</Value>
+            <Count>6666</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>60</Value>
+            <Count>6562</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>78</Value>
+            <Count>2470</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>8</Value>
+            <Count>4223</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>81</Value>
+            <Count>2188</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>83</Value>
+            <Count>1909</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2</Value>
+            <Count>2392</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>21</Value>
+            <Count>21851</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>31</Value>
+            <Count>14186</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>38</Value>
+            <Count>11750</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>41</Value>
+            <Count>12346</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>68</Value>
+            <Count>3679</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>85</Value>
+            <Count>1571</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>87</Value>
+            <Count>1114</Count>
+          </ValueDistributionItem>
         </ValueDistribution>
       </ColumnValueDistributionProfile>
       <ColumnValueDistributionProfile IsExact="true" ProfileRequestID="ValueDistReq">
@@ -975,12 +975,12 @@
         <NumberOfDistinctValues>12</NumberOfDistinctValues>
         <ValueDistribution>
           <ValueDistributionItem>
-            <Value>2</Value>
-            <Count>21748</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
             <Value>7</Value>
             <Count>122663</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>4</Value>
+            <Count>98091</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
             <Value>3</Value>
@@ -991,12 +991,20 @@
             <Count>59035</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
-            <Value>4</Value>
-            <Count>98091</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
             <Value>8</Value>
             <Count>102541</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>1</Value>
+            <Count>14706</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>10</Value>
+            <Count>33825</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>6</Value>
+            <Count>149646</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
             <Value>-1</Value>
@@ -1011,16 +1019,8 @@
             <Count>101487</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
-            <Value>1</Value>
-            <Count>14706</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
-            <Value>10</Value>
-            <Count>33825</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
-            <Value>6</Value>
-            <Count>149646</Count>
+            <Value>2</Value>
+            <Count>21748</Count>
           </ValueDistributionItem>
         </ValueDistribution>
       </ColumnValueDistributionProfile>
@@ -1035,12 +1035,12 @@
             <Count>90625</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
-            <Value>1</Value>
-            <Count>7143</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
             <Value>3</Value>
             <Count>680052</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>1</Value>
+            <Count>7143</Count>
           </ValueDistributionItem>
         </ValueDistribution>
       </ColumnValueDistributionProfile>
@@ -1051,12 +1051,12 @@
         <NumberOfDistinctValues>12</NumberOfDistinctValues>
         <ValueDistribution>
           <ValueDistributionItem>
-            <Value>5</Value>
-            <Count>46755</Count>
+            <Value>9</Value>
+            <Count>10580</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
-            <Value>4</Value>
-            <Count>8874</Count>
+            <Value>0</Value>
+            <Count>677623</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
             <Value>1</Value>
@@ -1071,16 +1071,16 @@
             <Count>10094</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
+            <Value>5</Value>
+            <Count>46755</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>4</Value>
+            <Count>8874</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
             <Value>8</Value>
             <Count>2903</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
-            <Value>9</Value>
-            <Count>10580</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
-            <Value>0</Value>
-            <Count>677623</Count>
           </ValueDistributionItem>
         </ValueDistribution>
       </ColumnValueDistributionProfile>
@@ -1091,12 +1091,20 @@
         <NumberOfDistinctValues>11</NumberOfDistinctValues>
         <ValueDistribution>
           <ValueDistributionItem>
+            <Value>0</Value>
+            <Count>677623</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
             <Value>2</Value>
             <Count>8238</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
-            <Value>7</Value>
-            <Count>1338</Count>
+            <Value>1</Value>
+            <Count>35767</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>4</Value>
+            <Count>5430</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
             <Value>3</Value>
@@ -1111,20 +1119,12 @@
             <Count>2213</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
-            <Value>1</Value>
-            <Count>35767</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
-            <Value>4</Value>
-            <Count>5430</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
             <Value>5</Value>
             <Count>5110</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
-            <Value>0</Value>
-            <Count>677623</Count>
+            <Value>7</Value>
+            <Count>1338</Count>
           </ValueDistributionItem>
         </ValueDistribution>
       </ColumnValueDistributionProfile>
@@ -1135,16 +1135,16 @@
         <NumberOfDistinctValues>4</NumberOfDistinctValues>
         <ValueDistribution>
           <ValueDistributionItem>
+            <Value>2</Value>
+            <Count>55294</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
             <Value>0</Value>
             <Count>625322</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
             <Value>1</Value>
             <Count>96821</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
-            <Value>2</Value>
-            <Count>55294</Count>
           </ValueDistributionItem>
         </ValueDistribution>
       </ColumnValueDistributionProfile>
@@ -1159,20 +1159,20 @@
             <Count>12240</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
-            <Value>1</Value>
-            <Count>1139</Count>
+            <Value>0</Value>
+            <Count>757765</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
             <Value>2</Value>
             <Count>1085</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
-            <Value>3</Value>
-            <Count>5562</Count>
+            <Value>1</Value>
+            <Count>1139</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
-            <Value>0</Value>
-            <Count>757765</Count>
+            <Value>3</Value>
+            <Count>5562</Count>
           </ValueDistributionItem>
         </ValueDistribution>
       </ColumnValueDistributionProfile>
@@ -1199,12 +1199,24 @@
         <NumberOfDistinctValues>21</NumberOfDistinctValues>
         <ValueDistribution>
           <ValueDistributionItem>
-            <Value>8</Value>
-            <Count>11270</Count>
+            <Value>0</Value>
+            <Count>100197</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
-            <Value>20</Value>
-            <Count>1853</Count>
+            <Value>19</Value>
+            <Count>18373</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>4</Value>
+            <Count>9038</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>3</Value>
+            <Count>29415</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>9</Value>
+            <Count>456371</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
             <Value>1</Value>
@@ -1219,6 +1231,14 @@
             <Count>3447</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
+            <Value>8</Value>
+            <Count>11270</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>20</Value>
+            <Count>1853</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
             <Value>2</Value>
             <Count>10659</Count>
           </ValueDistributionItem>
@@ -1227,32 +1247,12 @@
             <Count>3550</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
-            <Value>3</Value>
-            <Count>29415</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
-            <Value>9</Value>
-            <Count>456371</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
-            <Value>19</Value>
-            <Count>18373</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
-            <Value>4</Value>
-            <Count>9038</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
             <Value>11</Value>
             <Count>21482</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
             <Value>5</Value>
             <Count>29239</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
-            <Value>0</Value>
-            <Count>100197</Count>
           </ValueDistributionItem>
         </ValueDistribution>
       </ColumnValueDistributionProfile>
@@ -1271,12 +1271,12 @@
             <Count>545748</Count>
           </ValueDistributionItem>
           <ValueDistributionItem>
-            <Value>-1</Value>
-            <Count>88885</Count>
-          </ValueDistributionItem>
-          <ValueDistributionItem>
             <Value>3</Value>
             <Count>79206</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>-1</Value>
+            <Count>88885</Count>
           </ValueDistributionItem>
         </ValueDistribution>
       </ColumnValueDistributionProfile>
@@ -1298,11 +1298,11 @@
         <TopRegexPatterns>
           <PatternDistributionItem>
             <RegexText>1</RegexText>
-            <Frequency>55</Frequency>
+            <Frequency>56</Frequency>
           </PatternDistributionItem>
           <PatternDistributionItem>
             <RegexText>2</RegexText>
-            <Frequency>42</Frequency>
+            <Frequency>41</Frequency>
           </PatternDistributionItem>
         </TopRegexPatterns>
       </ColumnPatternProfile>
@@ -1313,15 +1313,15 @@
         <TopRegexPatterns>
           <PatternDistributionItem>
             <RegexText>1</RegexText>
-            <Frequency>75</Frequency>
+            <Frequency>73</Frequency>
           </PatternDistributionItem>
           <PatternDistributionItem>
             <RegexText>2</RegexText>
-            <Frequency>16</Frequency>
+            <Frequency>17</Frequency>
           </PatternDistributionItem>
           <PatternDistributionItem>
             <RegexText>3</RegexText>
-            <Frequency>5</Frequency>
+            <Frequency>6</Frequency>
           </PatternDistributionItem>
         </TopRegexPatterns>
       </ColumnPatternProfile>
@@ -1332,15 +1332,15 @@
         <TopRegexPatterns>
           <PatternDistributionItem>
             <RegexText>1</RegexText>
-            <Frequency>65</Frequency>
+            <Frequency>63</Frequency>
           </PatternDistributionItem>
           <PatternDistributionItem>
             <RegexText>2</RegexText>
-            <Frequency>23</Frequency>
+            <Frequency>24</Frequency>
           </PatternDistributionItem>
           <PatternDistributionItem>
             <RegexText>3</RegexText>
-            <Frequency>12</Frequency>
+            <Frequency>13</Frequency>
           </PatternDistributionItem>
         </TopRegexPatterns>
       </ColumnPatternProfile>
@@ -1384,12 +1384,8 @@
             <Frequency>90</Frequency>
           </PatternDistributionItem>
           <PatternDistributionItem>
-            <RegexText>10</RegexText>
-            <Frequency>5</Frequency>
-          </PatternDistributionItem>
-          <PatternDistributionItem>
             <RegexText>\d\d</RegexText>
-            <Frequency>3</Frequency>
+            <Frequency>8</Frequency>
           </PatternDistributionItem>
         </TopRegexPatterns>
       </ColumnPatternProfile>
@@ -1400,11 +1396,11 @@
         <TopRegexPatterns>
           <PatternDistributionItem>
             <RegexText>3</RegexText>
-            <Frequency>88</Frequency>
+            <Frequency>87</Frequency>
           </PatternDistributionItem>
           <PatternDistributionItem>
             <RegexText>2</RegexText>
-            <Frequency>11</Frequency>
+            <Frequency>12</Frequency>
           </PatternDistributionItem>
         </TopRegexPatterns>
       </ColumnPatternProfile>
@@ -1434,11 +1430,11 @@
         <TopRegexPatterns>
           <PatternDistributionItem>
             <RegexText>0</RegexText>
-            <Frequency>88</Frequency>
+            <Frequency>87</Frequency>
           </PatternDistributionItem>
           <PatternDistributionItem>
             <RegexText>\d</RegexText>
-            <Frequency>12</Frequency>
+            <Frequency>13</Frequency>
           </PatternDistributionItem>
         </TopRegexPatterns>
       </ColumnPatternProfile>
@@ -1449,7 +1445,7 @@
         <TopRegexPatterns>
           <PatternDistributionItem>
             <RegexText>0</RegexText>
-            <Frequency>80</Frequency>
+            <Frequency>81</Frequency>
           </PatternDistributionItem>
           <PatternDistributionItem>
             <RegexText>1</RegexText>
@@ -1479,7 +1475,7 @@
         <TopRegexPatterns>
           <PatternDistributionItem>
             <RegexText>0</RegexText>
-            <Frequency>97</Frequency>
+            <Frequency>96</Frequency>
           </PatternDistributionItem>
         </TopRegexPatterns>
       </ColumnPatternProfile>
@@ -1494,7 +1490,7 @@
           </PatternDistributionItem>
           <PatternDistributionItem>
             <RegexText>\d</RegexText>
-            <Frequency>35</Frequency>
+            <Frequency>34</Frequency>
           </PatternDistributionItem>
           <PatternDistributionItem>
             <RegexText>\d\d</RegexText>
@@ -1509,7 +1505,7 @@
         <TopRegexPatterns>
           <PatternDistributionItem>
             <RegexText>1</RegexText>
-            <Frequency>70</Frequency>
+            <Frequency>71</Frequency>
           </PatternDistributionItem>
           <PatternDistributionItem>
             <RegexText>-1</RegexText>
