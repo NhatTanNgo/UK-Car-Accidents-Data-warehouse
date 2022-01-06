@@ -5,20 +5,20 @@
   DTS:CreationName="Microsoft.Package"
   DTS:CreatorComputerName="DUSC"
   DTS:CreatorName="DUSC\Duc"
-  DTS:DTSID="{3435C4C3-2295-4A07-AA26-A16D9A4F835C}"
+  DTS:DTSID="{2CD630A7-47A9-44D7-B0F8-1847E90E137E}"
   DTS:ExecutableType="Microsoft.Package"
   DTS:LastModifiedProductVersion="15.0.2000.170"
   DTS:LocaleID="1033"
-  DTS:ObjectName="Package1"
+  DTS:ObjectName="pDDS_FactAccidentVehicle"
   DTS:PackageType="5"
-  DTS:VersionBuild="8"
-  DTS:VersionGUID="{6B4273CA-03EB-43B7-AB50-568252C8DC8E}">
+  DTS:VersionBuild="9"
+  DTS:VersionGUID="{E87328EE-41F0-492A-8978-52099BD2B8E7}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables>
     <DTS:Variable
       DTS:CreationName=""
-      DTS:DTSID="{476995AA-19E8-4B27-B0B6-89302F1A9477}"
+      DTS:DTSID="{BE0DD1F3-2335-4AB7-AA73-D9510BDDBEE1}"
       DTS:IncludeInDebugDump="6789"
       DTS:Namespace="User"
       DTS:ObjectName="CETResult">
@@ -27,7 +27,7 @@
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
-      DTS:DTSID="{52FD4D65-E80D-449B-AC98-66B3A3131228}"
+      DTS:DTSID="{BD776EE6-17F0-44E0-8D75-D33250D3D83C}"
       DTS:IncludeInDebugDump="6789"
       DTS:Namespace="User"
       DTS:ObjectName="LSETResult">
@@ -40,7 +40,7 @@
       DTS:refId="Package\Data Flow Task"
       DTS:CreationName="Microsoft.Pipeline"
       DTS:Description="Data Flow Task"
-      DTS:DTSID="{DC1DEC70-FE22-4B37-AF3A-1664BBF76592}"
+      DTS:DTSID="{343ED58D-653C-42FE-B435-1B0D450FB012}"
       DTS:ExecutableType="Microsoft.Pipeline"
       DTS:LocaleID="-1"
       DTS:ObjectName="Data Flow Task"
@@ -120,8 +120,8 @@ where [refTable].[VehicleKey] = ?</property>
               <connections>
                 <connection
                   refId="Package\Data Flow Task\check data exist.Connections[OleDbConnection]"
-                  connectionManagerID="{E41874B6-BE37-4CD6-ADE3-B77F7AA958CD}:external"
-                  connectionManagerRefId="Project.ConnectionManagers[LocalHost.DDS_DATH]"
+                  connectionManagerID="{E41874B6-BE37-4CD6-ADE3-B77F7AA958CD}:invalid"
+                  connectionManagerRefId="{E41874B6-BE37-4CD6-ADE3-B77F7AA958CD}:invalid"
                   description="Connection manager used to access lookup data."
                   name="OleDbConnection" />
               </connections>
@@ -250,8 +250,8 @@ where [refTable].[VehicleKey] = ?</property>
               <connections>
                 <connection
                   refId="Package\Data Flow Task\insert.Connections[OleDbConnection]"
-                  connectionManagerID="{E41874B6-BE37-4CD6-ADE3-B77F7AA958CD}:external"
-                  connectionManagerRefId="Project.ConnectionManagers[LocalHost.DDS_DATH]"
+                  connectionManagerID="{E41874B6-BE37-4CD6-ADE3-B77F7AA958CD}:invalid"
+                  connectionManagerRefId="{E41874B6-BE37-4CD6-ADE3-B77F7AA958CD}:invalid"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -980,8 +980,8 @@ where [refTable].[Date] = ?</property>
               <connections>
                 <connection
                   refId="Package\Data Flow Task\Lookup date key.Connections[OleDbConnection]"
-                  connectionManagerID="{E41874B6-BE37-4CD6-ADE3-B77F7AA958CD}:external"
-                  connectionManagerRefId="Project.ConnectionManagers[LocalHost.DDS_DATH]"
+                  connectionManagerID="{E41874B6-BE37-4CD6-ADE3-B77F7AA958CD}:invalid"
+                  connectionManagerRefId="{E41874B6-BE37-4CD6-ADE3-B77F7AA958CD}:invalid"
                   description="Connection manager used to access lookup data."
                   name="OleDbConnection" />
               </connections>
@@ -1137,8 +1137,8 @@ where [refTable].[PurposeNK] = ?</property>
               <connections>
                 <connection
                   refId="Package\Data Flow Task\Lookup JourneyPurpose key.Connections[OleDbConnection]"
-                  connectionManagerID="{E41874B6-BE37-4CD6-ADE3-B77F7AA958CD}:external"
-                  connectionManagerRefId="Project.ConnectionManagers[LocalHost.DDS_DATH]"
+                  connectionManagerID="{E41874B6-BE37-4CD6-ADE3-B77F7AA958CD}:invalid"
+                  connectionManagerRefId="{E41874B6-BE37-4CD6-ADE3-B77F7AA958CD}:invalid"
                   description="Connection manager used to access lookup data."
                   name="OleDbConnection" />
               </connections>
@@ -1454,8 +1454,8 @@ where [refTable].[Hour] = ? and [refTable].[Minute] = ?</property>
               <connections>
                 <connection
                   refId="Package\Data Flow Task\Lookup time key.Connections[OleDbConnection]"
-                  connectionManagerID="{E41874B6-BE37-4CD6-ADE3-B77F7AA958CD}:external"
-                  connectionManagerRefId="Project.ConnectionManagers[LocalHost.DDS_DATH]"
+                  connectionManagerID="{E41874B6-BE37-4CD6-ADE3-B77F7AA958CD}:invalid"
+                  connectionManagerRefId="{E41874B6-BE37-4CD6-ADE3-B77F7AA958CD}:invalid"
                   description="Connection manager used to access lookup data."
                   name="OleDbConnection" />
               </connections>
@@ -1629,8 +1629,8 @@ where [refTable].[VehicleNK] = ?</property>
               <connections>
                 <connection
                   refId="Package\Data Flow Task\Lookup vehicle type.Connections[OleDbConnection]"
-                  connectionManagerID="{E41874B6-BE37-4CD6-ADE3-B77F7AA958CD}:external"
-                  connectionManagerRefId="Project.ConnectionManagers[LocalHost.DDS_DATH]"
+                  connectionManagerID="{E41874B6-BE37-4CD6-ADE3-B77F7AA958CD}:invalid"
+                  connectionManagerRefId="{E41874B6-BE37-4CD6-ADE3-B77F7AA958CD}:invalid"
                   description="Connection manager used to access lookup data."
                   name="OleDbConnection" />
               </connections>
@@ -1764,7 +1764,7 @@ or (Update_time &gt;= ? and Update_time &lt;= ?)</property>
                 <property
                   dataType="System.String"
                   description="The mappings between the parameters in the SQL command and variables."
-                  name="ParameterMapping">"Parameter0:Input",{52FD4D65-E80D-449B-AC98-66B3A3131228};"Parameter1:Input",{476995AA-19E8-4B27-B0B6-89302F1A9477};"Parameter2:Input",{52FD4D65-E80D-449B-AC98-66B3A3131228};"Parameter3:Input",{476995AA-19E8-4B27-B0B6-89302F1A9477};</property>
+                  name="ParameterMapping">"Parameter0:Input",{BD776EE6-17F0-44E0-8D75-D33250D3D83C};"Parameter1:Input",{BE0DD1F3-2335-4AB7-AA73-D9510BDDBEE1};"Parameter2:Input",{BD776EE6-17F0-44E0-8D75-D33250D3D83C};"Parameter3:Input",{BE0DD1F3-2335-4AB7-AA73-D9510BDDBEE1};</property>
               </properties>
               <connections>
                 <connection
@@ -2176,8 +2176,8 @@ and [AccidentKey] = ?
               <connections>
                 <connection
                   refId="Package\Data Flow Task\update.Connections[OleDbConnection]"
-                  connectionManagerID="{E41874B6-BE37-4CD6-ADE3-B77F7AA958CD}:external"
-                  connectionManagerRefId="Project.ConnectionManagers[LocalHost.DDS_DATH]"
+                  connectionManagerID="{E41874B6-BE37-4CD6-ADE3-B77F7AA958CD}:invalid"
+                  connectionManagerRefId="{E41874B6-BE37-4CD6-ADE3-B77F7AA958CD}:invalid"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -2502,7 +2502,7 @@ and [AccidentKey] = ?
       DTS:refId="Package\Get CET &amp; LSET"
       DTS:CreationName="Microsoft.ExecuteSQLTask"
       DTS:Description="Execute SQL Task"
-      DTS:DTSID="{0bca26fb-10dd-4aa6-b0fd-34987958398a}"
+      DTS:DTSID="{F446BBD3-CCA9-4F8B-800A-67148F68D9F4}"
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="Get CET &amp; LSET"
@@ -2527,7 +2527,7 @@ and [AccidentKey] = ?
       DTS:refId="Package\Update LSET"
       DTS:CreationName="Microsoft.ExecuteSQLTask"
       DTS:Description="Execute SQL Task"
-      DTS:DTSID="{12790206-6769-49a0-adcf-402243b83925}"
+      DTS:DTSID="{7B8E2430-658C-42C7-A853-E0145AD6A757}"
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="Update LSET"
@@ -2545,7 +2545,7 @@ and [AccidentKey] = ?
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Constraint]"
       DTS:CreationName=""
-      DTS:DTSID="{5E77C3F0-511A-49B9-B5DB-4D22CAB1A722}"
+      DTS:DTSID="{08A69C24-067B-41B7-A6DE-B519D7962B0C}"
       DTS:From="Package\Get CET &amp; LSET"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint"
@@ -2553,7 +2553,7 @@ and [AccidentKey] = ?
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Constraint 1]"
       DTS:CreationName=""
-      DTS:DTSID="{512DFA09-D72D-4D55-AA25-D29EB4D56CAD}"
+      DTS:DTSID="{1FC8F94A-9AA1-493F-B9D9-B876C7704C55}"
       DTS:From="Package\Data Flow Task"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint 1"
@@ -2572,15 +2572,15 @@ and [AccidentKey] = ?
       <GraphLayout
         Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="150.4,41.6"
+          Size="150.666666666667,41.3333333333334"
           Id="Package\Data Flow Task"
           TopLeft="332.857148525666,69.5882362700664" />
         <NodeLayout
-          Size="164,41.6"
+          Size="164,41.3333333333334"
           Id="Package\Get CET &amp; LSET"
           TopLeft="60,60" />
         <NodeLayout
-          Size="140,41.6"
+          Size="140,41.3333333333334"
           Id="Package\Update LSET"
           TopLeft="587.142866120047,62.5999994530397" />
         <EdgeLayout
@@ -3093,19 +3093,6 @@ and [AccidentKey] = ?
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task\insert">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
     design-time-name="Package\Data Flow Task\Lookup accident severity key">
     <Properties>
       <Property>
@@ -3125,6 +3112,19 @@ and [AccidentKey] = ?
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task\insert">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
       </Property>
     </Properties>
   </PipelineComponentMetadata>

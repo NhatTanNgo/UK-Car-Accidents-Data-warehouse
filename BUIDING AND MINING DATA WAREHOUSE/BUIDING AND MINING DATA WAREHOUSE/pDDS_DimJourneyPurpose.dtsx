@@ -5,20 +5,20 @@
   DTS:CreationName="Microsoft.Package"
   DTS:CreatorComputerName="DUSC"
   DTS:CreatorName="DUSC\Duc"
-  DTS:DTSID="{9DD52CCB-FB6C-421C-91DB-B1FED3343322}"
+  DTS:DTSID="{36C0B841-14FC-49A5-9167-5CD7FD06E42F}"
   DTS:ExecutableType="Microsoft.Package"
   DTS:LastModifiedProductVersion="15.0.2000.170"
   DTS:LocaleID="1033"
-  DTS:ObjectName="DDS_DimJourneyPurpose"
+  DTS:ObjectName="pDDS_DimJourneyPurpose"
   DTS:PackageType="5"
-  DTS:VersionBuild="10"
-  DTS:VersionGUID="{CEEC7C47-8471-4AC6-A947-96DFADB6D7F2}">
+  DTS:VersionBuild="12"
+  DTS:VersionGUID="{F2E6B57A-F5AF-4ED1-9894-D93B7DF882C7}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables>
     <DTS:Variable
       DTS:CreationName=""
-      DTS:DTSID="{C75A2837-1BE1-4FD4-B4D1-C273781EA7AE}"
+      DTS:DTSID="{24819342-298E-41EA-B911-A5A55E7C2C8E}"
       DTS:IncludeInDebugDump="6789"
       DTS:Namespace="User"
       DTS:ObjectName="CETResult">
@@ -27,7 +27,7 @@
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
-      DTS:DTSID="{2791403C-46A3-4F77-A72A-C2B9F53BE802}"
+      DTS:DTSID="{5805F7D8-4881-49A8-B124-4C0507630627}"
       DTS:IncludeInDebugDump="6789"
       DTS:Namespace="User"
       DTS:ObjectName="LSETResult">
@@ -40,7 +40,7 @@
       DTS:refId="Package\Data Flow Task"
       DTS:CreationName="Microsoft.Pipeline"
       DTS:Description="Data Flow Task"
-      DTS:DTSID="{FC9AC51B-A055-4F3D-81DA-E914884A77FE}"
+      DTS:DTSID="{FDBE53E2-3275-4B2D-8DF6-AD3D9DD9E447}"
       DTS:ExecutableType="Microsoft.Pipeline"
       DTS:LocaleID="-1"
       DTS:ObjectName="Data Flow Task"
@@ -88,7 +88,7 @@
                   dataType="System.Int32"
                   description="Specifies the mode used to access the database."
                   name="AccessMode"
-                  typeConverter="AccessMode">3</property>
+                  typeConverter="AccessMode">0</property>
                 <property
                   dataType="System.Boolean"
                   description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
@@ -100,7 +100,7 @@
                 <property
                   dataType="System.String"
                   description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
-                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                  name="FastLoadOptions"></property>
                 <property
                   dataType="System.Int32"
                   description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
@@ -109,7 +109,7 @@
               <connections>
                 <connection
                   refId="Package\Data Flow Task\Insert Destination.Connections[OleDbConnection]"
-                  connectionManagerID="{E41874B6-BE37-4CD6-ADE3-B77F7AA958CD}:external"
+                  connectionManagerID="{FE586EEE-F8D2-4B75-A592-FFE0324433A8}:external"
                   connectionManagerRefId="Project.ConnectionManagers[LocalHost.DDS_DATH]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
@@ -123,13 +123,11 @@
                   name="OLE DB Destination Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Data Flow Task\Insert Destination.Inputs[OLE DB Destination Input].Columns[Code_NK]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="Code_NK"
+                      refId="Package\Data Flow Task\Insert Destination.Inputs[OLE DB Destination Input].Columns[JourneyPurpose_ID]"
+                      cachedDataType="i4"
+                      cachedName="JourneyPurpose_ID"
                       externalMetadataColumnId="Package\Data Flow Task\Insert Destination.Inputs[OLE DB Destination Input].ExternalColumns[PurposeNK]"
-                      lineageId="Package\Data Flow Task\NDS JourneyPurpose.Outputs[OLE DB Source Output].Columns[Code_NK]" />
+                      lineageId="Package\Data Flow Task\NDS JourneyPurpose.Outputs[OLE DB Source Output].Columns[JourneyPurpose_ID]" />
                     <inputColumn
                       refId="Package\Data Flow Task\Insert Destination.Inputs[OLE DB Destination Input].Columns[Label]"
                       cachedCodepage="1252"
@@ -147,9 +145,7 @@
                       name="PurposeKey" />
                     <externalMetadataColumn
                       refId="Package\Data Flow Task\Insert Destination.Inputs[OLE DB Destination Input].ExternalColumns[PurposeNK]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
+                      dataType="i4"
                       name="PurposeNK" />
                     <externalMetadataColumn
                       refId="Package\Data Flow Task\Insert Destination.Inputs[OLE DB Destination Input].ExternalColumns[PurposeName]"
@@ -233,7 +229,7 @@ or (Update_time &gt;= ? and Update_time &lt;= ?)</property>
                 <property
                   dataType="System.String"
                   description="The mappings between the parameters in the SQL command and variables."
-                  name="ParameterMapping">"Parameter0:Input",{2791403C-46A3-4F77-A72A-C2B9F53BE802};"Parameter1:Input",{C75A2837-1BE1-4FD4-B4D1-C273781EA7AE};"Parameter2:Input",{2791403C-46A3-4F77-A72A-C2B9F53BE802};"Parameter3:Input",{C75A2837-1BE1-4FD4-B4D1-C273781EA7AE};</property>
+                  name="ParameterMapping">"Parameter0:Input",{5805F7D8-4881-49A8-B124-4C0507630627};"Parameter1:Input",{24819342-298E-41EA-B911-A5A55E7C2C8E};"Parameter2:Input",{5805F7D8-4881-49A8-B124-4C0507630627};"Parameter3:Input",{24819342-298E-41EA-B911-A5A55E7C2C8E};</property>
               </properties>
               <connections>
                 <connection
@@ -422,7 +418,7 @@ or (Update_time &gt;= ? and Update_time &lt;= ?)</property>
               <connections>
                 <connection
                   refId="Package\Data Flow Task\OLE DB Command.Connections[OleDbConnection]"
-                  connectionManagerID="{E41874B6-BE37-4CD6-ADE3-B77F7AA958CD}:external"
+                  connectionManagerID="{FE586EEE-F8D2-4B75-A592-FFE0324433A8}:external"
                   connectionManagerRefId="Project.ConnectionManagers[LocalHost.DDS_DATH]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
@@ -444,13 +440,11 @@ or (Update_time &gt;= ? and Update_time &lt;= ?)</property>
                       externalMetadataColumnId="Package\Data Flow Task\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_0]"
                       lineageId="Package\Data Flow Task\NDS JourneyPurpose.Outputs[OLE DB Source Output].Columns[Label]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\OLE DB Command.Inputs[OLE DB Command Input].Columns[Code_NK]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="Code_NK"
+                      refId="Package\Data Flow Task\OLE DB Command.Inputs[OLE DB Command Input].Columns[JourneyPurpose_ID]"
+                      cachedDataType="i4"
+                      cachedName="JourneyPurpose_ID"
                       externalMetadataColumnId="Package\Data Flow Task\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_1]"
-                      lineageId="Package\Data Flow Task\NDS JourneyPurpose.Outputs[OLE DB Source Output].Columns[Code_NK]" />
+                      lineageId="Package\Data Flow Task\NDS JourneyPurpose.Outputs[OLE DB Source Output].Columns[JourneyPurpose_ID]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -469,15 +463,13 @@ or (Update_time &gt;= ? and Update_time &lt;= ?)</property>
                     </externalMetadataColumn>
                     <externalMetadataColumn
                       refId="Package\Data Flow Task\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_1]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
+                      dataType="i4"
                       name="Param_1">
                       <properties>
                         <property
                           dataType="System.Int32"
                           description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
-                          name="DBParamInfoFlags">65</property>
+                          name="DBParamInfoFlags">81</property>
                       </properties>
                     </externalMetadataColumn>
                   </externalMetadataColumns>
@@ -565,7 +557,7 @@ or (Update_time &gt;= ? and Update_time &lt;= ?)</property>
               <connections>
                 <connection
                   refId="Package\Data Flow Task\Slowly Changing Dimension.Connections[LookupConnection]"
-                  connectionManagerID="{E41874B6-BE37-4CD6-ADE3-B77F7AA958CD}:external"
+                  connectionManagerID="{FE586EEE-F8D2-4B75-A592-FFE0324433A8}:external"
                   connectionManagerRefId="Project.ConnectionManagers[LocalHost.DDS_DATH]"
                   description="Defines the connection to use for lookups in the dimension table"
                   name="LookupConnection" />
@@ -591,13 +583,11 @@ or (Update_time &gt;= ? and Update_time &lt;= ?)</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\Data Flow Task\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input].Columns[Code_NK]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="Code_NK"
+                      refId="Package\Data Flow Task\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input].Columns[JourneyPurpose_ID]"
+                      cachedDataType="i4"
+                      cachedName="JourneyPurpose_ID"
                       externalMetadataColumnId="Package\Data Flow Task\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input].ExternalColumns[PurposeNK]"
-                      lineageId="Package\Data Flow Task\NDS JourneyPurpose.Outputs[OLE DB Source Output].Columns[Code_NK]">
+                      lineageId="Package\Data Flow Task\NDS JourneyPurpose.Outputs[OLE DB Source Output].Columns[JourneyPurpose_ID]">
                       <properties>
                         <property
                           dataType="System.Int32"
@@ -616,9 +606,7 @@ or (Update_time &gt;= ? and Update_time &lt;= ?)</property>
                       name="PurposeName" />
                     <externalMetadataColumn
                       refId="Package\Data Flow Task\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input].ExternalColumns[PurposeNK]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
+                      dataType="i4"
                       name="PurposeNK" />
                   </externalMetadataColumns>
                 </input>
@@ -699,7 +687,7 @@ or (Update_time &gt;= ? and Update_time &lt;= ?)</property>
       DTS:refId="Package\Get CET &amp; LSET"
       DTS:CreationName="Microsoft.ExecuteSQLTask"
       DTS:Description="Execute SQL Task"
-      DTS:DTSID="{989f67d6-e2b8-454c-bf48-d16508843d1f}"
+      DTS:DTSID="{F418A128-83CB-424F-BA17-386D719DEA52}"
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="Get CET &amp; LSET"
@@ -724,7 +712,7 @@ or (Update_time &gt;= ? and Update_time &lt;= ?)</property>
       DTS:refId="Package\Update LSET"
       DTS:CreationName="Microsoft.ExecuteSQLTask"
       DTS:Description="Execute SQL Task"
-      DTS:DTSID="{5ad0329c-40d3-42f4-89d2-4177adec237a}"
+      DTS:DTSID="{97CAD764-20C9-40DD-8673-5B4B9239ACD7}"
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="Update LSET"
@@ -742,7 +730,7 @@ or (Update_time &gt;= ? and Update_time &lt;= ?)</property>
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Constraint]"
       DTS:CreationName=""
-      DTS:DTSID="{1032143A-5666-4033-B9BE-35BEF5A03FD4}"
+      DTS:DTSID="{AE410751-CB78-4BDA-8BDB-9A8A22457075}"
       DTS:From="Package\Get CET &amp; LSET"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint"
@@ -750,7 +738,7 @@ or (Update_time &gt;= ? and Update_time &lt;= ?)</property>
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Constraint 1]"
       DTS:CreationName=""
-      DTS:DTSID="{F48436F8-76E4-4D1E-8E06-6EAE7489D927}"
+      DTS:DTSID="{8010C14A-DA1D-4835-AB53-AE39E5874452}"
       DTS:From="Package\Data Flow Task"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint 1"
@@ -769,31 +757,31 @@ or (Update_time &gt;= ? and Update_time &lt;= ?)</property>
       <GraphLayout
         Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="150.4,41.6"
+          Size="150.666666666667,41.3333333333334"
           Id="Package\Data Flow Task"
-          TopLeft="330.000005619867,60.4117655531345" />
+          TopLeft="303.125006020336,59.1117655763803" />
         <NodeLayout
-          Size="164,41.6"
+          Size="164,41.3333333333334"
           Id="Package\Get CET &amp; LSET"
           TopLeft="60,60" />
         <NodeLayout
-          Size="140,41.6"
+          Size="140,41.3333333333334"
           Id="Package\Update LSET"
-          TopLeft="559.285722788499,54.9529405222637" />
+          TopLeft="545.53572299339,53.6529405455095" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
-          TopLeft="224,81.0058827765673">
+          TopLeft="224,80.2225494548568">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="106.000005619867,0"
+              EndConnector="79.1250060203357,0"
               Start="0,0"
-              End="98.5000056198667,0">
+              End="71.6250060203357,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="98.5000056198667,0" />
+                    End="71.6250060203357,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -804,18 +792,18 @@ or (Update_time &gt;= ? and Update_time &lt;= ?)</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 1]"
-          TopLeft="480.400005619867,78.4823530376991">
+          TopLeft="453.791672687002,77.0490197276116">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="78.8857171686325,0"
+              EndConnector="91.7440503063876,0"
               Start="0,0"
-              End="71.3857171686325,0">
+              End="84.2440503063876,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="71.3857171686325,0" />
+                    End="84.2440503063876,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -833,24 +821,82 @@ or (Update_time &gt;= ? and Update_time &lt;= ?)</property>
       <GraphLayout
         Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="176.8,41.6"
+          Size="176.666666666667,41.3333333333334"
           Id="Package\Data Flow Task\NDS JourneyPurpose"
-          TopLeft="222.3,5.49999999999995" />
+          TopLeft="225.166666666667,5.49999999999996" />
         <NodeLayout
-          Size="162.4,41.6"
-          Id="Package\Data Flow Task\Insert Destination"
-          TopLeft="5.50000000000004,208.7" />
-        <NodeLayout
-          Size="164.8,41.6"
-          Id="Package\Data Flow Task\OLE DB Command"
-          TopLeft="228.3,208.7" />
-        <NodeLayout
-          Size="208,41.6"
+          Size="208,41.3333333333334"
           Id="Package\Data Flow Task\Slowly Changing Dimension"
-          TopLeft="206.7,107.1" />
+          TopLeft="209.5,106.833333333333" />
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[OLE DB Source Output]"
+          TopLeft="313.5,46.8333333333333">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,59.9999999999999"
+              Start="0,0"
+              End="0,52.4999999999999">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.4999999999999" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="164,42.6666666666667"
+          Id="Package\Data Flow Task\Insert Destination"
+          TopLeft="5.50000000000006,208.166666666667" />
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[New Output]"
+          TopLeft="280.166666666667,148.166666666667">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-192.666666666667,60"
+              Start="0,0"
+              End="-192.666666666667,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,20.2748091603054" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,20.2748091603054"
+                    Point2="0,24.2748091603054"
+                    Point3="-4,24.2748091603054" />
+                  <mssgle:LineSegment
+                    End="-188.666666666667,24.2748091603054" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-188.666666666667,24.2748091603054"
+                    Point2="-192.666666666667,24.2748091603054"
+                    Point3="-192.666666666667,28.2748091603054" />
+                  <mssgle:LineSegment
+                    End="-192.666666666667,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-123.424720052083,29.2748091603054,54.1827734375,11.43359375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="166.666666666667,42.6666666666667"
+          Id="Package\Data Flow Task\OLE DB Command"
+          TopLeft="230.166666666667,208.166666666667" />
         <EdgeLayout
           Id="Package\Data Flow Task.Paths[Changing Attribute Updates Output]"
-          TopLeft="344.033333333333,148.7">
+          TopLeft="346.833333333333,148.166666666667">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -884,82 +930,11 @@ or (Update_time &gt;= ? and Update_time &lt;= ?)</property>
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Data Flow Task.Paths[OLE DB Source Output]"
-          TopLeft="310.7,47.1">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,60"
-              Start="0,0"
-              End="0,52.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,52.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Data Flow Task.Paths[New Output]"
-          TopLeft="277.366666666667,148.7">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-190.666666666667,60"
-              Start="0,0"
-              End="-190.666666666667,52.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,20.2748091603053" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,20.2748091603053"
-                    Point2="0,24.2748091603053"
-                    Point3="-4,24.2748091603053" />
-                  <mssgle:LineSegment
-                    End="-186.666666666667,24.2748091603053" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-186.666666666667,24.2748091603053"
-                    Point2="-190.666666666667,24.2748091603053"
-                    Point3="-190.666666666667,28.2748091603053" />
-                  <mssgle:LineSegment
-                    End="-190.666666666667,52.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-122.424720052083,29.2748091603053,54.1827734375,11.43359375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
     design-time-name="Package\Data Flow Task\NDS JourneyPurpose">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task\Insert Destination">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -979,7 +954,7 @@ or (Update_time &gt;= ? and Update_time &lt;= ?)</property>
         <Value
           type="q2:string">&lt;?xml version="1.0" encoding="utf-16"?&gt;
 &lt;SCDWizardMetadata xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
-  &lt;ConnectionID&gt;{E41874B6-BE37-4CD6-ADE3-B77F7AA958CD}&lt;/ConnectionID&gt;
+  &lt;ConnectionID&gt;{FE586EEE-F8D2-4B75-A592-FFE0324433A8}&lt;/ConnectionID&gt;
   &lt;TableName&gt;[dbo].[DimJourneyPurpose]&lt;/TableName&gt;
   &lt;InputToColumnsCollection&gt;
     &lt;InputColumnToDBColumn&gt;
@@ -989,7 +964,7 @@ or (Update_time &gt;= ? and Update_time &lt;= ?)</property>
       &lt;ChangeType&gt;ChangingAttribute&lt;/ChangeType&gt;
     &lt;/InputColumnToDBColumn&gt;
     &lt;InputColumnToDBColumn&gt;
-      &lt;IdentificationString&gt;NDS JourneyPurpose.Outputs[OLE DB Source Output].Columns[Code_NK]&lt;/IdentificationString&gt;
+      &lt;IdentificationString&gt;NDS JourneyPurpose.Outputs[OLE DB Source Output].Columns[JourneyPurpose_ID]&lt;/IdentificationString&gt;
       &lt;ColumnName&gt;PurposeNK&lt;/ColumnName&gt;
       &lt;KeyType&gt;BusinessKey&lt;/KeyType&gt;
       &lt;ChangeType&gt;None&lt;/ChangeType&gt;
