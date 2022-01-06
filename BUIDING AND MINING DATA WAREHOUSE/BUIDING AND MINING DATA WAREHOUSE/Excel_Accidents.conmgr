@@ -12,7 +12,7 @@
       DTS:RowDelimiter=""
       DTS:TextQualifier="_x003C_none_x003E_"
       DTS:CodePage="1252"
-      DTS:ConnectionString="C:\Users\WinXs\OneDrive - VNU-HCMUS\Uni\Nam 4 - HKI\BI\Do an\UK-Car-Accidents-Data-warehouse\Dataset\Accidents1114.csv">
+      DTS:ConnectionString="D:\Downloads\BI\BI_Project\UK-Car-Accidents-Data-warehouse\Dataset\Accidents1114.csv">
       <DTS:FlatFileColumns>
         <DTS:FlatFileColumn
           DTS:ColumnType="Delimited"
@@ -21,7 +21,7 @@
           DTS:DataType="129"
           DTS:TextQualified="True"
           DTS:ObjectName="Accident_Index"
-          DTS:DTSID="{50BD2B96-A19C-4273-8BCA-A34F56663355}"
+          DTS:DTSID="{A7B54C18-9852-4139-8A39-C3DD6E6B206A}"
           DTS:CreationName="" />
         <DTS:FlatFileColumn
           DTS:ColumnType="Delimited"
@@ -30,7 +30,7 @@
           DTS:DataType="129"
           DTS:TextQualified="True"
           DTS:ObjectName="Location_Easting_OSGR"
-          DTS:DTSID="{567D807A-C630-4E7F-B8AC-BA67181701A3}"
+          DTS:DTSID="{9024A6D4-0E68-4956-AB93-46EB58901800}"
           DTS:CreationName="" />
         <DTS:FlatFileColumn
           DTS:ColumnType="Delimited"
@@ -39,7 +39,7 @@
           DTS:DataType="129"
           DTS:TextQualified="True"
           DTS:ObjectName="Location_Northing_OSGR"
-          DTS:DTSID="{5C82D671-9955-480F-BB99-6518B726A3A6}"
+          DTS:DTSID="{AE945E40-611C-4119-AA05-C0268A1054EF}"
           DTS:CreationName="" />
         <DTS:FlatFileColumn
           DTS:ColumnType="Delimited"
@@ -48,7 +48,7 @@
           DTS:DataType="129"
           DTS:TextQualified="True"
           DTS:ObjectName="Longitude"
-          DTS:DTSID="{FE25348A-759D-4DBA-A983-E98AA7AA7779}"
+          DTS:DTSID="{8782D99B-B670-4395-A466-489A62FE452D}"
           DTS:CreationName="" />
         <DTS:FlatFileColumn
           DTS:ColumnType="Delimited"
@@ -57,7 +57,7 @@
           DTS:DataType="129"
           DTS:TextQualified="True"
           DTS:ObjectName="Latitude"
-          DTS:DTSID="{29CF8EC8-9A20-40D1-89C8-F0551DF24230}"
+          DTS:DTSID="{5BB9B737-F321-4658-A264-E7D1E149298F}"
           DTS:CreationName="" />
         <DTS:FlatFileColumn
           DTS:ColumnType="Delimited"
@@ -66,7 +66,7 @@
           DTS:DataType="129"
           DTS:TextQualified="True"
           DTS:ObjectName="Police_Force"
-          DTS:DTSID="{5B252E05-9B49-4E36-9654-4E68C89A66CA}"
+          DTS:DTSID="{240EEC00-6E64-491F-BB6E-852063BB6D3B}"
           DTS:CreationName="" />
         <DTS:FlatFileColumn
           DTS:ColumnType="Delimited"
@@ -75,7 +75,7 @@
           DTS:DataType="129"
           DTS:TextQualified="True"
           DTS:ObjectName="Accident_Severity"
-          DTS:DTSID="{50D81E24-4A3F-4D3C-8D1A-2137F4DB525F}"
+          DTS:DTSID="{AA050ECF-047F-4E50-A839-3C79EA2F7027}"
           DTS:CreationName="" />
         <DTS:FlatFileColumn
           DTS:ColumnType="Delimited"
@@ -84,7 +84,7 @@
           DTS:DataType="129"
           DTS:TextQualified="True"
           DTS:ObjectName="Number_of_Vehicles"
-          DTS:DTSID="{E1413DE7-E4B0-4208-AB52-D2DBE29314B9}"
+          DTS:DTSID="{9E1FE2EF-CCF0-4C8B-9F7A-A160A86A7B3A}"
           DTS:CreationName="" />
         <DTS:FlatFileColumn
           DTS:ColumnType="Delimited"
@@ -93,7 +93,7 @@
           DTS:DataType="129"
           DTS:TextQualified="True"
           DTS:ObjectName="Number_of_Casualties"
-          DTS:DTSID="{8DD7C8E1-56CD-4DC7-96D1-5C315D6D0D50}"
+          DTS:DTSID="{3236627B-E8FB-4FFF-B877-C7C3FD4EDE77}"
           DTS:CreationName="" />
         <DTS:FlatFileColumn
           DTS:ColumnType="Delimited"
@@ -102,7 +102,7 @@
           DTS:DataType="129"
           DTS:TextQualified="True"
           DTS:ObjectName="Date"
-          DTS:DTSID="{63F7415A-2152-4A42-9FD7-4B823DC724E8}"
+          DTS:DTSID="{206C4E19-6749-4436-AD4E-DB93B903ED80}"
           DTS:CreationName="" />
         <DTS:FlatFileColumn
           DTS:ColumnType="Delimited"
@@ -111,7 +111,7 @@
           DTS:DataType="129"
           DTS:TextQualified="True"
           DTS:ObjectName="Day_of_Week"
-          DTS:DTSID="{F0181319-9F8D-4C8B-B840-D59C701ADB5A}"
+          DTS:DTSID="{199B4AD9-341C-4D74-AEDA-6E2377E572DB}"
           DTS:CreationName="" />
         <DTS:FlatFileColumn
           DTS:ColumnType="Delimited"
@@ -120,7 +120,7 @@
           DTS:DataType="129"
           DTS:TextQualified="True"
           DTS:ObjectName="Time"
-          DTS:DTSID="{C226E088-F4F2-4391-A8A7-C0FAF07EFA95}"
+          DTS:DTSID="{4E346193-534D-4AEC-B90D-2BD034C99B69}"
           DTS:CreationName="" />
         <DTS:FlatFileColumn
           DTS:ColumnType="Delimited"
@@ -129,7 +129,7 @@
           DTS:DataType="129"
           DTS:TextQualified="True"
           DTS:ObjectName="Local_Authority_(District)"
-          DTS:DTSID="{AD61AF6E-E308-49DD-B2BC-FB214CC18CDE}"
+          DTS:DTSID="{0FA2018D-79A5-48AA-B61A-8D07683E2E3A}"
           DTS:CreationName="" />
         <DTS:FlatFileColumn
           DTS:ColumnType="Delimited"
@@ -138,7 +138,7 @@
           DTS:DataType="129"
           DTS:TextQualified="True"
           DTS:ObjectName="Local_Authority_(Highway)"
-          DTS:DTSID="{1B4AA4F2-159E-4B6E-8D02-AA1D25DB6B35}"
+          DTS:DTSID="{F54ABD24-8874-40D1-AF0D-28D7A2167703}"
           DTS:CreationName="" />
         <DTS:FlatFileColumn
           DTS:ColumnType="Delimited"
@@ -147,7 +147,7 @@
           DTS:DataType="129"
           DTS:TextQualified="True"
           DTS:ObjectName="1st_Road_Class"
-          DTS:DTSID="{C47513F3-6EA3-4638-9D31-00FF635102FC}"
+          DTS:DTSID="{8980BC00-0857-4DD4-9BA1-CE3D6535D841}"
           DTS:CreationName="" />
         <DTS:FlatFileColumn
           DTS:ColumnType="Delimited"
@@ -156,7 +156,7 @@
           DTS:DataType="129"
           DTS:TextQualified="True"
           DTS:ObjectName="1st_Road_Number"
-          DTS:DTSID="{0081F20B-248B-40A6-952B-D90C8C5E398A}"
+          DTS:DTSID="{6C93B5FF-DB5E-405A-9F02-444A79D0925D}"
           DTS:CreationName="" />
         <DTS:FlatFileColumn
           DTS:ColumnType="Delimited"
@@ -165,7 +165,7 @@
           DTS:DataType="129"
           DTS:TextQualified="True"
           DTS:ObjectName="Road_Type"
-          DTS:DTSID="{19184AE9-09F4-426A-9EF7-92153AD0E93D}"
+          DTS:DTSID="{6C5681CF-3C0F-46D3-8CE5-18B2B9857D3A}"
           DTS:CreationName="" />
         <DTS:FlatFileColumn
           DTS:ColumnType="Delimited"
@@ -174,7 +174,7 @@
           DTS:DataType="129"
           DTS:TextQualified="True"
           DTS:ObjectName="Speed_limit"
-          DTS:DTSID="{7B35B3B3-BF58-43FC-9F70-754005CB7111}"
+          DTS:DTSID="{19305C0A-79A2-425B-93F0-62283E965FB7}"
           DTS:CreationName="" />
         <DTS:FlatFileColumn
           DTS:ColumnType="Delimited"
@@ -183,7 +183,7 @@
           DTS:DataType="129"
           DTS:TextQualified="True"
           DTS:ObjectName="Junction_Detail"
-          DTS:DTSID="{A55B2C78-DF35-4923-AC97-BAF2A541FB70}"
+          DTS:DTSID="{742866F1-25BD-4CA6-9F7A-3CF8674E6B2C}"
           DTS:CreationName="" />
         <DTS:FlatFileColumn
           DTS:ColumnType="Delimited"
@@ -192,7 +192,7 @@
           DTS:DataType="129"
           DTS:TextQualified="True"
           DTS:ObjectName="Junction_Control"
-          DTS:DTSID="{D996BD81-6BD7-4DA1-969B-42A0AC9880AF}"
+          DTS:DTSID="{31800476-ED7D-4B39-988D-BCD44DD0103F}"
           DTS:CreationName="" />
         <DTS:FlatFileColumn
           DTS:ColumnType="Delimited"
@@ -201,7 +201,7 @@
           DTS:DataType="129"
           DTS:TextQualified="True"
           DTS:ObjectName="2nd_Road_Class"
-          DTS:DTSID="{561FE627-203F-4F88-83F1-6CEE3C146BA1}"
+          DTS:DTSID="{45D8978D-92F9-4A3F-A16A-7B9E42E9175C}"
           DTS:CreationName="" />
         <DTS:FlatFileColumn
           DTS:ColumnType="Delimited"
@@ -210,7 +210,7 @@
           DTS:DataType="129"
           DTS:TextQualified="True"
           DTS:ObjectName="2nd_Road_Number"
-          DTS:DTSID="{4D42CF87-8A02-432C-B684-6995AD03F23A}"
+          DTS:DTSID="{92BC53A2-2491-4EB3-8C8F-A0235BB87049}"
           DTS:CreationName="" />
         <DTS:FlatFileColumn
           DTS:ColumnType="Delimited"
@@ -219,7 +219,7 @@
           DTS:DataType="129"
           DTS:TextQualified="True"
           DTS:ObjectName="Pedestrian_Crossing-Human_Control"
-          DTS:DTSID="{BCFE8BBA-6F09-4985-A962-0A13E0009968}"
+          DTS:DTSID="{433196C9-1F8F-48E0-9DC3-476C42B913B9}"
           DTS:CreationName="" />
         <DTS:FlatFileColumn
           DTS:ColumnType="Delimited"
@@ -228,7 +228,7 @@
           DTS:DataType="129"
           DTS:TextQualified="True"
           DTS:ObjectName="Pedestrian_Crossing-Physical_Facilities"
-          DTS:DTSID="{692EA853-D228-4C69-B577-1BFE04FD0609}"
+          DTS:DTSID="{4F9E4A7B-5250-41DC-9BC0-0C5FF9255A65}"
           DTS:CreationName="" />
         <DTS:FlatFileColumn
           DTS:ColumnType="Delimited"
@@ -237,7 +237,7 @@
           DTS:DataType="129"
           DTS:TextQualified="True"
           DTS:ObjectName="Light_Conditions"
-          DTS:DTSID="{A3B4A3CF-A731-4431-BDEA-B21C9811C9C8}"
+          DTS:DTSID="{77770CB8-B46D-4CF1-A9A6-3A4B2FB1DFB3}"
           DTS:CreationName="" />
         <DTS:FlatFileColumn
           DTS:ColumnType="Delimited"
@@ -246,7 +246,7 @@
           DTS:DataType="129"
           DTS:TextQualified="True"
           DTS:ObjectName="Weather_Conditions"
-          DTS:DTSID="{AF9E1A43-69D5-43A0-93FB-3B8A64CA1C17}"
+          DTS:DTSID="{725967F6-D3AF-4EDC-8D7B-0FC51F8617EE}"
           DTS:CreationName="" />
         <DTS:FlatFileColumn
           DTS:ColumnType="Delimited"
@@ -255,7 +255,7 @@
           DTS:DataType="129"
           DTS:TextQualified="True"
           DTS:ObjectName="Road_Surface_Conditions"
-          DTS:DTSID="{41778848-1484-4E68-BDF3-0B0C9CE735D8}"
+          DTS:DTSID="{2F39E9B3-A9A3-4F9F-953A-2A4728EFFA57}"
           DTS:CreationName="" />
         <DTS:FlatFileColumn
           DTS:ColumnType="Delimited"
@@ -264,7 +264,7 @@
           DTS:DataType="129"
           DTS:TextQualified="True"
           DTS:ObjectName="Special_Conditions_at_Site"
-          DTS:DTSID="{B49CFD72-7D76-4906-B276-C968D5B2F811}"
+          DTS:DTSID="{61F33422-DCED-4FA0-BF67-B6942B97BF75}"
           DTS:CreationName="" />
         <DTS:FlatFileColumn
           DTS:ColumnType="Delimited"
@@ -273,7 +273,7 @@
           DTS:DataType="129"
           DTS:TextQualified="True"
           DTS:ObjectName="Carriageway_Hazards"
-          DTS:DTSID="{456DA632-5556-4F86-839C-047EEF2326EB}"
+          DTS:DTSID="{F48D5B61-F76C-4374-997E-0EEFD2C6432A}"
           DTS:CreationName="" />
         <DTS:FlatFileColumn
           DTS:ColumnType="Delimited"
@@ -282,7 +282,7 @@
           DTS:DataType="129"
           DTS:TextQualified="True"
           DTS:ObjectName="Urban_or_Rural_Area"
-          DTS:DTSID="{69A75222-2AC7-499B-9411-B76F3F519FB2}"
+          DTS:DTSID="{ECEE456F-F718-4602-B373-4720411D790B}"
           DTS:CreationName="" />
         <DTS:FlatFileColumn
           DTS:ColumnType="Delimited"
@@ -291,7 +291,7 @@
           DTS:DataType="129"
           DTS:TextQualified="True"
           DTS:ObjectName="Did_Police_Officer_Attend_Scene_of_Accident"
-          DTS:DTSID="{C93328EC-F60C-48B8-8E61-0F5D183607F8}"
+          DTS:DTSID="{580FAB59-AD4D-43FB-98EE-453B748CFAE7}"
           DTS:CreationName="" />
         <DTS:FlatFileColumn
           DTS:ColumnType="Delimited"
@@ -300,7 +300,7 @@
           DTS:DataType="129"
           DTS:TextQualified="True"
           DTS:ObjectName="LSOA_of_Accident_Location"
-          DTS:DTSID="{4B0413CF-A29E-4688-897B-C2B83D8A407D}"
+          DTS:DTSID="{7EBB78B8-030E-4AE5-B28C-9F2BABA8AE64}"
           DTS:CreationName="" />
       </DTS:FlatFileColumns>
     </DTS:ConnectionManager>

@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="12"
-  DTS:VersionGUID="{5778F45D-1336-4517-B14B-FC0CE592F6B1}">
+  DTS:VersionBuild="10"
+  DTS:VersionGUID="{11037D9B-BAA8-487D-B930-7C9DB3A9E62E}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables>
@@ -168,7 +168,7 @@
                       refId="Package\Load data into stage\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Postcode]"
                       cachedCodepage="1252"
                       cachedDataType="str"
-                      cachedLength="50"
+                      cachedLength="255"
                       cachedName="Postcode"
                       externalMetadataColumnId="Package\Load data into stage\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Postcode]"
                       lineageId="Package\Load data into stage\OLE DB Source.Outputs[OLE DB Source Output].Columns[Postcode]" />
@@ -176,18 +176,18 @@
                       refId="Package\Load data into stage\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[UK region]"
                       cachedCodepage="1252"
                       cachedDataType="str"
-                      cachedLength="50"
+                      cachedLength="255"
                       cachedName="UK region"
                       externalMetadataColumnId="Package\Load data into stage\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Region]"
                       lineageId="Package\Load data into stage\OLE DB Source.Outputs[OLE DB Source Output].Columns[UK region]" />
                     <inputColumn
-                      refId="Package\Load data into stage\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Town Area]"
+                      refId="Package\Load data into stage\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Region]"
                       cachedCodepage="1252"
                       cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="Town Area"
+                      cachedLength="255"
+                      cachedName="Region"
                       externalMetadataColumnId="Package\Load data into stage\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Town]"
-                      lineageId="Package\Load data into stage\OLE DB Source.Outputs[OLE DB Source Output].Columns[Town Area]" />
+                      lineageId="Package\Load data into stage\OLE DB Source.Outputs[OLE DB Source Output].Columns[Region]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -347,7 +347,7 @@ Where (Create_time &gt;= ? and Create_time &lt;= ? ) or (Update_time &gt;= ? and
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Load data into stage\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Postcode]"
-                      length="50"
+                      length="255"
                       lineageId="Package\Load data into stage\OLE DB Source.Outputs[OLE DB Source Output].Columns[Postcode]"
                       name="Postcode"
                       truncationRowDisposition="FailComponent" />
@@ -380,7 +380,7 @@ Where (Create_time &gt;= ? and Create_time &lt;= ? ) or (Update_time &gt;= ? and
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Load data into stage\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Grid Reference]"
-                      length="50"
+                      length="255"
                       lineageId="Package\Load data into stage\OLE DB Source.Outputs[OLE DB Source Output].Columns[Grid Reference]"
                       name="Grid Reference"
                       truncationRowDisposition="FailComponent" />
@@ -391,7 +391,7 @@ Where (Create_time &gt;= ? and Create_time &lt;= ? ) or (Update_time &gt;= ? and
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Load data into stage\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Town Area]"
-                      length="50"
+                      length="255"
                       lineageId="Package\Load data into stage\OLE DB Source.Outputs[OLE DB Source Output].Columns[Town Area]"
                       name="Town Area"
                       truncationRowDisposition="FailComponent" />
@@ -402,7 +402,7 @@ Where (Create_time &gt;= ? and Create_time &lt;= ? ) or (Update_time &gt;= ? and
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Load data into stage\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Region]"
-                      length="50"
+                      length="255"
                       lineageId="Package\Load data into stage\OLE DB Source.Outputs[OLE DB Source Output].Columns[Region]"
                       name="Region"
                       truncationRowDisposition="FailComponent" />
@@ -413,7 +413,7 @@ Where (Create_time &gt;= ? and Create_time &lt;= ? ) or (Update_time &gt;= ? and
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Load data into stage\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Postcodes]"
-                      length="50"
+                      length="255"
                       lineageId="Package\Load data into stage\OLE DB Source.Outputs[OLE DB Source Output].Columns[Postcodes]"
                       name="Postcodes"
                       truncationRowDisposition="FailComponent" />
@@ -457,7 +457,7 @@ Where (Create_time &gt;= ? and Create_time &lt;= ? ) or (Update_time &gt;= ? and
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Load data into stage\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Nearby districts]"
-                      length="50"
+                      length="255"
                       lineageId="Package\Load data into stage\OLE DB Source.Outputs[OLE DB Source Output].Columns[Nearby districts]"
                       name="Nearby districts"
                       truncationRowDisposition="FailComponent" />
@@ -468,7 +468,7 @@ Where (Create_time &gt;= ? and Create_time &lt;= ? ) or (Update_time &gt;= ? and
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Load data into stage\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[UK region]"
-                      length="50"
+                      length="255"
                       lineageId="Package\Load data into stage\OLE DB Source.Outputs[OLE DB Source Output].Columns[UK region]"
                       name="UK region"
                       truncationRowDisposition="FailComponent" />
@@ -499,7 +499,7 @@ Where (Create_time &gt;= ? and Create_time &lt;= ? ) or (Update_time &gt;= ? and
                       refId="Package\Load data into stage\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Postcode]"
                       codePage="1252"
                       dataType="str"
-                      length="50"
+                      length="255"
                       name="Postcode" />
                     <externalMetadataColumn
                       refId="Package\Load data into stage\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Easting]"
@@ -517,25 +517,25 @@ Where (Create_time &gt;= ? and Create_time &lt;= ? ) or (Update_time &gt;= ? and
                       refId="Package\Load data into stage\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Grid Reference]"
                       codePage="1252"
                       dataType="str"
-                      length="50"
+                      length="255"
                       name="Grid Reference" />
                     <externalMetadataColumn
                       refId="Package\Load data into stage\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Town Area]"
                       codePage="1252"
                       dataType="str"
-                      length="50"
+                      length="255"
                       name="Town Area" />
                     <externalMetadataColumn
                       refId="Package\Load data into stage\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Region]"
                       codePage="1252"
                       dataType="str"
-                      length="50"
+                      length="255"
                       name="Region" />
                     <externalMetadataColumn
                       refId="Package\Load data into stage\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Postcodes]"
                       codePage="1252"
                       dataType="str"
-                      length="50"
+                      length="255"
                       name="Postcodes" />
                     <externalMetadataColumn
                       refId="Package\Load data into stage\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Active postcodes]"
@@ -559,13 +559,13 @@ Where (Create_time &gt;= ? and Create_time &lt;= ? ) or (Update_time &gt;= ? and
                       refId="Package\Load data into stage\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Nearby districts]"
                       codePage="1252"
                       dataType="str"
-                      length="50"
+                      length="255"
                       name="Nearby districts" />
                     <externalMetadataColumn
                       refId="Package\Load data into stage\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[UK region]"
                       codePage="1252"
                       dataType="str"
-                      length="50"
+                      length="255"
                       name="UK region" />
                   </externalMetadataColumns>
                 </output>
@@ -578,7 +578,7 @@ Where (Create_time &gt;= ? and Create_time &lt;= ? ) or (Update_time &gt;= ? and
                       refId="Package\Load data into stage\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Postcode]"
                       codePage="1252"
                       dataType="str"
-                      length="50"
+                      length="255"
                       lineageId="Package\Load data into stage\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Postcode]"
                       name="Postcode" />
                     <outputColumn
@@ -613,28 +613,28 @@ Where (Create_time &gt;= ? and Create_time &lt;= ? ) or (Update_time &gt;= ? and
                       refId="Package\Load data into stage\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Grid Reference]"
                       codePage="1252"
                       dataType="str"
-                      length="50"
+                      length="255"
                       lineageId="Package\Load data into stage\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Grid Reference]"
                       name="Grid Reference" />
                     <outputColumn
                       refId="Package\Load data into stage\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Town Area]"
                       codePage="1252"
                       dataType="str"
-                      length="50"
+                      length="255"
                       lineageId="Package\Load data into stage\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Town Area]"
                       name="Town Area" />
                     <outputColumn
                       refId="Package\Load data into stage\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Region]"
                       codePage="1252"
                       dataType="str"
-                      length="50"
+                      length="255"
                       lineageId="Package\Load data into stage\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Region]"
                       name="Region" />
                     <outputColumn
                       refId="Package\Load data into stage\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Postcodes]"
                       codePage="1252"
                       dataType="str"
-                      length="50"
+                      length="255"
                       lineageId="Package\Load data into stage\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Postcodes]"
                       name="Postcodes" />
                     <outputColumn
@@ -662,14 +662,14 @@ Where (Create_time &gt;= ? and Create_time &lt;= ? ) or (Update_time &gt;= ? and
                       refId="Package\Load data into stage\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Nearby districts]"
                       codePage="1252"
                       dataType="str"
-                      length="50"
+                      length="255"
                       lineageId="Package\Load data into stage\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Nearby districts]"
                       name="Nearby districts" />
                     <outputColumn
                       refId="Package\Load data into stage\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[UK region]"
                       codePage="1252"
                       dataType="str"
-                      length="50"
+                      length="255"
                       lineageId="Package\Load data into stage\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[UK region]"
                       name="UK region" />
                     <outputColumn
@@ -719,7 +719,7 @@ Where (Create_time &gt;= ? and Create_time &lt;= ? ) or (Update_time &gt;= ? and
       DTS:LocaleID="-1"
       DTS:ObjectName="Profiling Postcode district"
       DTS:TaskContact="Data Profiling Task; Microsoft Corporation; SQL Server 2019; (c) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="0">
+      DTS:ThreadHint="1">
       <DTS:Variables />
       <DTS:ObjectData>
         <DataProfilingTaskData
@@ -797,7 +797,7 @@ Where (Create_time &gt;= ? and Create_time &lt;= ? ) or (Update_time &gt;= ? and
       DTS:LocaleID="-1"
       DTS:ObjectName="Update LSET"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="1">
+      DTS:ThreadHint="0">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -853,23 +853,23 @@ Where (Create_time &gt;= ? and Create_time &lt;= ? ) or (Update_time &gt;= ? and
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="132,42"
+          Size="132,41.3333333333334"
           Id="Package\Clear stage"
           TopLeft="337.732144479734,64.4823515791381" />
         <NodeLayout
-          Size="162,42"
+          Size="161.333333333334,41.3333333333334"
           Id="Package\Get CET &amp; LSET"
           TopLeft="60,60" />
         <NodeLayout
-          Size="175,42"
+          Size="176,41.3333333333334"
           Id="Package\Load data into stage"
           TopLeft="522.999998610998,200.332349564729" />
         <NodeLayout
-          Size="198,42"
+          Size="198.666666666667,42.6666666666667"
           Id="Package\Profiling Postcode district"
           TopLeft="203.750003286238,241.365680829185" />
         <NodeLayout
-          Size="140,42"
+          Size="140,41.3333333333334"
           Id="Package\Update LSET"
           TopLeft="253.125002550494,175.065682014721" />
         <EdgeLayout
@@ -896,30 +896,30 @@ Where (Create_time &gt;= ? and Create_time &lt;= ? ) or (Update_time &gt;= ? and
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 3]"
-          TopLeft="403.732144479734,106.482351579138">
+          TopLeft="403.732144479734,106.082351579138">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="206.767854131264,93.8499979855909"
+              EndConnector="207.267854131264,94.2499979855911"
               Start="0,0"
-              End="206.767854131264,86.3499979855909">
+              End="207.267854131264,86.7499979855911">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,42.9249989927954" />
+                    End="0,43.1249989927955" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,42.9249989927954"
-                    Point2="0,46.9249989927954"
-                    Point3="4,46.9249989927954" />
+                    Point1="0,43.1249989927955"
+                    Point2="0,47.1249989927955"
+                    Point3="4,47.1249989927955" />
                   <mssgle:LineSegment
-                    End="202.767854131264,46.9249989927954" />
+                    End="203.267854131264,47.1249989927955" />
                   <mssgle:CubicBezierSegment
-                    Point1="202.767854131264,46.9249989927954"
-                    Point2="206.767854131264,46.9249989927954"
-                    Point3="206.767854131264,50.9249989927954" />
+                    Point1="203.267854131264,47.1249989927955"
+                    Point2="207.267854131264,47.1249989927955"
+                    Point3="207.267854131264,51.1249989927955" />
                   <mssgle:LineSegment
-                    End="206.767854131264,86.3499979855909" />
+                    End="207.267854131264,86.7499979855911" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -930,30 +930,30 @@ Where (Create_time &gt;= ? and Create_time &lt;= ? ) or (Update_time &gt;= ? and
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 4]"
-          TopLeft="522.999998610998,215.665682898062">
+          TopLeft="522.999998610998,215.44346067584">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-129.874996060504,-19.6000008833413"
+              EndConnector="-129.874996060504,-19.7111119944521"
               Start="0,0"
-              End="-122.374996060504,-19.6000008833413">
+              End="-122.374996060504,-19.7111119944521">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="-50.8096313649834,0" />
+                    End="-50.8540356031944,0" />
                   <mssgle:CubicBezierSegment
-                    Point1="-50.8096313649834,0"
-                    Point2="-54.8096313649834,0"
-                    Point3="-54.8096313649834,-4" />
+                    Point1="-50.8540356031944,0"
+                    Point2="-54.8540356031944,0"
+                    Point3="-54.8540356031944,-4" />
                   <mssgle:LineSegment
-                    End="-54.8096313649834,-15.6000008833413" />
+                    End="-54.8540356031944,-15.7111119944521" />
                   <mssgle:CubicBezierSegment
-                    Point1="-54.8096313649834,-15.6000008833413"
-                    Point2="-54.8096313649834,-19.6000008833413"
-                    Point3="-58.8096313649834,-19.6000008833413" />
+                    Point1="-54.8540356031944,-15.7111119944521"
+                    Point2="-54.8540356031944,-19.7111119944521"
+                    Point3="-58.8540356031944,-19.7111119944521" />
                   <mssgle:LineSegment
-                    End="-122.374996060504,-19.6000008833413" />
+                    End="-122.374996060504,-19.7111119944521" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -964,30 +964,30 @@ Where (Create_time &gt;= ? and Create_time &lt;= ? ) or (Update_time &gt;= ? and
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 5]"
-          TopLeft="522.999998610998,226.999016231396">
+          TopLeft="522.999998610998,226.554571786951">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-121.24999532476,35.3666645977894"
+              EndConnector="-120.583328658093,36.1444423755674"
               Start="0,0"
-              End="-113.74999532476,35.3666645977894">
+              End="-113.083328658093,36.1444423755674">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="-47.1697227976052,0" />
+                    End="-46.929604650623,0" />
                   <mssgle:CubicBezierSegment
-                    Point1="-47.1697227976052,0"
-                    Point2="-51.1697227976052,0"
-                    Point3="-51.1697227976052,4" />
+                    Point1="-46.929604650623,0"
+                    Point2="-50.929604650623,0"
+                    Point3="-50.929604650623,4" />
                   <mssgle:LineSegment
-                    End="-51.1697227976052,31.3666645977894" />
+                    End="-50.929604650623,32.1444423755674" />
                   <mssgle:CubicBezierSegment
-                    Point1="-51.1697227976052,31.3666645977894"
-                    Point2="-51.1697227976052,35.3666645977894"
-                    Point3="-55.1697227976052,35.3666645977894" />
+                    Point1="-50.929604650623,32.1444423755674"
+                    Point2="-50.929604650623,36.1444423755674"
+                    Point3="-54.929604650623,36.1444423755674" />
                   <mssgle:LineSegment
-                    End="-113.74999532476,35.3666645977894" />
+                    End="-113.083328658093,36.1444423755674" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1005,11 +1005,11 @@ Where (Create_time &gt;= ? and Create_time &lt;= ? ) or (Update_time &gt;= ? and
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="156,42"
+          Size="156,42.6666666666667"
           Id="Package\Load data into stage\OLE DB Source"
           TopLeft="83.124998761341,48.7499991282821" />
         <NodeLayout
-          Size="170,42"
+          Size="170.666666666667,41.3333333333334"
           Id="Package\Load data into stage\OLE DB Destination"
           TopLeft="370.357149244115,50.9294133914837" />
         <EdgeLayout
