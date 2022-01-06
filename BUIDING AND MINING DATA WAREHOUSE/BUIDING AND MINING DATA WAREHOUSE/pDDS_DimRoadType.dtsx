@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="pDDS_DimRoadType"
   DTS:PackageType="5"
-  DTS:VersionBuild="4"
-  DTS:VersionGUID="{39C8C90A-4A5A-4238-82EB-80C88469A19C}">
+  DTS:VersionBuild="7"
+  DTS:VersionGUID="{46135BA5-B858-4B09-86D0-8F09DD257DB2}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables>
@@ -339,7 +339,7 @@ where [refTable].[Area_ID] = ?</property>
                   dataType="System.Int32"
                   description="Specifies how the Lookup transformation handles rows without matching entries in the reference data set."
                   name="NoMatchBehavior"
-                  typeConverter="LookupNoMatchBehavior">0</property>
+                  typeConverter="LookupNoMatchBehavior">1</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the percentage of the cache that is allocated for rows with no matching entries in the reference dataset."
@@ -407,7 +407,6 @@ where [refTable].[Area_ID] = ?</property>
                 <output
                   refId="Package\Populating data\get area name.Outputs[Lookup Match Output]"
                   errorOrTruncationOperation="Lookup"
-                  errorRowDisposition="FailComponent"
                   exclusionGroup="1"
                   name="Lookup Match Output"
                   synchronousInputId="Package\Populating data\get area name.Inputs[Lookup Input]">
@@ -499,7 +498,7 @@ where [refTable].[RoadType_ID] = ?</property>
                   dataType="System.Int32"
                   description="Specifies how the Lookup transformation handles rows without matching entries in the reference data set."
                   name="NoMatchBehavior"
-                  typeConverter="LookupNoMatchBehavior">0</property>
+                  typeConverter="LookupNoMatchBehavior">1</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the percentage of the cache that is allocated for rows with no matching entries in the reference dataset."
@@ -567,7 +566,6 @@ where [refTable].[RoadType_ID] = ?</property>
                 <output
                   refId="Package\Populating data\get road type name.Outputs[Lookup Match Output]"
                   errorOrTruncationOperation="Lookup"
-                  errorRowDisposition="FailComponent"
                   exclusionGroup="1"
                   name="Lookup Match Output"
                   synchronousInputId="Package\Populating data\get road type name.Inputs[Lookup Input]">
@@ -821,8 +819,7 @@ where [refTable].[RoadType_ID] = ?</property>
                   dataType="System.String"
                   description="The SQL command to be executed."
                   name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT *
-FROM   Accidents
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT * FROM dbo.Accidents
 WHERE ((Create_time &gt;= ?) AND (Create_time &lt;= ?)) OR
              ((Update_time &gt;= ?) AND (Update_time &lt;= ?))</property>
                 <property
@@ -845,7 +842,7 @@ WHERE ((Create_time &gt;= ?) AND (Create_time &lt;= ?)) OR
                 <property
                   dataType="System.String"
                   description="The mappings between the parameters in the SQL command and variables."
-                  name="ParameterMapping">"Parameter0:Input",{9F5CB6B9-7EFF-4A31-B3ED-837D71A42BF7};"Parameter1:Input",{087E2EC0-FDD5-4CBD-85A7-5BCFEA220408};"Parameter2:Input",{9F5CB6B9-7EFF-4A31-B3ED-837D71A42BF7};"Parameter3:Input",{087E2EC0-FDD5-4CBD-85A7-5BCFEA220408};</property>
+                  name="ParameterMapping">"Parameter0:Input",{087E2EC0-FDD5-4CBD-85A7-5BCFEA220408};"Parameter1:Input",{9F5CB6B9-7EFF-4A31-B3ED-837D71A42BF7};"Parameter2:Input",{087E2EC0-FDD5-4CBD-85A7-5BCFEA220408};"Parameter3:Input",{9F5CB6B9-7EFF-4A31-B3ED-837D71A42BF7};</property>
               </properties>
               <connections>
                 <connection
@@ -1596,7 +1593,7 @@ WHERE ((Create_time &gt;= ?) AND (Create_time &lt;= ?)) OR
         <NodeLayout
           Size="146.666666666667,41.3333333333334"
           Id="Package\Populating data\NDS Accidents"
-          TopLeft="237.5,5.49999999999995" />
+          TopLeft="237.5,4.85000001162285" />
         <NodeLayout
           Size="171.333333333334,41.3333333333334"
           Id="Package\Populating data\get road type name"
@@ -1697,7 +1694,7 @@ WHERE ((Create_time &gt;= ?) AND (Create_time &lt;= ?)) OR
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-48.19138671875,20.4453124999999,96.3827734375,11.609375"
+              BoundingBox="-48.19138671875,20.4453125,96.3827734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -1761,18 +1758,18 @@ WHERE ((Create_time &gt;= ?) AND (Create_time &lt;= ?)) OR
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Populating data.Paths[OLE DB Source Output]"
-          TopLeft="310.7,47.1">
+          TopLeft="310.8,46.1833333449562">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,59.9999999999999"
+              EndConnector="0,60.9166666550438"
               Start="0,0"
-              End="0,52.4999999999999">
+              End="0,53.4166666550438">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,52.4999999999999" />
+                    End="0,53.4166666550438" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1859,7 +1856,7 @@ WHERE ((Create_time &gt;= ?) AND (Create_time &lt;= ?)) OR
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:string">false</Value>
+          type="q2:boolean">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -1882,7 +1879,7 @@ WHERE ((Create_time &gt;= ?) AND (Create_time &lt;= ?)) OR
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:string">false</Value>
+          type="q2:boolean">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -1892,7 +1889,7 @@ WHERE ((Create_time &gt;= ?) AND (Create_time &lt;= ?)) OR
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:string">0</Value>
+          type="q4:int">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>

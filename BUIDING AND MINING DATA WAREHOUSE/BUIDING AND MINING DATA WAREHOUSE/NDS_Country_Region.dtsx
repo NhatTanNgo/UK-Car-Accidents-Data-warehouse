@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="11"
-  DTS:VersionGUID="{8E7C7918-AA69-491A-BC3A-24166A4967E1}">
+  DTS:VersionBuild="12"
+  DTS:VersionGUID="{9121EE23-7FA8-49B5-95F8-AECCA4163221}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables />
@@ -843,13 +843,13 @@ GROUP BY country_code, country_name</property>
                   name="OLE DB Destination Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Region\Insert Destination.Inputs[OLE DB Destination Input].Columns[region_code]"
+                      refId="Package\Region\Insert Destination.Inputs[OLE DB Destination Input].Columns[Region_code]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
-                      cachedName="region_code"
+                      cachedName="Region_code"
                       externalMetadataColumnId="Package\Region\Insert Destination.Inputs[OLE DB Destination Input].ExternalColumns[Region_NK]"
-                      lineageId="Package\Region\OLE DB Source.Outputs[OLE DB Source Output].Columns[region_code]" />
+                      lineageId="Package\Region\OLE DB Source.Outputs[OLE DB Source Output].Columns[Region_code]" />
                     <inputColumn
                       refId="Package\Region\Insert Destination.Inputs[OLE DB Destination Input].Columns[region_name]"
                       cachedCodepage="1252"
@@ -976,13 +976,13 @@ GROUP BY country_code, country_name</property>
                   name="OLE DB Command Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Region\OLE DB Command.Inputs[OLE DB Command Input].Columns[region_code]"
+                      refId="Package\Region\OLE DB Command.Inputs[OLE DB Command Input].Columns[Region_code]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
-                      cachedName="region_code"
+                      cachedName="Region_code"
                       externalMetadataColumnId="Package\Region\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_1]"
-                      lineageId="Package\Region\OLE DB Source.Outputs[OLE DB Source Output].Columns[region_code]" />
+                      lineageId="Package\Region\OLE DB Source.Outputs[OLE DB Source Output].Columns[Region_code]" />
                     <inputColumn
                       refId="Package\Region\OLE DB Command.Inputs[OLE DB Command Input].Columns[region_name]"
                       cachedCodepage="1252"
@@ -1080,10 +1080,17 @@ GROUP BY country_code, country_name</property>
                   dataType="System.String"
                   description="The SQL command to be executed."
                   name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT region_code, region_name
-FROM dbo.postcodes
-WHERE region_name &lt;&gt; '#N/A' AND region_code &lt;&gt; '#N/A'
-GROUP BY region_code, region_name</property>
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">WITH CTE([Region_code], 
+    [region_name],  
+    duplicatecount)
+AS (SELECT [region_code], 
+           [region_name], 
+           ROW_NUMBER() OVER(PARTITION BY [region_code]
+           ORDER BY region_code) AS DuplicateCount
+    FROM dbo.PostCodes)
+SELECT *
+FROM CTE
+WHERE CTE.duplicatecount &lt; 2</property>
                 <property
                   dataType="System.String"
                   description="The variable that contains the SQL command to be executed."
@@ -1120,17 +1127,6 @@ GROUP BY region_code, region_name</property>
                   name="OLE DB Source Output">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Region\OLE DB Source.Outputs[OLE DB Source Output].Columns[region_code]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Region\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[region_code]"
-                      length="50"
-                      lineageId="Package\Region\OLE DB Source.Outputs[OLE DB Source Output].Columns[region_code]"
-                      name="region_code"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
                       refId="Package\Region\OLE DB Source.Outputs[OLE DB Source Output].Columns[region_name]"
                       codePage="1252"
                       dataType="str"
@@ -1141,21 +1137,36 @@ GROUP BY region_code, region_name</property>
                       lineageId="Package\Region\OLE DB Source.Outputs[OLE DB Source Output].Columns[region_name]"
                       name="region_name"
                       truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Region\OLE DB Source.Outputs[OLE DB Source Output].Columns[Region_code]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Region\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Region_code]"
+                      length="50"
+                      lineageId="Package\Region\OLE DB Source.Outputs[OLE DB Source Output].Columns[Region_code]"
+                      name="Region_code"
+                      truncationRowDisposition="FailComponent" />
                   </outputColumns>
                   <externalMetadataColumns
                     isUsed="True">
-                    <externalMetadataColumn
-                      refId="Package\Region\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[region_code]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="region_code" />
                     <externalMetadataColumn
                       refId="Package\Region\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[region_name]"
                       codePage="1252"
                       dataType="str"
                       length="50"
                       name="region_name" />
+                    <externalMetadataColumn
+                      refId="Package\Region\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Region_code]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Region_code" />
+                    <externalMetadataColumn
+                      refId="Package\Region\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[duplicatecount]"
+                      dataType="i8"
+                      name="duplicatecount" />
                   </externalMetadataColumns>
                 </output>
                 <output
@@ -1164,12 +1175,12 @@ GROUP BY region_code, region_name</property>
                   name="OLE DB Source Error Output">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Region\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[region_code]"
+                      refId="Package\Region\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Region_code]"
                       codePage="1252"
                       dataType="str"
                       length="50"
-                      lineageId="Package\Region\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[region_code]"
-                      name="region_code" />
+                      lineageId="Package\Region\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Region_code]"
+                      name="Region_code" />
                     <outputColumn
                       refId="Package\Region\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[region_name]"
                       codePage="1252"
@@ -1255,13 +1266,13 @@ GROUP BY region_code, region_name</property>
                   name="Slowly Changing Dimension Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Region\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input].Columns[region_code]"
+                      refId="Package\Region\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input].Columns[Region_code]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
-                      cachedName="region_code"
+                      cachedName="Region_code"
                       externalMetadataColumnId="Package\Region\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input].ExternalColumns[Region_NK]"
-                      lineageId="Package\Region\OLE DB Source.Outputs[OLE DB Source Output].Columns[region_code]">
+                      lineageId="Package\Region\OLE DB Source.Outputs[OLE DB Source Output].Columns[Region_code]">
                       <properties>
                         <property
                           dataType="System.Int32"
@@ -1696,163 +1707,6 @@ GROUP BY region_code, region_name</property>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
-  <TaskHost
-    design-time-name="Package\Region">
-    <LayoutInfo>
-      <GraphLayout
-        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
-        <NodeLayout
-          Size="150.666666666667,42.6666666666667"
-          Id="Package\Region\OLE DB Source"
-          TopLeft="30.5,9.83333333333337" />
-        <NodeLayout
-          Size="169.333333333334,42.6666666666667"
-          Id="Package\Region\SrcID &amp; timestamp"
-          TopLeft="265.833333333333,12.1666666666668" />
-        <EdgeLayout
-          Id="Package\Region.Paths[OLE DB Source Output]"
-          TopLeft="181.166666666667,32.3333333333334">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="84.6666666666666,0"
-              Start="0,0"
-              End="77.1666666666666,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="77.1666666666666,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="209.333333333334,42.6666666666667"
-          Id="Package\Region\Slowly Changing Dimension"
-          TopLeft="239.833333333333,171.5" />
-        <EdgeLayout
-          Id="Package\Region.Paths[Derived Column Output]"
-          TopLeft="347.5,54.8333333333335">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,116.666666666667"
-              Start="0,0"
-              End="0,109.166666666667">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,109.166666666667" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="164,42.6666666666667"
-          Id="Package\Region\Insert Destination"
-          TopLeft="70.1666666666667,72.166666666667" />
-        <EdgeLayout
-          Id="Package\Region.Paths[New Output]"
-          TopLeft="294.166666666667,171.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-142,-56.6666666666666"
-              Start="0,0"
-              End="-142,-49.1666666666666">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,-15.3640810621942" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,-15.3640810621942"
-                    Point2="0,-19.3640810621942"
-                    Point3="-4,-19.3640810621942" />
-                  <mssgle:LineSegment
-                    End="-138,-19.3640810621942" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-138,-19.3640810621942"
-                    Point2="-142,-19.3640810621942"
-                    Point3="-142,-23.3640810621942" />
-                  <mssgle:LineSegment
-                    End="-142,-49.1666666666666" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-98.09138671875,-14.3640810621942,54.1827734375,11.43359375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="166.666666666667,42.6666666666667"
-          Id="Package\Region\OLE DB Command"
-          TopLeft="448.166666666667,69.5000000000003" />
-        <EdgeLayout
-          Id="Package\Region.Paths[Changing Attribute Updates Output]"
-          TopLeft="394.833333333333,171.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="136.666666666667,-59.3333333333333"
-              Start="0,0"
-              End="136.666666666667,-51.8333333333333">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,-16.2753319357093" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,-16.2753319357093"
-                    Point2="0,-20.2753319357093"
-                    Point3="4,-20.2753319357093" />
-                  <mssgle:LineSegment
-                    End="132.666666666667,-20.2753319357093" />
-                  <mssgle:CubicBezierSegment
-                    Point1="132.666666666667,-20.2753319357093"
-                    Point2="136.666666666667,-20.2753319357093"
-                    Point3="136.666666666667,-24.2753319357093" />
-                  <mssgle:LineSegment
-                    End="136.666666666667,-51.8333333333333" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-10.2005729166665,-15.2753319357093,157.0678125,11.6630859375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-      </GraphLayout>
-    </LayoutInfo>
-  </TaskHost>
-  <PipelineComponentMetadata
-    design-time-name="Package\Region\OLE DB Source">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
   <PipelineComponentMetadata
     design-time-name="Package\Country\Slowly Changing Dimension">
     <Properties>
@@ -1916,6 +1770,163 @@ GROUP BY region_code, region_name</property>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
     design-time-name="Package\Country\Insert Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\Region">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="209.333333333334,42.6666666666667"
+          Id="Package\Region\Slowly Changing Dimension"
+          TopLeft="239.833333333333,171.5" />
+        <NodeLayout
+          Size="166.666666666667,42.6666666666667"
+          Id="Package\Region\OLE DB Command"
+          TopLeft="448.166666666667,69.5000000000003" />
+        <NodeLayout
+          Size="150.666666666667,42.6666666666667"
+          Id="Package\Region\OLE DB Source"
+          TopLeft="30.5,9.83333333333337" />
+        <NodeLayout
+          Size="169.333333333334,42.6666666666667"
+          Id="Package\Region\SrcID &amp; timestamp"
+          TopLeft="265.833333333333,12.1666666666668" />
+        <NodeLayout
+          Size="164,42.6666666666667"
+          Id="Package\Region\Insert Destination"
+          TopLeft="70.1666666666667,72.166666666667" />
+        <EdgeLayout
+          Id="Package\Region.Paths[OLE DB Source Output]"
+          TopLeft="181.166666666667,32.3333333333334">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="84.6666666666666,0"
+              Start="0,0"
+              End="77.1666666666666,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="77.1666666666666,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Region.Paths[New Output]"
+          TopLeft="294.166666666667,171.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-142,-56.6666666666666"
+              Start="0,0"
+              End="-142,-49.1666666666666">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,-15.3640810621942" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,-15.3640810621942"
+                    Point2="0,-19.3640810621942"
+                    Point3="-4,-19.3640810621942" />
+                  <mssgle:LineSegment
+                    End="-138,-19.3640810621942" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-138,-19.3640810621942"
+                    Point2="-142,-19.3640810621942"
+                    Point3="-142,-23.3640810621942" />
+                  <mssgle:LineSegment
+                    End="-142,-49.1666666666666" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-98.09138671875,-14.3640810621942,54.1827734375,11.43359375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Region.Paths[Derived Column Output]"
+          TopLeft="347.5,54.8333333333335">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,116.666666666667"
+              Start="0,0"
+              End="0,109.166666666667">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,109.166666666667" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Region.Paths[Changing Attribute Updates Output]"
+          TopLeft="394.833333333333,171.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="136.666666666667,-59.3333333333333"
+              Start="0,0"
+              End="136.666666666667,-51.8333333333333">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,-16.2753319357093" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,-16.2753319357093"
+                    Point2="0,-20.2753319357093"
+                    Point3="4,-20.2753319357093" />
+                  <mssgle:LineSegment
+                    End="132.666666666667,-20.2753319357093" />
+                  <mssgle:CubicBezierSegment
+                    Point1="132.666666666667,-20.2753319357093"
+                    Point2="136.666666666667,-20.2753319357093"
+                    Point3="136.666666666667,-24.2753319357093" />
+                  <mssgle:LineSegment
+                    End="136.666666666667,-51.8333333333333" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-10.2005729166665,-15.2753319357093,157.0678125,11.6630859375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Region\OLE DB Source">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>

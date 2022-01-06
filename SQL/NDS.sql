@@ -215,10 +215,6 @@ CREATE TABLE Accidents
 	Source_ID INT FOREIGN KEY REFERENCES dbo.Source_NDS
 )
 
-Alter table Accidents
-add Number_Of_Casualties int
-
-go
 CREATE TABLE Casualties
 (
 	Casualties_ID INT IDENTITY(1,1) PRIMARY KEY,
@@ -228,6 +224,7 @@ CREATE TABLE Casualties
 	Age INT,
 	AgeBand INT FOREIGN KEY REFERENCES dbo.AgeBand,
 	CasualtyType INT FOREIGN KEY REFERENCES dbo.CasualtyType,
+	CasualtySeverity INT FOREIGN KEY REFERENCES dbo.Severity
 	[Create_time] datetime,
 	[Update_time] DATETIME,
 	Source_ID INT FOREIGN KEY REFERENCES dbo.Source_NDS
