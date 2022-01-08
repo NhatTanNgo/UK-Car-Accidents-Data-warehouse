@@ -196,3 +196,21 @@ CREATE TABLE FactAccidentVehicle
 	VehicleAge INT,
 	EngineCapacity INT
 )
+
+CREATE TABLE  Mining (
+	[Accident_ID] int,
+    [DateKey] INT FOREIGN KEY REFERENCES dbo.DimDate,
+    [TimeKey] varchar(5) FOREIGN KEY REFERENCES dbo.DimTime,
+    [GeographyKey] INT FOREIGN KEY REFERENCES dbo.DimGeography,
+    [RoadTypeKey] INT FOREIGN KEY REFERENCES dbo.DimRoadType,
+    [Accident_Severity] varchar(50),
+    [Number_of_Vehicles] INT,
+    [Number_of_Casualties] INT,
+
+    [Light_Conditions] varchar(50),
+    [Weather_Conditions] varchar(50),
+    [Road_Surface_Conditions] varchar(50),
+    [Special_Conditions_at_Site] varchar(50),
+	[Carriageway_Hazards] varchar(50),
+)
+

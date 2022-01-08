@@ -26,7 +26,7 @@
           <SSIS:Property SSIS:Name="CreatorComputerName">ASUS-DUCHUY</SSIS:Property>
           <SSIS:Property SSIS:Name="Description">
           </SSIS:Property>
-          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA0UK3wNsyDEaCf3pcP3N8EAAAAAACAAAAAAAQZgAAAAEAACAAAADxgZzi0BpSjfkj5bOPVtQwRo8C0lyPxAhSLELeywz8FQAAAAAOgAAAAAIAACAAAADZNu8nf3LQ9Hz1jEvXOYWsduCJvherJac1lyoXqZYQ3pAAAADxRBn74WkTMCJ5SJWH0fZ7bwIAOfuhEJ53IsWQekBjOstdLhONpwlbQNLaxE2wHF5NsMyWW5z5YhhOhTtX1udqp9kAFtFiooZ4UQS4ywAnKS5bReVY4fjHMqmrqEvHq/HDHhrrPWt/sevfLNTiVydINbIlGHu6jK9E/6jgb9+zPTuCEQQXxcDgdqMlrTQ9P/RAAAAAJJynwBTQL9e05WMbgt1Dg7Ed15NsJu8TOTuEIHmL1QZ19csVJh5FTmNgzS2Bq27JW74p7GMXXLU7/RYZsTqAJA==</SSIS:Property>
+          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA0UK3wNsyDEaCf3pcP3N8EAAAAAACAAAAAAAQZgAAAAEAACAAAABQ1N0Q0qy0yjlWcp1pEmNg0w/IENs7eLdAzp9NWYzSWwAAAAAOgAAAAAIAACAAAABb6UP/qBOP0Ar7YUgRkKh3Q9CB4iKpInsb6AtM2TnbdJAAAAA0WM+7IpFZN1/shCPT7aWXzE4UxrTtDfBz92O+ngOF5s1SVGnbqS2G9amAiDQFwqGDkLmYdW6oCG8fAkFYbK0euyf+Rygrr/Cudy25GJoMx11gI7tYrPSOe3gFqAa+bLyVg69MJiRkyYMDqdgaGjeES6lLTeEYpwNSRWkcnxdDc2TxetfiN1iSDv3FQayWDy1AAAAAyDgkmb5VUpXzfy+W41O4uD6zLvi+vvgNYS2JuritOcNXFzH7JAK6WqXeKzS6wESUrE25m+fAJEbkmnxqlcsSEQ==</SSIS:Property>
           <SSIS:Property SSIS:Name="FormatVersion">1</SSIS:Property>
         </SSIS:Properties>
         <SSIS:Packages>
@@ -58,6 +58,7 @@
           <SSIS:Package SSIS:Name="pDDS_DimCasualties.dtsx" SSIS:EntryPoint="1" />
           <SSIS:Package SSIS:Name="pDDS_FactAccident.dtsx" SSIS:EntryPoint="1" />
           <SSIS:Package SSIS:Name="pDDS_FactAccidentCasualties.dtsx" SSIS:EntryPoint="1" />
+          <SSIS:Package SSIS:Name="pDDS_Mining.dtsx" SSIS:EntryPoint="1" />
         </SSIS:Packages>
         <SSIS:ConnectionManagers>
           <SSIS:ConnectionManager SSIS:Name="LocalHost.Source_DATH.conmgr" />
@@ -3588,6 +3589,23 @@
                 <SSIS:Property SSIS:Name="VersionComments">
                 </SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionGUID">{4B348028-2C14-4E44-A625-9063A7293092}</SSIS:Property>
+                <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
+                <SSIS:Property SSIS:Name="Description">
+                </SSIS:Property>
+                <SSIS:Property SSIS:Name="ProtectionLevel">1</SSIS:Property>
+              </SSIS:Properties>
+              <SSIS:Parameters />
+            </SSIS:PackageMetaData>
+            <SSIS:PackageMetaData SSIS:Name="pDDS_Mining.dtsx">
+              <SSIS:Properties>
+                <SSIS:Property SSIS:Name="ID">{55E399EA-B11A-485F-BF9B-04DCC425EF63}</SSIS:Property>
+                <SSIS:Property SSIS:Name="Name">pDDS_Mining</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">1</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionComments">
+                </SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{252F1C29-180D-48B1-9804-8BA0DA4CADF9}</SSIS:Property>
                 <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
                 <SSIS:Property SSIS:Name="Description">
                 </SSIS:Property>
